@@ -195,8 +195,52 @@ class ShoppingViewModel(private val controller: IpcConnectionController) : ViewM
 3. **异常处理机制**
    在 `try-catch` IPC 的挂起函数时，您可能会捕获到 `DeadObjectException`（服务端已死）。如果您不需要对错误进行特殊业务处理，建议让全局的异常捕获器接管。底层的 `IpcConnectionController` 内部具备自愈能力（指数退避重连机制），会在后台自动尝试恢复连接。
 
-4. **流量整形与限流**
-   不要在 `for` 循环中毫无节制地发起海量 IPC 请求（尽管框架通过 `BoundedDispatcher` 保护了服务端不被搞崩）。对于高频触发的操作，请在客户端使用 `Flow.debounce()` 防抖后再发起 IPC。
+---
+
+## 三、 跨独立 App 多端互相通讯业务指南 (Multi-App IPC)
+
+当您的业务由 **多个独立的 APK 应用**（如 1 个服务端 App `:app-server` 与 3 个客户端 App `:app-client1`, `:app-client2`, `:app-client3`）构成，并需要在它们之间互相传递数据或广播消息时，请遵循以下规范：
+
+### 1. Android 11+ (API 30+) 跨应用包可见性声明
+Android 11 引入了软件包可见性限制。所有客户端 App 的 `AndroidManifest.xml` 中必须加入 `<queries>` 声明，方可通过显式或隐式 Intent 发现并绑定服务端 Service：
+
+```xml
+<queries>
+    <!-- 声明目标服务端 App 的包名 -->
+    <package android:name="com.cn.ipc.server.app" />
+    <!-- 或声明 Service 的 Action -->
+    <intent>
+        <action android:name="com.cn.ipc.ACTION_BROKER_SERVICE" />
+    </intent>
+</queries>
+```
+
+服务端 Service 必须声明 `android:exported="true"`：
+```xml
+<service
+    android:name=".ServerBrokerService"
+    android:exported="true">
+    <intent-filter>
+        <action android:name="com.cn.ipc.ACTION_BROKER_SERVICE" />
+    </intent-filter>
+</service>
+```
+
+### 2. 多端消息中枢契约 (`IMessageHubService`)
+服务端作为中枢调度器，提供 `IMessageHubService` (serviceId = 2001)：
+- **`registerClient(clientId, clientName)`**：客户端连接后第一时间登记身份。
+- **`observeMessages(clientId)`**：客户端订阅接收流，长连接实时监听下发消息。
+- **`sendMessage(fromClientId, targetScope, content)`**：发起消息投递，`targetScope` 支持：
+  - `"ALL"`：全员广播（推向所有存活客户端）。
+  - `"client_2"`：定向推送（仅推向目标客户端，其余客户端被安全阻断）。
+  - `"SERVER_ONLY"`：仅服务端可见（不向任何其他客户端广播）。
+
+### 3. “3 端订阅同一个消息，由 Client 1 发起” 对照验证设计
+业务测试时，可在 Client 1 控制台直观比对分发与隔离效果：
+- **验证 Client 2、Client 3 均能收到**：Client 1 设定 `targetScope = "ALL"`，服务端路由给所有客户端，两端 UI 均弹出消息。
+- **验证 Client 2 能收到，Client 3 不能收到**：Client 1 设定 `targetScope = "client_2"`，服务端精准投递到 Client 2 的 Flow，Client 3 的 Flow 无任何触发，保持静默。
+- **验证 Client 2、Client 3 均不能收到**：Client 1 设定 `targetScope = "SERVER_ONLY"`，服务端仅作为机密审计记录，两端 Flow 均不派发。
+- **暂停/恢复订阅测试**：任意客户端调用 `job.cancel()` 暂停订阅流，再次发送广播消息该端将**不再接收**，恢复订阅后立即可恢复接收，确保资源按需消费。
 
 ---
 *业务文档完。更多架构原理请参见 `ModernIPC_Architecture.md`。*

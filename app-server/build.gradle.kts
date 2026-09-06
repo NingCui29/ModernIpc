@@ -4,14 +4,14 @@ plugins {
 }
 
 android {
-    namespace = "com.cn.ipc.demo"
+    namespace = "com.cn.ipc.server.app"
 
     defaultConfig {
-        applicationId = "com.cn.ipc.demo"
+        applicationId = "com.cn.ipc.server.app"
         versionCode = 200
         versionName = "2.0.0"
     }
-    
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -21,9 +21,7 @@ android {
 
 dependencies {
     implementation(project(":ipc-api"))
-    implementation(project(":ipc-runtime-client"))
     implementation(project(":ipc-runtime-server"))
-    
     ksp(project(":ipc-compiler"))
 
     implementation(libs.androidx.core.ktx)
@@ -31,6 +29,4 @@ dependencies {
     implementation(libs.kotlinx.coroutines.android)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.androidx.constraintlayout)
 }
-

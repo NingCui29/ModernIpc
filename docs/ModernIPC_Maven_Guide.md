@@ -6,7 +6,7 @@ Modern IPC 项目内部已在 `build-logic` 约定插件（`convention.publish.g
 
 该 SDK 发布的全局标识如下：
 - **GroupId**: `com.modernipc`
-- **Version**: `1.0.0-SNAPSHOT`
+- **Version**: `2.0.0`
 - **ArtifactId**: 与各个子模块的名称保持一致（如 `ipc-runtime-client`、`ipc-annotations` 等）。
 
 ## 二、 SDK 打包与提取方式 (AAR / JAR)
@@ -70,14 +70,14 @@ plugins {
 
 dependencies {
     // 1. 契约定义与 KSP 编译器（Client 与 Server 端项目均必须配置）
-    implementation("com.modernipc:ipc-annotations:1.0.0-SNAPSHOT")
-    ksp("com.modernipc:ipc-compiler:1.0.0-SNAPSHOT")
+    implementation("com.modernipc:ipc-annotations:2.0.0")
+    ksp("com.modernipc:ipc-compiler:2.0.0")
 
     // 2. Client 端进程依赖（在只作为客户端的 UI 层项目引入）
-    implementation("com.modernipc:ipc-runtime-client:1.0.0-SNAPSHOT")
+    implementation("com.modernipc:ipc-runtime-client:2.0.0")
 
     // 3. Server 端进程依赖（在作为服务端的独立进程项目引入）
-    implementation("com.modernipc:ipc-runtime-server:1.0.0-SNAPSHOT")
+    implementation("com.modernipc:ipc-runtime-server:2.0.0")
     
     // 提示：不要忘记依赖你自己定义的业务接口契约模块
 }

@@ -29,7 +29,7 @@ open class IpcBrokerService : Service() {
     override fun onCreate() {
         super.onCreate()
         registry = onCreateRegistry()
-        brokerStub = IpcBrokerStub(this, registry, serverVersionCode = 1L)
+        brokerStub = IpcBrokerStub(this, registry, serverVersionCode = 2L)
     }
 
     /**

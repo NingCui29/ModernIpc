@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:label="ModernIPC 服务端"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <activity
+            android:name=".ServerMainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- IPC 服务端暴露 Service，供所有外部客户端绑定 -->
+        <service
+            android:name=".ServerBrokerService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.cn.ipc.ACTION_BROKER_SERVICE" />
+            </intent-filter>
+        </service>
+
+    </application>
+</manifest>

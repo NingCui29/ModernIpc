@@ -14,7 +14,7 @@ import java.util.concurrent.atomic.AtomicLong
 class IpcBrokerStub(
     private val context: android.content.Context,
     private val registry: DefaultIpcServiceRegistry,
-    private val serverVersionCode: Long = 1L
+    private val serverVersionCode: Long = 2L
 ) : IIpcBroker.Stub() {
 
     private val sessionCounter = AtomicLong(1)

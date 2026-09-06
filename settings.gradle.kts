@@ -25,3 +25,8 @@ include(":ipc-annotations")
 include(":ipc-compiler")
 
 include(":demo-app")
+include(":demo-client-common")
+include(":app-server")
+include(":app-client1")
+include(":app-client2")
+include(":app-client3")

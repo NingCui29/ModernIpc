@@ -13,9 +13,11 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
+import kotlinx.coroutines.withTimeout
 
 /**
  * 负责 IPC 连接状态机管理、服务绑定与死亡恢复的控制器。
@@ -25,7 +27,7 @@ class IpcConnectionController(
     private val targetIntent: Intent,
     private val scope: CoroutineScope,
     private val clientPackage: String = context.packageName,
-    private val clientVersionCode: Long = 1L
+    private val clientVersionCode: Long = 2L
 ) {
     private val mutex = Mutex()
     private val _state = MutableStateFlow<IpcClientState>(IpcClientState.Idle)
@@ -47,10 +49,10 @@ class IpcConnectionController(
             val requestId = data.readLong()
             val isSuccess = data.readInt() == 1
             if (isSuccess) {
-                // Mock: 由于类型擦除和通用化处理比较复杂，这里暂时使用统一的占位回调
-                pendingCallRegistry.complete(requestId, "Mock Result from Server")
+                pendingCallRegistry.completeWithParcel(requestId, data)
             } else {
-                pendingCallRegistry.fail(requestId, RuntimeException("Remote error"))
+                val errorMsg = try { data.readString() ?: "Remote error" } catch (_: Exception) { "Remote error" }
+                pendingCallRegistry.fail(requestId, RuntimeException(errorMsg))
             }
             return true
         }
@@ -66,9 +68,12 @@ class IpcConnectionController(
     /** 当前底层的 ServiceConnection 实例，用于绑定和解绑系统服务 */
     private var serviceConnection: InnerServiceConnection? = null
 
+    /** 业务 Binder 多级缓存，避免高频调用重复发起跨进程 getService 查询 */
+    private val serviceBinderCache = java.util.concurrent.ConcurrentHashMap<Int, IBinder>()
+
     /**
-     * 获取指定业务的 Binder (如果已连接，则通过 Broker 获取)。
-     * 这里使用阻塞或挂起获取，为了简化 POC，假设我们抛出异常或直接返回。
+     * 获取指定业务的 Binder (如果已连接，则通过本地缓存或 Broker 获取)。
+     * 具备一级内存缓存，大幅度消除跨进程重复查询 Broker 的开销。
      *
      * @param serviceId 目标服务的唯一标识 ID
      * @return 目标服务对应的 Binder 代理对象
@@ -77,9 +82,27 @@ class IpcConnectionController(
     fun getServiceBinder(serviceId: Int): IBinder {
         val state = _state.value
         if (state is IpcClientState.Connected) {
-            return state.broker.getService(serviceId, 1) // 假定最低 apiVersion = 1
+            return serviceBinderCache.computeIfAbsent(serviceId) {
+                state.broker.getService(serviceId, 1) // 假定最低 apiVersion = 1
+            }
         }
         throw IllegalStateException("IPC not connected")
+    }
+
+    /**
+     * 挂起等待 IPC 连接建立成功并返回连接状态，平滑解决冷启动与重连期间的时序竞争。
+     *
+     * @param timeoutMs 最长等待超时时间（毫秒）
+     * @return 成功连接后的状态实例
+     */
+    suspend fun awaitConnected(timeoutMs: Long = 5000L): IpcClientState.Connected {
+        val current = _state.value
+        if (current is IpcClientState.Connected) return current
+
+        connect()
+        return kotlinx.coroutines.withTimeout(timeoutMs) {
+            _state.first { it is IpcClientState.Connected } as IpcClientState.Connected
+        }
     }
 
     /**
@@ -144,6 +167,7 @@ class IpcConnectionController(
      * 安全地解除当前的 ServiceConnection 绑定。
      */
     private fun doUnbindServiceLocked() {
+        serviceBinderCache.clear()
         serviceConnection?.let {
             try {
                 context.unbindService(it)
@@ -244,8 +268,13 @@ class IpcConnectionController(
                     doUnbindServiceLocked()
                     _state.value = IpcClientState.Reconnecting(attempt = 1)
                     
-                    // TODO: 执行有上限的指数退避重连策略。
-                    // 暂时提供一个简单的固定延迟重连。
+                    // 立即让当前代次的所有在途挂起请求快速失败，杜绝假死卡顿
+                    pendingCallRegistry.failAllForGeneration(
+                        generation,
+                        android.os.DeadObjectException("Server process died for generation $generation")
+                    )
+
+                    // 执行有上限的指数退避重连策略
                     scheduleReconnect()
                 }
             }

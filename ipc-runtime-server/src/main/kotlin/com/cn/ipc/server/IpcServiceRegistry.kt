@@ -9,8 +9,8 @@ data class RegisteredService(
     val serviceId: Int,
     val apiVersion: Int,
     val apiHash: String,
-    val requiredCapability: Long,
-    val permission: String?,
+    val requiredCapability: Long = 0L,
+    val permission: String? = null,
     val binder: IBinder
 )
 

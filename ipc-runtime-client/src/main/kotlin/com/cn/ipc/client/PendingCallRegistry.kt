@@ -8,9 +8,13 @@ import kotlin.coroutines.resumeWithException
 /**
  * 等待中的调用记录。
  */
+/**
+ * 等待中的调用记录。
+ */
 private data class PendingCall(
     val generation: Long,
-    val continuation: CancellableContinuation<Any?>
+    val continuation: CancellableContinuation<Any?>,
+    val deserializer: ((android.os.Parcel) -> Any?)? = null
 )
 
 /**
@@ -30,11 +34,15 @@ class PendingCallRegistry {
     suspend fun <T> callSuspend(
         serviceId: Int,
         operationId: Int,
+        generation: Long = 1L,
+        deserializer: ((android.os.Parcel) -> Any?)? = null,
         block: (Long) -> Unit
     ): T = kotlinx.coroutines.suspendCancellableCoroutine { cont ->
         val requestId = requestCounter.incrementAndGet()
-        // Mock generation, in real app pass it from connection controller
-        register(requestId, 1L, cont)
+        register(requestId, generation, cont, deserializer)
+        cont.invokeOnCancellation {
+            cancel(requestId)
+        }
         try {
             block(requestId)
         } catch (e: Exception) {
@@ -44,15 +52,59 @@ class PendingCallRegistry {
     }
 
     /**
+     * 发起一个挂起请求 (兼容旧版无 generation 的调用)。
+     */
+    suspend fun <T> callSuspend(
+        serviceId: Int,
+        operationId: Int,
+        deserializer: ((android.os.Parcel) -> Any?)? = null,
+        block: (Long) -> Unit
+    ): T = callSuspend(serviceId, operationId, 1L, deserializer, block)
+
+    /**
+     * 发起一个挂起请求 (兼容旧版无 deserializer 的调用)。
+     */
+    suspend fun <T> callSuspend(
+        serviceId: Int,
+        operationId: Int,
+        block: (Long) -> Unit
+    ): T = callSuspend(serviceId, operationId, 1L, null, block)
+
+    /**
      * 注册一个新的挂起调用。
      *
      * @param requestId    请求唯一 ID
      * @param generation   当前连接代次
      * @param continuation 协程的 Continuation
+     * @param deserializer 反序列化器
      */
-    fun register(requestId: Long, generation: Long, continuation: CancellableContinuation<*>) {
+    fun register(
+        requestId: Long,
+        generation: Long,
+        continuation: CancellableContinuation<*>,
+        deserializer: ((android.os.Parcel) -> Any?)? = null
+    ) {
         @Suppress("UNCHECKED_CAST")
-        pendingMap[requestId] = PendingCall(generation, continuation as CancellableContinuation<Any?>)
+        pendingMap[requestId] = PendingCall(generation, continuation as CancellableContinuation<Any?>, deserializer)
+    }
+
+    /**
+     * 成功完成调用并反序列化结果。
+     */
+    fun completeWithParcel(requestId: Long, data: android.os.Parcel): Boolean {
+        val pending = pendingMap.remove(requestId) ?: return false
+        return if (pending.continuation.isActive) {
+            val result = try {
+                pending.deserializer?.invoke(data) ?: (data.readString() ?: "")
+            } catch (e: Throwable) {
+                pending.continuation.resumeWithException(e)
+                return true
+            }
+            pending.continuation.resumeWith(Result.success(result))
+            true
+        } else {
+            false
+        }
     }
 
     /**

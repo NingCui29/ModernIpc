@@ -44,12 +44,14 @@ graph TD
 KSP 处理器在编译期通过解析 `@IpcFacade` 等注解，通过 KotlinPoet 构建出零反射的极速代理类。
 
 - **`ClientAdapter` (客户端代理)**
-  不再使用阻塞式的 `reply` Parcel。每次挂起调用，代理层会使用 `FLAG_ONEWAY` (异步) 模式进行 `transact`。
-  **序列化协议**：`Parcel` 依次写入 `[requestId(Long)] -> [globalResponseBinder(StrongBinder)] -> [业务参数...]`。
+  - 动态读取 `@IpcFacade.serviceId` 进行服务定位与绑定。
+  - 不再使用阻塞式的 `reply` Parcel。每次挂起调用，代理层使用 `FLAG_ONEWAY` (异步) 模式进行 `transact`，并将类型化反序列化器 (`deserializer: (Parcel) -> T`) 注入 `PendingCallRegistry`，在协程恢复时无缝还原真实数据。
+  - **跨进程 Flow 支持**：生成 `callbackFlow` 并在其内部持有专属 Observer `Binder`，在 `onTransact(1, ...)` 中读取流事件并利用 `trySend` 安全派发至协程通道；在 `awaitClose` 时自动发送 `unsubscribeTransaction`。
   
 - **`ServerStub` (服务端存根)**
-  继承自 `android.os.Binder`，在 `onTransact` 方法中生成巨大的 `when(code)` 分发树。
-  **反序列化协议**：读取 `requestId` 和回调 `Binder` 后，抛入协程池执行业务。完成后构造 `[requestId] -> [isSuccess(Int)] -> [返回结果]` 的 `replyData`，再通过刚刚读取到的回调 `Binder` 写回结果。
+  - 继承自 `android.os.Binder`，在 `onTransact` 方法中生成完整的 `when(code)` 分发树。
+  - **反序列化与真实返回协议**：读取 `requestId` 和回调 `Binder` 后，由协程分发执行业务逻辑。执行完毕构造 `[requestId] -> [isSuccess(Int)] -> [返回结果(String/Int/Long/Boolean)]` 的 `replyData`，通过刚刚读取到的回调 `Binder` 写回。
+  - **流式数据采集与推送**：在接收到订阅事务时，服务端生成 `subId` 注册到并发任务表，并使用独立协程 `collect` 业务返回的 Flow，每次 `emit` 新数据时通过客户端 Observer Binder 进行跨进程异步投递；接收到取消事务时即刻 `cancel` 对应的协程 Job。
 
 ### 3. 客户端引擎 (Client Runtime)
 - **`IpcConnectionController`**：状态机引擎。负责与服务端的 `ServiceConnection` 绑定，维护 `Idle -> Binding -> Connected -> Reconnecting -> Closed` 状态，并处理握手协议。
@@ -134,6 +136,39 @@ stateDiagram-v2
     Connected --> Closed: 用户主动 close()
     Closed --> [*]
 ```
+
+### 场景 D：多独立应用间消息中枢与安全隔离路由模型 (Multi-App Routing Hub)
+
+在由 1 个服务端 App 与多个独立客户端 App 构成的分布式拓扑中，Modern IPC 采用 **星型中枢路由模型**：
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant C1 as Client 1 (发送端)
+    participant Srv as Server Hub (中枢路由)
+    participant C2 as Client 2 (接收端)
+    participant C3 as Client 3 (旁路端)
+
+    Note over C1,C3: 1. 三端均通过 observeMessages() 建立长连接流通道
+    C1->>Srv: 2. sendMessage(to: "client_2", content)
+    activate Srv
+    Srv->>Srv: 3. 路由安全鉴权与目标过滤
+    Srv-->>C1: 4. 返回挂起响应 (OK)
+    Srv->>C2: 5. Flow 下发推入 C2 通道
+    activate C2
+    C2-->>C2: 6. UI 收到专属消息并展示
+    deactivate C2
+    Note over C3: 7. C3 不在目标范围内，通道绝对静默 (收不到)
+    deactivate Srv
+```
+
+1. **统一流订阅通道**：所有存活客户端在启动后通过 `IMessageHubService.observeMessages(clientId)` 与 Server 建立专属 Flow 管道。
+2. **中心精准路由**：
+   - 消息体携带 `targetScope` 信封元数据。
+   - 当 `targetScope == "ALL"`：Server 派发至除发送者外的所有活跃 Flow 管道。
+   - 当 `targetScope == "client_2"`：Server 仅对 Client 2 的 Flow 进行 `tryEmit`，Client 3 的通道绝对无任何数据下发。
+   - 当 `targetScope == "SERVER_ONLY"`：Server 仅在服务端进行审计记录，所有客户端通道均不派发。
+3. **断线与退避保护**：任一客户端退出或崩溃，Server 端自动回收其订阅句柄并广播下线事件；Server 重启时，各 Client 通过 Exponential Backoff 状态机自动重连并重新建立订阅。
 
 ---
 
