@@ -313,7 +313,11 @@ abstract class BaseClientActivity : AppCompatActivity() {
             layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
             setOnClickListener {
                 activityScope.launch {
-                    val res = hubService?.getOnlineClients() ?: "未连接"
+                    val res = try {
+                        hubService?.getOnlineClients() ?: "未连接"
+                    } catch (e: Exception) {
+                        "查询异常: ${e.message}"
+                    }
                     log("查询在线", res)
                 }
             }
@@ -323,7 +327,11 @@ abstract class BaseClientActivity : AppCompatActivity() {
             layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
             setOnClickListener {
                 activityScope.launch {
-                    val res = hubService?.getServerStatus() ?: "未连接"
+                    val res = try {
+                        hubService?.getServerStatus() ?: "未连接"
+                    } catch (e: Exception) {
+                        "状态异常: ${e.message}"
+                    }
                     log("服务端指标", res)
                 }
             }

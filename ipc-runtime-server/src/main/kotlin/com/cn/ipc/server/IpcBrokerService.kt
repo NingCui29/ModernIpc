@@ -29,7 +29,18 @@ open class IpcBrokerService : Service() {
     override fun onCreate() {
         super.onCreate()
         registry = onCreateRegistry()
-        brokerStub = IpcBrokerStub(this, registry, serverVersionCode = 2L)
+        val versionCode = try {
+            val pInfo = packageManager.getPackageInfo(packageName, 0)
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.P) {
+                pInfo.longVersionCode
+            } else {
+                @Suppress("DEPRECATION")
+                pInfo.versionCode.toLong()
+            }
+        } catch (_: Exception) {
+            201L
+        }
+        brokerStub = IpcBrokerStub(this, registry, serverVersionCode = versionCode)
     }
 
     /**
@@ -39,7 +50,14 @@ open class IpcBrokerService : Service() {
      * @return 返回核心 Broker 的 Binder (IpcBrokerStub) 供客户端通信
      */
     override fun onBind(intent: Intent?): IBinder? {
-        // 返回 Broker Stub，客户端借此进行协议握手及服务获取
         return brokerStub
+    }
+
+    override fun onUnbind(intent: Intent?): Boolean {
+        return true
+    }
+
+    override fun onRebind(intent: Intent?) {
+        super.onRebind(intent)
     }
 }

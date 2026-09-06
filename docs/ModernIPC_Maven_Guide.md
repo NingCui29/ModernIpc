@@ -6,7 +6,7 @@ Modern IPC 项目内部已在 `build-logic` 约定插件（`convention.publish.g
 
 该 SDK 发布的全局标识如下：
 - **GroupId**: `com.modernipc`
-- **Version**: `2.0.0`
+- **Version**: `2.0.1`
 - **ArtifactId**: 与各个子模块的名称保持一致（如 `ipc-runtime-client`、`ipc-annotations` 等）。
 
 ## 二、 SDK 打包与提取方式 (AAR / JAR)
@@ -33,7 +33,7 @@ Modern IPC 项目内部已在 `build-logic` 约定插件（`convention.publish.g
 
 ## 三、 接入 GitHub Packages 远程 Maven 仓库 (推荐)
 
-Modern IPC 的全量 Release 构件（`2.0.0`）均托管在 GitHub Packages 远程 Maven 仓库，外部工程无需下载源码或 AAR，直接通过 Gradle 远程拉取即可。
+Modern IPC 的全量 Release 构件（`2.0.1`）均托管在 GitHub Packages 远程 Maven 仓库，外部工程无需下载源码或 AAR，直接通过 Gradle 远程拉取即可。
 
 ### 1. 配置安全鉴权凭据
 由于 GitHub Packages 的安全限制，**即使拉取公开开源库，也必须提供 GitHub 凭证**。为了防止凭据被提交到 Git 仓库泄露，请在电脑本机全局配置文件 `~/.gradle/gradle.properties`（Windows 为 `C:\Users\<用户名>\.gradle\gradle.properties`）中配置：
@@ -92,14 +92,14 @@ plugins {
 
 dependencies {
     // 1. 契约定义与 KSP 编译器（Client 与 Server 端项目均必须配置）
-    implementation("com.modernipc:ipc-annotations:2.0.0")
-    ksp("com.modernipc:ipc-compiler:2.0.0")
+    implementation("com.modernipc:ipc-annotations:2.0.1")
+    ksp("com.modernipc:ipc-compiler:2.0.1")
 
     // 2. Client 端进程依赖（在只作为客户端的 UI 层项目引入）
-    implementation("com.modernipc:ipc-runtime-client:2.0.0")
+    implementation("com.modernipc:ipc-runtime-client:2.0.1")
 
     // 3. Server 端进程依赖（在作为服务端的独立进程项目引入）
-    implementation("com.modernipc:ipc-runtime-server:2.0.0")
+    implementation("com.modernipc:ipc-runtime-server:2.0.1")
 }
 ```
 
@@ -110,10 +110,10 @@ dependencies {
 如果你需要向本官方仓库（需协作者权限）或自己的 Fork 仓库发布自定义产物：
 
 ### 1. 自动化 CI/CD 流水线发布
-向 GitHub 远程仓库推送版本 Tag（如 `v2.0.0`），GitHub Actions 将会自动打包、发布 Maven 包并创建 GitHub Release。
+向 GitHub 远程仓库推送版本 Tag（如 `v2.0.1`），GitHub Actions 将会自动打包、发布 Maven 包并创建 GitHub Release。
 ```bash
-git tag v2.0.0
-git push origin v2.0.0
+git tag v2.0.1
+git push origin v2.0.1
 ```
 
 ### 2. 本地手动发布到 GitHub 远程仓库

@@ -7,7 +7,7 @@ plugins {
 
 // 统一的发布配置：组名和版本号
 val sdkGroupId = "com.modernipc"
-val sdkVersion = project.findProperty("VERSION_NAME") as? String ?: "2.0.0"
+val sdkVersion = project.findProperty("VERSION_NAME") as? String ?: "2.0.1"
 
 afterEvaluate {
     extensions.configure<PublishingExtension> {

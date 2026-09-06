@@ -9,6 +9,7 @@ import android.os.RemoteException
 import com.cn.ipc.ClientHello
 import com.cn.ipc.IIpcBroker
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -18,6 +19,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withTimeout
+import java.util.concurrent.ConcurrentHashMap
 
 /**
  * 负责 IPC 连接状态机管理、服务绑定与死亡恢复的控制器。
@@ -27,7 +29,8 @@ class IpcConnectionController(
     private val targetIntent: Intent,
     private val scope: CoroutineScope,
     private val clientPackage: String = context.packageName,
-    private val clientVersionCode: Long = 2L
+    private val clientVersionCode: Long = 2L,
+    private val maxReconnectAttempts: Int = 10
 ) {
     private val mutex = Mutex()
     private val _state = MutableStateFlow<IpcClientState>(IpcClientState.Idle)
@@ -45,7 +48,6 @@ class IpcConnectionController(
      */
     val globalResponseBinder: IBinder = object : android.os.Binder() {
         override fun onTransact(code: Int, data: android.os.Parcel, reply: android.os.Parcel?, flags: Int): Boolean {
-            // 解析来自服务端的响应
             val requestId = data.readLong()
             val isSuccess = data.readInt() == 1
             if (isSuccess) {
@@ -69,24 +71,54 @@ class IpcConnectionController(
     private var serviceConnection: InnerServiceConnection? = null
 
     /** 业务 Binder 多级缓存，避免高频调用重复发起跨进程 getService 查询 */
-    private val serviceBinderCache = java.util.concurrent.ConcurrentHashMap<Int, IBinder>()
+    private val serviceBinderCache = ConcurrentHashMap<Int, IBinder>()
+
+    /** 后台退避重连协程 Job，确保生命周期唯一并支持即时取消 */
+    private var reconnectJob: Job? = null
+
+    /** 当前的重连尝试计数 */
+    private var reconnectAttempts = 0
+
+    /**
+     * 安全获取指定业务的 Binder，若未连接或 Binder 死亡则返回 null。
+     * 具备一级内存缓存与存活校验，消除重复跨进程获取开销同时提供失效自动刷新能力。
+     *
+     * @param serviceId 目标服务的唯一标识 ID
+     * @return 目标服务对应的 Binder 代理对象，连接不可用时返回 null
+     */
+    fun getServiceBinderOrNull(serviceId: Int): IBinder? {
+        val state = _state.value
+        if (state is IpcClientState.Connected) {
+            val cached = serviceBinderCache[serviceId]
+            if (cached != null && cached.isBinderAlive) {
+                return cached
+            }
+            val res = try {
+                serviceBinderCache.compute(serviceId) { _, existing ->
+                    if (existing != null && existing.isBinderAlive) {
+                        existing
+                    } else {
+                        state.broker.getService(serviceId, 1) // 假定最低 apiVersion = 1
+                    }
+                }
+            } catch (_: Exception) {
+                null
+            }
+            return res
+        }
+        return null
+    }
 
     /**
      * 获取指定业务的 Binder (如果已连接，则通过本地缓存或 Broker 获取)。
-     * 具备一级内存缓存，大幅度消除跨进程重复查询 Broker 的开销。
      *
      * @param serviceId 目标服务的唯一标识 ID
      * @return 目标服务对应的 Binder 代理对象
-     * @throws IllegalStateException 如果尚未建立 IPC 连接
+     * @throws IllegalStateException 如果尚未建立 IPC 连接或 Binder 不可用
      */
     fun getServiceBinder(serviceId: Int): IBinder {
-        val state = _state.value
-        if (state is IpcClientState.Connected) {
-            return serviceBinderCache.computeIfAbsent(serviceId) {
-                state.broker.getService(serviceId, 1) // 假定最低 apiVersion = 1
-            }
-        }
-        throw IllegalStateException("IPC not connected")
+        return getServiceBinderOrNull(serviceId)
+            ?: throw IllegalStateException("IPC not connected (current state: ${_state.value})")
     }
 
     /**
@@ -100,27 +132,31 @@ class IpcConnectionController(
         if (current is IpcClientState.Connected) return current
 
         connect()
-        return kotlinx.coroutines.withTimeout(timeoutMs) {
+        return withTimeout(timeoutMs) {
             _state.first { it is IpcClientState.Connected } as IpcClientState.Connected
         }
     }
 
     /**
-     * 发起连接。如果是第一次或已断开则开始连接；如果正在连接或已连接则直接返回当前状态。
+     * 发起连接。
+     * 支持从 Idle、Disconnected 以及 Closed 状态无缝重新发起绑定；
+     * 若处于 Reconnecting 状态，则打断退避等待立即发起绑定重试。
      */
     fun connect() {
         scope.launch {
             mutex.withLock {
-                when (val currentState = _state.value) {
-                    is IpcClientState.Idle, is IpcClientState.Disconnected -> {
+                cancelReconnectJobLocked()
+                when (_state.value) {
+                    is IpcClientState.Idle, is IpcClientState.Disconnected, is IpcClientState.Closed -> {
+                        resetReconnectAttempts()
                         doBindServiceLocked()
                     }
                     is IpcClientState.Reconnecting -> {
-                        // 强制立即重试
+                        // 用户/业务主动触发立即重连，绕过延迟
                         doBindServiceLocked()
                     }
-                    is IpcClientState.Binding, is IpcClientState.Connected, is IpcClientState.Closed -> {
-                        // 状态有效，不需要重复绑定
+                    is IpcClientState.Binding, is IpcClientState.Connected -> {
+                        // 状态处于进行中或已建立，无需重复发起绑定
                     }
                 }
             }
@@ -128,14 +164,24 @@ class IpcConnectionController(
     }
 
     /**
-     * 断开连接并关闭状态机，不再自动重连。
+     * 断开连接并关闭状态机，清空缓存并让所有挂起在途调用快速失败。
+     * 状态转换为 Closed 后，后续仍可通过调用 connect() 重新建立连接。
      */
     fun close() {
         scope.launch {
             mutex.withLock {
                 if (_state.value is IpcClientState.Closed) return@withLock
                 
+                cancelReconnectJobLocked()
+                resetReconnectAttempts()
                 doUnbindServiceLocked()
+                
+                // 立即让当前代次在途请求快速失败，避免调用端协程永久死锁挂起
+                pendingCallRegistry.failAllForGeneration(
+                    currentGeneration,
+                    IllegalStateException("IPC connection explicitly closed")
+                )
+
                 _state.value = IpcClientState.Closed
             }
         }
@@ -146,14 +192,15 @@ class IpcConnectionController(
      * 会更新内部状态为 Binding 并向系统发起 bindService 请求。
      */
     private fun doBindServiceLocked() {
+        doUnbindServiceLocked()
         _state.value = IpcClientState.Binding
         
         val connection = InnerServiceConnection()
         serviceConnection = connection
         
         val bound = try {
-            context.bindService(targetIntent, connection, Context.BIND_AUTO_CREATE)
-        } catch (e: SecurityException) {
+            context.bindService(targetIntent, connection, Context.BIND_AUTO_CREATE or Context.BIND_IMPORTANT)
+        } catch (e: Exception) {
             false
         }
 
@@ -171,7 +218,7 @@ class IpcConnectionController(
         serviceConnection?.let {
             try {
                 context.unbindService(it)
-            } catch (ignored: IllegalArgumentException) {
+            } catch (_: IllegalArgumentException) {
             }
             serviceConnection = null
         }
@@ -179,12 +226,24 @@ class IpcConnectionController(
 
     /**
      * 在持锁状态下处理绑定失败的逻辑。
-     * 将状态置为 Disconnected。
+     * 具备指数退避重试能力，只有达到重试上限才进入 Disconnected。
      */
     private fun handleBindFailureLocked() {
         doUnbindServiceLocked()
-        _state.value = IpcClientState.Disconnected
-        // TODO: 可以在这里加入自动重试策略
+        
+        // 快速失败在途请求
+        pendingCallRegistry.failAllForGeneration(
+            currentGeneration,
+            RemoteException("IPC bind failed or lost for generation $currentGeneration")
+        )
+
+        if (reconnectAttempts < maxReconnectAttempts) {
+            reconnectAttempts++
+            _state.value = IpcClientState.Reconnecting(attempt = reconnectAttempts)
+            scheduleReconnectLocked()
+        } else {
+            _state.value = IpcClientState.Disconnected
+        }
     }
 
     /**
@@ -218,7 +277,8 @@ class IpcConnectionController(
                         
                         val protocolInfo = broker.handshake(clientHello)
                         
-                        // 握手成功，重置重连计数并推进状态
+                        // 握手成功，取消重连任务、重置计数并推进代次
+                        cancelReconnectJobLocked()
                         resetReconnectAttempts()
                         currentGeneration++
                         
@@ -233,11 +293,8 @@ class IpcConnectionController(
                             broker = broker,
                             protocol = protocolInfo
                         )
-                    } catch (e: RemoteException) {
-                        // 握手失败
-                        handleBindFailureLocked()
-                    } catch (e: Exception) {
-                        // 其他异常
+                    } catch (_: Exception) {
+                        // 握手或绑定异常，触发退避重连
                         handleBindFailureLocked()
                     }
                 }
@@ -245,14 +302,30 @@ class IpcConnectionController(
         }
 
         override fun onServiceDisconnected(name: ComponentName?) {
-            // Android 系统通知服务断开，通常随后会自动重连
-            // 依赖 Binder.DeathRecipient 来做精确的代次清理
+            scope.launch {
+                mutex.withLock {
+                    if (serviceConnection != this@InnerServiceConnection) {
+                        return@withLock
+                    }
+                    serviceBinderCache.clear()
+                    val currentState = _state.value
+                    if (currentState is IpcClientState.Connected) {
+                        pendingCallRegistry.failAllForGeneration(
+                            currentGeneration,
+                            RemoteException("Service disconnected by system for generation $currentGeneration")
+                        )
+                        reconnectAttempts = 1
+                        _state.value = IpcClientState.Reconnecting(attempt = reconnectAttempts)
+                        scheduleReconnectLocked()
+                    }
+                }
+            }
         }
     }
 
     /**
      * 处理服务端 Binder 死亡的事件。
-     * 当收到死亡通知时，会断开现有连接，并将状态推进至 Reconnecting 以触发自动重连机制。
+     * 当收到死亡通知时，会断开现有连接，并将状态推进至 Reconnecting 以触发自动退避重连机制。
      *
      * @param connection 发生死亡事件的底层连接实例
      * @param generation 发生死亡事件的代次，用于避免处理已过期的回调
@@ -266,7 +339,6 @@ class IpcConnectionController(
                 val currentState = _state.value
                 if (currentState is IpcClientState.Connected && currentState.generation == generation) {
                     doUnbindServiceLocked()
-                    _state.value = IpcClientState.Reconnecting(attempt = 1)
                     
                     // 立即让当前代次的所有在途挂起请求快速失败，杜绝假死卡顿
                     pendingCallRegistry.failAllForGeneration(
@@ -274,33 +346,37 @@ class IpcConnectionController(
                         android.os.DeadObjectException("Server process died for generation $generation")
                     )
 
-                    // 执行有上限的指数退避重连策略
-                    scheduleReconnect()
+                    reconnectAttempts = 1
+                    _state.value = IpcClientState.Reconnecting(attempt = reconnectAttempts)
+                    scheduleReconnectLocked()
                 }
             }
         }
     }
 
     /**
-     * 当前的重连次数，用于计算指数退避的延迟时间。
+     * 取消后台正在等待的退避重连任务，避免协程泄漏与并发竞争。
      */
-    private var reconnectAttempts = 0
+    private fun cancelReconnectJobLocked() {
+        reconnectJob?.cancel()
+        reconnectJob = null
+    }
 
     /**
      * 调度下一次重连尝试。
      * 使用指数退避 (Exponential Backoff) 和随机抖动 (Jitter) 策略，
      * 避免服务端恢复后被瞬间的重连风暴压垮。
      */
-    private fun scheduleReconnect() {
-        scope.launch {
-            // 计算基础延迟: 500ms * 2^attempts，最大限制在 30 秒
-            val baseDelay = (500L * (1 shl reconnectAttempts.coerceAtMost(6))).coerceAtMost(30000L)
+    private fun scheduleReconnectLocked() {
+        cancelReconnectJobLocked()
+        reconnectJob = scope.launch {
+            // 指数退避: 500ms * 2^(attempts-1)，最大限制在 30 秒
+            val shift = (reconnectAttempts - 1).coerceIn(0, 6)
+            val baseDelay = (500L * (1 shl shift)).coerceAtMost(30000L)
             
             // 添加 10% 的随机抖动
             val jitter = (Math.random() * 0.1 * baseDelay).toLong()
             val finalDelay = baseDelay + jitter
-            
-            reconnectAttempts++
             
             delay(finalDelay)
             
@@ -313,7 +389,7 @@ class IpcConnectionController(
     }
     
     /**
-     * 当连接成功时，重置重连计数器。
+     * 重置重连计数器。
      */
     private fun resetReconnectAttempts() {
         reconnectAttempts = 0

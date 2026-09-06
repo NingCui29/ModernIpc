@@ -1,7 +1,7 @@
 # Modern IPC 🚀
 
 [![GitHub Release](https://img.shields.io/github/v/release/Cuinings/ModernIpc?color=blue&logo=github)](https://github.com/Cuinings/ModernIpc/releases)
-[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/Cuinings/ModernIpc/releases/tag/v2.0.0)
+[![Version](https://img.shields.io/badge/version-2.0.1-blue.svg)](https://github.com/Cuinings/ModernIpc/releases/tag/v2.0.1)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![Kotlin](https://img.shields.io/badge/kotlin-1.9.22-orange.svg)](https://kotlinlang.org)
 [![Coroutines](https://img.shields.io/badge/coroutines-1.7.3-success.svg)](https://github.com/Kotlin/kotlinx.coroutines)
@@ -15,7 +15,7 @@
 
 ---
 
-## ✨ 核心特性 (v2.0.0)
+## ✨ 核心特性 (v2.0.1)
 
 - **🛑 告别 AIDL**：只需定义普通的 Kotlin `interface`，打上 `@IpcFacade` 注解即可。
 - **⚡ 纯协程驱动 (Suspend)**：原生支持 `suspend fun`。底层采用非阻塞的 `PendingCallRegistry` 机制，千万级并发下也绝不发生 ANR 或死锁。
@@ -48,7 +48,7 @@
 
 ## 📦 引入 SDK (GitHub 远程 Maven 依赖配置)
 
-本项目各组件均已全量发布至 **GitHub Packages Maven 远程仓库**（最新版本 `2.0.0`），支持在任意 Android 宿主工程中直接远程拉取依赖。
+本项目各组件均已全量发布至 **GitHub Packages Maven 远程仓库**（最新版本 `2.0.1`），支持在任意 Android 宿主工程中直接远程拉取依赖。
 
 > [!NOTE]
 > **关于 GitHub Packages 的鉴权机制**：
@@ -140,23 +140,23 @@ plugins {
 
 dependencies {
     // 1. 契约定义与 KSP 编译器（全端必须引入）
-    implementation("com.modernipc:ipc-annotations:2.0.0")
-    ksp("com.modernipc:ipc-compiler:2.0.0")
+    implementation("com.modernipc:ipc-annotations:2.0.1")
+    ksp("com.modernipc:ipc-compiler:2.0.1")
 
     // 2. Client 端进程依赖（UI 层、业务客户端引入）
-    implementation("com.modernipc:ipc-runtime-client:2.0.0")
+    implementation("com.modernipc:ipc-runtime-client:2.0.1")
 
     // 3. Server 端进程依赖（跨进程 Service 服务端引入）
-    implementation("com.modernipc:ipc-runtime-server:2.0.0")
+    implementation("com.modernipc:ipc-runtime-server:2.0.1")
 }
 ```
 
 | 模块坐标 (GAV) | 类型 | 适用场景 |
 | :--- | :---: | :--- |
-| `com.modernipc:ipc-annotations:2.0.0` | JAR | 注解库（`@IpcFacade`, `@IpcAsync`, `@IpcStream`, `@IpcOneway`） |
-| `com.modernipc:ipc-compiler:2.0.0` | JAR | KSP 符号处理器，编译期自动生成 Stub 与 Adapter 桥接代码 |
-| `com.modernipc:ipc-runtime-client:2.0.0` | AAR | 客户端核心运行时（状态机、连接管理、挂起请求调度池） |
-| `com.modernipc:ipc-runtime-server:2.0.0` | AAR | 服务端核心运行时（线程池限流、安全鉴权拦截网关） |
+| `com.modernipc:ipc-annotations:2.0.1` | JAR | 注解库（`@IpcFacade`, `@IpcAsync`, `@IpcStream`, `@IpcOneway`） |
+| `com.modernipc:ipc-compiler:2.0.1` | JAR | KSP 符号处理器，编译期自动生成 Stub 与 Adapter 桥接代码 |
+| `com.modernipc:ipc-runtime-client:2.0.1` | AAR | 客户端核心运行时（状态机、连接管理、挂起请求调度池） |
+| `com.modernipc:ipc-runtime-server:2.0.1` | AAR | 服务端核心运行时（线程池限流、安全鉴权拦截网关） |
 
 ---
 

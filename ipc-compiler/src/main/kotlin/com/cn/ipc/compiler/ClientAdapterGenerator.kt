@@ -182,14 +182,18 @@ class ClientAdapterGenerator(
                     |_data.recycle()
                     |
                     |awaitClose {
-                    |    val _unsubData = android.os.Parcel.obtain()
-                    |    _unsubData.writeInterfaceToken(%S)
-                    |    _unsubData.writeLong(subId)
-                    |    val _b = controller.getServiceBinder(%L)
-                    |    _b.transact(%L, _unsubData, null, android.os.IBinder.FLAG_ONEWAY)
-                    |    _unsubData.recycle()
+                    |    try {
+                    |        val _b = controller.getServiceBinderOrNull(%L)
+                    |        if (_b != null && _b.isBinderAlive) {
+                    |            val _unsubData = android.os.Parcel.obtain()
+                    |            _unsubData.writeInterfaceToken(%S)
+                    |            _unsubData.writeLong(subId)
+                    |            _b.transact(%L, _unsubData, null, android.os.IBinder.FLAG_ONEWAY)
+                    |            _unsubData.recycle()
+                    |        }
+                    |    } catch (_: Exception) {}
                     |}
-                    |""".trimMargin(), serviceId, transactionCode, "$packageName.$interfaceName", serviceId, unsubscribeTransactionCode
+                    |""".trimMargin(), serviceId, transactionCode, serviceId, "$packageName.$interfaceName", unsubscribeTransactionCode
                 )
                 funBuilder.endControlFlow()
             } else {
