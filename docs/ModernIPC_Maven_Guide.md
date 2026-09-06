@@ -31,40 +31,62 @@ Modern IPC 项目内部已在 `build-logic` 约定插件（`convention.publish.g
 
 > **💡 提示**：项目约定插件中已包含 `withSourcesJar()`，因此还会自动生成包含源码的 `*-sources.jar` 文件，十分方便接入方查阅源码。
 
-## 三、 自动打包发布到本地工程仓库
+## 三、 接入 GitHub Packages 远程 Maven 仓库 (推荐)
 
-为了不污染系统全局的 maven 仓库，项目已配置将产物发布到**当前工程根目录的 `local-maven/` 文件夹**下。要一键发布所有模块，请执行：
+Modern IPC 的全量 Release 构件（`2.0.0`）均托管在 GitHub Packages 远程 Maven 仓库，外部工程无需下载源码或 AAR，直接通过 Gradle 远程拉取即可。
 
-```bash
-# 发布到项目根目录的 local-maven 仓库
-./gradlew publish
+### 1. 配置安全鉴权凭据
+由于 GitHub Packages 的安全限制，**即使拉取公开开源库，也必须提供 GitHub 凭证**。为了防止凭据被提交到 Git 仓库泄露，请在电脑本机全局配置文件 `~/.gradle/gradle.properties`（Windows 为 `C:\Users\<用户名>\.gradle\gradle.properties`）中配置：
+
+```properties
+# 你的真实 GitHub 用户名
+gpr.user=YourGithubUsername
+# 你的 GitHub Personal Access Token (PAT，需勾选 read:packages 权限)
+gpr.key=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-**关于打包与发布顺序**：
-得益于 Gradle 优秀的 Task 依赖图机制，您**完全不需要手动控制顺序**。
-当执行上述命令时，Gradle 会自动解析依赖拓扑（通常是最底层的 `ipc-annotations` -> 接着是 `ipc-compiler` 与 `ipc-contract` -> 最后是依赖它们的 `ipc-runtime-*` 模块），以绝对正确的顺序并行/串行完成构建和发布。您只需一键执行即可。
+> **🔑 如何获取 GitHub PAT**：
+> 前往 GitHub -> **Settings** -> **Developer settings** -> **Personal access tokens (classic)** -> **Generate new token (classic)**，填写 Note 并勾选 **`read:packages`** 权限生成即可。
 
-## 四、 外部项目依赖方式
+### 2. 宿主工程配置远程源 (`settings.gradle.kts`)
 
-当产物发布到本工程的 `local-maven` 仓库后，其他项目如果想要引入，需要在该项目的 `settings.gradle.kts` 中添加此本地路径（或将生成的 `local-maven` 文件夹拷贝给外部使用）：
+在宿主工程的根目录 `settings.gradle.kts` 中添加远程仓库：
 
 ```kotlin
-// 外部项目的 settings.gradle.kts 示例
 dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
-        // 增加指向刚刚生成的本地仓库的路径
-        maven { url = uri("D:/Developer/WorkSpace/ModernIpc/local-maven") } 
+        
+        // Modern IPC GitHub Packages 远程源
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/Cuinings/ModernIpc")
+            credentials {
+                username = providers.gradleProperty("gpr.user").orNull ?: System.getenv("GITHUB_ACTOR") ?: ""
+                password = providers.gradleProperty("gpr.key").orNull ?: System.getenv("GITHUB_TOKEN") ?: ""
+            }
+        }
     }
 }
 ```
 
-然后在 `build.gradle.kts` 中引入依赖：
+*若为 Groovy DSL（`settings.gradle`），将 `credentials` 部分改为：*
+```groovy
+credentials {
+    username = providers.gradleProperty("gpr.user").getOrElse(System.getenv("GITHUB_ACTOR") ?: "")
+    password = providers.gradleProperty("gpr.key").getOrElse(System.getenv("GITHUB_TOKEN") ?: "")
+}
+```
+
+### 3. 宿主模块引入依赖 (`build.gradle.kts`)
+
+在具体应用模块的 `build.gradle.kts` 中配置：
 
 ```kotlin
 plugins {
-    // 需配置 KSP 插件，版本号需与当前项目使用的 Kotlin 版本匹配
+    // 启用 KSP 符号处理器（插件版本与 Kotlin 版本对应）
     id("com.google.devtools.ksp") version "1.9.22-1.0.17"
 }
 
@@ -78,7 +100,57 @@ dependencies {
 
     // 3. Server 端进程依赖（在作为服务端的独立进程项目引入）
     implementation("com.modernipc:ipc-runtime-server:2.0.0")
-    
-    // 提示：不要忘记依赖你自己定义的业务接口契约模块
+}
+```
+
+---
+
+## 四、 远程打包发布到 GitHub Packages
+
+如果你需要向本官方仓库（需协作者权限）或自己的 Fork 仓库发布自定义产物：
+
+### 1. 自动化 CI/CD 流水线发布
+向 GitHub 远程仓库推送版本 Tag（如 `v2.0.0`），GitHub Actions 将会自动打包、发布 Maven 包并创建 GitHub Release。
+```bash
+git tag v2.0.0
+git push origin v2.0.0
+```
+
+### 2. 本地手动发布到 GitHub 远程仓库
+确保全局 `~/.gradle/gradle.properties` 中已配置 `gpr.user`、`gpr.key`（需带有 `write:packages` 权限）与目标仓库 `gpr.repo`：
+```properties
+gpr.user=YourGithubUsername
+gpr.key=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+gpr.repo=Cuinings/ModernIpc
+```
+在工程根目录运行：
+```bash
+# 仅发布到 GitHub Packages 远程仓库
+./gradlew publishAllPublicationsToGitHubPackagesRepository
+
+# 或同时发布到 local-maven 与 GitHub Packages
+./gradlew publish
+```
+
+---
+
+## 五、 本地工程开发发布 (local-maven)
+
+如果仅用于本机离线开发或快速联调测试，项目支持发布到工程根目录下的 `local-maven/` 文件夹：
+
+```bash
+# 发布到项目根目录的 local-maven 仓库
+./gradlew publish
+```
+
+**外部项目引入 local-maven**：
+在外部项目的 `settings.gradle.kts` 中添加路径：
+```kotlin
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("D:/Developer/WorkSpace/ModernIpc/local-maven") } 
+    }
 }
 ```

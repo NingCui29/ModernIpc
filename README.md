@@ -1,11 +1,14 @@
 # Modern IPC 🚀
 
-![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)
-![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)
-![Kotlin](https://img.shields.io/badge/kotlin-1.9.22-orange.svg)
-![Coroutines](https://img.shields.io/badge/coroutines-1.7.3-success.svg)
+[![GitHub Release](https://img.shields.io/github/v/release/Cuinings/ModernIpc?color=blue&logo=github)](https://github.com/Cuinings/ModernIpc/releases)
+[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/Cuinings/ModernIpc/releases/tag/v2.0.0)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+[![Kotlin](https://img.shields.io/badge/kotlin-1.9.22-orange.svg)](https://kotlinlang.org)
+[![Coroutines](https://img.shields.io/badge/coroutines-1.7.3-success.svg)](https://github.com/Kotlin/kotlinx.coroutines)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Cuinings%2FModernIpc-181717?logo=github)](https://github.com/Cuinings/ModernIpc)
 
 **Modern IPC** 是一个专为 Android 现代架构设计的**纯协程、全类型安全、零 AIDL** 的跨进程通信（IPC）框架。
+源码地址：[https://github.com/Cuinings/ModernIpc](https://github.com/Cuinings/ModernIpc)
 抛弃传统的 `.aidl` 文件与恶心的回调地狱，直接使用 Kotlin 接口 + 注解，通过 KSP (Kotlin Symbol Processing) 在编译期自动生成所有底层 Binder 桥接代码。
 
 完全拥抱 **Kotlin Coroutines** 与 **Kotlin Flow**，让跨进程调用像调用本地挂起函数一样简单、安全且高效。
@@ -43,52 +46,117 @@
 - `:app-client3`: **客户端 3 独立 App** (`com.cn.ipc.client3`，珊瑚橙主题)。验证接收端。
 - `:demo-app`: 包含全场景高并发极限压测用例的单体验证 App。
 
-## 📦 引入 SDK (依赖配置)
+## 📦 引入 SDK (GitHub 远程 Maven 依赖配置)
 
-本项目已配置自动化发布。你可以非常方便地通过 **GitHub Packages Maven 仓库** 在外部项目中引入本 SDK。
+本项目各组件均已全量发布至 **GitHub Packages Maven 远程仓库**（最新版本 `2.0.0`），支持在任意 Android 宿主工程中直接远程拉取依赖。
 
-### 1. 接入 GitHub Packages 远程仓库
-在你的外部宿主项目的 `settings.gradle.kts` 中，添加 Modern IPC 的 GitHub Packages 专属远程源：
+> [!NOTE]
+> **关于 GitHub Packages 的鉴权机制**：
+> 根据 GitHub 官方安全策略，**即使是公开开源仓库（Public Repository），通过 Maven 拉取 GitHub Packages 产物时也必须提供 GitHub 账号及带有 `read:packages` 权限的 Personal Access Token (PAT)**，否则 Gradle 会返回 `401 Unauthorized` 错误。
+
+### 1. 配置安全鉴权凭据 (全局推荐)
+
+为避免将个人私密 Token 硬编码在项目代码中（防止意外提交至公共代码库被 GitHub 自动吊销），**强烈建议将鉴权信息保存在本机全局的 `~/.gradle/gradle.properties`（Windows 路径通常为 `C:\Users\<用户名>\.gradle\gradle.properties`）** 中：
+
+```properties
+# 你的 GitHub 登录用户名
+gpr.user=YourGithubUsername
+# 你的 GitHub Personal Access Token (PAT，拉取需勾选 read:packages 权限)
+gpr.key=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+<details>
+<summary><b>🔑 如何在 1 分钟内创建 GitHub Personal Access Token (PAT)？</b></summary>
+
+1. 登录 GitHub，点击右上角头像 -> **Settings**。
+2. 在左侧菜单滑到底部，点击 **Developer settings** -> **Personal access tokens** -> **Tokens (classic)**。
+3. 点击右上角 **Generate new token** -> **Generate new token (classic)**。
+4. **Note** 填写名称（例如 `ModernIPC-Packages`），**Expiration** 按需选择。
+5. 在权限列表中勾选 **`read:packages`**（下载包权限；如需向自己的 Fork 仓库发布还需勾选 `write:packages`）。
+6. 点击最下方绿色按钮 **Generate token**，复制生成的 `ghp_...` 秘钥并填入上述 `gradle.properties` 中。
+</details>
+
+---
+
+### 2. 在宿主项目中接入 GitHub Packages 远程仓库
+
+#### 选项 A：Kotlin DSL (`settings.gradle.kts`) —— 官方推荐
+在宿主项目的根目录 `settings.gradle.kts` 中添加仓库源：
 
 ```kotlin
 dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
-        // 声明 ModernIpc 的 GitHub 远程仓库
+        
+        // 声明 Modern IPC 的 GitHub Packages 远程仓库
         maven {
+            name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/Cuinings/ModernIpc")
             credentials {
-                // 出于 GitHub Packages 的安全机制，拉取依赖也必须提供身份验证
-                username = "你的GitHub用户名" 
-                // 此处必须填入具备 `read:packages` 权限的 Personal Access Token (PAT)
-                password = "ghp_xxxxxx..." 
+                // 安全读取本机 gradle.properties 配置，并回退支持 CI/CD 环境变量
+                username = providers.gradleProperty("gpr.user").orNull ?: System.getenv("GITHUB_ACTOR") ?: ""
+                password = providers.gradleProperty("gpr.key").orNull ?: System.getenv("GITHUB_TOKEN") ?: ""
             }
         }
     }
 }
 ```
-> **🔑 获取 Token 提示**：你可以前往 GitHub 的 `Settings -> Developer settings -> Personal access tokens (classic)` 免费生成一个只勾选了 `read:packages` 权限的 Token 来作为此处的密码。
 
-### 2. 添加具体模块依赖
-在对应模块的 `build.gradle.kts` 中添加组件依赖：
+#### 选项 B：Groovy DSL (`settings.gradle`)
+如果宿主项目仍在使用 Groovy 语法：
+
+```groovy
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/Cuinings/ModernIpc")
+            credentials {
+                username = providers.gradleProperty("gpr.user").getOrElse(System.getenv("GITHUB_ACTOR") ?: "")
+                password = providers.gradleProperty("gpr.key").getOrElse(System.getenv("GITHUB_TOKEN") ?: "")
+            }
+        }
+    }
+}
+```
+
+---
+
+### 3. 添加模块依赖 (`build.gradle.kts`)
+
+在具体业务模块的 `build.gradle.kts` 中引入所需模块：
+
 ```kotlin
 plugins {
-    id("com.google.devtools.ksp") version "1.9.22-1.0.17" // 版本号需与项目的 Kotlin 版本匹配
+    // 启用 KSP 代码生成器（版本号需与宿主项目的 Kotlin 版本匹配）
+    id("com.google.devtools.ksp") version "1.9.22-1.0.17"
 }
 
 dependencies {
-    // 1. 契约定义与 KSP 编译器（全端必须）
+    // 1. 契约定义与 KSP 编译器（全端必须引入）
     implementation("com.modernipc:ipc-annotations:2.0.0")
     ksp("com.modernipc:ipc-compiler:2.0.0")
 
-    // 2. Client 端进程依赖（UI 层项目引入）
+    // 2. Client 端进程依赖（UI 层、业务客户端引入）
     implementation("com.modernipc:ipc-runtime-client:2.0.0")
 
-    // 3. Server 端进程依赖（独立的服务进程项目引入）
+    // 3. Server 端进程依赖（跨进程 Service 服务端引入）
     implementation("com.modernipc:ipc-runtime-server:2.0.0")
 }
 ```
+
+| 模块坐标 (GAV) | 类型 | 适用场景 |
+| :--- | :---: | :--- |
+| `com.modernipc:ipc-annotations:2.0.0` | JAR | 注解库（`@IpcFacade`, `@IpcAsync`, `@IpcStream`, `@IpcOneway`） |
+| `com.modernipc:ipc-compiler:2.0.0` | JAR | KSP 符号处理器，编译期自动生成 Stub 与 Adapter 桥接代码 |
+| `com.modernipc:ipc-runtime-client:2.0.0` | AAR | 客户端核心运行时（状态机、连接管理、挂起请求调度池） |
+| `com.modernipc:ipc-runtime-server:2.0.0` | AAR | 服务端核心运行时（线程池限流、安全鉴权拦截网关） |
 
 ---
 
@@ -273,34 +341,53 @@ graph TD
 
 ## 🛠️ 构建与编译
 
-本项目完全使用 Gradle Kotlin DSL 构建。
+本项目完全使用 Gradle Kotlin DSL 构建。你可以通过 Git 克隆源码并在本地直接进行二次开发与编译：
+
 ```bash
-# 编译整个工程并生成 KSP 代码
+# 1. 克隆 GitHub 远程仓库源码
+git clone https://github.com/Cuinings/ModernIpc.git
+cd ModernIpc
+
+# 2. 编译整个工程并触发 KSP 符号处理器生成代码
 ./gradlew build
 
-# 运行 Demo 验证测试
+# 3. 安装运行极限压测验证 Demo
 ./gradlew :demo-app:installDebug
 ```
 
-### 🚀 发布配置 (GitHub Maven Packages)
+---
 
-本项目已完全接入 GitHub Packages 作为远程 Maven 仓库。
+### 🚀 发布配置 (GitHub Packages 远程仓库)
 
-**1. 自动化发布 (CI/CD)**
-只需向 GitHub 推送以 `v` 开头的 Tag（例如 `v2.0.0`），GitHub Actions 将会自动完成构建，并发布 Release 附件与 Maven 包。
+本项目已完整配置 GitHub Packages 自动化持续集成（CI/CD）与本地发布管道。
 
-**2. 本地手动发布测试**
-如果需要在本地机器执行发布，请在电脑系统全局的 `~/.gradle/gradle.properties` 文件中添加以下鉴权信息（请勿将其写在项目内的配置文件中，以防泄露）：
-```properties
-# 你的真实 GitHub 用户名
-gpr.user=YourGithubUsername
-# 你的 GitHub Personal Access Token (必须勾选 write:packages 权限)
-gpr.key=ghp_xxxxxxxxxxxxxxxxx
-# 你的远程仓库坐标 (例如 Cuinings/ModernIpc)
-gpr.repo=YourGithubUsername/ModernIpc
-```
-配置完成后，在根目录执行一键发布命令，即可发布到本地目录与 GitHub Packages 远程仓库：
+#### 1. 自动化流水线发布 (GitHub Actions)
+只需向远程仓库推送符合语义化版本规范的 Tag，即可自动触发流水线打包发布全量 AAR/JAR 产物至 GitHub Packages 和 Releases：
+
 ```bash
+git tag v2.0.0
+git push origin v2.0.0
+```
+
+#### 2. 本地手动发布到 GitHub Packages 远程仓库
+如果需要向官方仓库（需协作者权限）或自己的 Fork 仓库发布自定义产物，请在本机系统全局的 `~/.gradle/gradle.properties`（Windows 为 `C:\Users\<用户名>\.gradle\gradle.properties`）中配置凭据：
+
+```properties
+# 你的真实 GitHub 登录账号
+gpr.user=YourGithubUsername
+# 你的 GitHub Personal Access Token (必须勾选 write:packages 与 read:packages 权限)
+gpr.key=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# 目标 GitHub 远程仓库 (默认为 Cuinings/ModernIpc；若发布至个人 Fork 库，请改为 YourUsername/ModernIpc)
+gpr.repo=Cuinings/ModernIpc
+```
+
+配置完成后，在项目根目录运行 Gradle 命令即可一键发布：
+
+```bash
+# 仅发布到 GitHub Packages 远程 Maven 仓库
+./gradlew publishAllPublicationsToGitHubPackagesRepository
+
+# 或者同时发布到项目本地 local-maven 与 GitHub Packages
 ./gradlew publish
 ```
 
