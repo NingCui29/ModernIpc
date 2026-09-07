@@ -54,31 +54,8 @@
 > **关于 GitHub Packages 的鉴权机制**：
 > 根据 GitHub 官方安全策略，**即使是公开开源仓库（Public Repository），通过 Maven 拉取 GitHub Packages 产物时也必须提供 GitHub 账号及带有 `read:packages` 权限的 Personal Access Token (PAT)**，否则 Gradle 会返回 `401 Unauthorized` 错误。
 
-### 1. 配置安全鉴权凭据 (全局推荐)
 
-为避免将个人私密 Token 硬编码在项目代码中（防止意外提交至公共代码库被 GitHub 自动吊销），**强烈建议将鉴权信息保存在本机全局的 `~/.gradle/gradle.properties`（Windows 路径通常为 `C:\Users\<用户名>\.gradle\gradle.properties`）** 中：
-
-```properties
-# 你的 GitHub 登录用户名
-gpr.user=YourGithubUsername
-# 你的 GitHub Personal Access Token (PAT，拉取需勾选 read:packages 权限)
-gpr.key=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxx
-```
-
-<details>
-<summary><b>🔑 如何在 1 分钟内创建 GitHub Personal Access Token (PAT)？</b></summary>
-
-1. 登录 GitHub，点击右上角头像 -> **Settings**。
-2. 在左侧菜单滑到底部，点击 **Developer settings** -> **Personal access tokens** -> **Tokens (classic)**。
-3. 点击右上角 **Generate new token** -> **Generate new token (classic)**。
-4. **Note** 填写名称（例如 `ModernIPC-Packages`），**Expiration** 按需选择。
-5. 在权限列表中勾选 **`read:packages`**（下载包权限；如需向自己的 Fork 仓库发布还需勾选 `write:packages`）。
-6. 点击最下方绿色按钮 **Generate token**，复制生成的 `ghp_...` 秘钥并填入上述 `gradle.properties` 中。
-</details>
-
----
-
-### 2. 在宿主项目中接入 GitHub Packages 远程仓库
+### 1. 在宿主项目中接入 GitHub Packages 远程仓库
 
 #### 选项 A：Kotlin DSL (`settings.gradle.kts`) —— 官方推荐
 在宿主项目的根目录 `settings.gradle.kts` 中添加仓库源：
@@ -128,7 +105,7 @@ dependencyResolutionManagement {
 
 ---
 
-### 3. 添加模块依赖 (`build.gradle.kts`)
+### 2. 添加模块依赖 (`build.gradle.kts`)
 
 在具体业务模块的 `build.gradle.kts` 中引入所需模块：
 
