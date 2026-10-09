@@ -116,11 +116,15 @@ jobs:
             :app-client1:assembleDebug :app-client2:assembleDebug :app-client3:assembleDebug
 
       - name: Verify versions, dependency metadata, signatures and release assets
-        run: >-
-          python .github/scripts/prepare_release.py
-          --version "$RELEASE_VERSION"
-          --android-sdk "$ANDROID_HOME"
-          --output-dir ".gradle/release-assets/$RELEASE_VERSION"
+        shell: bash
+        run: |
+          "$ANDROID_HOME/build-tools/34.0.0/apksigner" verify --print-certs demo-app/build/outputs/apk/debug/demo-app-debug.apk
+          python .github/scripts/prepare_release.py \
+            --version "$RELEASE_VERSION" \
+            --android-sdk "$ANDROID_HOME" \
+            --aapt "$ANDROID_HOME/build-tools/34.0.0/aapt" \
+            --apksigner "$ANDROID_HOME/build-tools/34.0.0/apksigner" \
+            --output-dir ".gradle/release-assets/$RELEASE_VERSION"
 
       - name: Publish seven explicit publications to GitHub Packages
         shell: bash
