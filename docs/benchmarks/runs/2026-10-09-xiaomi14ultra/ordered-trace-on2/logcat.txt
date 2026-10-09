@@ -1,0 +1,2 @@
+--------- beginning of main
+10-09 09:29:52.291 28727 28727 E perfetto:     perfetto_cmd.cc:699 The trace config is invalid, bailing out.

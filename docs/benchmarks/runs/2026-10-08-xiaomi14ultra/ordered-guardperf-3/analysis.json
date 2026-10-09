@@ -1,0 +1,811 @@
+{
+  "run": "guardperf3",
+  "local": [
+    {
+      "kind": "TIME",
+      "batch": "0",
+      "mode": "lookup",
+      "count": "500000",
+      "cpuNs": "723845254",
+      "wallNs": "748709062",
+      "beforeBytes": "",
+      "afterBytes": "",
+      "bytes": "",
+      "threadCpuNsPerStep": 1447.690508
+    },
+    {
+      "kind": "TIME",
+      "batch": "1",
+      "mode": "guard",
+      "count": "500000",
+      "cpuNs": "355795053",
+      "wallNs": "361822656",
+      "beforeBytes": "",
+      "afterBytes": "",
+      "bytes": "",
+      "threadCpuNsPerStep": 711.590106
+    },
+    {
+      "kind": "TIME",
+      "batch": "2",
+      "mode": "guard",
+      "count": "500000",
+      "cpuNs": "355011460",
+      "wallNs": "358725208",
+      "beforeBytes": "",
+      "afterBytes": "",
+      "bytes": "",
+      "threadCpuNsPerStep": 710.02292
+    },
+    {
+      "kind": "TIME",
+      "batch": "3",
+      "mode": "lookup",
+      "count": "500000",
+      "cpuNs": "585703958",
+      "wallNs": "588233542",
+      "beforeBytes": "",
+      "afterBytes": "",
+      "bytes": "",
+      "threadCpuNsPerStep": 1171.407916
+    },
+    {
+      "kind": "ALLOC",
+      "batch": "0",
+      "mode": "lookup",
+      "count": "500000",
+      "cpuNs": "0",
+      "wallNs": "0",
+      "beforeBytes": "78156840",
+      "afterBytes": "102208552",
+      "bytes": "24051712",
+      "processBytesPerStep": 48.103424
+    },
+    {
+      "kind": "ALLOC",
+      "batch": "1",
+      "mode": "guard",
+      "count": "500000",
+      "cpuNs": "0",
+      "wallNs": "0",
+      "beforeBytes": "102208552",
+      "afterBytes": "102208552",
+      "bytes": "0",
+      "processBytesPerStep": 0.0
+    },
+    {
+      "kind": "ALLOC",
+      "batch": "2",
+      "mode": "guard",
+      "count": "500000",
+      "cpuNs": "0",
+      "wallNs": "0",
+      "beforeBytes": "102224936",
+      "afterBytes": "102224936",
+      "bytes": "0",
+      "processBytesPerStep": 0.0
+    },
+    {
+      "kind": "ALLOC",
+      "batch": "3",
+      "mode": "lookup",
+      "count": "500000",
+      "cpuNs": "0",
+      "wallNs": "0",
+      "beforeBytes": "102224936",
+      "afterBytes": "126260264",
+      "bytes": "24035328",
+      "processBytesPerStep": 48.070656
+    }
+  ],
+  "localSummary": [
+    {
+      "metric": "threadCpuNsPerStep",
+      "lookup": 1309.549212,
+      "guard": 710.806513,
+      "changePercent": -45.721282828735724
+    },
+    {
+      "metric": "processBytesPerStep",
+      "lookup": 48.08704,
+      "guard": 0.0,
+      "changePercent": -100.0
+    }
+  ],
+  "ipc": [
+    {
+      "round": 1,
+      "size": 16,
+      "mode": "lookup",
+      "count": 1000,
+      "p50Ms": 1.0375,
+      "p90Ms": 1.69052,
+      "p99Ms": 2.01375,
+      "maxMs": 2.952136,
+      "meanMs": 1.0799487460000001
+    },
+    {
+      "round": 1,
+      "size": 16,
+      "mode": "guard",
+      "count": 1000,
+      "p50Ms": 0.965938,
+      "p90Ms": 1.549375,
+      "p99Ms": 1.834583,
+      "maxMs": 2.375157,
+      "meanMs": 1.0160950770000001
+    },
+    {
+      "round": 1,
+      "size": 1024,
+      "mode": "lookup",
+      "count": 1000,
+      "p50Ms": 0.817292,
+      "p90Ms": 1.434584,
+      "p99Ms": 1.648542,
+      "maxMs": 2.462396,
+      "meanMs": 0.9123656929999999
+    },
+    {
+      "round": 1,
+      "size": 1024,
+      "mode": "guard",
+      "count": 1000,
+      "p50Ms": 0.835417,
+      "p90Ms": 1.540364,
+      "p99Ms": 1.787708,
+      "maxMs": 3.038802,
+      "meanMs": 0.974059577
+    },
+    {
+      "round": 2,
+      "size": 16,
+      "mode": "lookup",
+      "count": 1000,
+      "p50Ms": 0.911614,
+      "p90Ms": 1.338594,
+      "p99Ms": 1.563281,
+      "maxMs": 2.688698,
+      "meanMs": 0.949774487
+    },
+    {
+      "round": 2,
+      "size": 16,
+      "mode": "guard",
+      "count": 1000,
+      "p50Ms": 0.536823,
+      "p90Ms": 0.950105,
+      "p99Ms": 1.31125,
+      "maxMs": 2.960365,
+      "meanMs": 0.6381033460000001
+    },
+    {
+      "round": 2,
+      "size": 1024,
+      "mode": "lookup",
+      "count": 1000,
+      "p50Ms": 0.56151,
+      "p90Ms": 0.863438,
+      "p99Ms": 1.057084,
+      "maxMs": 2.142031,
+      "meanMs": 0.611373694
+    },
+    {
+      "round": 2,
+      "size": 1024,
+      "mode": "guard",
+      "count": 1000,
+      "p50Ms": 0.692604,
+      "p90Ms": 1.442344,
+      "p99Ms": 1.647813,
+      "maxMs": 2.461615,
+      "meanMs": 0.8635613569999999
+    },
+    {
+      "round": 3,
+      "size": 16,
+      "mode": "lookup",
+      "count": 1000,
+      "p50Ms": 0.991875,
+      "p90Ms": 1.308229,
+      "p99Ms": 1.469167,
+      "maxMs": 2.583125,
+      "meanMs": 0.913833176
+    },
+    {
+      "round": 3,
+      "size": 16,
+      "mode": "guard",
+      "count": 1000,
+      "p50Ms": 0.632604,
+      "p90Ms": 1.160573,
+      "p99Ms": 1.374114,
+      "maxMs": 1.886406,
+      "meanMs": 0.732257339
+    },
+    {
+      "round": 3,
+      "size": 1024,
+      "mode": "lookup",
+      "count": 1000,
+      "p50Ms": 0.967084,
+      "p90Ms": 1.347187,
+      "p99Ms": 1.533698,
+      "maxMs": 4.99901,
+      "meanMs": 1.007446557
+    },
+    {
+      "round": 3,
+      "size": 1024,
+      "mode": "guard",
+      "count": 1000,
+      "p50Ms": 0.659479,
+      "p90Ms": 1.186354,
+      "p99Ms": 1.391719,
+      "maxMs": 4.180521,
+      "meanMs": 0.768336895
+    },
+    {
+      "round": 4,
+      "size": 16,
+      "mode": "lookup",
+      "count": 1000,
+      "p50Ms": 0.686667,
+      "p90Ms": 1.203386,
+      "p99Ms": 1.372709,
+      "maxMs": 1.536927,
+      "meanMs": 0.7464387419999999
+    },
+    {
+      "round": 4,
+      "size": 16,
+      "mode": "guard",
+      "count": 1000,
+      "p50Ms": 0.663855,
+      "p90Ms": 0.995365,
+      "p99Ms": 1.266667,
+      "maxMs": 1.517656,
+      "meanMs": 0.70411667
+    },
+    {
+      "round": 4,
+      "size": 1024,
+      "mode": "lookup",
+      "count": 1000,
+      "p50Ms": 0.955781,
+      "p90Ms": 1.309948,
+      "p99Ms": 1.481927,
+      "maxMs": 3.318489,
+      "meanMs": 0.9970565600000001
+    },
+    {
+      "round": 4,
+      "size": 1024,
+      "mode": "guard",
+      "count": 1000,
+      "p50Ms": 0.780729,
+      "p90Ms": 1.249948,
+      "p99Ms": 1.455105,
+      "maxMs": 3.651927,
+      "meanMs": 0.8343321929999999
+    }
+  ],
+  "ipcSummary": [
+    {
+      "size": 16,
+      "lookup": 0.9517445,
+      "guard": 0.6482295,
+      "changePercent": -31.890386548070417,
+      "pairedChangePercent": [
+        -6.8975421686747085,
+        -41.112905242789154,
+        -36.221398865784494,
+        -3.322134309643543
+      ]
+    },
+    {
+      "size": 1024,
+      "lookup": 0.8865365000000001,
+      "guard": 0.7366665,
+      "changePercent": -16.905113325847275,
+      "pairedChangePercent": [
+        2.2176896384645817,
+        23.346690174707497,
+        -31.807474841895843,
+        -18.31507426910558
+      ]
+    }
+  ],
+  "foreground": {
+    "valid": true,
+    "observations": 39,
+    "maxGapMs": 504,
+    "scope": "activity_events_and_500ms_app_samples",
+    "states": [
+      {
+        "elapsedRealtimeMs": "743522799",
+        "uptimeMs": "161242057",
+        "event": "WAIT_READY",
+        "lifecycle": "RESUMED",
+        "focused": "false",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "false"
+      },
+      {
+        "elapsedRealtimeMs": "743522831",
+        "uptimeMs": "161242089",
+        "event": "FOCUS_GAIN",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743522900",
+        "uptimeMs": "161242157",
+        "event": "WAIT_READY",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743523001",
+        "uptimeMs": "161242259",
+        "event": "WAIT_READY",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743523102",
+        "uptimeMs": "161242360",
+        "event": "WAIT_READY",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743523102",
+        "uptimeMs": "161242360",
+        "event": "BEGIN",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743523603",
+        "uptimeMs": "161242861",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743524103",
+        "uptimeMs": "161243361",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743524605",
+        "uptimeMs": "161243862",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743525108",
+        "uptimeMs": "161244366",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743525611",
+        "uptimeMs": "161244869",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743526114",
+        "uptimeMs": "161245371",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743526617",
+        "uptimeMs": "161245875",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743527119",
+        "uptimeMs": "161246377",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743527621",
+        "uptimeMs": "161246879",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743528122",
+        "uptimeMs": "161247380",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743528624",
+        "uptimeMs": "161247881",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743529126",
+        "uptimeMs": "161248384",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743529628",
+        "uptimeMs": "161248885",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743530129",
+        "uptimeMs": "161249387",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743530632",
+        "uptimeMs": "161249890",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743531133",
+        "uptimeMs": "161250391",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743531635",
+        "uptimeMs": "161250893",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743532138",
+        "uptimeMs": "161251395",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743532639",
+        "uptimeMs": "161251897",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743533141",
+        "uptimeMs": "161252398",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743533642",
+        "uptimeMs": "161252900",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743534144",
+        "uptimeMs": "161253401",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743534646",
+        "uptimeMs": "161253904",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743535148",
+        "uptimeMs": "161254406",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743535650",
+        "uptimeMs": "161254908",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743536152",
+        "uptimeMs": "161255410",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743536654",
+        "uptimeMs": "161255912",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743537156",
+        "uptimeMs": "161256413",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743537658",
+        "uptimeMs": "161256915",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743538160",
+        "uptimeMs": "161257418",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743538661",
+        "uptimeMs": "161257919",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743539164",
+        "uptimeMs": "161258421",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743539666",
+        "uptimeMs": "161258924",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743540169",
+        "uptimeMs": "161259426",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743540672",
+        "uptimeMs": "161259930",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743541173",
+        "uptimeMs": "161260431",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743541677",
+        "uptimeMs": "161260935",
+        "event": "SAMPLE",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      },
+      {
+        "elapsedRealtimeMs": "743541750",
+        "uptimeMs": "161261008",
+        "event": "END",
+        "lifecycle": "RESUMED",
+        "focused": "true",
+        "interactive": "true",
+        "keyguardLocked": "false",
+        "deviceLocked": "false",
+        "valid": "true"
+      }
+    ]
+  }
+}

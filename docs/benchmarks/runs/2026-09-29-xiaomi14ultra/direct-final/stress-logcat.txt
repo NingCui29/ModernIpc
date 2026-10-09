@@ -1,0 +1,9 @@
+--------- beginning of main
+09-29 13:51:01.584 21751 28119 I IpcEchoBench: STRESS run=stress1 mode=suspend concurrency=16 count=1024 failures=0 durationMs=411.736875 successQps=2487.025239116608 p50Ms=5.352448 p99Ms=24.645365
+09-29 13:51:01.695 21751 28158 I IpcEchoBench: STRESS run=stress1 mode=direct concurrency=16 count=1024 failures=0 durationMs=85.23401 successQps=12013.983619918856 p50Ms=0.282864 p99Ms=6.001667
+09-29 13:51:02.076 21751 28163 I IpcEchoBench: STRESS run=stress1 mode=suspend concurrency=64 count=1024 failures=0 durationMs=271.945104 successQps=3765.465841959045 p50Ms=11.409375 p99Ms=30.905677
+09-29 13:51:02.123 21751 28123 I IpcEchoBench: STRESS run=stress1 mode=direct concurrency=64 count=1024 failures=0 durationMs=29.773177 successQps=34393.37360604815 p50Ms=0.238177 p99Ms=4.442344
+09-29 13:51:03.710 22029 28488 I IpcEchoBench: STRESS run=stress2 mode=direct concurrency=16 count=1024 failures=0 durationMs=53.705052 successQps=19067.107504150634 p50Ms=0.238594 p99Ms=3.575989
+09-29 13:51:04.304 22029 28488 I IpcEchoBench: STRESS run=stress2 mode=suspend concurrency=16 count=1024 failures=0 durationMs=536.703907 successQps=1907.9421383828308 p50Ms=7.489219 p99Ms=18.421771
+09-29 13:51:04.424 22029 28575 I IpcEchoBench: STRESS run=stress2 mode=direct concurrency=64 count=1024 failures=0 durationMs=67.048698 successQps=15272.48150292195 p50Ms=0.532396 p99Ms=17.035208
+09-29 13:51:05.107 22029 28581 I IpcEchoBench: STRESS run=stress2 mode=suspend concurrency=64 count=1024 failures=0 durationMs=530.870365 successQps=1928.9078229107781 p50Ms=15.825312 p99Ms=72.142135

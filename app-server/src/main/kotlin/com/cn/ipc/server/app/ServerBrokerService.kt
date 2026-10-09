@@ -1,5 +1,8 @@
 package com.cn.ipc.server.app
 
+import android.os.Binder
+import android.os.Parcel
+import android.os.Process
 import com.cn.ipc.api.hub.IMessageHubServiceServerStub
 import com.cn.ipc.server.DefaultIpcServiceRegistry
 import com.cn.ipc.server.IpcBrokerService
@@ -18,8 +21,32 @@ class ServerBrokerService : IpcBrokerService() {
         val registry = super.onCreateRegistry()
         val hubImpl = MessageHubServiceImpl.instance
 
-        val stub = object : IMessageHubServiceServerStub() {
+        val stub = object : IMessageHubServiceServerStub(this) {
             override val coroutineScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
+
+            override fun onTransact(code: Int, data: Parcel, reply: Parcel?, flags: Int): Boolean {
+                if (Binder.getCallingUid() != Process.myUid() && code in setOf(1, 2, 3, 10, 20)) {
+                    val uid = Binder.getCallingUid()
+                    val packages = packageManager.getPackagesForUid(uid)?.toSet().orEmpty()
+                    val allowedIds = mapOf(
+                        "com.cn.ipc.client1" to "client_1",
+                        "com.cn.ipc.client2" to "client_2",
+                        "com.cn.ipc.client3" to "client_3"
+                    ).filterKeys { it in packages }.values
+                    val position = data.dataPosition()
+                    val claimedId = try {
+                        data.enforceInterface("com.cn.ipc.api.hub.IMessageHubService")
+                        if (code == 10) data.readLong()
+                        data.readString()
+                    } finally {
+                        data.setDataPosition(position)
+                    }
+                    if (claimedId !in allowedIds) {
+                        throw SecurityException("UID $uid cannot act as $claimedId")
+                    }
+                }
+                return super.onTransact(code, data, reply, flags)
+            }
 
             override fun registerClient(clientId: String, clientName: String) =
                 hubImpl.registerClient(clientId, clientName)
@@ -46,11 +73,12 @@ class ServerBrokerService : IpcBrokerService() {
         registry.register(
             RegisteredService(
                 serviceId = 2001,
-                apiVersion = 1,
-                apiHash = "hub_v1",
+                apiVersion = 2,
+                apiHash = "hub_v2",
                 requiredCapability = 0L,
                 permission = null,
-                binder = stub
+                binder = stub,
+                minSupportedClientVersion = 2
             )
         )
         return registry

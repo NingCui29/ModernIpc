@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var controller: IpcConnectionController
     // 用于在界面上展示实时日志输出的文本视图
     private lateinit var logView: TextView
+    private var benchmarkForeground: BenchmarkForegroundSession? = null
 
     /**
      * Activity 创建时回调。
@@ -79,8 +80,62 @@ class MainActivity : AppCompatActivity() {
         controller = IpcConnectionController(
             context = this,
             targetIntent = intent,
-            scope = CoroutineScope(Dispatchers.Default + Job())
+            scope = scope
         )
+        if (this.intent.getStringExtra("ipc_benchmark") != null) {
+            val runId = this.intent.getStringExtra("ipc_benchmark") ?: "manual"
+            controller.connect()
+            scope.launch {
+                val foreground = BenchmarkForegroundSession(this@MainActivity, runId)
+                benchmarkForeground = foreground
+                try {
+                    foreground.run {
+                        if (runId.startsWith("handshake")) {
+                            withTimeout(90_000) {
+                                controller.awaitConnected(10_000)
+                                IpcHandshakeProbe.run(this@MainActivity, runId)
+                            }
+                        } else if (runId.startsWith("dispatchperf")) {
+                            withTimeout(120_000) { IpcDispatchBenchmark.run(controller, filesDir, runId) }
+                        } else if (runId.startsWith("trace")) {
+                            withTimeout(90_000) {
+                                IpcRequestTraceBenchmark.run(controller, filesDir, runId,
+                                    this@MainActivity.intent.getBooleanExtra("ipc_request_trace", true))
+                            }
+                        } else if (runId.startsWith("cold")) {
+                            withTimeout(90_000) { IpcColdDiscoveryProbe.run(this@MainActivity, runId) }
+                        } else if (runId.startsWith("guardperf")) {
+                            withTimeout(120_000) { IpcGuardBenchmark.run(controller, filesDir, runId) }
+                        } else if (runId.startsWith("pendingperf")) {
+                            withTimeout(120_000) { IpcPendingBenchmark.run(controller, filesDir, runId) }
+                        } else if (runId.startsWith("compat")) {
+                            withTimeout(45_000) { IpcCompatibilityProbe.run(this@MainActivity, controller, runId) }
+                        } else if (runId.startsWith("terminal")) {
+                            withTimeout(45_000) { IpcTerminalProbe.run(this@MainActivity, controller, runId) }
+                        } else if (runId.startsWith("lifecycle")) {
+                            withTimeout(45_000) { IpcLifecycleProbe.run(this@MainActivity, controller, runId) }
+                        } else if (runId.startsWith("authmicro")) {
+                            controller.awaitConnected(10_000)
+                            withContext(Dispatchers.Default) {
+                                com.cn.ipc.api.test.IBenchmarkEchoServiceClientAdapter(controller).echoDirect("__auth_probe__")
+                            }
+                        } else if (runId.startsWith("auth")) {
+                            withTimeout(30_000) { IpcAuthBenchmark.run(controller, filesDir, runId) }
+                        } else if (runId.startsWith("fault")) {
+                            withTimeout(30_000) { IpcFaultProbe.run(controller, runId) }
+                        } else if (runId.startsWith("stress")) {
+                            IpcEchoBenchmark.runConcurrency(controller, filesDir, runId)
+                        } else {
+                            IpcEchoBenchmark.run(controller, filesDir, runId)
+                        }
+                    }
+                } catch (error: Exception) {
+                    android.util.Log.e("IpcEchoBench", "FAILED run=" + runId, error)
+                } finally {
+                    benchmarkForeground = null
+                }
+            }
+        }
 
         // 测试场景 1: 建立连接并监听状态
         btnConnect.setOnClickListener {
@@ -148,7 +203,7 @@ class MainActivity : AppCompatActivity() {
                 val independentController = IpcConnectionController(
                     context = this@MainActivity,
                     targetIntent = intent,
-                    scope = CoroutineScope(Dispatchers.Default + Job())
+                    scope = scope
                 )
                 independentController.connect()
                 
@@ -170,13 +225,17 @@ class MainActivity : AppCompatActivity() {
         btnTestCrash.setOnClickListener {
             val userService = IUserServiceClientAdapter(controller)
             log("--- [容灾测试]: 正在向 Server 发送必死指令 (Ping) ---")
-            try {
-                // ping() 会导致服务端执行 Runtime.getRuntime().halt(0)
-                userService.ping() 
-            } catch (e: Exception) {
-                log("Ping 失败，可能已经断开")
+            scope.launch {
+                try {
+                    val connected = controller.awaitConnected()
+                    controller.awaitServiceBinderForConnection(connected, 1001, 2,
+                        com.cn.ipc.api.test.IUserServiceIpcSchema.CLIENT_SCHEMA)
+                    // ping() 会导致服务端执行 Runtime.getRuntime().halt(0)
+                    userService.ping()
+                    log("等待底层 Binder 抛出 DeathRecipient 回调，观察退避重连机制 (Exponential Backoff)...")
+                } catch (cancelled: CancellationException) { throw cancelled }
+                catch (error: Exception) { log("Ping 失败: ${error.message}") }
             }
-            log("等待底层 Binder 抛出 DeathRecipient 回调，观察退避重连机制 (Exponential Backoff)...")
         }
 
         // 测试场景 5: 客户端主动取消挂起协程，防止内存泄漏
@@ -206,8 +265,16 @@ class MainActivity : AppCompatActivity() {
         btnTestOneway.setOnClickListener {
             val userService = IUserServiceClientAdapter(controller)
             log("--- [Oneway 测试]: 发送 Fire-and-Forget 消息 ---")
-            userService.logMessage("Hello from Client Oneway!")
-            log("✅ Oneway 消息已发出 (非阻塞返回，请查看 Server 进程日志)")
+            scope.launch {
+                try {
+                    val connected = controller.awaitConnected()
+                    controller.awaitServiceBinderForConnection(connected, 1001, 2,
+                        com.cn.ipc.api.test.IUserServiceIpcSchema.CLIENT_SCHEMA)
+                    userService.logMessage("Hello from Client Oneway!")
+                    log("✅ Oneway 消息已发出 (非阻塞返回，请查看 Server 进程日志)")
+                } catch (cancelled: CancellationException) { throw cancelled }
+                catch (error: Exception) { log("❌ Oneway 消息发送失败: ${error.message}") }
+            }
         }
 
         // 测试场景 7: 大数据量的 IPC 传输
@@ -248,6 +315,26 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         scope.cancel()
-        controller.close()
+        controller.dispose()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        benchmarkForeground?.onResume()
+    }
+
+    override fun onPause() {
+        benchmarkForeground?.onPause()
+        super.onPause()
+    }
+
+    override fun onStop() {
+        benchmarkForeground?.onStop()
+        super.onStop()
+    }
+
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        benchmarkForeground?.onWindowFocusChanged(hasFocus)
     }
 }

@@ -1,0 +1,28 @@
+--------- beginning of main
+10-08 10:58:24.701 18931 24003 I IpcCompatibilityProbe: PASS run=compat1 metadataMatch descriptor=true signatures=17 floor=1
+10-08 10:58:24.720 18931 24003 I IpcCompatibilityProbe: PASS run=compat1 additiveSubset clientVersion=1 requestedTransactions=1 extraServerTransactions=true
+10-08 10:58:24.740 24010 24048 E JavaBinder: *** Uncaught remote exception! Exceptions are not yet supported across processes. Client PID 18931 UID 10396.
+10-08 10:58:24.740 24010 24048 E JavaBinder: java.lang.RuntimeException: android.os.RemoteException: Schema transaction 12 mismatch or missing
+10-08 10:58:24.740 24010 24048 E JavaBinder: 	at android.os.Parcel.writeException(Parcel.java:3128)
+10-08 10:58:24.740 24010 24048 E JavaBinder: 	at android.os.Binder.execTransactInternal(Binder.java:1457)
+10-08 10:58:24.740 24010 24048 E JavaBinder: 	at android.os.Binder.execTransact(Binder.java:1372)
+10-08 10:58:24.740 24010 24048 E JavaBinder: Caused by: android.os.RemoteException: Schema transaction 12 mismatch or missing
+10-08 10:58:24.740 24010 24048 E JavaBinder: 	at com.cn.ipc.server.IpcBrokerStub.getServiceChecked(IpcBrokerStub.kt:110)
+10-08 10:58:24.740 24010 24048 E JavaBinder: 	at com.cn.ipc.IIpcBroker$Stub.onTransact(IIpcBroker.java:138)
+10-08 10:58:24.740 24010 24048 E JavaBinder: 	at android.os.Binder.execTransactInternal(Binder.java:1428)
+10-08 10:58:24.740 24010 24048 E JavaBinder: 	... 1 more
+10-08 10:58:24.757 18931 18931 E IpcEchoBench: FAILED run=compat1
+10-08 10:58:24.757 18931 18931 E IpcEchoBench: java.lang.IllegalStateException: Wrong remote compatibility failure: null
+10-08 10:58:24.757 18931 18931 E IpcEchoBench: 	at com.cn.ipc.demo.IpcCompatibilityProbe.assertCompatibilityFailure(IpcCompatibilityProbe.kt:114)
+10-08 10:58:24.757 18931 18931 E IpcEchoBench: 	at com.cn.ipc.demo.IpcCompatibilityProbe.rejectsBoth(IpcCompatibilityProbe.kt:104)
+10-08 10:58:24.757 18931 18931 E IpcEchoBench: 	at com.cn.ipc.demo.IpcCompatibilityProbe.access$rejectsBoth(IpcCompatibilityProbe.kt:17)
+10-08 10:58:24.757 18931 18931 E IpcEchoBench: 	at com.cn.ipc.demo.IpcCompatibilityProbe$run$2.invokeSuspend(IpcCompatibilityProbe.kt:52)
+10-08 10:58:24.757 18931 18931 E IpcEchoBench: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+10-08 10:58:24.757 18931 18931 E IpcEchoBench: 	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:32)
+10-08 10:58:24.757 18931 18931 E IpcEchoBench: 	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:102)
+10-08 10:58:24.757 18931 18931 E IpcEchoBench: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+10-08 10:58:24.757 18931 18931 E IpcEchoBench: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+10-08 10:58:24.757 18931 18931 E IpcEchoBench: 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+10-08 10:58:24.757 18931 18931 E IpcEchoBench: 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+10-08 10:58:24.757 18931 18931 E IpcEchoBench: 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+10-08 10:58:24.757 18931 18931 E IpcEchoBench: 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)

@@ -16,6 +16,8 @@ extensions.configure<ApplicationExtension> {
     defaultConfig {
         minSdk = libs.findVersion("minSdk").get().requiredVersion.toInt()
         targetSdk = libs.findVersion("targetSdk").get().requiredVersion.toInt()
+        versionName = providers.gradleProperty("VERSION_NAME").get()
+        versionCode = providers.gradleProperty("VERSION_CODE").get().toInt()
     }
 
     compileOptions {

@@ -1,0 +1,2 @@
+u0_a396      12286  1620   15650700 191296 0                   0 S com.cn.ipc.demo
+u0_a396      18811  1620   15252176 130888 0                   0 S com.cn.ipc.demo:server

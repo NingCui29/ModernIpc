@@ -5,14 +5,14 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.CoroutineScope
 import java.util.concurrent.atomic.AtomicInteger
 
 /**
  * 在服务端进程中执行的真实业务实现类。
  * 实现了 [IUserService] 接口定义的所有跨进程调用方法。
  */
-class UserServiceImpl : IUserService {
+class UserServiceImpl(private val scope: CoroutineScope) : IUserService {
     
     // 用于生成唯一用户 ID 或计数的原子变量
     private val counter = AtomicInteger(0)
@@ -69,7 +69,7 @@ class UserServiceImpl : IUserService {
 
     init {
         // 后台定时发送全局广播，以模拟服务端的全局事件
-        GlobalScope.launch {
+        scope.launch {
             var tick = 0
             while (true) {
                 delay(1000)

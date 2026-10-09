@@ -21,5 +21,37 @@
             android:exported="false"
             android:process=":server" />
 
+        <!-- Explicit lifecycle test endpoints; never exposed outside this app. -->
+        <service
+            android:name=".NullBindingService"
+            android:exported="false"
+            android:process=":server" />
+        <service
+            android:name=".DelayedBindingService"
+            android:exported="false"
+            android:process=":server" />
+
+        <!-- Broker schema fixtures, reachable only by the explicit compatibility probe. -->
+        <service
+            android:name=".CompatibilityBrokerService"
+            android:exported="false"
+            android:process=":server" />
+        <service
+            android:name=".LegacyBrokerService"
+            android:exported="false"
+            android:process=":server" />
+
+        <!-- Explicit cold-discovery fault fixture; its controls require the application UID. -->
+        <service
+            android:name=".ColdDiscoveryBrokerService"
+            android:exported="false"
+            android:process=":server" />
+
+        <!-- Raw-bind controls keep real blocked handshakes isolated from ordinary demo connections. -->
+        <service
+            android:name=".HandshakeBlockingService"
+            android:exported="false"
+            android:process=":server" />
+
     </application>
 </manifest>

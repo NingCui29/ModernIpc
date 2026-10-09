@@ -1,0 +1,26 @@
+--------- beginning of main
+10-08 14:27:46.354  4964  4964 I IpcForeground: STATE run=compatguard event=WAIT_READY elapsedRealtimeMs=743743588 uptimeMs=161462846 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-08 14:27:46.375  4964  4964 I IpcForeground: STATE run=compatguard event=FOCUS_GAIN elapsedRealtimeMs=743743609 uptimeMs=161462867 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 14:27:46.467  4964  4964 I IpcForeground: STATE run=compatguard event=WAIT_READY elapsedRealtimeMs=743743690 uptimeMs=161462948 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 14:27:46.568  4964  4964 I IpcForeground: STATE run=compatguard event=WAIT_READY elapsedRealtimeMs=743743802 uptimeMs=161463060 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 14:27:46.670  4964  4964 I IpcForeground: STATE run=compatguard event=WAIT_READY elapsedRealtimeMs=743743904 uptimeMs=161463162 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 14:27:46.670  4964  4964 I IpcForeground: STATE run=compatguard event=BEGIN elapsedRealtimeMs=743743904 uptimeMs=161463162 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:27:46.691  4964  6482 I IpcCompatibilityProbe: PASS run=compatguard metadataMatch descriptor=true signatures=17 floor=1
+10-08 14:27:46.696  4964  6482 I IpcCompatibilityProbe: PASS run=compatguard additiveSubset clientVersion=1 requestedTransactions=1 extraServerTransactions=true
+10-08 14:27:46.709  4964  6482 I IpcCompatibilityProbe: PASS run=compatguard parameterChange brokerRejected=true controllerRejected=true
+10-08 14:27:46.710  4964  6482 I IpcCompatibilityProbe: PASS run=compatguard returnChange brokerRejected=true controllerRejected=true
+10-08 14:27:46.710  4964  6482 I IpcCompatibilityProbe: PASS run=compatguard modeChange brokerRejected=true controllerRejected=true
+10-08 14:27:46.711  4964  6482 I IpcCompatibilityProbe: PASS run=compatguard envelopeChange brokerRejected=true controllerRejected=true
+10-08 14:27:46.712  4964  6482 I IpcCompatibilityProbe: PASS run=compatguard missingTransaction brokerRejected=true controllerRejected=true
+10-08 14:27:46.713  4964  6482 I IpcCompatibilityProbe: PASS run=compatguard descriptorChange brokerRejected=true controllerRejected=true
+10-08 14:27:46.714  4964  6482 I IpcCompatibilityProbe: PASS run=compatguard futureClientVersion brokerRejected=true controllerRejected=true
+10-08 14:27:46.714  4964  6482 I IpcCompatibilityProbe: PASS run=compatguard schemaCacheIsolation fullCached=true changedSchemaRejected=true subsetAccepted=true
+10-08 14:27:46.720  4964  6482 I IpcCompatibilityProbe: PASS run=compatguard constructionMapMutation fingerprintStable=true originalSnapshotAccepted=true brokerWireAccepted=true copiedMutationRejected=true
+10-08 14:27:46.722  4964  6482 I IpcCompatibilityProbe: PASS run=compatguard legacyFloor userFloor=2 userDenied=true echoFloor=1 echoAllowed=true
+10-08 14:27:46.749  4964  6571 I IpcCompatibilityProbe: PASS run=compatguard strictCache coldMetadata=1 coldChecked=1 hotCalls=100 additionalDiscovery=0 legacy=0
+10-08 14:27:46.756  4964  6479 I IpcCompatibilityProbe: PASS run=compatguard generationRevalidate metadata=2 checked=2 legacy=0 generationAdvanced=true
+10-08 14:27:46.765  4964  6479 I IpcCompatibilityProbe: PASS run=compatguard legacyMethodsMissing metadataRejected=true checkedRejected=true legacyEchoAlive=true
+10-08 14:27:46.765  4964  6479 I IpcCompatibilityProbe: PASS run=compatguard strictLegacyNoFallback explicitFailure=true metadataAttempts=1 checked=0 legacyFallbacks=0
+10-08 14:27:46.767  4964  6481 I IpcCompatibilityProbe: DONE run=compatguard passed=true checks=16 requests=0 subscriptions=0 pending=0
+10-08 14:27:46.768  4964  4964 I IpcForeground: STATE run=compatguard event=END elapsedRealtimeMs=743744002 uptimeMs=161463260 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:27:46.772  4964  4964 I IpcForeground: END run=compatguard started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-compatguard.csv scope=activity_events_and_500ms_app_samples

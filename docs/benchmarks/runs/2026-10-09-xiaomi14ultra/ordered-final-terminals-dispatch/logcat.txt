@@ -1,0 +1,21 @@
+--------- beginning of main
+10-09 09:57:54.730  8705  8705 I IpcForeground: STATE run=terminalrelease event=WAIT_READY elapsedRealtimeMs=813951965 uptimeMs=185505365 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-09 09:57:54.747  8705  8705 I IpcForeground: STATE run=terminalrelease event=FOCUS_GAIN elapsedRealtimeMs=813951981 uptimeMs=185505381 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:57:54.831  8705  8705 I IpcForeground: STATE run=terminalrelease event=WAIT_READY elapsedRealtimeMs=813952065 uptimeMs=185505465 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:57:54.932  8705  8705 I IpcForeground: STATE run=terminalrelease event=WAIT_READY elapsedRealtimeMs=813952167 uptimeMs=185505566 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:57:55.033  8705  8705 I IpcForeground: STATE run=terminalrelease event=WAIT_READY elapsedRealtimeMs=813952267 uptimeMs=185505667 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:57:55.033  8705  8705 I IpcForeground: STATE run=terminalrelease event=BEGIN elapsedRealtimeMs=813952268 uptimeMs=185505668 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:57:55.075  8705  9963 I IpcTerminalProbe: PASS run=terminalrelease finiteFlow items=1,2,3 completed=true subscriptions=0
+10-09 09:57:55.080  8705  9969 I IpcTerminalProbe: PASS run=terminalrelease runtimeFlowError itemBeforeError=7 message=flow-runtime-error subscriptions=0
+10-09 09:57:55.536  8705  8705 I IpcForeground: STATE run=terminalrelease event=SAMPLE elapsedRealtimeMs=813952770 uptimeMs=185506170 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:57:56.038  8705  8705 I IpcForeground: STATE run=terminalrelease event=SAMPLE elapsedRealtimeMs=813953272 uptimeMs=185506672 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:57:56.540  8705  8705 I IpcForeground: STATE run=terminalrelease event=SAMPLE elapsedRealtimeMs=813953773 uptimeMs=185507173 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:57:56.555  8705  9962 I IpcTerminalProbe: PASS run=terminalrelease streamOverflow explicitFailure=true consumed=70 subscriptions=0
+10-09 09:57:56.654  8705  9965 I IpcTerminalProbe: PASS run=terminalrelease streamConflate completed=true consumed=4 last=999 overflow=false subscriptions=0
+10-09 09:57:56.674  8705  9962 I IpcTerminalProbe: PASS run=terminalrelease explicitStreamCancel extraError=false subscriptions=0
+10-09 09:57:56.849  8705  9962 I IpcTerminalProbe: PASS run=terminalrelease rpcDeadline defaultMs=150 elapsedMs=156 serverJobObserved=true requests=0 pending=0
+10-09 09:57:56.854  8705  9962 I IpcTerminalProbe: PASS run=terminalrelease asyncParameterError callbackReceived=true message=Missing_payload requests=0 pending=0
+10-09 09:57:57.008  8705  9962 I IpcTerminalProbe: PASS run=terminalrelease badTokenDeadline callbackTrusted=false defaultMs=150 elapsedMs=153 requests=0 pending=0
+10-09 09:57:57.014  8705  9963 I IpcTerminalProbe: DONE run=terminalrelease passed=true checks=8 subscriptions=0 requests=0 pending=0 anchorAlive=true
+10-09 09:57:57.016  8705  8705 I IpcForeground: STATE run=terminalrelease event=END elapsedRealtimeMs=813954250 uptimeMs=185507650 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:57:57.019  8705  8705 I IpcForeground: END run=terminalrelease started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-terminalrelease.csv scope=activity_events_and_500ms_app_samples

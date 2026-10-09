@@ -1,0 +1,166 @@
+{
+  "run": "terminal1",
+  "stage": "terminals",
+  "sourceHashes": [
+    {
+      "path": "demo-app/src/main\\AndroidManifest.xml",
+      "sha256": "34B48E7910EF46EF6009C64FF10ABE15C7D6D474BAAC3C547DF629422195987B"
+    },
+    {
+      "path": "demo-app/src/main\\kotlin\\com\\cn\\ipc\\demo\\DelayedBindingService.kt",
+      "sha256": "C4091097073BD89DE41CAB173D95DFEC08A8E07DDD7764C85159A3034A7C8136"
+    },
+    {
+      "path": "demo-app/src/main\\kotlin\\com\\cn\\ipc\\demo\\IpcAuthBenchmark.kt",
+      "sha256": "DBA20662B6295333AA1A310FA1C04FEEABEBD11C9FD8379A2419C05E273B488A"
+    },
+    {
+      "path": "demo-app/src/main\\kotlin\\com\\cn\\ipc\\demo\\IpcAuthProbe.kt",
+      "sha256": "DC8D2687C00AA198574D0CC63DFB3003CBD19368814D88BE245509647647C583"
+    },
+    {
+      "path": "demo-app/src/main\\kotlin\\com\\cn\\ipc\\demo\\IpcEchoBenchmark.kt",
+      "sha256": "F008F592BE1A9F1CD2116C385BE709AF326FE697373333BE131B70679648A8D2"
+    },
+    {
+      "path": "demo-app/src/main\\kotlin\\com\\cn\\ipc\\demo\\IpcFaultProbe.kt",
+      "sha256": "7F4C85FEE8BDCAD528696662F8CE91549378DB94E32433EB1427BEB05C82A220"
+    },
+    {
+      "path": "demo-app/src/main\\kotlin\\com\\cn\\ipc\\demo\\IpcLifecycleProbe.kt",
+      "sha256": "512A72CECF3B32670897B9156A07CF7F1F4F3A6007AA8BAFE805D4BC3FF00242"
+    },
+    {
+      "path": "demo-app/src/main\\kotlin\\com\\cn\\ipc\\demo\\IpcTerminalProbe.kt",
+      "sha256": "C53EEB6C9CED713E153E85CA20B654859DBBCAD8F9FDCE0B545F9B07219EA785"
+    },
+    {
+      "path": "demo-app/src/main\\kotlin\\com\\cn\\ipc\\demo\\MainActivity.kt",
+      "sha256": "71FB2E60037EFDA20F142FCA3BFA43F322823D6EA5EE8020EA640B64FCAA1FE4"
+    },
+    {
+      "path": "demo-app/src/main\\kotlin\\com\\cn\\ipc\\demo\\MyBrokerService.kt",
+      "sha256": "EB7B334245B936DA5B16DE6E01C5FE03C2DEBEAC840115C5B05C7482AAE4A3D2"
+    },
+    {
+      "path": "demo-app/src/main\\kotlin\\com\\cn\\ipc\\demo\\NullBindingService.kt",
+      "sha256": "4728E189D05A816A557166D2846489E403FD6BA41792F588BAC3256BBBA26F8E"
+    },
+    {
+      "path": "demo-app/src/main\\kotlin\\com\\cn\\ipc\\demo\\UserServiceImpl.kt",
+      "sha256": "CF617414DB30A6E3BCCD6146C086505D950986996D23D590E0C37A113F79B0CC"
+    },
+    {
+      "path": "demo-client-common/src/main\\AndroidManifest.xml",
+      "sha256": "8EF94A6AEC2218C5FD02408D018F6D52602C0EF4473DD1C115C5C6964F1E63E1"
+    },
+    {
+      "path": "demo-client-common/src/main\\kotlin\\com\\cn\\ipc\\client\\common\\BaseClientActivity.kt",
+      "sha256": "482453D8D72129C7F2B6543DCEB022320B39A137FBDCD4E60AAD08F3A23B8067"
+    },
+    {
+      "path": "demo-client-common/src/main\\kotlin\\com\\cn\\ipc\\client\\common\\IpcBenchmarkSuite.kt",
+      "sha256": "AACE7D58BD510AD85AAA821CCA0B182C290E081F2DBA68706BAFA789B4DFCF99"
+    },
+    {
+      "path": "ipc-annotations/src/main\\kotlin\\com\\cn\\ipc\\annotations\\IpcAnnotations.kt",
+      "sha256": "CE0782DC0633464205A2AF0BE748B2D4CEC706E0A13B2A3A91FE72959B68E571"
+    },
+    {
+      "path": "ipc-annotations/src/main\\kotlin\\com\\cn\\ipc\\annotations\\IpcFacade.kt",
+      "sha256": "C73CE3581F11AA906B4F957FA40C013446AA21279B2DE72BACB5467F6B968E8B"
+    },
+    {
+      "path": "ipc-api/src/main\\kotlin\\com\\cn\\ipc\\api\\hub\\IMessageHubService.kt",
+      "sha256": "9D3424538FE9D68D00172CF8E9367168BC6427FEFB3C2486A7684B7946A1F8EA"
+    },
+    {
+      "path": "ipc-api/src/main\\kotlin\\com\\cn\\ipc\\api\\test\\IBenchmarkEchoService.kt",
+      "sha256": "11F96D5B322CD0BF5C224AA58C608350E61290AF046E0D30337F85CB616B5817"
+    },
+    {
+      "path": "ipc-api/src/main\\kotlin\\com\\cn\\ipc\\api\\test\\IUserService.kt",
+      "sha256": "31905DCA5504DAA2CE2C18552231AA7D729602B3783813F6FD42C98FCA412DF5"
+    },
+    {
+      "path": "ipc-compiler/src/main\\kotlin\\com\\cn\\ipc\\compiler\\ClientAdapterGenerator.kt",
+      "sha256": "90F926BB8A7200B37D3A3580A578F0FCBBD7BC51D59AC28D82797D3246B7455F"
+    },
+    {
+      "path": "ipc-compiler/src/main\\kotlin\\com\\cn\\ipc\\compiler\\IpcProcessorProvider.kt",
+      "sha256": "06F5EDA2AE124427668EBE6D2CF948AEB45789543D3A8415728FC273210E54A1"
+    },
+    {
+      "path": "ipc-compiler/src/main\\kotlin\\com\\cn\\ipc\\compiler\\IpcSymbolProcessor.kt",
+      "sha256": "AB7B38153B2242C270983CDF0764465D512E88A77F56413E224A8081E4E28B2F"
+    },
+    {
+      "path": "ipc-compiler/src/main\\kotlin\\com\\cn\\ipc\\compiler\\ServerStubGenerator.kt",
+      "sha256": "43BC4D601C0A30A1DCDF312AEAD53BF054468E055331693694381E04A396C92D"
+    },
+    {
+      "path": "ipc-runtime-client/src/main\\kotlin\\com\\cn\\ipc\\client\\FlowAdapterHelper.kt",
+      "sha256": "0F3915FC30B81021873B68FEAA76FE02C69A794CE591E43F4BBE0AFB12456777"
+    },
+    {
+      "path": "ipc-runtime-client/src/main\\kotlin\\com\\cn\\ipc\\client\\IpcClientState.kt",
+      "sha256": "601A457FA9D1B4FC5D9B9B9E3A989FA2DDD73D20845B7FEDFBC5AB315AE5E2F0"
+    },
+    {
+      "path": "ipc-runtime-client/src/main\\kotlin\\com\\cn\\ipc\\client\\IpcConnectionController.kt",
+      "sha256": "DC7C8BA9DD127959E6AC541B8A84D49731CC13284710B73C8C8C2FAEB1075729"
+    },
+    {
+      "path": "ipc-runtime-client/src/main\\kotlin\\com\\cn\\ipc\\client\\ModernIpcRouter.kt",
+      "sha256": "2A0AC14358CA866E8E915DDF3A0BFECB482D1C73EB0F379426317F219481785A"
+    },
+    {
+      "path": "ipc-runtime-client/src/main\\kotlin\\com\\cn\\ipc\\client\\PendingCallRegistry.kt",
+      "sha256": "686065E9D7304328327085E2CBE04E17703AAB4FCA0BB4447AB649B132833B1F"
+    },
+    {
+      "path": "ipc-runtime-client/src/main\\kotlin\\com\\cn\\ipc\\client\\RxIpcExtensions.kt",
+      "sha256": "106FEBA1F07DCEBB87E2D4593DE213C47A2459AA5691026CD29624CC397CD988"
+    },
+    {
+      "path": "ipc-runtime-client/src/main\\kotlin\\com\\cn\\ipc\\client\\SubscriptionRegistry.kt",
+      "sha256": "7EA231774ACB21AF94B5928B4A833B6AC94BB77F7A04CDF04896DA78A6EC010E"
+    },
+    {
+      "path": "ipc-runtime-server/src/main\\kotlin\\com\\cn\\ipc\\server\\BoundedDispatcher.kt",
+      "sha256": "B7EA904CBE21D5EC8BA576DDAE960551E7C1D80B5FFE37C41194BFB4DD96B710"
+    },
+    {
+      "path": "ipc-runtime-server/src/main\\kotlin\\com\\cn\\ipc\\server\\CallerAuthenticator.kt",
+      "sha256": "E1E07812F4BD160AE626F05E7B7B1FB5CA04F87A54814A5ECF349C93E7AB0CA3"
+    },
+    {
+      "path": "ipc-runtime-server/src/main\\kotlin\\com\\cn\\ipc\\server\\IpcBrokerService.kt",
+      "sha256": "2E7EEEB5C1E18545FA062243F029799DB787D97A567845B1097980735055969C"
+    },
+    {
+      "path": "ipc-runtime-server/src/main\\kotlin\\com\\cn\\ipc\\server\\IpcBrokerStub.kt",
+      "sha256": "75C7BC5EC39A0EEEA04B9A0E7CE2731E07C45400EB48F56B104C308F93D5CBAC"
+    },
+    {
+      "path": "ipc-runtime-server/src/main\\kotlin\\com\\cn\\ipc\\server\\IpcRequestTracker.kt",
+      "sha256": "8C173F5899491F886C9CA64349558EAC87F422D1206E99A832A440278F3A9F47"
+    },
+    {
+      "path": "ipc-runtime-server/src/main\\kotlin\\com\\cn\\ipc\\server\\IpcServiceRegistry.kt",
+      "sha256": "D44354497FC2B60C50C38AAB62AA2FAE36F2075C4753303F77362171CA0760F3"
+    },
+    {
+      "path": "ipc-runtime-server/src/main\\kotlin\\com\\cn\\ipc\\server\\IpcSubscriptionManager.kt",
+      "sha256": "85E4B35E0D3B1399989AEC5319F35FCCAEF73040A32A9CA66F13BEED05B51E44"
+    },
+    {
+      "path": "ipc-runtime-server/src/main\\kotlin\\com\\cn\\ipc\\server\\IpcTelemetry.kt",
+      "sha256": "C0202E588331E27993BECC018D8960A8FF5380A856E7B8FCEDBC51E42F4F4D9A"
+    }
+  ],
+  "installedSha256": "14124F10BA7417152BF7380E88F429638ED5BCA9C95142DE6F2846ABF6E150A1",
+  "device": "925c23bb",
+  "apkSha256": "14124F10BA7417152BF7380E88F429638ED5BCA9C95142DE6F2846ABF6E150A1",
+  "expectedPass": 8
+}

@@ -1,0 +1,107 @@
+"pid","tid","name","state","slices","duration_ms"
+3421,3471,"DefaultExecutor","S",38,19009.874629
+3421,3470,"DefaultDispatch","S",244,18955.159994
+3421,3468,"DefaultDispatch","S",847,18759.817396
+3421,3449,"HeapTaskDaemon","S",16,14968.017755
+3421,3452,"FinalizerWatchd","S",3,13332.624005
+3421,3439,"Runtime worker ","S",1,4999.872447
+3421,3438,"Runtime worker ","S",1,4999.680831
+3421,3436,"Runtime worker ","S",1,4999.621821
+3421,3444,"Runtime worker ","S",1,4999.581196
+3421,3460,"Profile Saver","S",61,4866.930885
+3421,3451,"FinalizerDaemon","S",1,1329.675521
+3421,3450,"ReferenceQueueD","S",1,1328.633593
+3421,3454,"binder:3421_2","S",7,1314.823750
+3421,3453,"binder:3421_1","S",882,1175.627017
+3421,3448,"Jit thread pool","S",51,1009.440207
+3421,3473,"binder:3421_4","S",1176,841.985847
+3421,3448,"Jit thread pool","Running",124,413.851883
+3421,3456,"binder:3421_3","S",55,313.723018
+3421,3468,"DefaultDispatch","Running",891,253.083073
+3421,3473,"binder:3421_4","Running",1201,182.604735
+3421,3421,"ipc.demo:server","Running",96,146.869908
+3421,3447,"ADB-JDWP Connec","S",4,125.078749
+3421,3453,"binder:3421_1","Running",897,111.804939
+3421,3470,"DefaultDispatch","Running",250,83.451100
+3421,3457,"ActivityHelper","S",21,75.272499
+3421,3473,"binder:3421_4","R",1192,46.136970
+3421,3468,"DefaultDispatch","R",876,38.998482
+3421,3453,"binder:3421_1","R",889,37.285074
+3421,3457,"ActivityHelper","Running",100,29.970207
+3421,3471,"DefaultExecutor","Running",48,28.649531
+3421,3449,"HeapTaskDaemon","Running",25,26.824324
+3421,3421,"ipc.demo:server","S",25,22.819215
+3421,3456,"binder:3421_3","Running",78,19.647032
+3421,3421,"ipc.demo:server","R",71,17.923640
+3421,3470,"DefaultDispatch","R",247,14.680149
+3421,3457,"ActivityHelper","R",79,12.405943
+3421,3471,"DefaultExecutor","R",43,11.907292
+3421,3460,"Profile Saver","Running",69,9.939683
+3421,3448,"Jit thread pool","R",102,9.892025
+3421,3447,"ADB-JDWP Connec","R+",6,6.213386
+3421,3454,"binder:3421_2","Running",24,5.777970
+3421,3466,"Thread-4","S",2,5.760626
+3421,3421,"ipc.demo:server","R+",22,5.050362
+3421,3460,"Profile Saver","R",66,4.445212
+3421,3456,"binder:3421_3","R",72,4.118752
+3421,3454,"binder:3421_2","R",16,3.739322
+3421,3468,"DefaultDispatch","R+",14,2.765833
+3421,3448,"Jit thread pool","R+",19,2.321926
+3421,3473,"binder:3421_4","R+",8,2.244583
+3421,3452,"FinalizerWatchd","R",6,2.232448
+3421,3450,"ReferenceQueueD","Running",12,2.091878
+3421,3451,"FinalizerDaemon","R",3,1.951510
+3421,3457,"ActivityHelper","R+",20,1.858695
+3421,3453,"binder:3421_1","R+",7,1.690782
+3421,3450,"ReferenceQueueD","R+",5,1.636406
+3421,3470,"DefaultDispatch","R+",1,1.617135
+3421,3466,"Thread-4","Running",4,1.444375
+3421,3471,"DefaultExecutor","R+",3,1.439895
+3421,3450,"ReferenceQueueD","R",6,1.407706
+3421,3449,"HeapTaskDaemon","R",16,1.183644
+3421,3455,"dex_preload_t","Running",4,1.045990
+3421,3452,"FinalizerWatchd","Running",8,1.025677
+3421,3447,"ADB-JDWP Connec","Running",12,1.002864
+3421,3452,"FinalizerWatchd","D",2,0.927188
+3421,3445,"ipc.demo:server","Running",1,0.883021
+3421,3449,"HeapTaskDaemon","D",3,0.785990
+3421,3461,"MiuiMonitorThre","R+",2,0.784427
+3421,3447,"ADB-JDWP Connec","R",5,0.740834
+3421,3451,"FinalizerDaemon","Running",7,0.657188
+3421,3436,"Runtime worker ","Running",4,0.618853
+3421,3444,"Runtime worker ","Running",2,0.527916
+3421,3469,"DefaultDispatch","R+",2,0.500469
+3421,3444,"Runtime worker ","R",1,0.468021
+3421,3461,"MiuiMonitorThre","Running",4,0.452291
+3421,3460,"Profile Saver","R+",2,0.438854
+3421,3438,"Runtime worker ","Running",4,0.406249
+3421,3446,"ipc.demo:server","Running",1,0.390417
+3421,3456,"binder:3421_3","R+",5,0.382656
+3421,3454,"binder:3421_2","R+",7,0.373749
+3421,3451,"FinalizerDaemon","D",2,0.366926
+3421,3463,"Timer-0","R",2,0.330729
+3421,3462,"enableArtReport","Running",2,0.315053
+3421,3448,"Jit thread pool","D",3,0.312760
+3421,3451,"FinalizerDaemon","R+",2,0.301667
+3421,3439,"Runtime worker ","Running",3,0.293436
+3421,3450,"ReferenceQueueD","D",1,0.288958
+3421,3462,"enableArtReport","R+",1,0.284062
+3421,3449,"HeapTaskDaemon","R+",3,0.275626
+3421,3466,"Thread-4","R",3,0.241978
+3421,3469,"DefaultDispatch","Running",3,0.226979
+3421,3436,"Runtime worker ","R",1,0.209219
+3421,3465,"ActivityHelper","Running",1,0.208542
+3421,3463,"Timer-0","Running",3,0.176719
+3421,3455,"dex_preload_t","R+",2,0.167500
+3421,3464,"ActivityHelper","Running",1,0.129584
+3421,3421,"ipc.demo:server","D",4,0.127396
+3421,3439,"Runtime worker ","R",2,0.072865
+3421,3438,"Runtime worker ","R",2,0.070886
+3421,3436,"Runtime worker ","D",1,0.057552
+3421,3436,"Runtime worker ","R+",1,0.053334
+3421,3461,"MiuiMonitorThre","R",1,0.050938
+3421,3455,"dex_preload_t","R",1,0.044427
+3421,3452,"FinalizerWatchd","R+",1,0.030677
+3421,3438,"Runtime worker ","D",2,0.030261
+3421,3439,"Runtime worker ","D",1,0.019375
+3421,3461,"MiuiMonitorThre","S",1,0.015885

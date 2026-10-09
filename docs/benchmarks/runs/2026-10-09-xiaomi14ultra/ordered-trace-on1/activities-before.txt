@@ -1,0 +1,520 @@
+ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
+Display #0 (activities from top to bottom):
+  * Task{844d5af #1014 type=home U=0 visible=true visibleRequested=true mode=fullscreen translucent=false sz=1}
+    * Task{59dc5b5 #1015 type=home I=com.miui.home/.launcher.Launcher U=0 rootTaskId=1014 visible=true visibleRequested=true mode=fullscreen translucent=false sz=1}
+      mLastPausedActivity: ActivityRecord{24137195 u0 com.miui.home/.launcher.Launcher t1015}
+      mLastNonFullscreenBounds=Rect(284, 723 - 796, 1803)
+      isSleeping=false
+      topResumedActivity=ActivityRecord{24137195 u0 com.miui.home/.launcher.Launcher t1015}
+      * Hist  #0: ActivityRecord{24137195 u0 com.miui.home/.launcher.Launcher t1015}
+        packageName=com.miui.home processName=com.miui.home
+        launchedFromUid=10142 launchedFromPackage=com.miui.home launchedFromFeature=null userId=0
+        app=ProcessRecord{f0498a 21918:com.miui.home/u0a142}
+        Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10010000 cmp=com.miui.home/.launcher.Launcher }
+        rootOfTask=true task=Task{59dc5b5 #1015 type=home I=com.miui.home/.launcher.Launcher}
+        taskAffinity=null
+        mActivityComponent=com.miui.home/.launcher.Launcher
+        baseDir=/data/app/~~PK4ysWAJACCTyFprQqyxHQ==/com.miui.home-6M9Mvq21umsZoAVcJWsGDw==/base.apk
+        dataDir=/data/user/0/com.miui.home
+        stateNotNeeded=true componentSpecified=true mActivityType=home
+        compat={420dpi} theme=0x7f120187
+        mLastReportedConfigurations:
+          mGlobalConfig={0.9 460mcc?mnc [zh_CN] ldltr sw411dp w411dp h914dp 420dpi nrml long hdr widecg port uimode=12 finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} as.3 s.6556 fontWeightAdjustment=0/d/o themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0/o}
+          mOverrideConfig={0.9 460mcc?mnc [zh_CN] ldltr sw411dp w411dp h914dp 420dpi nrml long hdr widecg port uimode=12 finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=home mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} as.3 s.29 fontWeightAdjustment=0/d/o themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0/o}
+        mLastReportedActivityWindowInfo=ActivityWindowInfo{isEmbedded=false, taskBounds=Rect(0, 0 - 1080, 2400), taskFragmentBounds=Rect(0, 0 - 1080, 2400), inOwnOrganizerProcess=true}
+        CurrentConfiguration={0.9 460mcc?mnc [zh_CN] ldltr sw411dp w411dp h914dp 420dpi nrml long hdr widecg port uimode=12 finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=home mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} as.3 s.29 fontWeightAdjustment=0/d/o themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0/o}
+        RequestedOverrideConfiguration={0.0 ?mcc0mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?ldr ?wideColorGamut ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=null mMaxBounds=Rect(0, 0 - 0, 0) mDisplayRotation=undefined mWindowingMode=undefined mActivityType=home mAlwaysOnTop=undefined mRotation=undefined mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} ?fontWeightAdjustment/0/0 themeChanged=0 themeChangedFlags=0 display=-1 extraData = Bundle[{}] screenType=-2/0}
+        taskDescription: label="null" icon=null iconResource=/0 iconFilename=null primaryColor=ff1b1b21
+          backgroundColor=ffefedf4 statusBarColor=0 navigationBarColor=0
+         backgroundColorFloating=fff2eff7
+        launchFailed=false launchCount=0 lastLaunchTime=-1d10h38m57s516ms
+        mHaveState=false mIcicle=null
+        state=RESUMED delayedResume=false finishing=false
+        keysPaused=false inHistory=true idle=true
+        occludesParent=true mNoDisplay=false immersive=false launchMode=2
+        mActivityType=home
+        windows=[Window{ce6ba03 u0 com.miui.home/com.miui.home.launcher.Launcher}, Window{7c7df4f u0 LauncherOverlayWindow:com.android.quicksearchbox}, Window{33d5bf6 u0 LauncherOverlayWindow:com.miui.personalassistant}]
+        windowType=2
+        mOccludesParent=true
+        overrideOrientation=SCREEN_ORIENTATION_PORTRAIT
+        requestedOrientation=SCREEN_ORIENTATION_PORTRAIT
+        mVisibleRequested=true mVisible=true mClientVisible=true reportedDrawn=true reportedVisible=true
+        mNumInterestingWindows=3 mNumDrawnWindows=3 allDrawn=true)
+        startingData=null firstWindowDrawn=true
+        nowVisible=true lastVisibleTime=-1m28s276ms
+        resizeMode=RESIZE_MODE_RESIZEABLE
+        mLastReportedMultiWindowMode=false mLastReportedPictureInPictureMode=false
+        supportsSizeChanges=SIZE_CHANGES_UNSUPPORTED_METADATA
+        configChanges=0xff3
+        neverSandboxDisplayApis=false
+        alwaysSandboxDisplayApis=false
+        isTransparentPolicyRunning=false
+        areBoundsLetterboxed=false
+        isLetterboxRunning=false
+        mIsCastMode=false
+        mOriginScreenOrientation=SCREEN_ORIENTATION_PORTRAIT
+        mScreenOrientationInner=SCREEN_ORIENTATION_UNSPECIFIED
+        mScreenOrientationOuter=SCREEN_ORIENTATION_PORTRAIT
+        mScreenOrientationPad=SCREEN_ORIENTATION_UNSPECIFIED
+        mOriginRequestOrientation=SCREEN_ORIENTATION_PORTRAIT
+        mMiuiConfigFlag=1
+        isEmbedded=false
+        originCanShowWhenLocked=false canShowWhenLocked=false containsShowWhenLockedWindow=false containsDismissKeyguardWindow=false
+
+  * Task{e49e445 #1262 type=standard A=10178:com.xiaomi.smarthome U=0 visible=false visibleRequested=false mode=fullscreen translucent=true sz=2}
+    mLastPausedActivity: ActivityRecord{125017475 u0 com.xiaomi.smarthome/.framework.plugin.rn.PluginRNActivity t1262}
+    mLastNonFullscreenBounds=Rect(284, 723 - 796, 1803)
+    isSleeping=false
+    * Hist  #1: ActivityRecord{125017475 u0 com.xiaomi.smarthome/.framework.plugin.rn.PluginRNActivity t1262}
+      packageName=com.xiaomi.smarthome processName=com.xiaomi.smarthome:plugin0
+      launchedFromUid=10178 launchedFromPackage=com.xiaomi.smarthome launchedFromFeature=null userId=0
+      app=ProcessRecord{3618991 22780:com.xiaomi.smarthome:plugin0/u0a178}
+      Intent { flg=0x30400000 xflg=0x4 cmp=com.xiaomi.smarthome/.framework.plugin.rn.PluginRNActivity (has extras) }
+      rootOfTask=false task=Task{e49e445 #1262 type=standard A=10178:com.xiaomi.smarthome}
+      taskAffinity=10178:com.xiaomi.smarthome
+      mActivityComponent=com.xiaomi.smarthome/.framework.plugin.rn.PluginRNActivity
+      baseDir=/data/app/~~kP03pWnV3R2FWBwr3lA8hA==/com.xiaomi.smarthome-SE42AZH2zncIkIJ2wSHBzw==/base.apk
+      dataDir=/data/user/0/com.xiaomi.smarthome
+      stateNotNeeded=false componentSpecified=true mActivityType=standard
+      compat={420dpi} theme=0x7f0d0351
+      mLastReportedConfigurations:
+        mGlobalConfig={0.9 460mcc?mnc [zh_CN] ldltr sw411dp w411dp h914dp 420dpi nrml long hdr widecg port uimode=12 finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} as.3 s.6377 fontWeightAdjustment=0/d/o themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0/o}
+        mOverrideConfig={0.9 460mcc?mnc [zh_CN] ldltr sw411dp w411dp h914dp 420dpi nrml long hdr widecg port uimode=12 finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} as.3 s.2 fontWeightAdjustment=0/d/o themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0/o}
+      mLastReportedActivityWindowInfo=ActivityWindowInfo{isEmbedded=false, taskBounds=Rect(0, 0 - 1080, 2400), taskFragmentBounds=Rect(0, 0 - 1080, 2400), inOwnOrganizerProcess=true}
+      CurrentConfiguration={0.9 460mcc?mnc [zh_CN] ldltr sw411dp w411dp h914dp 420dpi nrml long hdr widecg port uimode=12 finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} as.3 s.2 fontWeightAdjustment=0/d/o themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0/o}
+      RequestedOverrideConfiguration={0.0 ?mcc0mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?ldr ?wideColorGamut ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=null mMaxBounds=Rect(0, 0 - 0, 0) mDisplayRotation=undefined mWindowingMode=undefined mActivityType=undefined mAlwaysOnTop=undefined mRotation=undefined mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} ?fontWeightAdjustment/0/0 themeChanged=0 themeChangedFlags=0 display=-1 extraData = Bundle[{}] screenType=-2/0}
+      taskDescription: label="null" icon=null iconResource=/0 iconFilename=null primaryColor=fff5f5f5
+        backgroundColor=fffafafa statusBarColor=ff757575 navigationBarColor=ffffffff
+       backgroundColorFloating=ffffffff
+      launchFailed=false launchCount=0 lastLaunchTime=-18m18s639ms
+      mHaveState=true mIcicle=Bundle[mParcelledData.dataSize=54040]
+      state=STOPPED delayedResume=false finishing=false
+      keysPaused=false inHistory=true idle=true
+      occludesParent=true mNoDisplay=false immersive=false launchMode=0
+      mActivityType=standard
+      windows=[Window{57dafec u0 com.xiaomi.smarthome/com.xiaomi.smarthome.framework.plugin.rn.PluginRNActivity}]
+      windowType=2
+      mOccludesParent=true
+      overrideOrientation=SCREEN_ORIENTATION_USER_PORTRAIT
+      requestedOrientation=SCREEN_ORIENTATION_USER_PORTRAIT
+      mVisibleRequested=false mVisible=false mClientVisible=false reportedDrawn=false reportedVisible=false
+      mAppStopped=true
+      mNumInterestingWindows=1 mNumDrawnWindows=1 allDrawn=false)
+      nowVisible=false lastVisibleTime=-18m18s502ms
+      resizeMode=RESIZE_MODE_RESIZEABLE
+      mLastReportedMultiWindowMode=false mLastReportedPictureInPictureMode=false
+      supportsSizeChanges=SIZE_CHANGES_UNSUPPORTED_METADATA
+      configChanges=0xdb3
+      neverSandboxDisplayApis=false
+      alwaysSandboxDisplayApis=false
+      isTransparentPolicyRunning=false
+      areBoundsLetterboxed=false
+      isLetterboxRunning=false
+      mIsCastMode=false
+      mOriginScreenOrientation=SCREEN_ORIENTATION_BEHIND
+      mOriginRequestOrientation=SCREEN_ORIENTATION_USER_PORTRAIT
+      mMiuiConfigFlag=1
+      isEmbedded=false
+      originCanShowWhenLocked=false canShowWhenLocked=false containsShowWhenLockedWindow=false containsDismissKeyguardWindow=false
+    * Hist  #0: ActivityRecord{63850633 u0 com.xiaomi.smarthome/.SmartHomeMainActivity t1262}
+      packageName=com.xiaomi.smarthome processName=com.xiaomi.smarthome
+      launchedFromUid=10142 launchedFromPackage=com.miui.home launchedFromFeature=null userId=0
+      app=ProcessRecord{ac28c7 14946:com.xiaomi.smarthome/u0a178}
+      Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 xflg=0x4 cmp=com.xiaomi.smarthome/.SmartHomeMainActivity bnds=[36,36][167,167] (has extras) }
+      rootOfTask=true task=Task{e49e445 #1262 type=standard A=10178:com.xiaomi.smarthome}
+      taskAffinity=10178:com.xiaomi.smarthome
+      mActivityComponent=com.xiaomi.smarthome/.SmartHomeMainActivity
+      baseDir=/data/app/~~kP03pWnV3R2FWBwr3lA8hA==/com.xiaomi.smarthome-SE42AZH2zncIkIJ2wSHBzw==/base.apk
+      dataDir=/data/user/0/com.xiaomi.smarthome
+      stateNotNeeded=false componentSpecified=true mActivityType=standard
+      compat={420dpi} theme=0x7f0d04b3
+      mLastReportedConfigurations:
+        mGlobalConfig={0.9 460mcc?mnc [zh_CN] ldltr sw411dp w411dp h914dp 420dpi nrml long hdr widecg port uimode=12 finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} as.3 s.6377 fontWeightAdjustment=0/d/o themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0/o}
+        mOverrideConfig={0.9 460mcc?mnc [zh_CN] ldltr sw411dp w411dp h914dp 420dpi nrml long hdr widecg port uimode=12 finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} as.3 s.2 fontWeightAdjustment=0/d/o themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0/o}
+      mLastReportedActivityWindowInfo=ActivityWindowInfo{isEmbedded=false, taskBounds=Rect(0, 0 - 1080, 2400), taskFragmentBounds=Rect(0, 0 - 1080, 2400), inOwnOrganizerProcess=true}
+      CurrentConfiguration={0.9 460mcc?mnc [zh_CN] ldltr sw411dp w411dp h914dp 420dpi nrml long hdr widecg port uimode=12 finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} as.3 s.2 fontWeightAdjustment=0/d/o themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0/o}
+      RequestedOverrideConfiguration={0.0 ?mcc0mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?ldr ?wideColorGamut ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=null mMaxBounds=Rect(0, 0 - 0, 0) mDisplayRotation=undefined mWindowingMode=undefined mActivityType=standard mAlwaysOnTop=undefined mRotation=undefined mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} ?fontWeightAdjustment/0/0 themeChanged=0 themeChangedFlags=0 display=-1 extraData = Bundle[{}] screenType=-2/0}
+      ResolvedOverrideConfiguration={0.0 ?mcc0mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?ldr ?wideColorGamut ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=null mMaxBounds=Rect(0, 0 - 0, 0) mDisplayRotation=undefined mWindowingMode=undefined mActivityType=undefined mAlwaysOnTop=undefined mRotation=undefined mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} s.2 ?fontWeightAdjustment/0/0 themeChanged=0 themeChangedFlags=0 display=-1 extraData = Bundle[{}] screenType=-2/0}
+      taskDescription: label="null" icon=null iconResource=/0 iconFilename=null primaryColor=fff2eff7
+        backgroundColor=fffafafa statusBarColor=ff757575 navigationBarColor=ffffffff
+       backgroundColorFloating=ffffffff
+      results=[ResultInfo{who=null, request=6, result=0, data=null}]
+      launchFailed=false launchCount=0 lastLaunchTime=-18m30s37ms
+      mHaveState=true mIcicle=Bundle[mParcelledData.dataSize=16536]
+      state=STOPPED delayedResume=false finishing=false
+      keysPaused=false inHistory=true idle=true
+      occludesParent=true mNoDisplay=false immersive=false launchMode=0
+      mActivityType=standard
+      windows=[Window{b3c3669 u0 com.xiaomi.smarthome/com.xiaomi.smarthome.SmartHomeMainActivity}]
+      windowType=2
+      mOccludesParent=true
+      overrideOrientation=SCREEN_ORIENTATION_USER_PORTRAIT
+      requestedOrientation=SCREEN_ORIENTATION_USER_PORTRAIT
+      mVisibleRequested=false mVisible=false mClientVisible=false reportedDrawn=false reportedVisible=false
+      mAppStopped=true
+      mNumInterestingWindows=1 mNumDrawnWindows=1 allDrawn=false)
+      nowVisible=false lastVisibleTime=-18m23s636ms
+      resizeMode=RESIZE_MODE_RESIZEABLE
+      mLastReportedMultiWindowMode=false mLastReportedPictureInPictureMode=false
+      supportsSizeChanges=SIZE_CHANGES_UNSUPPORTED_METADATA
+      configChanges=0xdb3
+      neverSandboxDisplayApis=false
+      alwaysSandboxDisplayApis=false
+      isTransparentPolicyRunning=false
+      areBoundsLetterboxed=false
+      isLetterboxRunning=false
+      mIsCastMode=false
+      mOriginScreenOrientation=SCREEN_ORIENTATION_BEHIND
+      mOriginRequestOrientation=SCREEN_ORIENTATION_USER_PORTRAIT
+      mMiuiConfigFlag=1
+      isEmbedded=false
+      originCanShowWhenLocked=false canShowWhenLocked=false containsShowWhenLockedWindow=false containsDismissKeyguardWindow=false
+
+  * Task{1e97361 #6 type=undefined U=0 visible=false visibleRequested=false mode=fullscreen translucent=true sz=2}
+    mCreatedByOrganizer=true
+    * Task{6ba16e0 #8 type=undefined U=0 rootTaskId=6 visible=false visibleRequested=false mode=multi-window translucent=true sz=0}
+      mBounds=Rect(0, 2400 - 1080, 3600)
+      mCreatedByOrganizer=true
+      isSleeping=false
+    * Task{82af774 #7 type=undefined U=0 rootTaskId=6 visible=false visibleRequested=false mode=multi-window translucent=true sz=0}
+      mCreatedByOrganizer=true
+      isSleeping=false
+
+  * Task{27dbb8b #3 type=undefined U=0 visible=false visibleRequested=false mode=fullscreen translucent=true sz=2}
+    mCreatedByOrganizer=true
+    * Task{3bbad75 #5 type=undefined U=0 rootTaskId=3 visible=false visibleRequested=false mode=multi-window translucent=true sz=0}
+      mBounds=Rect(0, 2400 - 1080, 3600)
+      mCreatedByOrganizer=true
+      isSleeping=false
+    * Task{8785880 #4 type=undefined U=0 rootTaskId=3 visible=false visibleRequested=false mode=multi-window translucent=true sz=0}
+      mBounds=Rect(0, 0 - 1080, 1188)
+      mCreatedByOrganizer=true
+      isSleeping=false
+
+  Resumed activities in task display areas (from top to bottom):
+    Resumed: ActivityRecord{24137195 u0 com.miui.home/.launcher.Launcher t1015}
+
+  ResumedActivity: ActivityRecord{24137195 u0 com.miui.home/.launcher.Launcher t1015}
+
+ActivityTaskSupervisor state:
+  topDisplayFocusedRootTask=Task{844d5af #1014 type=home}
+  Display: mDisplayId=0 (organized)
+    init=1440x3200 560dpi mMinSizeOfResizeableTaskDp=200 base=1080x2400 420dpi cur=1080x2400 app=1080x2400 rng=1080x1080-2400x2400
+    deferred=false mLayoutNeeded=false
+  mLastOrientationSource=WindowedMagnification:0:31@97312257
+  deepestLastOrientationSource=ActivityRecord{24137195 u0 com.miui.home/.launcher.Launcher t1015}
+  overrideConfig={0.9 460mcc?mnc [zh_CN] ldltr sw411dp w411dp h914dp 420dpi nrml long hdr widecg port uimode=12 finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 0 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} as.3 s.6377 fontWeightAdjustment=0/d/o themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0/o}
+  ignoreOrientationRequest=false
+  mLayoutSeq=35947
+  mCurrentFocus=Window{ce6ba03 u0 com.miui.home/com.miui.home.launcher.Launcher}
+  mFocusedApp=ActivityRecord{24137195 u0 com.miui.home/.launcher.Launcher t1015}
+
+  mHoldScreenWindow=null
+  mObscuringWindow=Window{cabb9e9 u0 io.wallpaperengine.weclient.WEWallpaperService}
+  mLastWakeLockHoldingWindow=null
+  mLastWakeLockObscuringWindow=Window{57dafec u0 com.xiaomi.smarthome/com.xiaomi.smarthome.framework.plugin.rn.PluginRNActivity}
+
+  displayId=0
+  mWallpaperTarget=Window{ce6ba03 u0 com.miui.home/com.miui.home.launcher.Launcher}
+  mLastWallpaperZoomOut=1.0
+  token WallpaperWindowToken{440ac45 showWhenLocked=true}:
+    mWallpaperX=0.0
+    mWallpaperY=0.5
+    mWallpaperXStep=NA
+    mWallpaperYStep=NA
+    mWallpaperDisplayOffsetX=NA
+    mWallpaperDisplayOffsetY=NA
+  mWallpaperZoomOutCallingInfo=
+{}
+  mWallpaperZoomOutWithPivotCallingInfo=
+{}
+  mWallpaperSurfacePosition=Point(0, 0)
+  mTmpMatrix=Matrix{[1.0, 0.0, 0.0][0.0, 1.0, 0.0][0.0, 0.0, 1.0]}
+
+  AppResurDevice:true
+  AppResurName:local
+  AppResurVer:0
+  AppResurEnable:true
+  AppResurCPU:High
+  AppResurLaunchThres:3000
+  AppResurMaxChildCount:3
+  AppResurInactiveDuraH:36
+  AppResurPkg2MaxChildD:{"com.tencent.qqlive":2}
+  AppResurPkgDArray:com.youku.phone, com.qiyi.video, com.hunantv.imgo.activity, tv.danmaku.bili, com.tencent.qqlive, com.qiyi.video.lite, 
+  AppResurActivityDArray:com.tencent.qqlive/.ona.activity.VideoDetailActivity, 
+  ReResurEnable:true
+  ReResurPkgDArray:com.youku.phone, com.tencent.qqlive, com.hunantv.imgo.activity, tv.danmaku.bili, com.qiyi.video.lite, 
+  ReResurActivityDArray:tv.danmaku.bili/.ui.video.VideoDetailsActivity, tv.danmaku.bili/com.bilibili.ship.theseus.all.UnitedBizDetailsActivity, tv.danmaku.bili/com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity, com.hunantv.imgo.activity/com.mgtv.ui.player.VodPlayerPageActivity, com.hunantv.imgo.activity/com.mgtv.ui.videoplay.MGVideoPlayActivity, com.youku.phone/com.youku.ui.activity.DetailActivity, com.tencent.qqlive/.ona.activity.VideoDetailActivity, com.qiyi.video.lite/.videoplayer.activity.PlayerV2Activity, 
+
+  mSystemGestureExclusion=SkRegion()
+
+  Display areas in top down Z order:
+    * Leaf:36:36
+    * HideDisplayCutout:32:35
+      * OneHanded:34:35
+        * AppZoomOut:34:35
+          * Leaf:34:35
+      * AppZoomOut:33:33
+        * Leaf:33:33
+      * OneHanded:32:32
+        * AppZoomOut:32:32
+          * Leaf:32:32
+    * WindowedMagnification:0:31
+      * HideDisplayCutout:26:31
+        * OneHanded:26:31
+          * AppZoomOut:26:31
+            * Leaf:26:31
+      * Leaf:24:25
+      * HideDisplayCutout:18:23
+        * OneHanded:18:23
+          * AppZoomOut:23:23
+            * Leaf:23:23
+          * Leaf:22:22
+          * AppZoomOut:20:21
+            * Leaf:20:21
+          * Leaf:19:19
+          * AppZoomOut:18:18
+            * Leaf:18:18
+      * OneHanded:17:17
+        * Leaf:17:17
+      * HideDisplayCutout:16:16
+        * OneHanded:16:16
+          * AppZoomOut:16:16
+            * Leaf:16:16
+      * OneHanded:15:15
+        * Leaf:15:15
+      * HideDisplayCutout:0:14
+        * OneHanded:0:14
+          * AppZoomOut:2:14
+            * ImePlaceholder:13:14
+              * ImeContainer
+            * Leaf:3:12
+            * DefaultTaskDisplayArea (organized)
+          * Leaf:1:1
+          * AppZoomOut:0:0
+            * Leaf:0:0
+
+  Task display areas in top down Z order:
+    TaskDisplayArea DefaultTaskDisplayArea
+      overrideConfig={0.0 ?mcc0mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?ldr ?wideColorGamut ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=null mMaxBounds=Rect(0, 0 - 0, 0) mDisplayRotation=undefined mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=undefined mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} ?fontWeightAdjustment/0/0 themeChanged=0 themeChangedFlags=0 display=-1 extraData = Bundle[{}] screenType=-2/0}
+      mPreferredTopFocusableRootTask=Task{844d5af #1014 type=home}
+      mLastFocusedRootTask=Task{844d5af #1014 type=home}
+      Application tokens in top down Z order:
+      * Task{844d5af #1014 type=home U=0 visible=true visibleRequested=true mode=fullscreen translucent=false sz=1}
+        bounds=[0,0][1080,2400]
+        * Task{59dc5b5 #1015 type=home I=com.miui.home/.launcher.Launcher U=0 rootTaskId=1014 visible=true visibleRequested=true mode=fullscreen translucent=false sz=1}
+          bounds=[0,0][1080,2400]
+          * ActivityRecord{24137195 u0 com.miui.home/.launcher.Launcher t1015}
+      * Task{e49e445 #1262 type=standard A=10178:com.xiaomi.smarthome U=0 visible=false visibleRequested=false mode=fullscreen translucent=true sz=2}
+        bounds=[0,0][1080,2400]
+        * ActivityRecord{125017475 u0 com.xiaomi.smarthome/.framework.plugin.rn.PluginRNActivity t1262}
+        * ActivityRecord{63850633 u0 com.xiaomi.smarthome/.SmartHomeMainActivity t1262}
+      * Task{1e97361 #6 type=undefined U=0 visible=false visibleRequested=false mode=fullscreen translucent=true sz=2}
+        bounds=[0,0][1080,2400]
+        * Task{6ba16e0 #8 type=undefined U=0 rootTaskId=6 visible=false visibleRequested=false mode=multi-window translucent=true sz=0}
+          bounds=[0,2400][1080,3600]
+        * Task{82af774 #7 type=undefined U=0 rootTaskId=6 visible=false visibleRequested=false mode=multi-window translucent=true sz=0}
+          bounds=[0,0][1080,2400]
+      * Task{27dbb8b #3 type=undefined U=0 visible=false visibleRequested=false mode=fullscreen translucent=true sz=2}
+        bounds=[0,0][1080,2400]
+        * Task{3bbad75 #5 type=undefined U=0 rootTaskId=3 visible=false visibleRequested=false mode=multi-window translucent=true sz=0}
+          bounds=[0,2400][1080,3600]
+        * Task{8785880 #4 type=undefined U=0 rootTaskId=3 visible=false visibleRequested=false mode=multi-window translucent=true sz=0}
+          bounds=[0,0][1080,1188]
+
+  rootHomeTask=Task=1014
+
+  PinnedTaskController
+    mIsImeShowing=false
+    mImeHeight=0
+    mMinAspectRatio=0.41841003
+    mMaxAspectRatio=2.39
+
+  DisplayFrames w=1080 h=2400 r=0
+
+  DisplayPolicy
+    mCarDockEnablesAccelerometer=true mDeskDockEnablesAccelerometer=true
+    mDockMode=EXTRA_DOCK_STATE_UNDOCKED mLidState=LID_ABSENT
+    mAwake=true mScreenOnEarly=true mScreenOnFully=true
+    mKeyguardDrawComplete=true mWindowManagerDrawComplete=true
+    mHdmiPlugged=false
+    mLastBehavior=DEFAULT
+    mShowingDream=false mDreamingLockscreen=false
+    mStatusBar=[Lcom.android.server.wm.WindowState;@295b138
+    mExpandedPanel=Window{3f475a2 u0 NotificationShade}
+    isKeyguardShowing=false
+    mTopGestureHost=Window{8bb3804 u0 StatusBar}
+    mFocusedWindow=Window{ce6ba03 u0 com.miui.home/com.miui.home.launcher.Launcher}
+    mTopFullscreenOpaqueWindowState=Window{ce6ba03 u0 com.miui.home/com.miui.home.launcher.Launcher}
+    mSystemBarColorApps={ActivityRecord{24137195 u0 com.miui.home/.launcher.Launcher t1015}}
+    mLastStatusBarAppearanceRegions=
+      AppearanceRegion{ bounds=[0,0][1080,2400]}
+    mLastLetterboxDetails=
+    mStatusBarBackgroundWindows=
+      Window{ce6ba03 u0 com.miui.home/com.miui.home.launcher.Launcher}
+    mTopIsFullscreen=false
+    mImeInsetsConsumed=false
+    mForceShowNavigationBarEnabled=false mAllowLockscreenWhenOn=false
+    mRemoteInsetsControllerControlsSystemBars=false
+    mDecorInsetsInfo:
+      ROTATION_0={nonDecorInsets=[0,0][0,0], overrideNonDecorInsets=[0,126][0,0], configInsets=[0,0][0,0], overrideConfigInsets=[0,126][0,0], nonDecorFrame=[0,0][1080,2400], overrideNonDecorFrame=[0,126][1080,2400], configFrame=[0,0][1080,2400], overrideConfigFrame=[0,126][1080,2400]}
+      ROTATION_90={nonDecorInsets=[0,0][0,0], overrideNonDecorInsets=[126,0][0,0], configInsets=[0,0][0,0], overrideConfigInsets=[126,0][0,0], nonDecorFrame=[0,0][2400,1080], overrideNonDecorFrame=[126,0][2400,1080], configFrame=[0,0][2400,1080], overrideConfigFrame=[126,0][2400,1080]}
+      ROTATION_180={nonDecorInsets=[0,0][0,0], overrideNonDecorInsets=[0,0][0,126], configInsets=[0,0][0,0], overrideConfigInsets=[0,0][0,126], nonDecorFrame=[0,0][1080,2400], overrideNonDecorFrame=[0,0][1080,2274], configFrame=[0,0][1080,2400], overrideConfigFrame=[0,0][1080,2274]}
+      ROTATION_270={nonDecorInsets=[0,0][0,0], overrideNonDecorInsets=[0,0][126,0], configInsets=[0,0][0,0], overrideConfigInsets=[0,0][126,0], nonDecorFrame=[0,0][2400,1080], overrideNonDecorFrame=[0,0][2274,1080], configFrame=[0,0][2400,1080], overrideConfigFrame=[0,0][2274,1080]}
+    SystemGestures:
+      mDisplayCutoutTouchableRegionSize=32
+      mSwipeStartThreshold=Rect(63, 158 - 63, 63)
+      mSwipeDistanceThreshold=63
+    mDisplayContent=Display{#0 state=ON size=1080x2400 ROTATION_0}
+
+  DisplayRotation
+    mCurrentAppOrientation=SCREEN_ORIENTATION_PORTRAIT
+    mLastOrientation=1
+    mRotation=0 mDeferredRotationPauseCount=0
+    mLandscapeRotation=ROTATION_90 mSeascapeRotation=ROTATION_270
+    mPortraitRotation=ROTATION_0 mUpsideDownRotation=ROTATION_180
+    mSupportAutoRotation=true
+    WindowOrientationListener
+      mEnabled=true
+      mCurrentRotation=ROTATION_0
+      mSensorType=null
+      mSensor={Sensor name="device_orient  Wakeup", vendor="XiaoMi(V2.11)", version=1, type=27, maxRange=1.0, resolution=1.0, power=0.001, minDelay=0}
+      mRate=2
+      OrientationSensorJudge
+        mDesiredRotation=ROTATION_0
+        mProposedRotation=ROTATION_0
+        mTouching=false
+        mTouchEndedTimestampNanos=812166219096603
+        mLastRotationResolution=0
+
+    mCarDockRotation=-1 mDeskDockRotation=-1
+    mUserRotationMode=USER_ROTATION_LOCKED mUserRotation=ROTATION_0
+    mUserRotationModeOuter=USER_ROTATION_LOCKED mUserRotationOuter=ROTATION_0
+    mUserRotationModeInner=USER_ROTATION_FREE mUserRotationInner=ROTATION_0
+    mCameraRotationMode=0 mAllowAllRotations=false
+    mDemoHdmiRotation=ROTATION_90 mDemoHdmiRotationLock=false mUndockedHdmiRotation=-1
+    mLidOpenRotation=-1
+    mFixedToUserRotation=false
+
+    RotationHistory
+      10-07 11:10:27.165 ROTATION_0 to ROTATION_90
+        source=ActivityRecord{234838066 u0 com.dragon.read/.component.shortvideo.impl.fullscreen.ShortSeriesLandActivity t1101} SCREEN_ORIENTATION_USER_LANDSCAPE
+        mode=USER_ROTATION_LOCKED user=ROTATION_0 sensor=ROTATION_0
+      10-07 11:10:28.613 ROTATION_90 to ROTATION_0
+        source=ActivityRecord{24137195 u0 com.miui.home/.launcher.Launcher t1015} SCREEN_ORIENTATION_PORTRAIT
+        mode=USER_ROTATION_LOCKED user=ROTATION_0 sensor=ROTATION_0
+      10-07 11:22:25.264 ROTATION_0 to ROTATION_90
+        source=ActivityRecord{234838066 u0 com.dragon.read/.component.shortvideo.impl.fullscreen.ShortSeriesLandActivity t1101} SCREEN_ORIENTATION_USER_LANDSCAPE
+        mode=USER_ROTATION_LOCKED user=ROTATION_0 sensor=ROTATION_90
+      10-07 12:48:43.618 ROTATION_90 to ROTATION_0
+        source=ActivityRecord{12852257 u0 com.dragon.read/.component.shortvideo.impl.ShortSeriesActivity t1101} SCREEN_ORIENTATION_PORTRAIT
+        mode=USER_ROTATION_LOCKED user=ROTATION_0 sensor=ROTATION_0
+      10-07 12:48:54.641 ROTATION_0 to ROTATION_90
+        source=ActivityRecord{243426169 u0 com.dragon.read/.component.shortvideo.impl.fullscreen.ShortSeriesLandActivity t1101} SCREEN_ORIENTATION_USER_LANDSCAPE
+        mode=USER_ROTATION_LOCKED user=ROTATION_0 sensor=ROTATION_0
+      10-07 13:04:29.129 ROTATION_90 to ROTATION_0
+        source=Window{3f475a2 u0 NotificationShade} SCREEN_ORIENTATION_NOSENSOR
+        mode=USER_ROTATION_LOCKED user=ROTATION_0 sensor=-2
+      10-07 13:07:05.256 ROTATION_0 to ROTATION_90
+        source=ActivityRecord{243426169 u0 com.dragon.read/.component.shortvideo.impl.fullscreen.ShortSeriesLandActivity t1101} SCREEN_ORIENTATION_USER_LANDSCAPE
+        mode=USER_ROTATION_LOCKED user=ROTATION_0 sensor=ROTATION_180
+      10-07 13:07:10.745 ROTATION_90 to ROTATION_0
+        source=ActivityRecord{99502162 u999 com.tencent.mm/.ui.chatting.variants.ChattingMainUI t1114} SCREEN_ORIENTATION_PORTRAIT
+        mode=USER_ROTATION_LOCKED user=ROTATION_0 sensor=ROTATION_0
+
+        RotationLockHistory
+          10-08 09:50:59.943: mode=USER_ROTATION_LOCKED, rotation=ROTATION_0, caller=UiAutomationConnection#restoreRotationStateLocked
+          10-08 11:34:37.996: mode=USER_ROTATION_LOCKED, rotation=ROTATION_0, caller=UiAutomationConnection#restoreRotationStateLocked
+
+  InputConsumers:
+    name=recents_animation_input_consumer pid=21918 user=UserHandle{0}
+
+  WindowInsetsStateController
+    InsetsState
+      mDisplayFrame=Rect(0, 0 - 1080, 2400)
+      mDisplayCutout=DisplayCutout{insets=Rect(0, 126 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(509, 0 - 572, 126), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=1080 displayHeight=2400 physicalDisplayWidth=1440 physicalDisplayHeight=3200 density={3.5} cutoutSpec={M 0,0 H -42 V 168 H 42 V 0 H 0 Z} rotation={0} scale={1.0} physicalPixelDisplaySizeRatio={0.75}}} sideOverrides={}}
+      mRoundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=110, center=Point(110, 110)}, RoundedCorner{position=TopRight, radius=110, center=Point(970, 110)}, RoundedCorner{position=BottomRight, radius=110, center=Point(970, 2290)}, RoundedCorner{position=BottomLeft, radius=110, center=Point(110, 2290)}]}
+      mRoundedCornerFrame=Rect(0, 0 - 0, 0)
+      mPrivacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=Rect(44, 0 - 78, 126) rotation=0}
+      mDisplayShape=DisplayShape{ spec=1406003047 displayWidth=1440 displayHeight=3200 physicalPixelDisplaySizeRatio=1.0 rotation=0 offsetX=0 offsetY=0 scale=1.0}
+        InsetsSource id=3 type=ime frame=[0,0][0,0] visibleFrame=[0,1479][1080,2400] visible=false flags= sideHint=NONE boundingRects=null
+        InsetsSource id=27 type=displayCutout frame=[0,0][1080,126] visible=true flags= sideHint=TOP boundingRects=null
+        InsetsSource id=18de0000 type=statusBars frame=[0,0][1080,126] visible=true flags= sideHint=TOP boundingRects=null
+        InsetsSource id=18de0005 type=mandatorySystemGestures frame=[0,0][1080,158] visible=true flags= sideHint=TOP boundingRects=null
+        InsetsSource id=18de0006 type=tappableElement frame=[0,0][1080,126] visible=true flags= sideHint=TOP boundingRects=null
+    Control map:
+      Window{ce6ba03 u0 com.miui.home/com.miui.home.launcher.Launcher}:
+        InsetsSourceControl: {18de0000 mType=statusBars initiallyVisible mSurfacePosition=Point(0, 0) mInsetsHint=Insets{left=0, top=126, right=0, bottom=0}}
+        InsetsSourceControl: {3 mType=ime mSurfacePosition=Point(0, 126) mInsetsHint=Insets{left=0, top=0, right=0, bottom=921}}
+    InsetsSourceProviders:
+      InsetsSourceProvider
+        mSource=InsetsSource id=18de0006 type=tappableElement frame=[0,0][1080,126] visible=true flags= sideHint=TOP boundingRects=null
+        mSourceFrame=Rect(0, 0 - 1080, 126)
+        mIsLeashInitialized=false mHasPendingPosition=false
+        mWindowContainer=Window{8bb3804 u0 StatusBar}
+      InsetsSourceProvider
+        mSource=InsetsSource id=18de0005 type=mandatorySystemGestures frame=[0,0][1080,158] visible=true flags= sideHint=TOP boundingRects=null
+        mSourceFrame=Rect(0, 0 - 1080, 158)
+        mIsLeashInitialized=false mHasPendingPosition=false
+        mWindowContainer=Window{8bb3804 u0 StatusBar}
+      InsetsSourceProvider
+        mSource=InsetsSource id=18de0000 type=statusBars frame=[0,0][1080,126] visible=true flags= sideHint=TOP boundingRects=null
+        mSourceFrame=Rect(0, 0 - 1080, 126)
+        mControl=InsetsSourceControl mId=18de0000 mType=statusBars mLeash=Surface(name=Surface(name=8bb3804 StatusBar#111)/@0xa79b2b3 - animation-leash of insets_animation#28431)/@0xb47ff5d mInitiallyVisible=true mSurfacePosition=Point(0, 0) mInsetsHint=Insets{left=0, top=126, right=0, bottom=0} mSkipAnimationOnce=false mImeStatsToken=null
+        mInsetsHint=Insets{left=0, top=126, right=0, bottom=0}
+        mIsLeashInitialized=true mHasPendingPosition=false
+        mWindowContainer=Window{8bb3804 u0 StatusBar}
+        mAdapter=ControlAdapter mCapturedLeash=Surface(name=Surface(name=8bb3804 StatusBar#111)/@0xa79b2b3 - animation-leash of insets_animation#28431)/@0xb47ff5d
+        mControlTarget=Window{ce6ba03 u0 com.miui.home/com.miui.home.launcher.Launcher}
+      ImeInsetsSourceProvider
+        mSource=InsetsSource id=3 type=ime frame=[0,0][0,0] visibleFrame=[0,1479][1080,2400] visible=false flags= sideHint=NONE boundingRects=null
+        mSourceFrame=Rect(0, 1479 - 1080, 2400)
+        mControl=InsetsSourceControl mId=3 mType=ime mLeash=Surface(name=Surface(name=8634d19 InputMethod#15785)/@0xcc9bfbf - animation-leash of insets_animation#28402)/@0xf149317 mInitiallyVisible=false mSurfacePosition=Point(0, 126) mInsetsHint=Insets{left=0, top=0, right=0, bottom=921} mSkipAnimationOnce=false mImeStatsToken=null
+        mInsetsHint=Insets{left=0, top=0, right=0, bottom=921}
+        mIsLeashInitialized=true mHasPendingPosition=false
+        mWindowContainer=Window{8634d19 u0 InputMethod}
+        mAdapter=ControlAdapter mCapturedLeash=Surface(name=Surface(name=8634d19 InputMethod#15785)/@0xcc9bfbf - animation-leash of insets_animation#28402)/@0xf149317
+        mControlTarget=Window{ce6ba03 u0 com.miui.home/com.miui.home.launcher.Launcher}
+        mImeShowing=false mLastDrawn=false        showImePostLayout not scheduled, mImeRequester=null
+
+  InsetsPolicy
+    status: WINDOW_STATE_SHOWING
+    nav: WINDOW_STATE_SHOWING
+
+  mInputMethodWindow=Window{8634d19 u0 InputMethod}  KeyguardController:
+    mKeyguardShowing=false
+    mAodShowing=false
+    mKeyguardGoingAway=false
+   KeyguardShowing=false AodShowing=false KeyguardGoingAway=false DismissalRequested=false  Occluded=false DismissingKeyguardActivity=null TurnScreenOnActivity=null at display=0
+    mDismissalRequested=false
+
+  LockTaskController:
+    mLockTaskModeState=NONE
+    mLockTaskModeTasks=
+    mLockTaskPackages (userId:packages)=
+
+  mCurTaskIdForUser={0=1263}
+  mUserRootTaskInFront={}
+  mVisibilityTransactionDepth=0
+  isHomeRecentsComponent=true
+  mNoHistoryActivities=[]
+
+  TaskOrganizerController:
+      android.window.ITaskOrganizer$Stub$Proxy@436cfa1 uid=1000 (active):
+        (fullscreen) Task{27dbb8b #3 type=undefined}
+        (multi-window) Task{8785880 #4 type=undefined}
+        (multi-window) Task{3bbad75 #5 type=undefined}
+        (fullscreen) Task{1e97361 #6 type=undefined}
+        (multi-window) Task{82af774 #7 type=undefined}
+        (multi-window) Task{6ba16e0 #8 type=undefined}
+        (fullscreen) Task{844d5af #1014 type=home}
+        (fullscreen) Task{e49e445 #1262 type=standard A=10178:com.xiaomi.smarthome}
+
+  VisibleActivityProcess:[ ProcessRecord{f0498a 21918:com.miui.home/u0a142}]
+  NumNonAppVisibleWindowUidMap:[ 10303:1 10142:3 10135:1 10134:1 1000:3]
+  mNumAppVisibleWindowForUserMap:[ 10303:1 10142:3 1000:3]
+  mVisibleWindowsWithDisplayId:[ Display0:[com.miui.home~10134:1 com.miui.home~10135:1 com.miui.home~10142:4 io.wallpaperengine.weclient~10303:1 com.android.systemui~1000:3 ]]
+  SleepTokens={}
+preload enable:true
+preload debug:true
+preload display:null

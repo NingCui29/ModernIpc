@@ -1,0 +1,12 @@
+09-29 11:04:37.005 16918 16918 D RemoteService: Service onCreate()
+09-29 11:04:37.007 16918 16918 D RemoteService: Service onBind()
+09-29 11:04:37.009  8452  8452 D AndLinker: onServiceConnected:ComponentInfo{com.example.andlinker/com.example.andlinker.RemoteService} service:android.os.BinderProxy@b858798
+09-29 11:04:37.013  8452  8452 D BindingActivity: AndLinker onBind()
+09-29 11:04:37.015 16918 16983 D RemoteService: Call init() in server: msg from client
+09-29 11:04:37.821  8452  8452 D AndLinker: Receive callback in client:Request{mTargetClass='IRemoteCallback-IBaseCallback', mMethodName='onInit', mArgsWrapper=[com.codezjx.andlinker.InTypeWrapper@fc36de5]}
+09-29 11:04:37.821  8452  8452 D BindingActivity: Server callback onInit msg:Message from server.
+09-29 11:04:37.821  8452  8452 D AndLinker: Receive callback in client:Request{mTargetClass='IRemoteCallback-IRemoteCallback', mMethodName='onStart', mArgsWrapper=[com.codezjx.andlinker.InTypeWrapper@5cfc0ba]}
+09-29 11:04:37.821  8452  8452 D BindingActivity: Server callback onStart status:null
+09-29 11:04:37.822  8452  8452 D AndLinker: Receive callback in client:Request{mTargetClass='IRemoteCallback-IRemoteCallback', mMethodName='onValueChange', mArgsWrapper=[com.codezjx.andlinker.InTypeWrapper@9eb6b]}
+09-29 11:04:37.935 16918 16983 D RemoteService: Call oneway method: oneway
+09-29 11:04:40.936 16918 16983 D RemoteService: After oneway method server.

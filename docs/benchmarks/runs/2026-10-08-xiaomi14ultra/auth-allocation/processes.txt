@@ -1,0 +1,4 @@
+u0_a396       8347  1620   15614740 204048 0                   0 S com.cn.ipc.demo
+u0_a421       8564  1620   15279356 142772 0                   0 S com.cn.ipc.server.app
+u0_a422       8807  1620   15556576 212420 0                   0 S com.cn.ipc.client1
+u0_a396       9182  1620   15217028 130232 0                   0 S com.cn.ipc.demo:server

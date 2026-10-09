@@ -1,0 +1,26 @@
+--------- beginning of main
+10-09 09:57:59.668  9171  9171 I IpcForeground: STATE run=compatrelease event=WAIT_READY elapsedRealtimeMs=813956896 uptimeMs=185510296 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-09 09:57:59.687  9171  9171 I IpcForeground: STATE run=compatrelease event=FOCUS_GAIN elapsedRealtimeMs=813956922 uptimeMs=185510322 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:57:59.769  9171  9171 I IpcForeground: STATE run=compatrelease event=WAIT_READY elapsedRealtimeMs=813957003 uptimeMs=185510403 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:57:59.870  9171  9171 I IpcForeground: STATE run=compatrelease event=WAIT_READY elapsedRealtimeMs=813957104 uptimeMs=185510504 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:57:59.971  9171  9171 I IpcForeground: STATE run=compatrelease event=WAIT_READY elapsedRealtimeMs=813957205 uptimeMs=185510605 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:57:59.971  9171  9171 I IpcForeground: STATE run=compatrelease event=BEGIN elapsedRealtimeMs=813957206 uptimeMs=185510605 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:58:00.002  9171 10280 I IpcCompatibilityProbe: PASS run=compatrelease metadataMatch descriptor=true signatures=17 floor=1
+10-09 09:58:00.010  9171 10280 I IpcCompatibilityProbe: PASS run=compatrelease additiveSubset clientVersion=1 requestedTransactions=1 extraServerTransactions=true
+10-09 09:58:00.025  9171 10280 I IpcCompatibilityProbe: PASS run=compatrelease parameterChange brokerRejected=true controllerRejected=true
+10-09 09:58:00.026  9171 10280 I IpcCompatibilityProbe: PASS run=compatrelease returnChange brokerRejected=true controllerRejected=true
+10-09 09:58:00.027  9171 10280 I IpcCompatibilityProbe: PASS run=compatrelease modeChange brokerRejected=true controllerRejected=true
+10-09 09:58:00.029  9171 10280 I IpcCompatibilityProbe: PASS run=compatrelease envelopeChange brokerRejected=true controllerRejected=true
+10-09 09:58:00.030  9171 10280 I IpcCompatibilityProbe: PASS run=compatrelease missingTransaction brokerRejected=true controllerRejected=true
+10-09 09:58:00.031  9171 10280 I IpcCompatibilityProbe: PASS run=compatrelease descriptorChange brokerRejected=true controllerRejected=true
+10-09 09:58:00.032  9171 10280 I IpcCompatibilityProbe: PASS run=compatrelease futureClientVersion brokerRejected=true controllerRejected=true
+10-09 09:58:00.032  9171 10280 I IpcCompatibilityProbe: PASS run=compatrelease schemaCacheIsolation fullCached=true changedSchemaRejected=true subsetAccepted=true
+10-09 09:58:00.037  9171 10280 I IpcCompatibilityProbe: PASS run=compatrelease constructionMapMutation fingerprintStable=true originalSnapshotAccepted=true brokerWireAccepted=true copiedMutationRejected=true
+10-09 09:58:00.038  9171 10280 I IpcCompatibilityProbe: PASS run=compatrelease legacyFloor userFloor=2 userDenied=true echoFloor=1 echoAllowed=true
+10-09 09:58:00.066  9171 10282 I IpcCompatibilityProbe: PASS run=compatrelease strictCache coldMetadata=1 coldChecked=1 hotCalls=100 additionalDiscovery=0 legacy=0
+10-09 09:58:00.076  9171 10400 I IpcCompatibilityProbe: PASS run=compatrelease generationRevalidate metadata=2 checked=2 legacy=0 generationAdvanced=true
+10-09 09:58:00.087  9171 10282 I IpcCompatibilityProbe: PASS run=compatrelease legacyMethodsMissing metadataRejected=true checkedRejected=true legacyEchoAlive=true
+10-09 09:58:00.088  9171 10282 I IpcCompatibilityProbe: PASS run=compatrelease strictLegacyNoFallback explicitFailure=true metadataAttempts=1 checked=0 legacyFallbacks=0
+10-09 09:58:00.090  9171 10280 I IpcCompatibilityProbe: DONE run=compatrelease passed=true checks=16 requests=0 subscriptions=0 pending=0
+10-09 09:58:00.091  9171  9171 I IpcForeground: STATE run=compatrelease event=END elapsedRealtimeMs=813957326 uptimeMs=185510726 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:58:00.096  9171  9171 I IpcForeground: END run=compatrelease started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-compatrelease.csv scope=activity_events_and_500ms_app_samples

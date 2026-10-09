@@ -1,0 +1,18 @@
+--------- beginning of main
+10-08 11:40:54.280  8386  9380 I IpcCompatibilityProbe: PASS run=compatawake metadataMatch descriptor=true signatures=17 floor=1
+10-08 11:40:54.314  8386  9380 I IpcCompatibilityProbe: PASS run=compatawake additiveSubset clientVersion=1 requestedTransactions=1 extraServerTransactions=true
+10-08 11:40:54.364  8386  9380 I IpcCompatibilityProbe: PASS run=compatawake parameterChange brokerRejected=true controllerRejected=true
+10-08 11:40:54.365  8386  9380 I IpcCompatibilityProbe: PASS run=compatawake returnChange brokerRejected=true controllerRejected=true
+10-08 11:40:54.366  8386  9380 I IpcCompatibilityProbe: PASS run=compatawake modeChange brokerRejected=true controllerRejected=true
+10-08 11:40:54.366  8386  9380 I IpcCompatibilityProbe: PASS run=compatawake envelopeChange brokerRejected=true controllerRejected=true
+10-08 11:40:54.368  8386  9380 I IpcCompatibilityProbe: PASS run=compatawake missingTransaction brokerRejected=true controllerRejected=true
+10-08 11:40:54.368  8386  9380 I IpcCompatibilityProbe: PASS run=compatawake descriptorChange brokerRejected=true controllerRejected=true
+10-08 11:40:54.369  8386  9380 I IpcCompatibilityProbe: PASS run=compatawake futureClientVersion brokerRejected=true controllerRejected=true
+10-08 11:40:54.369  8386  9380 I IpcCompatibilityProbe: PASS run=compatawake schemaCacheIsolation fullCached=true changedSchemaRejected=true subsetAccepted=true
+10-08 11:40:54.375  8386  9380 I IpcCompatibilityProbe: PASS run=compatawake constructionMapMutation fingerprintStable=true originalSnapshotAccepted=true brokerWireAccepted=true copiedMutationRejected=true
+10-08 11:40:54.376  8386  9380 I IpcCompatibilityProbe: PASS run=compatawake legacyFloor userFloor=2 userDenied=true echoFloor=1 echoAllowed=true
+10-08 11:40:54.408  8386  9380 I IpcCompatibilityProbe: PASS run=compatawake strictCache coldMetadata=1 coldChecked=1 hotCalls=100 additionalDiscovery=0 legacy=0
+10-08 11:40:54.422  8386  9494 I IpcCompatibilityProbe: PASS run=compatawake generationRevalidate metadata=2 checked=2 legacy=0 generationAdvanced=true
+10-08 11:40:54.449  8386  9496 I IpcCompatibilityProbe: PASS run=compatawake legacyMethodsMissing metadataRejected=true checkedRejected=true legacyEchoAlive=true
+10-08 11:40:54.450  8386  9496 I IpcCompatibilityProbe: PASS run=compatawake strictLegacyNoFallback explicitFailure=true metadataAttempts=1 checked=0 legacyFallbacks=0
+10-08 11:40:54.456  8386  9497 I IpcCompatibilityProbe: DONE run=compatawake passed=true checks=16 requests=0 subscriptions=0 pending=0

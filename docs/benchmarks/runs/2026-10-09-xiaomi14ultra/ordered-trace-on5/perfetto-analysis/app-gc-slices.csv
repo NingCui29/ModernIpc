@@ -1,0 +1,6 @@
+"ts","dur","pid","tid","name","name"
+813980703035129,77292,11726,11748,"Jit thread pool","JIT compiling boolean android.app.Flags.reportPostgcMemoryMetrics() (kind=Baseline) from /system/framework/framework.jar"
+813980703117994,49323,11726,11748,"Jit thread pool","JIT compiling boolean android.app.FeatureFlagsImpl.reportPostgcMemoryMetrics() (kind=Baseline) from /system/framework/framework.jar"
+813981709772629,25640156,11726,11752,"HeapTaskDaemon","Background concurrent copying GC"
+813986738956481,345625,11726,11752,"HeapTaskDaemon","void art::gc::Heap::TrimIndirectReferenceTables(Thread *)"
+813986739308981,415521,11726,11752,"HeapTaskDaemon","void art::gc::Heap::TrimSpaces(Thread *)"

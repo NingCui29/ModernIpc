@@ -1,0 +1,7 @@
+# Preserve captured evidence bytes so recorded SHA-256 values remain meaningful.
+docs/benchmarks/runs/** -text -whitespace
+docs/releases/** -text -whitespace
+docs/archive/*.zip -text
+# Unified diff context and the frozen benchmark baseline retain their original bytes.
+docs/benchmarks/harness/andlinker-echo.patch -text -whitespace
+demo-app/src/main/kotlin/com/cn/ipc/demo/LegacyPendingCallRegistry.kt -whitespace

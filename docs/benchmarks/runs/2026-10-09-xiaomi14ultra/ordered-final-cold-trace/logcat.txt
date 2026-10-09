@@ -1,0 +1,27 @@
+--------- beginning of main
+10-09 09:47:13.469 27650 27650 I IpcForeground: STATE run=coldfinal event=WAIT_READY elapsedRealtimeMs=813310674 uptimeMs=184864074 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-09 09:47:13.487 27650 27650 I IpcForeground: STATE run=coldfinal event=FOCUS_GAIN elapsedRealtimeMs=813310721 uptimeMs=184864121 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:47:13.582 27650 27650 I IpcForeground: STATE run=coldfinal event=WAIT_READY elapsedRealtimeMs=813310816 uptimeMs=184864216 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:47:13.685 27650 27650 I IpcForeground: STATE run=coldfinal event=WAIT_READY elapsedRealtimeMs=813310920 uptimeMs=184864320 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:47:13.787 27650 27650 I IpcForeground: STATE run=coldfinal event=WAIT_READY elapsedRealtimeMs=813311021 uptimeMs=184864421 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:47:13.788 27650 27650 I IpcForeground: STATE run=coldfinal event=BEGIN elapsedRealtimeMs=813311022 uptimeMs=184864422 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:13.799 27650   427 I IpcColdProbe: START run=coldfinal checks=12 clientPid=27650 serverPid=355
+10-09 09:47:14.147 27650   427 I IpcColdProbe: PASS run=coldfinal mainColdAsync mainTicks=15/300ms result=true discoveryBeforePending=true
+10-09 09:47:14.292 27650 27650 I IpcForeground: STATE run=coldfinal event=SAMPLE elapsedRealtimeMs=813311525 uptimeMs=184864925 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:14.371 27650   439 I IpcColdProbe: PASS run=coldfinal coldAsyncDeadline defaultCallTimeoutMs=150 elapsedMs=153 timeout=true pending=0 lateChecked=0
+10-09 09:47:14.617 27650   439 I IpcColdProbe: PASS run=coldfinal flowDiscoveryDeadline defaultCallTimeoutMs=150 elapsedMs=176 collectorEnded=true timeout=true values=0 pending=0 lateChecked=0
+10-09 09:47:14.699 27650   443 I IpcColdProbe: PASS run=coldfinal cancelDiscovery elapsedMs=2 callerCancelled=true remoteStillBlockedBeforeRelease=true pending=0 lateChecked=0
+10-09 09:47:14.795 27650 27650 I IpcForeground: STATE run=coldfinal event=SAMPLE elapsedRealtimeMs=813312029 uptimeMs=184865428 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:14.931 27650   449 I IpcColdProbe: PASS run=coldfinal concurrentSingleFlight callers=16 metadata=1 checked=1 hotCalls=10 additionalDiscovery=0
+10-09 09:47:14.985 27650   443 I IpcColdProbe: PASS run=coldfinal sharedDiscoveryCancelOne waiters=16 cancelled=1 succeeded=15 metadata=1 checked=1 legacy=0 pending=0
+10-09 09:47:15.087 27650   448 I IpcColdProbe: PASS run=coldfinal closeDuringDiscovery elapsedMs=5 warmedPendingFailed=true discoveryWaiterFailed=true remoteStillBlockedBeforeRelease=true pending=0
+10-09 09:47:15.192 27650   427 I IpcColdProbe: PASS run=coldfinal disposeDuringDiscovery elapsedMs=4 warmedPendingFailed=true discoveryWaiterFailed=true remoteStillBlockedBeforeRelease=true pending=0
+10-09 09:47:15.271 27650   427 I IpcColdProbe: PASS run=coldfinal lateGeneration generationAdvanced=true freshResolvedBeforeOldRelease=true oldFailed=true metadata=2 checked=1
+10-09 09:47:15.298 27650 27650 I IpcForeground: STATE run=coldfinal event=SAMPLE elapsedRealtimeMs=813312531 uptimeMs=184865930 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:15.318 27650   449 I IpcColdProbe: PASS run=coldfinal failureRetry firstFailure=true retrySucceeded=true metadata=2 checked=1 legacy=0
+10-09 09:47:15.362 27650   443 I IpcColdProbe: PASS run=coldfinal strictSchemaRejection explicitCompatibilityFailure=true rejectedChecked=0 legacyFallback=0 validSchemaRetry=true
+10-09 09:47:15.475 27650   449 I IpcColdProbe: PASS run=coldfinal boundedSaturation workerLimit=4 fifthRejected=true elapsedMs=1 retrySucceeded=true recoveryRejections=0 peakBlocked=4
+10-09 09:47:15.520 27650   347 I IpcColdProbe: DONE run=coldfinal passed=true checks=12 requests=0 subscriptions=0 pending=0 watchdogs=0
+10-09 09:47:15.525 27650   347 I IpcColdProbe: RAW run=coldfinal checks=12 file=cold-coldfinal.csv
+10-09 09:47:15.530 27650 27650 I IpcForeground: STATE run=coldfinal event=END elapsedRealtimeMs=813312764 uptimeMs=184866164 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:15.532 27650 27650 I IpcForeground: END run=coldfinal started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-coldfinal.csv scope=activity_events_and_500ms_app_samples

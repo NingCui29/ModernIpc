@@ -1,0 +1,31 @@
+"pid","tid","process","thread","sched_slices","cpu_ms"
+4376,4397,"com.cn.ipc.demo:server","Jit thread pool",79,370.864582
+4376,4415,"com.cn.ipc.demo:server","DefaultDispatch",1199,279.940276
+4376,4424,"com.cn.ipc.demo:server","binder:4376_4",1514,176.135886
+4376,4376,"com.cn.ipc.demo:server","ipc.demo:server",106,143.534685
+4376,4406,"com.cn.ipc.demo:server","binder:4376_3",508,63.422861
+4376,4419,"com.cn.ipc.demo:server","DefaultExecutor",44,29.437860
+4376,4407,"com.cn.ipc.demo:server","ActivityHelper",70,28.698440
+4376,4418,"com.cn.ipc.demo:server","DefaultDispatch",82,28.517497
+4376,4398,"com.cn.ipc.demo:server","HeapTaskDaemon",24,27.384061
+4376,4402,"com.cn.ipc.demo:server","binder:4376_1",174,22.318385
+4376,4403,"com.cn.ipc.demo:server","binder:4376_2",27,6.224845
+4376,4408,"com.cn.ipc.demo:server","Profile Saver",63,3.494329
+4376,4414,"com.cn.ipc.demo:server","Thread-4",5,2.013281
+4376,4399,"com.cn.ipc.demo:server","ReferenceQueueD",4,1.776042
+4376,4396,"com.cn.ipc.demo:server","ADB-JDWP Connec",13,1.175884
+4376,4394,"com.cn.ipc.demo:server","ipc.demo:server",8,0.959374
+4376,4400,"com.cn.ipc.demo:server","FinalizerDaemon",10,0.956356
+4376,4401,"com.cn.ipc.demo:server","FinalizerWatchd",5,0.807188
+4376,4409,"com.cn.ipc.demo:server","MiuiMonitorThre",4,0.800262
+4376,4390,"com.cn.ipc.demo:server","Runtime worker ",4,0.614426
+4376,4417,"com.cn.ipc.demo:server","DefaultDispatch",3,0.578177
+4376,4395,"com.cn.ipc.demo:server","perfetto_hprof_",3,0.512084
+4376,4391,"com.cn.ipc.demo:server","Runtime worker ",3,0.508386
+4376,4392,"com.cn.ipc.demo:server","Runtime worker ",2,0.404011
+4376,4393,"com.cn.ipc.demo:server","Runtime worker ",2,0.389375
+4376,4405,"com.cn.ipc.demo:server","ipc.demo:server",1,0.388594
+4376,4410,"com.cn.ipc.demo:server","enableArtReport",2,0.373802
+4376,4413,"com.cn.ipc.demo:server","ActivityHelper",1,0.187344
+4376,4412,"com.cn.ipc.demo:server","ActivityHelper",3,0.151822
+4376,4411,"com.cn.ipc.demo:server","ActivityHelper",1,0.145468

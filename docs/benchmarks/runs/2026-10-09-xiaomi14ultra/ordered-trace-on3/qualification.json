@@ -1,0 +1,19 @@
+{
+  "valid": false,
+  "ruleVersion": "foreground-coverage-v1",
+  "targetSamplePeriodMs": 500,
+  "permittedMaxGapMs": 1000,
+  "scope": "activity_events_with_bounded_periodic_sample_coverage",
+  "observations": 4,
+  "sampleCount": 2,
+  "requiredSampleCount": 1,
+  "durationMs": 1214,
+  "maxGapMs": 502,
+  "observationMaxGapMs": 502,
+  "errors": [
+    "Request trace analysis failed: ValueError: Capture provenance/qualification failed: Buffered event CSV counts and flushed Logcat events differ"
+  ],
+  "sourceSha256": "18EF00CBD994BBB511DC4E127B8B686825903EFAED1C07304CB13CE8A49D2547",
+  "run": "traceon3",
+  "csv": "foreground-traceon3.csv"
+}

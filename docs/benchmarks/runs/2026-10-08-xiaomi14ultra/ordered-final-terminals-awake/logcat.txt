@@ -1,0 +1,10 @@
+--------- beginning of main
+10-08 11:40:45.372  5204  9219 I IpcTerminalProbe: PASS run=terminalawake finiteFlow items=1,2,3 completed=true subscriptions=0
+10-08 11:40:45.382  5204  9218 I IpcTerminalProbe: PASS run=terminalawake runtimeFlowError itemBeforeError=7 message=flow-runtime-error subscriptions=0
+10-08 11:40:47.059  5204  9221 I IpcTerminalProbe: PASS run=terminalawake streamOverflow explicitFailure=true consumed=72 subscriptions=0
+10-08 11:40:47.325  5204  9218 I IpcTerminalProbe: PASS run=terminalawake streamConflate completed=true consumed=11 last=999 overflow=false subscriptions=0
+10-08 11:40:47.341  5204  9218 I IpcTerminalProbe: PASS run=terminalawake explicitStreamCancel extraError=false subscriptions=0
+10-08 11:40:47.514  5204  9218 I IpcTerminalProbe: PASS run=terminalawake rpcDeadline defaultMs=150 elapsedMs=159 serverJobObserved=true requests=0 pending=0
+10-08 11:40:47.522  5204  9218 I IpcTerminalProbe: PASS run=terminalawake asyncParameterError callbackReceived=true message=Missing_payload requests=0 pending=0
+10-08 11:40:47.681  5204  9218 I IpcTerminalProbe: PASS run=terminalawake badTokenDeadline callbackTrusted=false defaultMs=150 elapsedMs=157 requests=0 pending=0
+10-08 11:40:47.695  5204  9222 I IpcTerminalProbe: DONE run=terminalawake passed=true checks=8 subscriptions=0 requests=0 pending=0 anchorAlive=true

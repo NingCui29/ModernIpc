@@ -1,0 +1,21 @@
+--------- beginning of main
+10-08 14:27:41.345  3436  3436 I IpcForeground: STATE run=terminalguard event=WAIT_READY elapsedRealtimeMs=743738579 uptimeMs=161457837 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-08 14:27:41.367  3436  3436 I IpcForeground: STATE run=terminalguard event=FOCUS_GAIN elapsedRealtimeMs=743738601 uptimeMs=161457859 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 14:27:41.445  3436  3436 I IpcForeground: STATE run=terminalguard event=WAIT_READY elapsedRealtimeMs=743738679 uptimeMs=161457937 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 14:27:41.545  3436  3436 I IpcForeground: STATE run=terminalguard event=WAIT_READY elapsedRealtimeMs=743738779 uptimeMs=161458037 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 14:27:41.646  3436  3436 I IpcForeground: STATE run=terminalguard event=WAIT_READY elapsedRealtimeMs=743738880 uptimeMs=161458138 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 14:27:41.646  3436  3436 I IpcForeground: STATE run=terminalguard event=BEGIN elapsedRealtimeMs=743738881 uptimeMs=161458139 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:27:41.681  3436  6089 I IpcTerminalProbe: PASS run=terminalguard finiteFlow items=1,2,3 completed=true subscriptions=0
+10-08 14:27:41.685  3436  6087 I IpcTerminalProbe: PASS run=terminalguard runtimeFlowError itemBeforeError=7 message=flow-runtime-error subscriptions=0
+10-08 14:27:42.148  3436  3436 I IpcForeground: STATE run=terminalguard event=SAMPLE elapsedRealtimeMs=743739382 uptimeMs=161458639 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:27:42.651  3436  3436 I IpcForeground: STATE run=terminalguard event=SAMPLE elapsedRealtimeMs=743739884 uptimeMs=161459141 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:27:43.142  3436  5986 I IpcTerminalProbe: PASS run=terminalguard streamOverflow explicitFailure=true consumed=69 subscriptions=0
+10-08 14:27:43.152  3436  3436 I IpcForeground: STATE run=terminalguard event=SAMPLE elapsedRealtimeMs=743740386 uptimeMs=161459643 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:27:43.242  3436  6085 I IpcTerminalProbe: PASS run=terminalguard streamConflate completed=true consumed=4 last=999 overflow=false subscriptions=0
+10-08 14:27:43.250  3436  6084 I IpcTerminalProbe: PASS run=terminalguard explicitStreamCancel extraError=false subscriptions=0
+10-08 14:27:43.416  3436  6085 I IpcTerminalProbe: PASS run=terminalguard rpcDeadline defaultMs=150 elapsedMs=156 serverJobObserved=true requests=0 pending=0
+10-08 14:27:43.420  3436  6085 I IpcTerminalProbe: PASS run=terminalguard asyncParameterError callbackReceived=true message=Missing_payload requests=0 pending=0
+10-08 14:27:43.575  3436  6085 I IpcTerminalProbe: PASS run=terminalguard badTokenDeadline callbackTrusted=false defaultMs=150 elapsedMs=153 requests=0 pending=0
+10-08 14:27:43.583  3436  6084 I IpcTerminalProbe: DONE run=terminalguard passed=true checks=8 subscriptions=0 requests=0 pending=0 anchorAlive=true
+10-08 14:27:43.585  3436  3436 I IpcForeground: STATE run=terminalguard event=END elapsedRealtimeMs=743740819 uptimeMs=161460077 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:27:43.589  3436  3436 I IpcForeground: END run=terminalguard started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-terminalguard.csv scope=activity_events_and_500ms_app_samples

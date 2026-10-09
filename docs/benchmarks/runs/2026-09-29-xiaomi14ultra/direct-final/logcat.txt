@@ -1,0 +1,25 @@
+--------- beginning of main
+09-29 13:51:01.584 21751 28119 I IpcEchoBench: STRESS run=stress1 mode=suspend concurrency=16 count=1024 failures=0 durationMs=411.736875 successQps=2487.025239116608 p50Ms=5.352448 p99Ms=24.645365
+09-29 13:51:01.695 21751 28158 I IpcEchoBench: STRESS run=stress1 mode=direct concurrency=16 count=1024 failures=0 durationMs=85.23401 successQps=12013.983619918856 p50Ms=0.282864 p99Ms=6.001667
+09-29 13:51:02.076 21751 28163 I IpcEchoBench: STRESS run=stress1 mode=suspend concurrency=64 count=1024 failures=0 durationMs=271.945104 successQps=3765.465841959045 p50Ms=11.409375 p99Ms=30.905677
+09-29 13:51:02.123 21751 28123 I IpcEchoBench: STRESS run=stress1 mode=direct concurrency=64 count=1024 failures=0 durationMs=29.773177 successQps=34393.37360604815 p50Ms=0.238177 p99Ms=4.442344
+09-29 13:51:03.710 22029 28488 I IpcEchoBench: STRESS run=stress2 mode=direct concurrency=16 count=1024 failures=0 durationMs=53.705052 successQps=19067.107504150634 p50Ms=0.238594 p99Ms=3.575989
+09-29 13:51:04.304 22029 28488 I IpcEchoBench: STRESS run=stress2 mode=suspend concurrency=16 count=1024 failures=0 durationMs=536.703907 successQps=1907.9421383828308 p50Ms=7.489219 p99Ms=18.421771
+09-29 13:51:04.424 22029 28575 I IpcEchoBench: STRESS run=stress2 mode=direct concurrency=64 count=1024 failures=0 durationMs=67.048698 successQps=15272.48150292195 p50Ms=0.532396 p99Ms=17.035208
+09-29 13:51:05.107 22029 28581 I IpcEchoBench: STRESS run=stress2 mode=suspend concurrency=64 count=1024 failures=0 durationMs=530.870365 successQps=1928.9078229107781 p50Ms=15.825312 p99Ms=72.142135
+09-29 14:00:03.337 22355 10321 I IpcEchoBench: RESULT run=release1 mode=suspend size=16 count=1000 failures=0 meanMs=0.699961351 p50Ms=0.585677 p90Ms=1.14125 p99Ms=1.65151 file=modern-release1-16.csv
+09-29 14:00:03.592 22355 10321 I IpcEchoBench: RESULT run=release1 mode=direct size=16 count=1000 failures=0 meanMs=0.244593585 p50Ms=0.254635 p90Ms=0.315781 p99Ms=0.442604 file=modern-direct-release1-16.csv
+09-29 14:00:04.283 22355 10321 I IpcEchoBench: RESULT run=release1 mode=suspend size=1024 count=1000 failures=0 meanMs=0.648574848 p50Ms=0.602812 p90Ms=0.907865 p99Ms=1.158854 file=modern-release1-1024.csv
+09-29 14:00:04.647 22355 10321 I IpcEchoBench: RESULT run=release1 mode=direct size=1024 count=1000 failures=0 meanMs=0.350234433 p50Ms=0.350313 p90Ms=0.420052 p99Ms=0.558489 file=modern-direct-release1-1024.csv
+09-29 14:00:06.695 28675 10491 I IpcEchoBench: RESULT run=release2 mode=direct size=16 count=1000 failures=0 meanMs=0.129097176 p50Ms=0.102552 p90Ms=0.174635 p99Ms=0.751615 file=modern-direct-release2-16.csv
+09-29 14:00:07.330 28675 10492 I IpcEchoBench: RESULT run=release2 mode=suspend size=16 count=1000 failures=0 meanMs=0.607348683 p50Ms=0.544531 p90Ms=0.851094 p99Ms=1.397916 file=modern-release2-16.csv
+09-29 14:00:07.650 28675 10492 I IpcEchoBench: RESULT run=release2 mode=direct size=1024 count=1000 failures=0 meanMs=0.30728155300000004 p50Ms=0.318177 p90Ms=0.387032 p99Ms=0.535782 file=modern-direct-release2-1024.csv
+09-29 14:00:08.329 28675 10492 I IpcEchoBench: RESULT run=release2 mode=suspend size=1024 count=1000 failures=0 meanMs=0.6436540829999999 p50Ms=0.600364 p90Ms=0.857761 p99Ms=1.213542 file=modern-release2-1024.csv
+09-29 14:00:10.967 28678 10674 I IpcEchoBench: RESULT run=release3 mode=suspend size=16 count=1000 failures=0 meanMs=0.580784395 p50Ms=0.532604 p90Ms=0.730104 p99Ms=1.474688 file=modern-release3-16.csv
+09-29 14:00:11.139 28678 10674 I IpcEchoBench: RESULT run=release3 mode=direct size=16 count=1000 failures=0 meanMs=0.164227561 p50Ms=0.149635 p90Ms=0.244115 p99Ms=0.392865 file=modern-direct-release3-16.csv
+09-29 14:00:11.817 28678 10674 I IpcEchoBench: RESULT run=release3 mode=suspend size=1024 count=1000 failures=0 meanMs=0.6475237020000001 p50Ms=0.607656 p90Ms=0.886823 p99Ms=1.113855 file=modern-release3-1024.csv
+09-29 14:00:12.066 28678 10674 I IpcEchoBench: RESULT run=release3 mode=direct size=1024 count=1000 failures=0 meanMs=0.237414913 p50Ms=0.23125 p90Ms=0.320208 p99Ms=0.475053 file=modern-direct-release3-1024.csv
+09-29 14:00:14.189 10401 10855 I IpcEchoBench: RESULT run=release4 mode=direct size=16 count=1000 failures=0 meanMs=0.133663113 p50Ms=0.107448 p90Ms=0.185678 p99Ms=0.556563 file=modern-direct-release4-16.csv
+09-29 14:00:14.834 10401 10855 I IpcEchoBench: RESULT run=release4 mode=suspend size=16 count=1000 failures=0 meanMs=0.613214716 p50Ms=0.542396 p90Ms=0.817812 p99Ms=1.493959 file=modern-release4-16.csv
+09-29 14:00:15.176 10401 10855 I IpcEchoBench: RESULT run=release4 mode=direct size=1024 count=1000 failures=0 meanMs=0.33029078 p50Ms=0.337656 p90Ms=0.398125 p99Ms=0.501667 file=modern-direct-release4-1024.csv
+09-29 14:00:15.812 10401 10855 I IpcEchoBench: RESULT run=release4 mode=suspend size=1024 count=1000 failures=0 meanMs=0.605499281 p50Ms=0.584531 p90Ms=0.755833 p99Ms=0.95599 file=modern-release4-1024.csv

@@ -1,0 +1,3 @@
+--------- beginning of main
+10-09 09:29:38.025 28582 28582 E perfetto:     perfetto_cmd.cc:402 Could not open /data/local/tmp/modernipc-traceon1-330a345f.pbtxt. If this is a permission denied error, try placing the config in /data/misc/perfetto-configs: Perfetto should always be able to access this directory. (errno: 13, Permission denied)
+10-09 09:29:38.020 28582 28582 W perfetto: type=1400 audit(0.0:295414): avc:  denied  { search } for  name="tmp" dev="dm-55" ino=436 scontext=u:r:perfetto:s0 tcontext=u:object_r:shell_data_file:s0 tclass=dir permissive=0

@@ -1,0 +1,17 @@
+--------- beginning of main
+09-29 13:48:14.982 12433 21317 I IpcEchoBench: RESULT run=final1 mode=suspend size=16 count=1000 failures=0 meanMs=0.7184029719999999 p50Ms=0.596197 p90Ms=0.968646 p99Ms=3.284063 file=modern-final1-16.csv
+09-29 13:48:15.246 12433 21317 I IpcEchoBench: RESULT run=final1 mode=direct size=16 count=1000 failures=0 meanMs=0.252686504 p50Ms=0.265261 p90Ms=0.348802 p99Ms=0.454532 file=modern-direct-final1-16.csv
+09-29 13:48:16.076 12433 21317 I IpcEchoBench: RESULT run=final1 mode=suspend size=1024 count=1000 failures=0 meanMs=0.791867317 p50Ms=0.693072 p90Ms=1.196146 p99Ms=1.706094 file=modern-final1-1024.csv
+09-29 13:48:16.334 12433 21317 I IpcEchoBench: RESULT run=final1 mode=direct size=1024 count=1000 failures=0 meanMs=0.24279756700000002 p50Ms=0.200208 p90Ms=0.392969 p99Ms=0.54625 file=modern-direct-final1-1024.csv
+09-29 13:48:17.721 12830 21613 I IpcEchoBench: RESULT run=final2 mode=direct size=16 count=1000 failures=0 meanMs=0.139180244 p50Ms=0.105885 p90Ms=0.186563 p99Ms=0.859792 file=modern-direct-final2-16.csv
+09-29 13:48:18.340 12830 21613 I IpcEchoBench: RESULT run=final2 mode=suspend size=16 count=1000 failures=0 meanMs=0.589189483 p50Ms=0.540208 p90Ms=0.745885 p99Ms=1.46901 file=modern-final2-16.csv
+09-29 13:48:18.597 12830 21613 I IpcEchoBench: RESULT run=final2 mode=direct size=1024 count=1000 failures=0 meanMs=0.242925009 p50Ms=0.231563 p90Ms=0.367239 p99Ms=0.463698 file=modern-direct-final2-1024.csv
+09-29 13:48:19.271 12830 21613 I IpcEchoBench: RESULT run=final2 mode=suspend size=1024 count=1000 failures=0 meanMs=0.626462986 p50Ms=0.592864 p90Ms=0.766302 p99Ms=1.032031 file=modern-final2-1024.csv
+09-29 13:48:21.715 13263 21853 I IpcEchoBench: RESULT run=final3 mode=suspend size=16 count=1000 failures=0 meanMs=0.615775149 p50Ms=0.549063 p90Ms=0.760156 p99Ms=1.963334 file=modern-final3-16.csv
+09-29 13:48:21.887 13263 21853 I IpcEchoBench: RESULT run=final3 mode=direct size=16 count=1000 failures=0 meanMs=0.15897451199999998 p50Ms=0.139531 p90Ms=0.240521 p99Ms=0.358541 file=modern-direct-final3-16.csv
+09-29 13:48:22.574 13263 21854 I IpcEchoBench: RESULT run=final3 mode=suspend size=1024 count=1000 failures=0 meanMs=0.636540432 p50Ms=0.606666 p90Ms=0.799792 p99Ms=1.055156 file=modern-final3-1024.csv
+09-29 13:48:22.922 13263 21854 I IpcEchoBench: RESULT run=final3 mode=direct size=1024 count=1000 failures=0 meanMs=0.332475177 p50Ms=0.337604 p90Ms=0.43599 p99Ms=0.572031 file=modern-direct-final3-1024.csv
+09-29 13:48:24.668 21496 22105 I IpcEchoBench: RESULT run=final4 mode=direct size=16 count=1000 failures=0 meanMs=0.13561220300000001 p50Ms=0.104531 p90Ms=0.172552 p99Ms=0.830886 file=modern-direct-final4-16.csv
+09-29 13:48:25.314 21496 22105 I IpcEchoBench: RESULT run=final4 mode=suspend size=16 count=1000 failures=0 meanMs=0.6154508599999999 p50Ms=0.557917 p90Ms=0.765729 p99Ms=1.879375 file=modern-final4-16.csv
+09-29 13:48:25.605 21496 22105 I IpcEchoBench: RESULT run=final4 mode=direct size=1024 count=1000 failures=0 meanMs=0.279548397 p50Ms=0.290885 p90Ms=0.389271 p99Ms=0.475521 file=modern-direct-final4-1024.csv
+09-29 13:48:26.353 21496 22106 I IpcEchoBench: RESULT run=final4 mode=suspend size=1024 count=1000 failures=0 meanMs=0.710177817 p50Ms=0.642968 p90Ms=0.986198 p99Ms=1.294532 file=modern-final4-1024.csv

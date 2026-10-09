@@ -1,0 +1,45 @@
+--------- beginning of main
+10-09 09:57:44.082  8181  8181 I IpcForeground: STATE run=lifecyclerelease event=WAIT_READY elapsedRealtimeMs=813941313 uptimeMs=185494712 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-09 09:57:44.094  8181  8181 I IpcForeground: STATE run=lifecyclerelease event=FOCUS_GAIN elapsedRealtimeMs=813941328 uptimeMs=185494728 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:57:44.183  8181  8181 I IpcForeground: STATE run=lifecyclerelease event=WAIT_READY elapsedRealtimeMs=813941417 uptimeMs=185494817 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:57:44.284  8181  8181 I IpcForeground: STATE run=lifecyclerelease event=WAIT_READY elapsedRealtimeMs=813941518 uptimeMs=185494918 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:57:44.385  8181  8181 I IpcForeground: STATE run=lifecyclerelease event=WAIT_READY elapsedRealtimeMs=813941619 uptimeMs=185495019 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:57:44.386  8181  8181 I IpcForeground: STATE run=lifecyclerelease event=BEGIN elapsedRealtimeMs=813941620 uptimeMs=185495020 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:57:44.448  8181  9466 I IpcLifecycleProbe: PASS run=lifecyclerelease closeHeldRequest failed=true cause=IllegalStateException
+10-09 09:57:44.700  8181  9466 I IpcLifecycleProbe: PASS run=lifecyclerelease close cycle=1 subscriptions=0 requests=0 eventsQuiet=true
+10-09 09:57:44.817  8181  9469 I IpcLifecycleProbe: PASS run=lifecyclerelease reconnect cycle=1 subscriptions=1 generation=2
+10-09 09:57:44.887  8181  8181 I IpcForeground: STATE run=lifecyclerelease event=SAMPLE elapsedRealtimeMs=813942121 uptimeMs=185495520 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:57:45.075  8181  9466 I IpcLifecycleProbe: PASS run=lifecyclerelease close cycle=2 subscriptions=0 requests=0 eventsQuiet=true
+10-09 09:57:45.195  8181  9310 I IpcLifecycleProbe: PASS run=lifecyclerelease reconnect cycle=2 subscriptions=1 generation=3
+10-09 09:57:45.388  8181  8181 I IpcForeground: STATE run=lifecyclerelease event=SAMPLE elapsedRealtimeMs=813942622 uptimeMs=185496022 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:57:45.449  8181  9310 I IpcLifecycleProbe: PASS run=lifecyclerelease close cycle=3 subscriptions=0 requests=0 eventsQuiet=true
+10-09 09:57:45.571  8181  9467 I IpcLifecycleProbe: PASS run=lifecyclerelease reconnect cycle=3 subscriptions=1 generation=4
+10-09 09:57:45.830  8181  9467 I IpcLifecycleProbe: PASS run=lifecyclerelease close cycle=4 subscriptions=0 requests=0 eventsQuiet=true
+10-09 09:57:45.890  8181  8181 I IpcForeground: STATE run=lifecyclerelease event=SAMPLE elapsedRealtimeMs=813943123 uptimeMs=185496523 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:57:45.960  8181  9470 I IpcLifecycleProbe: PASS run=lifecyclerelease reconnect cycle=4 subscriptions=1 generation=5
+10-09 09:57:46.220  8181  9467 I IpcLifecycleProbe: PASS run=lifecyclerelease close cycle=5 subscriptions=0 requests=0 eventsQuiet=true
+10-09 09:57:46.346  8181  9467 I IpcLifecycleProbe: PASS run=lifecyclerelease reconnect cycle=5 subscriptions=1 generation=6
+10-09 09:57:46.393  8181  8181 I IpcForeground: STATE run=lifecyclerelease event=SAMPLE elapsedRealtimeMs=813943626 uptimeMs=185497026 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:57:46.608  8181  9470 I IpcLifecycleProbe: PASS run=lifecyclerelease close cycle=6 subscriptions=0 requests=0 eventsQuiet=true
+10-09 09:57:46.731  8181  9467 I IpcLifecycleProbe: PASS run=lifecyclerelease reconnect cycle=6 subscriptions=1 generation=7
+10-09 09:57:46.897  8181  8181 I IpcForeground: STATE run=lifecyclerelease event=SAMPLE elapsedRealtimeMs=813944129 uptimeMs=185497529 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:57:46.990  8181  9467 I IpcLifecycleProbe: PASS run=lifecyclerelease close cycle=7 subscriptions=0 requests=0 eventsQuiet=true
+10-09 09:57:47.114  8181  9467 I IpcLifecycleProbe: PASS run=lifecyclerelease reconnect cycle=7 subscriptions=1 generation=8
+10-09 09:57:47.374  8181  9470 I IpcLifecycleProbe: PASS run=lifecyclerelease close cycle=8 subscriptions=0 requests=0 eventsQuiet=true
+10-09 09:57:47.399  8181  8181 I IpcForeground: STATE run=lifecyclerelease event=SAMPLE elapsedRealtimeMs=813944632 uptimeMs=185498032 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:57:47.499  8181  9310 I IpcLifecycleProbe: PASS run=lifecyclerelease reconnect cycle=8 subscriptions=1 generation=9
+10-09 09:57:47.770  8181  9530 I IpcLifecycleProbe: PASS run=lifecyclerelease explicitDispose collectorEnded=true reconnectRejected=true subscriptions=0 requests=0
+10-09 09:57:47.903  8181  8181 I IpcForeground: STATE run=lifecyclerelease event=SAMPLE elapsedRealtimeMs=813945136 uptimeMs=185498536 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:57:48.063  8181  9531 I IpcLifecycleProbe: PASS run=lifecyclerelease ownerCancellation disposed=true collectorEnded=true requestFailed=true subscriptions=0 requests=0 eventsQuiet=true
+10-09 09:57:48.099  8181  9469 I IpcLifecycleProbe: PASS run=lifecyclerelease serviceDestroy oldStubRejected=true binderStillAlive=true recreatedStub=true subscriptions=0 requests=0
+10-09 09:57:48.108  8181  9530 I IpcLifecycleProbe: PASS run=lifecyclerelease nullBinding disconnected=true failureElapsedMs=5 bindingTimeoutMs=5000 lateCallbackStable=true pending=0 syntheticWaiter=true
+10-09 09:57:48.113  9333  9333 I IpcLifecycleProbe: DELAYED_BIND started delayMs=1500
+10-09 09:57:48.408  8181  8181 I IpcForeground: STATE run=lifecyclerelease event=SAMPLE elapsedRealtimeMs=813945641 uptimeMs=185499041 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:57:48.913  8181  8181 I IpcForeground: STATE run=lifecyclerelease event=SAMPLE elapsedRealtimeMs=813946145 uptimeMs=185499545 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:57:49.417  8181  8181 I IpcForeground: STATE run=lifecyclerelease event=SAMPLE elapsedRealtimeMs=813946649 uptimeMs=185500049 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:57:49.619  9333  9333 I IpcLifecycleProbe: DELAYED_BIND returned=true
+10-09 09:57:49.922  8181  8181 I IpcForeground: STATE run=lifecyclerelease event=SAMPLE elapsedRealtimeMs=813947153 uptimeMs=185500553 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:57:50.026  8181  9530 I IpcLifecycleProbe: PASS run=lifecyclerelease bindingTimeout disconnected=true failureElapsedMs=207 bindingTimeoutMs=200 lateCallbackStable=true pending=0 syntheticWaiter=true
+10-09 09:57:50.035  8181  9469 I IpcLifecycleProbe: DONE run=lifecyclerelease passed=true cycles=8 subscriptions=0 requests=0 anchorAlive=true
+10-09 09:57:50.040  8181  8181 I IpcForeground: STATE run=lifecyclerelease event=END elapsedRealtimeMs=813947274 uptimeMs=185500673 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:57:50.051  8181  8181 I IpcForeground: END run=lifecyclerelease started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-lifecyclerelease.csv scope=activity_events_and_500ms_app_samples

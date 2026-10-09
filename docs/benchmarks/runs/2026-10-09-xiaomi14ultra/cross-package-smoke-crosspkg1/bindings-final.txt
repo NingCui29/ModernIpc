@@ -1,0 +1,66 @@
+ACTIVITY MANAGER SERVICES (dumpsys activity services)
+  User 0 active services:
+  * ServiceRecord{ac9b3fb u0 com.cn.ipc.server.app/.ServerBrokerService c:com.cn.ipc.client1}
+    intent={act=com.cn.ipc.ACTION_BROKER_SERVICE pkg=com.cn.ipc.server.app cmp=com.cn.ipc.server.app/.ServerBrokerService}
+    packageName=com.cn.ipc.server.app
+    processName=com.cn.ipc.server.app
+    targetSdkVersion=34
+    permission=com.cn.ipc.server.app.permission.BIND_BROKER
+    baseDir=/data/app/~~u_SFpUaFbt2NGhvVI1mRsA==/com.cn.ipc.server.app-3ebpxADFlPeMz7cUM4BVSw==/base.apk
+    dataDir=/data/user/0/com.cn.ipc.server.app
+    app=ProcessRecord{c7eea33 2791:com.cn.ipc.server.app/u0a421}
+    useNewWiuLogic_forCapabilities()=false
+    useNewWiuLogic_forStart()=false
+    useNewBfslLogic()=false
+    mAllowWiu_noBinding=DENIED
+    mAllowWiu_inBindService=PROC_STATE_TOP
+    mAllowWiu_byBindings=DENIED
+    getFgsAllowWiu_legacy=PROC_STATE_TOP
+    getFgsAllowWiu_new=DENIED
+    getFgsAllowWiu_forStart=PROC_STATE_TOP
+    getFgsAllowWiu_forCapabilities=PROC_STATE_TOP
+    allowUiJobScheduling=false
+    recentCallingPackage=com.cn.ipc.client3
+    recentCallingUid=10427
+    mAllowStart_noBinding=DENIED
+    mAllowStart_inBindService=PROC_STATE_TOP
+    mAllowStart_byBindings=DENIED
+    getFgsAllowStart_legacy=PROC_STATE_TOP
+    getFgsAllowStart_new=DENIED
+    getFgsAllowStart=PROC_STATE_TOP
+    startForegroundCount=0
+    infoAllowStartForeground=[callingPackage: com.cn.ipc.client1; callingUid: 10422; uidState: TOP ; uidBFSL: [BFSL]; intent: Intent { act=com.cn.ipc.ACTION_BROKER_SERVICE xflg=0x4 pkg=com.cn.ipc.server.app cmp=com.cn.ipc.server.app/.ServerBrokerService }; code:PROC_STATE_TOP; tempAllowListReason:<null>; allowWiu:12; targetSdkVersion:34; callerTargetSdkVersion:34; startForegroundCount:0; bindFromPackage:null: isBindService:true]
+    createTime=-32s427ms startingBgTimeout=--
+    lastActivity=-12s995ms restartTime=-32s426ms createdFromFg=true
+    Bindings:
+    * IntentBindRecord{9ec2529 CREATE}:
+      intent={act=com.cn.ipc.ACTION_BROKER_SERVICE xflg=0x4 pkg=com.cn.ipc.server.app cmp=com.cn.ipc.server.app/.ServerBrokerService}
+      binder=android.os.BinderProxy@39480ae
+      requested=true received=true hasBound=true doRebind=false
+      * Client AppBindRecord{a03fe4f ProcessRecord{7b55a50 3493:com.cn.ipc.client1/u0a422}}
+        Per-process Connections:
+          ConnectionRecord{8d03ff5 u0 CR IMP com.cn.ipc.server.app/.ServerBrokerService:@f63c92c flags=0x41}
+      * Client AppBindRecord{d93cd3 ProcessRecord{f18b9d6 5721:com.cn.ipc.client3/u0a427}}
+        Per-process Connections:
+          ConnectionRecord{7520799 u0 CR IMP com.cn.ipc.server.app/.ServerBrokerService:@85f18e0 flags=0x41}
+      * Client AppBindRecord{b153abf ProcessRecord{fee41e7 4458:com.cn.ipc.client2/u0a426}}
+        Per-process Connections:
+          ConnectionRecord{e0e2c14 u0 CR IMP com.cn.ipc.server.app/.ServerBrokerService:@cf96667 flags=0x41}
+    All Connections:
+      ConnectionRecord{7520799 u0 CR IMP com.cn.ipc.server.app/.ServerBrokerService:@85f18e0 flags=0x41}
+      ConnectionRecord{e0e2c14 u0 CR IMP com.cn.ipc.server.app/.ServerBrokerService:@cf96667 flags=0x41}
+      ConnectionRecord{8d03ff5 u0 CR IMP com.cn.ipc.server.app/.ServerBrokerService:@f63c92c flags=0x41}
+
+  Connection bindings to services:
+  * ConnectionRecord{7520799 u0 CR IMP com.cn.ipc.server.app/.ServerBrokerService:@85f18e0 flags=0x41}
+    binding=AppBindRecord{d93cd3 com.cn.ipc.server.app/.ServerBrokerService:com.cn.ipc.client3}
+    activity=ActivityRecord{36423798 u0 com.cn.ipc.client3/.Client3Activity t1284}
+    conn=android.os.BinderProxy@85f18e0 flags=0x41
+  * ConnectionRecord{e0e2c14 u0 CR IMP com.cn.ipc.server.app/.ServerBrokerService:@cf96667 flags=0x41}
+    binding=AppBindRecord{b153abf com.cn.ipc.server.app/.ServerBrokerService:com.cn.ipc.client2}
+    activity=ActivityRecord{240530439 u0 com.cn.ipc.client2/.Client2Activity t1283}
+    conn=android.os.BinderProxy@cf96667 flags=0x41
+  * ConnectionRecord{8d03ff5 u0 CR IMP com.cn.ipc.server.app/.ServerBrokerService:@f63c92c flags=0x41}
+    binding=AppBindRecord{a03fe4f com.cn.ipc.server.app/.ServerBrokerService:com.cn.ipc.client1}
+    activity=ActivityRecord{231309576 u0 com.cn.ipc.client1/.Client1Activity t1282}
+    conn=android.os.BinderProxy@f63c92c flags=0x41

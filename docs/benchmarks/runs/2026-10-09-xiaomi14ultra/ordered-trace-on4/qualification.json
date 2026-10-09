@@ -1,0 +1,17 @@
+{
+  "valid": true,
+  "ruleVersion": "foreground-coverage-v1",
+  "targetSamplePeriodMs": 500,
+  "permittedMaxGapMs": 1000,
+  "scope": "activity_events_with_bounded_periodic_sample_coverage",
+  "observations": 4,
+  "sampleCount": 2,
+  "requiredSampleCount": 1,
+  "durationMs": 1125,
+  "maxGapMs": 502,
+  "observationMaxGapMs": 502,
+  "errors": [],
+  "sourceSha256": "1DF87B8F584CCBDE0A5F1A7DEC6C3CF24E102EFD2B28382064A18BF4CCE3698F",
+  "run": "traceon4",
+  "csv": "foreground-traceon4.csv"
+}

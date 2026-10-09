@@ -1,0 +1,167 @@
+{
+  "date": "2026-10-09",
+  "archive": "docs/archive/pre-consolidation-2026-10-09.zip",
+  "archiveSha256": "5191ca79d3df7a0e5924ab50cbd22ce9fadc76759a560d69112fe5413429c76b",
+  "originalProjectMarkdownCount": 25,
+  "activeDocuments": [
+    "README.md",
+    "docs/ModernIPC_Architecture.md",
+    "docs/ModernIPC_SDK_Guide.md",
+    "docs/ModernIPC_Business_Interaction_Guide.md",
+    "docs/ModernIPC_Optimization_Analysis.md",
+    "docs/ModernIPC_vs_AndLinker.md",
+    "docs/benchmarks/README.md",
+    "docs/benchmarks/Performance_Report.md",
+    "docs/benchmarks/Regression_Report.md",
+    "docs/benchmarks/Multi_App_Report.md"
+  ],
+  "preservedRunMarkdown": [
+    {
+      "path": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/auth-allocation/summary.md",
+      "sha256": "e398a1abc5e3f74f66717d78f2111edfa334ba80c9e7fd65b4e399e6daf4a9fa",
+      "bytes": 2916
+    },
+    {
+      "path": "docs/benchmarks/runs/2026-10-09-xiaomi14ultra/dispatch-analysis/summary.md",
+      "sha256": "cb48808a9f920c3bc3f37afbaf9519097c4b48d225b36f4373aa88e6068c9378",
+      "bytes": 8186
+    },
+    {
+      "path": "docs/benchmarks/runs/2026-10-09-xiaomi14ultra/handshake-build/next-steps.md",
+      "sha256": "2e1186c718869525caf2c63b72402367307417464aedbd06281ebbec50963ca5",
+      "bytes": 2067
+    }
+  ],
+  "mergedSources": [
+    {
+      "path": "docs/ModernIPC_Maven_Guide.md",
+      "sha256": "14f6225154ea65abd16e775e6dcc9ce5496e5dd059ce128729c6d162244002c3",
+      "bytes": 4090,
+      "canonicalDocuments": [
+        "docs/ModernIPC_SDK_Guide.md"
+      ]
+    },
+    {
+      "path": "docs/ModernIPC_Multi_App_Scenarios.md",
+      "sha256": "15f3cc992894197129dcd3c2a819c5521fa2449a82daa1448872e21766327081",
+      "bytes": 22809,
+      "canonicalDocuments": [
+        "docs/ModernIPC_Business_Interaction_Guide.md"
+      ]
+    },
+    {
+      "path": "docs/benchmarks/benchmark_Xiaomi_14_Ultra.md",
+      "sha256": "4f695962dc3385e00af5fa3d44ca33fcc1f1cb68356f786afaf8b1e93e0428f8",
+      "bytes": 3447,
+      "canonicalDocuments": [
+        "docs/benchmarks/Performance_Report.md"
+      ]
+    },
+    {
+      "path": "docs/benchmarks/xiaomi14ultra_2026-09-29_direct_fast_path.md",
+      "sha256": "af6761d2960c2ea14bdae07e93fdb561b30b4ba8050af98deaccbd1373b4a1d6",
+      "bytes": 5581,
+      "canonicalDocuments": [
+        "docs/benchmarks/Performance_Report.md"
+      ]
+    },
+    {
+      "path": "docs/benchmarks/xiaomi14ultra_2026-09-29_echo_ab.md",
+      "sha256": "41d76d01a46a4fbb9c189e1fd05499320db15cfbedc8344b1865b5449e8216f4",
+      "bytes": 7872,
+      "canonicalDocuments": [
+        "docs/benchmarks/Performance_Report.md"
+      ]
+    },
+    {
+      "path": "docs/benchmarks/xiaomi14ultra_2026-09-29_smoke.md",
+      "sha256": "4e22ccbb85b936f203e17c1cc925c31991649b66a4752d9cf773ac427a3a56b2",
+      "bytes": 4908,
+      "canonicalDocuments": [
+        "docs/benchmarks/Multi_App_Report.md",
+        "docs/benchmarks/Performance_Report.md"
+      ]
+    },
+    {
+      "path": "docs/benchmarks/xiaomi14ultra_2026-10-08_auth_optimization.md",
+      "sha256": "b4b8e542baaa2626b158653a1e8765561ca0a4433967872f1f323752a440bc16",
+      "bytes": 7741,
+      "canonicalDocuments": [
+        "docs/benchmarks/Performance_Report.md"
+      ]
+    },
+    {
+      "path": "docs/benchmarks/xiaomi14ultra_2026-10-08_fault_paths.md",
+      "sha256": "8710046b4d3117d828bcb34dc477cd1483d891160e05d2c3bfd971ff958f1b40",
+      "bytes": 6349,
+      "canonicalDocuments": [
+        "docs/benchmarks/Regression_Report.md"
+      ]
+    },
+    {
+      "path": "docs/benchmarks/xiaomi14ultra_2026-10-08_ordered_remediation.md",
+      "sha256": "73d0eacc2c9c2f808a3ab50e82b81c4da3c491361c72bbef298a3e00948e296a",
+      "bytes": 17506,
+      "canonicalDocuments": [
+        "docs/benchmarks/Regression_Report.md",
+        "docs/benchmarks/Performance_Report.md"
+      ]
+    },
+    {
+      "path": "docs/benchmarks/xiaomi14ultra_2026-10-08_presend_guard.md",
+      "sha256": "b1549bcbbd6e7e8bf073deeb5ddb00aa78413edb1386a05297726f80baecabc5",
+      "bytes": 12259,
+      "canonicalDocuments": [
+        "docs/benchmarks/Performance_Report.md",
+        "docs/benchmarks/Regression_Report.md"
+      ]
+    },
+    {
+      "path": "docs/benchmarks/xiaomi14ultra_2026-10-08_problem_analysis.md",
+      "sha256": "24978508ce5e73eb163e371be9c4e259db97d05782fc083821fef1725a86eaaf",
+      "bytes": 18579,
+      "canonicalDocuments": [
+        "docs/ModernIPC_Optimization_Analysis.md",
+        "docs/benchmarks/Performance_Report.md",
+        "docs/benchmarks/Regression_Report.md"
+      ]
+    },
+    {
+      "path": "docs/benchmarks/xiaomi14ultra_2026-10-08_protocol_v3.md",
+      "sha256": "c520304c2bcbd962023d4facd90217c2aed54e0c8c14e5fb4af7c869a414f40b",
+      "bytes": 2669,
+      "canonicalDocuments": [
+        "docs/benchmarks/Regression_Report.md"
+      ]
+    },
+    {
+      "path": "docs/benchmarks/xiaomi14ultra_2026-10-09_cold_trace_optimization.md",
+      "sha256": "195c622c928442a4a19eaca83a58030a9113b7c99adbf4221e1e0988d2f9eb58",
+      "bytes": 24838,
+      "canonicalDocuments": [
+        "docs/benchmarks/Regression_Report.md",
+        "docs/benchmarks/Performance_Report.md",
+        "docs/benchmarks/Multi_App_Report.md"
+      ]
+    },
+    {
+      "path": "docs/benchmarks/xiaomi14ultra_2026-10-09_more_scenarios.md",
+      "sha256": "da180731e7f271c299400b7071fb5b45aa71aa651e870bc40376121147713db5",
+      "bytes": 6911,
+      "canonicalDocuments": [
+        "docs/ModernIPC_Business_Interaction_Guide.md",
+        "docs/benchmarks/Multi_App_Report.md"
+      ]
+    },
+    {
+      "path": "docs/benchmarks/xiaomi14ultra_2026-10-09_multi_app_case.md",
+      "sha256": "68d5e37dc5164dcf5a153e02545d5f7b782fa1b8f1aafa569f63289e0565147a",
+      "bytes": 6773,
+      "canonicalDocuments": [
+        "docs/ModernIPC_Business_Interaction_Guide.md",
+        "docs/benchmarks/Multi_App_Report.md"
+      ]
+    }
+  ],
+  "scope": "Documentation consolidation only; source/APKs and raw run evidence unchanged."
+}

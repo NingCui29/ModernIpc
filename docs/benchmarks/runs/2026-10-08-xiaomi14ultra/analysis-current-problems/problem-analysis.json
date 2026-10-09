@@ -1,0 +1,663 @@
+{
+  "scope": "saved qualified Xiaomi runs; descriptive drift and serial-dependence checks only",
+  "runs": [
+    {
+      "run": "guardperf3",
+      "apkSha256": "30ED4B9762422AFEBF5DBA9DEEBB125C81921EA60C5C766A7B53EEAE01A1782D",
+      "blocks": [
+        {
+          "round": 1,
+          "size": 16,
+          "mode": "lookup",
+          "p50Ms": 1.0375,
+          "quartersMedianMs": [
+            1.1441665,
+            1.2482555,
+            0.673021,
+            0.8666145
+          ],
+          "lagOnePearson": 0.9079761299546875,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-3/guard-ipc-guardperf3-r1-lookup-16.csv"
+        },
+        {
+          "round": 1,
+          "size": 16,
+          "mode": "guard",
+          "p50Ms": 0.965938,
+          "quartersMedianMs": [
+            1.42151,
+            0.6191925,
+            1.019141,
+            0.883099
+          ],
+          "lagOnePearson": 0.9296230014245931,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-3/guard-ipc-guardperf3-r1-guard-16.csv"
+        },
+        {
+          "round": 1,
+          "size": 1024,
+          "mode": "lookup",
+          "p50Ms": 0.817292,
+          "quartersMedianMs": [
+            0.6707295,
+            1.068177,
+            1.010938,
+            0.6844535
+          ],
+          "lagOnePearson": 0.9298435874726397,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-3/guard-ipc-guardperf3-r1-lookup-1024.csv"
+        },
+        {
+          "round": 1,
+          "size": 1024,
+          "mode": "guard",
+          "p50Ms": 0.835417,
+          "quartersMedianMs": [
+            0.8026825,
+            1.4794795,
+            0.813099,
+            0.6482545
+          ],
+          "lagOnePearson": 0.9085109454180079,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-3/guard-ipc-guardperf3-r1-guard-1024.csv"
+        },
+        {
+          "round": 2,
+          "size": 16,
+          "mode": "lookup",
+          "p50Ms": 0.911614,
+          "quartersMedianMs": [
+            0.8753125,
+            1.1807035,
+            1.092266,
+            0.7160155
+          ],
+          "lagOnePearson": 0.8946416545950476,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-3/guard-ipc-guardperf3-r2-lookup-16.csv"
+        },
+        {
+          "round": 2,
+          "size": 16,
+          "mode": "guard",
+          "p50Ms": 0.536823,
+          "quartersMedianMs": [
+            0.486875,
+            0.5254945,
+            0.8807815,
+            0.5115885
+          ],
+          "lagOnePearson": 0.8538286724988992,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-3/guard-ipc-guardperf3-r2-guard-16.csv"
+        },
+        {
+          "round": 2,
+          "size": 1024,
+          "mode": "lookup",
+          "p50Ms": 0.56151,
+          "quartersMedianMs": [
+            0.581797,
+            0.5532295,
+            0.5455205,
+            0.5366925
+          ],
+          "lagOnePearson": 0.7428869468036544,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-3/guard-ipc-guardperf3-r2-lookup-1024.csv"
+        },
+        {
+          "round": 2,
+          "size": 1024,
+          "mode": "guard",
+          "p50Ms": 0.692604,
+          "quartersMedianMs": [
+            0.699818,
+            1.3148965,
+            0.749323,
+            0.542995
+          ],
+          "lagOnePearson": 0.9281038712822041,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-3/guard-ipc-guardperf3-r2-guard-1024.csv"
+        },
+        {
+          "round": 3,
+          "size": 16,
+          "mode": "lookup",
+          "p50Ms": 0.991875,
+          "quartersMedianMs": [
+            1.10112,
+            1.2010415,
+            0.9402345,
+            0.442474
+          ],
+          "lagOnePearson": 0.9193800734948419,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-3/guard-ipc-guardperf3-r3-lookup-16.csv"
+        },
+        {
+          "round": 3,
+          "size": 16,
+          "mode": "guard",
+          "p50Ms": 0.632604,
+          "quartersMedianMs": [
+            0.9410155,
+            0.558438,
+            0.529792,
+            0.64388
+          ],
+          "lagOnePearson": 0.9457941330268702,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-3/guard-ipc-guardperf3-r3-guard-16.csv"
+        },
+        {
+          "round": 3,
+          "size": 1024,
+          "mode": "lookup",
+          "p50Ms": 0.967084,
+          "quartersMedianMs": [
+            1.261406,
+            1.1165885,
+            0.8326045,
+            0.8729685
+          ],
+          "lagOnePearson": 0.791410561459504,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-3/guard-ipc-guardperf3-r3-lookup-1024.csv"
+        },
+        {
+          "round": 3,
+          "size": 1024,
+          "mode": "guard",
+          "p50Ms": 0.659479,
+          "quartersMedianMs": [
+            0.501771,
+            0.706875,
+            1.1403125,
+            0.733724
+          ],
+          "lagOnePearson": 0.8590139684550787,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-3/guard-ipc-guardperf3-r3-guard-1024.csv"
+        },
+        {
+          "round": 4,
+          "size": 16,
+          "mode": "lookup",
+          "p50Ms": 0.686667,
+          "quartersMedianMs": [
+            0.9902085,
+            0.8478645,
+            0.461406,
+            0.5074215
+          ],
+          "lagOnePearson": 0.9738829901328024,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-3/guard-ipc-guardperf3-r4-lookup-16.csv"
+        },
+        {
+          "round": 4,
+          "size": 16,
+          "mode": "guard",
+          "p50Ms": 0.663855,
+          "quartersMedianMs": [
+            0.606901,
+            0.8740625,
+            0.5208855,
+            0.687787
+          ],
+          "lagOnePearson": 0.9487569622501465,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-3/guard-ipc-guardperf3-r4-guard-16.csv"
+        },
+        {
+          "round": 4,
+          "size": 1024,
+          "mode": "lookup",
+          "p50Ms": 0.955781,
+          "quartersMedianMs": [
+            1.1161975,
+            1.1021095,
+            0.917552,
+            0.8851045
+          ],
+          "lagOnePearson": 0.8272258575931289,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-3/guard-ipc-guardperf3-r4-lookup-1024.csv"
+        },
+        {
+          "round": 4,
+          "size": 1024,
+          "mode": "guard",
+          "p50Ms": 0.780729,
+          "quartersMedianMs": [
+            0.772344,
+            0.587787,
+            0.7566405,
+            1.1938285
+          ],
+          "lagOnePearson": 0.764706806826982,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-3/guard-ipc-guardperf3-r4-guard-1024.csv"
+        }
+      ],
+      "comparisons": [
+        {
+          "size": 16,
+          "pairs": [
+            {
+              "round": 1,
+              "lookupMs": 1.0375,
+              "guardMs": 0.965938,
+              "deltaUs": -71.56200000000013,
+              "changePercent": -6.8975421686747085
+            },
+            {
+              "round": 2,
+              "lookupMs": 0.911614,
+              "guardMs": 0.536823,
+              "deltaUs": -374.791,
+              "changePercent": -41.112905242789154
+            },
+            {
+              "round": 3,
+              "lookupMs": 0.991875,
+              "guardMs": 0.632604,
+              "deltaUs": -359.2709999999999,
+              "changePercent": -36.221398865784494
+            },
+            {
+              "round": 4,
+              "lookupMs": 0.686667,
+              "guardMs": 0.663855,
+              "deltaUs": -22.812000000000054,
+              "changePercent": -3.322134309643543
+            }
+          ],
+          "ranges": {
+            "lookup": {
+              "minMs": 0.686667,
+              "maxMs": 1.0375,
+              "rangeUs": 350.8330000000001
+            },
+            "guard": {
+              "minMs": 0.536823,
+              "maxMs": 0.965938,
+              "rangeUs": 429.1149999999999
+            }
+          },
+          "medianPairedDeltaUs": -215.4165,
+          "medianPairedChangePercent": -21.559470517229602
+        },
+        {
+          "size": 1024,
+          "pairs": [
+            {
+              "round": 1,
+              "lookupMs": 0.817292,
+              "guardMs": 0.835417,
+              "deltaUs": 18.124999999999947,
+              "changePercent": 2.2176896384645817
+            },
+            {
+              "round": 2,
+              "lookupMs": 0.56151,
+              "guardMs": 0.692604,
+              "deltaUs": 131.09400000000005,
+              "changePercent": 23.346690174707497
+            },
+            {
+              "round": 3,
+              "lookupMs": 0.967084,
+              "guardMs": 0.659479,
+              "deltaUs": -307.605,
+              "changePercent": -31.807474841895843
+            },
+            {
+              "round": 4,
+              "lookupMs": 0.955781,
+              "guardMs": 0.780729,
+              "deltaUs": -175.052,
+              "changePercent": -18.31507426910558
+            }
+          ],
+          "ranges": {
+            "lookup": {
+              "minMs": 0.56151,
+              "maxMs": 0.967084,
+              "rangeUs": 405.5740000000001
+            },
+            "guard": {
+              "minMs": 0.659479,
+              "maxMs": 0.835417,
+              "rangeUs": 175.93799999999993
+            }
+          },
+          "medianPairedDeltaUs": -78.46350000000002,
+          "medianPairedChangePercent": -8.0486923153205
+        }
+      ],
+      "localCpuDifferenceUs": 0.5987426989999999,
+      "minimumLagOnePearson": 0.7428869468036544,
+      "maximumLagOnePearson": 0.9738829901328024
+    },
+    {
+      "run": "guardperf5",
+      "apkSha256": "30ED4B9762422AFEBF5DBA9DEEBB125C81921EA60C5C766A7B53EEAE01A1782D",
+      "blocks": [
+        {
+          "round": 1,
+          "size": 16,
+          "mode": "lookup",
+          "p50Ms": 0.833281,
+          "quartersMedianMs": [
+            0.7689325,
+            0.7498695,
+            0.92461,
+            1.0992445
+          ],
+          "lagOnePearson": 0.8979989608510037,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-5/guard-ipc-guardperf5-r1-lookup-16.csv"
+        },
+        {
+          "round": 1,
+          "size": 16,
+          "mode": "guard",
+          "p50Ms": 0.954219,
+          "quartersMedianMs": [
+            0.831041,
+            0.922995,
+            1.382891,
+            0.8842185
+          ],
+          "lagOnePearson": 0.9351042990925568,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-5/guard-ipc-guardperf5-r1-guard-16.csv"
+        },
+        {
+          "round": 1,
+          "size": 1024,
+          "mode": "lookup",
+          "p50Ms": 0.672552,
+          "quartersMedianMs": [
+            0.5826565,
+            0.903672,
+            0.748489,
+            0.5833595
+          ],
+          "lagOnePearson": 0.9619486349955646,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-5/guard-ipc-guardperf5-r1-lookup-1024.csv"
+        },
+        {
+          "round": 1,
+          "size": 1024,
+          "mode": "guard",
+          "p50Ms": 0.961927,
+          "quartersMedianMs": [
+            0.963985,
+            0.7288025,
+            1.148932,
+            1.055781
+          ],
+          "lagOnePearson": 0.93519520992741,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-5/guard-ipc-guardperf5-r1-guard-1024.csv"
+        },
+        {
+          "round": 2,
+          "size": 16,
+          "mode": "lookup",
+          "p50Ms": 0.925833,
+          "quartersMedianMs": [
+            0.9060935,
+            1.120104,
+            1.198333,
+            0.747109
+          ],
+          "lagOnePearson": 0.7304332497026607,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-5/guard-ipc-guardperf5-r2-lookup-16.csv"
+        },
+        {
+          "round": 2,
+          "size": 16,
+          "mode": "guard",
+          "p50Ms": 1.136614,
+          "quartersMedianMs": [
+            1.242005,
+            1.1383855,
+            1.207786,
+            0.63401
+          ],
+          "lagOnePearson": 0.8229304513057464,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-5/guard-ipc-guardperf5-r2-guard-16.csv"
+        },
+        {
+          "round": 2,
+          "size": 1024,
+          "mode": "lookup",
+          "p50Ms": 1.150208,
+          "quartersMedianMs": [
+            1.208438,
+            1.3702345,
+            0.975912,
+            0.5632025
+          ],
+          "lagOnePearson": 0.8996672563009449,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-5/guard-ipc-guardperf5-r2-lookup-1024.csv"
+        },
+        {
+          "round": 2,
+          "size": 1024,
+          "mode": "guard",
+          "p50Ms": 0.830417,
+          "quartersMedianMs": [
+            0.684401,
+            0.976745,
+            1.1032295,
+            0.6528905
+          ],
+          "lagOnePearson": 0.9432663184593606,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-5/guard-ipc-guardperf5-r2-guard-1024.csv"
+        },
+        {
+          "round": 3,
+          "size": 16,
+          "mode": "lookup",
+          "p50Ms": 0.791771,
+          "quartersMedianMs": [
+            0.733906,
+            0.781224,
+            1.092734,
+            0.8003645
+          ],
+          "lagOnePearson": 0.6799829009258472,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-5/guard-ipc-guardperf5-r3-lookup-16.csv"
+        },
+        {
+          "round": 3,
+          "size": 16,
+          "mode": "guard",
+          "p50Ms": 0.749479,
+          "quartersMedianMs": [
+            0.7646615,
+            0.7829425,
+            1.0510155,
+            0.5902345
+          ],
+          "lagOnePearson": 0.7696412354911588,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-5/guard-ipc-guardperf5-r3-guard-16.csv"
+        },
+        {
+          "round": 3,
+          "size": 1024,
+          "mode": "lookup",
+          "p50Ms": 0.809844,
+          "quartersMedianMs": [
+            0.773646,
+            1.229427,
+            0.9420315,
+            0.484688
+          ],
+          "lagOnePearson": 0.8760899633501059,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-5/guard-ipc-guardperf5-r3-lookup-1024.csv"
+        },
+        {
+          "round": 3,
+          "size": 1024,
+          "mode": "guard",
+          "p50Ms": 0.799896,
+          "quartersMedianMs": [
+            1.251198,
+            1.12763,
+            0.683958,
+            0.565625
+          ],
+          "lagOnePearson": 0.8867833300532307,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-5/guard-ipc-guardperf5-r3-guard-1024.csv"
+        },
+        {
+          "round": 4,
+          "size": 16,
+          "mode": "lookup",
+          "p50Ms": 0.505833,
+          "quartersMedianMs": [
+            0.5791665,
+            0.384505,
+            0.463724,
+            0.9071875
+          ],
+          "lagOnePearson": 0.9779189247842348,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-5/guard-ipc-guardperf5-r4-lookup-16.csv"
+        },
+        {
+          "round": 4,
+          "size": 16,
+          "mode": "guard",
+          "p50Ms": 0.537708,
+          "quartersMedianMs": [
+            0.517969,
+            0.6270055,
+            0.4790365,
+            0.5240105
+          ],
+          "lagOnePearson": 0.8649542019847826,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-5/guard-ipc-guardperf5-r4-guard-16.csv"
+        },
+        {
+          "round": 4,
+          "size": 1024,
+          "mode": "lookup",
+          "p50Ms": 0.641927,
+          "quartersMedianMs": [
+            0.4927865,
+            0.776589,
+            0.558541,
+            0.7180205
+          ],
+          "lagOnePearson": 0.8556845660843242,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-5/guard-ipc-guardperf5-r4-lookup-1024.csv"
+        },
+        {
+          "round": 4,
+          "size": 1024,
+          "mode": "guard",
+          "p50Ms": 0.755782,
+          "quartersMedianMs": [
+            1.1814065,
+            0.875781,
+            0.5416925,
+            0.533854
+          ],
+          "lagOnePearson": 0.8600810564720534,
+          "csv": "docs/benchmarks/runs/2026-10-08-xiaomi14ultra/ordered-guardperf-5/guard-ipc-guardperf5-r4-guard-1024.csv"
+        }
+      ],
+      "comparisons": [
+        {
+          "size": 16,
+          "pairs": [
+            {
+              "round": 1,
+              "lookupMs": 0.833281,
+              "guardMs": 0.954219,
+              "deltaUs": 120.93799999999999,
+              "changePercent": 14.51347144600681
+            },
+            {
+              "round": 2,
+              "lookupMs": 0.925833,
+              "guardMs": 1.136614,
+              "deltaUs": 210.781,
+              "changePercent": 22.766632859273763
+            },
+            {
+              "round": 3,
+              "lookupMs": 0.791771,
+              "guardMs": 0.749479,
+              "deltaUs": -42.291999999999994,
+              "changePercent": -5.341443422403702
+            },
+            {
+              "round": 4,
+              "lookupMs": 0.505833,
+              "guardMs": 0.537708,
+              "deltaUs": 31.874999999999986,
+              "changePercent": 6.301486854357075
+            }
+          ],
+          "ranges": {
+            "lookup": {
+              "minMs": 0.505833,
+              "maxMs": 0.925833,
+              "rangeUs": 420.00000000000006
+            },
+            "guard": {
+              "minMs": 0.537708,
+              "maxMs": 1.136614,
+              "rangeUs": 598.9060000000001
+            }
+          },
+          "medianPairedDeltaUs": 76.4065,
+          "medianPairedChangePercent": 10.407479150181942
+        },
+        {
+          "size": 1024,
+          "pairs": [
+            {
+              "round": 1,
+              "lookupMs": 0.672552,
+              "guardMs": 0.961927,
+              "deltaUs": 289.37499999999994,
+              "changePercent": 43.0264128275583
+            },
+            {
+              "round": 2,
+              "lookupMs": 1.150208,
+              "guardMs": 0.830417,
+              "deltaUs": -319.79099999999994,
+              "changePercent": -27.802884347874468
+            },
+            {
+              "round": 3,
+              "lookupMs": 0.809844,
+              "guardMs": 0.799896,
+              "deltaUs": -9.947999999999958,
+              "changePercent": -1.228384725947218
+            },
+            {
+              "round": 4,
+              "lookupMs": 0.641927,
+              "guardMs": 0.755782,
+              "deltaUs": 113.85499999999993,
+              "changePercent": 17.73644043637359
+            }
+          ],
+          "ranges": {
+            "lookup": {
+              "minMs": 0.641927,
+              "maxMs": 1.150208,
+              "rangeUs": 508.2809999999999
+            },
+            "guard": {
+              "minMs": 0.755782,
+              "maxMs": 0.961927,
+              "rangeUs": 206.145
+            }
+          },
+          "medianPairedDeltaUs": 51.95349999999999,
+          "medianPairedChangePercent": 8.254027855213186
+        }
+      ],
+      "localCpuDifferenceUs": 0.606955482,
+      "minimumLagOnePearson": 0.6799829009258472,
+      "maximumLagOnePearson": 0.9779189247842348
+    }
+  ]
+}

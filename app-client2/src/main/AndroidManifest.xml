@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="com.cn.ipc.server.app.permission.BIND_BROKER" />
+
     <!-- Android 11+ 包可见性查询声明 -->
     <queries>
         <package android:name="com.cn.ipc.server.app" />

@@ -1,0 +1,18 @@
+{
+  "device": "925c23bb",
+  "model": "24031PN0DC",
+  "android": "16",
+  "date": "2026-10-08",
+  "apk_sha256": "A27BE6B70E9B4D4F962B4EABD9B2A6369DBE604D0E3C2594F522A8C24F6915BD",
+  "source_sha256": {
+    "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/PendingCallRegistry.kt": "dd6710e6c29c0c3ee7bb557d3f5150975f84ad4265fb54d1bfa65eaa438855f4",
+    "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/IpcConnectionController.kt": "6330c1bdd06a079b2af3932bc38fd8537af66684bfb7410870d02b5911012e2a",
+    "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/ClientAdapterGenerator.kt": "d61c2e195acc84f985b2ab311e58361ccfb8888eb146dad694156b00c8ce451d",
+    "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/ServerStubGenerator.kt": "5be4749c6312513febba0683bef968e6322f6d72fe0c2a12be50448efa5da0ce",
+    "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/IpcSymbolProcessor.kt": "ab7b38153b2242c270983cdf0764465d512e88a77f56413e224a8081e4e28b2f",
+    "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcFaultProbe.kt": "7f4c85fee8bdcad528696662f8ce91549378db94e32433eb1427beb05c82a220",
+    "demo-app/src/main/kotlin/com/cn/ipc/demo/MyBrokerService.kt": "843edf6c9ebede7433f0c6e2b46fea5b973341e75a5b5d9e47b42e7328dfb6f0",
+    "ipc-api/src/main/kotlin/com/cn/ipc/api/test/IUserService.kt": "31905dca5504daa2ce2c18552231aa7d729602b3783813f6fd42c98fca412df5",
+    "ipc-api/src/main/kotlin/com/cn/ipc/api/hub/IMessageHubService.kt": "9d3424538fe9d68d00172cf8e9367168bc6427fefb3c2486a7684b7946a1f8ea"
+  }
+}

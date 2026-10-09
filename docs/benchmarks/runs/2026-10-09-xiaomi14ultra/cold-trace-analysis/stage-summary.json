@@ -1,0 +1,90 @@
+[
+  {
+    "phase": "client_resolve",
+    "count": 1000,
+    "meanUs": 118.672506,
+    "p50Us": 110.365,
+    "p90Us": 151.145,
+    "p99Us": 237.865
+  },
+  {
+    "phase": "client_register",
+    "count": 1000,
+    "meanUs": 57.852333,
+    "p50Us": 50.677,
+    "p90Us": 79.948,
+    "p99Us": 152.708
+  },
+  {
+    "phase": "client_encode",
+    "count": 1000,
+    "meanUs": 64.489222,
+    "p50Us": 60.573,
+    "p90Us": 80.364,
+    "p99Us": 128.385
+  },
+  {
+    "phase": "request_transport",
+    "count": 1000,
+    "meanUs": 106.99186,
+    "p50Us": 96.562,
+    "p90Us": 127.604,
+    "p99Us": 241.302
+  },
+  {
+    "phase": "server_admission",
+    "count": 1000,
+    "meanUs": 115.711408,
+    "p50Us": 105.313,
+    "p90Us": 147.031,
+    "p99Us": 236.771
+  },
+  {
+    "phase": "server_queue",
+    "count": 1000,
+    "meanUs": 116.693192,
+    "p50Us": 108.75,
+    "p90Us": 145.885,
+    "p99Us": 223.386
+  },
+  {
+    "phase": "server_business",
+    "count": 1000,
+    "meanUs": 16.252646,
+    "p50Us": 14.531,
+    "p90Us": 21.771,
+    "p99Us": 43.125
+  },
+  {
+    "phase": "server_reply_encode",
+    "count": 1000,
+    "meanUs": 11.775042000000001,
+    "p50Us": 10.364,
+    "p90Us": 14.532,
+    "p99Us": 39.792
+  },
+  {
+    "phase": "reply_transport",
+    "count": 1000,
+    "meanUs": 105.577978,
+    "p50Us": 95.468,
+    "p90Us": 135.625,
+    "p99Us": 281.511
+  },
+  {
+    "phase": "client_resume",
+    "count": 1000,
+    "meanUs": 179.371105,
+    "p50Us": 168.021,
+    "p90Us": 224.375,
+    "p99Us": 330.469
+  },
+  {
+    "phase": "total",
+    "count": 1000,
+    "meanUs": 893.387292,
+    "p50Us": 841.407,
+    "p90Us": 1094.375,
+    "p99Us": 1502.5
+  }
+]

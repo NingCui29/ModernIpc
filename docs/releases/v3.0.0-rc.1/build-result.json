@@ -1,0 +1,1444 @@
+{
+  "version": "3.0.0-rc.1",
+  "versionCode": 30001,
+  "recordedUtc": "2026-10-09T08:56:49.448055+00:00",
+  "buildExitCode": 0,
+  "buildResult": "BUILD SUCCESSFUL in 12m 34s",
+  "tasks": 429,
+  "sdkPublications": [
+    {
+      "module": "ipc-api",
+      "kind": "sdk",
+      "coordinate": "com.modernipc:ipc-api:3.0.0-rc.1",
+      "directory": "local-maven/com/modernipc/ipc-api/3.0.0-rc.1",
+      "files": [
+        {
+          "name": "ipc-api-3.0.0-rc.1-javadoc.jar",
+          "size": 319883,
+          "sha256": "62f8b5ee233c21945a87f9034d74af02e89e1dcdecf61f5c372673fd93b73916"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1-javadoc.jar.md5",
+          "size": 32,
+          "sha256": "98288accf23cbf06bfb82810546f7f1e211546aec790cb0c43b19bcf5a2913a7"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1-javadoc.jar.sha1",
+          "size": 40,
+          "sha256": "b6d61bb65170e3a3e4fd3ec85ddfbd0bec884effa5b8b68bb63d3921af57e88b"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1-javadoc.jar.sha256",
+          "size": 64,
+          "sha256": "3a4e772970bccc90f0b9f7153d63e6298d549c7818044f0653771d32f1169fb0"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1-javadoc.jar.sha512",
+          "size": 128,
+          "sha256": "85422974af3e528dc18dbd5df4ded0392d8d0b18a4a8c88f52d47b5d7da81520"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1-sources.jar",
+          "size": 7546,
+          "sha256": "1e4cf0ee4663862293e1e8ec8d35908990b87d8ad197b53b7522cdb63c83ed12"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1-sources.jar.md5",
+          "size": 32,
+          "sha256": "b73bd727c52e19a9a54568e278eecb47a3106048fbaa5584eb5c645707b20e0c"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1-sources.jar.sha1",
+          "size": 40,
+          "sha256": "62e3394f0909d3191672fd04ac4d6211cef3588de05753714263c9be295b46cb"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1-sources.jar.sha256",
+          "size": 64,
+          "sha256": "0ecf0258c2c56e7425011a0076bf5d235632ca39fe81b414c3f8f0d416faf916"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1-sources.jar.sha512",
+          "size": 128,
+          "sha256": "fa99e68ac16de6794191e74539f1236418f2e03be30f410c933e237a10b79810"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1.aar",
+          "size": 260720,
+          "sha256": "128c5efaaa81bf52b54356b9bbf909c0db46e13ac1bfae765833088359b52263"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1.aar.md5",
+          "size": 32,
+          "sha256": "7b531806813193c9858560c45c36c33b2909e1366e3a624fb7c0eef9b9fd3953"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1.aar.sha1",
+          "size": 40,
+          "sha256": "7a0bfdcde8bd3aca945fb5a29bebc00f1743f53358034eb550dfd80c3bf81900"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1.aar.sha256",
+          "size": 64,
+          "sha256": "2e874f6f44823b195241962e58326feb92d6a42bab5651ca877f069900ebc1c5"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1.aar.sha512",
+          "size": 128,
+          "sha256": "372ac63c6706bcaf76aef2c69cc42f443c5db162f1b132d50db285e9c0b5b9ac"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1.module",
+          "size": 4913,
+          "sha256": "b99449f26386852ebbbd41e3da9edd82584dd987d84218a31d5378a6cf24209b"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1.module.md5",
+          "size": 32,
+          "sha256": "b4efb4c0ca8552de8c91d31e0b23e86432f7ed51be3121677a684d2d6ae83110"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1.module.sha1",
+          "size": 40,
+          "sha256": "806e3b49990d50b546cfae480c8199247bcada718bf72c951587a166884584c9"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1.module.sha256",
+          "size": 64,
+          "sha256": "18eacfc86e31777789cce6678e3e3f2e9a1b15ccc7b0781a813b3897b5eb9d49"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1.module.sha512",
+          "size": 128,
+          "sha256": "618695f282da414e90f958755518b601a680d94e8b5872e7c5f5e125fdd6f1c7"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1.pom",
+          "size": 2184,
+          "sha256": "03d87b885dbed151fc5407564b8b3c66248c5563448e8142f2e20db87b9ca5ef"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1.pom.md5",
+          "size": 32,
+          "sha256": "fa4b2ba211be7a3372ba60c395873fee01434f29ed1a68155343dcdd044be2de"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1.pom.sha1",
+          "size": 40,
+          "sha256": "8b1d844bb9a1729659de1d4cec787405cf6bfc22b94fdbf2a2c4f9ae6fe11ae6"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1.pom.sha256",
+          "size": 64,
+          "sha256": "a528c409bd389ab517010759f78d0666f886063ef940d3288f2a7e1049e9e76f"
+        },
+        {
+          "name": "ipc-api-3.0.0-rc.1.pom.sha512",
+          "size": 128,
+          "sha256": "812d8cfc1b26895fbab7838d3c2809eb6a2ab39bc8f3afd64ea95dd75a91e63b"
+        }
+      ]
+    },
+    {
+      "module": "ipc-contract",
+      "kind": "sdk",
+      "coordinate": "com.modernipc:ipc-contract:3.0.0-rc.1",
+      "directory": "local-maven/com/modernipc/ipc-contract/3.0.0-rc.1",
+      "files": [
+        {
+          "name": "ipc-contract-3.0.0-rc.1-javadoc.jar",
+          "size": 333294,
+          "sha256": "2ac94046f2e7504cae670fa5e2b3b55ddac2cd93b84fcafaefe23fc1e2a8ce39"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1-javadoc.jar.md5",
+          "size": 32,
+          "sha256": "88fabd5ecbbb8869b17d67e71c2890a9ae917dca367eec799d3667cc0faac2da"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1-javadoc.jar.sha1",
+          "size": 40,
+          "sha256": "0847f1ec30b5cab257c5df45233fc6b85efd0a1bdd1624911094d28286c6c489"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1-javadoc.jar.sha256",
+          "size": 64,
+          "sha256": "76504019da423bae13d73b5a9017bf703c3f10f2076e12a28f66f4b293ebb1f9"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1-javadoc.jar.sha512",
+          "size": 128,
+          "sha256": "d9439e85571db32979617d1a7bf787833a6d9b23b6a6da33ed21f6ec06896c99"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1-sources.jar",
+          "size": 7415,
+          "sha256": "83f2f51f1f138cb625e518192d80306a79abe46d48ee90f42d5ad625e8db7dc5"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1-sources.jar.md5",
+          "size": 32,
+          "sha256": "ec5c48ab29c9444a82953b67f172ec932dca17b767f78a17e2823ab5947ea645"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1-sources.jar.sha1",
+          "size": 40,
+          "sha256": "da3d70245deb33ea8522f8a594e4f8bb6da37a290fa135c8a3c5ac7595b821df"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1-sources.jar.sha256",
+          "size": 64,
+          "sha256": "5ec738638fd1a1d4ff17551ddcb6d3482d67fa7513a11ce96725e0b346d5dfca"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1-sources.jar.sha512",
+          "size": 128,
+          "sha256": "093b3997a06a205e8966f3752797248f4b2ea4358fc22d3181ba646ea7add931"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1.aar",
+          "size": 38522,
+          "sha256": "000b0f7db54f9c1e9a3d12562421976645e836a0987e902d6d0207eedcfd7b02"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1.aar.md5",
+          "size": 32,
+          "sha256": "9344a3175272419bf60d99c436fca12b012a0b18a02c6341012a4cd268d986dc"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1.aar.sha1",
+          "size": 40,
+          "sha256": "45144f04e5b39179ee944746b38f965842b7f53c0e37f778c638b83ebe33054e"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1.aar.sha256",
+          "size": 64,
+          "sha256": "948149c6fa981e44bf65d53b2570ae1a1f6baddb5a9b07d28b5abd1399ad0d6b"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1.aar.sha512",
+          "size": 128,
+          "sha256": "0790624b18d9725f6878c4efed0ee49bdd67e688d240cd958f30fa0bf6140dcf"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1.module",
+          "size": 4282,
+          "sha256": "bdb0b74d92db8c2c67505286fc4c734ebeab6816553106b4a391757aee9eff66"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1.module.md5",
+          "size": 32,
+          "sha256": "70c87eecffe10756c2b387e79f88c89c803f311c861802a98c922daebe669843"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1.module.sha1",
+          "size": 40,
+          "sha256": "5ae51b729aa2004c473fc3142098209940e941748be36d2d89a56803503eef03"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1.module.sha256",
+          "size": 64,
+          "sha256": "453eaaaf650655419967a257e86bf5516d6ba60dea2733d8a0bd61a56d4e325c"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1.module.sha512",
+          "size": 128,
+          "sha256": "fca11d3bfb8379a89d259c86db14a708fd13092fdc9c14e8a655b96149d2c4c7"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1.pom",
+          "size": 1419,
+          "sha256": "e86d3de5d477904ea5665c5f85d94bf5663cee987db5e15225282b477fec6d05"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1.pom.md5",
+          "size": 32,
+          "sha256": "246e8762439f0c917b9758e69a0a852e34025e9963a50ffea8e723de27b2639c"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1.pom.sha1",
+          "size": 40,
+          "sha256": "8c479a395874e471525e05dd18e22ddf3bfdcfcbc2d7d3b67a5097776d6907b9"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1.pom.sha256",
+          "size": 64,
+          "sha256": "467d2c45c84934f3980fc10f3c8a772866ddf0d72ce603e8323fa9befda1b2cd"
+        },
+        {
+          "name": "ipc-contract-3.0.0-rc.1.pom.sha512",
+          "size": 128,
+          "sha256": "96764bf376e5bbbb3356112a360ce1a5999d344e81860b2c9d04a857160893d8"
+        }
+      ]
+    },
+    {
+      "module": "ipc-runtime-client",
+      "kind": "sdk",
+      "coordinate": "com.modernipc:ipc-runtime-client:3.0.0-rc.1",
+      "directory": "local-maven/com/modernipc/ipc-runtime-client/3.0.0-rc.1",
+      "files": [
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1-javadoc.jar",
+          "size": 334039,
+          "sha256": "c0397238d9a2148622ad40245e8b492c52cc362d23fb37b29ce4d72b4ff961e0"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1-javadoc.jar.md5",
+          "size": 32,
+          "sha256": "319ae18acafd5d0209aee0bcfadefac9ce18283d105d413b927c5feb2120e619"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1-javadoc.jar.sha1",
+          "size": 40,
+          "sha256": "83fc3f38efa2cf466749e7a4699ca82fc71b6b517a909a00b4bdc8a7465c3882"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1-javadoc.jar.sha256",
+          "size": 64,
+          "sha256": "3ae3f21dc4abbde7bfbbb63aacefdf7f6fb24c55e73fc988c869078de64b7942"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1-javadoc.jar.sha512",
+          "size": 128,
+          "sha256": "1dee7c6481c8207816e5f1981d0c5c4958b07edbbaba1abfa3e93e658e710366"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1-sources.jar",
+          "size": 18895,
+          "sha256": "9945f79b54d218cf85b0860c963496b3580061b607d7085ebf6c0092ecb077ca"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1-sources.jar.md5",
+          "size": 32,
+          "sha256": "039530bb83dee9cd1820b6be8ec5078f953c853361d07859f2e74f218fbd44ea"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1-sources.jar.sha1",
+          "size": 40,
+          "sha256": "b826a091ab3ae345357b64c40220a999de660e3f6bcd568e0f01324c2aeb3c58"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1-sources.jar.sha256",
+          "size": 64,
+          "sha256": "cee75aede2beaa866619d135d6fa44fceb0d852a34ba33d11fac6bd397a8c890"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1-sources.jar.sha512",
+          "size": 128,
+          "sha256": "f54fa113c5e83e43c8e5df07efb7f719e64a32c8a8484c1f655a8ace66042e11"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1.aar",
+          "size": 101908,
+          "sha256": "707b09d1f1c20156bf99f5102df32b1012a3a0d4258fc4056dd9959ac643323c"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1.aar.md5",
+          "size": 32,
+          "sha256": "d028de316c18724340f6ea6c8ab3e8f9d992a8a41d204d4f2a4973b5bfef46ac"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1.aar.sha1",
+          "size": 40,
+          "sha256": "87e3dcb02d75fada97e7b85bc60954c430fe20751a9428893806d93ad9a62f2c"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1.aar.sha256",
+          "size": 64,
+          "sha256": "94b3f3fb15f663a54a00348273284a81a1471129ee35648b2fa8b3ed6e2a8a9b"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1.aar.sha512",
+          "size": 128,
+          "sha256": "b4b3363a3080001f3e3c0b5eff459596b9c0c56ad671a552cbd81578fee69b25"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1.module",
+          "size": 4668,
+          "sha256": "9e6e5b4de5161fc289d19dc521120a977ba6ff529890b1062cb9d8d8bd24bf67"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1.module.md5",
+          "size": 32,
+          "sha256": "f71222cf238a5ef297303f31644fc2fc54b5d391481f2867c285d44e1338bc29"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1.module.sha1",
+          "size": 40,
+          "sha256": "233892ed4f8c9f97bfc7681c05c4eba6988f53067846ac2f016819e4df12fa9d"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1.module.sha256",
+          "size": 64,
+          "sha256": "4cc0be3ad66130c1080022d4a7b9913ab8d47294e46bfeecd657e6f7ba81bb42"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1.module.sha512",
+          "size": 128,
+          "sha256": "305dfba9f59bdaa5252fea98312157f9d3c7e5dca6ce1d0d2dca8e3e3a5c015f"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1.pom",
+          "size": 1613,
+          "sha256": "bf1d62cf5743cf40127247fb53b73448b08bb182050b83c71bb3ca4b150c0ed6"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1.pom.md5",
+          "size": 32,
+          "sha256": "7c65f7c274d39287c0186a4c9c5aac78a12a3be235f8c02ebeab23b3dc3a2c26"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1.pom.sha1",
+          "size": 40,
+          "sha256": "e74a88d70bd0f2fe4f9c657fc644c84bda057167e7fd2ec4558ee4baec305fc2"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1.pom.sha256",
+          "size": 64,
+          "sha256": "6cf3311d26e77ab1939de2618d05f5806815d5e6d7af669e0520dea57a264218"
+        },
+        {
+          "name": "ipc-runtime-client-3.0.0-rc.1.pom.sha512",
+          "size": 128,
+          "sha256": "2e1f7f3a2ce9f739d71251b2d86ca4f79850b869ec43273ef01ffd14d0f05544"
+        }
+      ]
+    },
+    {
+      "module": "ipc-runtime-server",
+      "kind": "sdk",
+      "coordinate": "com.modernipc:ipc-runtime-server:3.0.0-rc.1",
+      "directory": "local-maven/com/modernipc/ipc-runtime-server/3.0.0-rc.1",
+      "files": [
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1-javadoc.jar",
+          "size": 342915,
+          "sha256": "65a11dcafc790c811b6c1f0449aae13d6281a6911dd18665cc5d20ceda1fe1c3"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1-javadoc.jar.md5",
+          "size": 32,
+          "sha256": "1b52ef077a6288ae112e8405f86c34b348a67ab990b9ae1c80461fb6e7f8738f"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1-javadoc.jar.sha1",
+          "size": 40,
+          "sha256": "72d62da79c20cfa4d92672c62a96f6dbde3ce8e373a2315be2d1802d4412963b"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1-javadoc.jar.sha256",
+          "size": 64,
+          "sha256": "f87adbd504e568a28fe8178f68eec615377de7c63bf58889b341ca36c59af614"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1-javadoc.jar.sha512",
+          "size": 128,
+          "sha256": "c15e61ef01366da16ae5a1dba109f09a536bae0006ae0e0c7ffabc25b0c53178"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1-sources.jar",
+          "size": 12368,
+          "sha256": "f2b66aebd6f7866577db6c644e8bf101f4aefc01bb9d6a8f77843802a8243553"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1-sources.jar.md5",
+          "size": 32,
+          "sha256": "8e2e311ba94eee94aac3747c9ad6808a1320d8e4419d071f8f812bec9b67a403"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1-sources.jar.sha1",
+          "size": 40,
+          "sha256": "4fc175df40a3ed91f433b9755a9ca6cc069429cb0120641298be2448159f88ff"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1-sources.jar.sha256",
+          "size": 64,
+          "sha256": "4866346bfd6f3db6f06f1c7682cfd9bd8ce8889a1c27f07951680581573bf474"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1-sources.jar.sha512",
+          "size": 128,
+          "sha256": "82fbffca948cd2a40b9042b3bb6da2d8af6263042e9a9d0664b39398412a267a"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1.aar",
+          "size": 34100,
+          "sha256": "a7500bb5d6db09c2f997b8083b031e694bf9fedfbdfe9a568092934c9ecaa908"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1.aar.md5",
+          "size": 32,
+          "sha256": "476a61e52415255538ee91818073841bdb4513807aaf73d636692067e96091c3"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1.aar.sha1",
+          "size": 40,
+          "sha256": "2c8b133aa642f32f7b21bf7300332b5595fa61571333001136c30b3b5b0e8217"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1.aar.sha256",
+          "size": 64,
+          "sha256": "36fec1ecd4c6975d46c68b0a846fc4b712d368ecc876702a12c4276588c1d27c"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1.aar.sha512",
+          "size": 128,
+          "sha256": "f7798ac628a7b0121685509d05e9e55d658449e629ed6c1bec4101ee0a6e3787"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1.module",
+          "size": 4666,
+          "sha256": "f25e6114da853bf2381e5e3ecc68a803dd1367ef082e70af9e38a98b8fcd8ec2"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1.module.md5",
+          "size": 32,
+          "sha256": "62ac2e74b995bbc3d2657f213f3d94eba878e2b7c62fe4e8a934c8b37d9aea54"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1.module.sha1",
+          "size": 40,
+          "sha256": "b4b48d6ac75005b1db73baf807eb945d425d72845eef2cc12280056665f397f9"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1.module.sha256",
+          "size": 64,
+          "sha256": "4ce7a2ce8412b1c638956007a7c7acee660ed1ed3cce69c64a53cfdb29732d43"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1.module.sha512",
+          "size": 128,
+          "sha256": "77d9a198a5e70f8af501cd7dbacb05e49fdefcde73950848b727693485b9150c"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1.pom",
+          "size": 1613,
+          "sha256": "39f91313614ac4baf65730bbe151062596cae3a92b8943a929b1cc136b91f04a"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1.pom.md5",
+          "size": 32,
+          "sha256": "10f691655b70e52e9be7cee7f965abd2e748d795add76ff8594b2dc2241ceb50"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1.pom.sha1",
+          "size": 40,
+          "sha256": "6436291bee52b84664a928e33480cc55d125bdfe28376e792fc066d9517f558a"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1.pom.sha256",
+          "size": 64,
+          "sha256": "918983df99928130508f358c213a15ef53d43b6a7bd936b884ca1e7a30374330"
+        },
+        {
+          "name": "ipc-runtime-server-3.0.0-rc.1.pom.sha512",
+          "size": 128,
+          "sha256": "3a892c23b3cbb4aa3ce421965d8e922476ebf0d53c76e6855b72a8dc874d46ab"
+        }
+      ]
+    },
+    {
+      "module": "ipc-annotations",
+      "kind": "sdk",
+      "coordinate": "com.modernipc:ipc-annotations:3.0.0-rc.1",
+      "directory": "local-maven/com/modernipc/ipc-annotations/3.0.0-rc.1",
+      "files": [
+        {
+          "name": "ipc-annotations-3.0.0-rc.1-javadoc.jar",
+          "size": 261,
+          "sha256": "e3ee751e92ada965149abf14c464b9f98e69ec812e9385ffd52562fd493a1511"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1-javadoc.jar.md5",
+          "size": 32,
+          "sha256": "ea69b37dc373687844d680474aac2ac1b7c24eceddd92025ac902ef7a63a04b6"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1-javadoc.jar.sha1",
+          "size": 40,
+          "sha256": "370a454dd4de579226808101f0809ea7fa4f5112cf6b8d14098b58c12937564d"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1-javadoc.jar.sha256",
+          "size": 64,
+          "sha256": "c076a08269fe8698fa006f5a660bf5ca57b44da61dedb7a050c747ce18597772"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1-javadoc.jar.sha512",
+          "size": 128,
+          "sha256": "613af22ab1a43dfa56331644746367d51635cbcfba5719fb1d3e32d243dfd39a"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1-sources.jar",
+          "size": 3677,
+          "sha256": "61910171c6897ce5bfcfb638f69f1caa1686afdaddc9e22fea169504aeb669f8"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1-sources.jar.md5",
+          "size": 32,
+          "sha256": "c959a43d2e5a89369c3e8a193845119c2d1f277abddca23b77ada647904b1cc1"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1-sources.jar.sha1",
+          "size": 40,
+          "sha256": "35052eb41096675da4378699d0f90db088c4d44b4e3f6829d993a3297b4a37b2"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1-sources.jar.sha256",
+          "size": 64,
+          "sha256": "d923b45459f1d1ca4866eea33466be8598434b3135a8ac91ff83f69a5597a289"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1-sources.jar.sha512",
+          "size": 128,
+          "sha256": "bb72fee36cc856f984b5034cb2150e0cf28fd8d3c00f11f6f9418920a31e3405"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1.jar",
+          "size": 5404,
+          "sha256": "4a78cff40f10b54b8fd7f1260c87a8d4c9755febc1027218b30b8a061b566ac3"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1.jar.md5",
+          "size": 32,
+          "sha256": "7e9afa3f0da1e5a266f6f133696a565d3e096026af7d82924cca3d08663a4069"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1.jar.sha1",
+          "size": 40,
+          "sha256": "984757e64335a0f808f37d7569ecde9e93c82821faaa68e10262c9488cc5a444"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1.jar.sha256",
+          "size": 64,
+          "sha256": "f74552d1fde556dc8ea094a519b8999d2023fe0d77a1db5d557233918b35ce1b"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1.jar.sha512",
+          "size": 128,
+          "sha256": "aa538a6fcd47aef9c849e1ab88c751c14d20067e4ca2d142eccd253e84be5b1c"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1.module",
+          "size": 3959,
+          "sha256": "8a4c555453ac320dfdba0f980a3c77020ec288bf8c42bd73037c7db2a057f730"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1.module.md5",
+          "size": 32,
+          "sha256": "bdd3cf15e23a4f83aa05708e2fc629c5b124652c1144648ed3708a63ec6c0d5d"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1.module.sha1",
+          "size": 40,
+          "sha256": "5ea82154dbe1ed6c9e9741e1c936ddcfadb907e92eb5c90bbc5aa91639462653"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1.module.sha256",
+          "size": 64,
+          "sha256": "d51aaa6d676b0a4e3b2d9d8edfe92ee0d6a584824155059fc7bacad883b23e4d"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1.module.sha512",
+          "size": 128,
+          "sha256": "62707f693282f9e299d755561ceb37418be426738b0f119d0cc2e5614ecd80f9"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1.pom",
+          "size": 1002,
+          "sha256": "28b4dbfd31527f74fe73fe62eea0b21fe8333c272619913f279052259b941b80"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1.pom.md5",
+          "size": 32,
+          "sha256": "4597e318f125c3298b94cea7fbdd0fce542704c8575edee4e63d4d72c8aada8c"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1.pom.sha1",
+          "size": 40,
+          "sha256": "eb9679cd3afd677ac4ebaa5bd88ab569fadb56a4725db85447a445c4c0f38bf7"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1.pom.sha256",
+          "size": 64,
+          "sha256": "87add4dd232d8db8da182e784bc4a3242f858b9ea92bf74c4de1d9083caf8c16"
+        },
+        {
+          "name": "ipc-annotations-3.0.0-rc.1.pom.sha512",
+          "size": 128,
+          "sha256": "78aff46e7ecb3b8b7fc6e253cb2dcb98b073fccbc9ef1ca581ccc5ec1bbe7ce6"
+        }
+      ]
+    },
+    {
+      "module": "ipc-compiler",
+      "kind": "sdk",
+      "coordinate": "com.modernipc:ipc-compiler:3.0.0-rc.1",
+      "directory": "local-maven/com/modernipc/ipc-compiler/3.0.0-rc.1",
+      "files": [
+        {
+          "name": "ipc-compiler-3.0.0-rc.1-javadoc.jar",
+          "size": 261,
+          "sha256": "4a672a5f23b79c0c7e1a20751ad8fa3e40cad5e022c47d711fd51582bed31afc"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1-javadoc.jar.md5",
+          "size": 32,
+          "sha256": "f4630edb4dc40830b0fc3704f10effe859d2cc03ace10afd159cb64eee3b7bad"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1-javadoc.jar.sha1",
+          "size": 40,
+          "sha256": "8656d0d00243608b88a638a2dc4591bae7b407eec4c4d895e4d7955727bcbd82"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1-javadoc.jar.sha256",
+          "size": 64,
+          "sha256": "06e29bd59fa52ef34d7807f7d3e9f659d011a860acc666fffa1465401e8805bd"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1-javadoc.jar.sha512",
+          "size": 128,
+          "sha256": "5a722d57f5a5bb51d7082b71deba9ef925dd5459ddda7234447f8d47ffe42baa"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1-sources.jar",
+          "size": 18649,
+          "sha256": "1f7731c1642bc406ec6c16b757928715cad429f3f7ab7f8ea840b9a2489165ad"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1-sources.jar.md5",
+          "size": 32,
+          "sha256": "9d88c3326df38a11797ec39724789a770cf2a2556ea7279f69e1f525154a6257"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1-sources.jar.sha1",
+          "size": 40,
+          "sha256": "5ce8c7c1493fb87800c1348aa05a491367fa62639558fb92edd62500cbe2d066"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1-sources.jar.sha256",
+          "size": 64,
+          "sha256": "9067d7b455ca4be3f495e19d0635e0d18b48813d07e15036e1ca5dc12b07de9b"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1-sources.jar.sha512",
+          "size": 128,
+          "sha256": "4e80185a005e3d51fc4b909a34cd3683a69d9afe1530aee7a34507040533c422"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1.jar",
+          "size": 60871,
+          "sha256": "d40c19c95945fa92031699072583466d3fa72a909c640bf0e9c29d6dc7085a81"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1.jar.md5",
+          "size": 32,
+          "sha256": "9d52c3fd7dc5ef846933153800a1f9a6ab64790fd318417feeea32938e00c29f"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1.jar.sha1",
+          "size": 40,
+          "sha256": "1701a68dea83e4b203df27f2ecd10fa606a100ec52c5947296eea3041c4bcbf3"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1.jar.sha256",
+          "size": 64,
+          "sha256": "d84625802a6c097bf7001e48b85fe0cac4f269ad89430c57564ab514a2db1e9f"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1.jar.sha512",
+          "size": 128,
+          "sha256": "3b583ef38ac680fbdcbd85614febdfbaf1b7c7e3085577a45c43e1742b5f9239"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1.module",
+          "size": 4610,
+          "sha256": "1f4df265459d6642aa29903f094f481a055540e030bf3566ac7c34f5830a1f14"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1.module.md5",
+          "size": 32,
+          "sha256": "c0ea936a89ced42af9a8dd327764cec3485f0dee12e804c032e1a818630dfc6e"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1.module.sha1",
+          "size": 40,
+          "sha256": "7af871acffeee4ccf3edf8c3fe91f6fb8c50147efbfe88e21e30b94e7f2a520d"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1.module.sha256",
+          "size": 64,
+          "sha256": "70e56594c8715fb9402a46c4f1bbaaec69c81144f669ce6d4661d71b973f3784"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1.module.sha512",
+          "size": 128,
+          "sha256": "1e4fc08bdad243bce5fda6089776ce6c0a5fcb4c86c571b177a078c022708e68"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1.pom",
+          "size": 1774,
+          "sha256": "463d42acbdb373f1054bc5b3496d6ed802e8b8c7a70248081fd2b0fa4be9ea9e"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1.pom.md5",
+          "size": 32,
+          "sha256": "601df9ce31fab6d3a47ef771e98f5719d2a647e15369745e22cb37506bc4926f"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1.pom.sha1",
+          "size": 40,
+          "sha256": "408c62ce39d4460b16375f3443c0156478244a0292c437be8ab48a5ae3d2eee6"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1.pom.sha256",
+          "size": 64,
+          "sha256": "eed687a22b839fe6395572cf8621a0c44b2780a4145c134b8aa978fb068483d7"
+        },
+        {
+          "name": "ipc-compiler-3.0.0-rc.1.pom.sha512",
+          "size": 128,
+          "sha256": "6934b84fd2d85f21cd23d221ee5510be01aa5896f9c4dcc7d6d6a17dcbec452b"
+        }
+      ]
+    },
+    {
+      "module": "demo-client-common",
+      "kind": "shared-example",
+      "coordinate": "com.modernipc:demo-client-common:3.0.0-rc.1",
+      "directory": "local-maven/com/modernipc/demo-client-common/3.0.0-rc.1",
+      "files": [
+        {
+          "name": "demo-client-common-3.0.0-rc.1-javadoc.jar",
+          "size": 334996,
+          "sha256": "5ee0b5f308d46fb15b45fd69772c7f0aa0c9ceca063e414c0c9cde2004c36ac9"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1-javadoc.jar.md5",
+          "size": 32,
+          "sha256": "a6e75040c0179476195fec4acc4d32228bdb4650c099756987c8d076613f8a48"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1-javadoc.jar.sha1",
+          "size": 40,
+          "sha256": "92969de3ba5d4e383c94490becb6fe6fc754e510565f06c09ecfe565b4906e6c"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1-javadoc.jar.sha256",
+          "size": 64,
+          "sha256": "e58f6dc5cdde4ed02dea70501986441cbe776ccba0d6e3a9f54e5b78a0fde318"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1-javadoc.jar.sha512",
+          "size": 128,
+          "sha256": "065da7c065a5d401a84c032ad2404e6fd3a2302b93328525e3a0306f873ebc87"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1-sources.jar",
+          "size": 24162,
+          "sha256": "408db2a7eb22ee3ccec974235bfa3d0f0d078c838221e8bedf8ac178fb1c5c3c"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1-sources.jar.md5",
+          "size": 32,
+          "sha256": "762019562b0de6f28c1e8439027d9484a8cef3446fcec547282b1842a329732f"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1-sources.jar.sha1",
+          "size": 40,
+          "sha256": "3a3725ad933541ee2953a1b65a891ddfa17315f0f17019e287daa1de1702c96c"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1-sources.jar.sha256",
+          "size": 64,
+          "sha256": "d7d2164069742bb7658e002450a34d7eaf5f42a383a109dabb320cbaf8cb2a04"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1-sources.jar.sha512",
+          "size": 128,
+          "sha256": "90987b8bb98deb16bfc4ecf6cfc04937ba341d6b55b70ea2329c8d871b1ae1d4"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1.aar",
+          "size": 180179,
+          "sha256": "3b9cd1ca8553ba21fc26b6b1124654d6e6e78e8d70b0999c868e8e4c63e17d92"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1.aar.md5",
+          "size": 32,
+          "sha256": "7c5f0b22badf03d766bbc4f464aa36b69892702e05c89fe60ff3e42d0cf3b2df"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1.aar.sha1",
+          "size": 40,
+          "sha256": "321e7d2f5e3736923dc08a7149afb19da6fb38fc22de3157b01a383847a6c6a2"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1.aar.sha256",
+          "size": 64,
+          "sha256": "318e93145ccae0f2fe6442950778f0b4021db6c71c3c8682e0826a327aa647a6"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1.aar.sha512",
+          "size": 128,
+          "sha256": "1a941d6ae0b5f657c6f5d8d425f06e02e023a102a3cd5b334712247d6e188e08"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1.module",
+          "size": 5360,
+          "sha256": "9f9a30fa0ef3712f732b2ab60dd2bf2d2e5a51210f2fb0ba70b23701dca9be77"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1.module.md5",
+          "size": 32,
+          "sha256": "440355292c51e6eaa001c871bc1fa51992e869653b8dd13f0fd9a1795041120b"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1.module.sha1",
+          "size": 40,
+          "sha256": "f0b7b4695468ff1ae063e9e11d1ace1d5be15da89985667b5a24705d5abe6506"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1.module.sha256",
+          "size": 64,
+          "sha256": "c21a1cfa33f0736cefcac0ecb8290d830a6130654a8f16514dfdec21ce15c23b"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1.module.sha512",
+          "size": 128,
+          "sha256": "4b02e892943e93bc5340770e33e14c28b0a7c03793cccf5055993732745ac6eb"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1.pom",
+          "size": 2590,
+          "sha256": "987ba9b8367e5cebf36a60fb7f630c715a801563b7cbb7901df3331ea1d7e958"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1.pom.md5",
+          "size": 32,
+          "sha256": "00dab7190cd5bc4d3051b6eb6c17ca162cc689949fa50430d58b5ee43bbf11fb"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1.pom.sha1",
+          "size": 40,
+          "sha256": "575e2e4867fdaeaa1b3a4cfad5b947746715a219533c754f30779a1bc06f38b5"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1.pom.sha256",
+          "size": 64,
+          "sha256": "7754ef1b815c74de3f8d066a65269d5c01d884470466cad94ffc8f9e2fa40583"
+        },
+        {
+          "name": "demo-client-common-3.0.0-rc.1.pom.sha512",
+          "size": 128,
+          "sha256": "6ef80c7c6d301dddab6d28962e8e0c35ae4e866c1ac76f2015942c6c2cceeb05"
+        }
+      ]
+    }
+  ],
+  "apks": [
+    {
+      "module": "demo-app",
+      "package": "com.cn.ipc.demo",
+      "versionName": "3.0.0-rc.1",
+      "versionCode": 30001,
+      "debuggable": true,
+      "sourcePath": "demo-app/build/outputs/apk/debug/demo-app-debug.apk",
+      "releaseName": "demo-app-3.0.0-rc.1-debug.apk",
+      "size": 6239649,
+      "sha256": "23a2802fd636f03e5821ceaf335f73907193b27560959486605e5908f7b26701",
+      "signerCertificateSha256": [
+        "e964b185170e37c175a222aaa2af8849eda522ae5901b3209806ec2780de233c"
+      ]
+    },
+    {
+      "module": "app-server",
+      "package": "com.cn.ipc.server.app",
+      "versionName": "3.0.0-rc.1",
+      "versionCode": 30001,
+      "debuggable": true,
+      "sourcePath": "app-server/build/outputs/apk/debug/app-server-debug.apk",
+      "releaseName": "app-server-3.0.0-rc.1-debug.apk",
+      "size": 5828576,
+      "sha256": "01527aae5933c142ef32577471578e239d27d2d43c05c073e01e9fece91262a1",
+      "signerCertificateSha256": [
+        "e964b185170e37c175a222aaa2af8849eda522ae5901b3209806ec2780de233c"
+      ]
+    },
+    {
+      "module": "app-client1",
+      "package": "com.cn.ipc.client1",
+      "versionName": "3.0.0-rc.1",
+      "versionCode": 30001,
+      "debuggable": true,
+      "sourcePath": "app-client1/build/outputs/apk/debug/app-client1-debug.apk",
+      "releaseName": "app-client1-3.0.0-rc.1-debug.apk",
+      "size": 6076897,
+      "sha256": "bb18ba4e610ec853722bec6749dc3bea607a337c58dac09e35271fc5628d70f8",
+      "signerCertificateSha256": [
+        "e964b185170e37c175a222aaa2af8849eda522ae5901b3209806ec2780de233c"
+      ]
+    },
+    {
+      "module": "app-client2",
+      "package": "com.cn.ipc.client2",
+      "versionName": "3.0.0-rc.1",
+      "versionCode": 30001,
+      "debuggable": true,
+      "sourcePath": "app-client2/build/outputs/apk/debug/app-client2-debug.apk",
+      "releaseName": "app-client2-3.0.0-rc.1-debug.apk",
+      "size": 6076896,
+      "sha256": "e88f6337ec6f02a2038d227b7ad032a142176e30d08c332e0e088cd701e3698b",
+      "signerCertificateSha256": [
+        "e964b185170e37c175a222aaa2af8849eda522ae5901b3209806ec2780de233c"
+      ]
+    },
+    {
+      "module": "app-client3",
+      "package": "com.cn.ipc.client3",
+      "versionName": "3.0.0-rc.1",
+      "versionCode": 30001,
+      "debuggable": true,
+      "sourcePath": "app-client3/build/outputs/apk/debug/app-client3-debug.apk",
+      "releaseName": "app-client3-3.0.0-rc.1-debug.apk",
+      "size": 6076887,
+      "sha256": "dc85b313dda124e8052dc8c9f6562c86b7b152720af93f6b06a98e8c64d3445b",
+      "signerCertificateSha256": [
+        "e964b185170e37c175a222aaa2af8849eda522ae5901b3209806ec2780de233c"
+      ]
+    }
+  ],
+  "deviceValidation": "NOT_RUN",
+  "installation": "NOT_RUN",
+  "deviceSerial": "925c23bb",
+  "sourceHashes": [
+    {
+      "path": "app-client1/build.gradle.kts",
+      "sha256": "a763a725e6150905a9d55760cb4901f27a184c8f63c439111c1f65be38746f65"
+    },
+    {
+      "path": "app-client1/src/main/AndroidManifest.xml",
+      "sha256": "58eb04dd98b379bddf1c6766b380f3ee0ac83d1d240eb35584dacdc7aa3af7de"
+    },
+    {
+      "path": "app-client1/src/main/kotlin/com/cn/ipc/client1/Client1Activity.kt",
+      "sha256": "1e38d7a806f0f57bbf8e04af68646ab8e8e3a911d9e8a28d6edac8eb24164443"
+    },
+    {
+      "path": "app-client2/build.gradle.kts",
+      "sha256": "e7082b95c40bdb7053854cf7fa4f018cb28d3c90e2a13e2de100cc6f586da556"
+    },
+    {
+      "path": "app-client2/src/main/AndroidManifest.xml",
+      "sha256": "24ae63b61a1866cfa140fb66bc75917f5bd3052c55f2d54205e86dacd187628e"
+    },
+    {
+      "path": "app-client2/src/main/kotlin/com/cn/ipc/client2/Client2Activity.kt",
+      "sha256": "7f3e4ce022e48e290089c8b3517014a0eb42bc6bb7ce1f2d100e1061df094f8a"
+    },
+    {
+      "path": "app-client3/build.gradle.kts",
+      "sha256": "196b29eeca3744e0b13470baf580fa6d7c7963541e49a3c02818002569465644"
+    },
+    {
+      "path": "app-client3/src/main/AndroidManifest.xml",
+      "sha256": "6cf6c3794012e653515f30d03706cf8fda7af27e37f3c8ae72a4e59ff887ceff"
+    },
+    {
+      "path": "app-client3/src/main/kotlin/com/cn/ipc/client3/Client3Activity.kt",
+      "sha256": "e0c7a0065a9ce62b74f707b42aea46148cba274e5452bb66f038e85a6a2b0f0b"
+    },
+    {
+      "path": "app-server/build.gradle.kts",
+      "sha256": "45422fad6a652d0618dd15aa60ad00f3836abddbf1a88249c03a9bad1af9d0f8"
+    },
+    {
+      "path": "app-server/src/main/AndroidManifest.xml",
+      "sha256": "07482e62b7379f47be255c6138aa77ee5b07ab6f7161112dceb00215834ac0e1"
+    },
+    {
+      "path": "app-server/src/main/kotlin/com/cn/ipc/server/app/MessageHubServiceImpl.kt",
+      "sha256": "ae3bdc925f22cfe0eac6149a79b0bc8e97567ee40cfa9604709e7fc2678f9562"
+    },
+    {
+      "path": "app-server/src/main/kotlin/com/cn/ipc/server/app/ServerBrokerService.kt",
+      "sha256": "f72f7d8cf263fc05fa7cb50516d6bdd895ed995a2bb5fd00a28988371073df2e"
+    },
+    {
+      "path": "app-server/src/main/kotlin/com/cn/ipc/server/app/ServerMainActivity.kt",
+      "sha256": "b2b0cf190539ebe33d9f9a53cfda1fc2d56d027a53c7c18bf69ccc44bc55f9d7"
+    },
+    {
+      "path": "build-logic/build.gradle.kts",
+      "sha256": "30665e71147d76a39a572633a606672e16459091ab68a9eff39e0bbda1faeb97"
+    },
+    {
+      "path": "build-logic/src/main/kotlin/convention.android-application.gradle.kts",
+      "sha256": "4a2137558fba9ab393ca30386f937525b509c161851bdc455e10080b199f74bb"
+    },
+    {
+      "path": "build-logic/src/main/kotlin/convention.android-library.gradle.kts",
+      "sha256": "b1798f31889c27a0cf8a34f6b7238eb28719ad2aaa426aade9e2013700973ace"
+    },
+    {
+      "path": "build-logic/src/main/kotlin/convention.jvm-library.gradle.kts",
+      "sha256": "ccb48b9fe08f26a35b6ae87d8bbe5d5b7938bef94dd663452d1e62978f66443f"
+    },
+    {
+      "path": "build-logic/src/main/kotlin/convention.publish.gradle.kts",
+      "sha256": "33a1018417fe84b7281b8297fde7b1a083064c58ff1e7fc798f99c80c141b9a4"
+    },
+    {
+      "path": "build.gradle.kts",
+      "sha256": "ce9cfccba903828c10cdbdce113ce7271ec957eef598f052ee8f52093aec6cda"
+    },
+    {
+      "path": "demo-app/build.gradle.kts",
+      "sha256": "6982d79e74ba066ecd02bc0241c736e14df1c83b36399b328d898bf0eceb0fa6"
+    },
+    {
+      "path": "demo-app/src/main/AndroidManifest.xml",
+      "sha256": "2b0acbde40ad24f17ffd228d6de8f5464e38f6eb0abbf413d964fcad7b402b46"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/BenchmarkForegroundSession.kt",
+      "sha256": "acb37882ce8ac717602d2b7671b2dd297b98fb0f4f6b51227efd3cc339b53b35"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/ColdDiscoveryBrokerService.kt",
+      "sha256": "63b7b88670e5bffe9bea5e0a089103dee704ff121452f08c73e1db2d13927771"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/CompatibilityBrokerService.kt",
+      "sha256": "4e2e44a6c5c349abaffa5a945f0e5c1c19c7b3fcf10433c3f6dc1313bd1adbec"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/DelayedBindingService.kt",
+      "sha256": "c4091097073bd89de41cab173d95dfec08a8e07ddd7764c85159a3034a7c8136"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/HandshakeBlockingService.kt",
+      "sha256": "70ab74d3a3b616a133192157ec29edfcb1649d92d6618bfb775aa3a3ded4130c"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcAuthBenchmark.kt",
+      "sha256": "dba20662b6295333aa1a310fa1c04feeabebd11c9fd8379a2419c05e273b488a"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcAuthProbe.kt",
+      "sha256": "dc8d2687c00aa198574d0cc63dfb3003cbd19368814d88be245509647647c583"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcColdDiscoveryProbe.kt",
+      "sha256": "ce2410cd69430e267bd57031a251679aabfc4ca6d7d9b262d91c7c1b2ccead7f"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcCompatibilityProbe.kt",
+      "sha256": "572170063c45d106ad10848ef7dd5ee31d8503fef5f660356bad60989ac37b52"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcDispatchBenchmark.kt",
+      "sha256": "34c55f58dc1d1de153e2558d3835745a81547fedd749a7aa2f31979d168fe9b9"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcEchoBenchmark.kt",
+      "sha256": "f008f592be1a9f1cd2116c385be709af326fe697373333be131b70679648a8d2"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcFaultProbe.kt",
+      "sha256": "7f4c85fee8bdcad528696662f8ce91549378db94e32433eb1427beb05c82a220"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcGuardBenchmark.kt",
+      "sha256": "f7ff6ababc014f3cc8980e2574ee9877f5f2aadc7ebfd3ea7e036afe66349c6b"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcHandshakeProbe.kt",
+      "sha256": "c9516365662d88668c54e9b64ad73b6d130850ba524207d95d42d66c98e82a2c"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcLifecycleProbe.kt",
+      "sha256": "512a72cecf3b32670897b9156a07cf7f1f4f3a6007aa8bafe805d4bc3ff00242"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcPendingBenchmark.kt",
+      "sha256": "d7c5850ba9d9ead13b874fd291b04b645e8b7d2cb0293579c3d5e63b6be19f0a"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcRequestTraceBenchmark.kt",
+      "sha256": "8dc21cace4f086ea5767eb6ca909ce614d1870951b5d9ed0239b95dee5788380"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcTerminalProbe.kt",
+      "sha256": "c53eeb6c9ced713e153e85ca20b654859dbbcad8f9fdce0b545f9b07219ea785"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/LegacyPendingCallRegistry.kt",
+      "sha256": "e6d5a3994e68c3e1e62830f393aaa7b1321a4306bb45bb4f6c11885eeb95899d"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/MainActivity.kt",
+      "sha256": "90924e786b92083b308be927ef5b1a73bec8158a7c36395fa0fb847673e6ff7e"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/MyBrokerService.kt",
+      "sha256": "d729c38e2cc21d1e61f4a9ec3874031961f021842d7b633f2c582d3d7faf2714"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/NullBindingService.kt",
+      "sha256": "4728e189d05a816a557166d2846489e403fd6ba41792f588bac3256bbba26f8e"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/PendingBenchmarkPort.kt",
+      "sha256": "b497fc9fe27830ad131b1ab52943a024acbb1835f96c810abdeff7ab4bb75e9b"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/PendingBenchmarkRaces.kt",
+      "sha256": "30e30718f210ebfe196ec415c74c1098a31c33c06b8b4872c16e078e0f31105b"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/UserServiceImpl.kt",
+      "sha256": "cf617414db30a6e3bccd6146c086505d950986996d23d590e0c37a113f79b0cc"
+    },
+    {
+      "path": "demo-client-common/build.gradle.kts",
+      "sha256": "5862e369d067a7653ebe11faaaca61410437b8aa6d4856c0dc94706b8c350cb0"
+    },
+    {
+      "path": "demo-client-common/src/main/AndroidManifest.xml",
+      "sha256": "8ef94a6aec2218c5fd02408d018f6d52602c0ef4473dd1c115c5c6964f1e63e1"
+    },
+    {
+      "path": "demo-client-common/src/main/kotlin/com/cn/ipc/client/common/BaseClientActivity.kt",
+      "sha256": "4923141bada180904a8bae1b4711f35a6fe28c73261491c207d72388aa7da299"
+    },
+    {
+      "path": "demo-client-common/src/main/kotlin/com/cn/ipc/client/common/IpcBenchmarkSuite.kt",
+      "sha256": "aace7d58bd510ad85aaa821cca0b182c290e081f2dba68706bafa789b4dfcf99"
+    },
+    {
+      "path": "demo-client-common/src/main/kotlin/com/cn/ipc/client/common/MeetingBoardDemo.kt",
+      "sha256": "129ef239798a743dc8af9ab082dfed53069e0c06a82ff0fb64003fc013ee903d"
+    },
+    {
+      "path": "demo-client-common/src/main/kotlin/com/cn/ipc/client/common/MultiAppScenarioDemo.kt",
+      "sha256": "80361ad75942dc9ca05213a665f6bf26294a22e7afdd3321cfd83ba8f35c0c37"
+    },
+    {
+      "path": "gradle/libs.versions.toml",
+      "sha256": "d90ad0e8ccb073915da224f24d9288fa65cbfa71338b799442665d8b996a8f99"
+    },
+    {
+      "path": "gradle.properties",
+      "sha256": "ed143182806ee88ae2b7b0843ec3324f4edab943efcf91e0a165d099450cbb38"
+    },
+    {
+      "path": "ipc-annotations/build.gradle.kts",
+      "sha256": "a31bda7df677c6860d12eff0ef07270616a3e188cef8df6f09eadbd802fa0b89"
+    },
+    {
+      "path": "ipc-annotations/src/main/kotlin/com/cn/ipc/annotations/IpcAnnotations.kt",
+      "sha256": "ce0782dc0633464205a2af0be748b2d4cec706e0a13b2a3a91fe72959b68e571"
+    },
+    {
+      "path": "ipc-annotations/src/main/kotlin/com/cn/ipc/annotations/IpcFacade.kt",
+      "sha256": "a06bbb37df5d27beb10bd09d6f055aea4a529625c4ba9554f1d5d2bbdb28fd5a"
+    },
+    {
+      "path": "ipc-api/build.gradle.kts",
+      "sha256": "22a55202a85fc5d79367ddd343ca85e35f238a4d779144ca518217f4bcf9c5d8"
+    },
+    {
+      "path": "ipc-api/src/main/kotlin/com/cn/ipc/api/hub/IMessageHubService.kt",
+      "sha256": "9d3424538fe9d68d00172cf8e9367168bc6427fefb3c2486a7684b7946a1f8ea"
+    },
+    {
+      "path": "ipc-api/src/main/kotlin/com/cn/ipc/api/hub/MeetingBoardMessage.kt",
+      "sha256": "3dbe7f09531e4f8f545aeb6cef7cd5ad682b4b48f94c050467c3e34d1749a6b0"
+    },
+    {
+      "path": "ipc-api/src/main/kotlin/com/cn/ipc/api/hub/MultiAppScenarioMessage.kt",
+      "sha256": "34a94fa6c220caa91443bf5d2a98837c67f6e170f4007ffe43a4be77d2c644f8"
+    },
+    {
+      "path": "ipc-api/src/main/kotlin/com/cn/ipc/api/test/IBenchmarkEchoService.kt",
+      "sha256": "11f96d5b322cd0bf5c224aa58c608350e61290af046e0d30337f85cb616b5817"
+    },
+    {
+      "path": "ipc-api/src/main/kotlin/com/cn/ipc/api/test/IUserService.kt",
+      "sha256": "31905dca5504daa2ce2c18552231aa7d729602b3783813f6fd42c98fca412df5"
+    },
+    {
+      "path": "ipc-compiler/build.gradle.kts",
+      "sha256": "4bd8c1275bdf8ae7b1c52b4b948a47d846b13b823c58e7297f33dce808f1013d"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/ClientAdapterGenerator.kt",
+      "sha256": "6f119fb8996f2f841d4e2cf396d888c1cf229da18e0832619c5fda03f11a355f"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/IpcProcessorProvider.kt",
+      "sha256": "06f5eda2ae124427668ebe6d2cf948aeb45789543d3a8415728fc273210e54a1"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/IpcSchemaGenerator.kt",
+      "sha256": "1003d2c2258b20e0454b8746a546e32c0cba5954dd7e08719e4cc5624a0160c8"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/IpcSymbolProcessor.kt",
+      "sha256": "88f682d420141bf3bb7898d2fcb647a85b0166f711cae87d1947281722b945e2"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/ServerStubGenerator.kt",
+      "sha256": "40b3359acf59407a4a4043ac3e87ef4e250456902b5932cf277ea85bdeb897b0"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/WireTypeModel.kt",
+      "sha256": "ad3dfc1ae4816c8a517835cdbb47f2085beff54eab636af4894cab2e1f20ff3a"
+    },
+    {
+      "path": "ipc-compiler/src/main/resources/META-INF/services/com.google.devtools.ksp.processing.SymbolProcessorProvider",
+      "sha256": "5b262821a2f780d1e13c7bdbc9d58f7f85fc9f4d72fde1d92b325a322bb9ac0d"
+    },
+    {
+      "path": "ipc-contract/build.gradle.kts",
+      "sha256": "72332dae205a75d99615222c48ba4a781424df1a2ca31597a1b3bed96aa08eef"
+    },
+    {
+      "path": "ipc-contract/src/main/aidl/com/cn/ipc/ClientHello.aidl",
+      "sha256": "f6ec8ed1e4112f214670a1ec78a6af1dce42dd002a1ce474585f58b1ef83a05d"
+    },
+    {
+      "path": "ipc-contract/src/main/aidl/com/cn/ipc/ClientServiceSchema.aidl",
+      "sha256": "df9cc26a0e7be46d2d36bf550b8b4f880a6dcbd71f5c863fc516e6e8f7d04093"
+    },
+    {
+      "path": "ipc-contract/src/main/aidl/com/cn/ipc/IIpcBroker.aidl",
+      "sha256": "3252d583af246cf3ef581e67abb67a2960c80a7b9cb1f60d4e8a9a533efc372a"
+    },
+    {
+      "path": "ipc-contract/src/main/aidl/com/cn/ipc/ProtocolInfo.aidl",
+      "sha256": "5500dd43bfdcba0e2dcc0703304870543ec05a763763d32881a68f3d141df2d0"
+    },
+    {
+      "path": "ipc-contract/src/main/aidl/com/cn/ipc/RpcError.aidl",
+      "sha256": "57f8aea025f81e2655b9a4f0f442ecef7f9e386bf7605a29e312ad1f97f75419"
+    },
+    {
+      "path": "ipc-contract/src/main/aidl/com/cn/ipc/ServiceSchema.aidl",
+      "sha256": "508df6716a99186a7311c2c5ad7e0d009c612bea2033186464fcc0abf9192661"
+    },
+    {
+      "path": "ipc-contract/src/main/kotlin/com/cn/ipc/IpcRequestTrace.kt",
+      "sha256": "9a262e5f4eb9fef79d12b6c048dc7d9b8d4f98cb8b2da62f11b9bc979e31d6dc"
+    },
+    {
+      "path": "ipc-contract/src/main/kotlin/com/cn/ipc/Models.kt",
+      "sha256": "42eafd2dcb14a0200929b7f9c45039ac637fb769d737aba835b079ecf19cd0c2"
+    },
+    {
+      "path": "ipc-contract/src/main/kotlin/com/cn/ipc/ServiceSchema.kt",
+      "sha256": "33acb04e41d54b4bc66a114dd843465ca8d88edd13032315236ea111694a8b6b"
+    },
+    {
+      "path": "ipc-runtime-client/build.gradle.kts",
+      "sha256": "026a2528330e4590cbcc4b50d0edcc27b4bb968de61c19b5b5d0178e53624d4c"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/FlowAdapterHelper.kt",
+      "sha256": "0f3915fc30b81021873b68feaa76fe02c69a794ce591e43f4bbe0afb12456777"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/HandshakeExecutor.kt",
+      "sha256": "844c644fe3f04f31dba5e93c01954265327acd6098a0291162af47f779174c0c"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/IpcClientState.kt",
+      "sha256": "601a457fa9d1b4fc5d9b9b9e3a989fa2ddd73d20845b7fedfbc5ab315ae5e2f0"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/IpcCompatibilityException.kt",
+      "sha256": "737aaedf75c319188a28bea3de428d59256012daa19f471948ac023b2a86cfed"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/IpcConnectionController.kt",
+      "sha256": "aa3be350846a378d284d5feb747fc2b21874aec6e80200d8ecbc389355b18547"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/ModernIpcRouter.kt",
+      "sha256": "2a0ac14358ca866e8e915ddf3a0bfecb482d1c73eb0f379426317f219481785a"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/PendingCallRegistry.kt",
+      "sha256": "bbf70027bbb54bf6ce6e3ed628f138ff9f9f0bc849e59a05b66b7f543ff3d0b3"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/RxIpcExtensions.kt",
+      "sha256": "106feba1f07dcebb87e2d4593de213c47a2459aa5691026cd29624cc397cd988"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/ServiceDiscoveryCache.kt",
+      "sha256": "28e8754bab47c97bf5d6298c3b64eaf5916de2d703b78567a84b5343a39bb811"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/SubscriptionRegistry.kt",
+      "sha256": "7ea231774acb21af94b5928b4a833b6ac94bb77f7a04cdf04896da78a6ec010e"
+    },
+    {
+      "path": "ipc-runtime-server/build.gradle.kts",
+      "sha256": "5150eeb759e7d4039fcdb4a15d3d6135bf7fe1b6039ce4ecde00c8fda439c776"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/BoundedDispatcher.kt",
+      "sha256": "b7ea904cbe21d5ec8ba576ddae960551e7c1d80b5ffe37c41194bfb4dd96b710"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/CallerAuthenticator.kt",
+      "sha256": "e1e07812f4bd160ae626f05e7b7b1fb5ca04f87a54814a5ecf349c93e7ab0ca3"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcBrokerService.kt",
+      "sha256": "2e7eeeb5c1e18545fa062243f029799db787d97a567845b1097980735055969c"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcBrokerStub.kt",
+      "sha256": "610a0ef60ef231075457ba86b762d999c125f712289fcf7a372cf4223dc72889"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcRequestTracker.kt",
+      "sha256": "9f1373ea3db51dfffdd0204ad9ac5667ede939779cba9fff2d854dbef8267170"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcServiceRegistry.kt",
+      "sha256": "67d82e6375c970758e25adf1ca43ef3e19094c70988774d5ebe0cd671d614899"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcSubscriptionManager.kt",
+      "sha256": "85e4b35e0d3b1399989aec5319f35fccaef73040a32a9ca66f13beed05b51e44"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcTelemetry.kt",
+      "sha256": "c0202e588331e27993becc018d8960a8ff5380a856e7b8fcedbc51e42f4f4d9a"
+    },
+    {
+      "path": "settings.gradle.kts",
+      "sha256": "0012c4b190a6c0fc6a38bd08f54d432bab941d653685b6186580536c9e9d44a8"
+    }
+  ],
+  "buildAttempts": [
+    {
+      "log": "gradle-build.txt",
+      "exit": "gradle-exit-code.txt",
+      "result": "Offline missing documentation dependencies"
+    },
+    {
+      "log": "gradle-build-online.txt",
+      "exit": "gradle-online-exit-code.txt",
+      "result": "SUCCESS"
+    }
+  ],
+  "documentationWarnings": "External package-list downloads failed; documentation generation still completed.",
+  "scope": "Local Windows build; CI release binaries are independently verified in the attached release manifest. No new device tests."
+}

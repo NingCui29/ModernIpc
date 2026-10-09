@@ -60,4 +60,12 @@ open class IpcBrokerService : Service() {
     override fun onRebind(intent: Intent?) {
         super.onRebind(intent)
     }
+
+    override fun onDestroy() {
+        try {
+            if (::registry.isInitialized) registry.dispose()
+        } finally {
+            super.onDestroy()
+        }
+    }
 }

@@ -1,0 +1,38 @@
+         gfx - Graphics
+       input - Input
+        view - View System
+     webview - WebView
+          wm - Window Manager
+          am - Activity Manager
+          sm - Sync Manager
+       audio - Audio
+       video - Video
+      camera - Camera
+         hal - Hardware Modules
+         res - Resource Loading
+      dalvik - Dalvik VM
+          rs - RenderScript
+      bionic - Bionic C Library
+       power - Power Management
+          pm - Package Manager
+          ss - System Server
+    database - Database
+     network - Network
+         adb - ADB
+    vibrator - Vibrator
+        aidl - AIDL calls
+       nnapi - NNAPI
+         rro - Runtime Resource Overlay
+       sched - CPU Scheduling
+         irq - IRQ Events
+        freq - CPU Frequency
+        idle - CPU Idle
+        disk - Disk I/O
+  loop_device - loop device I/O
+        sync - Synchronization
+  memreclaim - Kernel Memory Reclaim
+  binder_driver - Binder Kernel driver
+  binder_lock - Binder global lock trace
+         sde - sde
+      memory - Memory
+     thermal - Thermal event

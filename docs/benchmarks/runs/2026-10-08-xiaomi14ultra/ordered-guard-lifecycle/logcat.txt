@@ -1,0 +1,45 @@
+--------- beginning of main
+10-08 14:27:31.833  1988  1988 I IpcForeground: STATE run=lifecycleguard event=WAIT_READY elapsedRealtimeMs=743729058 uptimeMs=161448316 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-08 14:27:31.863  1988  1988 I IpcForeground: STATE run=lifecycleguard event=FOCUS_GAIN elapsedRealtimeMs=743729097 uptimeMs=161448355 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 14:27:31.934  1988  1988 I IpcForeground: STATE run=lifecycleguard event=WAIT_READY elapsedRealtimeMs=743729168 uptimeMs=161448426 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 14:27:32.035  1988  1988 I IpcForeground: STATE run=lifecycleguard event=WAIT_READY elapsedRealtimeMs=743729269 uptimeMs=161448527 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 14:27:32.136  1988  1988 I IpcForeground: STATE run=lifecycleguard event=WAIT_READY elapsedRealtimeMs=743729370 uptimeMs=161448628 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 14:27:32.136  1988  1988 I IpcForeground: STATE run=lifecycleguard event=BEGIN elapsedRealtimeMs=743729371 uptimeMs=161448628 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:27:32.189  1988  5681 I IpcLifecycleProbe: PASS run=lifecycleguard closeHeldRequest failed=true cause=IllegalStateException
+10-08 14:27:32.442  1988  5681 I IpcLifecycleProbe: PASS run=lifecycleguard close cycle=1 subscriptions=0 requests=0 eventsQuiet=true
+10-08 14:27:32.559  1988  5680 I IpcLifecycleProbe: PASS run=lifecycleguard reconnect cycle=1 subscriptions=1 generation=2
+10-08 14:27:32.639  1988  1988 I IpcForeground: STATE run=lifecycleguard event=SAMPLE elapsedRealtimeMs=743729873 uptimeMs=161449131 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:27:32.819  1988  5680 I IpcLifecycleProbe: PASS run=lifecycleguard close cycle=2 subscriptions=0 requests=0 eventsQuiet=true
+10-08 14:27:32.939  1988  5681 I IpcLifecycleProbe: PASS run=lifecycleguard reconnect cycle=2 subscriptions=1 generation=3
+10-08 14:27:33.144  1988  1988 I IpcForeground: STATE run=lifecycleguard event=SAMPLE elapsedRealtimeMs=743730377 uptimeMs=161449635 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:27:33.200  1988  5682 I IpcLifecycleProbe: PASS run=lifecycleguard close cycle=3 subscriptions=0 requests=0 eventsQuiet=true
+10-08 14:27:33.321  1988  5711 I IpcLifecycleProbe: PASS run=lifecycleguard reconnect cycle=3 subscriptions=1 generation=4
+10-08 14:27:33.578  1988  5680 I IpcLifecycleProbe: PASS run=lifecycleguard close cycle=4 subscriptions=0 requests=0 eventsQuiet=true
+10-08 14:27:33.646  1988  1988 I IpcForeground: STATE run=lifecycleguard event=SAMPLE elapsedRealtimeMs=743730879 uptimeMs=161450137 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:27:33.706  1988  5711 I IpcLifecycleProbe: PASS run=lifecycleguard reconnect cycle=4 subscriptions=1 generation=5
+10-08 14:27:33.967  1988  5683 I IpcLifecycleProbe: PASS run=lifecycleguard close cycle=5 subscriptions=0 requests=0 eventsQuiet=true
+10-08 14:27:34.090  1988  5682 I IpcLifecycleProbe: PASS run=lifecycleguard reconnect cycle=5 subscriptions=1 generation=6
+10-08 14:27:34.148  1988  1988 I IpcForeground: STATE run=lifecycleguard event=SAMPLE elapsedRealtimeMs=743731382 uptimeMs=161450639 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:27:34.350  1988  5711 I IpcLifecycleProbe: PASS run=lifecycleguard close cycle=6 subscriptions=0 requests=0 eventsQuiet=true
+10-08 14:27:34.475  1988  5678 I IpcLifecycleProbe: PASS run=lifecycleguard reconnect cycle=6 subscriptions=1 generation=7
+10-08 14:27:34.654  1988  1988 I IpcForeground: STATE run=lifecycleguard event=SAMPLE elapsedRealtimeMs=743731886 uptimeMs=161451144 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:27:34.734  1988  5682 I IpcLifecycleProbe: PASS run=lifecycleguard close cycle=7 subscriptions=0 requests=0 eventsQuiet=true
+10-08 14:27:34.857  1988  5600 I IpcLifecycleProbe: PASS run=lifecycleguard reconnect cycle=7 subscriptions=1 generation=8
+10-08 14:27:35.122  1988  5600 I IpcLifecycleProbe: PASS run=lifecycleguard close cycle=8 subscriptions=0 requests=0 eventsQuiet=true
+10-08 14:27:35.156  1988  1988 I IpcForeground: STATE run=lifecycleguard event=SAMPLE elapsedRealtimeMs=743732389 uptimeMs=161451647 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:27:35.247  1988  5599 I IpcLifecycleProbe: PASS run=lifecycleguard reconnect cycle=8 subscriptions=1 generation=9
+10-08 14:27:35.508  1988  5681 I IpcLifecycleProbe: PASS run=lifecycleguard explicitDispose collectorEnded=true reconnectRejected=true subscriptions=0 requests=0
+10-08 14:27:35.658  1988  1988 I IpcForeground: STATE run=lifecycleguard event=SAMPLE elapsedRealtimeMs=743732891 uptimeMs=161452149 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:27:35.798  1988  5759 I IpcLifecycleProbe: PASS run=lifecycleguard ownerCancellation disposed=true collectorEnded=true requestFailed=true subscriptions=0 requests=0 eventsQuiet=true
+10-08 14:27:35.820  1988  5682 I IpcLifecycleProbe: PASS run=lifecycleguard serviceDestroy oldStubRejected=true binderStillAlive=true recreatedStub=true subscriptions=0 requests=0
+10-08 14:27:35.826  1988  5711 I IpcLifecycleProbe: PASS run=lifecycleguard nullBinding disconnected=true failureElapsedMs=4 bindingTimeoutMs=5000 lateCallbackStable=true pending=0 syntheticWaiter=true
+10-08 14:27:35.828  5607  5607 I IpcLifecycleProbe: DELAYED_BIND started delayMs=1500
+10-08 14:27:36.162  1988  1988 I IpcForeground: STATE run=lifecycleguard event=SAMPLE elapsedRealtimeMs=743733395 uptimeMs=161452653 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:27:36.668  1988  1988 I IpcForeground: STATE run=lifecycleguard event=SAMPLE elapsedRealtimeMs=743733899 uptimeMs=161453157 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:27:37.172  1988  1988 I IpcForeground: STATE run=lifecycleguard event=SAMPLE elapsedRealtimeMs=743734404 uptimeMs=161453662 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:27:37.329  5607  5607 I IpcLifecycleProbe: DELAYED_BIND returned=true
+10-08 14:27:37.678  1988  1988 I IpcForeground: STATE run=lifecycleguard event=SAMPLE elapsedRealtimeMs=743734909 uptimeMs=161454167 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:27:37.739  1988  5681 I IpcLifecycleProbe: PASS run=lifecycleguard bindingTimeout disconnected=true failureElapsedMs=205 bindingTimeoutMs=200 lateCallbackStable=true pending=0 syntheticWaiter=true
+10-08 14:27:37.745  1988  5711 I IpcLifecycleProbe: DONE run=lifecycleguard passed=true cycles=8 subscriptions=0 requests=0 anchorAlive=true
+10-08 14:27:37.748  1988  1988 I IpcForeground: STATE run=lifecycleguard event=END elapsedRealtimeMs=743734982 uptimeMs=161454240 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:27:37.759  1988  1988 I IpcForeground: END run=lifecycleguard started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-lifecycleguard.csv scope=activity_events_and_500ms_app_samples

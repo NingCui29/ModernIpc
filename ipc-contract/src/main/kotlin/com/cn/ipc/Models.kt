@@ -20,7 +20,7 @@ import kotlinx.parcelize.Parcelize
  * @property clientPackage         客户端应用包名，服务端可用于权限校验或日志追踪。
  * @property clientVersionCode     客户端应用版本号（versionCode），便于服务端判断兼容性。
  * @property requestedCapabilities 客户端期望启用的能力集合（位掩码），服务端取交集后返回。
- * @property nonce                 客户端生成的随机一次性数，用于防重放攻击及会话绑定。
+ * @property nonce                 客户端关联字段；当前服务端未校验重放或将它绑定到业务事务。
  */
 @Parcelize
 data class ClientHello(
@@ -42,7 +42,7 @@ data class ClientHello(
  * @property protocolMinor         服务端实际使用的协议次版本号。
  * @property serverVersionCode     服务端应用版本号（versionCode），供客户端兼容性判断。
  * @property supportedCapabilities 服务端与客户端协商后实际启用的能力集合（位掩码）。
- * @property maxInlinePayloadBytes 服务端允许的单次内联载荷最大字节数，超出时需走文件描述符传输。
+ * @property maxInlinePayloadBytes 服务端建议的内联载荷上限；当前未实施强制检查或文件描述符回退。
  * @property serviceVersions       服务端已注册的服务版本映射表，key 为 serviceId，value 为当前版本号。
  * @property sessionId             本次会话唯一 ID，由服务端生成，可用于日志关联与会话追踪。
  */
@@ -60,8 +60,7 @@ data class ProtocolInfo(
 /**
  * RPC 调用错误描述对象。
  *
- * 当服务端处理 RPC 请求失败时，将此对象通过异常或回调返回给客户端。
- * 客户端可依据 [retryable] 和 [retryAfterMs] 决定是否进行重试。
+ * 预留的结构化错误模型；当前生成 RPC 回调仍使用 String 错误信封，未接入自动重试。
  *
  * @property domain       错误域，用于区分错误来源（如网络层、业务层、框架层等）。
  * @property code         错误码，同一 [domain] 内唯一，客户端根据此值做精确错误处理。

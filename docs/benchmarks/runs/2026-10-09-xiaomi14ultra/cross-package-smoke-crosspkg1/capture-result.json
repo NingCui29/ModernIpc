@@ -1,0 +1,892 @@
+{
+  "serial": "925c23bb",
+  "runId": "crosspkg1",
+  "preparedOnly": false,
+  "valid": true,
+  "packages": [
+    {
+      "module": "app-server",
+      "package": "com.cn.ipc.server.app",
+      "activity": ".ServerMainActivity",
+      "builtSha256": "D9E00E52174AE0FBB1C840CD0607E2439A93AF6DD3DEAA98EC655EE153120D83",
+      "builtSnapshot": "app-server-built.apk",
+      "originalApk": "D:\\Developer\\WorkSpace\\ModernIpc\\app-server\\build\\outputs\\apk\\debug\\app-server-debug.apk",
+      "originalMtimeNs": 1791510204000000000,
+      "uid": 10421,
+      "installedSha256": "D9E00E52174AE0FBB1C840CD0607E2439A93AF6DD3DEAA98EC655EE153120D83",
+      "installedSnapshot": "app-server-installed.apk"
+    },
+    {
+      "module": "app-client1",
+      "package": "com.cn.ipc.client1",
+      "activity": ".Client1Activity",
+      "clientId": "client_1",
+      "builtSha256": "DC1F03413BCE860D42EBC8B0610771B2AAF81E525618FC2FF8E30476128877D0",
+      "builtSnapshot": "app-client1-built.apk",
+      "originalApk": "D:\\Developer\\WorkSpace\\ModernIpc\\app-client1\\build\\outputs\\apk\\debug\\app-client1-debug.apk",
+      "originalMtimeNs": 1791510236000000000,
+      "uid": 10422,
+      "installedSha256": "DC1F03413BCE860D42EBC8B0610771B2AAF81E525618FC2FF8E30476128877D0",
+      "installedSnapshot": "app-client1-installed.apk"
+    },
+    {
+      "module": "app-client2",
+      "package": "com.cn.ipc.client2",
+      "activity": ".Client2Activity",
+      "clientId": "client_2",
+      "builtSha256": "CDFD57AF5E5B9E3B34053A315DA14B1AB86BE90F4BA6BC080A8C2867437306F7",
+      "builtSnapshot": "app-client2-built.apk",
+      "originalApk": "D:\\Developer\\WorkSpace\\ModernIpc\\app-client2\\build\\outputs\\apk\\debug\\app-client2-debug.apk",
+      "originalMtimeNs": 1791510248000000000,
+      "uid": 10426,
+      "installedSha256": "CDFD57AF5E5B9E3B34053A315DA14B1AB86BE90F4BA6BC080A8C2867437306F7",
+      "installedSnapshot": "app-client2-installed.apk"
+    },
+    {
+      "module": "app-client3",
+      "package": "com.cn.ipc.client3",
+      "activity": ".Client3Activity",
+      "clientId": "client_3",
+      "builtSha256": "F59AEA58D1F3A002B0627A038C669B5C918F0E0F5A809F0932A0D35FAAE4799A",
+      "builtSnapshot": "app-client3-built.apk",
+      "originalApk": "D:\\Developer\\WorkSpace\\ModernIpc\\app-client3\\build\\outputs\\apk\\debug\\app-client3-debug.apk",
+      "originalMtimeNs": 1791510264000000000,
+      "uid": 10427,
+      "installedSha256": "F59AEA58D1F3A002B0627A038C669B5C918F0E0F5A809F0932A0D35FAAE4799A",
+      "installedSnapshot": "app-client3-installed.apk"
+    }
+  ],
+  "clients": [
+    {
+      "package": "com.cn.ipc.client1",
+      "clientId": "client_1",
+      "valid": true,
+      "pid": 3493,
+      "startState": {
+        "awake": true,
+        "keyguardNotShowing": true,
+        "requestedPackageResumed": true,
+        "valid": true
+      },
+      "foregroundCollectionSeconds": 5.018928500008769,
+      "endState": {
+        "awake": true,
+        "keyguardNotShowing": true,
+        "requestedPackageResumed": true,
+        "valid": true
+      },
+      "uiOwnPackage": true,
+      "uiConnected": true,
+      "uiSubscriptionActive": true,
+      "uiRegistrationTextPresent": true,
+      "uiExplicitError": false,
+      "processUid": 10422,
+      "processUidMatchesInstalled": true,
+      "logcatStayedRunning": true,
+      "fatalLogcat": false,
+      "serverRegistrationEvent": true,
+      "serverSubscriptionEvent": true,
+      "activityManagerBindingPresent": true
+    },
+    {
+      "package": "com.cn.ipc.client2",
+      "clientId": "client_2",
+      "valid": true,
+      "pid": 4458,
+      "startState": {
+        "awake": true,
+        "keyguardNotShowing": true,
+        "requestedPackageResumed": true,
+        "valid": true
+      },
+      "foregroundCollectionSeconds": 5.058126600008109,
+      "endState": {
+        "awake": true,
+        "keyguardNotShowing": true,
+        "requestedPackageResumed": true,
+        "valid": true
+      },
+      "uiOwnPackage": true,
+      "uiConnected": true,
+      "uiSubscriptionActive": true,
+      "uiRegistrationTextPresent": true,
+      "uiExplicitError": false,
+      "processUid": 10426,
+      "processUidMatchesInstalled": true,
+      "logcatStayedRunning": true,
+      "fatalLogcat": false,
+      "serverRegistrationEvent": true,
+      "serverSubscriptionEvent": true,
+      "activityManagerBindingPresent": true
+    },
+    {
+      "package": "com.cn.ipc.client3",
+      "clientId": "client_3",
+      "valid": true,
+      "pid": 5721,
+      "startState": {
+        "awake": true,
+        "keyguardNotShowing": true,
+        "requestedPackageResumed": true,
+        "valid": true
+      },
+      "foregroundCollectionSeconds": 5.046407900008489,
+      "endState": {
+        "awake": true,
+        "keyguardNotShowing": true,
+        "requestedPackageResumed": true,
+        "valid": true
+      },
+      "uiOwnPackage": true,
+      "uiConnected": true,
+      "uiSubscriptionActive": true,
+      "uiRegistrationTextPresent": true,
+      "uiExplicitError": false,
+      "processUid": 10427,
+      "processUidMatchesInstalled": true,
+      "logcatStayedRunning": true,
+      "fatalLogcat": false,
+      "serverRegistrationEvent": true,
+      "serverSubscriptionEvent": true,
+      "activityManagerBindingPresent": true
+    }
+  ],
+  "limits": [
+    "Functional cross-package cold-process smoke; not an RTT benchmark or a new installation/data-reset test.",
+    "State is sampled at each collection boundary; this does not prove continuous foreground/focus coverage.",
+    "UI subscription text alone is insufficient: server-side observeMessages and registration UI records are required.",
+    "Existing source has no lifecycle Logcat tags; an empty UID-filtered Logcat is not proof of success or failure.",
+    "A server subscription-factory event does not prove a Flow item was delivered or any routing-isolation/performance claim.",
+    "Package UID and ActivityManager bindings are retained; no per-transaction Binder calling-UID trace is generated.",
+    "No auto-scroll/click is performed: off-screen/missing server records cause an unqualified result, not assumed success."
+  ],
+  "beforeState": {
+    "awake": true,
+    "keyguardNotShowing": true,
+    "valid": true
+  },
+  "androidUser": 0,
+  "sourceHashes": [
+    {
+      "path": "app-client1/build.gradle.kts",
+      "sha256": "40458A6153ED14377206451C978D629F3C227B9B48B45528EE4FF42237759C05"
+    },
+    {
+      "path": "app-client1/src/main/AndroidManifest.xml",
+      "sha256": "58EB04DD98B379BDDF1C6766B380F3EE0AC83D1D240EB35584DACDC7AA3AF7DE"
+    },
+    {
+      "path": "app-client1/src/main/kotlin/com/cn/ipc/client1/Client1Activity.kt",
+      "sha256": "1E38D7A806F0F57BBF8E04AF68646AB8E8E3A911D9E8A28D6EDAC8EB24164443"
+    },
+    {
+      "path": "app-client2/build.gradle.kts",
+      "sha256": "52A7027A7BD178AE284B95D5C0FF202982052AB2F13F131A5600E80B9C394BFD"
+    },
+    {
+      "path": "app-client2/src/main/AndroidManifest.xml",
+      "sha256": "24AE63B61A1866CFA140FB66BC75917F5BD3052C55F2D54205E86DACD187628E"
+    },
+    {
+      "path": "app-client2/src/main/kotlin/com/cn/ipc/client2/Client2Activity.kt",
+      "sha256": "7F3E4CE022E48E290089C8B3517014A0EB42BC6BB7CE1F2D100E1061DF094F8A"
+    },
+    {
+      "path": "app-client3/build.gradle.kts",
+      "sha256": "CAE219559CDF6EB27746441BB144F334E4421558B7B4B4878A40A6D2A656F5ED"
+    },
+    {
+      "path": "app-client3/src/main/AndroidManifest.xml",
+      "sha256": "6CF6C3794012E653515F30D03706CF8FDA7AF27E37F3C8AE72A4E59FF887CEFF"
+    },
+    {
+      "path": "app-client3/src/main/kotlin/com/cn/ipc/client3/Client3Activity.kt",
+      "sha256": "E0C7A0065A9CE62B74F707B42AEA46148CBA274E5452BB66F038E85A6A2B0F0B"
+    },
+    {
+      "path": "app-server/build.gradle.kts",
+      "sha256": "E92CAA88F048C17081F747B4E83982017BE2309D2BA2E0360469C882E67937CB"
+    },
+    {
+      "path": "app-server/src/main/AndroidManifest.xml",
+      "sha256": "07482E62B7379F47BE255C6138AA77EE5B07AB6F7161112DCEB00215834AC0E1"
+    },
+    {
+      "path": "app-server/src/main/kotlin/com/cn/ipc/server/app/MessageHubServiceImpl.kt",
+      "sha256": "D2D7C5B2C2AD571A703EC18B6B7D271E82CAD836D2008F9D8D4CDDA0CC86B80E"
+    },
+    {
+      "path": "app-server/src/main/kotlin/com/cn/ipc/server/app/ServerBrokerService.kt",
+      "sha256": "F72F7D8CF263FC05FA7CB50516D6BDD895ED995A2BB5FD00A28988371073DF2E"
+    },
+    {
+      "path": "app-server/src/main/kotlin/com/cn/ipc/server/app/ServerMainActivity.kt",
+      "sha256": "B2B0CF190539EBE33D9F9A53CFDA1FC2D56D027A53C7C18BF69CCC44BC55F9D7"
+    },
+    {
+      "path": "demo-app/src/main/AndroidManifest.xml",
+      "sha256": "0B59F0CA311388466568D878606F42F77673941BACC42D539E67B322D82F7C77"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/BenchmarkForegroundSession.kt",
+      "sha256": "ACB37882CE8AC717602D2B7671B2DD297B98FB0F4F6B51227EFD3CC339B53B35"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/ColdDiscoveryBrokerService.kt",
+      "sha256": "63B7B88670E5BFFE9BEA5E0A089103DEE704FF121452F08C73E1DB2D13927771"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/CompatibilityBrokerService.kt",
+      "sha256": "4E2E44A6C5C349ABAFFA5A945F0E5C1C19C7B3FCF10433C3F6DC1313BD1ADBEC"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/DelayedBindingService.kt",
+      "sha256": "C4091097073BD89DE41CAB173D95DFEC08A8E07DDD7764C85159A3034A7C8136"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcAuthBenchmark.kt",
+      "sha256": "DBA20662B6295333AA1A310FA1C04FEEABEBD11C9FD8379A2419C05E273B488A"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcAuthProbe.kt",
+      "sha256": "DC8D2687C00AA198574D0CC63DFB3003CBD19368814D88BE245509647647C583"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcColdDiscoveryProbe.kt",
+      "sha256": "CE2410CD69430E267BD57031A251679AABFC4CA6D7D9B262D91C7C1B2CCEAD7F"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcCompatibilityProbe.kt",
+      "sha256": "572170063C45D106AD10848EF7DD5EE31D8503FEF5F660356BAD60989AC37B52"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcEchoBenchmark.kt",
+      "sha256": "F008F592BE1A9F1CD2116C385BE709AF326FE697373333BE131B70679648A8D2"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcFaultProbe.kt",
+      "sha256": "7F4C85FEE8BDCAD528696662F8CE91549378DB94E32433EB1427BEB05C82A220"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcGuardBenchmark.kt",
+      "sha256": "F7FF6ABABC014F3CC8980E2574EE9877F5F2AADC7EBFD3EA7E036AFE66349C6B"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcLifecycleProbe.kt",
+      "sha256": "512A72CECF3B32670897B9156A07CF7F1F4F3A6007AA8BAFE805D4BC3FF00242"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcPendingBenchmark.kt",
+      "sha256": "D7C5850BA9D9EAD13B874FD291B04B645E8B7D2CB0293579C3D5E63B6BE19F0A"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcRequestTraceBenchmark.kt",
+      "sha256": "8DC21CACE4F086EA5767EB6CA909CE614D1870951B5D9ED0239B95DEE5788380"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcTerminalProbe.kt",
+      "sha256": "C53EEB6C9CED713E153E85CA20B654859DBBCAD8F9FDCE0B545F9B07219EA785"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/LegacyPendingCallRegistry.kt",
+      "sha256": "E6D5A3994E68C3E1E62830F393AAA7B1321A4306BB45BB4F6C11885EEB95899D"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/MainActivity.kt",
+      "sha256": "77F4F6ACFA6303749D80C26B19F94BCFC24FC54A5BA37EE47FB61782A6F24099"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/MyBrokerService.kt",
+      "sha256": "3DB5CDC6A636DB8E05107022FCE402406763DF62143270447BECD561679F5CEF"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/NullBindingService.kt",
+      "sha256": "4728E189D05A816A557166D2846489E403FD6BA41792F588BAC3256BBBA26F8E"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/PendingBenchmarkPort.kt",
+      "sha256": "B497FC9FE27830AD131B1AB52943A024ACBB1835F96C810ABDEFF7AB4BB75E9B"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/PendingBenchmarkRaces.kt",
+      "sha256": "30E30718F210EBFE196EC415C74C1098A31C33C06B8B4872C16E078E0F31105B"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/UserServiceImpl.kt",
+      "sha256": "CF617414DB30A6E3BCCD6146C086505D950986996D23D590E0C37A113F79B0CC"
+    },
+    {
+      "path": "demo-client-common/src/main/AndroidManifest.xml",
+      "sha256": "8EF94A6AEC2218C5FD02408D018F6D52602C0EF4473DD1C115C5C6964F1E63E1"
+    },
+    {
+      "path": "demo-client-common/src/main/kotlin/com/cn/ipc/client/common/BaseClientActivity.kt",
+      "sha256": "AAE9655E6A4EB2BC53058E1DE2B80165E5364736A20052C439450EE6C5306033"
+    },
+    {
+      "path": "demo-client-common/src/main/kotlin/com/cn/ipc/client/common/IpcBenchmarkSuite.kt",
+      "sha256": "AACE7D58BD510AD85AAA821CCA0B182C290E081F2DBA68706BAFA789B4DFCF99"
+    },
+    {
+      "path": "docs/benchmarks/harness/capture_cross_package_smoke.py",
+      "sha256": "5F680245124A7C2028950CC296894758ED5036E26C226FBCA8E2BF6CAA56920C"
+    },
+    {
+      "path": "ipc-annotations/src/main/kotlin/com/cn/ipc/annotations/IpcAnnotations.kt",
+      "sha256": "CE0782DC0633464205A2AF0BE748B2D4CEC706E0A13B2A3A91FE72959B68E571"
+    },
+    {
+      "path": "ipc-annotations/src/main/kotlin/com/cn/ipc/annotations/IpcFacade.kt",
+      "sha256": "A06BBB37DF5D27BEB10BD09D6F055AEA4A529625C4BA9554F1D5D2BBDB28FD5A"
+    },
+    {
+      "path": "ipc-api/src/main/kotlin/com/cn/ipc/api/hub/IMessageHubService.kt",
+      "sha256": "9D3424538FE9D68D00172CF8E9367168BC6427FEFB3C2486A7684B7946A1F8EA"
+    },
+    {
+      "path": "ipc-api/src/main/kotlin/com/cn/ipc/api/test/IBenchmarkEchoService.kt",
+      "sha256": "11F96D5B322CD0BF5C224AA58C608350E61290AF046E0D30337F85CB616B5817"
+    },
+    {
+      "path": "ipc-api/src/main/kotlin/com/cn/ipc/api/test/IUserService.kt",
+      "sha256": "31905DCA5504DAA2CE2C18552231AA7D729602B3783813F6FD42C98FCA412DF5"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/ClientAdapterGenerator.kt",
+      "sha256": "6F119FB8996F2F841D4E2CF396D888C1CF229DA18E0832619C5FDA03F11A355F"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/IpcProcessorProvider.kt",
+      "sha256": "06F5EDA2AE124427668EBE6D2CF948AEB45789543D3A8415728FC273210E54A1"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/IpcSchemaGenerator.kt",
+      "sha256": "1003D2C2258B20E0454B8746A546E32C0CBA5954DD7E08719E4CC5624A0160C8"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/IpcSymbolProcessor.kt",
+      "sha256": "88F682D420141BF3BB7898D2FCB647A85B0166F711CAE87D1947281722B945E2"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/ServerStubGenerator.kt",
+      "sha256": "40B3359ACF59407A4A4043AC3E87EF4E250456902B5932CF277EA85BDEB897B0"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/WireTypeModel.kt",
+      "sha256": "AD3DFC1AE4816C8A517835CDBB47F2085BEFF54EAB636AF4894CAB2E1F20FF3A"
+    },
+    {
+      "path": "ipc-contract/src/main/aidl/com/cn/ipc/ClientHello.aidl",
+      "sha256": "F6EC8ED1E4112F214670A1EC78A6AF1DCE42DD002A1CE474585F58B1EF83A05D"
+    },
+    {
+      "path": "ipc-contract/src/main/aidl/com/cn/ipc/ClientServiceSchema.aidl",
+      "sha256": "DF9CC26A0E7BE46D2D36BF550B8B4F880A6DCBD71F5C863FC516E6E8F7D04093"
+    },
+    {
+      "path": "ipc-contract/src/main/aidl/com/cn/ipc/IIpcBroker.aidl",
+      "sha256": "3252D583AF246CF3EF581E67ABB67A2960C80A7B9CB1F60D4E8A9A533EFC372A"
+    },
+    {
+      "path": "ipc-contract/src/main/aidl/com/cn/ipc/ProtocolInfo.aidl",
+      "sha256": "5500DD43BFDCBA0E2DCC0703304870543EC05A763763D32881A68F3D141DF2D0"
+    },
+    {
+      "path": "ipc-contract/src/main/aidl/com/cn/ipc/RpcError.aidl",
+      "sha256": "57F8AEA025F81E2655B9A4F0F442ECEF7F9E386BF7605A29E312AD1F97F75419"
+    },
+    {
+      "path": "ipc-contract/src/main/aidl/com/cn/ipc/ServiceSchema.aidl",
+      "sha256": "508DF6716A99186A7311C2C5AD7E0D009C612BEA2033186464FCC0ABF9192661"
+    },
+    {
+      "path": "ipc-contract/src/main/kotlin/com/cn/ipc/IpcRequestTrace.kt",
+      "sha256": "9A262E5F4EB9FEF79D12B6C048DC7D9B8D4F98CB8B2DA62F11B9BC979E31D6DC"
+    },
+    {
+      "path": "ipc-contract/src/main/kotlin/com/cn/ipc/Models.kt",
+      "sha256": "42EAFD2DCB14A0200929B7F9C45039AC637FB769D737ABA835B079ECF19CD0C2"
+    },
+    {
+      "path": "ipc-contract/src/main/kotlin/com/cn/ipc/ServiceSchema.kt",
+      "sha256": "33ACB04E41D54B4BC66A114DD843465CA8D88EDD13032315236EA111694A8B6B"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/FlowAdapterHelper.kt",
+      "sha256": "0F3915FC30B81021873B68FEAA76FE02C69A794CE591E43F4BBE0AFB12456777"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/IpcClientState.kt",
+      "sha256": "601A457FA9D1B4FC5D9B9B9E3A989FA2DDD73D20845B7FEDFBC5AB315AE5E2F0"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/IpcCompatibilityException.kt",
+      "sha256": "737AAEDF75C319188A28BEA3DE428D59256012DAA19F471948AC023B2A86CFED"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/IpcConnectionController.kt",
+      "sha256": "25E32F8980C3F0785E10F28A2992317A0A72C50141CD375479304572220F4F48"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/ModernIpcRouter.kt",
+      "sha256": "2A0AC14358CA866E8E915DDF3A0BFECB482D1C73EB0F379426317F219481785A"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/PendingCallRegistry.kt",
+      "sha256": "BBF70027BBB54BF6CE6E3ED628F138FF9F9F0BC849E59A05B66B7F543FF3D0B3"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/RxIpcExtensions.kt",
+      "sha256": "106FEBA1F07DCEBB87E2D4593DE213C47A2459AA5691026CD29624CC397CD988"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/ServiceDiscoveryCache.kt",
+      "sha256": "28E8754BAB47C97BF5D6298C3B64EAF5916DE2D703B78567A84B5343A39BB811"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/SubscriptionRegistry.kt",
+      "sha256": "7EA231774ACB21AF94B5928B4A833B6AC94BB77F7A04CDF04896DA78A6EC010E"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/BoundedDispatcher.kt",
+      "sha256": "B7EA904CBE21D5EC8BA576DDAE960551E7C1D80B5FFE37C41194BFB4DD96B710"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/CallerAuthenticator.kt",
+      "sha256": "E1E07812F4BD160AE626F05E7B7B1FB5CA04F87A54814A5ECF349C93E7AB0CA3"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcBrokerService.kt",
+      "sha256": "2E7EEEB5C1E18545FA062243F029799DB787D97A567845B1097980735055969C"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcBrokerStub.kt",
+      "sha256": "610A0EF60EF231075457BA86B762D999C125F712289FCF7A372CF4223DC72889"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcRequestTracker.kt",
+      "sha256": "9F1373EA3DB51DFFFDD0204AD9AC5667EDE939779CBA9FFF2D854DBEF8267170"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcServiceRegistry.kt",
+      "sha256": "67D82E6375C970758E25ADF1CA43EF3E19094C70988774D5EBE0CD671D614899"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcSubscriptionManager.kt",
+      "sha256": "85E4B35E0D3B1399989AEC5319F35FCCAEF73040A32A9CA66F13BEED05B51E44"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcTelemetry.kt",
+      "sha256": "C0202E588331E27993BECC018D8960A8FF5380A856E7B8FCEDBC51E42F4F4D9A"
+    }
+  ],
+  "serverPid": 2791,
+  "serverReturnState": {
+    "awake": true,
+    "keyguardNotShowing": true,
+    "requestedPackageResumed": true,
+    "valid": true
+  },
+  "serverUiOwnPackage": true,
+  "serverPidStable": true,
+  "sourcesUnchanged": true,
+  "builtApksUnchanged": true,
+  "finishedUtc": "2026-10-09T01:50:05.942937+00:00",
+  "artifacts": [
+    {
+      "path": "activities-after.txt",
+      "bytes": 81235,
+      "sha256": "7B7A243BABC1EBC5F1AFF6FEABB693F1BE034F313C068E47AE19ADB66D265C8B"
+    },
+    {
+      "path": "app-client1-bindings.txt",
+      "bytes": 3024,
+      "sha256": "1700DA75E3DE2ADF16F8E00D6B0CA661F89BBEA19DB9CC57F0295504BE034D09"
+    },
+    {
+      "path": "app-client1-built.apk",
+      "bytes": 6274408,
+      "sha256": "DC1F03413BCE860D42EBC8B0610771B2AAF81E525618FC2FF8E30476128877D0"
+    },
+    {
+      "path": "app-client1-end-activities.txt",
+      "bytes": 67144,
+      "sha256": "D6C066CCA6E48549A9D4093D385FB2443903C673B504E59C3A671AC828730FD0"
+    },
+    {
+      "path": "app-client1-end-power.txt",
+      "bytes": 486306,
+      "sha256": "FD6F27A9C450309F37BFA7BCA18AD07E355827CC9842D76E84ACA9E267E0A0A5"
+    },
+    {
+      "path": "app-client1-end-windows.txt",
+      "bytes": 86696,
+      "sha256": "D4C01166B6778A8915AE9CBA49347A7906744093416299377CE090451149C752"
+    },
+    {
+      "path": "app-client1-force-stop.txt",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "app-client1-installed.apk",
+      "bytes": 6274408,
+      "sha256": "DC1F03413BCE860D42EBC8B0610771B2AAF81E525618FC2FF8E30476128877D0"
+    },
+    {
+      "path": "app-client1-launch.txt",
+      "bytes": 181,
+      "sha256": "88A7F2E8DECA68226E966982F01E3948A975D994C284DA04C7A667516A7F65FE"
+    },
+    {
+      "path": "app-client1-logcat.txt",
+      "bytes": 19437,
+      "sha256": "39BFE46751637C2CF3A419418E336C0D4DE1A9F251CAA62EF1A49F76C8758692"
+    },
+    {
+      "path": "app-client1-package.txt",
+      "bytes": 12284,
+      "sha256": "D1EB19F1B486CBC24EA2863C7317472B32C3E0AF286917E31C9A6154B9FDCBD1"
+    },
+    {
+      "path": "app-client1-processes.txt",
+      "bytes": 39669,
+      "sha256": "3A2D8CEE0C8CB3C6621237C43B5625D5FEF281CF08CEB02333E156E920EE1C4C"
+    },
+    {
+      "path": "app-client1-start-activities.txt",
+      "bytes": 67352,
+      "sha256": "E0AF5D0F66E1742D6D0777D209B823512C813C57BDD013C642A8CEE95FD5A4E7"
+    },
+    {
+      "path": "app-client1-start-power.txt",
+      "bytes": 486305,
+      "sha256": "431B14DB9D9C9345650CD2CD67BA75C0FEA930AAF46D30DD855CD4F48E7D7E61"
+    },
+    {
+      "path": "app-client1-start-windows.txt",
+      "bytes": 86696,
+      "sha256": "D4C01166B6778A8915AE9CBA49347A7906744093416299377CE090451149C752"
+    },
+    {
+      "path": "app-client1-ui.xml",
+      "bytes": 12150,
+      "sha256": "C5D395817360A1CB27F1D0E4FEA88A6683A648DE93618EC51C96E90F26A24304"
+    },
+    {
+      "path": "app-client1-uiautomator.txt",
+      "bytes": 86,
+      "sha256": "73FC04933E9F3D32E8D9096969A2B7EF5BEE19D72F8B129C9DF5E424D9BA800D"
+    },
+    {
+      "path": "app-client2-bindings.txt",
+      "bytes": 3708,
+      "sha256": "F065CAD95C497C2DAFD8FFE7D0ECD134218707676E4672301E69DA99A8192B69"
+    },
+    {
+      "path": "app-client2-built.apk",
+      "bytes": 6274396,
+      "sha256": "CDFD57AF5E5B9E3B34053A315DA14B1AB86BE90F4BA6BC080A8C2867437306F7"
+    },
+    {
+      "path": "app-client2-end-activities.txt",
+      "bytes": 73995,
+      "sha256": "068ABBB5727209EE71E23D9F4D805CA44BC0C106A033E173E06C6DCE607F1AB7"
+    },
+    {
+      "path": "app-client2-end-power.txt",
+      "bytes": 485640,
+      "sha256": "4440C993D9530F539A8B28F1D14078A425850DA7BD6B5A8E06C55607558314BB"
+    },
+    {
+      "path": "app-client2-end-windows.txt",
+      "bytes": 90793,
+      "sha256": "8040F3C293C441B81933570819A91570691CFE65C999590EF2213C27DC1885D9"
+    },
+    {
+      "path": "app-client2-force-stop.txt",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "app-client2-installed.apk",
+      "bytes": 6274396,
+      "sha256": "CDFD57AF5E5B9E3B34053A315DA14B1AB86BE90F4BA6BC080A8C2867437306F7"
+    },
+    {
+      "path": "app-client2-launch.txt",
+      "bytes": 181,
+      "sha256": "892524822E0BD32BC447BA333BD2B8C0227A7882C15104F403D4DD6CFE2A63EC"
+    },
+    {
+      "path": "app-client2-logcat.txt",
+      "bytes": 19221,
+      "sha256": "922641D2D7C0657B3FB7D7D30AD007135B8EF9189BFA5BC98793746A56FCBC3B"
+    },
+    {
+      "path": "app-client2-package.txt",
+      "bytes": 12285,
+      "sha256": "5C19DCBAACB4A94A9320E62AFF6E9117573F58E9CC26487AC28057D99F393D04"
+    },
+    {
+      "path": "app-client2-processes.txt",
+      "bytes": 39777,
+      "sha256": "748F756A6768DEA0F269BD3A91B8593968BBA8571FE909B9444014A14925A4DA"
+    },
+    {
+      "path": "app-client2-start-activities.txt",
+      "bytes": 74191,
+      "sha256": "FD7C823DF9DBDA792C8668D6614D96E0FD1C14AC5C3EBC13C2CF99253AA2A1C9"
+    },
+    {
+      "path": "app-client2-start-power.txt",
+      "bytes": 485829,
+      "sha256": "A866D19C0E36D58C2646E94E2C2273D5394B55AD9B918915F9A162285977B6E9"
+    },
+    {
+      "path": "app-client2-start-windows.txt",
+      "bytes": 91085,
+      "sha256": "CD98B3F7ACF443FEC1AD75ADFDE263A3F487CC668C8249DE6A3253F38FF16FE7"
+    },
+    {
+      "path": "app-client2-ui.xml",
+      "bytes": 7001,
+      "sha256": "BE6FD2B7CFB5FF4705DE01EA4047569BB460BF3814D617A693BA131DF689CA68"
+    },
+    {
+      "path": "app-client2-uiautomator.txt",
+      "bytes": 86,
+      "sha256": "01CA287B389FE151DC0C199E7B3337AB309795C0EE72CAFF7ED0449E2F4D6A78"
+    },
+    {
+      "path": "app-client3-bindings.txt",
+      "bytes": 4387,
+      "sha256": "9333D19F7020F42A3A199FF30BAFCFE1BC6B16BAFDE764EFFE9D718A023D52BC"
+    },
+    {
+      "path": "app-client3-built.apk",
+      "bytes": 6274396,
+      "sha256": "F59AEA58D1F3A002B0627A038C669B5C918F0E0F5A809F0932A0D35FAAE4799A"
+    },
+    {
+      "path": "app-client3-end-activities.txt",
+      "bytes": 80828,
+      "sha256": "36B83C7B8D97CAB4BC9A8146E3F138F26419EF53F8ED15ADAE7DB315857D0088"
+    },
+    {
+      "path": "app-client3-end-power.txt",
+      "bytes": 485321,
+      "sha256": "76DF934DD5332C00F2374E0645E3B0D46B2E04B83AEA6DEC089EE92D7DC31897"
+    },
+    {
+      "path": "app-client3-end-windows.txt",
+      "bytes": 94879,
+      "sha256": "1D9D89E15466DFC47579FEC7047BB4E3DC4C5E2F9525767F279E54CB22CF55FC"
+    },
+    {
+      "path": "app-client3-force-stop.txt",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "app-client3-installed.apk",
+      "bytes": 6274396,
+      "sha256": "F59AEA58D1F3A002B0627A038C669B5C918F0E0F5A809F0932A0D35FAAE4799A"
+    },
+    {
+      "path": "app-client3-launch.txt",
+      "bytes": 181,
+      "sha256": "9B090B899D9C676A82DB4E13D478E2683A5CC8784379FEB15785AD314B29D40F"
+    },
+    {
+      "path": "app-client3-logcat.txt",
+      "bytes": 19223,
+      "sha256": "C5A927C915FEFFDA9E23466F6D3FD18209BB87D843148D2CA07327BA9ABFF13A"
+    },
+    {
+      "path": "app-client3-package.txt",
+      "bytes": 12282,
+      "sha256": "DF09E879972B268C3E0FA280E6554135B02C00E4B017518FA000C8347BECC861"
+    },
+    {
+      "path": "app-client3-processes.txt",
+      "bytes": 39838,
+      "sha256": "2A72179E598D0F3C15E7DB6590BF9E814F18CD0F39A8137C3D337F77C23299C3"
+    },
+    {
+      "path": "app-client3-start-activities.txt",
+      "bytes": 81019,
+      "sha256": "AAA0AD6E86D0AD6B0951FC8A439AF9C3B55A7D4ED8FA5FA3F43757F971239135"
+    },
+    {
+      "path": "app-client3-start-power.txt",
+      "bytes": 485324,
+      "sha256": "0F1C24039FE646CBC7C22CC318514F14146D68D4FECB0AD6D612F45502BFE3AA"
+    },
+    {
+      "path": "app-client3-start-windows.txt",
+      "bytes": 95165,
+      "sha256": "C5D2634072DE80F1AD2EFC98EB5CB27EE8C1A0279190D1EDA8AA3E10B098CD71"
+    },
+    {
+      "path": "app-client3-ui.xml",
+      "bytes": 7001,
+      "sha256": "A2F6619BE67B862AF464F11941F7E5BA3A9E68A9B4F300659175F866AFD1B593"
+    },
+    {
+      "path": "app-client3-uiautomator.txt",
+      "bytes": 86,
+      "sha256": "FF6A33A463F531A1063AA220598F039CD452A666838240292080CDA6CF0B7D86"
+    },
+    {
+      "path": "app-server-built.apk",
+      "bytes": 5927927,
+      "sha256": "D9E00E52174AE0FBB1C840CD0607E2439A93AF6DD3DEAA98EC655EE153120D83"
+    },
+    {
+      "path": "app-server-installed.apk",
+      "bytes": 5927927,
+      "sha256": "D9E00E52174AE0FBB1C840CD0607E2439A93AF6DD3DEAA98EC655EE153120D83"
+    },
+    {
+      "path": "app-server-package.txt",
+      "bytes": 13231,
+      "sha256": "49FA1CA22A4A080C175FE7A18A3C23BD8CDF38C19F63A909E6F8FB0FFB028CA5"
+    },
+    {
+      "path": "battery-after.txt",
+      "bytes": 814,
+      "sha256": "06C49596D785B91B61C3207DB0932C7DFD6C019DCB0FD9279B5629555FB27FC0"
+    },
+    {
+      "path": "battery-before.txt",
+      "bytes": 814,
+      "sha256": "06C49596D785B91B61C3207DB0932C7DFD6C019DCB0FD9279B5629555FB27FC0"
+    },
+    {
+      "path": "before-activities.txt",
+      "bytes": 53524,
+      "sha256": "63012C22B67C5FDF6DE92E92F03E84A94D1C4C42DE9954053F0EACEBB265E747"
+    },
+    {
+      "path": "before-power.txt",
+      "bytes": 486703,
+      "sha256": "1F149E810E5368E383E83A3D07DD69C4D43D1347DBA4C6DB0849EE4878B64013"
+    },
+    {
+      "path": "before-windows.txt",
+      "bytes": 78353,
+      "sha256": "E1CDBD313CAAC3B5C75549EF394E2BEE07A09DDA74C729A7FEA9A99DE1FA0D0F"
+    },
+    {
+      "path": "bindings-after.txt",
+      "bytes": 4388,
+      "sha256": "AA15751E75AE734D38E83D19DBA55919A86E7B3BC10B032A970DA1EE379742E9"
+    },
+    {
+      "path": "bindings-final.txt",
+      "bytes": 4388,
+      "sha256": "58B0ED6B16F024868AF6FB6F56803346636CA035CB926D77844E9B0AFA84D1E7"
+    },
+    {
+      "path": "capture-plan.json",
+      "bytes": 16942,
+      "sha256": "418108F32DEF935AA7780FC90EC2256EF8EC0124476210970A5CB32C5A36D97F"
+    },
+    {
+      "path": "commands.jsonl",
+      "bytes": 6287856,
+      "sha256": "A7AD0EF5AD76222E96F44EFC0322DCA38126C60CDBB471BD818432994F8D270B"
+    },
+    {
+      "path": "getprop.txt",
+      "bytes": 79096,
+      "sha256": "1BB2C1BB0E58A00A03BAAA732EBA628CB653AE00168D52DDD892015AF486CF23"
+    },
+    {
+      "path": "initial-app-client1-force-stop.txt",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "initial-app-client2-force-stop.txt",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "initial-app-client3-force-stop.txt",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "initial-server-force-stop.txt",
+      "bytes": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "path": "power-after.txt",
+      "bytes": 484982,
+      "sha256": "1E807BEE485AE66D9FE907EE77A263047C212C8E104FC17F8529A8B9FBD972B4"
+    },
+    {
+      "path": "processes-after.txt",
+      "bytes": 39769,
+      "sha256": "2F46314BB0E897D9782A17224265F03D7CD36802C85FBA52F1333050731206E6"
+    },
+    {
+      "path": "server-after-ui.xml",
+      "bytes": 7207,
+      "sha256": "958297EFADA5E8A12B09D24E8B1A4E78FFF7BFABFC344F540AEA86FB6837619C"
+    },
+    {
+      "path": "server-after-uiautomator.txt",
+      "bytes": 87,
+      "sha256": "D117A0BA4D2AF295F5F1D5DE045A18051EA06EABC15D6A9EAA7F8885C2927A12"
+    },
+    {
+      "path": "server-before-ui.xml",
+      "bytes": 6751,
+      "sha256": "8DC4F4326986A0B222961CA231E37252767560F92063DC9EB0520562A253DB75"
+    },
+    {
+      "path": "server-before-uiautomator.txt",
+      "bytes": 88,
+      "sha256": "5C19F32B039C9D2F69FB01C42CD74243163C612090C9017BD2C7CEA9B94749E4"
+    },
+    {
+      "path": "server-return-activities.txt",
+      "bytes": 81389,
+      "sha256": "03DDAB21268E647B4CAB0F89A9503704F046D1A33FE7D2C7105C5334DF33D655"
+    },
+    {
+      "path": "server-return-launch.txt",
+      "bytes": 284,
+      "sha256": "EE6FB13A5B016571F09C3E42E91AAC8E5D964441B2B6A2D013FA423AADB471D3"
+    },
+    {
+      "path": "server-return-power.txt",
+      "bytes": 484981,
+      "sha256": "01CE659EC7ECDAAD8376D7DA6DBEE48A3D9BDB4587C5EEEF59EF10CD54D88A0C"
+    },
+    {
+      "path": "server-return-windows.txt",
+      "bytes": 95992,
+      "sha256": "1359915EFD659EB6338D794FFAF7D0AB5B5D4CDAA48CADC484C8C91F692BA572"
+    },
+    {
+      "path": "server-start-launch.txt",
+      "bytes": 193,
+      "sha256": "7EC4EBF4E2B783B89642F1614F83CE785FAA2E5D22408918E984E67AABF3DA8C"
+    },
+    {
+      "path": "thermal-after.txt",
+      "bytes": 9124,
+      "sha256": "F0EBB507016F8B10F7479F38BB376FB73371CD16B4BB9C5F42AA9CBB4A7A0F4F"
+    },
+    {
+      "path": "thermal-before.txt",
+      "bytes": 9124,
+      "sha256": "763A7D5A0456B1FECD0B4C7236C5DD19AEEBACD7D2CB21B7007CC051B29858B4"
+    }
+  ]
+}

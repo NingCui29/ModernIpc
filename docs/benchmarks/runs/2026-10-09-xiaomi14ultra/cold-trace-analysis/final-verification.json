@@ -1,0 +1,45 @@
+{
+  "serial": "925c23bb",
+  "apkSha256": "4494F5299DF407EA3DB2DFE915B14057A39A6DCE5F4171217237FF8F88E1F0A4",
+  "passCount": 64,
+  "doneCount": 5,
+  "gates": [
+    {
+      "stage": "cold",
+      "passCount": 12,
+      "valid": true,
+      "run": "coldrelease",
+      "maxForegroundGapMs": 504
+    },
+    {
+      "stage": "lifecycle",
+      "passCount": 22,
+      "valid": true,
+      "run": "lifecyclerelease",
+      "maxForegroundGapMs": 505
+    },
+    {
+      "stage": "terminals",
+      "passCount": 8,
+      "valid": true,
+      "run": "terminalrelease",
+      "maxForegroundGapMs": 502
+    },
+    {
+      "stage": "compatibility",
+      "passCount": 16,
+      "valid": true,
+      "run": "compatrelease",
+      "maxForegroundGapMs": 120
+    },
+    {
+      "stage": "fault",
+      "passCount": 6,
+      "valid": true,
+      "run": "faultrelease",
+      "maxForegroundGapMs": 501
+    }
+  ],
+  "coreSourceUnchangedFromTraceon4": true,
+  "coreSourceFiles": 35
+}
