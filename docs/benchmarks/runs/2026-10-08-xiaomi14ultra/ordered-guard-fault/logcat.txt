@@ -1,0 +1,17 @@
+--------- beginning of main
+10-08 14:28:47.457  5732  5732 I IpcForeground: STATE run=faultguard event=WAIT_READY elapsedRealtimeMs=743804691 uptimeMs=161523949 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-08 14:28:47.477  5732  5732 I IpcForeground: STATE run=faultguard event=FOCUS_GAIN elapsedRealtimeMs=743804711 uptimeMs=161523969 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 14:28:47.558  5732  5732 I IpcForeground: STATE run=faultguard event=WAIT_READY elapsedRealtimeMs=743804792 uptimeMs=161524050 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 14:28:47.658  5732  5732 I IpcForeground: STATE run=faultguard event=WAIT_READY elapsedRealtimeMs=743804892 uptimeMs=161524150 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 14:28:47.759  5732  5732 I IpcForeground: STATE run=faultguard event=WAIT_READY elapsedRealtimeMs=743804993 uptimeMs=161524251 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 14:28:47.759  5732  5732 I IpcForeground: STATE run=faultguard event=BEGIN elapsedRealtimeMs=743804994 uptimeMs=161524251 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:28:47.761  5732  7372 I IpcFaultProbe: PASS run=faultguard replyBeforeSendReturns cancelCount=0
+10-08 14:28:47.762  5732  7375 I IpcFaultProbe: PASS run=faultguard explicitCancellation cancelCount=1
+10-08 14:28:47.763  5732  7375 I IpcFaultProbe: PASS run=faultguard cancellationDuringDispatch cancelCount=1
+10-08 14:28:48.261  5732  5732 I IpcForeground: STATE run=faultguard event=SAMPLE elapsedRealtimeMs=743805494 uptimeMs=161524752 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:28:48.553  5732  7492 I IpcFaultProbe: PASS run=faultguard replyDisconnectRace iterations=1000 lateRepliesRejected=true
+10-08 14:28:48.583  5732  7490 I IpcFaultProbe: PASS run=faultguard remoteFlowFactoryError propagated=true normalFlowFirstItem=0
+10-08 14:28:48.595  5732  7494 I IpcFaultProbe: PASS run=faultguard closePendingFailed=true staleConnectionRejected=true reconnectedFlow=true
+10-08 14:28:48.595  5732  7494 I IpcFaultProbe: DONE run=faultguard passed=true
+10-08 14:28:48.596  5732  5732 I IpcForeground: STATE run=faultguard event=END elapsedRealtimeMs=743805830 uptimeMs=161525088 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 14:28:48.600  5732  5732 I IpcForeground: END run=faultguard started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-faultguard.csv scope=activity_events_and_500ms_app_samples

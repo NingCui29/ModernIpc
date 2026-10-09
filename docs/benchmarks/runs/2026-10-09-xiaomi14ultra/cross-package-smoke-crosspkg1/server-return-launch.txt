@@ -1,0 +1,8 @@
+Starting: Intent { flg=0x20020000 cmp=com.cn.ipc.server.app/.ServerMainActivity }
+Warning: Activity not started, its current task has been brought to the front
+Status: ok
+LaunchState: HOT
+Activity: com.cn.ipc.server.app/.ServerMainActivity
+TotalTime: 76
+WaitTime: 81
+Complete

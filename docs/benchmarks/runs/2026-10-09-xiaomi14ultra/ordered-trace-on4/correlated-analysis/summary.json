@@ -1,0 +1,1318 @@
+{
+  "run": "traceon4",
+  "traceSha256": "50C49E295008DB456B2CD0D9D0604C37B662114E4E92272193A67F5BF26C7078",
+  "provenance": {
+    "serial": "925c23bb",
+    "apkSha256": "5C8CECFDC5650E8186EC326DEAC916A9584755508BF555A5F48CE917AFBE20FC",
+    "installedSha256": "5C8CECFDC5650E8186EC326DEAC916A9584755508BF555A5F48CE917AFBE20FC"
+  },
+  "artifactValidation": {
+    "valid": true,
+    "run": "traceon4",
+    "traceEnabled": true,
+    "count": 1000,
+    "clientEvents": 6000,
+    "serverEvents": 5000,
+    "dropped": 0,
+    "p50Ms": 0.919896,
+    "p90Ms": 1.19474,
+    "p99Ms": 1.57651,
+    "maxMs": 3.982396,
+    "meanMs": 0.9758150379999999,
+    "eventFiles": [
+      {
+        "side": "client",
+        "path": "request-events-traceon4-client.log",
+        "bytes": 872073,
+        "sha256": "C6AE9BBD7CF38C36C1B59A7074C7DD67825D0C95E98B76AAC0982F6D0BEBB02F",
+        "pid": 1466,
+        "callback": 213673524,
+        "generation": 1
+      },
+      {
+        "side": "server",
+        "path": "request-events-traceon4-server.log",
+        "bytes": 737071,
+        "sha256": "DEBA340B3360C683482EB9E04E0A618C02E69EE854AF78F4FBC4153F6076FFC1",
+        "pid": 3421,
+        "callback": 230072773,
+        "generation": 0
+      }
+    ]
+  },
+  "processMetadata": [
+    {
+      "upid": "456",
+      "id": "456",
+      "pid": "1466",
+      "name": "usap64",
+      "start_ts": "[NULL]",
+      "end_ts": "[NULL]",
+      "parent_upid": "182",
+      "uid": "0",
+      "android_appid": "0",
+      "android_user_id": "0",
+      "cmdline": "usap64",
+      "arg_set_id": "[NULL]",
+      "machine_id": "0"
+    },
+    {
+      "upid": "1010",
+      "id": "1010",
+      "pid": "3421",
+      "name": "com.cn.ipc.demo:server",
+      "start_ts": "[NULL]",
+      "end_ts": "[NULL]",
+      "parent_upid": "182",
+      "uid": "10396",
+      "android_appid": "10396",
+      "android_user_id": "0",
+      "cmdline": "com.cn.ipc.demo:server",
+      "arg_set_id": "[NULL]",
+      "machine_id": "0"
+    }
+  ],
+  "clock": {
+    "boottimeOffsetsNs": [
+      0,
+      0
+    ],
+    "verifiedSameDomain": true,
+    "eventMinNs": 813349827015057,
+    "eventMaxNs": 813350805673026,
+    "traceBounds": {
+      "start_ts": "813349075108756",
+      "end_ts": "813369054637185"
+    }
+  },
+  "loss": {
+    "nonzeroBad": [],
+    "nonzeroCautions": [
+      {
+        "name": "clock_sync_cache_miss",
+        "idx": "[NULL]",
+        "severity": "info",
+        "source": "analysis",
+        "value": "10"
+      },
+      {
+        "name": "compact_sched_switch_skipped",
+        "idx": "[NULL]",
+        "severity": "info",
+        "source": "analysis",
+        "value": "8"
+      },
+      {
+        "name": "compact_sched_waking_skipped",
+        "idx": "[NULL]",
+        "severity": "info",
+        "source": "analysis",
+        "value": "8"
+      },
+      {
+        "name": "traced_chunks_discarded",
+        "idx": "[NULL]",
+        "severity": "info",
+        "source": "trace",
+        "value": "1"
+      }
+    ],
+    "tracingServiceVersion": [
+      {
+        "name": "tracing_service_version",
+        "str_value": "Perfetto v49.0 (N/A)"
+      }
+    ],
+    "firstSchedByCpu": [
+      {
+        "cpu": "0",
+        "first_sched_ns": "813349080322818"
+      },
+      {
+        "cpu": "1",
+        "first_sched_ns": "813349076327818"
+      },
+      {
+        "cpu": "2",
+        "first_sched_ns": "813349075298287"
+      },
+      {
+        "cpu": "3",
+        "first_sched_ns": "813349077587662"
+      },
+      {
+        "cpu": "4",
+        "first_sched_ns": "813349075749120"
+      },
+      {
+        "cpu": "5",
+        "first_sched_ns": "813349075322141"
+      },
+      {
+        "cpu": "6",
+        "first_sched_ns": "813349075192089"
+      },
+      {
+        "cpu": "7",
+        "first_sched_ns": "813349075241933"
+      }
+    ],
+    "latestFirstSchedBeforeRequestMs": 746.692239,
+    "interpretation": [
+      "Eight switch and eight waking skips are per-CPU initialization, completed before the request window.",
+      "Global traced_chunks_discarded=1 is a tracing-service lifetime count, distinct from current-session buffer discard.",
+      "There is only one final TraceStats packet and no starting counter; the global discarded count cannot be assigned to historical or present requests.",
+      "Zero session buffer/kernel loss counters and complete request-window state coverage support this analysis; absolute zero loss is not established."
+    ]
+  },
+  "stages": {
+    "client_resolve": {
+      "count": 1000,
+      "meanMs": 0.118672506,
+      "p50Ms": 0.110365,
+      "p90Ms": 0.151145,
+      "p99Ms": 0.237865,
+      "maxMs": 0.341093
+    },
+    "client_register": {
+      "count": 1000,
+      "meanMs": 0.057852333,
+      "p50Ms": 0.050677,
+      "p90Ms": 0.079948,
+      "p99Ms": 0.152708,
+      "maxMs": 0.39849
+    },
+    "client_encode": {
+      "count": 1000,
+      "meanMs": 0.064489222,
+      "p50Ms": 0.060573,
+      "p90Ms": 0.080364,
+      "p99Ms": 0.128385,
+      "maxMs": 0.462969
+    },
+    "request_transport": {
+      "count": 1000,
+      "meanMs": 0.10699186,
+      "p50Ms": 0.096562,
+      "p90Ms": 0.127604,
+      "p99Ms": 0.241302,
+      "maxMs": 2.619843
+    },
+    "server_admission": {
+      "count": 1000,
+      "meanMs": 0.115711408,
+      "p50Ms": 0.105313,
+      "p90Ms": 0.147031,
+      "p99Ms": 0.236771,
+      "maxMs": 1.111719
+    },
+    "server_queue": {
+      "count": 1000,
+      "meanMs": 0.116693192,
+      "p50Ms": 0.10875,
+      "p90Ms": 0.145885,
+      "p99Ms": 0.223386,
+      "maxMs": 0.516979
+    },
+    "server_dispatch": {
+      "count": 1000,
+      "meanMs": 0.23240460000000002,
+      "p50Ms": 0.21599,
+      "p90Ms": 0.291355,
+      "p99Ms": 0.48677,
+      "maxMs": 1.230938
+    },
+    "server_business": {
+      "count": 1000,
+      "meanMs": 0.016252646,
+      "p50Ms": 0.014531,
+      "p90Ms": 0.021771,
+      "p99Ms": 0.043125,
+      "maxMs": 0.141615
+    },
+    "server_reply_encode": {
+      "count": 1000,
+      "meanMs": 0.011775042,
+      "p50Ms": 0.010364,
+      "p90Ms": 0.014532,
+      "p99Ms": 0.039792,
+      "maxMs": 0.07677
+    },
+    "reply_transport": {
+      "count": 1000,
+      "meanMs": 0.105577978,
+      "p50Ms": 0.095468,
+      "p90Ms": 0.135625,
+      "p99Ms": 0.281511,
+      "maxMs": 0.567708
+    },
+    "client_resume": {
+      "count": 1000,
+      "meanMs": 0.179371105,
+      "p50Ms": 0.168021,
+      "p90Ms": 0.224375,
+      "p99Ms": 0.330469,
+      "maxMs": 1.673333
+    },
+    "total": {
+      "count": 1000,
+      "meanMs": 0.893387292,
+      "p50Ms": 0.841407,
+      "p90Ms": 1.094375,
+      "p99Ms": 1.5025,
+      "maxMs": 3.89901
+    }
+  },
+  "intervals": {
+    "client_encode/client_worker": {
+      "count": 1000,
+      "fullyCovered": 1000,
+      "matchingWakeRequests": 0,
+      "totalsNs": {
+        "wallNs": 64489222,
+        "runningNs": 63680003,
+        "runnableNs": 809219,
+        "sleepNs": 0,
+        "uninterruptibleNs": 0,
+        "otherNs": 0,
+        "uncoveredNs": 0
+      },
+      "metrics": {
+        "wallNs": {
+          "count": 1000,
+          "meanMs": 0.064489222,
+          "p50Ms": 0.060573,
+          "p90Ms": 0.080364,
+          "p99Ms": 0.128385,
+          "maxMs": 0.462969
+        },
+        "runningNs": {
+          "count": 1000,
+          "meanMs": 0.063680003,
+          "p50Ms": 0.060573,
+          "p90Ms": 0.080364,
+          "p99Ms": 0.116614,
+          "maxMs": 0.196406
+        },
+        "runnableNs": {
+          "count": 1000,
+          "meanMs": 0.000809219,
+          "p50Ms": 0.0,
+          "p90Ms": 0.0,
+          "p99Ms": 0.022656,
+          "maxMs": 0.266563
+        },
+        "sleepNs": {
+          "count": 1000,
+          "meanMs": 0.0,
+          "p50Ms": 0.0,
+          "p90Ms": 0.0,
+          "p99Ms": 0.0,
+          "maxMs": 0.0
+        }
+      }
+    },
+    "client_register/client_worker": {
+      "count": 1000,
+      "fullyCovered": 1000,
+      "matchingWakeRequests": 0,
+      "totalsNs": {
+        "wallNs": 57852333,
+        "runningNs": 57153164,
+        "runnableNs": 699169,
+        "sleepNs": 0,
+        "uninterruptibleNs": 0,
+        "otherNs": 0,
+        "uncoveredNs": 0
+      },
+      "metrics": {
+        "wallNs": {
+          "count": 1000,
+          "meanMs": 0.057852333,
+          "p50Ms": 0.050677,
+          "p90Ms": 0.079948,
+          "p99Ms": 0.152708,
+          "maxMs": 0.39849
+        },
+        "runningNs": {
+          "count": 1000,
+          "meanMs": 0.057153164,
+          "p50Ms": 0.050677,
+          "p90Ms": 0.079948,
+          "p99Ms": 0.128854,
+          "maxMs": 0.268333
+        },
+        "runnableNs": {
+          "count": 1000,
+          "meanMs": 0.000699169,
+          "p50Ms": 0.0,
+          "p90Ms": 0.0,
+          "p99Ms": 0.0,
+          "maxMs": 0.269636
+        },
+        "sleepNs": {
+          "count": 1000,
+          "meanMs": 0.0,
+          "p50Ms": 0.0,
+          "p90Ms": 0.0,
+          "p99Ms": 0.0,
+          "maxMs": 0.0
+        }
+      }
+    },
+    "client_resolve/client_worker": {
+      "count": 1000,
+      "fullyCovered": 1000,
+      "matchingWakeRequests": 0,
+      "totalsNs": {
+        "wallNs": 118672506,
+        "runningNs": 117485684,
+        "runnableNs": 1185988,
+        "sleepNs": 834,
+        "uninterruptibleNs": 0,
+        "otherNs": 0,
+        "uncoveredNs": 0
+      },
+      "metrics": {
+        "wallNs": {
+          "count": 1000,
+          "meanMs": 0.118672506,
+          "p50Ms": 0.110365,
+          "p90Ms": 0.151145,
+          "p99Ms": 0.237865,
+          "maxMs": 0.341093
+        },
+        "runningNs": {
+          "count": 1000,
+          "meanMs": 0.11748568399999999,
+          "p50Ms": 0.110365,
+          "p90Ms": 0.149271,
+          "p99Ms": 0.208281,
+          "maxMs": 0.276667
+        },
+        "runnableNs": {
+          "count": 1000,
+          "meanMs": 0.001185988,
+          "p50Ms": 0.0,
+          "p90Ms": 0.0,
+          "p99Ms": 0.039427,
+          "maxMs": 0.140521
+        },
+        "sleepNs": {
+          "count": 1000,
+          "meanMs": 8.34e-07,
+          "p50Ms": 0.0,
+          "p90Ms": 0.0,
+          "p99Ms": 0.0,
+          "maxMs": 0.000834
+        }
+      }
+    },
+    "client_resume/source_callback": {
+      "count": 1000,
+      "fullyCovered": 1000,
+      "matchingWakeRequests": 0,
+      "totalsNs": {
+        "wallNs": 179371105,
+        "runningNs": 139960468,
+        "runnableNs": 953593,
+        "sleepNs": 38457044,
+        "uninterruptibleNs": 0,
+        "otherNs": 0,
+        "uncoveredNs": 0
+      },
+      "metrics": {
+        "wallNs": {
+          "count": 1000,
+          "meanMs": 0.179371105,
+          "p50Ms": 0.168021,
+          "p90Ms": 0.224375,
+          "p99Ms": 0.330469,
+          "maxMs": 1.673333
+        },
+        "runningNs": {
+          "count": 1000,
+          "meanMs": 0.139960468,
+          "p50Ms": 0.131719,
+          "p90Ms": 0.175937,
+          "p99Ms": 0.224011,
+          "maxMs": 0.355
+        },
+        "runnableNs": {
+          "count": 1000,
+          "meanMs": 0.000953593,
+          "p50Ms": 0.0,
+          "p90Ms": 0.0,
+          "p99Ms": 0.022708,
+          "maxMs": 0.270625
+        },
+        "sleepNs": {
+          "count": 1000,
+          "meanMs": 0.038457044,
+          "p50Ms": 0.035,
+          "p90Ms": 0.057396,
+          "p99Ms": 0.113125,
+          "maxMs": 1.291198
+        }
+      }
+    },
+    "client_resume/target_worker": {
+      "count": 1000,
+      "fullyCovered": 1000,
+      "matchingWakeRequests": 1000,
+      "totalsNs": {
+        "wallNs": 179371105,
+        "runningNs": 46339026,
+        "runnableNs": 49380672,
+        "sleepNs": 83651407,
+        "uninterruptibleNs": 0,
+        "otherNs": 0,
+        "uncoveredNs": 0
+      },
+      "metrics": {
+        "wallNs": {
+          "count": 1000,
+          "meanMs": 0.179371105,
+          "p50Ms": 0.168021,
+          "p90Ms": 0.224375,
+          "p99Ms": 0.330469,
+          "maxMs": 1.673333
+        },
+        "runningNs": {
+          "count": 1000,
+          "meanMs": 0.046339026,
+          "p50Ms": 0.043282,
+          "p90Ms": 0.063073,
+          "p99Ms": 0.094844,
+          "maxMs": 0.19724
+        },
+        "runnableNs": {
+          "count": 1000,
+          "meanMs": 0.049380672,
+          "p50Ms": 0.047083,
+          "p90Ms": 0.067344,
+          "p99Ms": 0.125677,
+          "maxMs": 1.484375
+        },
+        "sleepNs": {
+          "count": 1000,
+          "meanMs": 0.08365140700000001,
+          "p50Ms": 0.077604,
+          "p90Ms": 0.105052,
+          "p99Ms": 0.149114,
+          "maxMs": 0.429063
+        }
+      }
+    },
+    "server_admission/receive_thread": {
+      "count": 1000,
+      "fullyCovered": 1000,
+      "matchingWakeRequests": 0,
+      "totalsNs": {
+        "wallNs": 115711408,
+        "runningNs": 113257242,
+        "runnableNs": 734480,
+        "sleepNs": 1719686,
+        "uninterruptibleNs": 0,
+        "otherNs": 0,
+        "uncoveredNs": 0
+      },
+      "metrics": {
+        "wallNs": {
+          "count": 1000,
+          "meanMs": 0.115711408,
+          "p50Ms": 0.105313,
+          "p90Ms": 0.147031,
+          "p99Ms": 0.236771,
+          "maxMs": 1.111719
+        },
+        "runningNs": {
+          "count": 1000,
+          "meanMs": 0.113257242,
+          "p50Ms": 0.105313,
+          "p90Ms": 0.14599,
+          "p99Ms": 0.194635,
+          "maxMs": 0.407343
+        },
+        "runnableNs": {
+          "count": 1000,
+          "meanMs": 0.00073448,
+          "p50Ms": 0.0,
+          "p90Ms": 0.0,
+          "p99Ms": 0.024219,
+          "maxMs": 0.197656
+        },
+        "sleepNs": {
+          "count": 1000,
+          "meanMs": 0.001719686,
+          "p50Ms": 0.0,
+          "p90Ms": 0.0,
+          "p99Ms": 0.0,
+          "maxMs": 0.873958
+        }
+      }
+    },
+    "server_queue/source_binder": {
+      "count": 1000,
+      "fullyCovered": 1000,
+      "matchingWakeRequests": 0,
+      "totalsNs": {
+        "wallNs": 116693192,
+        "runningNs": 97023711,
+        "runnableNs": 638071,
+        "sleepNs": 19031410,
+        "uninterruptibleNs": 0,
+        "otherNs": 0,
+        "uncoveredNs": 0
+      },
+      "metrics": {
+        "wallNs": {
+          "count": 1000,
+          "meanMs": 0.116693192,
+          "p50Ms": 0.10875,
+          "p90Ms": 0.145885,
+          "p99Ms": 0.223386,
+          "maxMs": 0.516979
+        },
+        "runningNs": {
+          "count": 1000,
+          "meanMs": 0.097023711,
+          "p50Ms": 0.09099,
+          "p90Ms": 0.123073,
+          "p99Ms": 0.178697,
+          "maxMs": 0.224636
+        },
+        "runnableNs": {
+          "count": 1000,
+          "meanMs": 0.000638071,
+          "p50Ms": 0.0,
+          "p90Ms": 0.0,
+          "p99Ms": 0.0,
+          "maxMs": 0.396563
+        },
+        "sleepNs": {
+          "count": 1000,
+          "meanMs": 0.01903141,
+          "p50Ms": 0.017396,
+          "p90Ms": 0.028125,
+          "p99Ms": 0.073125,
+          "maxMs": 0.363281
+        }
+      }
+    },
+    "server_queue/target_worker": {
+      "count": 1000,
+      "fullyCovered": 1000,
+      "matchingWakeRequests": 999,
+      "totalsNs": {
+        "wallNs": 116693192,
+        "runningNs": 38936163,
+        "runnableNs": 36952272,
+        "sleepNs": 40804757,
+        "uninterruptibleNs": 0,
+        "otherNs": 0,
+        "uncoveredNs": 0
+      },
+      "metrics": {
+        "wallNs": {
+          "count": 1000,
+          "meanMs": 0.116693192,
+          "p50Ms": 0.10875,
+          "p90Ms": 0.145885,
+          "p99Ms": 0.223386,
+          "maxMs": 0.516979
+        },
+        "runningNs": {
+          "count": 1000,
+          "meanMs": 0.038936163,
+          "p50Ms": 0.037083,
+          "p90Ms": 0.048802,
+          "p99Ms": 0.083073,
+          "maxMs": 0.132553
+        },
+        "runnableNs": {
+          "count": 1000,
+          "meanMs": 0.036952271999999994,
+          "p50Ms": 0.034323,
+          "p90Ms": 0.044948,
+          "p99Ms": 0.0875,
+          "maxMs": 0.330729
+        },
+        "sleepNs": {
+          "count": 1000,
+          "meanMs": 0.040804757,
+          "p50Ms": 0.037656,
+          "p90Ms": 0.051771,
+          "p99Ms": 0.09974,
+          "maxMs": 0.228958
+        }
+      }
+    }
+  },
+  "binder": {
+    "request": {
+      "stageBeforeKernelNs": {
+        "count": 1000,
+        "meanMs": 0.03672806,
+        "p50Ms": 0.034375,
+        "p90Ms": 0.044375,
+        "p99Ms": 0.092864,
+        "maxMs": 0.645208
+      },
+      "kernelSendToReceiveNs": {
+        "count": 1000,
+        "meanMs": 0.048206662,
+        "p50Ms": 0.040781,
+        "p90Ms": 0.055573,
+        "p99Ms": 0.150312,
+        "maxMs": 2.547084
+      },
+      "kernelToStageAfterNs": {
+        "count": 1000,
+        "meanMs": 0.022057138,
+        "p50Ms": 0.019218,
+        "p90Ms": 0.027864,
+        "p99Ms": 0.04599,
+        "maxMs": 0.703229
+      },
+      "receiverRunningNs": {
+        "count": 1000,
+        "meanMs": 0.003956966,
+        "p50Ms": 0.002604,
+        "p90Ms": 0.004532,
+        "p99Ms": 0.029896,
+        "maxMs": 0.074583
+      },
+      "receiverRunnableNs": {
+        "count": 1000,
+        "meanMs": 0.03479375,
+        "p50Ms": 0.028333,
+        "p90Ms": 0.037656,
+        "p99Ms": 0.137916,
+        "maxMs": 2.535261
+      },
+      "receiverSleepNs": {
+        "count": 1000,
+        "meanMs": 0.009455946,
+        "p50Ms": 0.009219,
+        "p90Ms": 0.012136,
+        "p99Ms": 0.015365,
+        "maxMs": 0.099323
+      },
+      "receiverOtherNs": {
+        "count": 1000,
+        "meanMs": 0.0,
+        "p50Ms": 0.0,
+        "p90Ms": 0.0,
+        "p99Ms": 0.0,
+        "maxMs": 0.0
+      },
+      "receiverUncoveredNs": {
+        "count": 1000,
+        "meanMs": 0.0,
+        "p50Ms": 0.0,
+        "p90Ms": 0.0,
+        "p99Ms": 0.0,
+        "maxMs": 0.0
+      }
+    },
+    "reply": {
+      "stageBeforeKernelNs": {
+        "count": 1000,
+        "meanMs": 0.029942571,
+        "p50Ms": 0.028854,
+        "p90Ms": 0.036979,
+        "p99Ms": 0.076458,
+        "maxMs": 0.176615
+      },
+      "kernelSendToReceiveNs": {
+        "count": 1000,
+        "meanMs": 0.052520057999999994,
+        "p50Ms": 0.04401,
+        "p90Ms": 0.066354,
+        "p99Ms": 0.214323,
+        "maxMs": 0.425156
+      },
+      "kernelToStageAfterNs": {
+        "count": 1000,
+        "meanMs": 0.023115348999999997,
+        "p50Ms": 0.022708,
+        "p90Ms": 0.030417,
+        "p99Ms": 0.043073,
+        "maxMs": 0.111979
+      },
+      "receiverRunningNs": {
+        "count": 1000,
+        "meanMs": 0.004261058,
+        "p50Ms": 0.003177,
+        "p90Ms": 0.005261,
+        "p99Ms": 0.031927,
+        "maxMs": 0.06224
+      },
+      "receiverRunnableNs": {
+        "count": 1000,
+        "meanMs": 0.03977162,
+        "p50Ms": 0.032031,
+        "p90Ms": 0.047761,
+        "p99Ms": 0.197396,
+        "maxMs": 0.410521
+      },
+      "receiverSleepNs": {
+        "count": 1000,
+        "meanMs": 0.00848738,
+        "p50Ms": 0.008334,
+        "p90Ms": 0.010782,
+        "p99Ms": 0.013073,
+        "maxMs": 0.047239
+      },
+      "receiverOtherNs": {
+        "count": 1000,
+        "meanMs": 0.0,
+        "p50Ms": 0.0,
+        "p90Ms": 0.0,
+        "p99Ms": 0.0,
+        "maxMs": 0.0
+      },
+      "receiverUncoveredNs": {
+        "count": 1000,
+        "meanMs": 0.0,
+        "p50Ms": 0.0,
+        "p90Ms": 0.0,
+        "p99Ms": 0.0,
+        "maxMs": 0.0
+      }
+    }
+  },
+  "binderAssociatedPairs": 2000,
+  "uniqueBinderTransactionIds": 2000,
+  "fullyCoveredBinderReceiverWindows": 2000,
+  "slowestBinderWindows": {
+    "request": [
+      {
+        "requestId": 272,
+        "direction": "request",
+        "flowId": 4142,
+        "transactionId": 115555655,
+        "srcPid": 1466,
+        "srcTid": 3397,
+        "dstPid": 3421,
+        "dstTid": 3473,
+        "code": "0x0a Java Layer Dependent",
+        "flags": "0x11 this is a one-way call: async, no return; allow replies with file descriptors; ",
+        "stageBeforeKernelNs": 32239,
+        "kernelSendToReceiveNs": 2547084,
+        "kernelToStageAfterNs": 40520,
+        "receiverRunningNs": 4219,
+        "receiverRunnableNs": 2535261,
+        "receiverSleepNs": 7604,
+        "receiverOtherNs": 0,
+        "receiverUncoveredNs": 0
+      },
+      {
+        "requestId": 128,
+        "direction": "request",
+        "flowId": 3667,
+        "transactionId": 115555085,
+        "srcPid": 1466,
+        "srcTid": 3397,
+        "dstPid": 3421,
+        "dstTid": 3453,
+        "code": "0x0a Java Layer Dependent",
+        "flags": "0x11 this is a one-way call: async, no return; allow replies with file descriptors; ",
+        "stageBeforeKernelNs": 26719,
+        "kernelSendToReceiveNs": 451198,
+        "kernelToStageAfterNs": 29062,
+        "receiverRunningNs": 5105,
+        "receiverRunnableNs": 437500,
+        "receiverSleepNs": 8593,
+        "receiverOtherNs": 0,
+        "receiverUncoveredNs": 0
+      },
+      {
+        "requestId": 134,
+        "direction": "request",
+        "flowId": 3693,
+        "transactionId": 115555125,
+        "srcPid": 1466,
+        "srcTid": 3397,
+        "dstPid": 3421,
+        "dstTid": 3473,
+        "code": "0x0a Java Layer Dependent",
+        "flags": "0x11 this is a one-way call: async, no return; allow replies with file descriptors; ",
+        "stageBeforeKernelNs": 23750,
+        "kernelSendToReceiveNs": 307448,
+        "kernelToStageAfterNs": 24948,
+        "receiverRunningNs": 3541,
+        "receiverRunnableNs": 291667,
+        "receiverSleepNs": 12240,
+        "receiverOtherNs": 0,
+        "receiverUncoveredNs": 0
+      },
+      {
+        "requestId": 290,
+        "direction": "request",
+        "flowId": 4283,
+        "transactionId": 115555837,
+        "srcPid": 1466,
+        "srcTid": 3397,
+        "dstPid": 3421,
+        "dstTid": 3473,
+        "code": "0x0a Java Layer Dependent",
+        "flags": "0x11 this is a one-way call: async, no return; allow replies with file descriptors; ",
+        "stageBeforeKernelNs": 26718,
+        "kernelSendToReceiveNs": 249271,
+        "kernelToStageAfterNs": 26615,
+        "receiverRunningNs": 16927,
+        "receiverRunnableNs": 224167,
+        "receiverSleepNs": 8177,
+        "receiverOtherNs": 0,
+        "receiverUncoveredNs": 0
+      },
+      {
+        "requestId": 226,
+        "direction": "request",
+        "flowId": 3983,
+        "transactionId": 115555482,
+        "srcPid": 1466,
+        "srcTid": 3397,
+        "dstPid": 3421,
+        "dstTid": 3473,
+        "code": "0x0a Java Layer Dependent",
+        "flags": "0x11 this is a one-way call: async, no return; allow replies with file descriptors; ",
+        "stageBeforeKernelNs": 30209,
+        "kernelSendToReceiveNs": 236823,
+        "kernelToStageAfterNs": 26041,
+        "receiverRunningNs": 19063,
+        "receiverRunnableNs": 208385,
+        "receiverSleepNs": 9375,
+        "receiverOtherNs": 0,
+        "receiverUncoveredNs": 0
+      }
+    ],
+    "reply": [
+      {
+        "requestId": 96,
+        "direction": "reply",
+        "flowId": 3577,
+        "transactionId": 115554979,
+        "srcPid": 3421,
+        "srcTid": 3468,
+        "dstPid": 1466,
+        "dstTid": 3362,
+        "code": "0x01 Java Layer Dependent",
+        "flags": "0x11 this is a one-way call: async, no return; allow replies with file descriptors; ",
+        "stageBeforeKernelNs": 30573,
+        "kernelSendToReceiveNs": 425156,
+        "kernelToStageAfterNs": 111979,
+        "receiverRunningNs": 6146,
+        "receiverRunnableNs": 410521,
+        "receiverSleepNs": 8489,
+        "receiverOtherNs": 0,
+        "receiverUncoveredNs": 0
+      },
+      {
+        "requestId": 448,
+        "direction": "reply",
+        "flowId": 4640,
+        "transactionId": 115556214,
+        "srcPid": 3421,
+        "srcTid": 3468,
+        "dstPid": 1466,
+        "dstTid": 3362,
+        "code": "0x01 Java Layer Dependent",
+        "flags": "0x11 this is a one-way call: async, no return; allow replies with file descriptors; ",
+        "stageBeforeKernelNs": 43125,
+        "kernelSendToReceiveNs": 313802,
+        "kernelToStageAfterNs": 44583,
+        "receiverRunningNs": 8021,
+        "receiverRunnableNs": 294427,
+        "receiverSleepNs": 11354,
+        "receiverOtherNs": 0,
+        "receiverUncoveredNs": 0
+      },
+      {
+        "requestId": 106,
+        "direction": "reply",
+        "flowId": 3606,
+        "transactionId": 115555016,
+        "srcPid": 3421,
+        "srcTid": 3468,
+        "dstPid": 1466,
+        "dstTid": 3362,
+        "code": "0x01 Java Layer Dependent",
+        "flags": "0x11 this is a one-way call: async, no return; allow replies with file descriptors; ",
+        "stageBeforeKernelNs": 19428,
+        "kernelSendToReceiveNs": 265000,
+        "kernelToStageAfterNs": 32343,
+        "receiverRunningNs": 4219,
+        "receiverRunnableNs": 255729,
+        "receiverSleepNs": 5052,
+        "receiverOtherNs": 0,
+        "receiverUncoveredNs": 0
+      },
+      {
+        "requestId": 457,
+        "direction": "reply",
+        "flowId": 4660,
+        "transactionId": 115556235,
+        "srcPid": 3421,
+        "srcTid": 3468,
+        "dstPid": 1466,
+        "dstTid": 3362,
+        "code": "0x01 Java Layer Dependent",
+        "flags": "0x11 this is a one-way call: async, no return; allow replies with file descriptors; ",
+        "stageBeforeKernelNs": 33490,
+        "kernelSendToReceiveNs": 262031,
+        "kernelToStageAfterNs": 38854,
+        "receiverRunningNs": 5781,
+        "receiverRunnableNs": 246927,
+        "receiverSleepNs": 9323,
+        "receiverOtherNs": 0,
+        "receiverUncoveredNs": 0
+      },
+      {
+        "requestId": 515,
+        "direction": "reply",
+        "flowId": 4784,
+        "transactionId": 115556361,
+        "srcPid": 3421,
+        "srcTid": 3468,
+        "dstPid": 1466,
+        "dstTid": 3362,
+        "code": "0x01 Java Layer Dependent",
+        "flags": "0x11 this is a one-way call: async, no return; allow replies with file descriptors; ",
+        "stageBeforeKernelNs": 38230,
+        "kernelSendToReceiveNs": 242083,
+        "kernelToStageAfterNs": 36719,
+        "receiverRunningNs": 8073,
+        "receiverRunnableNs": 223125,
+        "receiverSleepNs": 10885,
+        "receiverOtherNs": 0,
+        "receiverUncoveredNs": 0
+      }
+    ]
+  },
+  "slowestTargetWindows": {
+    "server_queue": [
+      {
+        "requestId": 273,
+        "interval": "server_queue",
+        "role": "target_worker",
+        "pid": 3421,
+        "tid": 3468,
+        "startNs": 813350056671464,
+        "endNs": 813350057188443,
+        "wallNs": 516979,
+        "runningNs": 70520,
+        "runnableNs": 327709,
+        "sleepNs": 118750,
+        "uninterruptibleNs": 0,
+        "otherNs": 0,
+        "uncoveredNs": 0,
+        "matchingWakeCount": 1,
+        "matchingWakeNs": 813350056790214,
+        "matchingWakeToRunNs": 137656
+      },
+      {
+        "requestId": 275,
+        "interval": "server_queue",
+        "role": "target_worker",
+        "pid": 3421,
+        "tid": 3468,
+        "startNs": 813350061239380,
+        "endNs": 813350061691828,
+        "wallNs": 452448,
+        "runningNs": 83073,
+        "runnableNs": 330729,
+        "sleepNs": 38646,
+        "uninterruptibleNs": 0,
+        "otherNs": 0,
+        "uncoveredNs": 0,
+        "matchingWakeCount": 1,
+        "matchingWakeNs": 813350061278026,
+        "matchingWakeToRunNs": 229271
+      },
+      {
+        "requestId": 69,
+        "interval": "server_queue",
+        "role": "target_worker",
+        "pid": 3421,
+        "tid": 3468,
+        "startNs": 813349846059172,
+        "endNs": 813349846446620,
+        "wallNs": 387448,
+        "runningNs": 92657,
+        "runnableNs": 195416,
+        "sleepNs": 99375,
+        "uninterruptibleNs": 0,
+        "otherNs": 0,
+        "uncoveredNs": 0,
+        "matchingWakeCount": 1,
+        "matchingWakeNs": 813349846158547,
+        "matchingWakeToRunNs": 28073
+      },
+      {
+        "requestId": 249,
+        "interval": "server_queue",
+        "role": "target_worker",
+        "pid": 3421,
+        "tid": 3468,
+        "startNs": 813350028087505,
+        "endNs": 813350028459068,
+        "wallNs": 371563,
+        "runningNs": 112865,
+        "runnableNs": 177187,
+        "sleepNs": 81511,
+        "uninterruptibleNs": 0,
+        "otherNs": 0,
+        "uncoveredNs": 0,
+        "matchingWakeCount": 1,
+        "matchingWakeNs": 813350028169016,
+        "matchingWakeToRunNs": 25364
+      },
+      {
+        "requestId": 128,
+        "interval": "server_queue",
+        "role": "target_worker",
+        "pid": 3421,
+        "tid": 3468,
+        "startNs": 813349903876307,
+        "endNs": 813349904213286,
+        "wallNs": 336979,
+        "runningNs": 48333,
+        "runnableNs": 247969,
+        "sleepNs": 40677,
+        "uninterruptibleNs": 0,
+        "otherNs": 0,
+        "uncoveredNs": 0,
+        "matchingWakeCount": 1,
+        "matchingWakeNs": 813349903916984,
+        "matchingWakeToRunNs": 247969
+      }
+    ],
+    "client_resume": [
+      {
+        "requestId": 273,
+        "interval": "client_resume",
+        "role": "target_worker",
+        "pid": 1466,
+        "tid": 3397,
+        "startNs": 813350057359276,
+        "endNs": 813350059032609,
+        "wallNs": 1673333,
+        "runningNs": 82031,
+        "runnableNs": 1484375,
+        "sleepNs": 106927,
+        "uninterruptibleNs": 0,
+        "otherNs": 0,
+        "uncoveredNs": 0,
+        "matchingWakeCount": 1,
+        "matchingWakeNs": 813350057466203,
+        "matchingWakeToRunNs": 1484375
+      },
+      {
+        "requestId": 134,
+        "interval": "client_resume",
+        "role": "target_worker",
+        "pid": 1466,
+        "tid": 3397,
+        "startNs": 813349911628859,
+        "endNs": 813349912328651,
+        "wallNs": 699792,
+        "runningNs": 77344,
+        "runnableNs": 528854,
+        "sleepNs": 93594,
+        "uninterruptibleNs": 0,
+        "otherNs": 0,
+        "uncoveredNs": 0,
+        "matchingWakeCount": 1,
+        "matchingWakeNs": 813349911722453,
+        "matchingWakeToRunNs": 528854
+      },
+      {
+        "requestId": 128,
+        "interval": "client_resume",
+        "role": "target_worker",
+        "pid": 1466,
+        "tid": 3397,
+        "startNs": 813349904571203,
+        "endNs": 813349905124849,
+        "wallNs": 553646,
+        "runningNs": 48750,
+        "runnableNs": 75833,
+        "sleepNs": 429063,
+        "uninterruptibleNs": 0,
+        "otherNs": 0,
+        "uncoveredNs": 0,
+        "matchingWakeCount": 1,
+        "matchingWakeNs": 813349905000266,
+        "matchingWakeToRunNs": 75833
+      },
+      {
+        "requestId": 245,
+        "interval": "client_resume",
+        "role": "target_worker",
+        "pid": 1466,
+        "tid": 3397,
+        "startNs": 813350023837818,
+        "endNs": 813350024306359,
+        "wallNs": 468541,
+        "runningNs": 70416,
+        "runnableNs": 198386,
+        "sleepNs": 199739,
+        "uninterruptibleNs": 0,
+        "otherNs": 0,
+        "uncoveredNs": 0,
+        "matchingWakeCount": 1,
+        "matchingWakeNs": 813350024037557,
+        "matchingWakeToRunNs": 198386
+      },
+      {
+        "requestId": 271,
+        "interval": "client_resume",
+        "role": "target_worker",
+        "pid": 1466,
+        "tid": 3397,
+        "startNs": 813350050818391,
+        "endNs": 813350051282245,
+        "wallNs": 463854,
+        "runningNs": 87917,
+        "runnableNs": 285052,
+        "sleepNs": 90885,
+        "uninterruptibleNs": 0,
+        "otherNs": 0,
+        "uncoveredNs": 0,
+        "matchingWakeCount": 1,
+        "matchingWakeNs": 813350050909276,
+        "matchingWakeToRunNs": 56563
+      }
+    ]
+  },
+  "markerCountsByPid": {
+    "1466": 6000
+  },
+  "markerOffsets": {
+    "client_entry": {
+      "count": 1000,
+      "meanMs": 0.20803749900000001,
+      "p50Ms": 0.194896,
+      "p90Ms": 0.261719,
+      "p99Ms": 0.398125,
+      "maxMs": 0.684688
+    },
+    "client_registered": {
+      "count": 1000,
+      "meanMs": 0.018525681000000002,
+      "p50Ms": 0.016615,
+      "p90Ms": 0.023646,
+      "p99Ms": 0.049635,
+      "maxMs": 0.163229
+    },
+    "client_reply": {
+      "count": 1000,
+      "meanMs": 0.025550626,
+      "p50Ms": 0.023646,
+      "p90Ms": 0.032031,
+      "p99Ms": 0.046927,
+      "maxMs": 0.169896
+    },
+    "client_resolved": {
+      "count": 1000,
+      "meanMs": 0.097196654,
+      "p50Ms": 0.089687,
+      "p90Ms": 0.1225,
+      "p99Ms": 0.23151,
+      "maxMs": 0.464271
+    },
+    "client_resume": {
+      "count": 1000,
+      "meanMs": 0.024489424,
+      "p50Ms": 0.02375,
+      "p90Ms": 0.031354,
+      "p99Ms": 0.044635,
+      "maxMs": 0.093802
+    },
+    "client_send": {
+      "count": 1000,
+      "meanMs": 0.009680059,
+      "p50Ms": 0.008489,
+      "p90Ms": 0.012708,
+      "p99Ms": 0.02901,
+      "maxMs": 0.071927
+    }
+  },
+  "overlappingGcSlices": [
+    {
+      "id": "76943",
+      "ts": "813350071385266",
+      "dur": "19427",
+      "name": "JIT compiling void dalvik.system.VMRuntime.setGCFullVIP(boolean) (kind=Optimized) from /apex/com.android.art/javalib/core-libart.jar",
+      "tid": "3308",
+      "pid": "1466"
+    },
+    {
+      "id": "85756",
+      "ts": "813350750032349",
+      "dur": "24555468",
+      "name": "Background concurrent copying GC",
+      "tid": "3449",
+      "pid": "3421"
+    },
+    {
+      "id": "85937",
+      "ts": "813350762354849",
+      "dur": "60104",
+      "name": "Lock contention on GC barrier lock (owner tid: 3449)",
+      "tid": "3470",
+      "pid": "3421"
+    }
+  ],
+  "copyingGcRequestOverlap": [
+    {
+      "sliceId": 85756,
+      "requestIds": [
+        991,
+        992,
+        993,
+        994,
+        995,
+        996,
+        997,
+        998,
+        999,
+        1000,
+        1001,
+        1002,
+        1003,
+        1004,
+        1005,
+        1006,
+        1007,
+        1008,
+        1009,
+        1010,
+        1011,
+        1012,
+        1013,
+        1014,
+        1015
+      ]
+    }
+  ],
+  "references": [
+    "https://github.com/google/perfetto/blob/v58.2/src/trace_processor/importers/ftrace/ftrace_sched_event_tracker.cc#L132",
+    "https://github.com/google/perfetto/blob/v49.0/src/tracing/service/tracing_service_impl.cc#L2899",
+    "https://github.com/google/perfetto/blob/v49.0/src/tracing/service/tracing_service_impl.h#L856",
+    "https://github.com/google/perfetto/blob/v58.2/protos/perfetto/common/trace_stats.proto#L170",
+    "https://developer.android.com/reference/android/os/SystemClock#elapsedRealtimeNanos()"
+  ],
+  "limits": [
+    "Thread Running time is CPU residency, including any unrelated work on that thread; it is not a method profile.",
+    "Source and destination thread breakdowns overlap in wall time and must not be summed.",
+    "Sleep before a target wake can include callback decode/resume or dispatch preparation; it is not all scheduler queue delay.",
+    "Only buffered event ns defines stage boundaries; ATrace offsets are reported separately, never substituted.",
+    "GC-name searches also include JIT names mentioning GC; only actual copying-GC slices are used for request-overlap attribution.",
+    "Diagnostic trace instrumentation changes scheduling/allocation cost; tracing-disabled performance needs its own repeated comparison.",
+    "Process names can be stale after USAP specialization; event PID/TID and Binder flows establish this request scope."
+  ]
+}

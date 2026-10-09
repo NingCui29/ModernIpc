@@ -1,0 +1,13 @@
+case,elapsedMs,details
+mainColdAsync,,"mainTicks=15/300ms result=true discoveryBeforePending=true"
+coldAsyncDeadline,156,"defaultCallTimeoutMs=150 elapsedMs=156 timeout=true pending=0 lateChecked=0"
+flowDiscoveryDeadline,171,"defaultCallTimeoutMs=150 elapsedMs=171 collectorEnded=true timeout=true values=0 pending=0 lateChecked=0"
+cancelDiscovery,1,"elapsedMs=1 callerCancelled=true remoteStillBlockedBeforeRelease=true pending=0 lateChecked=0"
+concurrentSingleFlight,,"callers=16 metadata=1 checked=1 hotCalls=10 additionalDiscovery=0"
+sharedDiscoveryCancelOne,,"waiters=16 cancelled=1 succeeded=15 metadata=1 checked=1 legacy=0 pending=0"
+closeDuringDiscovery,4,"elapsedMs=4 warmedPendingFailed=true discoveryWaiterFailed=true remoteStillBlockedBeforeRelease=true pending=0"
+disposeDuringDiscovery,3,"elapsedMs=3 warmedPendingFailed=true discoveryWaiterFailed=true remoteStillBlockedBeforeRelease=true pending=0"
+lateGeneration,,"generationAdvanced=true freshResolvedBeforeOldRelease=true oldFailed=true metadata=2 checked=1"
+failureRetry,,"firstFailure=true retrySucceeded=true metadata=2 checked=1 legacy=0"
+strictSchemaRejection,,"explicitCompatibilityFailure=true rejectedChecked=0 legacyFallback=0 validSchemaRetry=true"
+boundedSaturation,1,"workerLimit=4 fifthRejected=true elapsedMs=1 retrySucceeded=true recoveryRejections=0 peakBlocked=4"

@@ -1,10 +1,12 @@
 package com.cn.ipc.server
 
 import android.os.IBinder
-import android.os.RemoteException
 import com.cn.ipc.ClientHello
 import com.cn.ipc.IIpcBroker
 import com.cn.ipc.ProtocolInfo
+import com.cn.ipc.ClientServiceSchema
+import com.cn.ipc.ServiceSchema
+import com.cn.ipc.IpcCapabilities
 import java.util.concurrent.atomic.AtomicLong
 
 /**
@@ -21,27 +23,27 @@ class IpcBrokerStub(
 
     // 协议的主次版本号
     private val PROTOCOL_MAJOR = 1
-    private val PROTOCOL_MINOR = 0
+    private val PROTOCOL_MINOR = 1
 
     /**
      * 处理客户端的握手请求，进行协议版本校验和能力协商。
      *
      * @param client 客户端发送的握手信息 [ClientHello]
      * @return 包含服务端协议信息、版本和支持能力的 [ProtocolInfo]
-     * @throws RemoteException 当 ClientHello 为 null 或协议主版本不兼容时抛出
+     * @throws IllegalArgumentException 当 ClientHello 为 null 或协议主版本不兼容时抛出
      */
     override fun handshake(client: ClientHello?): ProtocolInfo {
+        CallerAuthenticator(context).let { it.authorize(it.authenticate(), 0) }
         if (client == null) {
-            throw RemoteException("ClientHello cannot be null")
+            throw IllegalArgumentException("ClientHello cannot be null")
         }
 
         // 1. 验证主版本号兼容性。如果不匹配，则直接拒绝连接
         if (client.protocolMajor != PROTOCOL_MAJOR) {
-            throw RemoteException("Protocol incompatible. Server expects major $PROTOCOL_MAJOR, got ${client.protocolMajor}")
+            throw IllegalArgumentException("Protocol incompatible. Server expects major $PROTOCOL_MAJOR, got ${client.protocolMajor}")
         }
 
-        // 2. (MVP 阶段) 简化的能力协商，默认全部支持客户端所请求的能力
-        val supportedCapabilities = client.requestedCapabilities
+        val supportedCapabilities = client.requestedCapabilities and IpcCapabilities.SUPPORTED
 
         // 3. 生成全局唯一的会话 ID
         val sessionId = sessionCounter.getAndIncrement()
@@ -65,7 +67,7 @@ class IpcBrokerStub(
      * @param serviceId 目标业务服务的唯一标识 ID
      * @param minApiVersion 客户端要求的该服务的最低 API 版本号
      * @return 目标服务的 [IBinder] 对象
-     * @throws RemoteException 当鉴权失败、找不到服务或服务版本过低时抛出
+     * @throws IllegalArgumentException 当鉴权失败、找不到服务或服务版本过低时抛出
      */
     override fun getService(serviceId: Int, minApiVersion: Int): IBinder {
         // M3 阶段: 严谨的鉴权机制集成
@@ -77,13 +79,49 @@ class IpcBrokerStub(
         
         // 从注册表中查找对应的业务服务
         val service = registry.get(serviceId)
-            ?: throw RemoteException("ServiceId $serviceId not found")
+            ?: throw IllegalArgumentException("ServiceId $serviceId not found")
 
         // 检查服务端提供的版本是否满足客户端要求的最低 API 版本
         if (service.apiVersion < minApiVersion) {
-            throw RemoteException("Service version too low. Requested $minApiVersion, available ${service.apiVersion}")
+            throw IllegalArgumentException("Service version too low. Requested $minApiVersion, available ${service.apiVersion}")
+        }
+
+        if (service.minSupportedClientVersion > 1) {
+            throw IllegalArgumentException("Client version cannot be verified by legacy discovery; service $serviceId requires checked schema")
         }
 
         return service.binder
+    }
+
+    override fun getServiceSchema(serviceId: Int): ServiceSchema = schemaFor(authorizedService(serviceId))
+
+    override fun getServiceChecked(serviceId: Int, minApiVersion: Int, clientSchema: ClientServiceSchema?): IBinder {
+        val service = authorizedService(serviceId)
+        val expected = clientSchema ?: throw IllegalArgumentException("Client schema is required")
+        val actual = schemaFor(service)
+        if (actual.apiVersion < minApiVersion || expected.contractVersion < actual.minSupportedClientVersion ||
+            expected.contractVersion > actual.apiVersion) {
+            throw IllegalArgumentException("Client/service version mismatch: client=${expected.contractVersion}, server=${actual.apiVersion}, floor=${actual.minSupportedClientVersion}")
+        }
+        if (expected.descriptor != actual.descriptor) throw IllegalArgumentException("Schema descriptor mismatch")
+        expected.stableMethodSignatures.forEach { (transaction, signature) ->
+            if (actual.methodSignatures[transaction] != signature) {
+                throw IllegalArgumentException("Schema transaction $transaction mismatch or missing")
+            }
+        }
+        return service.binder
+    }
+
+    private fun authorizedService(serviceId: Int): RegisteredService {
+        val authenticator = CallerAuthenticator(context)
+        authenticator.authorize(authenticator.authenticate(), serviceId)
+        return registry.get(serviceId) ?: throw IllegalArgumentException("ServiceId $serviceId not found")
+    }
+
+    private fun schemaFor(service: RegisteredService): ServiceSchema {
+        val provider = service.binder as? IpcServiceSchemaProvider
+            ?: throw IllegalArgumentException("Service ${service.serviceId} has no schema provider")
+        return ServiceSchema(service.serviceId, service.apiVersion, service.minSupportedClientVersion,
+            provider.ipcDescriptor, provider.ipcMethodSignatures)
     }
 }

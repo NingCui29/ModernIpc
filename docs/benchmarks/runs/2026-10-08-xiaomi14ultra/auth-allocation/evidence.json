@@ -1,0 +1,21 @@
+{
+  "device": "925c23bb",
+  "model": "24031PN0DC",
+  "android": "16",
+  "date": "2026-10-08",
+  "start_battery_percent": 46,
+  "start_battery_temperature_c": 32.9,
+  "apk_sha256": {
+    "demo-app": "FCD36F32540CFB9256A19013439A4911C16144873F1AA8D122778EB65CEDAA0D",
+    "app-server": "68D1FB7A1C3B25D13BFBAE000A33D20121E50FE5CCEFBBB4D4D96EAD393B327C",
+    "app-client1": "7B6658706D7655B1368AC152CC56BAD420361323510986DB30AE0CB4B0A73E88"
+  },
+  "source_sha256": {
+    "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/CallerAuthenticator.kt": "e1e07812f4bd160ae626f05e7b7b1fb5ca04f87a54814a5ecf349c93e7ab0ca3",
+    "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/ServerStubGenerator.kt": "b7869819732d0ddfb0b40c993ed965acd0a9726961ab78258771cbe748d1e524",
+    "demo-app/src/main/kotlin/com/cn/ipc/demo/MyBrokerService.kt": "8d8a4f006489557b7c8d73527a2364fd4853128d00641732866a34bba19f26b7",
+    "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcAuthBenchmark.kt": "dba20662b6295333aa1a310fa1c04feeabebd11c9fd8379a2419c05e273b488a",
+    "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcAuthProbe.kt": "dc8d2687c00aa198574d0cc63dfb3003cbd19368814d88be245509647647c583",
+    "demo-app/src/main/kotlin/com/cn/ipc/demo/MainActivity.kt": "2062974c3ed22a4fb84d1483f3d862027e96727edc33e1c8d6431dd276e8136f"
+  }
+}

@@ -1,0 +1,1016 @@
+  UID   PID  PPID NAME                       
+    0     1     0 init
+    0     2     0 [kthreadd]
+    0     3     2 [rcu_gp]
+    0     4     2 [slub_flushwq]
+    0     5     2 [netns]
+    0     9     2 [mm_percpu_wq]
+    0    11     2 [rcu_tasks_kthread]
+    0    12     2 [rcu_tasks_trace_kthread]
+    0    13     2 [ksoftirqd/0]
+    0    14     2 [rcu_preempt]
+    0    15     2 [rcuog/0]
+    0    16     2 [rcuop/0]
+    0    17     2 [rcub/0]
+    0    18     2 [rcu_exp_gp_kthread_worker]
+    0    19     2 [rcu_exp_par_gp_kthread_worker]
+    0    20     2 [migration/0]
+    0    21     2 [idle_inject/0]
+    0    23     2 [cpuhp/0]
+    0    24     2 [cpuhp/1]
+    0    25     2 [idle_inject/1]
+    0    26     2 [migration/1]
+    0    27     2 [ksoftirqd/1]
+    0    30     2 [rcuop/1]
+    0    31     2 [cpuhp/2]
+    0    32     2 [idle_inject/2]
+    0    33     2 [migration/2]
+    0    34     2 [ksoftirqd/2]
+    0    37     2 [rcuop/2]
+    0    38     2 [cpuhp/3]
+    0    39     2 [idle_inject/3]
+    0    40     2 [migration/3]
+    0    41     2 [ksoftirqd/3]
+    0    44     2 [rcuop/3]
+    0    45     2 [cpuhp/4]
+    0    46     2 [idle_inject/4]
+    0    47     2 [migration/4]
+    0    48     2 [ksoftirqd/4]
+    0    51     2 [rcuog/4]
+    0    52     2 [rcuop/4]
+    0    53     2 [cpuhp/5]
+    0    54     2 [idle_inject/5]
+    0    55     2 [migration/5]
+    0    56     2 [ksoftirqd/5]
+    0    59     2 [rcuop/5]
+    0    60     2 [cpuhp/6]
+    0    61     2 [idle_inject/6]
+    0    62     2 [migration/6]
+    0    63     2 [ksoftirqd/6]
+    0    66     2 [rcuop/6]
+    0    67     2 [cpuhp/7]
+    0    68     2 [idle_inject/7]
+    0    69     2 [migration/7]
+    0    70     2 [ksoftirqd/7]
+    0    73     2 [rcuop/7]
+    0    74     2 [inet_frag_wq]
+    0    75     2 [kauditd]
+    0    76     2 [khungtaskd]
+    0    77     2 [oom_reaper]
+    0    78     2 [writeback]
+    0    79     2 [kcompactd0]
+    0    81     2 [kblockd]
+    0    82     2 [blkcg_punt_bio]
+    0    83     2 [edac-poller]
+    0    84     2 [devfreq_wq]
+    0    85     2 [watchdogd]
+    0    89     2 [kswapd0]
+    0    93     2 [erofs_worker/0]
+    0    94     2 [erofs_worker/1]
+    0    95     2 [erofs_worker/2]
+    0    96     2 [erofs_worker/3]
+    0    97     2 [erofs_worker/4]
+    0    98     2 [erofs_worker/5]
+    0    99     2 [erofs_worker/6]
+    0   100     2 [erofs_worker/7]
+    0   101     2 [kthrotld]
+    0   103     2 [dmabuf-deferred-free-worker]
+    0   104     2 [nvme-wq]
+    0   105     2 [nvme-reset-wq]
+    0   106     2 [nvme-delete-wq]
+    0   107     2 [uas]
+    0   108     2 [dm_bufio_cache]
+    0   109     2 [hwrng]
+    0   110     2 [irq/16-gh_msgq_rx]
+    0   111     2 [mld]
+    0   112     2 [ipv6_addrconf]
+    0   126     2 [miev_workqueue]
+    0   129     2 [kshrink_slabd]
+    0   147     2 [fboost_thread]
+    0   164     2 [qcom,system-pool-refill-thread]
+    0   165     2 [reserve-refill]
+    0   175     2 [mitee_msgq_recv_task]
+    0   176     2 [mitee_worker/0]
+    0   177     2 [qrtr_ns]
+    0   186     2 [gh-watchdog]
+    0   187     2 [mem_buf_trusted_vm_rcvr]
+    0   188     2 [irq/32-qcom,qmp-tme]
+    0   190     2 [irq/34-c228000.tsens0]
+    0   191     2 [irq/35-c228000.tsens0]
+    0   192     2 [irq/36-c229000.tsens1]
+    0   193     2 [irq/37-c229000.tsens1]
+    0   194     2 [irq/38-c22a000.tsens2]
+    0   195     2 [irq/39-c22a000.tsens2]
+    0   217     2 [irq/40-bcl-lvl0]
+    0   218     2 [irq/41-bcl-lvl1]
+    0   219     2 [irq/42-bcl-lvl2]
+    0   221     2 [irq/43-bcl-lvl0]
+    0   223     2 [irq/44-bcl-lvl1]
+    0   224     2 [irq/45-bcl-lvl2]
+    0   225     2 [irq/46-dcvsh-irq-0]
+    0   234     2 [irq/48-dcvsh-irq-2]
+    0   243     2 [irq/49-dcvsh-irq-5]
+    0   244     2 [irq/50-dcvsh-irq-7]
+    0   253     2 [halt_drain_rqs]
+    0   255     2 [core_ctl]
+    0   256     2 [msm_perf:events_notify]
+    0   262     2 [irq/83-arm-smmu-context-fault]
+    0   263     2 [scsi_eh_0]
+    0   264     2 [scsi_tmf_0]
+    0   265     2 [qc_ufs_qos_swq]
+    0   266     2 [ufs_eh_wq_0]
+    0   267     2 [ufs_clk_gating_]
+    0   268     2 [irq/84-arm-smmu-context-fault]
+    0   271     2 [irq/85-arm-smmu-context-fault]
+    0   273     2 [f2fs_ckpt-259:5]
+    0   274     2 [f2fs_flush-259:5]
+    0   275     2 [f2fs_discard-259:5]
+    0   276     2 [f2fs_gc-259:5]
+    0   277     2 [kdmflush/254:0]
+    0   278     2 [kdmflush/254:1]
+    0   279     2 [kdmflush/254:2]
+    0   280     2 [kdmflush/254:3]
+    0   281     2 [kdmflush/254:4]
+    0   282     2 [kdmflush/254:5]
+    0   283     2 [kdmflush/254:6]
+    0   284     2 [kdmflush/254:7]
+    0   285     2 [kdmflush/254:8]
+    0   286     2 [kdmflush/254:9]
+    0   287     2 [kdmflush/254:10]
+    0   288     2 [kverityd]
+    0   289     2 [kdmflush/254:11]
+    0   290     2 [kverityd]
+    0   291     2 [kdmflush/254:12]
+    0   292     2 [kverityd]
+    0   294     2 [kdmflush/254:13]
+    0   295     2 [kverityd]
+    0   296     2 [kdmflush/254:14]
+    0   297     2 [kverityd]
+    0   298     2 [kdmflush/254:15]
+    0   299     2 [kverityd]
+    0   300     2 [kdmflush/254:16]
+    0   301     2 [kverityd]
+    0   302     2 [kdmflush/254:17]
+    0   303     2 [kverityd]
+    0   309     1 init
+    0   310     1 ueventd
+    0   358     2 [kdmflush/254:18]
+    0   361     2 [kdmflush/254:21]
+    0   363     2 [kdmflush/254:23]
+    0   364     2 [kdmflush/254:24]
+    0   365     2 [kdmflush/254:25]
+    0   366     2 [kdmflush/254:26]
+    0   367     2 [kdmflush/254:27]
+    0   368     2 [kdmflush/254:28]
+    0   369     2 [kdmflush/254:29]
+    0   373     2 [kdmflush/254:33]
+    0   374     2 [kdmflush/254:34]
+    0   376     2 [kdmflush/254:36]
+    0   379     2 [kdmflush/254:39]
+    0   380     2 [kdmflush/254:40]
+    0   381     2 [kdmflush/254:41]
+    0   382     2 [kdmflush/254:42]
+    0   384     2 [kdmflush/254:44]
+    0   387     2 [kdmflush/254:47]
+    0   388     2 [kdmflush/254:48]
+    0   391     2 [kdmflush/254:51]
+    0   392     2 [kdmflush/254:52]
+    0   393     2 [kdmflush/254:53]
+    0   400     2 [ext4-rsv-conver]
+    0   401     2 [ext4-rsv-conver]
+    0   402     2 [ext4-rsv-conver]
+    0   403     2 [ext4-rsv-conver]
+10125   479  1620 com.android.incallui
+10151   504  1620 com.miui.carlink
+    0   540     2 [krfcommd]
+ 1092   542     1 prng_seeder
+10345   560  1620 com.newcall
+ 1013   571     1 audioadsprpcd
+    0   633     2 [lb:g_manager]
+    0   647     2 [pmic_glink_rx]
+    0   648     2 [mpcie_wq]
+    0   649     2 [irq/194-int_global_int]
+    0   650     2 [irq/200-int_global_int]
+    0   651     2 [pdr_notifier_wq]
+    0   659     2 [pmic_glink_rx]
+    0   702     2 [irq/208-gpio_jingshang]
+    0   703     2 [memlat_wq]
+    0   704     2 [irq/209-qcom,smp2p-adsp]
+    0   705     2 [cdsprm-wq]
+    0   706     2 [irq/210-qcom,smp2p-cdsp]
+    0   707     2 [cdsprm-wq-delay]
+    0   727     2 [irq/87-arm-smmu-context-fault]
+    0   745     2 [irq/211-qcom,smp2p-modem]
+    0   761     2 [adspsleepmon-worker]
+    0   762     2 [irq/212-fifo-empty]
+    0   763     2 [irq/215-q6v5 wdog]
+    0   807     2 [cpucp_wq]
+10156   828  1620 com.miui.guardprovider:ai
+    0   916     2 [khvcd]
+    0   917     2 [irq/218-regulator-ocp]
+    0   918     2 [bwmon_wq]
+    0   919     2 [irq/220-240b7400.qcom,bwmon-llcc]
+    0   920     2 [irq/222-xiaomi_wifi_gpio]
+    0   921     2 [irq/88-arm-smmu-context-fault]
+    0   922     2 [irq/227-regulator-alarm]
+    0   923     2 [irq/228-ispv4_pmic_err_irq]
+    0   924     2 [irq/229-ispv4_pmic_pwr_gd]
+    0   925     2 [irq/231-24091000.qcom,bwmon-ddr]
+    0   926     2 [pdr_notifier_wq]
+    0   927     2 [pdr_notifier_wq]
+    0   928     2 [irq/239-ispv4_wdt_irq]
+    0   929     2 [irq/242-pwr_event_irq]
+    0   930     2 [irq/89-arm-smmu-context-fault]
+    0   931     2 [irq/240-ispv4_pmu_irq]
+    0   932     2 [smcinvoke_shmbridge_postprocess]
+    0   933     2 [smcinvoke_object_postprocess]
+    0   934     2 [smcinvoke_adci_thread]
+    0   936     2 [irq/243-dp_hs_phy_irq]
+    0   937     2 [g_reclaim_thread]
+    0   943     2 [irq/244-dm_hs_phy_irq]
+    0   944     2 [irq/245-q6v5 wdog]
+    0   945     2 [irq/248-ss_phy_irq]
+    0   947     2 [irq/90-arm-smmu-context-fault]
+    0   948     2 [powersave_wq]
+    0   949     2 [irq/253-flash_all_ramp_up]
+    0   950     2 [irq/260-q6v5 wdog]
+    0   951     2 [irq/254-flash_all_ramp_down]
+    0   952     2 [irq/261-generic-irq]
+    0   953     2 [screen_state_wq]
+    0   954     2 [irq/255-flash_fault]
+    0   955     2 [shm_svc]
+    0   958     2 [irq/268-wcd-usbss-sdam]
+    0   959     2 [irq/91-arm-smmu-context-fault]
+    0   960     2 [screen_state_wq]
+    0   961     2 [irq/270-pmic_pwrkey]
+    0   965     2 [spi2]
+    0   967     2 [Surge kthread]
+    0   968     2 [migt_thread]
+    0   969     2 [irq/92-arm-smmu-context-fault]
+    0   970     2 [minet_thread]
+    0   973     2 [irq/271-pm8010m-temp-alarm]
+    0   974     2 [uaudio_svc]
+    0   975     2 [irq/93-arm-smmu-context-fault]
+    0   976     2 [irq/94-arm-smmu-context-fault]
+    0   978     2 [pdr_notifier_wq]
+    0   979     2 [irq/298-pmic_resin]
+    0   980     2 [ngd_master]
+    0   991     2 [spi3]
+    0   992     2 [mi_mempool]
+    0   994     2 [irq/95-arm-smmu-context-fault]
+    0   997     2 [irq/96-arm-smmu-context-fault]
+    0   998     2 [irq/299-pm8010n-temp-alarm]
+    0   999     2 [irq/97-arm-smmu-context-fault]
+    0  1000     2 [kgsl-workqueue]
+    0  1001     2 [irq/310-pmic_pwrkey_resin_bark]
+    0  1002     2 [minet_thread]
+    0  1003     2 [irq/98-arm-smmu-context-fault]
+    0  1004     2 [kgsl-lockless-w]
+    0  1005     2 [qcrypto_seq_res]
+    0  1006     2 [spi4]
+    0  1007     2 [irq/309-pmr735d-temp-alarm]
+    0  1008     2 [irq/99-arm-smmu-context-fault]
+    0  1009     2 [irq/312-st_tof_sensor]
+    0  1010     2 [load_fw_wq]
+    0  1011     2 [CAM_SCHED:read_event]
+    0  1012     2 [irq/313-pmic_pwrkey_bark]
+    0  1013     2 [k_ipa_usb]
+    0  1014     2 [cs35l43_mbox]
+    0  1015     2 [cs35l43_err]
+    0  1016     2 [irq/314-cs35l43]
+    0  1018     2 [irq/100-arm-smmu-context-fault]
+    0  1020     2 [spi5]
+    0  1021     2 [cfg80211]
+    0  1026     2 [irq/57-arm-smmu-context-fault]
+ 1036  1027     1 logd
+    0  1028     2 [irq/101-arm-smmu-context-fault]
+    0  1030     2 [irq/102-arm-smmu-context-fault]
+    0  1033     2 [ipa_power_mgmt]
+    0  1034     2 [transport_power]
+    0  1035     2 [page_recycle_st]
+    0  1036     2 [irq/58-arm-smmu-context-fault]
+    0  1039     2 [irq/59-arm-smmu-context-fault]
+    0  1050     2 [irq/25-arm-smmu-context-fault]
+    0  1053     2 [irq/60-arm-smmu-context-fault]
+    0  1056     2 [cs35l43_mbox]
+    0  1057     2 [irq/103-arm-smmu-context-fault]
+    0  1058     2 [irq/26-arm-smmu-context-fault]
+    0  1061     2 [irq/104-arm-smmu-context-fault]
+    0  1062     2 [ipa_pm_activate]
+    0  1063     2 [kgsl-events]
+    0  1065     2 [pm_workq]
+    0  1066     2 [irq/105-arm-smmu-context-fault]
+    0  1067     2 [cs35l43_err]
+    0  1068     2 [irq/106-arm-smmu-context-fault]
+    0  1069     2 [batch_workq]
+    0  1070     2 [irq/328-msm-vidc]
+    0  1071     2 [rmnet_ctlwq]
+ 1069  1073     1 lmkd
+    0  1074     2 [rmnet_llwq]
+    0  1077     2 [irq/107-arm-smmu-context-fault]
+    0  1078     2 [irq/317-cs35l43]
+    0  1083     2 [irq/108-arm-smmu-context-fault]
+    0  1084     2 [byte-cntr]
+    0  1085     2 [irq/109-arm-smmu-context-fault]
+    0  1087     2 [irq/110-arm-smmu-context-fault]
+    0  1088     2 [irq/111-arm-smmu-context-fault]
+    0  1089     2 [kgsl_devfreq_wq]
+    0  1093     2 [irq/112-arm-smmu-context-fault]
+    0  1094     2 [irq/113-arm-smmu-context-fault]
+    0  1095     2 [irq/114-arm-smmu-context-fault]
+    0  1096     2 [irq/115-arm-smmu-context-fault]
+    0  1097     2 [irq/116-arm-smmu-context-fault]
+    0  1098     2 [irq/117-arm-smmu-context-fault]
+    0  1099     2 [kgsl_hwsched]
+    0  1100     2 [irq/118-arm-smmu-context-fault]
+    0  1104     2 [irq/119-arm-smmu-context-fault]
+ 1000  1105     1 servicemanager
+ 1000  1106     1 hwservicemanager
+ 1000  1107     1 vndservicemanager
+    0  1111     2 [irq/120-arm-smmu-context-fault]
+    0  1112     2 [irq/332-bhi]
+    0  1123     2 [psimon]
+ 1000  1130     1 android.hardware.security.keymint-service-qti
+ 1000  1132     1 qseecomd
+ 1000  1133     1 vendor.qti.hardware.qseecom@1.0-service
+    0  1135     1 vold
+    0  1141     2 [kdmflush/254:55]
+    0  1142     2 [jbd2/sdf7-8]
+    0  1143     2 [ext4-rsv-conver]
+    0  1147     2 [jbd2/sde10-8]
+    0  1148     2 [ext4-rsv-conver]
+    0  1152     2 [jbd2/sda29-8]
+    0  1153     2 [ext4-rsv-conver]
+    0  1154     2 [jbd2/sda32-8]
+    0  1155     2 [ext4-rsv-conver]
+    0  1156     2 [jbd2/sda34-8]
+    0  1157     2 [ext4-rsv-conver]
+    0  1159     1 vendor.qti.qvirt-service_rs
+    0  1166     1 qcrosvm
+    0  1224     2 [irq/86-arm-smmu-context-fault]
+    0  1225     2 [irq/121-arm-smmu-context-fault]
+    0  1226     2 [irq/122-arm-smmu-context-fault]
+    0  1227     2 [irq/123-arm-smmu-context-fault]
+    0  1228     2 [irq/124-arm-smmu-context-fault]
+    0  1229     2 [irq/125-arm-smmu-context-fault]
+    0  1230     2 [irq/301-pm8550-temp-alarm]
+    0  1231     2 [irq/364-msm_cvp]
+    0  1232     2 [msm_cvp_workerq]
+    0  1233     2 [pm_workerq_iris]
+    0  1234     2 [irq/126-arm-smmu-context-fault]
+    0  1235     2 [irq/302-pm8550b-temp-alarm]
+    0  1236     2 [irq/127-arm-smmu-context-fault]
+    0  1237     2 [irq/303-pm8550b-temp-alarm-lite]
+    0  1238     2 [irq/128-arm-smmu-context-fault]
+    0  1239     2 [cvp-dsp-thread]
+    0  1240     2 [dsi_post_cmd_tx]
+    0  1241     2 [irq/304-pm8550ve-temp-alarm]
+    0  1242     2 [cam-cpas]
+    0  1243     2 [qcom,cam_virtua]
+    0  1244     2 [rt-cdm0_0]
+    0  1245     2 [rt-cdm0_1]
+    0  1246     2 [rt-cdm0_2]
+    0  1247     2 [rt-cdm0_3]
+    0  1248     2 [irq/305-pm8550vs-c-temp-alarm]
+    0  1249     2 [rt-cdm1_0]
+    0  1250     2 [rt-cdm1_1]
+    0  1251     2 [rt-cdm1_2]
+    0  1252     2 [rt-cdm1_3]
+    0  1253     2 [rt-cdm2_0]
+    0  1254     2 [rt-cdm2_1]
+    0  1255     2 [rt-cdm2_2]
+    0  1256     2 [cds_recovery_wo]
+    0  1257     2 [rt-cdm2_3]
+    0  1258     2 [wlan_logging_thread]
+    0  1259     2 [irq/306-pm8550vs-d-temp-alarm]
+    0  1260     2 [rt-cdm3_0]
+    0  1261     2 [rt-cdm3_1]
+    0  1262     2 [rt-cdm3_2]
+    0  1263     2 [rt-cdm3_3]
+    0  1265     2 [rt-cdm4_0]
+    0  1266     2 [irq/307-pm8550vs-e-temp-alarm]
+    0  1267     2 [rt-cdm4_1]
+    0  1268     2 [rt-cdm4_2]
+    0  1269     2 [rt-cdm4_3]
+    0  1270     2 [irq/308-pm8550vs-g-temp-alarm]
+    0  1271     2 [cam_cci_wq]
+    0  1272     2 [cam_cci_wq]
+    0  1273     2 [cam_cci_wq]
+    0  1274     2 [cam_cci_wq]
+    0  1275     2 [cam_cci_wq]
+    0  1276     2 [cam_cci_wq]
+    0  1277     2 [drm_dp]
+    0  1278     2 [disp_feature:0]
+    0  1279     2 [disp_lhbm_fod:0]
+    0  1284     2 [irq/366-esd_err_irq]
+    0  1286     2 [sdm_dp_audio_no]
+    0  1287     2 [hdcp_1x_1]
+    0  1288     2 [hdcp_2x]
+    0  1289     2 [dp_hdcp2p2]
+    0  1290     2 [crtc_commit:203]
+    0  1291     2 [crtc_event:203]
+    0  1292     2 [crtc_commit:267]
+    0  1293     2 [crtc_event:267]
+    0  1294     2 [crtc_commit:276]
+    0  1295     2 [crtc_event:276]
+    0  1296     2 [crtc_commit:285]
+    0  1297     2 [crtc_event:285]
+    0  1298     2 [crtc_commit:294]
+    0  1299     2 [crtc_event:294]
+    0  1300     2 [crtc_commit:303]
+    0  1301     2 [crtc_event:303]
+    0  1302     2 [pp_event]
+    0  1303     2 [card0-crtc0]
+    0  1304     2 [card0-crtc1]
+    0  1305     2 [card0-crtc2]
+    0  1306     2 [card0-crtc3]
+    0  1307     2 [card0-crtc4]
+    0  1308     2 [card0-crtc5]
+    0  1316     1 hypsys_system
+ 1000  1318     1 android.system.suspend-service
+ 1017  1319     1 keystore2
+    0  1320     1 android.hardware.boot-service.qti
+ 1000  1321     1 android.hardware.secure_element-service.qti
+ 1000  1324     1 sscrpcd
+ 2910  1333     1 android.hardware.security.keymint-service.strongbox-nxp
+ 1000  1354     1 hypsys_vendor
+    0  1372     2 [irq/379-xiaomi_tpsynaptics_tcm]
+    0  1374     2 [ipa_interrupt_w]
+    0  1375     2 [ipawq36]
+    0  1376     2 [iparepwq36]
+    0  1377     2 [ipawq33]
+    0  1378     2 [iparepwq33]
+    0  1379     2 [ipafreepagewq33]
+    0  1380     2 [ipawq32]
+    0  1381     2 [iparepwq32]
+    0  1382     2 [ipa_uc_holb_wq]
+    0  1383     2 [ipa_usb_wq]
+    0  1384     2 [clnt_req]
+    0  1386     2 [irq/405-gh_dbl_rx_6]
+    0  1404     2 [syna_reflash]
+    0  1415     2 [f2fs_ckpt-254:55]
+    0  1416     2 [f2fs_flush-254:55]
+    0  1417     2 [f2fs_discard-254:55]
+    0  1421     2 [f2fs_gc-254:55]
+ 1058  1440     1 tombstoned
+    0  1485     2 [kverityd]
+    0  1486     2 [ext4-rsv-conver]
+    0  1487     2 [ext4-rsv-conver]
+    0  1488     2 [ext4-rsv-conver]
+    0  1489     2 [ext4-rsv-conver]
+    0  1490     2 [ext4-rsv-conver]
+    0  1491     2 [ext4-rsv-conver]
+    0  1492     2 [ext4-rsv-conver]
+    0  1493     2 [ext4-rsv-conver]
+    0  1494     2 [ext4-rsv-conver]
+    0  1495     2 [ext4-rsv-conver]
+    0  1496     2 [kverityd]
+    0  1497     2 [kverityd]
+    0  1498     2 [kverityd]
+    0  1499     2 [kverityd]
+    0  1500     2 [ext4-rsv-conver]
+    0  1501     2 [ext4-rsv-conver]
+    0  1502     2 [ext4-rsv-conver]
+    0  1503     2 [ext4-rsv-conver]
+    0  1504     2 [ext4-rsv-conver]
+    0  1505     2 [ext4-rsv-conver]
+    0  1506     2 [kverityd]
+    0  1507     2 [kverityd]
+    0  1508     2 [kverityd]
+    0  1509     2 [kverityd]
+    0  1510     2 [kverityd]
+    0  1511     2 [kverityd]
+    0  1512     2 [kverityd]
+    0  1513     2 [kverityd]
+    0  1514     2 [kverityd]
+    0  1515     2 [kverityd]
+    0  1516     2 [kverityd]
+    0  1517     2 [kverityd]
+    0  1518     2 [kverityd]
+    0  1519     2 [kverityd]
+    0  1520     2 [kverityd]
+    0  1521     2 [kverityd]
+    0  1522     2 [ext4-rsv-conver]
+    0  1523     2 [kverityd]
+    0  1525     2 [ext4-rsv-conver]
+    0  1526     2 [ext4-rsv-conver]
+    0  1527     2 [ext4-rsv-conver]
+    0  1528     2 [ext4-rsv-conver]
+    0  1529     2 [ext4-rsv-conver]
+    0  1531     2 [ext4-rsv-conver]
+    0  1532     2 [ext4-rsv-conver]
+    0  1533     2 [ext4-rsv-conver]
+    0  1534     2 [ext4-rsv-conver]
+    0  1535     2 [ext4-rsv-conver]
+    0  1536     2 [ext4-rsv-conver]
+    0  1538     2 [ext4-rsv-conver]
+    0  1540     2 [ext4-rsv-conver]
+    0  1541     2 [ext4-rsv-conver]
+    0  1542     2 [ext4-rsv-conver]
+    0  1543     2 [ext4-rsv-conver]
+    0  1544     2 [ext4-rsv-conver]
+    0  1545     2 [ext4-rsv-conver]
+    0  1546     2 [ext4-rsv-conver]
+ 1000  1575     1 time_daemon
+    0  1578     1 vendor.xiaomi.hardware.mimd2-service
+    0  1613     2 [kdmflush/254:56]
+    0  1614     2 [kdmflush/254:57]
+    0  1615     2 [kverityd]
+    0  1617     1 netd
+ 1066  1619     1 statsd
+    0  1620     1 zygote64
+    0  1622     2 [at_usb0]
+    0  1623     2 [at_usb1]
+    0  1624     2 [at_usb2]
+    0  1625     2 [qdss]
+    0  1626     2 [qdss_mdm]
+    0  1627     2 [qdss_sw]
+    0  1669     1 zygote
+    0  1670     1 tee-supplicant
+ 1000  1710     1 pd-mapper
+ 1000  1723     1 ssgtzd
+ 1000  1725     1 diag-router
+ 1000  1726     1 android.hidl.allocator@1.0-service
+ 1000  1728     1 qccsyshal@1.2-service
+    0  1730     2 [glink_adsp]
+ 1041  1731     1 android.hardware.audio.service_64
+ 1002  1732     1 android.hardware.bluetooth@1.1-service-qti
+ 1013  1733     1 android.hardware.drm-service.clearkey
+ 1000  1734     1 android.hardware.health-service.qti
+ 1000  1735     1 android.hardware.ir-service.example
+ 1046  1736     1 android.hardware.media.c2@1.0-service
+ 1000  1737     1 android.hardware.power-service
+ 1000  1738     1 android.hardware.sensors-service.multihal
+    0  1739     1 android.hardware.thermal-service.qti
+    0  1751     2 [glink_cdsp]
+ 1000  1753     1 android.hardware.usb-service.qti
+ 1000  1758     1 android.hardware.usb.gadget-service.qti
+ 1010  1761     1 android.hardware.wifi-service
+ 1013  1762     1 android.hardware.cas-service.example
+    0  1763     2 [irq/408-gh_dbl_rx_5]
+ 9999  1765     1 vendor.qti.hardware.memtrack-service
+    0  1766     2 [irq/411-gh_dbl_rx_8]
+    0  1767     2 [vm49_vcpu_wq]
+    0  1770     2 [qrtr_rx]
+ 1000  1771     1 poweropt-service
+ 1046  1774     1 qconfigservice
+ 1000  1776     1 qesdk-manager
+ 1000  1780     1 qesdk-secmanager
+ 1013  1781     1 vendor.dolby.hardware.dms@2.0-service
+ 1046  1782     1 vendor.dolby.media.c2@1.0-service
+ 1000  1783     1 vendor.qti.hardware.capabilityconfigstore@1.0-service
+ 1000  1784     1 vendor.qti.hardware.display.allocator-service
+ 1000  1785     1 vendor.qti.hardware.display.composer-service
+ 1000  1787     1 dspservice
+ 1000  1788     1 vendor.qti.hardware.lights.service
+    0  1799     1 vendor.qti.hardware.limits@1.2-service
+    0  1851     1 vendor.qti.hardware.perf2-hal-service
+ 1000  1853     1 vendor.qti.hardware.secureprocessor
+ 1000  1855     1 vendor.qti.hardware.secureprocessor@1.0
+ 1000  1856     1 vendor.qti.hardware.sensorscalibrate-service
+ 1000  1857     1 vendor.qti.hardware.servicetrackeraidl-service
+ 1000  1860     1 vendor.qti.hardware.trustedui-aidl-service-qti
+ 1046  1872     1 media.hwcodec
+ 1046  1875     1 media.audio.qc.codec
+ 1000  1876     1 vendor.qti.memory.pasrmanager-service
+ 1000  1878     1 vendor.qti.qspa-service
+ 1000  1880     1 vendor.qti.qspmhal-service
+    0  1881     2 [gmu_f2h]
+ 1000  1884     1 vendor.qti.sla.service@1.0-service
+ 1000  1886     1 vendor.rongcard.eid@1.0-service
+    0  1887     1 vendor.xiaomi.hardware.batteryantiaging-service
+    0  1888     1 vendor.xiaomi.hardware.cld_aidl-service
+ 1000  1890     1 vendor.xiaomi.hardware.displayfeature_aidl-service
+    0  1891     1 vendor.xiaomi.hardware.fbo-service
+ 1000  1894     1 vendor.xiaomi.hardware.micharge-service
+    0  1895     1 vendor.xiaomi.hardware.miperf2-service
+ 1000  1896     1 vendor.xiaomi.hardware.mitrustedui-service
+    0  1897     1 vendor.xiaomi.hardware.swap-service
+ 1046  1901     1 vendor.xiaomi.hardware.videoservice-service
+    0  1903     1 vendor.xiaomi.hidl.minet@1.0-service
+ 1000  1912     1 vendor.xiaomi.hidl.miwill@1.0-service
+ 1001  1913     1 vendor.xiaomi.modem.qms@1.0-service
+ 1046  1914     1 vppservice
+ 1021  1915     1 android.hardware.gnss-aidl-service-qti
+ 2911  1917     1 android.hardware.weaver-service.nxp-qti
+ 1000  1920     1 mrmd
+ 1027  1925     1 android.hardware.nqnfc-service.nxp
+ 1047  1927     1 vendor.qti.camera.provider-service_64
+    0  1928     1 mtd
+ 1000  1933     1 tidad
+ 1000  1936     1 fidoca
+ 1000  1939     1 vendor.xiaomi.hardware.mikeybag-service
+ 1000  1941     1 mlipayd
+    0  1944     1 vendor.xiaomi.hardware.otrpagent@2.0-service
+ 1000  1958     1 vendor.xiaomi.hardware.vibratorfeature.service
+ 1000  1961     1 vsimd
+ 1000  1962     1 vendor.xiaomi.hw.touchfeature-service
+ 1013  1977     1 android.hardware.drm-service.widevine
+ 1000  2006     1 pm-service
+ 1041  2011     1 audioserver
+ 1076  2023     1 credstore
+ 1072  2024     1 gpuservice
+ 1000  2036     1 surfaceflinger
+ 1000  2053     1 qsap_sensors
+10396  2075  1620 com.cn.ipc.demo
+ 9999  2076     1 rmt_storage
+ 2903  2077     1 tftp_server
+ 1000  2078     1 sensors.qti
+    0  2118     2 [irq/412-glink-native-cdsp]
+    0  2120     2 [qrtr_rx]
+99910129 2197 1620 com.google.android.gms.unstable
+10129  2414  1620 com.google.android.gms.unstable
+    0  2437     2 [irq/413-glink-native-adsp]
+    0  2438     2 [qrtr_rx]
+    0  2439     2 [pdr_notifier_wq]
+    0  2443     2 [irq/129-arm-smmu-context-fault]
+    0  2445     2 [irq/414-swr_master_irq]
+    0  2446     2 [irq/415-swr_master_irq]
+    0  2473     2 [irq/427-swr_wake_irq]
+ 1000  2487  1620 system_server
+    0  2549     1 mi_thermald
+    0  2551     1 mi_ambient
+    0  2646     2 [kdmflush/254:58]
+ 1000  2647     1 qwesd
+    0  2662     2 [f2fs_ckpt-254:58]
+    0  2663     2 [f2fs_flush-254:58]
+    0  2664     2 [f2fs_discard-254:58]
+    0  2665     2 [f2fs_gc-254:58]
+ 1000  2678     1 subsystem_ramdump
+ 1000  2680     1 pm-proxy
+ 1019  2688     1 drmserver64
+ 9999  2705     1 traced_probes
+ 9999  2707     1 traced
+    0  2712     2 [glink_modem]
+ 1000  2714     1 iorapd
+ 1000  2723     1 tcmd
+ 1000  2727     1 android.hardware.gatekeeper-service-qti
+ 1000  2730     1 dpmQmiMgr
+ 1001  2736     1 qcrilNrd
+ 1001  2744     1 qcrilNrd
+ 1001  2748     1 qmipriod
+ 1001  2760     1 shsusrd
+ 1000  2765     1 vendor.dpmd
+ 1047  2774     1 cameraserver
+ 1067  2783     1 incidentd
+    0  2785     1 installd
+ 1040  2787     1 media.extractor
+ 1013  2790     1 media.metrics
+10421  2791  1620 com.cn.ipc.server.app
+ 1013  2793     1 mediaserver64
+    0  2795     1 storaged
+ 1010  2796     1 wificond
+    0  2797     1 misight
+    0  2800     1 fdpp
+    0  2801     1 shelld
+    0  2803     1 qadaemon
+    0  2806     1 miuibooster
+ 1000  2808     1 perfservice
+ 1000  2814     1 wfdhdcphalservice
+ 1000  2815     1 cnd
+ 1000  2819     1 wifidisplayhalservice
+ 1001  2820     1 qsap_dcfd
+ 1001  2835     1 imsdaemon
+ 1001  2836     1 ipacm-diag
+ 1001  2840     1 ipacm
+    0  2842     1 minetd
+ 1001  2850     1 nicmd
+ 1001  2852     1 port-bridge
+99910312 2857 1620 com.tencent.mm:push
+ 1001  2892     1 qms
+ 1001  2933     1 tlpd
+ 1000  2934     1 qsap_qapeservice
+ 1000  2954     1 adsprpcd
+ 1001  2955  2892 qsap_qms_1
+ 1001  2957  2892 qsap_qms_2
+ 1000  2959     1 cdsprpcd
+ 1000  2960     1 wfdvndservice
+ 1000  2971     1 vendor.xiaomi.hardware.cstransfer-service
+    0  2985     1 toucheventcheck
+    0  2991     2 [kworker/0:0]
+    0  2997     2 [kworker/0:2]
+ 1046  3000     1 media.swcodec
+ 1001  3028  2933 tlpd
+ 1000  3042     1 cnss-daemon
+ 1001  3044     1 ssgqmigd
+ 1021  3047     1 mlid
+ 1021  3048     1 loc_launcher
+ 1021  3058  3048 lowi-server
+ 1021  3059  3048 xtra-daemon
+ 1000  3072     1 ATFWD-daemon
+ 1000  3081     1 gatekeeperd
+    0  3085     1 update_engine
+ 1000  3097     1 qsguard
+ 1000  3100     1 feature_enabler_client
+ 1000  3102     1 qcc-vendor
+ 1000  3110     1 trusteduilistener
+ 1000  3112     1 vendor.qti.hardware.soter-service
+    0  3116     1 displayfeature
+ 1000  3120     1 mfp-daemon
+ 1000  3122     1 vendor.xiaomi.hardware.dtool1-service
+ 1000  3143     1 vendor.xiaomi.sensor.citsensorservice.aidl
+ 1000  3147     1 vendor.xiaomi.sensor.tofsensorservice.aidl
+ 2000  3166     1 adbd
+ 1001  3208     1 qti
+ 1001  3216     1 adpl
+    0  3234     2 [irq/262-gf]
+    0  3273     2 [soc:qcom,pmic_g]
+    0  3278     2 [irq/130-arm-smmu-context-fault]
+10422  3493  1620 com.cn.ipc.client1
+    0  3508     2 [kworker/3:0-mm_percpu_wq]
+    0  3566     2 [irq/428-glink-native-modem]
+ 1001  3587  1620 com.miui.dmregservice
+    0  3599     2 [qrtr_rx]
+    0  4026     2 [ipawq34]
+    0  4027     2 [iparepwq34]
+    0  4047     2 [ipawq104]
+    0  4057     2 [iparepwq104]
+    0  4086     2 [ipawq120]
+    0  4088     2 [iparepwq120]
+10128  4092  1620 com.miui.cloudbackup
+    0  4098     2 [ipawq95]
+    0  4099     2 [iparepwq95]
+    0  4100     2 [ipafreepagewq95]
+    0  4114     2 [ipawq35]
+    0  4115     2 [iparepwq35]
+    0  4116     2 [ipawq105]
+    0  4117     2 [iparepwq105]
+    0  4118     2 [ipafreepagewq10]
+    0  4119     2 [ipawq121]
+    0  4120     2 [iparepwq121]
+    0  4121     2 [ipafreepagewq12]
+    0  4139     2 [wda_wq]
+10396  4376  1620 com.cn.ipc.demo:server
+10426  4458  1620 com.cn.ipc.client2
+    0  4624     1 millet_monitor
+    0  4628     1 millet_monitor
+    0  4631     1 millet_monitor
+10182  4792  1620 com.miui.miwallpaper
+ 1001  5019  1620 .dataservices
+10113  5043  1620 .qtidataservices
+10219  5053  1620 com.qti.phone
+10264  5075  1620 com.miui.gallery
+    0  5079     2 [kworker/5:0-events_power_efficient]
+10118  5086  1620 .qms
+ 1073  5121  1620 com.android.networkstack.process
+ 1001  5122     1 ims-dataservice-daemon
+ 1027  5150  1620 com.st.android.nfc_extensions_16
+ 1001  5161     1 ims_rtp_daemon
+10217  5202  1620 org.codeaurora.ims
+ 1001  5254  1620 com.xiaomi.hypercomm
+ 1068  5288  1620 com.android.se
+ 1000  5307  1620 vendor.qti.frameworks.utils
+ 1001  5337  1620 com.android.phone
+10252  5345  1620 android.process.mediaUI
+10400  5377  1620 vendor.qti.bluetooth.xpan
+ 1000  5427  1620 com.android.systemui
+10409  5532  1620 android.ext.services
+    0  5615     2 [kworker/7:0H-kblockd]
+    0  5616     2 [kworker/7:1H]
+    0  5617     2 [kworker/7:2H]
+    0  5721  1620 usap64
+    0  5739     2 [kworker/5:2H-kblockd]
+    0  5740     2 [kworker/4:0H-kblockd]
+10229  5871  1620 com.android.smspush
+    0  5904  1620 usap64
+ 1000  5975  1620 com.xiaomi.mirror
+ 2000  6045  3166 logcat
+    0  6204     2 [kworker/1:0H-898000.qcom,qup_uart]
+    0  6227  1620 usap64
+    0  6445  1617 ip6tables-restore
+ 2000  6456  3166 ps
+ 1002  6493  1620 com.xiaomi.bluetooth
+10157  6712  1620 com.miui.cloudservice:galleryproxy
+ 1001  6719  1620 com.xiaomi.registration
+ 1000  6858  1620 com.miui.securitycore.remote
+    0  6945     1 batterysecret
+ 1000  6964     1 mcd
+ 1000  6965     1 qspmsvc
+    0  6983     1 qlm-service
+    0  7006     1 MI_RIC
+ 1000  7023     1 mifaced
+ 1000  7025     1 miteelog
+    0  7037     1 ntn_rild
+10127  7260  1620 com.xiaomi.aicr:clipAlgo
+99901001 7410 1620 com.android.phone
+ 1000  7746     1 vendor.qti.hardware.alarm-service
+    0  8087     2 [khugepaged]
+10123  8180  1620 com.android.vending:background
+10224  8208  1620 com.qti.qcc
+10260  8469  1620 com.android.deskclock
+10271  8655  1620 com.android.soundrecorder:remote
+99910184 8688 1620 com.google.android.webview:webview_service
+10108  9063  1620 com.android.providers.partnerbookmarks
+10374  9278  1620 com.mi.health
+10246  9401  1620 com.android.providers.media.module
+10303  9416  1620 io.wallpaperengine.weclient
+ 1000  9502  1620 com.miui.daemon
+ 1027  9524  1620 com.android.nfc
+ 1000  9555  1620 com.xiaomi.touchservice
+10081  9610  1620 system
+ 1000  9663  1620 com.qualcomm.qti.services.systemhelper:systemhelper_service
+10123  9674  1620 com.android.vending:instant_app_installer
+10150  9693  1620 org.ifaa.aidl.manager
+10183  9735  1620 com.xiaomi.xmsfkeeper
+10176  9763  1620 com.tencent.soter.soterserver
+10216  9785  1620 com.qualcomm.location
+10134  9818  1620 com.miui.personalassistant
+10135  9896  1620 com.android.quicksearchbox
+10457  9931  1620 com.xiaomi.minigame
+10270  9940  1620 com.miui.notes:task
+10143  9966  1620 com.miui.analytics
+10177 10143  1620 com.sohu.inputmethod.sogou.xiaomi
+ 1000 10205  1620 com.miui.securitycore
+10187 10225  1620 com.xiaomi.xmsf
+10167 10259  1620 com.xiaomi.metoknlp
+ 1000 10308  1620 com.xiaomi.location.fused
+99910312 10423 1620 com.tencent.mm
+10123 10474  1620 com.android.vending:quick_launch
+10162 10560  1620 com.miui.screenshot
+10127 10597  1620 com.xiaomi.aicr:cognitionService
+10165 10726  1620 com.miui.systemAdSolution
+10122 10856  1620 com.google.android.configupdater
+10203 11009  1620 com.lbe.security.miui
+10222 11024  1620 com.qualcomm.qti.poweroffalarm
+ 1000 11086  1620 com.miui.securitycenter.remote
+10089 11107  1620 android.process.media
+ 1000 11455  1620 com.miui.contentcatcher
+99910143 11587 1620 com.miui.analytics
+10168 11836  1620 com.miui.mediaviewer
+10129 11852  1620 com.google.android.gms
+10181 12041  1620 com.miui.voicetrigger
+ 1000 12072  1620 com.miui.powerkeeper
+ 1000 12086  1620 com.xiaomi.mi_connect_service
+10170 12165  1620 com.milink.service:ui
+10170 12315  1620 com.xiaomi.vtcamera
+10170 12428  1620 com.milink.service:core
+10170 12528  1620 com.milink.service:provider
+10164 12599  1620 com.xiaomi.account:tzSecuritySign
+10157 12821  1620 com.miui.micloudsync
+10226 12833  1620 com.android.printspooler
+10249 12923  1620 com.android.permissioncontroller
+10180 13218  1620 com.unionpay.tsmservice.mi
+10187 13257  1620 com.xiaomi.xmsf:services
+10170 13481  1620 com.milink.service:iot
+10130 13599  1620 com.miui.contentextension
+ 1000 13653  1620 com.xiaomi.joyose
+ 1000 13868  1620 com.xiaomi.mi_connect_service:idm
+99910129 14055 1620 com.google.android.gms
+10101 14272  1620 com.mobiletools.systemhelper
+10096 14279  1620 com.android.htmlviewer
+ 1000 14330  1620 com.xiaomi.trustservice
+10127 14414  1620 com.xiaomi.aicr:coreService
+ 1000 14415  1620 com.android.settings:remote
+ 1000 14606  1620 com.xiaomi.gnss.polaris
+ 1000 14614  1620 com.xiaomi.misettings:widgetProvider
+ 1000 14861  1620 com.android.settings
+10178 14946  1620 com.xiaomi.smarthome
+10170 15080  1620 com.milink.crossdeviceservice.file
+ 6101 15764  1620 com.android.thememanager
+ 6110 15944  1620 com.xiaomi.finddevice
+10170 16008  1620 com.milink.service.persistent
+10085 16376  1620 com.android.providers.calendar
+ 1000 16520  1620 miui.systemui.plugin:flashlight
+ 1000 16541  1620 com.miui.cleanmaster
+10023 16835  1620 com.xiaomi.aiservice
+10275 16958  1620 com.tencent.mobileqq:MSF
+10166 17314  1620 com.miui.greenguard
+ 1000 17375  1620 com.android.DeviceAsWebcam
+    0 17526     2 [irq/257-dwc3]
+10438 17636  1620 com.jingdong.app.mall
+10376 17845  1620 com.miui.passwords
+    0 18256     2 [kworker/1:5-ipv6_addrconf]
+ 1002 18443  1620 com.android.bluetooth
+ 1000 18518  1620 com.android.keychain
+ 1027 18616  1620 com.miui.tsmclient:daemon
+    0 18709     2 [qrtr_rx]
+    0 18722     2 [scheduler_thread]
+    0 18723     2 [dp_refill_thread]
+    0 18724     2 [dp_rx_thread_0]
+    0 18736     2 [dp_rx_thread_1]
+    0 18743     2 [dp_rx_thread_2]
+    0 18744     2 [dp_rx_thread_3]
+    0 18745     2 [dp_rx_thread_4]
+ 1010 18755     1 wpa_supplicant
+    0 19016     2 [kworker/6:4H-kblockd]
+ 1000 19555  1620 com.miui.securitycenter
+10160 19706  1620 com.miui.securityinputmethod
+10123 19764  1620 com.android.vending
+ 6102 19815  1620 com.android.updater
+ 1000 19921  1620 com.xiaomi.aon
+ 1000 20136  1620 com.miui.wmsvc
+    0 20168     2 [kworker/5:0H-kverityd]
+    0 20186  1617 iptables-restore
+99910249 20337 1620 com.android.permissioncontroller
+10099 20421  1620 com.android.statementservice
+    0 20496     2 [kworker/4:3H-kverityd]
+    0 20497     2 [kworker/6:0H-kblockd]
+10237 20898  1620 com.android.rkpdapp
+10187 20977  1620 com.xiaomi.xmsf:kit7
+    0 21077     2 [kworker/0:1+sock_diag_events]
+10133 21599  1620 com.miui.packageinstaller
+10155 21668  1620 com.miui.hybrid
+    0 21737     2 [kworker/0:4+pm]
+10140 21814  1620 com.android.mms
+10142 21918  1620 com.miui.home
+10140 22441  1620 com.android.mms:mms_service
+10178 22572  1620 com.xiaomi.smarthome:pushservice
+ 1000 22689  1620 com.miui.misightservice
+10178 22780  1620 com.xiaomi.smarthome:plugin0
+10253 22902  1620 com.mfashiongallery.emag
+    0 23096     2 [kworker/3:1-events]
+10178 23142  1620 com.xiaomi.smarthome:plugin1
+99117 23186 32109 com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0
+10259 23320  1620 com.android.calendar
+    0 24009     2 [kworker/3:1H-kverityd]
+    0 24011     2 [kworker/3:3H-kblockd]
+10411 24035  1620 com.android.photopicker
+10170 24253  1620 com.milink.runtime
+10438 24437  1620 com.jingdong.app.mall:widgetProcess
+10163 24647  1620 com.xiaomi.market:guard
+10264 24676  1620 com.miui.gallery:provideData
+99058 24718 32109 com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0
+ 1000 24746  1620 com.miui.aod
+10275 25122  1620 com.tencent.mobileqq
+    0 25397     2 [kworker/2:3-mm_percpu_wq]
+10169 25481  1620 com.miui.misound
+    0 25534     2 [kworker/1:1-events]
+    0 25601     2 [kworker/u16:2-memlat_wq]
+10163 25745  1620 com.xiaomi.market
+    0 25994     2 [kworker/5:1H-kverityd]
+    0 26103     2 [kworker/7:7H-kverityd]
+    0 26105     2 [kworker/7:8H-kverityd]
+    0 26111     2 [kworker/2:7H-kverityd]
+    0 26112     2 [kworker/2:8H-kblockd]
+10157 26143  1620 com.miui.cloudservice
+10195 26181  1620 com.xiaomi.ab
+    0 26215     2 [kworker/4:8H-kverityd]
+ 1000 26404  1620 com.miui.securitycore:accountservice
+10083 26462  1620 android.process.acore
+99910129 26490 1620 com.google.android.gms:snet
+10129 26582  1620 com.google.android.gms:snet
+10148 26782  1620 com.fido.asm
+    0 26999     2 [kworker/u17:5-qmi_msg_handler]
+10127 27148  1620 com.xiaomi.aicr:searchDataService_ui
+ 1027 27342  1620 com.miui.tsmclient
+    0 27473     2 [kworker/6:2-events]
+    0 27477     2 [kworker/u17:0-hal_register_write_wq]
+    0 27546     2 [kworker/4:2-mm_percpu_wq]
+    0 27550     2 [kworker/u16:0-memlat_wq]
+    0 27587     2 [kworker/4:3]
+10272 27624  1620 com.miui.weather2
+    0 27627     2 [kworker/7:1-mm_percpu_wq]
+10374 27738  1620 com.mi.health:widgetProvider
+10190 27747  1620 com.miui.core
+ 1000 28027  1620 com.xiaomi.aiasst.service
+    0 28148     2 [kworker/0:5-events]
+    0 28158     2 [kworker/1:1H-events_highpri]
+10170 28230  1620 com.milink.service
+ 1082 28287     1 artd
+ 1000 28292  1620 com.miui.screenrecorder
+10164 28485  1620 com.xiaomi.account
+10170 28503  1620 com.milink.crossdeviceservice
+10170 28575  1620 com.milink.service:audio
+10374 28589  1620 com.mi.health:device
+10270 28691  1620 com.miui.notes
+10271 28769  1620 com.android.soundrecorder
+ 2000 29088  3166 abb
+10185 29123  1620 com.miui.voiceassist
+10127 29244  1620 com.xiaomi.aicr:iotProvider
+10184 29460  1620 com.google.android.webview:webview_service
+    0 29597     2 [kworker/u16:1-adb]
+    0 29871     2 [kworker/u17:1-hal_register_write_wq]
+    0 30004     2 [kworker/0:0H-kblockd]
+    0 30330     2 [kworker/7:0]
+    0 30407     2 [kworker/5:1-events]
+10127 30463  1620 com.xiaomi.aicr
+10127 30594  1620 com.xiaomi.aicr:perceptionService
+10127 30721  1620 com.xiaomi.aicr:actionprovider
+10096 30737  1620 com.android.htmlviewer:remote
+    0 30841     2 [kworker/1:0-events]
+    0 30880     2 [kworker/0:1H-kblockd]
+10159 30957  1620 com.android.fileexplorer
+    0 31069     2 [kworker/u16:3-adb]
+    0 31071     2 [kworker/6:1-mm_percpu_wq]
+10156 31156  1620 com.miui.guardprovider
+    0 31188     2 [dsi_err_workq]
+    0 31388     2 [kworker/2:0-sock_diag_events]
+    0 31393     2 [kworker/3:2-mm_percpu_wq]
+10127 31479  1620 com.xiaomi.aicr:searchService
+10136 31508  1620 com.miui.yellowpage
+10185 31570  1620 com.miui.voiceassist:core
+10127 31687  1620 com.xiaomi.aicr:searchDataService
+    0 31750     2 [kworker/0:3-pm]
+    0 31855     2 [kworker/5:2-pm]
+    0 31873     2 [kworker/1:2H-kblockd]
+10189 31966  1620 com.xiaomi.simactivate.service
+    0 32092     2 [kworker/1:2-events]
+ 1053 32109  1620 webview_zygote
+10376 32115  1620 com.miui.passwords:sync
+    0 32178     2 [kworker/0:2H-kblockd]
+    0 32206     2 [kworker/6:0-mm_percpu_wq]
+    0 32236     2 [kworker/u17:2-hal_register_write_wq]
+10231 32392  1620 com.qualcomm.qti.workloadclassifier
+    0 32555     2 [kworker/u16:4-wmi_rx_diag_event_work_]
+    0 32579     2 [kworker/4:0-events]
+10250 32766  1620 com.android.adservices.api

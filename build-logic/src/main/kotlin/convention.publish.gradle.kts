@@ -7,7 +7,7 @@ plugins {
 
 // 统一的发布配置：组名和版本号
 val sdkGroupId = "com.modernipc"
-val sdkVersion = project.findProperty("VERSION_NAME") as? String ?: "2.0.1"
+val sdkVersion = providers.gradleProperty("VERSION_NAME").get()
 
 afterEvaluate {
     extensions.configure<PublishingExtension> {
@@ -24,7 +24,7 @@ afterEvaluate {
                 val githubRepo = System.getenv("GITHUB_REPOSITORY") 
                     ?: project.findProperty("gpr.repo") as String?
                     ?: project.findProperty("gpr.modern.ipc.repo") as String?
-                    ?: "Cuinings/ModernIpc" // ⚠️ 请将此处或 gradle.properties 中的配置改为您真实的 Github_ID/项目名
+                    ?: "NingCui29/ModernIpc"
                 
                 url = uri("https://maven.pkg.github.com/$githubRepo")
                 credentials {

@@ -2,6 +2,7 @@ package com.cn.ipc.client.common
 
 import android.content.ComponentName
 import android.content.Intent
+import android.content.pm.ApplicationInfo
 import android.graphics.Color
 import android.graphics.Typeface
 import android.graphics.drawable.GradientDrawable
@@ -13,6 +14,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.cn.ipc.api.hub.IMessageHubService
 import com.cn.ipc.api.hub.IMessageHubServiceClientAdapter
+import com.cn.ipc.api.hub.IMessageHubServiceIpcSchema
 import com.cn.ipc.api.hub.MessageEnvelope
 import com.cn.ipc.client.IpcClientState
 import com.cn.ipc.client.IpcConnectionController
@@ -37,7 +39,13 @@ abstract class BaseClientActivity : AppCompatActivity() {
     private val activityScope = CoroutineScope(Dispatchers.Main + SupervisorJob())
     private lateinit var controller: IpcConnectionController
     private var hubService: IMessageHubServiceClientAdapter? = null
+    private var registrationJob: Job? = null
     private var subscriptionJob: Job? = null
+    private var isHubRegistered = false
+    private lateinit var meetingDemo: MeetingBoardDemo
+    private lateinit var scenarioDemo: MultiAppScenarioDemo
+    private lateinit var businessCaseSelector: Spinner
+    private val businessScenarios = listOf("meeting-board", "work-order", "settings", "telemetry")
 
     // UI 组件引用
     private lateinit var tvStatus: TextView
@@ -71,6 +79,66 @@ abstract class BaseClientActivity : AppCompatActivity() {
             val mode = intent.getStringExtra("trigger_benchmark") ?: "all"
             runBenchmark(mode)
         }
+        consumeMeetingCaseIntent()
+        consumeScenarioIntent()
+    }
+
+    /** Automation uses the same actions as the visible buttons, only in debuggable sample APKs. */
+    private fun consumeMeetingCaseIntent() {
+        if (applicationInfo.flags and ApplicationInfo.FLAG_DEBUGGABLE == 0 ||
+            controller.state.value !is IpcClientState.Connected || !isHubRegistered ||
+            !::meetingDemo.isInitialized) return
+        val action = intent.getStringExtra("demo_case_action") ?: return
+        val id = intent.getStringExtra("demo_case_command_id") ?: UUID.randomUUID().toString()
+        val title = intent.getStringExtra("demo_case_title") ?: "项目周会"
+        val room = intent.getStringExtra("demo_case_room") ?: "三楼会议室"
+        listOf("demo_case_action", "demo_case_command_id", "demo_case_title", "demo_case_room")
+            .forEach { intent.removeExtra(it) }
+        selectBusinessScenario("meeting-board")
+        meetingDemo.trigger(action, id, title, room)
+    }
+
+    private fun consumeScenarioIntent() {
+        if (applicationInfo.flags and ApplicationInfo.FLAG_DEBUGGABLE == 0 ||
+            controller.state.value !is IpcClientState.Connected || !isHubRegistered ||
+            !::scenarioDemo.isInitialized) return
+        val scenario = intent.getStringExtra("demo_scenario") ?: return
+        val action = intent.getStringExtra("demo_scenario_action") ?: "select"
+        val id = intent.getStringExtra("demo_scenario_command_id") ?: UUID.randomUUID().toString()
+        val title = intent.getStringExtra("demo_scenario_title")
+        val detail = intent.getStringExtra("demo_scenario_detail")
+        val revision = if (intent.hasExtra("demo_scenario_revision"))
+            intent.getLongExtra("demo_scenario_revision", -1L) else null
+        val value = if (intent.hasExtra("demo_scenario_value"))
+            intent.getIntExtra("demo_scenario_value", Int.MIN_VALUE) else null
+        listOf("demo_scenario", "demo_scenario_action", "demo_scenario_command_id", "demo_scenario_title",
+            "demo_scenario_detail", "demo_scenario_revision", "demo_scenario_value").forEach { intent.removeExtra(it) }
+        if (scenario !in businessScenarios.drop(1)) { log("案例", "未知场景：$scenario"); return }
+        selectBusinessScenario(scenario)
+        if (action != "select") scenarioDemo.trigger(scenario, action, id, title, detail, revision, value)
+    }
+
+    private fun selectBusinessScenario(scenario: String) {
+        val position = businessScenarios.indexOf(scenario)
+        if (position < 0) return
+        if (businessCaseSelector.selectedItemPosition != position) businessCaseSelector.setSelection(position)
+        meetingDemo.view.visibility = if (position == 0) View.VISIBLE else View.GONE
+        scenarioDemo.view.visibility = if (position == 0) View.GONE else View.VISIBLE
+        if (position != 0) scenarioDemo.selectScenario(scenario)
+    }
+
+    private suspend fun sendBusinessMessage(expectedGeneration: Long, target: String, content: String): String {
+        val connection = controller.state.value as? IpcClientState.Connected
+            ?: error("IPC 尚未连接")
+        check(connection.generation == expectedGeneration) { "业务操作所属连接已经结束" }
+        val service = hubService ?: error("消息服务尚未就绪")
+        currentCoroutineContext().ensureActive()
+        val result = service.sendMessage(clientId, target, content)
+        currentCoroutineContext().ensureActive()
+        check(controller.state.value === connection && hubService === service) {
+            "连接代次已改变，路由结果未知"
+        }
+        return result
     }
 
     private fun initIpcController() {
@@ -82,7 +150,7 @@ abstract class BaseClientActivity : AppCompatActivity() {
         controller = IpcConnectionController(
             context = this,
             targetIntent = targetIntent,
-            scope = CoroutineScope(Dispatchers.Default + SupervisorJob()),
+            scope = activityScope,
             clientPackage = packageName
         )
 
@@ -93,17 +161,30 @@ abstract class BaseClientActivity : AppCompatActivity() {
     }
 
     private fun updateConnectionStatus(state: IpcClientState) {
+        registrationJob?.cancel()
+        isHubRegistered = false
+        if (::meetingDemo.isInitialized) {
+            meetingDemo.onConnection((state as? IpcClientState.Connected)?.generation)
+        }
+        if (::scenarioDemo.isInitialized) {
+            scenarioDemo.onConnection((state as? IpcClientState.Connected)?.generation)
+        }
+        if (state !is IpcClientState.Connected) hubService = null
         when (state) {
             is IpcClientState.Connected -> {
                 tvStatus.text = "🟢 已连接 (代次: ${state.generation}, Server: ${state.protocol.serverVersionCode})"
                 btnConnect.text = "断开连接"
-                hubService = IMessageHubServiceClientAdapter(controller)
+                val service = IMessageHubServiceClientAdapter(controller)
+                hubService = service
                 log("系统", "✅ IPC 连接建立成功，正在注册身份与订阅流...")
-                registerAndSubscribe()
-                if (intent.hasExtra("trigger_benchmark")) {
-                    val mode = intent.getStringExtra("trigger_benchmark") ?: "all"
-                    activityScope.launch {
+                registrationJob = activityScope.launch {
+                    if (!registerAndSubscribe(state, service)) return@launch
+                    consumeMeetingCaseIntent()
+                    consumeScenarioIntent()
+                    if (intent.hasExtra("trigger_benchmark")) {
+                        val mode = intent.getStringExtra("trigger_benchmark") ?: "all"
                         delay(1200)
+                        if (controller.state.value !== state || hubService !== service) return@launch
                         runBenchmark(mode)
                     }
                 }
@@ -117,7 +198,7 @@ abstract class BaseClientActivity : AppCompatActivity() {
                 btnConnect.text = "重连中..."
                 subscriptionJob?.cancel()
             }
-            is IpcClientState.Disconnected, is IpcClientState.Idle, is IpcClientState.Closed -> {
+            is IpcClientState.Disconnected, is IpcClientState.Idle, is IpcClientState.Closed, is IpcClientState.Disposed -> {
                 tvStatus.text = "🔴 未连接"
                 btnConnect.text = "连接服务端"
                 subscriptionJob?.cancel()
@@ -126,29 +207,43 @@ abstract class BaseClientActivity : AppCompatActivity() {
         }
     }
 
-    private fun registerAndSubscribe() {
-        val service = hubService ?: return
-        activityScope.launch {
-            try {
-                // 1. 注册身份
-                service.registerClient(clientId, clientName)
-                log("身份", "向服务端登记为: $clientName ($clientId)")
-
-                // 2. 开启订阅
-                startSubscription()
-            } catch (e: Exception) {
+    private suspend fun registerAndSubscribe(
+        connection: IpcClientState.Connected,
+        service: IMessageHubServiceClientAdapter
+    ): Boolean {
+        try {
+            if (controller.state.value !== connection || hubService !== service) return false
+            controller.awaitServiceBinderForConnection(
+                connection, serviceId = 2001, minApiVersion = 2,
+                expectedSchema = IMessageHubServiceIpcSchema.CLIENT_SCHEMA
+            )
+            currentCoroutineContext().ensureActive()
+            if (controller.state.value !== connection || hubService !== service) return false
+            service.registerClient(clientId, clientName)
+            if (controller.state.value !== connection || hubService !== service) return false
+            log("身份", "向服务端登记为: $clientName ($clientId)")
+            startSubscription()
+            isHubRegistered = true
+            return true
+        } catch (cancelled: CancellationException) {
+            throw cancelled
+        } catch (e: Exception) {
+            if (controller.state.value === connection && hubService === service) {
                 log("错误", "注册失败: ${e.message}")
             }
+            return false
         }
     }
 
-    private fun startSubscription() {
+    private fun startSubscription(caseCommandId: String = "") {
         val service = hubService ?: return
+        val connection = controller.state.value as? IpcClientState.Connected ?: return
         subscriptionJob?.cancel()
         btnSubscribe.text = "暂停订阅"
 
         subscriptionJob = service.observeMessages(clientId)
             .onEach { raw ->
+                if (controller.state.value !== connection || hubService !== service) return@onEach
                 val envelope = MessageEnvelope.decode(raw)
                 if (envelope != null) {
                     onMessageReceived(envelope)
@@ -161,19 +256,23 @@ abstract class BaseClientActivity : AppCompatActivity() {
             }
             .launchIn(activityScope)
 
-        log("订阅", "📡 已成功订阅消息通道！正在监听消息...")
+        log("订阅", "📡 已启动消息订阅；远端接收以实际业务事件为准")
+        meetingDemo.subscriptionRequested(caseCommandId)
     }
 
-    private fun stopSubscription() {
+    private fun stopSubscription(caseCommandId: String = "") {
         subscriptionJob?.cancel()
         subscriptionJob = null
         btnSubscribe.text = "开启订阅"
         log("订阅", "⏸️ 已暂停订阅消息通道")
+        meetingDemo.subscriptionPaused(caseCommandId)
     }
 
     var onBenchmarkFlowReceived: ((String) -> Unit)? = null
 
     private fun onMessageReceived(msg: MessageEnvelope) {
+        if (meetingDemo.receive(msg)) return
+        if (scenarioDemo.receive(msg)) return
         if (msg.content.contains("[BENCHMARK]")) {
             onBenchmarkFlowReceived?.invoke(msg.content)
             return
@@ -199,6 +298,7 @@ abstract class BaseClientActivity : AppCompatActivity() {
     }
 
     private fun disconnectFromServer() {
+        registrationJob?.cancel()
         activityScope.launch {
             try {
                 hubService?.unregisterClient(clientId)
@@ -222,7 +322,9 @@ abstract class BaseClientActivity : AppCompatActivity() {
                 val start = System.currentTimeMillis()
                 val ack = service.sendMessage(clientId, target, content)
                 val duration = System.currentTimeMillis() - start
-                log("发送", "发送到 [$target] 成功！耗时: ${duration}ms, 回执: $ack")
+                log("发送", "[$target] 路由返回，耗时: ${duration}ms, 结果: $ack")
+            } catch (cancelled: CancellationException) {
+                throw cancelled
             } catch (e: Exception) {
                 log("错误", "发送失败: ${e.message}")
             }
@@ -340,8 +442,25 @@ abstract class BaseClientActivity : AppCompatActivity() {
             text = "心跳 Ping"
             layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
             setOnClickListener {
-                hubService?.ping(clientId)
-                log("心跳", "已向 Server 发送 Ping (Oneway)")
+                activityScope.launch {
+                    try {
+                        val service = hubService ?: throw IllegalStateException("尚未连接到服务端")
+                        val connection = controller.state.value as? IpcClientState.Connected
+                            ?: throw IllegalStateException("IPC 尚未连接")
+                        controller.awaitServiceBinderForConnection(
+                            connection, serviceId = 2001, minApiVersion = 2,
+                            expectedSchema = IMessageHubServiceIpcSchema.CLIENT_SCHEMA
+                        )
+                        currentCoroutineContext().ensureActive()
+                        if (controller.state.value !== connection || hubService !== service) return@launch
+                        service.ping(clientId)
+                        log("心跳", "已向 Server 发送 Ping (Oneway)")
+                    } catch (cancelled: CancellationException) {
+                        throw cancelled
+                    } catch (error: Exception) {
+                        log("心跳失败", error.message ?: "未知错误")
+                    }
+                }
             }
         }
         row2.addView(btnOnline)
@@ -349,6 +468,25 @@ abstract class BaseClientActivity : AppCompatActivity() {
         row2.addView(btnPing)
         controlCard.addView(row2)
         contentLayout.addView(controlCard)
+
+        meetingDemo = MeetingBoardDemo(this, clientId, activityScope,
+            send = ::sendBusinessMessage, pause = ::stopSubscription, resume = ::startSubscription)
+        scenarioDemo = MultiAppScenarioDemo(this, clientId, activityScope, send = ::sendBusinessMessage)
+        scenarioDemo.view.visibility = View.GONE
+        businessCaseSelector = Spinner(this).apply {
+            contentDescription = "business-case-selector"
+            adapter = ArrayAdapter(this@BaseClientActivity, android.R.layout.simple_spinner_dropdown_item,
+                listOf("场景：会议通知", "场景：仓储工单", "场景：配置同步", "场景：遥测告警"))
+            onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                    selectBusinessScenario(businessScenarios[position])
+                }
+                override fun onNothingSelected(parent: AdapterView<*>?) = Unit
+            }
+        }
+        contentLayout.addView(businessCaseSelector)
+        contentLayout.addView(meetingDemo.view)
+        contentLayout.addView(scenarioDemo.view)
 
         // 3. 特殊对照验证测试控制卡片 (仅由 Client 1 主导发起，或在当前端显示)
         if (isSenderRole) {
@@ -695,6 +833,6 @@ abstract class BaseClientActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         activityScope.cancel()
-        controller.close()
+        controller.dispose()
     }
 }

@@ -1,0 +1,17 @@
+--------- beginning of main
+10-09 09:47:42.434   811   811 I IpcForeground: STATE run=faultfinaltrace event=WAIT_READY elapsedRealtimeMs=813339668 uptimeMs=184893068 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-09 09:47:42.464   811   811 I IpcForeground: STATE run=faultfinaltrace event=FOCUS_GAIN elapsedRealtimeMs=813339698 uptimeMs=184893098 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:47:42.546   811   811 I IpcForeground: STATE run=faultfinaltrace event=WAIT_READY elapsedRealtimeMs=813339780 uptimeMs=184893180 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:47:42.646   811   811 I IpcForeground: STATE run=faultfinaltrace event=WAIT_READY elapsedRealtimeMs=813339880 uptimeMs=184893280 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:47:42.747   811   811 I IpcForeground: STATE run=faultfinaltrace event=WAIT_READY elapsedRealtimeMs=813339981 uptimeMs=184893381 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:47:42.747   811   811 I IpcForeground: STATE run=faultfinaltrace event=BEGIN elapsedRealtimeMs=813339982 uptimeMs=184893382 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:42.751   811  2299 I IpcFaultProbe: PASS run=faultfinaltrace replyBeforeSendReturns cancelCount=0
+10-09 09:47:42.753   811  2297 I IpcFaultProbe: PASS run=faultfinaltrace explicitCancellation cancelCount=1
+10-09 09:47:42.756   811  2297 I IpcFaultProbe: PASS run=faultfinaltrace cancellationDuringDispatch cancelCount=1
+10-09 09:47:43.249   811   811 I IpcForeground: STATE run=faultfinaltrace event=SAMPLE elapsedRealtimeMs=813340483 uptimeMs=184893883 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:43.439   811  2384 I IpcFaultProbe: PASS run=faultfinaltrace replyDisconnectRace iterations=1000 lateRepliesRejected=true
+10-09 09:47:43.471   811  2384 I IpcFaultProbe: PASS run=faultfinaltrace remoteFlowFactoryError propagated=true normalFlowFirstItem=0
+10-09 09:47:43.487   811  2384 I IpcFaultProbe: PASS run=faultfinaltrace closePendingFailed=true staleConnectionRejected=true reconnectedFlow=true
+10-09 09:47:43.487   811  2384 I IpcFaultProbe: DONE run=faultfinaltrace passed=true
+10-09 09:47:43.488   811   811 I IpcForeground: STATE run=faultfinaltrace event=END elapsedRealtimeMs=813340723 uptimeMs=184894123 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:43.491   811   811 I IpcForeground: END run=faultfinaltrace started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-faultfinaltrace.csv scope=activity_events_and_500ms_app_samples

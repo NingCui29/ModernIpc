@@ -1,0 +1,4 @@
+  status: 2
+  level: 14
+  temperature: 315
+  Capacity level: -1

@@ -1,0 +1,31 @@
+"pid","tid","process","thread","sched_slices","cpu_ms"
+11726,11748,"com.cn.ipc.demo:server","Jit thread pool",113,416.467501
+11726,11775,"com.cn.ipc.demo:server","DefaultDispatch",924,282.156052
+11726,11779,"com.cn.ipc.demo:server","binder:11726_4",1684,237.805567
+11726,11726,"com.cn.ipc.demo:server","ipc.demo:server",134,142.351305
+11726,11773,"com.cn.ipc.demo:server","DefaultDispatch",231,61.992340
+11726,11758,"com.cn.ipc.demo:server","binder:11726_1",250,45.552544
+11726,11776,"com.cn.ipc.demo:server","DefaultExecutor",41,33.725940
+11726,11764,"com.cn.ipc.demo:server","ActivityHelper",61,29.799741
+11726,11752,"com.cn.ipc.demo:server","HeapTaskDaemon",12,29.066875
+11726,11763,"com.cn.ipc.demo:server","binder:11726_3",228,29.042854
+11726,11765,"com.cn.ipc.demo:server","Profile Saver",71,12.517861
+11726,11759,"com.cn.ipc.demo:server","binder:11726_2",17,5.064947
+11726,11753,"com.cn.ipc.demo:server","ReferenceQueueD",3,1.882968
+11726,11772,"com.cn.ipc.demo:server","Thread-4",4,1.374166
+11726,11760,"com.cn.ipc.demo:server","dex_preload_t",5,1.086614
+11726,11740,"com.cn.ipc.demo:server","Runtime worker ",8,1.083750
+11726,11766,"com.cn.ipc.demo:server","MiuiMonitorThre",3,1.024686
+11726,11767,"com.cn.ipc.demo:server","ipc.demo:server",2,0.876094
+11726,11747,"com.cn.ipc.demo:server","ADB-JDWP Connec",10,0.824582
+11726,11756,"com.cn.ipc.demo:server","FinalizerWatchd",4,0.773384
+11726,11743,"com.cn.ipc.demo:server","Runtime worker ",4,0.773072
+11726,11742,"com.cn.ipc.demo:server","Runtime worker ",5,0.720677
+11726,11741,"com.cn.ipc.demo:server","Runtime worker ",6,0.659011
+11726,11744,"com.cn.ipc.demo:server","ipc.demo:server",1,0.506980
+11726,11771,"com.cn.ipc.demo:server","ActivityHelper",2,0.505364
+11726,11755,"com.cn.ipc.demo:server","FinalizerDaemon",3,0.468335
+11726,11768,"com.cn.ipc.demo:server","ActivityHelper",1,0.371355
+11726,11769,"com.cn.ipc.demo:server","ActivityHelper",1,0.345729
+11726,11746,"com.cn.ipc.demo:server","ipc.demo:server",1,0.302865
+11726,11774,"com.cn.ipc.demo:server","ipc.demo:server",2,0.274375

@@ -1,0 +1,2 @@
+ModernIpc: 47bb67b492393e116b7239eff712e0010c265d29b1ce0194896374d39c156e30  /data/app/~~a4DPUfRGSLemR0Rq5vfTVg==/com.cn.ipc.demo-vevnKAS_fXvuBrMDPYbCSg==/base.apk
+AndLinker: cfd5ee622b80470771c20391065f29611f17c5c1ed5a9ae038e174d5e8101b25  /data/app/~~voMsAMRaGlevtJV9GWmsJQ==/com.example.andlinker-rsip9FT0dyjjYiaMbh0k-w==/base.apk

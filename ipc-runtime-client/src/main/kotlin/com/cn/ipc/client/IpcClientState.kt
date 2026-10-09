@@ -37,6 +37,9 @@ sealed class IpcClientState {
     /** 连接已断开且不再自动重连，或连接尝试已达到上限 */
     object Disconnected : IpcClientState()
 
-    /** 客户端被显式关闭，资源已释放，不再允许发起新连接 */
+    /** 当前连接已关闭，可以通过 connect 再次连接。 */
     object Closed : IpcClientState()
+
+    /** 控制器已永久释放；owner scope 结束时也会进入此状态。 */
+    object Disposed : IpcClientState()
 }

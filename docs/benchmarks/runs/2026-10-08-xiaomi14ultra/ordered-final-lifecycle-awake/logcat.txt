@@ -1,0 +1,26 @@
+--------- beginning of main
+10-08 11:40:29.380  2380  9002 I IpcLifecycleProbe: PASS run=lifecycleawake closeHeldRequest failed=true cause=IllegalStateException
+10-08 11:40:29.637  2380  8951 I IpcLifecycleProbe: PASS run=lifecycleawake close cycle=1 subscriptions=0 requests=0 eventsQuiet=true
+10-08 11:40:29.790  2380  9003 I IpcLifecycleProbe: PASS run=lifecycleawake reconnect cycle=1 subscriptions=1 generation=2
+10-08 11:40:30.061  2380  8952 I IpcLifecycleProbe: PASS run=lifecycleawake close cycle=2 subscriptions=0 requests=0 eventsQuiet=true
+10-08 11:40:30.208  2380  9008 I IpcLifecycleProbe: PASS run=lifecycleawake reconnect cycle=2 subscriptions=1 generation=3
+10-08 11:40:30.489  2380  9002 I IpcLifecycleProbe: PASS run=lifecycleawake close cycle=3 subscriptions=0 requests=0 eventsQuiet=true
+10-08 11:40:30.642  2380  9003 I IpcLifecycleProbe: PASS run=lifecycleawake reconnect cycle=3 subscriptions=1 generation=4
+10-08 11:40:30.915  2380  8950 I IpcLifecycleProbe: PASS run=lifecycleawake close cycle=4 subscriptions=0 requests=0 eventsQuiet=true
+10-08 11:40:31.063  2380  9002 I IpcLifecycleProbe: PASS run=lifecycleawake reconnect cycle=4 subscriptions=1 generation=5
+10-08 11:40:31.338  2380  8950 I IpcLifecycleProbe: PASS run=lifecycleawake close cycle=5 subscriptions=0 requests=0 eventsQuiet=true
+10-08 11:40:31.477  2380  8951 I IpcLifecycleProbe: PASS run=lifecycleawake reconnect cycle=5 subscriptions=1 generation=6
+10-08 11:40:31.754  2380  8951 I IpcLifecycleProbe: PASS run=lifecycleawake close cycle=6 subscriptions=0 requests=0 eventsQuiet=true
+10-08 11:40:31.905  2380  9005 I IpcLifecycleProbe: PASS run=lifecycleawake reconnect cycle=6 subscriptions=1 generation=7
+10-08 11:40:32.180  2380  8951 I IpcLifecycleProbe: PASS run=lifecycleawake close cycle=7 subscriptions=0 requests=0 eventsQuiet=true
+10-08 11:40:32.330  2380  9008 I IpcLifecycleProbe: PASS run=lifecycleawake reconnect cycle=7 subscriptions=1 generation=8
+10-08 11:40:32.603  2380  9008 I IpcLifecycleProbe: PASS run=lifecycleawake close cycle=8 subscriptions=0 requests=0 eventsQuiet=true
+10-08 11:40:32.754  2380  9008 I IpcLifecycleProbe: PASS run=lifecycleawake reconnect cycle=8 subscriptions=1 generation=9
+10-08 11:40:33.045  2380  9008 I IpcLifecycleProbe: PASS run=lifecycleawake explicitDispose collectorEnded=true reconnectRejected=true subscriptions=0 requests=0
+10-08 11:40:33.364  2380  8952 I IpcLifecycleProbe: PASS run=lifecycleawake ownerCancellation disposed=true collectorEnded=true requestFailed=true subscriptions=0 requests=0 eventsQuiet=true
+10-08 11:40:33.418  2380  9028 I IpcLifecycleProbe: PASS run=lifecycleawake serviceDestroy oldStubRejected=true binderStillAlive=true recreatedStub=true subscriptions=0 requests=0
+10-08 11:40:33.436  2380  9028 I IpcLifecycleProbe: PASS run=lifecycleawake nullBinding disconnected=true failureElapsedMs=10 bindingTimeoutMs=5000 lateCallbackStable=true pending=0 syntheticWaiter=true
+10-08 11:40:33.459  8962  8962 I IpcLifecycleProbe: DELAYED_BIND started delayMs=1500
+10-08 11:40:34.960  8962  8962 I IpcLifecycleProbe: DELAYED_BIND returned=true
+10-08 11:40:35.360  2380  8951 I IpcLifecycleProbe: PASS run=lifecycleawake bindingTimeout disconnected=true failureElapsedMs=209 bindingTimeoutMs=200 lateCallbackStable=true pending=0 syntheticWaiter=true
+10-08 11:40:35.369  2380  9027 I IpcLifecycleProbe: DONE run=lifecycleawake passed=true cycles=8 subscriptions=0 requests=0 anchorAlive=true

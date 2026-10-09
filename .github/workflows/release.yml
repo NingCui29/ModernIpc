@@ -3,18 +3,70 @@ name: Build and Publish Release
 on:
   push:
     tags:
-      - 'v*' # 只有推送类似 v1.0.0, v1.2 等 tag 时才会触发
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Existing v-prefixed tag (required when dispatching from a branch)'
+        required: false
+        type: string
+
+concurrency:
+  group: release-${{ inputs.tag || github.ref }}
+  cancel-in-progress: false
 
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # 创建 Release 需要
-      packages: write # 推送到 GitHub Packages 需要
+      contents: write
+      packages: write
+    env:
+      RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
+      PYTHONDONTWRITEBYTECODE: '1'
 
     steps:
-      - name: Checkout Source
+      - name: Checkout release tag
         uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag || github.ref }}
+          fetch-depth: 0
+
+      - name: Validate immutable release identity
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os, re, subprocess
+          from pathlib import Path
+          tag = os.environ['RELEASE_TAG']
+          if not re.fullmatch(r'v\d+\.\d+\.\d+(?:-[0-9A-Za-z][0-9A-Za-z.-]*)?', tag):
+              raise SystemExit('Release requires an existing v-prefixed semantic version tag')
+          target = subprocess.check_output(['git', 'rev-parse', 'refs/tags/' + tag + '^{commit}'], text=True).strip()
+          head = subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()
+          if target != head:
+              raise SystemExit('Checked out commit differs from release tag')
+          props = dict(re.findall(r'(?m)^\s*([^#\s=]+)\s*=\s*(.*?)\s*$', Path('gradle.properties').read_text()))
+          version = tag[1:]
+          if props.get('VERSION_NAME') != version:
+              raise SystemExit('Tag and gradle.properties VERSION_NAME differ')
+          if not props.get('VERSION_CODE', '').isdigit() or int(props['VERSION_CODE']) <= 0:
+              raise SystemExit('VERSION_CODE must be a positive integer')
+          if not Path('.github/release-notes.md').is_file():
+              raise SystemExit('Missing reviewed .github/release-notes.md')
+          with open(os.environ['GITHUB_ENV'], 'a', encoding='utf-8') as stream:
+              stream.write('RELEASE_VERSION=' + version + '\n')
+          print('Validated release', tag, 'at', head)
+          PY
+
+      - name: Reject an already published release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "Release already exists; this workflow does not replace its published assets."
+            exit 1
+          fi
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
@@ -23,26 +75,117 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
-      - name: Make gradlew executable
-        run: chmod +x ./gradlew
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
 
-      - name: Build and Publish to GitHub Packages
-        # 直接执行 publish 任务。由于我们在 build.gradle.kts 中配置了 GitHubPackages，
-        # 它会自动将产物推送到该仓库。
-        run: ./gradlew publish
+      - name: Install required SDK components
+        run: sdkmanager 'platforms;android-34' 'build-tools;34.0.0'
+
+      - name: Validate Python syntax and source scenario contracts
+        shell: bash
+        run: |
+          python - <<'PY'
+          import sys
+          from pathlib import Path
+          for path in [Path('.github/scripts/prepare_release.py'), *Path('docs/benchmarks/harness').glob('*.py')]:
+              compile(path.read_text(encoding='utf-8-sig'), str(path), 'exec')
+          sys.path.insert(0, str(Path('docs/benchmarks/harness').resolve()))
+          import capture_cross_package_smoke, capture_multi_app_case, capture_multi_app_scenarios
+          capture_cross_package_smoke.validate_source_contract()
+          capture_multi_app_case.validate_contract()
+          capture_multi_app_scenarios.validate_contract()
+          print('Python syntax and source contracts passed; no device test was run.')
+          PY
+
+      - name: Build six SDKs, shared example library and five debug APKs
+        shell: bash
+        run: |
+          bash ./gradlew --console=plain --max-workers=2 \
+            -PVERSION_NAME="$RELEASE_VERSION" \
+            :ipc-api:publishReleasePublicationToProjectLocalRepository \
+            :ipc-contract:publishReleasePublicationToProjectLocalRepository \
+            :ipc-runtime-client:publishReleasePublicationToProjectLocalRepository \
+            :ipc-runtime-server:publishReleasePublicationToProjectLocalRepository \
+            :ipc-annotations:publishJavaPublicationToProjectLocalRepository \
+            :ipc-compiler:publishJavaPublicationToProjectLocalRepository \
+            :demo-client-common:publishReleasePublicationToProjectLocalRepository \
+            :demo-app:assembleDebug :app-server:assembleDebug \
+            :app-client1:assembleDebug :app-client2:assembleDebug :app-client3:assembleDebug
+
+      - name: Verify versions, dependency metadata, signatures and release assets
+        run: >-
+          python .github/scripts/prepare_release.py
+          --version "$RELEASE_VERSION"
+          --android-sdk "$ANDROID_HOME"
+          --output-dir ".gradle/release-assets/$RELEASE_VERSION"
+
+      - name: Publish seven explicit publications to GitHub Packages
+        shell: bash
+        run: |
+          bash ./gradlew --console=plain --max-workers=2 \
+            -PVERSION_NAME="$RELEASE_VERSION" \
+            :ipc-api:publishReleasePublicationToGitHubPackagesRepository \
+            :ipc-contract:publishReleasePublicationToGitHubPackagesRepository \
+            :ipc-runtime-client:publishReleasePublicationToGitHubPackagesRepository \
+            :ipc-runtime-server:publishReleasePublicationToGitHubPackagesRepository \
+            :ipc-annotations:publishJavaPublicationToGitHubPackagesRepository \
+            :ipc-compiler:publishJavaPublicationToGitHubPackagesRepository \
+            :demo-client-common:publishReleasePublicationToGitHubPackagesRepository
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_REPOSITORY: ${{ github.repository }}
 
-      - name: Collect Output Artifacts
+      - name: Verify seven published POMs from GitHub Packages
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_ACTOR: ${{ github.actor }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
-          mkdir -p release-assets
-          find . -type f -name "*-release.aar" -exec cp {} release-assets/ \;
-          find . -type f -path "*/build/libs/*.jar" -exec cp {} release-assets/ \;
+          python - <<'PY'
+          import base64, os, time, urllib.error, urllib.request, xml.etree.ElementTree as ET
+          modules = ('ipc-api', 'ipc-contract', 'ipc-runtime-client', 'ipc-runtime-server',
+                     'ipc-annotations', 'ipc-compiler', 'demo-client-common')
+          version = os.environ['RELEASE_VERSION']
+          auth = base64.b64encode((os.environ['GITHUB_ACTOR'] + ':' + os.environ['GITHUB_TOKEN']).encode()).decode()
+          namespace = {'m': 'http://maven.apache.org/POM/4.0.0'}
+          for module in modules:
+              url = 'https://maven.pkg.github.com/' + os.environ['GITHUB_REPOSITORY'] + '/com/modernipc/' + module + '/' + version + '/' + module + '-' + version + '.pom'
+              request = urllib.request.Request(url, headers={'Authorization': 'Basic ' + auth})
+              body = None
+              for attempt in range(3):
+                  try:
+                      with urllib.request.urlopen(request, timeout=60) as response:
+                          if response.status != 200:
+                              raise SystemExit('Published POM HTTP status differs for ' + module)
+                          body = response.read()
+                      break
+                  except urllib.error.HTTPError as error:
+                      if error.code == 404 and attempt < 2:
+                          time.sleep(10)
+                          continue
+                      raise SystemExit('Published POM request failed for ' + module + '; HTTP ' + str(error.code))
+                  except urllib.error.URLError:
+                      raise SystemExit('Published POM network request failed for ' + module)
+              pom = ET.fromstring(body)
+              for name, expected in (('groupId', 'com.modernipc'), ('artifactId', module), ('version', version)):
+                  if pom.findtext('m:' + name, namespaces=namespace) != expected:
+                      raise SystemExit('Published POM coordinate differs for ' + module)
+              for dependency in pom.findall('m:dependencies/m:dependency', namespace):
+                  if dependency.findtext('m:groupId', namespaces=namespace) == 'com.modernipc':
+                      if dependency.findtext('m:artifactId', namespaces=namespace) not in modules or dependency.findtext('m:version', namespaces=namespace) != version:
+                          raise SystemExit('Published POM internal dependency differs for ' + module)
+              print('Verified published POM:', module + ':' + version)
+          PY
 
-      - name: Create GitHub Release & Upload Assets
+      - name: Create release and upload verified assets
         uses: softprops/action-gh-release@v2
         with:
-          generate_release_notes: true
-          files: release-assets/*
+          tag_name: ${{ env.RELEASE_TAG }}
+          name: ModernIpc ${{ env.RELEASE_VERSION }}
+          body_path: .github/release-notes.md
+          prerelease: ${{ contains(env.RELEASE_VERSION, '-') }}
+          generate_release_notes: false
+          fail_on_unmatched_files: true
+          files: .gradle/release-assets/${{ env.RELEASE_VERSION }}/*

@@ -8,7 +8,7 @@ package com.cn.ipc.annotations
  *
  * @property requestTransaction 发起请求的 AIDL 事务码（在对应的 Service 接口内必须唯一）。
  * @property cancelTransaction  取消请求的 AIDL 事务码。用于在协程取消时中断跨进程请求。
- * @property idempotent         该方法是否为幂等操作。如果为 true，底层 Runtime 在断线重连后可能会自动重试，以提高系统的健壮性。
+ * @property idempotent         标记业务方法是否幂等；当前 Runtime 不会依据此标记自动重试。
  */
 @Target(AnnotationTarget.FUNCTION) // 该注解仅可应用于函数
 @Retention(AnnotationRetention.SOURCE) // 该注解仅在源码级别保留，编译后将被丢弃，交由KSP处理
@@ -19,6 +19,24 @@ annotation class IpcAsync(
 )
 
 /**
+ * A short, non-suspending RPC that returns through the same Binder transaction.
+ * The generated client rejects calls from the main thread. Implementations must
+ * finish promptly without blocking I/O because they run on a Binder pool thread.
+ */
+@Target(AnnotationTarget.FUNCTION)
+@Retention(AnnotationRetention.SOURCE)
+annotation class IpcDirect(val transaction: Int)
+
+/** The local receiver policy for a generated IPC Flow. */
+enum class IpcStreamOverflow {
+    /** Stop collection with an explicit error when the local receiver buffer is full. */
+    ERROR,
+
+    /** Keep the most recent value. Use only for state snapshots whose intermediate values may be skipped. */
+    CONFLATE
+}
+
+/**
  * 标记一个返回 Kotlin `Flow` 的函数为跨进程流式订阅。
  *
  * 底层会桥接为一个包含订阅与取消订阅的方法对，从而实现响应式的数据流传输。
@@ -26,12 +44,14 @@ annotation class IpcAsync(
  *
  * @property subscribeTransaction   发起订阅的 AIDL 事务码。用于通知服务端开始发送数据。
  * @property unsubscribeTransaction 取消订阅的 AIDL 事务码。用于通知服务端停止发送数据。
+ * @property overflowPolicy 本地接收缓冲策略，默认满时终止并报错；CONFLATE 仅适合状态快照。
  */
 @Target(AnnotationTarget.FUNCTION) // 同样仅应用于函数
 @Retention(AnnotationRetention.SOURCE) // 源码保留
 annotation class IpcStream(
     val subscribeTransaction: Int,
-    val unsubscribeTransaction: Int
+    val unsubscribeTransaction: Int,
+    val overflowPolicy: IpcStreamOverflow = IpcStreamOverflow.ERROR
 )
 
 /**

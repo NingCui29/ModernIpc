@@ -20,7 +20,6 @@ build/
 # Gradle files
 .gradle/
 */.gradle/
-gradlew.bat
 !gradle-wrapper.jar
 
 # Local configuration file (sdk path, etc)
@@ -80,3 +79,10 @@ Network Trash Folder
 Temporary Items
 .apdisk
 /local-maven/
+
+# Python generated caches
+__pycache__/
+*.pyc
+
+# Local release packaging output
+/release-assets/

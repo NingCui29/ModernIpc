@@ -1,0 +1,7 @@
+Starting: Intent { cmp=com.cn.ipc.client3/.Client3Activity }
+Status: ok
+LaunchState: COLD
+Activity: com.cn.ipc.client3/.Client3Activity
+TotalTime: 337
+WaitTime: 340
+Complete

@@ -1,0 +1,8 @@
+--------- beginning of main
+10-08 11:41:00.231  9013  9806 I IpcFaultProbe: PASS run=faultawake replyBeforeSendReturns cancelCount=0
+10-08 11:41:00.241  9013  9806 I IpcFaultProbe: PASS run=faultawake explicitCancellation cancelCount=1
+10-08 11:41:00.246  9013  9806 I IpcFaultProbe: PASS run=faultawake cancellationDuringDispatch cancelCount=1
+10-08 11:41:02.597  9013  9806 I IpcFaultProbe: PASS run=faultawake replyDisconnectRace iterations=1000 lateRepliesRejected=true
+10-08 11:41:02.703  9013  9806 I IpcFaultProbe: PASS run=faultawake remoteFlowFactoryError propagated=true normalFlowFirstItem=0
+10-08 11:41:02.739  9013  9905 I IpcFaultProbe: PASS run=faultawake closePendingFailed=true staleConnectionRejected=true reconnectedFlow=true
+10-08 11:41:02.740  9013  9905 I IpcFaultProbe: DONE run=faultawake passed=true

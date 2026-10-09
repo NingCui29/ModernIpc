@@ -1,0 +1,1 @@
+cat: /sys/kernel/tracing/available_events: Permission denied

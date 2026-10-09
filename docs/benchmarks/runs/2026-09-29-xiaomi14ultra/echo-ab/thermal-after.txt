@@ -1,0 +1,8 @@
+Thermal Status: 0
+	Temperature{mValue=27.1, mType=2, mName=battery, mStatus=0}
+	Temperature{mValue=65.0, mType=0, mName=CPU0, mStatus=0}
+	Temperature{mValue=68.5, mType=0, mName=CPU1, mStatus=0}
+	Temperature{mValue=69.7, mType=0, mName=CPU2, mStatus=0}
+	Temperature{mValue=75.7, mType=0, mName=CPU3, mStatus=0}
+	Temperature{mValue=42.0, mType=0, mName=CPU4, mStatus=0}
+	Temperature{mValue=75.7, mType=0, mName=CPU5, mStatus=0}

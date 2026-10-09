@@ -1,0 +1,28 @@
+--------- beginning of main
+10-08 13:30:46.168  9506  9506 I IpcForeground: STATE run=guardperf2 event=WAIT_READY elapsedRealtimeMs=740323403 uptimeMs=158042660 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-08 13:30:46.235  9506  9506 I IpcForeground: STATE run=guardperf2 event=FOCUS_GAIN elapsedRealtimeMs=740323451 uptimeMs=158042708 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 13:30:46.276  9506  9506 I IpcForeground: STATE run=guardperf2 event=WAIT_READY elapsedRealtimeMs=740323510 uptimeMs=158042768 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 13:30:46.376  9506  9506 I IpcForeground: STATE run=guardperf2 event=WAIT_READY elapsedRealtimeMs=740323610 uptimeMs=158042868 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 13:30:46.477  9506  9506 I IpcForeground: STATE run=guardperf2 event=WAIT_READY elapsedRealtimeMs=740323711 uptimeMs=158042969 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 13:30:46.477  9506  9506 I IpcForeground: STATE run=guardperf2 event=BEGIN elapsedRealtimeMs=740323712 uptimeMs=158042970 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 13:30:46.484  9506 25553 I IpcGuardBench: START run=guardperf2 localCount=500000 ipcCount=1000
+10-08 13:30:46.497  9506 25553 I IpcGuardBench: PASS run=guardperf2 liveCapturedBinderAccepted=true
+10-08 13:30:46.498  9506 25553 I IpcGuardBench: PASS run=guardperf2 deadBinderFixtureRejected=true sends=0 pending=0
+10-08 13:30:46.502  9506 25553 I IpcGuardBench: PASS run=guardperf2 closeDuringAliveCheckRejected=true sends=0 pending=0
+10-08 13:30:46.510  9506 25554 I IpcGuardBench: PASS run=guardperf2 staleSnapshotRejected=true nextGenerationAccepted=true
+10-08 13:30:46.513  9506  9506 I IpcForeground: STATE run=guardperf2 event=END elapsedRealtimeMs=740323747 uptimeMs=158043005 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 13:30:46.516  9506  9506 I IpcForeground: END run=guardperf2 started=true completed=false valid=false invalidObservations=0 firstInvalidEvent=null file=foreground-guardperf2.csv scope=activity_events_and_500ms_app_samples
+10-08 13:30:46.516  9506  9506 E IpcEchoBench: FAILED run=guardperf2
+10-08 13:30:46.516  9506  9506 E IpcEchoBench: java.lang.IllegalStateException: Check failed.
+10-08 13:30:46.516  9506  9506 E IpcEchoBench: 	at com.cn.ipc.demo.IpcGuardBenchmark.probes(IpcGuardBenchmark.kt:86)
+10-08 13:30:46.516  9506  9506 E IpcEchoBench: 	at com.cn.ipc.demo.IpcGuardBenchmark.access$probes(IpcGuardBenchmark.kt:17)
+10-08 13:30:46.516  9506  9506 E IpcEchoBench: 	at com.cn.ipc.demo.IpcGuardBenchmark$probes$1.invokeSuspend(Unknown Source:15)
+10-08 13:30:46.516  9506  9506 E IpcEchoBench: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+10-08 13:30:46.516  9506  9506 E IpcEchoBench: 	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:32)
+10-08 13:30:46.516  9506  9506 E IpcEchoBench: 	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:102)
+10-08 13:30:46.516  9506  9506 E IpcEchoBench: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+10-08 13:30:46.516  9506  9506 E IpcEchoBench: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+10-08 13:30:46.516  9506  9506 E IpcEchoBench: 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+10-08 13:30:46.516  9506  9506 E IpcEchoBench: 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+10-08 13:30:46.516  9506  9506 E IpcEchoBench: 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+10-08 13:30:46.516  9506  9506 E IpcEchoBench: 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)

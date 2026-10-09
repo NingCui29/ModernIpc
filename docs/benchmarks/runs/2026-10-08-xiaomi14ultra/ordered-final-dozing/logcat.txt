@@ -1,0 +1,6 @@
+--------- beginning of main
+10-08 11:21:31.980 26400  2359 I IpcLifecycleProbe: PASS run=lifecyclefinal closeHeldRequest failed=true cause=IllegalStateException
+10-08 11:21:32.246 26400  2358 I IpcLifecycleProbe: PASS run=lifecyclefinal close cycle=1 subscriptions=0 requests=0 eventsQuiet=true
+10-08 11:21:32.385 26400  2273 I IpcLifecycleProbe: PASS run=lifecyclefinal reconnect cycle=1 subscriptions=1 generation=2
+10-08 11:21:32.646 26400  2273 I IpcLifecycleProbe: PASS run=lifecyclefinal close cycle=2 subscriptions=0 requests=0 eventsQuiet=true
+10-08 11:21:32.774 26400  2273 I IpcLifecycleProbe: PASS run=lifecyclefinal reconnect cycle=2 subscriptions=1 generation=3

@@ -1,0 +1,4 @@
+{
+  "valid": false,
+  "reason": "ON_PAUSE and FOCUS_LOSS during measurement; all raw CSV retained, excluded from qualified comparison"
+}

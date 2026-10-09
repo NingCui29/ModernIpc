@@ -1,0 +1,45 @@
+10-08 09:45:15.107  3767  7165 I IpcAuthBench: RESULT run=authab1 mode=legacy api=suspend count=1000 failures=0 p50Ms=1.428281 p90Ms=2.865313 p99Ms=4.172188 meanMs=1.705486082 file=auth-authab1-legacy-suspend.csv
+10-08 09:45:15.385  3767  7165 I IpcAuthBench: RESULT run=authab1 mode=legacy api=direct count=1000 failures=0 p50Ms=0.251823 p90Ms=0.282396 p99Ms=0.41099 meanMs=0.25839802900000003 file=auth-authab1-legacy-direct.csv
+10-08 09:45:28.723  3767  7166 I IpcAuthBench: RESULT run=authab1 mode=optimized api=suspend count=1000 failures=0 p50Ms=1.902083 p90Ms=3.18875 p99Ms=4.969479 meanMs=13.231602998 file=auth-authab1-optimized-suspend.csv
+10-08 09:45:28.876  3767  7166 I IpcAuthBench: RESULT run=authab1 mode=optimized api=direct count=1000 failures=0 p50Ms=0.10823 p90Ms=0.19151 p99Ms=0.741354 meanMs=0.146463489 file=auth-authab1-optimized-direct.csv
+10-08 09:45:28.876  3767  7166 I IpcAuthBench: DONE run=authab1 restored=optimized
+10-08 09:45:34.265  4378  7737 I IpcAuthBench: RESULT run=authab2 mode=optimized api=direct count=1000 failures=0 p50Ms=0.121562 p90Ms=0.203646 p99Ms=0.921927 meanMs=0.166271218 file=auth-authab2-optimized-direct.csv
+10-08 09:45:35.056  4378  7737 I IpcAuthBench: RESULT run=authab2 mode=optimized api=suspend count=1000 failures=0 p50Ms=0.593178 p90Ms=1.358854 p99Ms=1.672292 meanMs=0.763770979 file=auth-authab2-optimized-suspend.csv
+10-08 09:45:35.380  4378  7737 I IpcAuthBench: RESULT run=authab2 mode=legacy api=direct count=1000 failures=0 p50Ms=0.316406 p90Ms=0.380365 p99Ms=0.492031 meanMs=0.308213864 file=auth-authab2-legacy-direct.csv
+10-08 09:45:36.261  4378  7737 I IpcAuthBench: RESULT run=authab2 mode=legacy api=suspend count=1000 failures=0 p50Ms=0.689323 p90Ms=1.296458 p99Ms=1.48651 meanMs=0.822863844 file=auth-authab2-legacy-suspend.csv
+10-08 09:45:36.262  4378  7737 I IpcAuthBench: DONE run=authab2 restored=optimized
+10-08 09:46:43.176  4836  8253 I IpcAuthBench: RESULT run=authab3 mode=optimized api=suspend count=1000 failures=0 p50Ms=0.571458 p90Ms=1.292448 p99Ms=1.871875 meanMs=0.731683557 file=auth-authab3-optimized-suspend.csv
+10-08 09:46:43.459  4836  8253 I IpcAuthBench: RESULT run=authab3 mode=optimized api=direct count=1000 failures=0 p50Ms=0.282604 p90Ms=0.357709 p99Ms=0.594792 meanMs=0.270932723 file=auth-authab3-optimized-direct.csv
+10-08 09:46:44.379  4836  8253 I IpcAuthBench: RESULT run=authab3 mode=legacy api=suspend count=1000 failures=0 p50Ms=0.807344 p90Ms=1.294687 p99Ms=1.492031 meanMs=0.8694823469999999 file=auth-authab3-legacy-suspend.csv
+10-08 09:46:44.689  4836  8253 I IpcAuthBench: RESULT run=authab3 mode=legacy api=direct count=1000 failures=0 p50Ms=0.28875 p90Ms=0.33849 p99Ms=0.444271 meanMs=0.292120362 file=auth-authab3-legacy-direct.csv
+10-08 09:46:44.689  4836  8253 I IpcAuthBench: DONE run=authab3 restored=optimized
+10-08 09:47:26.246  7318  8492 I IpcAuthBench: RESULT run=authab4 mode=legacy api=direct count=1000 failures=0 p50Ms=0.12599 p90Ms=0.189063 p99Ms=1.038906 meanMs=0.163220169 file=auth-authab4-legacy-direct.csv
+10-08 09:47:26.910  7318  8492 I IpcAuthBench: RESULT run=authab4 mode=legacy api=suspend count=1000 failures=0 p50Ms=0.514323 p90Ms=1.031666 p99Ms=1.485573 meanMs=0.637543644 file=auth-authab4-legacy-suspend.csv
+10-08 09:47:27.172  7318  8492 I IpcAuthBench: RESULT run=authab4 mode=optimized api=direct count=1000 failures=0 p50Ms=0.253594 p90Ms=0.337187 p99Ms=0.491875 meanMs=0.24943980100000002 file=auth-authab4-optimized-direct.csv
+10-08 09:47:28.141  7318  8492 I IpcAuthBench: RESULT run=authab4 mode=optimized api=suspend count=1000 failures=0 p50Ms=0.936146 p90Ms=1.2575 p99Ms=1.438281 meanMs=0.922557124 file=auth-authab4-optimized-suspend.csv
+10-08 09:47:28.142  7318  8492 I IpcAuthBench: DONE run=authab4 restored=optimized
+10-08 09:48:01.926  8746  8772 I IpcAuthMicro: TIME batch=0 mode=legacy count=50000 wallNs=121533542 cpuNs=116058434
+10-08 09:48:01.976  8746  8772 I IpcAuthMicro: TIME batch=1 mode=optimized count=50000 wallNs=50143333 cpuNs=47547553
+10-08 09:48:01.992  8746  8772 I IpcAuthMicro: TIME batch=2 mode=optimized count=50000 wallNs=16195520 cpuNs=16084895
+10-08 09:48:02.034  8746  8772 I IpcAuthMicro: TIME batch=3 mode=legacy count=50000 wallNs=41436406 cpuNs=40928124
+10-08 09:48:02.073  8746  8772 I IpcAuthMicro: ALLOC batch=0 mode=legacy count=50000 beforeBytes=31267296 afterBytes=34478560 bytes=3211264 gc=0
+10-08 09:48:02.089  8746  8772 I IpcAuthMicro: ALLOC batch=1 mode=optimized count=50000 beforeBytes=34478560 afterBytes=34478560 bytes=0 gc=0
+10-08 09:48:02.105  8746  8772 I IpcAuthMicro: ALLOC batch=2 mode=optimized count=50000 beforeBytes=34478560 afterBytes=34478560 bytes=0 gc=0
+10-08 09:48:02.144  8746  8772 I IpcAuthMicro: ALLOC batch=3 mode=legacy count=50000 beforeBytes=34478560 afterBytes=37689824 bytes=3211264 gc=0
+10-08 09:48:02.144  8746  8772 I IpcAuthMicro: DONE sameUid=true countPerBatch=50000
+10-08 09:49:26.983  8746  8770 I IpcAuthMicro: TIME batch=0 mode=legacy count=50000 wallNs=27718020 cpuNs=25764218
+10-08 09:49:26.993  8746  8770 I IpcAuthMicro: TIME batch=1 mode=optimized count=50000 wallNs=9423906 cpuNs=9351094
+10-08 09:49:27.002  8746  8770 I IpcAuthMicro: TIME batch=2 mode=optimized count=50000 wallNs=9573281 cpuNs=9398490
+10-08 09:49:27.025  8746  8770 I IpcAuthMicro: TIME batch=3 mode=legacy count=50000 wallNs=22412864 cpuNs=22214894
+10-08 09:49:27.049  8746  8770 I IpcAuthMicro: ALLOC batch=0 mode=legacy count=50000 beforeBytes=44325344 afterBytes=47585760 bytes=3260416 gc=1
+10-08 09:49:27.058  8746  8770 I IpcAuthMicro: ALLOC batch=1 mode=optimized count=50000 beforeBytes=47585760 afterBytes=47585760 bytes=0 gc=0
+10-08 09:49:27.068  8746  8770 I IpcAuthMicro: ALLOC batch=2 mode=optimized count=50000 beforeBytes=47585760 afterBytes=47585760 bytes=0 gc=0
+10-08 09:49:27.090  8746  8770 I IpcAuthMicro: ALLOC batch=3 mode=legacy count=50000 beforeBytes=47585760 afterBytes=50780640 bytes=3194880 gc=0
+10-08 09:49:27.090  8746  8770 I IpcAuthMicro: DONE sameUid=true countPerBatch=50000
+10-08 09:50:09.089  8347  9175 I IpcFaultProbe: PASS run=faultauth1 replyBeforeSendReturns cancelCount=0
+10-08 09:50:09.091  8347  9176 I IpcFaultProbe: PASS run=faultauth1 explicitCancellation cancelCount=1
+10-08 09:50:09.092  8347  9176 I IpcFaultProbe: PASS run=faultauth1 cancellationDuringDispatch cancelCount=1
+10-08 09:50:10.298  8347  9175 I IpcFaultProbe: PASS run=faultauth1 replyDisconnectRace iterations=1000 lateRepliesRejected=true
+10-08 09:50:10.332  8347  9175 I IpcFaultProbe: PASS run=faultauth1 remoteFlowFactoryError propagated=true normalFlowFirstItem=0
+10-08 09:50:10.349  8347  9233 I IpcFaultProbe: PASS run=faultauth1 closePendingFailed=true staleConnectionRejected=true reconnectedFlow=true
+10-08 09:50:10.349  8347  9233 I IpcFaultProbe: DONE run=faultauth1 passed=true

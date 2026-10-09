@@ -1,0 +1,238 @@
+diff --git a/sample/build.gradle b/sample/build.gradle
+index c60ff83..571c083 100644
+--- a/sample/build.gradle
++++ b/sample/build.gradle
+@@ -1,6 +1,14 @@
+ apply plugin: 'com.android.application'
+ 
+ android {
++    signingConfigs {
++        debug {
++            storeFile file('bench-debug.keystore')
++            storePassword 'android'
++            keyAlias 'AndroidDebugKey'
++            keyPassword 'android'
++        }
++    }
+     compileSdkVersion 26
+     
+     defaultConfig {
+diff --git a/sample/src/main/java/com/example/andlinker/BindingActivity.java b/sample/src/main/java/com/example/andlinker/BindingActivity.java
+index a0798ae..c3555fd 100644
+--- a/sample/src/main/java/com/example/andlinker/BindingActivity.java
++++ b/sample/src/main/java/com/example/andlinker/BindingActivity.java
+@@ -13,6 +13,7 @@ import com.codezjx.andlinker.Callback;
+ import com.codezjx.andlinker.adapter.OriginalCallAdapterFactory;
+ import com.codezjx.andlinker.adapter.rxjava2.RxJava2CallAdapterFactory;
+ import com.codezjx.andlinker.annotation.RemoteInterface;
++import com.codezjx.andlinker.annotation.In;
+ 
+ import java.util.List;
+ 
+@@ -38,7 +39,7 @@ public class BindingActivity extends AppCompatActivity implements AndLinker.Bind
+         setContentView(R.layout.activity_binding);
+         ButterKnife.bind(this);
+ 
+-        AndLinker.enableLogger(true);
++        AndLinker.enableLogger(getIntent().getStringExtra("ipc_benchmark") == null);
+         mLinker = new AndLinker.Builder(this)
+                 .packageName(REMOTE_SERVICE_PKG)
+                 .action(REMOTE_SERVICE_ACTION)
+@@ -58,6 +59,11 @@ public class BindingActivity extends AppCompatActivity implements AndLinker.Bind
+         mRemoteService = mLinker.create(IRemoteService.class);
+         mRemoteService.init("msg from client");
+         mRemoteTask = mLinker.create(IRemoteTask.class);
++        final String runId = getIntent().getStringExtra("ipc_benchmark");
++        if (runId != null) {
++            new Thread(() -> IpcEchoBenchmark.run(mRemoteService, mRemoteTask, getFilesDir(), runId),
++                    "AndLinkerEchoBench").start();
++        }
+     }
+ 
+     @Override
+@@ -162,6 +168,8 @@ public class BindingActivity extends AppCompatActivity implements AndLinker.Bind
+     @RemoteInterface
+     public interface IRemoteTask {
+ 
++        Call<String> echo(@In String payload);
++
+         Call<Integer> remoteCalculate(int a, int b);
+ 
+         Observable<List<ParcelableObj>> getDatas();
+diff --git a/sample/src/main/java/com/example/andlinker/IRemoteService.java b/sample/src/main/java/com/example/andlinker/IRemoteService.java
+index 4fcf9d2..5e72949 100644
+--- a/sample/src/main/java/com/example/andlinker/IRemoteService.java
++++ b/sample/src/main/java/com/example/andlinker/IRemoteService.java
+@@ -17,6 +17,8 @@ public interface IRemoteService extends IBaseService {
+ 
+     int getPid();
+ 
++    String echo(@In String payload);
++
+     void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat,
+                     double aDouble, String aString);
+ 
+@@ -26,4 +28,4 @@ public interface IRemoteService extends IBaseService {
+ 
+     @OneWay
+     void onewayMethod(String msg);
+-}
+\ No newline at end of file
++}
+diff --git a/sample/src/main/java/com/example/andlinker/IRemoteTask.java b/sample/src/main/java/com/example/andlinker/IRemoteTask.java
+index 966a8a4..2387d06 100644
+--- a/sample/src/main/java/com/example/andlinker/IRemoteTask.java
++++ b/sample/src/main/java/com/example/andlinker/IRemoteTask.java
+@@ -1,6 +1,7 @@
+ package com.example.andlinker;
+ 
+ import com.codezjx.andlinker.annotation.RemoteInterface;
++import com.codezjx.andlinker.annotation.In;
+ 
+ import java.util.List;
+ 
+@@ -12,6 +13,8 @@ public interface IRemoteTask {
+ 
+     int remoteCalculate(int a, int b);
+ 
++    String echo(@In String payload);
++
+     List<ParcelableObj> getDatas();
+     
+ }
+diff --git a/sample/src/main/java/com/example/andlinker/IpcEchoBenchmark.java b/sample/src/main/java/com/example/andlinker/IpcEchoBenchmark.java
+new file mode 100644
+index 0000000..3f3a369
+--- /dev/null
++++ b/sample/src/main/java/com/example/andlinker/IpcEchoBenchmark.java
+@@ -0,0 +1,102 @@
++package com.example.andlinker;
++
++import android.os.SystemClock;
++import android.util.Log;
++import java.io.File;
++import java.io.FileWriter;
++import java.util.Arrays;
++import java.util.concurrent.CountDownLatch;
++import java.util.concurrent.TimeUnit;
++import java.util.concurrent.atomic.AtomicReference;
++import com.codezjx.andlinker.Call;
++import com.codezjx.andlinker.Callback;
++
++/** Triggered only by the explicit ipc_benchmark intent extra. */
++final class IpcEchoBenchmark {
++    private static final int WARMUP = 50;
++    private static final int ITERATIONS = 1000;
++
++    static void run(IRemoteService echo, BindingActivity.IRemoteTask asyncEcho, File directory, String runId) {
++        try {
++            for (int size : new int[] {16, 1024}) {
++                char[] chars = new char[size];
++                Arrays.fill(chars, 'x');
++                String payload = new String(chars);
++                for (int i = 0; i < WARMUP; i++) {
++                    if (!payload.equals(echo.echo(payload))) throw new IllegalStateException("warmup mismatch");
++                }
++                long[] samples = new long[ITERATIONS];
++                for (int i = 0; i < ITERATIONS; i++) {
++                    long start = SystemClock.elapsedRealtimeNanos();
++                    if (!payload.equals(echo.echo(payload))) throw new IllegalStateException("echo mismatch");
++                    samples[i] = SystemClock.elapsedRealtimeNanos() - start;
++                }
++                long[] sorted = samples.clone();
++                Arrays.sort(sorted);
++                double sum = 0.0;
++                File output = new File(directory, "andlinker-" + runId + "-" + size + ".csv");
++                try (FileWriter writer = new FileWriter(output)) {
++                    for (long sample : samples) {
++                        writer.write(Long.toString(sample));
++                        writer.write('\n');
++                        sum += sample;
++                    }
++                }
++                Log.i("IpcEchoBench", "RESULT mode=sync run=" + runId + " size=" + size +
++                    " count=" + ITERATIONS + " failures=0 meanMs=" + (sum / ITERATIONS / 1_000_000.0) +
++                    " p50Ms=" + (sorted[499] / 1_000_000.0) +
++                    " p90Ms=" + (sorted[899] / 1_000_000.0) +
++                    " p99Ms=" + (sorted[989] / 1_000_000.0) +
++                    " file=" + output.getName());
++
++                for (int i = 0; i < WARMUP; i++) {
++                    if (!payload.equals(callAsync(asyncEcho, payload))) throw new IllegalStateException("async warmup mismatch");
++                }
++                long[] asyncSamples = new long[ITERATIONS];
++                for (int i = 0; i < ITERATIONS; i++) {
++                    long start = SystemClock.elapsedRealtimeNanos();
++                    if (!payload.equals(callAsync(asyncEcho, payload))) throw new IllegalStateException("async echo mismatch");
++                    asyncSamples[i] = SystemClock.elapsedRealtimeNanos() - start;
++                }
++                long[] asyncSorted = asyncSamples.clone();
++                Arrays.sort(asyncSorted);
++                double asyncSum = 0.0;
++                File asyncOutput = new File(directory, "andlinker-async-" + runId + "-" + size + ".csv");
++                try (FileWriter writer = new FileWriter(asyncOutput)) {
++                    for (long sample : asyncSamples) {
++                        writer.write(Long.toString(sample));
++                        writer.write('\n');
++                        asyncSum += sample;
++                    }
++                }
++                Log.i("IpcEchoBench", "RESULT mode=async run=" + runId + " size=" + size +
++                    " count=" + ITERATIONS + " failures=0 meanMs=" + (asyncSum / ITERATIONS / 1_000_000.0) +
++                    " p50Ms=" + (asyncSorted[499] / 1_000_000.0) +
++                    " p90Ms=" + (asyncSorted[899] / 1_000_000.0) +
++                    " p99Ms=" + (asyncSorted[989] / 1_000_000.0) +
++                    " file=" + asyncOutput.getName());
++            }
++        } catch (Exception error) {
++            Log.e("IpcEchoBench", "FAILED run=" + runId, error);
++        }
++    }
++
++    private static String callAsync(BindingActivity.IRemoteTask service, String payload) throws Exception {
++        CountDownLatch done = new CountDownLatch(1);
++        AtomicReference<String> value = new AtomicReference<>();
++        AtomicReference<Throwable> failure = new AtomicReference<>();
++        service.echo(payload).enqueue(new Callback<String>() {
++            @Override public void onResponse(Call<String> call, String response) {
++                value.set(response);
++                done.countDown();
++            }
++            @Override public void onFailure(Call<String> call, Throwable error) {
++                failure.set(error);
++                done.countDown();
++            }
++        });
++        if (!done.await(5, TimeUnit.SECONDS)) throw new IllegalStateException("async echo timeout");
++        if (failure.get() != null) throw new IllegalStateException("async echo failed", failure.get());
++        return value.get();
++    }
++}
+diff --git a/sample/src/main/java/com/example/andlinker/RemoteService.java b/sample/src/main/java/com/example/andlinker/RemoteService.java
+index 0ec307c..95a1b4f 100644
+--- a/sample/src/main/java/com/example/andlinker/RemoteService.java
++++ b/sample/src/main/java/com/example/andlinker/RemoteService.java
+@@ -56,6 +56,11 @@ public class RemoteService extends Service {
+             return android.os.Process.myPid();
+         }
+ 
++        @Override
++        public String echo(String payload) {
++            return payload;
++        }
++
+         @Override
+         public void basicTypes(int anInt, long aLong, boolean aBoolean,
+                                float aFloat, double aDouble, String aString) {
+@@ -97,6 +102,11 @@ public class RemoteService extends Service {
+     };
+     
+     private final IRemoteTask mRemoteTask = new IRemoteTask() {
++        @Override
++        public String echo(String payload) {
++            return payload;
++        }
++
+         @Override
+         public int remoteCalculate(int a, int b) {
+             Log.d(TAG, "Call remoteCalculate(): " + a + ", " + b);

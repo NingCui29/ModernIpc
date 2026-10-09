@@ -1,0 +1,13 @@
+{
+  "serial": "925c23bb",
+  "capturedUtc": "2026-10-09T07:04:15.939721+00:00",
+  "argv": [
+    "adb",
+    "-s",
+    "925c23bb",
+    "get-state"
+  ],
+  "exitCode": 1,
+  "stdout": "",
+  "stderr": "error: device '925c23bb' not found\n"
+}

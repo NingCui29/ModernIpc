@@ -1,0 +1,325 @@
+--------- beginning of main
+10-09 09:47:51.815  3217  3217 I perfetto:    perfetto_cmd.cc:1149 Connected to the Perfetto traced service, TTL: 20s
+10-09 09:47:51.815  2707  2707 I perfetto: ng_service_impl.cc:1144 Configured tracing session 4, #sources:2, duration:20000 ms, #buffers:1, total buffer size:32768 KB, total sessions:1, uid:2000 session name: ""
+10-09 09:47:51.815  2705  2705 I perfetto:  probes_producer.cc:156 Ftrace setup (target_buf=6)
+10-09 09:47:51.815  2705  2705 I perfetto:    ftrace_procfs.cc:524 disabled ftrace in /sys/kernel/tracing/
+10-09 09:47:51.812  2705  2705 W traced_probes: type=1400 audit(0.0:295777): avc:  denied  { read } for  name="current_tracer" dev="tracefs" ino=9487 scontext=u:r:traced_probes:s0 tcontext=u:object_r:debugfs_tracing_debug:s0 tclass=file permissive=0
+10-09 09:47:51.840  2705  2705 I perfetto:    ftrace_procfs.cc:521 enabled ftrace in /sys/kernel/tracing/
+10-09 09:47:51.883  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 127 KB, chunk num: 4
+10-09 09:47:51.883  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:51.884  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 127 KB, chunk num: 4
+10-09 09:47:51.884  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:51.974  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 223 KB, chunk num: 7
+10-09 09:47:51.974  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:52.068  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 543 KB, chunk num: 17
+10-09 09:47:52.068  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:52.070  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 223 KB, chunk num: 7
+10-09 09:47:52.070  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:52.168  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 543 KB, chunk num: 17
+10-09 09:47:52.168  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:52.173  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 479 KB, chunk num: 15
+10-09 09:47:52.173  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:52.220  1466  1466 I IpcForeground: STATE run=traceon4 event=WAIT_READY elapsedRealtimeMs=813349454 uptimeMs=184902854 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-09 09:47:52.248  1466  1466 I IpcForeground: STATE run=traceon4 event=FOCUS_GAIN elapsedRealtimeMs=813349483 uptimeMs=184902882 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:47:52.270  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 543 KB, chunk num: 17
+10-09 09:47:52.270  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 1 ms
+10-09 09:47:52.272  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 447 KB, chunk num: 14
+10-09 09:47:52.272  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:52.320  1466  1466 I IpcForeground: STATE run=traceon4 event=WAIT_READY elapsedRealtimeMs=813349554 uptimeMs=184902954 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:47:52.368  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 543 KB, chunk num: 17
+10-09 09:47:52.368  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:52.371  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 543 KB, chunk num: 17
+10-09 09:47:52.371  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:52.373  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 255 KB, chunk num: 8
+10-09 09:47:52.373  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:52.373  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:52.373  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:52.420  1466  1466 I IpcForeground: STATE run=traceon4 event=WAIT_READY elapsedRealtimeMs=813349654 uptimeMs=184903054 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:47:52.467  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 543 KB, chunk num: 17
+10-09 09:47:52.467  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:52.469  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 543 KB, chunk num: 17
+10-09 09:47:52.469  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:52.469  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 63 KB, chunk num: 2
+10-09 09:47:52.469  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:52.521  1466  1466 I IpcForeground: STATE run=traceon4 event=WAIT_READY elapsedRealtimeMs=813349755 uptimeMs=184903155 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:47:52.521  1466  1466 I IpcForeground: STATE run=traceon4 event=BEGIN elapsedRealtimeMs=813349756 uptimeMs=184903155 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:52.522  1466  3397 I IpcTraceBench: START run=traceon4 trace=true count=1000 warmup=50 payloadChars=16 dispatcher=Default
+10-09 09:47:52.568  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 543 KB, chunk num: 17
+10-09 09:47:52.568  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:52.569  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 543 KB, chunk num: 17
+10-09 09:47:52.569  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:52.570  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 223 KB, chunk num: 7
+10-09 09:47:52.570  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:52.669  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 543 KB, chunk num: 17
+10-09 09:47:52.670  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 1 ms
+10-09 09:47:52.671  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 223 KB, chunk num: 7
+10-09 09:47:52.671  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:52.768  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 543 KB, chunk num: 17
+10-09 09:47:52.768  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:52.769  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 415 KB, chunk num: 13
+10-09 09:47:52.769  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:52.882  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 543 KB, chunk num: 17
+10-09 09:47:52.882  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:52.887  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 383 KB, chunk num: 12
+10-09 09:47:52.887  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:52.971  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 191 KB, chunk num: 6
+10-09 09:47:52.971  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:53.022  1466  1466 I IpcForeground: STATE run=traceon4 event=SAMPLE elapsedRealtimeMs=813350256 uptimeMs=184903656 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:53.074  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 159 KB, chunk num: 5
+10-09 09:47:53.074  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:53.172  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 191 KB, chunk num: 6
+10-09 09:47:53.172  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:53.269  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 127 KB, chunk num: 4
+10-09 09:47:53.269  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:53.369  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 223 KB, chunk num: 7
+10-09 09:47:53.369  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:53.370  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:53.370  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:53.475  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 191 KB, chunk num: 6
+10-09 09:47:53.475  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:53.524  1466  1466 I IpcForeground: STATE run=traceon4 event=SAMPLE elapsedRealtimeMs=813350758 uptimeMs=184904158 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:53.575  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 191 KB, chunk num: 6
+10-09 09:47:53.575  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:53.609  1466  3397 I IpcReqTrace: END run=traceon4 pid=1466 events=6000 dropped=0
+10-09 09:47:53.641  3421  3473 I IpcReqTrace: END run=traceon4 pid=3421 events=5000 dropped=0
+10-09 09:47:53.646  1466  3399 I IpcTraceBench: PASS run=traceon4 serialEcho trace=true count=1000 failures=0 pending=0 requests=0 file=trace-rtt-traceon4.csv
+10-09 09:47:53.646  1466  3399 I IpcTraceBench: PASS run=traceon4 traceBuffers clientEvents=6000 serverEvents=5000 clientDropped=0 serverDropped=0
+10-09 09:47:53.646  1466  3399 I IpcTraceBench: DONE run=traceon4 passed=true checks=2 trace=true count=1000 clientEvents=6000 serverEvents=5000 dropped=0
+10-09 09:47:53.647  1466  1466 I IpcForeground: STATE run=traceon4 event=END elapsedRealtimeMs=813350881 uptimeMs=184904281 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:53.649  1466  1466 I IpcForeground: END run=traceon4 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-traceon4.csv scope=activity_events_and_500ms_app_samples
+10-09 09:47:53.671  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 159 KB, chunk num: 5
+10-09 09:47:53.672  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:53.768  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:53.768  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:53.868  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 63 KB, chunk num: 2
+10-09 09:47:53.869  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:53.968  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 63 KB, chunk num: 2
+10-09 09:47:53.969  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:54.074  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 63 KB, chunk num: 2
+10-09 09:47:54.074  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 1 ms
+10-09 09:47:54.169  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:54.170  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:54.271  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:54.271  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:54.372  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 63 KB, chunk num: 2
+10-09 09:47:54.372  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:54.375  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:54.375  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:54.566  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:54.567  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:54.768  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 63 KB, chunk num: 2
+10-09 09:47:54.769  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:54.868  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:54.868  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:54.967  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:54.967  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:55.167  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 63 KB, chunk num: 2
+10-09 09:47:55.167  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:55.268  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:55.269  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:55.369  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:55.370  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:55.370  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:55.370  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:55.567  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:55.568  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:55.770  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:55.770  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:55.870  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 63 KB, chunk num: 2
+10-09 09:47:55.870  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:56.169  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:56.172  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 2 ms
+10-09 09:47:56.367  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:56.367  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:56.373  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:56.374  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:56.671  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:56.671  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:56.868  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:56.868  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:57.067  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:57.069  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 1 ms
+10-09 09:47:57.169  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:57.170  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 1 ms
+10-09 09:47:57.268  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:57.269  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:57.373  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 63 KB, chunk num: 2
+10-09 09:47:57.373  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:57.469  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:57.469  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:57.567  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:57.567  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:57.868  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:57.868  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:58.068  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:58.069  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:58.169  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:58.169  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:58.269  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:58.269  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:58.367  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:58.367  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:58.369  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:58.369  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:58.369  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:58.369  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:58.668  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:58.668  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:58.770  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:58.770  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:59.070  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:59.070  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:59.368  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 63 KB, chunk num: 2
+10-09 09:47:59.369  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:59.369  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:59.369  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:59.668  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:47:59.668  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:47:59.772  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 63 KB, chunk num: 2
+10-09 09:47:59.773  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:00.069  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 63 KB, chunk num: 2
+10-09 09:48:00.069  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:00.168  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:00.169  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:00.369  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:00.369  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:00.370  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:00.370  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:00.370  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:00.370  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:00.671  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 63 KB, chunk num: 2
+10-09 09:48:00.671  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:00.867  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:00.868  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:01.069  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:01.070  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 1 ms
+10-09 09:48:01.269  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:01.270  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:01.371  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 63 KB, chunk num: 2
+10-09 09:48:01.371  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:01.371  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:01.371  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:01.469  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:01.469  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:01.667  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:01.667  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:01.869  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:01.869  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:02.267  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:02.268  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:02.370  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:02.370  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:02.468  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 63 KB, chunk num: 2
+10-09 09:48:02.468  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:02.670  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 63 KB, chunk num: 2
+10-09 09:48:02.670  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:02.872  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:02.873  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:03.167  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:03.167  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:03.370  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:03.370  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:03.669  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:03.670  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 1 ms
+10-09 09:48:03.968  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:03.968  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:04.167  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:04.168  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:04.270  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:04.271  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:04.375  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:04.376  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:04.768  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:04.773  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 5 ms
+10-09 09:48:05.068  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:05.068  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:05.369  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 63 KB, chunk num: 2
+10-09 09:48:05.369  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:05.369  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:05.370  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:05.468  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:05.469  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:05.569  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:05.570  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:05.669  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:05.669  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:05.869  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:05.869  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:05.968  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:05.969  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:06.168  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:06.168  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:06.371  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:06.371  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:06.372  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:06.372  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:06.671  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:06.671  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:06.870  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:06.870  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:07.168  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:07.169  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:07.370  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 63 KB, chunk num: 2
+10-09 09:48:07.371  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:07.769  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:07.769  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:07.975  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:07.975  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:08.069  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:08.069  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:08.269  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:08.270  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:08.375  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:08.375  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:08.375  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:08.376  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:08.569  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:08.569  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:08.867  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:08.867  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:09.070  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:09.071  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 1 ms
+10-09 09:48:09.368  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:09.370  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 2 ms
+10-09 09:48:09.375  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:09.376  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:09.376  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:09.377  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:09.468  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:09.469  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:09.569  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:09.570  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:09.769  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:09.769  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:10.169  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:10.170  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 1 ms
+10-09 09:48:10.269  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:10.269  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:10.369  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:10.369  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:10.669  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:10.670  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 1 ms
+10-09 09:48:10.969  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:10.970  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 1 ms
+10-09 09:48:11.168  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:11.168  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:11.368  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:11.368  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:11.370  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:11.370  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:11.370  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:11.371  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 1 ms
+10-09 09:48:11.670  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:11.671  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:11.822  2707  2707 I perfetto: ng_service_impl.cc:4929 Commit data finished. Producer: perfetto.traced_probes, BufferID: 6, total size: 31 KB, chunk num: 1
+10-09 09:48:11.822  2707  2707 I perfetto: ng_service_impl.cc:4934 Time cost: 0 ms
+10-09 09:48:11.823  2707  2707 I perfetto: ng_service_impl.cc:2226 FlushAndDisableTracing(4) done, success=1
+10-09 09:48:11.825  2705  2705 I perfetto:  probes_producer.cc:481 Producer stop (id=11)
+10-09 09:48:11.832  2705  2705 I perfetto:    ftrace_procfs.cc:524 disabled ftrace in /sys/kernel/tracing/
+10-09 09:48:11.840  2705  2705 I perfetto:    ftrace_procfs.cc:524 disabled ftrace in /sys/kernel/tracing/
+10-09 09:48:11.880  2705  2705 I perfetto:  probes_producer.cc:481 Producer stop (id=12)
+10-09 09:48:11.882  2707  2707 E perfetto: ng_service_impl.cc:3813 Unable to read ro.boot.hardware.revision
+10-09 09:48:11.882  2707  2707 E perfetto: ng_service_impl.cc:3820 Unable to read ro.boot.hardware.ufs
+10-09 09:48:11.882  2707  2707 E perfetto: ng_service_impl.cc:3827 Unable to read ro.boot.hardware.ddr
+10-09 09:48:11.969  3217  3217 I perfetto:    perfetto_cmd.cc:1312 Wrote 14982330 bytes into /data/misc/perfetto-traces/modernipc-traceon4-40cdc1ee.perfetto-trace
+10-09 09:48:11.973  2707  2707 I perfetto: ng_service_impl.cc:2825 Tracing session 4 ended, total sessions:0

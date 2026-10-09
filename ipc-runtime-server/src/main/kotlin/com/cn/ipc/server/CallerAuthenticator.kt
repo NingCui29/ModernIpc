@@ -2,6 +2,7 @@ package com.cn.ipc.server
 
 import android.os.Binder
 import android.os.Process
+import android.content.pm.PackageManager
 
 /**
  * 调用方身份信息数据类，用于封装调用方的基础身份与鉴权数据。
@@ -34,7 +35,7 @@ class CallerAuthenticator(private val context: android.content.Context) {
         val uid = Binder.getCallingUid()
         val pid = Binder.getCallingPid()
         
-        // 如果是同进程调用，直接放行，无需进一步查询包名等耗时操作
+        // 相同 UID 的调用无需进一步查询包名；调用方可以处于另一个进程
         if (uid == Process.myUid()) {
             return CallerIdentity(uid, pid, setOf(context.packageName), sessionId)
         }
@@ -50,10 +51,27 @@ class CallerAuthenticator(private val context: android.content.Context) {
      * 校验调用方是否拥有调用某个服务某个操作的权限
      */
     fun authorize(caller: CallerIdentity, serviceId: Int) {
-        // 在此处可以扩展校验逻辑：
-        // 1. 检查签名证书
-        // 2. 检查特定服务所需的权限清单
-        // 目前为了 POC 跑通，暂时放行所有同一签名的应用
-        // val mySignatures = ...
+        if (caller.uid == Process.myUid()) return
+        if (caller.packages.isEmpty() ||
+            context.packageManager.checkSignatures(Process.myUid(), caller.uid) != PackageManager.SIGNATURE_MATCH
+        ) {
+            throw SecurityException("Caller UID ${caller.uid} cannot access service $serviceId")
+        }
+    }
+
+    /**
+     * 直接校验当前 Binder 调用方，避免构造未使用的身份信息。
+     * 不同 UID 的调用仍在每次事务中实时检查包名和签名。
+     */
+    fun authorizeCurrentCaller(serviceId: Int) {
+        val uid = Binder.getCallingUid()
+        if (uid == Process.myUid()) return
+
+        val pm = context.packageManager
+        if (pm.getPackagesForUid(uid).isNullOrEmpty() ||
+            pm.checkSignatures(Process.myUid(), uid) != PackageManager.SIGNATURE_MATCH
+        ) {
+            throw SecurityException("Caller UID $uid cannot access service $serviceId")
+        }
     }
 }

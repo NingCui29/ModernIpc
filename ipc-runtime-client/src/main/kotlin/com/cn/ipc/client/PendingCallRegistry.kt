@@ -1,29 +1,35 @@
 package com.cn.ipc.client
 
-import com.cn.ipc.RpcError
 import kotlinx.coroutines.CancellableContinuation
+import kotlinx.coroutines.withTimeout
 import java.util.concurrent.ConcurrentHashMap
+import java.util.concurrent.atomic.AtomicInteger
 import kotlin.coroutines.resumeWithException
 
-/**
- * 等待中的调用记录。
- */
+private const val CALL_DISPATCHED = 1
+private const val CALL_ABORTED = 2
+private const val CALL_CANCEL_SENT = 4
+
 /**
  * 等待中的调用记录。
  */
 private data class PendingCall(
     val generation: Long,
     val continuation: CancellableContinuation<Any?>,
-    val deserializer: ((android.os.Parcel) -> Any?)? = null
+    val deserializer: ((android.os.Parcel) -> Any?)? = null,
+    val onConnectionClosed: (() -> Unit)? = null
 )
 
 /**
  * 用于管理挂起函数的挂起状态。
  * 在发生回调、超时或连接断开时，确保只触发一次 continuation 恢复。
  */
-class PendingCallRegistry {
+class PendingCallRegistry(private val defaultCallTimeoutMs: Long = 30_000L) {
+    init { require(defaultCallTimeoutMs > 0) }
     /** 存储正在挂起的请求，键为唯一的 requestId，值为 PendingCall 记录 */
     private val pendingMap = ConcurrentHashMap<Long, PendingCall>()
+    val activeCallCount: Int get() = pendingMap.size
+    internal fun generationOf(requestId: Long): Long? = pendingMap[requestId]?.generation
     
     /** 用于生成全局唯一的自增 requestId */
     private val requestCounter = java.util.concurrent.atomic.AtomicLong(0)
@@ -36,18 +42,59 @@ class PendingCallRegistry {
         operationId: Int,
         generation: Long = 1L,
         deserializer: ((android.os.Parcel) -> Any?)? = null,
+        onRemoteCancel: ((Long) -> Unit)? = null,
+        block: (Long) -> Unit
+    ): T = withTimeout(defaultCallTimeoutMs) {
+        callSuspendWithinDeadline(serviceId, operationId, generation, deserializer, onRemoteCancel, block)
+    }
+
+    /** Generated callers provide a single deadline covering discovery and this registered wait. */
+    suspend fun <T> callSuspendWithinDeadline(
+        serviceId: Int,
+        operationId: Int,
+        generation: Long = 1L,
+        deserializer: ((android.os.Parcel) -> Any?)? = null,
+        onRemoteCancel: ((Long) -> Unit)? = null,
         block: (Long) -> Unit
     ): T = kotlinx.coroutines.suspendCancellableCoroutine { cont ->
         val requestId = requestCounter.incrementAndGet()
-        register(requestId, generation, cont, deserializer)
+        // One state allocation per request; bits are monotonic across callback/dispatch races.
+        val callState = AtomicInteger(0)
+        fun mark(flag: Int): Int {
+            while (true) {
+                val previous = callState.get()
+                val updated = previous or flag
+                if (previous == updated || callState.compareAndSet(previous, updated)) return updated
+            }
+        }
+        fun cancelRemoteIfDispatched() {
+            while (true) {
+                val previous = callState.get()
+                if ((previous and (CALL_DISPATCHED or CALL_ABORTED)) != (CALL_DISPATCHED or CALL_ABORTED) ||
+                    (previous and CALL_CANCEL_SENT) != 0) return
+                if (callState.compareAndSet(previous, previous or CALL_CANCEL_SENT)) {
+                    try { onRemoteCancel?.invoke(requestId) } catch (_: Exception) {}
+                    return
+                }
+            }
+        }
+        register(requestId, generation, cont, deserializer) {
+            mark(CALL_ABORTED)
+            cancelRemoteIfDispatched()
+        }
         cont.invokeOnCancellation {
+            mark(CALL_ABORTED)
             cancel(requestId)
+            cancelRemoteIfDispatched()
         }
         try {
-            block(requestId)
+            if (cont.isActive) {
+                block(requestId)
+                val dispatchedState = mark(CALL_DISPATCHED)
+                if ((dispatchedState and CALL_ABORTED) != 0) cancelRemoteIfDispatched()
+            }
         } catch (e: Exception) {
-            cancel(requestId)
-            cont.resumeWithException(e)
+            if (cancel(requestId) && cont.isActive) cont.resumeWithException(e)
         }
     }
 
@@ -59,7 +106,7 @@ class PendingCallRegistry {
         operationId: Int,
         deserializer: ((android.os.Parcel) -> Any?)? = null,
         block: (Long) -> Unit
-    ): T = callSuspend(serviceId, operationId, 1L, deserializer, block)
+    ): T = callSuspend(serviceId, operationId, 1L, deserializer, null, block)
 
     /**
      * 发起一个挂起请求 (兼容旧版无 deserializer 的调用)。
@@ -68,7 +115,7 @@ class PendingCallRegistry {
         serviceId: Int,
         operationId: Int,
         block: (Long) -> Unit
-    ): T = callSuspend(serviceId, operationId, 1L, null, block)
+    ): T = callSuspend(serviceId, operationId, 1L, null, null, block)
 
     /**
      * 注册一个新的挂起调用。
@@ -82,10 +129,11 @@ class PendingCallRegistry {
         requestId: Long,
         generation: Long,
         continuation: CancellableContinuation<*>,
-        deserializer: ((android.os.Parcel) -> Any?)? = null
+        deserializer: ((android.os.Parcel) -> Any?)? = null,
+        onConnectionClosed: (() -> Unit)? = null
     ) {
         @Suppress("UNCHECKED_CAST")
-        pendingMap[requestId] = PendingCall(generation, continuation as CancellableContinuation<Any?>, deserializer)
+        pendingMap[requestId] = PendingCall(generation, continuation as CancellableContinuation<Any?>, deserializer, onConnectionClosed)
     }
 
     /**
@@ -150,11 +198,21 @@ class PendingCallRegistry {
         val iterator = pendingMap.entries.iterator()
         while (iterator.hasNext()) {
             val entry = iterator.next()
-            if (entry.value.generation == generation) {
-                iterator.remove()
+            if (entry.value.generation == generation && pendingMap.remove(entry.key, entry.value)) {
+                try { entry.value.onConnectionClosed?.invoke() } catch (_: Exception) {}
                 if (entry.value.continuation.isActive) {
                     entry.value.continuation.resumeWithException(error)
                 }
+            }
+        }
+    }
+
+    /** Release every generation when the connection owner closes or disposes. */
+    fun failAll(error: Throwable) {
+        pendingMap.entries.forEach { entry ->
+            if (pendingMap.remove(entry.key, entry.value)) {
+                try { entry.value.onConnectionClosed?.invoke() } catch (_: Exception) {}
+                if (entry.value.continuation.isActive) entry.value.continuation.resumeWithException(error)
             }
         }
     }

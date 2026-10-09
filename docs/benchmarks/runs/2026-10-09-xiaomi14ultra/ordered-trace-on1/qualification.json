@@ -1,0 +1,19 @@
+{
+  "valid": false,
+  "ruleVersion": "foreground-coverage-v1",
+  "targetSamplePeriodMs": 500,
+  "permittedMaxGapMs": 1000,
+  "scope": "activity_events_with_bounded_periodic_sample_coverage",
+  "observations": 0,
+  "sampleCount": 0,
+  "requiredSampleCount": null,
+  "durationMs": null,
+  "maxGapMs": null,
+  "observationMaxGapMs": null,
+  "errors": [
+    "Cannot read foreground CSV: [Errno 2] No such file or directory: 'docs\\\\benchmarks\\\\runs\\\\2026-10-09-xiaomi14ultra\\\\ordered-trace-on1\\\\foreground-traceon1.csv'",
+    "Trace capture failed: ADB command failed: {'argv': ['C:\\\\Users\\\\Work\\\\AppData\\\\Local\\\\Android\\\\sdk\\\\platform-tools\\\\adb.EXE', '-s', '925c23bb', 'shell', 'perfetto', '--txt', '-c', '/data/local/tmp/modernipc-traceon1-330a345f.pbtxt', '-o', '/data/misc/perfetto-traces/modernipc-traceon1-330a345f.perfetto-trace', '--background-wait'], 'returncode': 1, 'stdout': '', 'stderr': '[808.660]     perfetto_cmd.cc:402 Could not open /data/local/tmp/modernipc-traceon1-330a345f.pbtxt. If this is a permission denied error, try placing the config in /data/misc/perfetto-configs: Perfetto should always be able to access this directory. (errno: 13, Permission denied)\\n'}"
+  ],
+  "run": "traceon1",
+  "csv": "foreground-traceon1.csv"
+}

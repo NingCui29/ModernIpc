@@ -1,0 +1,24 @@
+09-29 12:34:20.909 15351 29802 I IpcEchoBench: RESULT mode=sync run=a5 size=16 count=1000 failures=0 meanMs=0.31211754100000005 p50Ms=0.254948 p90Ms=0.357813 p99Ms=1.407708 file=andlinker-a5-16.csv
+09-29 12:34:21.305 15351 29802 I IpcEchoBench: RESULT mode=async run=a5 size=16 count=1000 failures=0 meanMs=0.369178652 p50Ms=0.354375 p90Ms=0.441719 p99Ms=0.603958 file=andlinker-async-a5-16.csv
+09-29 12:34:21.596 15351 29802 I IpcEchoBench: RESULT mode=sync run=a5 size=1024 count=1000 failures=0 meanMs=0.27118511 p50Ms=0.263541 p90Ms=0.319115 p99Ms=0.41677 file=andlinker-a5-1024.csv
+09-29 12:34:22.002 15351 29802 I IpcEchoBench: RESULT mode=async run=a5 size=1024 count=1000 failures=0 meanMs=0.38083595600000003 p50Ms=0.372708 p90Ms=0.438333 p99Ms=0.529114 file=andlinker-async-a5-1024.csv
+09-29 12:34:53.586 16003 30954 I IpcEchoBench: RESULT run=m5 size=16 count=1000 failures=0 meanMs=0.605718025 p50Ms=0.54026 p90Ms=0.80625 p99Ms=1.631875 file=modern-m5-16.csv
+09-29 12:34:54.251 16003 30954 I IpcEchoBench: RESULT run=m5 size=1024 count=1000 failures=0 meanMs=0.6365043199999999 p50Ms=0.597916 p90Ms=0.870729 p99Ms=1.086094 file=modern-m5-1024.csv
+09-29 12:34:59.691 16579 31330 I IpcEchoBench: RESULT run=m6 size=16 count=1000 failures=0 meanMs=0.608951392 p50Ms=0.532083 p90Ms=0.85052 p99Ms=1.804271 file=modern-m6-16.csv
+09-29 12:35:00.618 16579 31330 I IpcEchoBench: RESULT run=m6 size=1024 count=1000 failures=0 meanMs=0.899175885 p50Ms=0.863906 p90Ms=1.337708 p99Ms=1.58849 file=modern-m6-1024.csv
+09-29 12:35:05.337 29977 31666 I IpcEchoBench: RESULT mode=sync run=a6 size=16 count=1000 failures=0 meanMs=0.26758524699999997 p50Ms=0.256667 p90Ms=0.312812 p99Ms=0.694219 file=andlinker-a6-16.csv
+09-29 12:35:05.699 29977 31666 I IpcEchoBench: RESULT mode=async run=a6 size=16 count=1000 failures=0 meanMs=0.33752176899999997 p50Ms=0.330833 p90Ms=0.380989 p99Ms=0.486198 file=andlinker-async-a6-16.csv
+09-29 12:35:05.957 29977 31666 I IpcEchoBench: RESULT mode=sync run=a6 size=1024 count=1000 failures=0 meanMs=0.2393891 p50Ms=0.235365 p90Ms=0.267916 p99Ms=0.319063 file=andlinker-a6-1024.csv
+09-29 12:35:06.343 29977 31666 I IpcEchoBench: RESULT mode=async run=a6 size=1024 count=1000 failures=0 meanMs=0.36300670500000004 p50Ms=0.353854 p90Ms=0.412135 p99Ms=0.497031 file=andlinker-async-a6-1024.csv
+09-29 12:35:11.411 31142 32024 I IpcEchoBench: RESULT mode=sync run=a7 size=16 count=1000 failures=0 meanMs=0.292998731 p50Ms=0.264479 p90Ms=0.323958 p99Ms=0.778906 file=andlinker-a7-16.csv
+09-29 12:35:11.767 31142 32024 I IpcEchoBench: RESULT mode=async run=a7 size=16 count=1000 failures=0 meanMs=0.330588602 p50Ms=0.32375 p90Ms=0.379218 p99Ms=0.48151 file=andlinker-async-a7-16.csv
+09-29 12:35:12.016 31142 32024 I IpcEchoBench: RESULT mode=sync run=a7 size=1024 count=1000 failures=0 meanMs=0.229979046 p50Ms=0.222188 p90Ms=0.260469 p99Ms=0.323698 file=andlinker-a7-1024.csv
+09-29 12:35:12.403 31142 32024 I IpcEchoBench: RESULT mode=async run=a7 size=1024 count=1000 failures=0 meanMs=0.361294547 p50Ms=0.350938 p90Ms=0.429063 p99Ms=0.510156 file=andlinker-async-a7-1024.csv
+09-29 12:35:17.794 31448 32360 I IpcEchoBench: RESULT run=m7 size=16 count=1000 failures=0 meanMs=0.549427819 p50Ms=0.501042 p90Ms=0.643855 p99Ms=1.539531 file=modern-m7-16.csv
+09-29 12:35:18.426 31448 32360 I IpcEchoBench: RESULT run=m7 size=1024 count=1000 failures=0 meanMs=0.6018524989999999 p50Ms=0.557448 p90Ms=0.812708 p99Ms=1.185052 file=modern-m7-1024.csv
+09-29 12:35:24.004 31802 32724 I IpcEchoBench: RESULT run=m8 size=16 count=1000 failures=0 meanMs=0.690293394 p50Ms=0.539635 p90Ms=1.177032 p99Ms=1.92375 file=modern-m8-16.csv
+09-29 12:35:24.908 31802 32724 I IpcEchoBench: RESULT run=m8 size=1024 count=1000 failures=0 meanMs=0.8718393950000001 p50Ms=0.766406 p90Ms=1.346563 p99Ms=1.606198 file=modern-m8-1024.csv
+09-29 12:35:29.535 32100   701 I IpcEchoBench: RESULT mode=sync run=a8 size=16 count=1000 failures=0 meanMs=0.288408532 p50Ms=0.258802 p90Ms=0.339063 p99Ms=1.003229 file=andlinker-a8-16.csv
+09-29 12:35:29.884 32100   701 I IpcEchoBench: RESULT mode=async run=a8 size=16 count=1000 failures=0 meanMs=0.32396052000000003 p50Ms=0.308229 p90Ms=0.381302 p99Ms=0.569948 file=andlinker-async-a8-16.csv
+09-29 12:35:30.133 32100   701 I IpcEchoBench: RESULT mode=sync run=a8 size=1024 count=1000 failures=0 meanMs=0.231358544 p50Ms=0.228593 p90Ms=0.258281 p99Ms=0.304062 file=andlinker-a8-1024.csv
+09-29 12:35:30.518 32100   701 I IpcEchoBench: RESULT mode=async run=a8 size=1024 count=1000 failures=0 meanMs=0.360901197 p50Ms=0.351406 p90Ms=0.413698 p99Ms=0.482917 file=andlinker-async-a8-1024.csv

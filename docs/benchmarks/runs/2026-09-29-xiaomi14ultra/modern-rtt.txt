@@ -1,0 +1,3 @@
+--------- beginning of main
+09-29 11:05:01.161 14479 18567 I IPC_BENCHMARK: === RTT 延迟基准完成 ===
+09-29 11:05:01.161 14479 18567 I IPC_BENCHMARK: Min: 1.074ms, Avg: 2.37647ms, P50: 2.256ms, P90: 3.056ms, P99: 4.554ms, Max: 10.886ms, StdDev: 0.6750578487063165ms

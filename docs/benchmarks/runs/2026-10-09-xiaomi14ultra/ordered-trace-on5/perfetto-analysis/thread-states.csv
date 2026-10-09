@@ -1,0 +1,105 @@
+"pid","tid","name","state","slices","duration_ms"
+11726,11776,"DefaultExecutor","S",37,19014.141813
+11726,11773,"DefaultDispatch","S",194,18990.130041
+11726,11775,"DefaultDispatch","S",897,18736.378044
+11726,11752,"HeapTaskDaemon","S",9,14959.003588
+11726,11756,"FinalizerWatchd","S",3,13377.899526
+11726,11779,"binder:11726_4","S",1677,11970.414456
+11726,11741,"Runtime worker ","S",2,4999.853278
+11726,11740,"Runtime worker ","S",1,4999.428800
+11726,11743,"Runtime worker ","S",2,4996.303071
+11726,11742,"Runtime worker ","S",1,4995.819686
+11726,11765,"Profile Saver","S",63,4862.992555
+11726,11753,"ReferenceQueueD","S",1,1377.868072
+11726,11755,"FinalizerDaemon","S",1,1377.509531
+11726,11763,"binder:11726_3","S",208,1285.301720
+11726,11748,"Jit thread pool","S",48,1045.757867
+11726,11759,"binder:11726_2","S",4,511.412553
+11726,11748,"Jit thread pool","Running",113,416.467501
+11726,11758,"binder:11726_1","S",229,384.709481
+11726,11775,"DefaultDispatch","Running",924,282.156052
+11726,11779,"binder:11726_4","Running",1684,237.805567
+11726,11726,"ipc.demo:server","Running",134,142.351305
+11726,11747,"ADB-JDWP Connec","S",4,124.615156
+11726,11764,"ActivityHelper","S",8,75.172083
+11726,11779,"binder:11726_4","R",1681,64.934921
+11726,11773,"DefaultDispatch","Running",231,61.992340
+11726,11758,"binder:11726_1","Running",250,45.552544
+11726,11775,"DefaultDispatch","R",910,44.388293
+11726,11776,"DefaultExecutor","Running",41,33.725940
+11726,11764,"ActivityHelper","Running",61,29.799741
+11726,11752,"HeapTaskDaemon","Running",12,29.066875
+11726,11763,"binder:11726_3","Running",228,29.042854
+11726,11726,"ipc.demo:server","S",21,22.777916
+11726,11726,"ipc.demo:server","R",82,19.616197
+11726,11763,"binder:11726_3","R",219,14.115527
+11726,11776,"DefaultExecutor","R",38,13.247448
+11726,11765,"Profile Saver","Running",71,12.517861
+11726,11758,"binder:11726_1","R",244,12.357714
+11726,11773,"DefaultDispatch","R",216,11.601571
+11726,11748,"Jit thread pool","R",89,10.252028
+11726,11726,"ipc.demo:server","R+",44,5.966873
+11726,11765,"Profile Saver","R",66,5.264842
+11726,11759,"binder:11726_2","Running",17,5.064947
+11726,11742,"Runtime worker ","R",3,4.552864
+11726,11748,"Jit thread pool","R+",21,4.408749
+11726,11764,"ActivityHelper","R",37,3.884687
+11726,11743,"Runtime worker ","R",3,3.824584
+11726,11752,"HeapTaskDaemon","R",9,2.921198
+11726,11775,"DefaultDispatch","R+",11,2.907864
+11726,11764,"ActivityHelper","R+",24,2.898958
+11726,11776,"DefaultExecutor","R+",2,2.392656
+11726,11758,"binder:11726_1","R+",5,2.339584
+11726,11763,"binder:11726_3","R+",8,2.188440
+11726,11759,"binder:11726_2","R+",7,1.907760
+11726,11753,"ReferenceQueueD","Running",3,1.882968
+11726,11747,"ADB-JDWP Connec","R",4,1.572293
+11726,11772,"Thread-4","R+",3,1.439740
+11726,11773,"DefaultDispatch","R+",12,1.384322
+11726,11772,"Thread-4","Running",4,1.374166
+11726,11756,"FinalizerWatchd","R",3,1.273855
+11726,11760,"dex_preload_t","R+",4,1.209688
+11726,11760,"dex_preload_t","Running",5,1.086614
+11726,11740,"Runtime worker ","Running",8,1.083750
+11726,11766,"MiuiMonitorThre","Running",3,1.024686
+11726,11759,"binder:11726_2","R",9,0.919688
+11726,11767,"ipc.demo:server","Running",2,0.876094
+11726,11747,"ADB-JDWP Connec","Running",10,0.824582
+11726,11756,"FinalizerWatchd","Running",4,0.773384
+11726,11743,"Runtime worker ","Running",4,0.773072
+11726,11747,"ADB-JDWP Connec","R+",5,0.729479
+11726,11726,"ipc.demo:server","D",8,0.726563
+11726,11742,"Runtime worker ","Running",5,0.720677
+11726,11741,"Runtime worker ","Running",6,0.659011
+11726,11748,"Jit thread pool","D",2,0.614636
+11726,11744,"ipc.demo:server","Running",1,0.506980
+11726,11771,"ActivityHelper","Running",2,0.505364
+11726,11755,"FinalizerDaemon","Running",3,0.468335
+11726,11740,"Runtime worker ","R+",5,0.442396
+11726,11742,"Runtime worker ","D",3,0.419323
+11726,11779,"binder:11726_4","D",1,0.376979
+11726,11768,"ActivityHelper","Running",1,0.371355
+11726,11755,"FinalizerDaemon","R",1,0.350364
+11726,11769,"ActivityHelper","Running",1,0.345729
+11726,11746,"ipc.demo:server","Running",1,0.302865
+11726,11755,"FinalizerDaemon","R+",1,0.280989
+11726,11741,"Runtime worker ","R",3,0.278751
+11726,11774,"ipc.demo:server","Running",2,0.274375
+11726,11774,"ipc.demo:server","D",1,0.274062
+11726,11741,"Runtime worker ","R+",2,0.272188
+11726,11765,"Profile Saver","R+",2,0.271146
+11726,11741,"Runtime worker ","D",1,0.260416
+11726,11740,"Runtime worker ","R",2,0.244792
+11726,11740,"Runtime worker ","D",1,0.174635
+11726,11766,"MiuiMonitorThre","S",1,0.116875
+11726,11753,"ReferenceQueueD","R+",1,0.099219
+11726,11779,"binder:11726_4","R+",2,0.098333
+11726,11771,"ActivityHelper","R+",1,0.070521
+11726,11766,"MiuiMonitorThre","R",1,0.046303
+11726,11773,"DefaultDispatch","D",1,0.038177
+11726,11775,"DefaultDispatch","D",1,0.034531
+11726,11766,"MiuiMonitorThre","R+",1,0.026771
+11726,11767,"ipc.demo:server","R+",1,0.026614
+11726,11753,"ReferenceQueueD","R",1,0.022917
+11726,11774,"ipc.demo:server","R",1,0.021563
+11726,11752,"HeapTaskDaemon","R+",1,0.019323

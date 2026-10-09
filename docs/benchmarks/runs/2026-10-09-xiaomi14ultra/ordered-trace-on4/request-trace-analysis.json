@@ -1,0 +1,34 @@
+{
+  "valid": true,
+  "run": "traceon4",
+  "traceEnabled": true,
+  "count": 1000,
+  "clientEvents": 6000,
+  "serverEvents": 5000,
+  "dropped": 0,
+  "p50Ms": 0.919896,
+  "p90Ms": 1.19474,
+  "p99Ms": 1.57651,
+  "maxMs": 3.982396,
+  "meanMs": 0.9758150379999999,
+  "eventFiles": [
+    {
+      "side": "client",
+      "path": "request-events-traceon4-client.log",
+      "bytes": 872073,
+      "sha256": "C6AE9BBD7CF38C36C1B59A7074C7DD67825D0C95E98B76AAC0982F6D0BEBB02F",
+      "pid": 1466,
+      "callback": 213673524,
+      "generation": 1
+    },
+    {
+      "side": "server",
+      "path": "request-events-traceon4-server.log",
+      "bytes": 737071,
+      "sha256": "DEBA340B3360C683482EB9E04E0A618C02E69EE854AF78F4FBC4153F6076FFC1",
+      "pid": 3421,
+      "callback": 230072773,
+      "generation": 0
+    }
+  ]
+}

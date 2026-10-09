@@ -1,0 +1,45 @@
+--------- beginning of main
+10-09 09:47:25.168 22748 22748 I IpcForeground: STATE run=lifecyclefinaltrace event=WAIT_READY elapsedRealtimeMs=813322402 uptimeMs=184875802 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-09 09:47:25.182 22748 22748 I IpcForeground: STATE run=lifecyclefinaltrace event=FOCUS_GAIN elapsedRealtimeMs=813322416 uptimeMs=184875816 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:47:25.268 22748 22748 I IpcForeground: STATE run=lifecyclefinaltrace event=WAIT_READY elapsedRealtimeMs=813322502 uptimeMs=184875902 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:47:25.369 22748 22748 I IpcForeground: STATE run=lifecyclefinaltrace event=WAIT_READY elapsedRealtimeMs=813322604 uptimeMs=184876003 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:47:25.470 22748 22748 I IpcForeground: STATE run=lifecyclefinaltrace event=WAIT_READY elapsedRealtimeMs=813322704 uptimeMs=184876104 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:47:25.470 22748 22748 I IpcForeground: STATE run=lifecyclefinaltrace event=BEGIN elapsedRealtimeMs=813322705 uptimeMs=184876105 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:25.521 22748   681 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace closeHeldRequest failed=true cause=IllegalStateException
+10-09 09:47:25.773 22748   681 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace close cycle=1 subscriptions=0 requests=0 eventsQuiet=true
+10-09 09:47:25.902 22748   766 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace reconnect cycle=1 subscriptions=1 generation=2
+10-09 09:47:25.973 22748 22748 I IpcForeground: STATE run=lifecyclefinaltrace event=SAMPLE elapsedRealtimeMs=813323206 uptimeMs=184876606 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:26.162 22748   677 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace close cycle=2 subscriptions=0 requests=0 eventsQuiet=true
+10-09 09:47:26.283 22748   681 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace reconnect cycle=2 subscriptions=1 generation=3
+10-09 09:47:26.477 22748 22748 I IpcForeground: STATE run=lifecyclefinaltrace event=SAMPLE elapsedRealtimeMs=813323710 uptimeMs=184877110 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:26.542 22748   678 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace close cycle=3 subscriptions=0 requests=0 eventsQuiet=true
+10-09 09:47:26.669 22748   764 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace reconnect cycle=3 subscriptions=1 generation=4
+10-09 09:47:26.929 22748   766 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace close cycle=4 subscriptions=0 requests=0 eventsQuiet=true
+10-09 09:47:26.979 22748 22748 I IpcForeground: STATE run=lifecyclefinaltrace event=SAMPLE elapsedRealtimeMs=813324212 uptimeMs=184877612 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:27.055 22748   766 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace reconnect cycle=4 subscriptions=1 generation=5
+10-09 09:47:27.316 22748   766 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace close cycle=5 subscriptions=0 requests=0 eventsQuiet=true
+10-09 09:47:27.442 22748   766 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace reconnect cycle=5 subscriptions=1 generation=6
+10-09 09:47:27.481 22748 22748 I IpcForeground: STATE run=lifecyclefinaltrace event=SAMPLE elapsedRealtimeMs=813324714 uptimeMs=184878114 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:27.703 22748   681 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace close cycle=6 subscriptions=0 requests=0 eventsQuiet=true
+10-09 09:47:27.827 22748   678 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace reconnect cycle=6 subscriptions=1 generation=7
+10-09 09:47:27.984 22748 22748 I IpcForeground: STATE run=lifecyclefinaltrace event=SAMPLE elapsedRealtimeMs=813325216 uptimeMs=184878616 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:28.086 22748   764 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace close cycle=7 subscriptions=0 requests=0 eventsQuiet=true
+10-09 09:47:28.210 22748   803 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace reconnect cycle=7 subscriptions=1 generation=8
+10-09 09:47:28.472 22748   764 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace close cycle=8 subscriptions=0 requests=0 eventsQuiet=true
+10-09 09:47:28.484 22748 22748 I IpcForeground: STATE run=lifecyclefinaltrace event=SAMPLE elapsedRealtimeMs=813325718 uptimeMs=184879118 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:28.596 22748   764 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace reconnect cycle=8 subscriptions=1 generation=9
+10-09 09:47:28.860 22748   764 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace explicitDispose collectorEnded=true reconnectRejected=true subscriptions=0 requests=0
+10-09 09:47:28.988 22748 22748 I IpcForeground: STATE run=lifecyclefinaltrace event=SAMPLE elapsedRealtimeMs=813326220 uptimeMs=184879620 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:29.156 22748   829 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace ownerCancellation disposed=true collectorEnded=true requestFailed=true subscriptions=0 requests=0 eventsQuiet=true
+10-09 09:47:29.192 22748   831 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace serviceDestroy oldStubRejected=true binderStillAlive=true recreatedStub=true subscriptions=0 requests=0
+10-09 09:47:29.198 22748   829 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace nullBinding disconnected=true failureElapsedMs=3 bindingTimeoutMs=5000 lateCallbackStable=true pending=0 syntheticWaiter=true
+10-09 09:47:29.201   688   688 I IpcLifecycleProbe: DELAYED_BIND started delayMs=1500
+10-09 09:47:29.492 22748 22748 I IpcForeground: STATE run=lifecyclefinaltrace event=SAMPLE elapsedRealtimeMs=813326725 uptimeMs=184880125 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:29.996 22748 22748 I IpcForeground: STATE run=lifecyclefinaltrace event=SAMPLE elapsedRealtimeMs=813327229 uptimeMs=184880628 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:30.500 22748 22748 I IpcForeground: STATE run=lifecyclefinaltrace event=SAMPLE elapsedRealtimeMs=813327733 uptimeMs=184881133 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:30.703   688   688 I IpcLifecycleProbe: DELAYED_BIND returned=true
+10-09 09:47:31.002 22748 22748 I IpcForeground: STATE run=lifecyclefinaltrace event=SAMPLE elapsedRealtimeMs=813328235 uptimeMs=184881635 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:31.115 22748   829 I IpcLifecycleProbe: PASS run=lifecyclefinaltrace bindingTimeout disconnected=true failureElapsedMs=206 bindingTimeoutMs=200 lateCallbackStable=true pending=0 syntheticWaiter=true
+10-09 09:47:31.124 22748   678 I IpcLifecycleProbe: DONE run=lifecyclefinaltrace passed=true cycles=8 subscriptions=0 requests=0 anchorAlive=true
+10-09 09:47:31.127 22748 22748 I IpcForeground: STATE run=lifecyclefinaltrace event=END elapsedRealtimeMs=813328361 uptimeMs=184881761 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:31.135 22748 22748 I IpcForeground: END run=lifecyclefinaltrace started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-lifecyclefinaltrace.csv scope=activity_events_and_500ms_app_samples

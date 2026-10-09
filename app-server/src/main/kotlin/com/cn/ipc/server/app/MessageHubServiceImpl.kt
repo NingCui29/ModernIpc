@@ -2,6 +2,9 @@ package com.cn.ipc.server.app
 
 import com.cn.ipc.api.hub.IMessageHubService
 import com.cn.ipc.api.hub.MessageEnvelope
+import com.cn.ipc.api.hub.MeetingBoardMessage
+import android.util.Log
+import org.json.JSONObject
 import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -125,6 +128,15 @@ class MessageHubServiceImpl private constructor() : IMessageHubService {
                 // 【仅服务端模式】：只留在服务端记录，绝不向任何客户端派发
                 totalServerOnly.incrementAndGet()
                 notifyUi("机密上报", "🔒 [$fromName] -> [仅服务端可见]: $content")
+                MeetingBoardMessage.decode(content)?.takeIf {
+                    it.kind == MeetingBoardMessage.AUDIT && fromClientId == "client_1"
+                }?.let { message ->
+                    // Example observation only: neither this Logcat event nor the UI is a durable audit.
+                    Log.i("IPC_MULTI_APP_CASE", JSONObject().put("event", "audit_received")
+                        .put("clientId", "SERVER").put("commandId", message.commandId)
+                        .put("kind", message.kind).put("target", targetScope)
+                        .put("detail", "from=$fromClientId; in-memory report").toString())
+                }
                 return "OK: Server received confidential report"
             }
             else -> {

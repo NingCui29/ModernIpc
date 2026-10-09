@@ -1,0 +1,21 @@
+--------- beginning of main
+10-08 15:47:30.293  7552  7552 I IpcForeground: STATE run=terminalcold event=WAIT_READY elapsedRealtimeMs=748527527 uptimeMs=166246785 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-08 15:47:30.312  7552  7552 I IpcForeground: STATE run=terminalcold event=FOCUS_GAIN elapsedRealtimeMs=748527546 uptimeMs=166246804 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 15:47:30.394  7552  7552 I IpcForeground: STATE run=terminalcold event=WAIT_READY elapsedRealtimeMs=748527629 uptimeMs=166246886 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 15:47:30.495  7552  7552 I IpcForeground: STATE run=terminalcold event=WAIT_READY elapsedRealtimeMs=748527729 uptimeMs=166246987 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 15:47:30.596  7552  7552 I IpcForeground: STATE run=terminalcold event=WAIT_READY elapsedRealtimeMs=748527831 uptimeMs=166247088 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 15:47:30.597  7552  7552 I IpcForeground: STATE run=terminalcold event=BEGIN elapsedRealtimeMs=748527831 uptimeMs=166247089 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 15:47:30.630  7552 19412 I IpcTerminalProbe: PASS run=terminalcold finiteFlow items=1,2,3 completed=true subscriptions=0
+10-08 15:47:30.634  7552 19413 I IpcTerminalProbe: PASS run=terminalcold runtimeFlowError itemBeforeError=7 message=flow-runtime-error subscriptions=0
+10-08 15:47:31.099  7552  7552 I IpcForeground: STATE run=terminalcold event=SAMPLE elapsedRealtimeMs=748528333 uptimeMs=166247591 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 15:47:31.602  7552  7552 I IpcForeground: STATE run=terminalcold event=SAMPLE elapsedRealtimeMs=748528836 uptimeMs=166248094 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 15:47:32.105  7552  7552 I IpcForeground: STATE run=terminalcold event=SAMPLE elapsedRealtimeMs=748529337 uptimeMs=166248595 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 15:47:32.133  7552 19412 I IpcTerminalProbe: PASS run=terminalcold streamOverflow explicitFailure=true consumed=69 subscriptions=0
+10-08 15:47:32.236  7552 19354 I IpcTerminalProbe: PASS run=terminalcold streamConflate completed=true consumed=4 last=999 overflow=false subscriptions=0
+10-08 15:47:32.247  7552 19408 I IpcTerminalProbe: PASS run=terminalcold explicitStreamCancel extraError=false subscriptions=0
+10-08 15:47:32.411  7552 19409 I IpcTerminalProbe: PASS run=terminalcold rpcDeadline defaultMs=150 elapsedMs=154 serverJobObserved=true requests=0 pending=0
+10-08 15:47:32.416  7552 19409 I IpcTerminalProbe: PASS run=terminalcold asyncParameterError callbackReceived=true message=Missing_payload requests=0 pending=0
+10-08 15:47:32.573  7552 19409 I IpcTerminalProbe: PASS run=terminalcold badTokenDeadline callbackTrusted=false defaultMs=150 elapsedMs=154 requests=0 pending=0
+10-08 15:47:32.581  7552 19408 I IpcTerminalProbe: DONE run=terminalcold passed=true checks=8 subscriptions=0 requests=0 pending=0 anchorAlive=true
+10-08 15:47:32.583  7552  7552 I IpcForeground: STATE run=terminalcold event=END elapsedRealtimeMs=748529817 uptimeMs=166249074 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 15:47:32.587  7552  7552 I IpcForeground: END run=terminalcold started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-terminalcold.csv scope=activity_events_and_500ms_app_samples

@@ -8,8 +8,6 @@ android {
 
     defaultConfig {
         applicationId = "com.cn.ipc.server.app"
-        versionCode = 201
-        versionName = "2.0.1"
     }
 
     buildTypes {

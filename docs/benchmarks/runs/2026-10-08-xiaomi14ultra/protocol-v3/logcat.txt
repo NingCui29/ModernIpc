@@ -1,0 +1,15 @@
+--------- beginning of main
+10-08 09:16:37.692 18465 29396 I IpcEchoBench: SMOKE run=verify1 frameworkErrors=2 businessError=1 primitiveTypes=4 passed=true
+10-08 09:16:38.452 18465 29396 I IpcEchoBench: RESULT run=verify1 mode=suspend size=16 count=1000 failures=0 meanMs=0.710323451 p50Ms=0.645989 p90Ms=0.908281 p99Ms=2.179687 file=modern-verify1-16.csv
+10-08 09:16:38.584 18465 29396 I IpcEchoBench: RESULT run=verify1 mode=direct size=16 count=1000 failures=0 meanMs=0.12016457000000001 p50Ms=0.115729 p90Ms=0.140364 p99Ms=0.214739 file=modern-direct-verify1-16.csv
+10-08 09:16:39.291 18465 29396 I IpcEchoBench: RESULT run=verify1 mode=suspend size=1024 count=1000 failures=0 meanMs=0.67216642 p50Ms=0.547292 p90Ms=1.251302 p99Ms=1.529948 file=modern-verify1-1024.csv
+10-08 09:16:39.595 18465 29396 I IpcEchoBench: RESULT run=verify1 mode=direct size=1024 count=1000 failures=0 meanMs=0.282722608 p50Ms=0.262187 p90Ms=0.416042 p99Ms=0.550989 file=modern-direct-verify1-1024.csv
+10-08 09:16:54.918 22332 29716 I IpcEchoBench: SMOKE run=verify2 frameworkErrors=2 businessError=1 primitiveTypes=4 passed=true
+10-08 09:16:55.144 22332 29716 I IpcEchoBench: RESULT run=verify2 mode=direct size=16 count=1000 failures=0 meanMs=0.194928634 p50Ms=0.143229 p90Ms=0.244688 p99Ms=1.287812 file=modern-direct-verify2-16.csv
+10-08 09:16:55.843 22332 29716 I IpcEchoBench: RESULT run=verify2 mode=suspend size=16 count=1000 failures=0 meanMs=0.672191557 p50Ms=0.579427 p90Ms=1.108646 p99Ms=1.456094 file=modern-verify2-16.csv
+10-08 09:16:56.255 22332 29716 I IpcEchoBench: RESULT run=verify2 mode=direct size=1024 count=1000 failures=0 meanMs=0.396848414 p50Ms=0.398021 p90Ms=0.463437 p99Ms=0.611198 file=modern-direct-verify2-1024.csv
+10-08 09:16:57.214 22332 29716 I IpcEchoBench: RESULT run=verify2 mode=suspend size=1024 count=1000 failures=0 meanMs=0.902452606 p50Ms=0.795469 p90Ms=1.341823 p99Ms=1.600261 file=modern-verify2-1024.csv
+10-08 09:17:09.518 23307 29976 I IpcEchoBench: STRESS run=stressverify1 mode=suspend concurrency=16 count=1024 failures=0 durationMs=382.226302 successQps=2679.041171792516 p50Ms=5.144792 p99Ms=16.550729
+10-08 09:17:09.601 23307 29988 I IpcEchoBench: STRESS run=stressverify1 mode=direct concurrency=16 count=1024 failures=0 durationMs=54.38625 successQps=18828.28840010113 p50Ms=0.421302 p99Ms=4.185313
+10-08 09:17:09.992 23307 29987 I IpcEchoBench: STRESS run=stressverify1 mode=suspend concurrency=64 count=1024 failures=0 durationMs=318.706718 successQps=3212.9853001718025 p50Ms=17.622031 p99Ms=30.476094
+10-08 09:17:10.094 23307 30079 I IpcEchoBench: STRESS run=stressverify1 mode=direct concurrency=64 count=1024 failures=0 durationMs=48.345312 successQps=21180.957524899208 p50Ms=0.386667 p99Ms=7.16

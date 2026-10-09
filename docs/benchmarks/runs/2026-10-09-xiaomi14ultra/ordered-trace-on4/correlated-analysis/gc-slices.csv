@@ -1,0 +1,4 @@
+"id","ts","dur","name","tid","pid"
+76943,813350071385266,19427,"JIT compiling void dalvik.system.VMRuntime.setGCFullVIP(boolean) (kind=Optimized) from /apex/com.android.art/javalib/core-libart.jar",3308,1466
+85756,813350750032349,24555468,"Background concurrent copying GC",3449,3421
+85937,813350762354849,60104,"Lock contention on GC barrier lock (owner tid: 3449)",3470,3421

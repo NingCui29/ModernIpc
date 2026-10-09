@@ -1,0 +1,158 @@
+--------- beginning of main
+10-09 09:49:54.331  4458  6147 I ContentCatcher: SettingTrigger : unregister status observer com.cn.ipc.client2.Client2Activity
+10-09 09:49:54.332  4458  6147 I ContentCatcher: SettingTrigger : unregisterUIAgentListener com.cn.ipc.client2.Client2Activity, uid:10426
+10-09 09:49:54.358  5721  5721 I .cn.ipc.client3: Late-enabling -Xcheck:jni
+--------- beginning of system
+10-09 09:49:54.364  4458  4458 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-09 09:49:54.368  5721  5721 I .cn.ipc.client3: Using CollectorTypeCC GC.
+10-09 09:49:54.372  5721  5721 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+10-09 09:49:54.375  5721  5721 I ActivityThread: Current dynamic renderEngine type=0
+10-09 09:49:54.383  4458  6120 E .cn.ipc.client2: FrameInsert open fail: No such file or directory
+10-09 09:49:54.392  5721  6540 D MiuiDownscaleImpl: set override inverted scale : 1.0
+10-09 09:49:54.393  5721  5721 I RENDER_TURBO: onActivityThreadCreate not in white list, pkg=com.cn.ipc.client3, type=aurora
+10-09 09:49:54.393  5721  5721 D CompatChangeReporter: Compat change id reported: 242716250; UID 10427; state: ENABLED
+10-09 09:49:54.394  5721  6540 D AppScoutStateMachine: 5721-ScoutStateMachinecreated
+10-09 09:49:54.399  5721  5721 D ActivityThread: setEmbeddedParam packageName=com.cn.ipc.client3 processName=com.cn.ipc.client3 isEmbedded=false isIsolated=false
+10-09 09:49:54.462  5721  5721 D nativeloader: Configuring clns-10 for other apk /data/app/~~NPYtqd7jPxlMvnNMfLbL4g==/com.cn.ipc.client3-ji9h3hQ6iOfpiPufApHlpA==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~NPYtqd7jPxlMvnNMfLbL4g==/com.cn.ipc.client3-ji9h3hQ6iOfpiPufApHlpA==/lib/arm64, permitted_path=/data:/mnt/expand:/data/user/0/com.cn.ipc.client3
+10-09 09:49:54.464  5721  5721 I .cn.ipc.client3: AssetManager2(0xb40000757ac40158) locale list changing from [] to [zh-CN]
+10-09 09:49:54.465  5721  6563 D MiuiMonitorThread: Shared singleton Thread for stability monitor start
+10-09 09:49:54.466  5721  5721 D HWUI    : [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+10-09 09:49:54.466  5721  5721 D HWUI    : [HWUI] EnhanceVkPipelineCache is disabled
+10-09 09:49:54.466  5721  5721 D HWUI    : [HWUI] Flag ddre enabled
+10-09 09:49:54.466  5721  5721 V GraphicsEnvironment: Currently set values for:
+10-09 09:49:54.466  5721  5721 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+10-09 09:49:54.466  5721  5721 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+10-09 09:49:54.466  5721  5721 V GraphicsEnvironment: com.cn.ipc.client3 is not listed in per-application setting
+10-09 09:49:54.466  5721  5721 V GraphicsEnvironment: ANGLE allowlist from config: 
+10-09 09:49:54.466  5721  5721 V GraphicsEnvironment: com.cn.ipc.client3 is not listed in ANGLE allowlist or settings, returning default
+10-09 09:49:54.466  5721  5721 V GraphicsEnvironment: The updatable driver is turned off on this device.
+10-09 09:49:54.468  5721  5721 D ResMonitorStub: The current process type is: third_party_app, process name is: com.cn.ipc.client3
+10-09 09:49:54.469  5721  6570 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+10-09 09:49:54.472  5721  6563 I Perf    : Connecting to perf service.
+10-09 09:49:54.474  5721  6563 I ActivityThread: TrafficStats init done
+10-09 09:49:54.475  5721  6563 I ForceDarkHelperStubImpl: initialize for com.cn.ipc.client3 , ForceDarkOrigin
+10-09 09:49:54.476  5721  6563 D nativeloader: Load libforcedarkimpl.so using system ns (caller=/system_ext/framework/miui-framework.jar): ok
+10-09 09:49:54.476  5721  6563 D HWUI    : JNI_OnLoad success
+10-09 09:49:54.476  5721  6563 I MiuiForceDarkConfig: setConfig density:2.625000, mainRule:0, secondaryRule:0, tertiaryRule:0
+10-09 09:49:54.479  5721  6563 I ActivityThread: Miui Feature Init done
+10-09 09:49:54.482  5721  5721 I ActivityThread: currentPkg not in xmlPackages
+10-09 09:49:54.482  5721  5721 W libc    : Access denied finding property "vendor.boostfwk.frameprefetcher"
+10-09 09:49:54.483  5721  5721 D FramePredict: FramePredict init: false
+10-09 09:49:54.484  5721  5721 D HWUI    : [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+10-09 09:49:54.484  5721  5721 D HWUI    : [HWUI] EnhanceVkPipelineCache is disabled
+10-09 09:49:54.484  5721  5721 D HWUI    : [HWUI] Flag ddre enabled
+10-09 09:49:54.484  5721  5721 D .cn.ipc.client3: blurUtils, initBackgroundBlurMinInterval processName(com.cn.ipc.client3), inWhiteLists(0)
+10-09 09:49:54.484  5721  6563 I ActivityThread: HardwareRenderer preload  done
+10-09 09:49:54.485  5721  6577 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+10-09 09:49:54.486  5721  5721 I .cn.ipc.client3: AssetManager2(0xb40000757ac3e218) locale list changing from [] to [zh-CN]
+10-09 09:49:54.486  5721  6577 W libc    : Access denied finding property "vendor.migl.debug"
+10-09 09:49:54.487  5721  6577 I libMiGL : EnableDR: 0
+10-09 09:49:54.487  5721  6577 D libMiGL : mDFIInterval: -1
+10-09 09:49:54.487  5721  6577 I AdrenoGLES-0: QUALCOMM build                   : a0053eb399, I31b05c049d
+10-09 09:49:54.487  5721  6577 I AdrenoGLES-0: Build Date                       : 12/22/25
+10-09 09:49:54.487  5721  6577 I AdrenoGLES-0: OpenGL ES Shader Compiler Version: E031.45.02.25
+10-09 09:49:54.487  5721  6577 I AdrenoGLES-0: Local Branch                     : 
+10-09 09:49:54.487  5721  6577 I AdrenoGLES-0: Remote Branch                    : refs/tags/AU_LINUX_ANDROID_LA.VENDOR.14.3.0.11.00.00.974.116
+10-09 09:49:54.487  5721  6577 I AdrenoGLES-0: Remote Branch                    : NONE
+10-09 09:49:54.487  5721  6577 I AdrenoGLES-0: Reconstruct Branch               : NOTHING
+10-09 09:49:54.487  5721  6577 I AdrenoGLES-0: Build Config                     : S P 16.1.2 AArch64
+10-09 09:49:54.487  5721  6577 I AdrenoGLES-0: Driver Path                      : /vendor/lib64/egl/libGLESv2_adreno.so
+10-09 09:49:54.487  5721  6577 I AdrenoGLES-0: Driver Version                   : 0762.36.1
+10-09 09:49:54.487  5721  6577 I AdrenoGLES-0: Process Name                     : com.cn.ipc.client3
+10-09 09:49:54.490  5721  6577 I AdrenoGLES-0: PFP: 0x01520180, ME: 0x01520023
+10-09 09:49:54.495  5721  6577 I AdrenoUtils: <ReadGpuID:357>: Reading chip ID through GSL
+10-09 09:49:54.499  5721  5721 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+10-09 09:49:54.499  5721  6577 I libEGL  : shader cache num entries: 11
+10-09 09:49:54.499  5721  6577 D HWUI    : [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+10-09 09:49:54.499  5721  6577 D HWUI    : [HWUI] EnhanceVkPipelineCache is disabled
+10-09 09:49:54.499  5721  6577 D HWUI    : [HWUI] Flag ddre enabled
+10-09 09:49:54.500  5721  6577 D SKIA    : [Skia] Flag vulkan_enhance_pipeline_cache enabled
+10-09 09:49:54.500  5721  5721 I .cn.ipc.client3: AssetManager2(0xb40000757ac2a358) locale list changing from [] to [zh-CN]
+10-09 09:49:54.500  5721  6577 D SKIA    : [Skia] EnhanceVkPipelineCache is false
+10-09 09:49:54.500  5721  6577 D HWUI    : MiShaderPrecompile handle com.cn.ipc.client3, isSksl: 0, isAppInPreCacheList: 0, isGpuVersionChanged: 0, isSkslChanged: 0
+10-09 09:49:54.510  5721  6583 I .cn.ipc.client3: AssetManager2(0xb40000757ac3c2d8) locale list changing from [] to [zh-CN]
+10-09 09:49:54.512  5721  6583 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
+10-09 09:49:54.512  5721  5721 D DesktopModeFlags: Toggle override initialized to: OVERRIDE_UNSET
+10-09 09:49:54.514  5721  6583 D nativeloader: InitLlndkLibrariesProduct: libEGL.so:libGLESv1_CM.so:libGLESv2.so:libGLESv3.so:libRS.so:libandroid_net.so:libapexsupport.so:libavf.so:libbinder_ndk.so:libc.so:libcgrouprc.so:libclang_rt.asan-aarch64-android.so:libclang_rt.asan-arm-android.so:libclang_rt.hwasan-aarch64-android.so:libcom.android.tethering.connectivity_native.so:libdl.so:libft2.so:liblog.so:libm.so:libmediandk.so:libnativewindow.so:libneuralnetworks.so:libselinux.so:libsync.so:libvendorsupport.so:libvndksupport.so:libvulkan.so
+10-09 09:49:54.514  5721  6583 D nativeloader: Configuring product-clns-11 for unbundled product apk /product/app/ContentCatcherOS3_1/ContentCatcherOS3_1.apk. target_sdk_version=35, uses_libraries=, library_path=/product/app/ContentCatcherOS3_1/lib/arm64:/product/app/ContentCatcherOS3_1/ContentCatcherOS3_1.apk!/lib/arm64-v8a:/product/lib64:/system/product/lib64, permitted_path=/data:/mnt/expand:/product/lib64:/system/product/lib64
+10-09 09:49:54.514  5721  6583 D nativeloader: InitVndkspLibrariesProduct: VNDK is deprecated with product
+10-09 09:49:54.515  5721  5721 D DecorView: updateFreeformOutlineFromActivity, inFreeform=false,inFreeformWindowMode=false
+10-09 09:49:54.515  5721  6583 D ViewContentFactory: initViewContentFetcherClass
+10-09 09:49:54.516  5721  6583 D ViewContentFactory: getInterceptorPackageInfo
+10-09 09:49:54.516  5721  6583 D ViewContentFactory: getInitialApplication took 0ms
+10-09 09:49:54.516  5721  6583 D ViewContentFactory: packageInfo.packageName: com.miui.contentcatcher
+10-09 09:49:54.516  5721  6583 D ViewContentFactory: initViewContentFetcherClass took 1ms
+10-09 09:49:54.516  5721  6583 I ContentCatcher: ViewContentFetcher : ViewContentFetcher
+10-09 09:49:54.516  5721  6583 D ViewContentFactory: createInterceptor took 1ms
+10-09 09:49:54.517  5721  6583 E SettingTrigger: getStaticObjectField error
+10-09 09:49:54.517  5721  6583 E SettingTrigger: java.lang.NoSuchFieldException: No field mContentExtensionEnabled in class Lmiui/contentcatcher/InterceptorProxy; (declaration of 'miui.contentcatcher.InterceptorProxy' appears in /system_ext/framework/miui-framework.jar)
+10-09 09:49:54.517  5721  6583 E SettingTrigger: 	at java.lang.Class.getDeclaredField(Native Method)
+10-09 09:49:54.517  5721  6583 E SettingTrigger: 	at com.miui.contentcatcher.Interceptor.<init>(Unknown Source:372)
+10-09 09:49:54.517  5721  6583 E SettingTrigger: 	at java.lang.reflect.Constructor.newInstance0(Native Method)
+10-09 09:49:54.517  5721  6583 E SettingTrigger: 	at java.lang.reflect.Constructor.newInstance(Constructor.java:343)
+10-09 09:49:54.517  5721  6583 E SettingTrigger: 	at miui.contentcatcher.InterceptorFactory.createInterceptor(InterceptorFactory.java:50)
+10-09 09:49:54.517  5721  6583 E SettingTrigger: 	at miui.contentcatcher.InterceptorProxy$H.handleMessage(InterceptorProxy.java:329)
+10-09 09:49:54.517  5721  6583 E SettingTrigger: 	at android.os.Handler.dispatchMessage(Handler.java:114)
+10-09 09:49:54.517  5721  6583 E SettingTrigger: 	at android.os.Looper.loopOnce(Looper.java:274)
+10-09 09:49:54.517  5721  6583 E SettingTrigger: 	at android.os.Looper.loop(Looper.java:369)
+10-09 09:49:54.517  5721  6583 E SettingTrigger: 	at android.os.HandlerThread.run(HandlerThread.java:85)
+10-09 09:49:54.517  5721  6583 I Interceptor_Catcher: notifyActivityCreate: 
+10-09 09:49:54.518  5721  5721 I .cn.ipc.client3: hiddenapi: Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (runtime_flags=0, domain=platform, api=unsupported) from Landroidx/appcompat/widget/ViewUtils; (domain=app) using reflection: allowed
+10-09 09:49:54.518  5721  5721 I .cn.ipc.client3: hiddenapi: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (runtime_flags=0, domain=platform, api=unsupported) from Landroidx/appcompat/widget/ViewUtils; (domain=app) using reflection: allowed
+10-09 09:49:54.518  5721  6583 I ContentCatcher: Interceptor_Catcher : Catcher list invalid for com.cn.ipc.client3@com.cn.ipc.client3.Client3Activity@180265999
+10-09 09:49:54.518  5721  6583 I ContentCatcher: Interceptor_Catcher : Get featureInfo from config image_pick_mode
+10-09 09:49:54.519  5721  6583 I ContentCatcher: Interceptor_Catcher : Get featureInfo from config pick_mode
+10-09 09:49:54.527  5721  5721 D ScrollerOptimizationManager: registerConfigChangedListener
+10-09 09:49:54.529  5721  5721 W libc    : Access denied finding property "ro.vendor.mi_sf.new_dynamic_refresh_rate"
+10-09 09:49:54.529  5721  5721 D SplineOverScroller: dynamic params is false
+10-09 09:49:54.524  5721  5721 W .cn.ipc.client3: type=1400 audit(0.0:295879): avc:  denied  { read } for  name="u:object_r:vendor_displayfeature_prop:s0" dev="tmpfs" ino=516 scontext=u:r:untrusted_app:s0:c171,c257,c512,c768 tcontext=u:object_r:vendor_displayfeature_prop:s0 tclass=file permissive=0 app=com.cn.ipc.client3
+10-09 09:49:54.540  5721  5721 D HWUI    : ImageDecoder_nDecodeBitmap: width = 38, height = 33, encodedFormat = 4
+10-09 09:49:54.540  5721  5721 W HWUI    : Image decoding logging dropped!
+10-09 09:49:54.541  5721  5721 D HWUI    : ImageDecoder_nDecodeBitmap: width = 38, height = 33, encodedFormat = 4
+10-09 09:49:54.541  5721  5721 W HWUI    : Image decoding logging dropped!
+10-09 09:49:54.541  5721  5721 D HWUI    : ImageDecoder_nDecodeBitmap: width = 38, height = 33, encodedFormat = 4
+10-09 09:49:54.541  5721  5721 W HWUI    : Image decoding logging dropped!
+10-09 09:49:54.558  5721  5721 D Activity: Activity = ActivityInfo{950b562 com.cn.ipc.client3.Client3Activity}, Resume onConfigurationChanged = {0.9 460mcc?mnc [zh_CN] ldltr sw411dp w411dp h866dp 420dpi nrml long hdr widecg port uimode=12 finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2400) mAppBounds=Rect(0, 126 - 1080, 2400) mMaxBounds=Rect(0, 0 - 1080, 2400) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0 mInSplitScreen=false letterBoxed=false foScaled=false isSpecificEmbedded=false embeddingScale=1.0} as.3 s.2 fontWeightAdjustment=0/d/o themeChanged=0 themeChangedFlags=0 display=0 extraData = Bundle[{}] screenType=0/o}
+10-09 09:49:54.561  5721  6583 I ContentCatcher: SettingTrigger : register screen QA status observer com.cn.ipc.client3.Client3Activity
+10-09 09:49:54.562  5721  6583 I ContentCatcher: SettingTrigger : register global collect status observer com.cn.ipc.client3.Client3Activity
+10-09 09:49:54.563  5721  6583 I ContentCatcher: SettingTrigger : registerUIAgentListener com.cn.ipc.client3.Client3Activity, uid:10427
+10-09 09:49:54.564  5721  5721 D RenderLite: trim renderNode enable: false
+10-09 09:49:54.565  5721  6583 I ContentCatcher_TaplusBlackListHelper:  mActivities isEmpty
+10-09 09:49:54.565  5721  6583 I ContentCatcher_TaplusBlackListHelper:  blackList size: 11 package is com.cn.ipc.client3 isInTaplusWhiteList: true
+10-09 09:49:54.566  5721  5721 D .cn.ipc.client3: MiuiProcessManagerServiceStub setSchedFifo
+10-09 09:49:54.566  5721  5721 I MiuiProcessManagerImpl: setSchedFifo pid:5721, mode:3
+10-09 09:49:54.568  5721  6577 D HWUI    : TAG_DDRE, CanvasContext::setDdreActivities: 
+10-09 09:49:54.569  5721  5721 D FirstFrameSpeedUp: bls: [com.xcj.hm.kangfuyixue, jp.co.jibunbank.jibunmain]
+10-09 09:49:54.569  5721  5721 I ViewRootImpl: com.cn.ipc.client3/com.cn.ipc.client3.Client3Activity use first frame acceleration
+10-09 09:49:54.575  5721  5721 D DecorViewImmersiveImpl: onAttachedToWindow. pkg: com.cn.ipc.client3
+10-09 09:49:54.575  5721  5721 I ComputilityLevel: getComputilityLevel(): 6
+10-09 09:49:54.575  5721  5721 D DecorViewImmersiveImpl: getWindowType: 1 title:com.cn.ipc.client3/com.cn.ipc.client3.Client3Activity
+10-09 09:49:54.576  5721  5721 D MiuiNBIManagerImpl: init success, pkgName=com.cn.ipc.client3 mIsNBIEnable=false mDisableVersionCode=-1 mActivityRulesSize=0
+10-09 09:49:54.576  5721  5721 D DecorViewImmersiveImpl: isNBIEnable=false
+10-09 09:49:54.600  5721  5721 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-09 09:49:54.611  5721  5721 D VRI[Client3Activity]: vri.Setup new sync=wmsSync-VRI[Client3Activity]#0
+10-09 09:49:54.626  5721  5721 D VRI[Client3Activity]: vri.reportDrawFinished 0 0 Rect(0, 0 - 1080, 2400)
+10-09 09:49:54.626  5721  5721 I NativeTurboSchedManager: Load libmiui_runtime
+10-09 09:49:54.627  5721  5721 I Choreographer: first vsync insert message into MessageQueue Head
+10-09 09:49:54.633  5721  6577 D HWUI    : [HWUI] Flag vulkan_enhance_pipeline_cache enabled
+10-09 09:49:54.633  5721  6577 D HWUI    : [HWUI] EnhanceVkPipelineCache is disabled
+10-09 09:49:54.633  5721  6577 D HWUI    : [HWUI] Flag ddre enabled
+10-09 09:49:54.634  5721  5721 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-09 09:49:54.658  5721  5721 I HandWritingStubImpl: refreshLastKeyboardType: 1
+10-09 09:49:54.659  5721  5721 I HandWritingStubImpl: getCurrentKeyboardType: 1
+10-09 09:49:54.662  5721  5721 D InsetsController: hide(ime(), fromIme=false)
+10-09 09:49:54.662  5721  5721 I ImeTracker: com.cn.ipc.client3:db1cc9b1: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+10-09 09:49:54.667  5721  5721 I HandWritingStubImpl: getCurrentKeyboardType: 1
+10-09 09:49:54.681  4458  4458 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-09 09:49:54.686  5721  5721 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-09 09:49:55.001  4458  6191 I .cn.ipc.client2: ProcessProfilingInfo new_methods=0 is saved saved_to_disk=1
+10-09 09:49:55.085  5721  6514 I .cn.ipc.client3: Compiler allocated 6765KB to compile void android.view.ViewRootImpl.performTraversals()
+10-09 09:49:55.164  4458  4458 D VRI[Client2Activity]: visibilityChanged oldVisibility=true newVisibility=false
+10-09 09:49:55.175  4458  6120 D BufferQueueProducer: [VRI[Client2Activity]#0(BLAST Consumer)0](id:116a00000000,api:1,p:4458,c:4458) disconnect: api 1 (caller=4458)
+10-09 09:49:55.178  4458  4458 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-09 09:49:55.179  4458  4458 W .cn.ipc.client2: Binder 0xb40000749ac591c0 destroyed after setInheritRt before being parceled.
+10-09 09:49:55.179  4458  4458 D BufferQueueConsumer: [VRI[Client2Activity]#0(BLAST Consumer)0](id:116a00000000,api:0,p:-1,c:4458) disconnect: caller 4458
+10-09 09:49:55.194  4458  4458 W InsetsSource: Has no intersection or mTmpFrame.height(), return Insets.NONE mTmpFrame.height() =0 hasIntersection =false
+10-09 09:49:55.207  4458  6082 I .cn.ipc.client2: This is non sticky GC, maxfree is 33554432 minfree is 8388608
+10-09 09:49:55.208  4458  4458 W FinalizerDaemon: type=1400 audit(0.0:295882): avc:  denied  { getopt } for  path="/dev/socket/usap_pool_primary" scontext=u:r:untrusted_app:s0:c170,c257,c512,c768 tcontext=u:r:zygote:s0 tclass=unix_stream_socket permissive=0 app=com.cn.ipc.client2
+10-09 09:50:00.035  5721  6649 D ProfileInstaller: Installing profile for com.cn.ipc.client3

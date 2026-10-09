@@ -1,0 +1,26 @@
+--------- beginning of main
+10-08 15:47:41.781 17608 17608 I IpcForeground: STATE run=compatcold event=WAIT_READY elapsedRealtimeMs=748539016 uptimeMs=166258273 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-08 15:47:41.801 17608 17608 I IpcForeground: STATE run=compatcold event=FOCUS_GAIN elapsedRealtimeMs=748539035 uptimeMs=166258293 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 15:47:41.884 17608 17608 I IpcForeground: STATE run=compatcold event=WAIT_READY elapsedRealtimeMs=748539118 uptimeMs=166258376 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 15:47:41.984 17608 17608 I IpcForeground: STATE run=compatcold event=WAIT_READY elapsedRealtimeMs=748539219 uptimeMs=166258476 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 15:47:42.085 17608 17608 I IpcForeground: STATE run=compatcold event=WAIT_READY elapsedRealtimeMs=748539319 uptimeMs=166258577 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-08 15:47:42.085 17608 17608 I IpcForeground: STATE run=compatcold event=BEGIN elapsedRealtimeMs=748539320 uptimeMs=166258578 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 15:47:42.110 17608 19605 I IpcCompatibilityProbe: PASS run=compatcold metadataMatch descriptor=true signatures=17 floor=1
+10-08 15:47:42.115 17608 19605 I IpcCompatibilityProbe: PASS run=compatcold additiveSubset clientVersion=1 requestedTransactions=1 extraServerTransactions=true
+10-08 15:47:42.130 17608 19605 I IpcCompatibilityProbe: PASS run=compatcold parameterChange brokerRejected=true controllerRejected=true
+10-08 15:47:42.131 17608 19605 I IpcCompatibilityProbe: PASS run=compatcold returnChange brokerRejected=true controllerRejected=true
+10-08 15:47:42.132 17608 19605 I IpcCompatibilityProbe: PASS run=compatcold modeChange brokerRejected=true controllerRejected=true
+10-08 15:47:42.133 17608 19605 I IpcCompatibilityProbe: PASS run=compatcold envelopeChange brokerRejected=true controllerRejected=true
+10-08 15:47:42.134 17608 19605 I IpcCompatibilityProbe: PASS run=compatcold missingTransaction brokerRejected=true controllerRejected=true
+10-08 15:47:42.136 17608 19605 I IpcCompatibilityProbe: PASS run=compatcold descriptorChange brokerRejected=true controllerRejected=true
+10-08 15:47:42.137 17608 19605 I IpcCompatibilityProbe: PASS run=compatcold futureClientVersion brokerRejected=true controllerRejected=true
+10-08 15:47:42.137 17608 19605 I IpcCompatibilityProbe: PASS run=compatcold schemaCacheIsolation fullCached=true changedSchemaRejected=true subsetAccepted=true
+10-08 15:47:42.143 17608 19605 I IpcCompatibilityProbe: PASS run=compatcold constructionMapMutation fingerprintStable=true originalSnapshotAccepted=true brokerWireAccepted=true copiedMutationRejected=true
+10-08 15:47:42.144 17608 19605 I IpcCompatibilityProbe: PASS run=compatcold legacyFloor userFloor=2 userDenied=true echoFloor=1 echoAllowed=true
+10-08 15:47:42.171 17608 19658 I IpcCompatibilityProbe: PASS run=compatcold strictCache coldMetadata=1 coldChecked=1 hotCalls=100 additionalDiscovery=0 legacy=0
+10-08 15:47:42.180 17608 19657 I IpcCompatibilityProbe: PASS run=compatcold generationRevalidate metadata=2 checked=2 legacy=0 generationAdvanced=true
+10-08 15:47:42.192 17608 19657 I IpcCompatibilityProbe: PASS run=compatcold legacyMethodsMissing metadataRejected=true checkedRejected=true legacyEchoAlive=true
+10-08 15:47:42.192 17608 19657 I IpcCompatibilityProbe: PASS run=compatcold strictLegacyNoFallback explicitFailure=true metadataAttempts=1 checked=0 legacyFallbacks=0
+10-08 15:47:42.195 17608 19605 I IpcCompatibilityProbe: DONE run=compatcold passed=true checks=16 requests=0 subscriptions=0 pending=0
+10-08 15:47:42.197 17608 17608 I IpcForeground: STATE run=compatcold event=END elapsedRealtimeMs=748539431 uptimeMs=166258689 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-08 15:47:42.200 17608 17608 I IpcForeground: END run=compatcold started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-compatcold.csv scope=activity_events_and_500ms_app_samples

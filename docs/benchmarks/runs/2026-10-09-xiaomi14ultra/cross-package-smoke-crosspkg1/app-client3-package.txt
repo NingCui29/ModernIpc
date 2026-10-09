@@ -1,0 +1,323 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        e0578e7 com.cn.ipc.client3/.Client3Activity filter cd50c94
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      androidx.profileinstaller.action.SAVE_PROFILE:
+        f03a33d com.cn.ipc.client3/androidx.profileinstaller.ProfileInstallReceiver filter 5405e00
+          Action: "androidx.profileinstaller.action.SAVE_PROFILE"
+      androidx.profileinstaller.action.INSTALL_PROFILE:
+        f03a33d com.cn.ipc.client3/androidx.profileinstaller.ProfileInstallReceiver filter e774732
+          Action: "androidx.profileinstaller.action.INSTALL_PROFILE"
+      androidx.profileinstaller.action.SKIP_FILE:
+        f03a33d com.cn.ipc.client3/androidx.profileinstaller.ProfileInstallReceiver filter 326bc83
+          Action: "androidx.profileinstaller.action.SKIP_FILE"
+      androidx.profileinstaller.action.BENCHMARK_OPERATION:
+        f03a33d com.cn.ipc.client3/androidx.profileinstaller.ProfileInstallReceiver filter d0c3639
+          Action: "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+
+Domain verification status:
+
+Permissions:
+  Permission [com.cn.ipc.client3.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION] (1743fa4):
+    sourcePackage=com.cn.ipc.client3
+    uid=10427 gids=[] type=0 prot=signature
+    perm=PermissionInfo{6bb410d com.cn.ipc.client3.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION}
+    flags=0x0
+
+Registered ContentProviders:
+  com.cn.ipc.client3/androidx.startup.InitializationProvider:
+    Provider{89ad8c2 com.cn.ipc.client3/androidx.startup.InitializationProvider}
+
+ContentProvider Authorities:
+  [com.cn.ipc.client3.androidx-startup]:
+    Provider{89ad8c2 com.cn.ipc.client3/androidx.startup.InitializationProvider}
+      applicationInfo=ApplicationInfo{596d3 com.cn.ipc.client3}
+
+Key Set Manager:
+  [com.cn.ipc.client3]
+      Signing KeySets: 439
+
+Packages:
+  Package [com.cn.ipc.client3] (780bccf):
+    appId=10427
+    pkg=Package{87b210 com.cn.ipc.client3}
+    codePath=/data/app/~~NPYtqd7jPxlMvnNMfLbL4g==/com.cn.ipc.client3-ji9h3hQ6iOfpiPufApHlpA==
+    resourcePath=/data/app/~~NPYtqd7jPxlMvnNMfLbL4g==/com.cn.ipc.client3-ji9h3hQ6iOfpiPufApHlpA==
+    legacyNativeLibraryDir=/data/app/~~NPYtqd7jPxlMvnNMfLbL4g==/com.cn.ipc.client3-ji9h3hQ6iOfpiPufApHlpA==/lib
+    extractNativeLibs=true
+    primaryCpuAbi=null
+    secondaryCpuAbi=null
+    cpuAbiOverride=null
+    versionCode=201 minSdk=21 targetSdk=34
+    minExtensionVersions=[]
+    versionName=2.0.1
+    hiddenApiEnforcementPolicy=2
+    usesNonSdkApi=false
+    isMiuiPreinstall=false
+    splits=[base]
+    apkSigningVersion=2
+    flags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    forceQueryable=false
+    pageSizeCompat=0
+    queriesPackages=[com.cn.ipc.server.app]
+    queriesIntents=[Intent { act=com.cn.ipc.ACTION_BROKER_SERVICE }]
+    scannedAsStoppedSystemApp=false
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2026-10-09 09:47:05
+    lastUpdateTime=2026-10-09 09:47:05
+    installerPackageName=null
+    installerPackageUid=-1
+    initiatingPackageName=com.android.shell
+    originatingPackageName=null
+    packageSource=1
+    appMetadataFilePath=null
+    appMetadataSource=0
+    signatures=PackageSignatures{a67e109 version:2, signatures:[52ad9ad9], past signatures:[]}
+    installPermissionsFixed=false
+    pkgFlags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privatePkgFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    apexModuleName=null
+    declared permissions:
+      com.cn.ipc.client3.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: prot=signature
+    requested permissions:
+      com.cn.ipc.server.app.permission.BIND_BROKER
+      com.cn.ipc.client3.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+    install permissions:
+      com.cn.ipc.server.app.permission.BIND_BROKER: granted=true
+      com.cn.ipc.client3.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: granted=true
+    User 0: ceDataInode=5400863 deDataInode=5400867 installed=true hidden=false suspended=false distractionFlags=0 stopped=true notLaunched=false enabled=0 instant=false virtual=false quarantined=false
+      installReason=0
+      dataDir=/data/user/0/com.cn.ipc.client3
+      firstInstallTime=2026-09-06 08:50:05
+      uninstallReason=0
+      overlay paths:
+        /product/overlay/GestureLineOverlay.apk
+        /data/resource-cache/com.android.systemui-neutral-IP17.frro
+        /data/resource-cache/com.android.systemui-accent-5Xug.frro
+        /data/resource-cache/com.android.systemui-dynamic-mzMf.frro
+      legacy overlay paths:
+        /product/overlay/GestureLineOverlay.apk
+      runtime permissions:
+    User 999: ceDataInode=0 deDataInode=0 installed=false hidden=false suspended=false distractionFlags=0 stopped=true notLaunched=true enabled=0 instant=false virtual=false quarantined=false
+      installReason=0
+      dataDir=null
+      firstInstallTime=1970-01-01 08:00:00
+      uninstallReason=0
+      overlay paths:
+        /data/resource-cache/com.android.systemui-neutral-IP17.frro
+        /data/resource-cache/com.android.systemui-accent-5Xug.frro
+        /data/resource-cache/com.android.systemui-dynamic-mzMf.frro
+      runtime permissions:
+
+Queries:
+  system apps queryable: false
+  queries via forceQueryable:
+  queries via package name:
+    com.cn.ipc.client3:
+      com.cn.ipc.server.app
+  queries via component:
+    [com.miui.audiomonitor,com.xiaomi.trustservice,com.xiaomi.aon,com.xiaomi.otrpbroker,com.xiaomi.aiasst.vision,com.bsp.catchlog,com.miui.wmsvc,com.android.DeviceAsWebcam,com.xiaomi.joyose,com.xiaomi.barrage,com.miui.misightservice,com.xiaomi.aiasst.service,android,com.xiaomi.gnss.polaris,com.miui.notification,com.xiaomi.misettings,com.android.providers.settings,com.android.settings,com.miui.touchassistant,com.miui.uireporter,com.miui.cleanmaster,com.android.systemui,com.qualcomm.qti.xrvd.service,com.miui.powerkeeper,com.miui.bugreport,com.android.location.fused,com.android.keychain,com.xiaomi.mirror,com.xiaomi.touchservice,com.xiaomi.location.fused,com.android.inputdevices,com.android.provision,com.miui.thirdappassistant,com.miui.securitycenter,miui.systemui.plugin,com.miui.qr,com.miui.screenrecorder,com.xiaomi.digitalkey,com.xiaomi.mtb,com.xiaomi.mi_connect_service,com.android.localtransport,com.miui.cit,com.miui.contentcatcher,vendor.qti.frameworks.utils,com.miui.securitycore,com.android.server.telecom,com.qualcomm.qti.services.systemhelper,com.miui.daemon,com.wapi.wapicertmanage,com.miui.aod,com.android.dynsystem]:
+      com.cn.ipc.client3
+    [com.android.nfc,com.st.android.nfc_extensions_16,com.miui.tsmclient]:
+      com.cn.ipc.client3
+    com.miui.backup:
+      com.cn.ipc.client3
+    com.xiaomi.finddevice:
+      com.cn.ipc.client3
+    com.sina.weibo:
+      com.cn.ipc.client3
+    com.netease.edu.ucmooc:
+      com.cn.ipc.client3
+    com.dangdang.buy2:
+      com.cn.ipc.client3
+    com.zeekrlife.mobile:
+      com.cn.ipc.client3
+    com.xiaomi.aicr:
+      com.cn.ipc.client3
+    com.android.contacts:
+      com.cn.ipc.client3
+    com.android.browser:
+      com.cn.ipc.client3
+    com.miui.packageinstaller:
+      com.cn.ipc.client3
+    com.miui.personalassistant:
+      com.cn.ipc.client3
+    com.xiaomi.gamecenter.sdk.service:
+      com.cn.ipc.client3
+    com.android.settings.intelligence:
+      com.cn.ipc.client3
+    com.miui.carlink:
+      com.cn.ipc.client3
+    com.miui.nextpay:
+      com.cn.ipc.client3
+    com.xiaomi.mis:
+      com.cn.ipc.client3
+    com.miui.hybrid:
+      com.cn.ipc.client3
+    com.miui.securityadd:
+      com.cn.ipc.client3
+    com.xiaomi.market:
+      com.cn.ipc.client3
+    com.xiaomi.account:
+      com.cn.ipc.client3
+    com.miui.systemAdSolution:
+      com.cn.ipc.client3
+    com.miui.greenguard:
+      com.cn.ipc.client3
+    com.bwton.szfreego:
+      com.cn.ipc.client3
+    com.xiaomi.payment:
+      com.cn.ipc.client3
+    com.xiaomi.smarthome:
+      com.cn.ipc.client3
+    com.xiaomi.xmsf:
+      com.cn.ipc.client3
+    com.xiaomi.simactivate.service:
+      com.cn.ipc.client3
+    com.boxuegu:
+      com.cn.ipc.client3
+    com.android.providers.downloads.ui:
+      com.cn.ipc.client3
+    com.mfashiongallery.emag:
+      com.cn.ipc.client3
+    com.xunmeng.pinduoduo:
+      com.cn.ipc.client3
+    com.android.calendar:
+      com.cn.ipc.client3
+    com.android.email:
+      com.cn.ipc.client3
+    com.vmall.client:
+      com.cn.ipc.client3
+    com.miui.gallery:
+      com.cn.ipc.client3
+    com.xiangha:
+      com.cn.ipc.client3
+    com.taobao.idlefish:
+      com.cn.ipc.client3
+    com.miui.notes:
+      com.cn.ipc.client3
+    com.android.soundrecorder:
+      com.cn.ipc.client3
+    com.miui.virtualsim:
+      com.cn.ipc.client3
+    com.mipay.wallet:
+      com.cn.ipc.client3
+    com.xiaomi.shop:
+      com.cn.ipc.client3
+    com.duokan.phone.remotecontroller:
+      com.cn.ipc.client3
+    com.icbc:
+      com.cn.ipc.client3
+    com.netease.mail:
+      com.cn.ipc.client3
+    sz.szsmk.citizencard:
+      com.cn.ipc.client3
+    com.autonavi.minimap:
+      com.cn.ipc.client3
+    com.youku.phone:
+      com.cn.ipc.client3
+    com.cainiao.wireless:
+      com.cn.ipc.client3
+    com.moonshot.kimichat:
+      com.cn.ipc.client3
+    com.xiaomi.mico:
+      com.cn.ipc.client3
+    com.tencent.mm:
+      com.cn.ipc.client3
+    com.sankuai.meituan:
+      com.cn.ipc.client3
+    com.quark.browser:
+      com.cn.ipc.client3
+    com.moji.mjweather:
+      com.cn.ipc.client3
+    com.jd.app.reader:
+      com.cn.ipc.client3
+    com.tmri.app.main:
+      com.cn.ipc.client3
+    net.csdn.csdnplus:
+      com.cn.ipc.client3
+    com.amazon.mShop.android.shopping:
+      com.cn.ipc.client3
+    com.MobileTicket:
+      com.cn.ipc.client3
+    com.baidu.netdisk:
+      com.cn.ipc.client3
+    com.zhihu.android:
+      com.cn.ipc.client3
+    com.yaya.zone:
+      com.cn.ipc.client3
+    com.greenpoint.android.mc10086.activity:
+      com.cn.ipc.client3
+    com.guanaitong:
+      com.cn.ipc.client3
+    com.taobao.taobao:
+      com.cn.ipc.client3
+    com.oray.sunlogin:
+      com.cn.ipc.client3
+    com.xingin.xhs:
+      com.cn.ipc.client3
+    com.aliyun.tongyi:
+      com.cn.ipc.client3
+    com.mi.health:
+      com.cn.ipc.client3
+    com.xiaomi.vipaccount:
+      com.cn.ipc.client3
+    com.netease.mobimail:
+      com.cn.ipc.client3
+    com.baidu.BaiduMap:
+      com.cn.ipc.client3
+    com.wuba.zhuanzhuan:
+      com.cn.ipc.client3
+    com.zhihu.zhixuetang.android:
+      com.cn.ipc.client3
+    com.netease.edu.study:
+      com.cn.ipc.client3
+    com.mi.car.mobile:
+      com.cn.ipc.client3
+    aihuishou.aihuishouapp:
+      com.cn.ipc.client3
+    com.baidu.tieba:
+      com.cn.ipc.client3
+    com.cn.ipc.client3:
+      com.cn.ipc.server.app
+    com.youdao.note:
+      com.cn.ipc.client3
+    com.jingdong.app.mall:
+      com.cn.ipc.client3
+    com.qimao.writerassistant:
+      com.cn.ipc.client3
+    com.kmxs.reader:
+      com.cn.ipc.client3
+    com.ct.client:
+      com.cn.ipc.client3
+    com.tencent.wework:
+      com.cn.ipc.client3
+    com.xiaomi.minigame:
+      com.cn.ipc.client3
+    dandelion.com.oray.dandelion:
+      com.cn.ipc.client3
+    com.oray.pgygame:
+      com.cn.ipc.client3
+    com.nn.accelerator.box:
+      com.cn.ipc.client3
+  queryable via interaction:
+    User 0:
+    User 999:
+  queryable via uses-library:
+
+Dexopt state:
+  [com.cn.ipc.client3]
+    path: /data/app/~~NPYtqd7jPxlMvnNMfLbL4g==/com.cn.ipc.client3-ji9h3hQ6iOfpiPufApHlpA==/base.apk
+      arm64: [status=run-from-apk] [reason=unknown] [primary-abi]
+        [location is error]
+    base APK odex file size: Oops,Some thing wrong when get dex file output paths!
+
+Compiler stats:
+  [com.cn.ipc.client3]
+    (No recorded stats)

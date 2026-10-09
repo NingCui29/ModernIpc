@@ -23,7 +23,7 @@ data class UserDto(val id: String, val name: String)
  * 这是一个 IPC 门面 (Facade) 接口，服务ID配置为 1001，最低支持的 API 版本为 1。
  * 客户端将通过该接口与服务端进行通信，框架会自动生成相关的代理类和 Stub 类。
  */
-@IpcFacade(serviceId = 1001, minApiVersion = 1)
+@IpcFacade(serviceId = 1001, minApiVersion = 2)
 interface IUserService {
 
     // 1. 简单的单向通信（不需要返回值）

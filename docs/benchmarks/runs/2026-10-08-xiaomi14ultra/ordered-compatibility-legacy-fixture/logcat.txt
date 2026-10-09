@@ -1,0 +1,27 @@
+--------- beginning of main
+10-08 11:01:32.126 18932 25460 I IpcCompatibilityProbe: PASS run=compat2 metadataMatch descriptor=true signatures=17 floor=1
+10-08 11:01:32.133 18932 25460 I IpcCompatibilityProbe: PASS run=compat2 additiveSubset clientVersion=1 requestedTransactions=1 extraServerTransactions=true
+10-08 11:01:32.145 18932 25460 I IpcCompatibilityProbe: PASS run=compat2 parameterChange brokerRejected=true controllerRejected=true
+10-08 11:01:32.148 18932 25460 I IpcCompatibilityProbe: PASS run=compat2 returnChange brokerRejected=true controllerRejected=true
+10-08 11:01:32.150 18932 25460 I IpcCompatibilityProbe: PASS run=compat2 modeChange brokerRejected=true controllerRejected=true
+10-08 11:01:32.152 18932 25460 I IpcCompatibilityProbe: PASS run=compat2 envelopeChange brokerRejected=true controllerRejected=true
+10-08 11:01:32.154 18932 25460 I IpcCompatibilityProbe: PASS run=compat2 missingTransaction brokerRejected=true controllerRejected=true
+10-08 11:01:32.156 18932 25460 I IpcCompatibilityProbe: PASS run=compat2 descriptorChange brokerRejected=true controllerRejected=true
+10-08 11:01:32.159 18932 25460 I IpcCompatibilityProbe: PASS run=compat2 futureClientVersion brokerRejected=true controllerRejected=true
+10-08 11:01:32.159 18932 25460 I IpcCompatibilityProbe: PASS run=compat2 schemaCacheIsolation fullCached=true changedSchemaRejected=true subsetAccepted=true
+10-08 11:01:32.167 18932 25460 I IpcCompatibilityProbe: PASS run=compat2 constructionMapMutation fingerprintStable=true originalSnapshotAccepted=true brokerWireAccepted=true copiedMutationRejected=true
+10-08 11:01:32.169 18932 25460 I IpcCompatibilityProbe: PASS run=compat2 legacyFloor userFloor=2 userDenied=true echoFloor=1 echoAllowed=true
+10-08 11:01:32.194 18932 25513 I IpcCompatibilityProbe: PASS run=compat2 strictCache coldMetadata=1 coldChecked=1 hotCalls=100 additionalDiscovery=0 legacy=0
+10-08 11:01:32.203 18932 25458 I IpcCompatibilityProbe: PASS run=compat2 generationRevalidate metadata=2 checked=2 legacy=0 generationAdvanced=true
+10-08 11:01:32.215 18932 18932 E IpcEchoBench: FAILED run=compat2
+10-08 11:01:32.215 18932 18932 E IpcEchoBench: java.lang.IllegalStateException: Check failed.
+10-08 11:01:32.215 18932 18932 E IpcEchoBench: 	at com.cn.ipc.demo.IpcCompatibilityProbe$legacyMethods$2.invokeSuspend(IpcCompatibilityProbe.kt:161)
+10-08 11:01:32.215 18932 18932 E IpcEchoBench: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+10-08 11:01:32.215 18932 18932 E IpcEchoBench: 	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:32)
+10-08 11:01:32.215 18932 18932 E IpcEchoBench: 	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:102)
+10-08 11:01:32.215 18932 18932 E IpcEchoBench: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+10-08 11:01:32.215 18932 18932 E IpcEchoBench: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+10-08 11:01:32.215 18932 18932 E IpcEchoBench: 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+10-08 11:01:32.215 18932 18932 E IpcEchoBench: 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+10-08 11:01:32.215 18932 18932 E IpcEchoBench: 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+10-08 11:01:32.215 18932 18932 E IpcEchoBench: 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)

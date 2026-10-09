@@ -1,0 +1,19 @@
+10-08 09:33:40.958 30858  2781 I IpcFaultProbe: PASS run=faultfinal1 replyBeforeSendReturns cancelCount=0
+10-08 09:33:40.960 30858  2781 I IpcFaultProbe: PASS run=faultfinal1 explicitCancellation cancelCount=1
+10-08 09:33:40.962 30858  2781 I IpcFaultProbe: PASS run=faultfinal1 cancellationDuringDispatch cancelCount=1
+10-08 09:33:41.865 30858  2886 I IpcFaultProbe: PASS run=faultfinal1 replyDisconnectRace iterations=1000 lateRepliesRejected=true
+10-08 09:33:41.886 30858  2887 I IpcFaultProbe: PASS run=faultfinal1 remoteFlowFactoryError propagated=true normalFlowFirstItem=0
+10-08 09:33:41.898 30858  3018 I IpcFaultProbe: PASS run=faultfinal1 closePendingFailed=true staleConnectionRejected=true reconnectedFlow=true
+10-08 09:33:41.898 30858  3018 I IpcFaultProbe: DONE run=faultfinal1 passed=true
+10-08 09:33:51.833  1042  3500 I IpcFaultProbe: PASS run=faultfinal2 replyBeforeSendReturns cancelCount=0
+10-08 09:33:51.838  1042  3501 I IpcFaultProbe: PASS run=faultfinal2 explicitCancellation cancelCount=1
+10-08 09:33:51.839  1042  3501 I IpcFaultProbe: PASS run=faultfinal2 cancellationDuringDispatch cancelCount=1
+10-08 09:33:52.661  1042  3500 I IpcFaultProbe: PASS run=faultfinal2 replyDisconnectRace iterations=1000 lateRepliesRejected=true
+10-08 09:33:52.679  1042  3500 I IpcFaultProbe: PASS run=faultfinal2 remoteFlowFactoryError propagated=true normalFlowFirstItem=0
+10-08 09:33:52.692  1042  3500 I IpcFaultProbe: PASS run=faultfinal2 closePendingFailed=true staleConnectionRejected=true reconnectedFlow=true
+10-08 09:33:52.692  1042  3500 I IpcFaultProbe: DONE run=faultfinal2 passed=true
+10-08 09:34:05.358  3362  4510 I IpcEchoBench: SMOKE run=chaincheck1 frameworkErrors=2 businessError=1 primitiveTypes=4 passed=true
+10-08 09:34:06.072  3362  4510 I IpcEchoBench: RESULT run=chaincheck1 mode=suspend size=16 count=1000 failures=0 meanMs=0.6597110150000001 p50Ms=0.5525 p90Ms=1.072344 p99Ms=2.28 file=modern-chaincheck1-16.csv
+10-08 09:34:06.343  3362  4510 I IpcEchoBench: RESULT run=chaincheck1 mode=direct size=16 count=1000 failures=0 meanMs=0.258554277 p50Ms=0.267656 p90Ms=0.370938 p99Ms=0.48474 file=modern-direct-chaincheck1-16.csv
+10-08 09:34:07.241  3362  4510 I IpcEchoBench: RESULT run=chaincheck1 mode=suspend size=1024 count=1000 failures=0 meanMs=0.8500326509999999 p50Ms=0.756302 p90Ms=1.306042 p99Ms=1.552552 file=modern-chaincheck1-1024.csv
+10-08 09:34:07.667  3362  4510 I IpcEchoBench: RESULT run=chaincheck1 mode=direct size=1024 count=1000 failures=0 meanMs=0.40837227600000003 p50Ms=0.404219 p90Ms=0.464427 p99Ms=0.578645 file=modern-direct-chaincheck1-1024.csv

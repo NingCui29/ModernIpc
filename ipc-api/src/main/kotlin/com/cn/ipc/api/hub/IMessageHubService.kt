@@ -51,7 +51,7 @@ data class MessageEnvelope(
  * 多端通信中枢服务门面 (Facade)。
  * 服务ID分配为 2001。
  */
-@IpcFacade(serviceId = 2001, minApiVersion = 1)
+@IpcFacade(serviceId = 2001, minApiVersion = 2)
 interface IMessageHubService {
 
     /**
@@ -78,7 +78,7 @@ interface IMessageHubService {
      * @param content 消息文本内容
      * @return 投递状态确认字符串
      */
-    @IpcAsync(requestTransaction = 10, cancelTransaction = 11, idempotent = true)
+    @IpcAsync(requestTransaction = 10, cancelTransaction = 11, idempotent = false)
     suspend fun sendMessage(fromClientId: String, targetScope: String, content: String): String
 
     /**

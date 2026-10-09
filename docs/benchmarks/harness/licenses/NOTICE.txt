@@ -1,0 +1,15 @@
+AndLinker benchmark patch attribution
+
+The file ../andlinker-echo.patch contains benchmark modifications and source
+context based on the AndLinker sample at upstream commit:
+7ae01bfd87ddcf021319148a8727a95345cf350e
+
+Upstream project: https://github.com/codezjx/AndLinker
+Upstream source: https://github.com/codezjx/AndLinker/tree/7ae01bfd87ddcf021319148a8727a95345cf350e
+
+Copyright 2018 codezjx <code.zjx@gmail.com>
+
+AndLinker is licensed under the Apache License, Version 2.0. The accompanying
+AndLinker-LICENSE.txt is copied verbatim from the checked upstream LICENSE.txt.
+These attribution files apply to the upstream material in the benchmark patch;
+they do not establish a license for the ModernIpc project as a whole.

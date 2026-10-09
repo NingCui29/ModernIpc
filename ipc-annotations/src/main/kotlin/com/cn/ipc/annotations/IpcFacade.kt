@@ -7,13 +7,14 @@ package com.cn.ipc.annotations
  * KSP 编译器插件（ipc-compiler）将扫描所有带有此注解的接口，并自动生成：
  * - **Client Adapter**：供调用方进程使用的代理实现，将接口调用转发为跨进程 RPC 请求。
  * - **Server Stub**：供服务方进程继承并实现的抽象类，处理来自 Broker 的调用分发。
- * - **服务注册元数据**：用于在 Broker 中完成服务发现与版本校验。
+ * - **IpcSchema**：客户端与服务端共享的事务签名；服务注册仍由宿主完成。
  *
  * ### 使用示例
  * ```kotlin
  * @IpcFacade(serviceId = 1001, minApiVersion = 2)
  * interface IUserService {
- *     suspend fun getUserInfo(userId: String): UserInfo
+ *     @IpcAsync(requestTransaction = 10, cancelTransaction = 11)
+ *     suspend fun getUserInfo(userId: String): String
  * }
  * ```
  *
@@ -23,12 +24,15 @@ package com.cn.ipc.annotations
  * @property minApiVersion  该接口向后兼容的最低服务端 API 版本，默认为 1。
  *                          客户端请求时若服务端版本低于此值，Broker 将拒绝连接，以保证接口契约的安全性。
  * @property aidlInterface  （可选）关联的底层 AIDL 接口全类名，例如 "com.cn.ipc.IUserService"。
- *                          当业务层需要直接操作 AIDL Binder 时填写，留空则由框架自动推断类名。
+ *                          当前生成器保留此字段但不使用；业务 Binder 的 descriptor 来自门面全类名。
+ * @property contractVersion 客户端自身的业务契约版本，必须为正数；0 表示沿用 minApiVersion。
+ *                           与服务端 API 版本下限不同，用于判断服务端是否接受该客户端契约。
  */
 @Target(AnnotationTarget.CLASS) // 此注解仅可用于类或接口（通常是接口）
 @Retention(AnnotationRetention.SOURCE) // KSP 编译期处理后即被抛弃
 annotation class IpcFacade(
     val serviceId: Int,
     val minApiVersion: Int = 1,
-    val aidlInterface: String = ""
+    val aidlInterface: String = "",
+    val contractVersion: Int = 0
 )

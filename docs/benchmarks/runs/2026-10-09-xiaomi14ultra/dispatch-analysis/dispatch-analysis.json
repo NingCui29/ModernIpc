@@ -1,0 +1,3763 @@
+{
+  "valid": true,
+  "serial": "925c23bb",
+  "captureCount": 2,
+  "errors": [],
+  "analyzerSha256": "AFEFADD1A850D44240AD4090E2D46A879F47E76CAEFBA77FA2F1372B0F50510B",
+  "quantileRule": "nearest rank: sorted[ceil(p*n)-1]; matches serial Kotlin indices 499/989",
+  "analysisUnit": "block and within-run paired round; request RTTs are not independent experiments",
+  "limits": [
+    "Each request is a correlated observation inside a block, not an independent experiment; no pooled-request confidence interval or significance test is computed.",
+    "Lane summaries are medians across block metrics. Paired changes compare modes in the same run/round/payload/phase; separate captures remain separate.",
+    "Default versus dedicated is the same Async wire/business/caller path with application server-scope configuration changed. Direct is a synchronous semantic reference, not an equivalent Async optimization.",
+    "QPS is completed requests divided by measured block duration, including the harness envelope; concurrent QPS is not the reciprocal of mean RTT.",
+    "Serial count/blockNs is a serial completion rate, not concurrent throughput; concurrent phase results are reported separately.",
+    "Concurrent sample indices group each of 16 workers' 64 serial requests; they are not global request-completion order or aligned pairs across modes.",
+    "The serial dedicated lane is always the middle lane while default/direct reverse their positions across rounds; balanced order does not eliminate period drift or carry-over.",
+    "Foreground qualification covers app events and bounded periodic samples, not uninterrupted CPU availability, equal frequency/load, GC/JIT state, or scheduler causality.",
+    "Trace-off and resource-cleanup claims require the benchmark's explicit PASS assertions; filtered Logcat silence is not used as proof.",
+    "Same APK/source does not establish equal session load. End-of-capture process inventories show presence, not CPU utilization; a cross-capture difference is not attributed to stopping those processes."
+  ],
+  "runs": [
+    {
+      "run": "dispatchperf1",
+      "directory": "docs\\benchmarks\\runs\\2026-10-09-xiaomi14ultra\\ordered-dispatch1",
+      "valid": true,
+      "serial": "925c23bb",
+      "rows": 28096,
+      "serialBlocks": 24,
+      "concurrentBlocks": 4,
+      "apkSha256": "4494F5299DF407EA3DB2DFE915B14057A39A6DCE5F4171217237FF8F88E1F0A4",
+      "sourceFingerprint": "0F1397E9022693ED274C5D94966F78F8AC355703B6EA833433B150FB4E91ED79",
+      "apkSnapshotAudit": [
+        {
+          "path": "D:\\Developer\\WorkSpace\\ModernIpc\\.gradle\\ordered-dispatch1.apk",
+          "available": true,
+          "sha256": "4494F5299DF407EA3DB2DFE915B14057A39A6DCE5F4171217237FF8F88E1F0A4"
+        },
+        {
+          "path": "D:\\Developer\\WorkSpace\\ModernIpc\\.gradle\\ordered-dispatch1-installed.apk",
+          "available": true,
+          "sha256": "4494F5299DF407EA3DB2DFE915B14057A39A6DCE5F4171217237FF8F88E1F0A4"
+        }
+      ],
+      "artifactHashes": {
+        "evidence": "858F06D16E0581A6A4238973CFB87A2E785730CD10809A9BC1F3DA056757396D",
+        "qualification": "6FC315BA1F25224E177A8F91C783BB9E1835A79FDB48F69479A62B5FB97DEA0D",
+        "foreground": "E3D86F7AD4F16EAECEFA6585ECB70AAA2DBFE3D73BD660F323C87A1C3C102391",
+        "logcat": "0C9116F3420FEBF451A63C9ECC5D49A0DD12E0B143B17DDF872004CD68C2BFD4",
+        "samples": "875162969EB06DE58D027F510940A0E80713BD31A7B28C238ACE49C85840E8E2"
+      },
+      "checks": {
+        "passes": 4,
+        "resultBlocks": 28,
+        "done": 1,
+        "traceDisabled": true,
+        "defaultRestored": true,
+        "pending": 0,
+        "requests": 0,
+        "subscriptions": 0
+      },
+      "foreground": {
+        "valid": true,
+        "ruleVersion": "foreground-coverage-v1",
+        "targetSamplePeriodMs": 500,
+        "permittedMaxGapMs": 1000,
+        "scope": "activity_events_with_bounded_periodic_sample_coverage",
+        "observations": 31,
+        "sampleCount": 29,
+        "requiredSampleCount": 14,
+        "durationMs": 14806,
+        "maxGapMs": 505,
+        "observationMaxGapMs": 505,
+        "errors": []
+      },
+      "sessionProcessInventory": {
+        "file": "processes.txt",
+        "available": true,
+        "observedTestAppProcesses": [
+          {
+            "package": "com.cn.ipc.server.app",
+            "pid": 2791,
+            "rawLine": "u0_a421       2791  1620   15601436 211128 0                   0 S com.cn.ipc.server.app"
+          },
+          {
+            "package": "com.cn.ipc.client1",
+            "pid": 3493,
+            "rawLine": "u0_a422       3493  1620   15556652 177100 0                   0 S com.cn.ipc.client1"
+          },
+          {
+            "package": "com.cn.ipc.client2",
+            "pid": 4458,
+            "rawLine": "u0_a426       4458  1620   15555768 172884 0                   0 S com.cn.ipc.client2"
+          },
+          {
+            "package": "com.cn.ipc.client3",
+            "pid": 5721,
+            "rawLine": "u0_a427       5721  1620   15574084 174272 0                   0 S com.cn.ipc.client3"
+          }
+        ],
+        "scope": "end-of-capture process presence only; not continuous residency or utilization",
+        "sha256": "2C4FA832AF36F2217461C8CDC17AFC7B8A43ECB62457EFA6CBBE927B39682432"
+      },
+      "blocks": [
+        {
+          "phase": "serial",
+          "round": 1,
+          "mode": "default",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 899649739,
+          "blockSeconds": 0.899649739,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.843906,
+          "p99Ms": 1.555677,
+          "meanMs": 0.89935316,
+          "maxMs": 1.908855,
+          "qps": 1111.543700453405
+        },
+        {
+          "phase": "serial",
+          "round": 1,
+          "mode": "dedicated",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 671460781,
+          "blockSeconds": 0.671460781,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.642656,
+          "p99Ms": 1.023125,
+          "meanMs": 0.671210592,
+          "maxMs": 1.807969,
+          "qps": 1489.2902583390048
+        },
+        {
+          "phase": "serial",
+          "round": 1,
+          "mode": "direct",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 285714219,
+          "blockSeconds": 0.285714219,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.298229,
+          "p99Ms": 0.443177,
+          "meanMs": 0.28531120899999995,
+          "maxMs": 2.614166,
+          "qps": 3500.0008172501907
+        },
+        {
+          "phase": "serial",
+          "round": 1,
+          "mode": "default",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 752967344,
+          "blockSeconds": 0.752967344,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.706511,
+          "p99Ms": 1.551094,
+          "meanMs": 0.7527012630000001,
+          "maxMs": 3.869167,
+          "qps": 1328.0788442798655
+        },
+        {
+          "phase": "serial",
+          "round": 1,
+          "mode": "dedicated",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 534077708,
+          "blockSeconds": 0.534077708,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.500052,
+          "p99Ms": 0.787917,
+          "meanMs": 0.533903231,
+          "maxMs": 2.308021,
+          "qps": 1872.386705194593
+        },
+        {
+          "phase": "serial",
+          "round": 1,
+          "mode": "direct",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 267152031,
+          "blockSeconds": 0.267152031,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.225052,
+          "p99Ms": 0.535364,
+          "meanMs": 0.266887026,
+          "maxMs": 3.661927,
+          "qps": 3743.1869645789816
+        },
+        {
+          "phase": "serial",
+          "round": 2,
+          "mode": "direct",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 246287083,
+          "blockSeconds": 0.246287083,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.192657,
+          "p99Ms": 0.50224,
+          "meanMs": 0.246062103,
+          "maxMs": 3.386354,
+          "qps": 4060.3022611624338
+        },
+        {
+          "phase": "serial",
+          "round": 2,
+          "mode": "dedicated",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 618105624,
+          "blockSeconds": 0.618105624,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.610468,
+          "p99Ms": 0.964271,
+          "meanMs": 0.617903652,
+          "maxMs": 1.815677,
+          "qps": 1617.8464669656526
+        },
+        {
+          "phase": "serial",
+          "round": 2,
+          "mode": "default",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 943610937,
+          "blockSeconds": 0.943610937,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.895313,
+          "p99Ms": 1.627917,
+          "meanMs": 0.9432916090000001,
+          "maxMs": 1.961927,
+          "qps": 1059.7588060809007
+        },
+        {
+          "phase": "serial",
+          "round": 2,
+          "mode": "direct",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 191134323,
+          "blockSeconds": 0.191134323,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.165416,
+          "p99Ms": 0.392187,
+          "meanMs": 0.190882236,
+          "maxMs": 1.071563,
+          "qps": 5231.922682981434
+        },
+        {
+          "phase": "serial",
+          "round": 2,
+          "mode": "dedicated",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 563752812,
+          "blockSeconds": 0.563752812,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.48,
+          "p99Ms": 1.26526,
+          "meanMs": 0.5635366850000001,
+          "maxMs": 1.558438,
+          "qps": 1773.82707228075
+        },
+        {
+          "phase": "serial",
+          "round": 2,
+          "mode": "default",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 587460364,
+          "blockSeconds": 0.587460364,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.552187,
+          "p99Ms": 0.985209,
+          "meanMs": 0.587238314,
+          "maxMs": 1.49974,
+          "qps": 1702.242502270332
+        },
+        {
+          "phase": "serial",
+          "round": 3,
+          "mode": "direct",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 295181302,
+          "blockSeconds": 0.295181302,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.297865,
+          "p99Ms": 0.4425,
+          "meanMs": 0.29481279,
+          "maxMs": 0.963854,
+          "qps": 3387.7484556931727
+        },
+        {
+          "phase": "serial",
+          "round": 3,
+          "mode": "dedicated",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 529218437,
+          "blockSeconds": 0.529218437,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.529896,
+          "p99Ms": 0.720313,
+          "meanMs": 0.5290253070000001,
+          "maxMs": 1.149167,
+          "qps": 1889.578915029372
+        },
+        {
+          "phase": "serial",
+          "round": 3,
+          "mode": "default",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 778625260,
+          "blockSeconds": 0.77862526,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.779583,
+          "p99Ms": 1.222969,
+          "meanMs": 0.778270765,
+          "maxMs": 1.327708,
+          "qps": 1284.3148705450424
+        },
+        {
+          "phase": "serial",
+          "round": 3,
+          "mode": "direct",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 379808229,
+          "blockSeconds": 0.379808229,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.391771,
+          "p99Ms": 0.610782,
+          "meanMs": 0.379428325,
+          "maxMs": 2.003177,
+          "qps": 2632.907671939883
+        },
+        {
+          "phase": "serial",
+          "round": 3,
+          "mode": "dedicated",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 608966094,
+          "blockSeconds": 0.608966094,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.57375,
+          "p99Ms": 0.949583,
+          "meanMs": 0.6086669379999999,
+          "maxMs": 1.1725,
+          "qps": 1642.1275500438617
+        },
+        {
+          "phase": "serial",
+          "round": 3,
+          "mode": "default",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 657296979,
+          "blockSeconds": 0.657296979,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.595625,
+          "p99Ms": 1.198385,
+          "meanMs": 0.657053027,
+          "maxMs": 1.733125,
+          "qps": 1521.382315679257
+        },
+        {
+          "phase": "serial",
+          "round": 4,
+          "mode": "default",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 775490677,
+          "blockSeconds": 0.775490677,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.743125,
+          "p99Ms": 1.134428,
+          "meanMs": 0.775180701,
+          "maxMs": 1.687604,
+          "qps": 1289.5061535343254
+        },
+        {
+          "phase": "serial",
+          "round": 4,
+          "mode": "dedicated",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 469648490,
+          "blockSeconds": 0.46964849,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.457084,
+          "p99Ms": 0.638906,
+          "meanMs": 0.469474626,
+          "maxMs": 0.800573,
+          "qps": 2129.252028469207
+        },
+        {
+          "phase": "serial",
+          "round": 4,
+          "mode": "direct",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 252739218,
+          "blockSeconds": 0.252739218,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.215052,
+          "p99Ms": 0.485885,
+          "meanMs": 0.252485695,
+          "maxMs": 2.575469,
+          "qps": 3956.647519578857
+        },
+        {
+          "phase": "serial",
+          "round": 4,
+          "mode": "default",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 479125625,
+          "blockSeconds": 0.479125625,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.476823,
+          "p99Ms": 0.665312,
+          "meanMs": 0.478927753,
+          "maxMs": 0.749843,
+          "qps": 2087.1352894139195
+        },
+        {
+          "phase": "serial",
+          "round": 4,
+          "mode": "dedicated",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 429065625,
+          "blockSeconds": 0.429065625,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.425729,
+          "p99Ms": 0.577292,
+          "meanMs": 0.428895077,
+          "maxMs": 0.705157,
+          "qps": 2330.6458073866906
+        },
+        {
+          "phase": "serial",
+          "round": 4,
+          "mode": "direct",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 247575312,
+          "blockSeconds": 0.247575312,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.266614,
+          "p99Ms": 0.41052,
+          "meanMs": 0.247256246,
+          "maxMs": 0.752083,
+          "qps": 4039.174956184646
+        },
+        {
+          "phase": "concurrent",
+          "round": 1,
+          "mode": "default",
+          "payloadChars": 16,
+          "concurrency": 16,
+          "count": 1024,
+          "blockNs": 161846979,
+          "blockSeconds": 0.161846979,
+          "rateMeaning": "concurrent_requests_per_second",
+          "p50Ms": 2.337604,
+          "p99Ms": 3.761822,
+          "meanMs": 2.385482171875,
+          "maxMs": 4.900209,
+          "qps": 6326.963940426716
+        },
+        {
+          "phase": "concurrent",
+          "round": 1,
+          "mode": "dedicated",
+          "payloadChars": 16,
+          "concurrency": 16,
+          "count": 1024,
+          "blockNs": 142024375,
+          "blockSeconds": 0.142024375,
+          "rateMeaning": "concurrent_requests_per_second",
+          "p50Ms": 2.165886,
+          "p99Ms": 3.358385,
+          "meanMs": 2.190008044921875,
+          "maxMs": 3.820989,
+          "qps": 7210.0299684473175
+        },
+        {
+          "phase": "concurrent",
+          "round": 2,
+          "mode": "dedicated",
+          "payloadChars": 16,
+          "concurrency": 16,
+          "count": 1024,
+          "blockNs": 133495208,
+          "blockSeconds": 0.133495208,
+          "rateMeaning": "concurrent_requests_per_second",
+          "p50Ms": 2.058386,
+          "p99Ms": 3.110261,
+          "meanMs": 2.0544946318359374,
+          "maxMs": 3.320469,
+          "qps": 7670.687325345791
+        },
+        {
+          "phase": "concurrent",
+          "round": 2,
+          "mode": "default",
+          "payloadChars": 16,
+          "concurrency": 16,
+          "count": 1024,
+          "blockNs": 151259843,
+          "blockSeconds": 0.151259843,
+          "rateMeaning": "concurrent_requests_per_second",
+          "p50Ms": 2.304219,
+          "p99Ms": 3.253698,
+          "meanMs": 2.32895402734375,
+          "maxMs": 3.620573,
+          "qps": 6769.807370486296
+        }
+      ],
+      "laneSummaries": [
+        {
+          "phase": "concurrent",
+          "payloadChars": 16,
+          "mode": "dedicated",
+          "blockCount": 2,
+          "medianBlockMetrics": {
+            "p50Ms": 2.112136,
+            "p99Ms": 3.234323,
+            "meanMs": 2.122251338378906,
+            "qps": 7440.358646896554
+          },
+          "blockMetricRanges": {
+            "p50Ms": [
+              2.058386,
+              2.165886
+            ],
+            "p99Ms": [
+              3.110261,
+              3.358385
+            ],
+            "meanMs": [
+              2.0544946318359374,
+              2.190008044921875
+            ],
+            "qps": [
+              7210.0299684473175,
+              7670.687325345791
+            ]
+          }
+        },
+        {
+          "phase": "concurrent",
+          "payloadChars": 16,
+          "mode": "default",
+          "blockCount": 2,
+          "medianBlockMetrics": {
+            "p50Ms": 2.3209115,
+            "p99Ms": 3.50776,
+            "meanMs": 2.357218099609375,
+            "qps": 6548.385655456506
+          },
+          "blockMetricRanges": {
+            "p50Ms": [
+              2.304219,
+              2.337604
+            ],
+            "p99Ms": [
+              3.253698,
+              3.761822
+            ],
+            "meanMs": [
+              2.32895402734375,
+              2.385482171875
+            ],
+            "qps": [
+              6326.963940426716,
+              6769.807370486296
+            ]
+          }
+        },
+        {
+          "phase": "serial",
+          "payloadChars": 16,
+          "mode": "dedicated",
+          "blockCount": 4,
+          "medianBlockMetrics": {
+            "p50Ms": 0.504948,
+            "p99Ms": 0.871719,
+            "meanMs": 0.5462809960000001,
+            "qps": 1831.702993655061
+          },
+          "blockMetricRanges": {
+            "p50Ms": [
+              0.425729,
+              0.642656
+            ],
+            "p99Ms": [
+              0.577292,
+              1.26526
+            ],
+            "meanMs": [
+              0.428895077,
+              0.671210592
+            ],
+            "qps": [
+              1489.2902583390048,
+              2330.6458073866906
+            ]
+          }
+        },
+        {
+          "phase": "serial",
+          "payloadChars": 16,
+          "mode": "default",
+          "blockCount": 4,
+          "medianBlockMetrics": {
+            "p50Ms": 0.6658850000000001,
+            "p99Ms": 1.104089,
+            "meanMs": 0.6827545395000001,
+            "qps": 1493.278686407687
+          },
+          "blockMetricRanges": {
+            "p50Ms": [
+              0.476823,
+              0.843906
+            ],
+            "p99Ms": [
+              0.665312,
+              1.555677
+            ],
+            "meanMs": [
+              0.478927753,
+              0.89935316
+            ],
+            "qps": [
+              1111.543700453405,
+              2087.1352894139195
+            ]
+          }
+        },
+        {
+          "phase": "serial",
+          "payloadChars": 16,
+          "mode": "direct",
+          "blockCount": 4,
+          "medianBlockMetrics": {
+            "p50Ms": 0.2822395,
+            "p99Ms": 0.42651,
+            "meanMs": 0.26628372749999996,
+            "qps": 3769.5878867174183
+          },
+          "blockMetricRanges": {
+            "p50Ms": [
+              0.165416,
+              0.298229
+            ],
+            "p99Ms": [
+              0.392187,
+              0.443177
+            ],
+            "meanMs": [
+              0.190882236,
+              0.29481279
+            ],
+            "qps": [
+              3387.7484556931727,
+              5231.922682981434
+            ]
+          }
+        },
+        {
+          "phase": "serial",
+          "payloadChars": 1024,
+          "mode": "dedicated",
+          "blockCount": 4,
+          "medianBlockMetrics": {
+            "p50Ms": 0.5369010000000001,
+            "p99Ms": 0.8687499999999999,
+            "meanMs": 0.5712850844999999,
+            "qps": 1757.2571276192275
+          },
+          "blockMetricRanges": {
+            "p50Ms": [
+              0.457084,
+              0.610468
+            ],
+            "p99Ms": [
+              0.638906,
+              0.964271
+            ],
+            "meanMs": [
+              0.469474626,
+              0.617903652
+            ],
+            "qps": [
+              1617.8464669656526,
+              2129.252028469207
+            ]
+          }
+        },
+        {
+          "phase": "serial",
+          "payloadChars": 1024,
+          "mode": "default",
+          "blockCount": 4,
+          "medianBlockMetrics": {
+            "p50Ms": 0.724818,
+            "p99Ms": 1.3747395,
+            "meanMs": 0.763940982,
+            "qps": 1308.7924989070955
+          },
+          "blockMetricRanges": {
+            "p50Ms": [
+              0.595625,
+              0.895313
+            ],
+            "p99Ms": [
+              1.134428,
+              1.627917
+            ],
+            "meanMs": [
+              0.657053027,
+              0.9432916090000001
+            ],
+            "qps": [
+              1059.7588060809007,
+              1521.382315679257
+            ]
+          }
+        },
+        {
+          "phase": "serial",
+          "payloadChars": 1024,
+          "mode": "direct",
+          "blockCount": 4,
+          "medianBlockMetrics": {
+            "p50Ms": 0.220052,
+            "p99Ms": 0.518802,
+            "meanMs": 0.25968636050000005,
+            "qps": 3849.917242078919
+          },
+          "blockMetricRanges": {
+            "p50Ms": [
+              0.192657,
+              0.391771
+            ],
+            "p99Ms": [
+              0.485885,
+              0.610782
+            ],
+            "meanMs": [
+              0.246062103,
+              0.379428325
+            ],
+            "qps": [
+              2632.907671939883,
+              4060.3022611624338
+            ]
+          }
+        }
+      ],
+      "pairedRounds": [
+        {
+          "phase": "concurrent",
+          "round": 1,
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "dedicated",
+          "baselineMetrics": {
+            "p50Ms": 2.337604,
+            "p99Ms": 3.761822,
+            "meanMs": 2.385482171875,
+            "qps": 6326.963940426716
+          },
+          "targetMetrics": {
+            "p50Ms": 2.165886,
+            "p99Ms": 3.358385,
+            "meanMs": 2.190008044921875,
+            "qps": 7210.0299684473175
+          },
+          "changePercent": {
+            "p50Ms": -7.34589776540423,
+            "p99Ms": -10.724510622778006,
+            "meanMs": -8.194323531643988,
+            "qps": 13.957184462174176
+          }
+        },
+        {
+          "phase": "concurrent",
+          "round": 2,
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "dedicated",
+          "baselineMetrics": {
+            "p50Ms": 2.304219,
+            "p99Ms": 3.253698,
+            "meanMs": 2.32895402734375,
+            "qps": 6769.807370486296
+          },
+          "targetMetrics": {
+            "p50Ms": 2.058386,
+            "p99Ms": 3.110261,
+            "meanMs": 2.0544946318359374,
+            "qps": 7670.687325345791
+          },
+          "changePercent": {
+            "p50Ms": -10.668820975783976,
+            "p99Ms": -4.408430038682143,
+            "meanMs": -11.78466351355345,
+            "qps": 13.307320364638109
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 1,
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "dedicated",
+          "baselineMetrics": {
+            "p50Ms": 0.843906,
+            "p99Ms": 1.555677,
+            "meanMs": 0.89935316,
+            "qps": 1111.543700453405
+          },
+          "targetMetrics": {
+            "p50Ms": 0.642656,
+            "p99Ms": 1.023125,
+            "meanMs": 0.671210592,
+            "qps": 1489.2902583390048
+          },
+          "changePercent": {
+            "p50Ms": -23.847442724663647,
+            "p99Ms": -34.23281310966222,
+            "meanMs": -25.367406058816755,
+            "qps": 33.98395922099282
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 2,
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "dedicated",
+          "baselineMetrics": {
+            "p50Ms": 0.552187,
+            "p99Ms": 0.985209,
+            "meanMs": 0.587238314,
+            "qps": 1702.242502270332
+          },
+          "targetMetrics": {
+            "p50Ms": 0.48,
+            "p99Ms": 1.26526,
+            "meanMs": 0.5635366850000001,
+            "qps": 1773.82707228075
+          },
+          "changePercent": {
+            "p50Ms": -13.072926381823546,
+            "p99Ms": 28.42554219460034,
+            "meanMs": -4.036117609315248,
+            "qps": 4.205309755510367
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 3,
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "dedicated",
+          "baselineMetrics": {
+            "p50Ms": 0.779583,
+            "p99Ms": 1.222969,
+            "meanMs": 0.778270765,
+            "qps": 1284.3148705450424
+          },
+          "targetMetrics": {
+            "p50Ms": 0.529896,
+            "p99Ms": 0.720313,
+            "meanMs": 0.5290253070000001,
+            "qps": 1889.578915029372
+          },
+          "changePercent": {
+            "p50Ms": -32.02827665559664,
+            "p99Ms": -41.101287113573605,
+            "meanMs": -32.025545505361485,
+            "qps": 47.12738740052627
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 4,
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "dedicated",
+          "baselineMetrics": {
+            "p50Ms": 0.476823,
+            "p99Ms": 0.665312,
+            "meanMs": 0.478927753,
+            "qps": 2087.1352894139195
+          },
+          "targetMetrics": {
+            "p50Ms": 0.425729,
+            "p99Ms": 0.577292,
+            "meanMs": 0.428895077,
+            "qps": 2330.6458073866906
+          },
+          "changePercent": {
+            "p50Ms": -10.71550659259305,
+            "p99Ms": -13.229883122504926,
+            "meanMs": -10.446810753103296,
+            "qps": 11.667212911777769
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 1,
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "direct",
+          "baselineMetrics": {
+            "p50Ms": 0.843906,
+            "p99Ms": 1.555677,
+            "meanMs": 0.89935316,
+            "qps": 1111.543700453405
+          },
+          "targetMetrics": {
+            "p50Ms": 0.298229,
+            "p99Ms": 0.443177,
+            "meanMs": 0.28531120899999995,
+            "qps": 3500.0008172501907
+          },
+          "changePercent": {
+            "p50Ms": -64.66087455237906,
+            "p99Ms": -71.51227407745952,
+            "meanMs": -68.27595413130032,
+            "qps": 214.87748217389205
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 2,
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "direct",
+          "baselineMetrics": {
+            "p50Ms": 0.552187,
+            "p99Ms": 0.985209,
+            "meanMs": 0.587238314,
+            "qps": 1702.242502270332
+          },
+          "targetMetrics": {
+            "p50Ms": 0.165416,
+            "p99Ms": 0.392187,
+            "meanMs": 0.190882236,
+            "qps": 5231.922682981434
+          },
+          "changePercent": {
+            "p50Ms": -70.04348164661609,
+            "p99Ms": -60.192507376607395,
+            "meanMs": -67.49492813236297,
+            "qps": 207.354720376413
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 3,
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "direct",
+          "baselineMetrics": {
+            "p50Ms": 0.779583,
+            "p99Ms": 1.222969,
+            "meanMs": 0.778270765,
+            "qps": 1284.3148705450424
+          },
+          "targetMetrics": {
+            "p50Ms": 0.297865,
+            "p99Ms": 0.4425,
+            "meanMs": 0.29481279,
+            "qps": 3387.7484556931727
+          },
+          "changePercent": {
+            "p50Ms": -61.79175277039135,
+            "p99Ms": -63.817562015063345,
+            "meanMs": -62.11950862628124,
+            "qps": 163.7786522128695
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 4,
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "direct",
+          "baselineMetrics": {
+            "p50Ms": 0.476823,
+            "p99Ms": 0.665312,
+            "meanMs": 0.478927753,
+            "qps": 2087.1352894139195
+          },
+          "targetMetrics": {
+            "p50Ms": 0.266614,
+            "p99Ms": 0.41052,
+            "meanMs": 0.247256246,
+            "qps": 4039.174956184646
+          },
+          "changePercent": {
+            "p50Ms": -44.08533145422935,
+            "p99Ms": -38.29661872925786,
+            "meanMs": -48.37295511667706,
+            "qps": 93.5272225366316
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 1,
+          "payloadChars": 1024,
+          "baseline": "default",
+          "target": "dedicated",
+          "baselineMetrics": {
+            "p50Ms": 0.706511,
+            "p99Ms": 1.551094,
+            "meanMs": 0.7527012630000001,
+            "qps": 1328.0788442798655
+          },
+          "targetMetrics": {
+            "p50Ms": 0.500052,
+            "p99Ms": 0.787917,
+            "meanMs": 0.533903231,
+            "qps": 1872.386705194593
+          },
+          "changePercent": {
+            "p50Ms": -29.222333410237056,
+            "p99Ms": -49.202498365669655,
+            "meanMs": -29.06837582920331,
+            "qps": 40.98460443512839
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 2,
+          "payloadChars": 1024,
+          "baseline": "default",
+          "target": "dedicated",
+          "baselineMetrics": {
+            "p50Ms": 0.895313,
+            "p99Ms": 1.627917,
+            "meanMs": 0.9432916090000001,
+            "qps": 1059.7588060809007
+          },
+          "targetMetrics": {
+            "p50Ms": 0.610468,
+            "p99Ms": 0.964271,
+            "meanMs": 0.617903652,
+            "qps": 1617.8464669656526
+          },
+          "changePercent": {
+            "p50Ms": -31.81513057444715,
+            "p99Ms": -40.76657470866144,
+            "meanMs": -34.49494874071334,
+            "qps": 52.661762061559884
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 3,
+          "payloadChars": 1024,
+          "baseline": "default",
+          "target": "dedicated",
+          "baselineMetrics": {
+            "p50Ms": 0.595625,
+            "p99Ms": 1.198385,
+            "meanMs": 0.657053027,
+            "qps": 1521.382315679257
+          },
+          "targetMetrics": {
+            "p50Ms": 0.57375,
+            "p99Ms": 0.949583,
+            "meanMs": 0.6086669379999999,
+            "qps": 1642.1275500438617
+          },
+          "changePercent": {
+            "p50Ms": -3.6726128016789095,
+            "p99Ms": -20.761441439937922,
+            "meanMs": -7.3641071590406115,
+            "qps": 7.93654777765016
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 4,
+          "payloadChars": 1024,
+          "baseline": "default",
+          "target": "dedicated",
+          "baselineMetrics": {
+            "p50Ms": 0.743125,
+            "p99Ms": 1.134428,
+            "meanMs": 0.775180701,
+            "qps": 1289.5061535343254
+          },
+          "targetMetrics": {
+            "p50Ms": 0.457084,
+            "p99Ms": 0.638906,
+            "meanMs": 0.469474626,
+            "qps": 2129.252028469207
+          },
+          "changePercent": {
+            "p50Ms": -38.491640033641715,
+            "p99Ms": -43.680339342823,
+            "meanMs": -39.436749986891115,
+            "qps": 65.12150970612085
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 1,
+          "payloadChars": 1024,
+          "baseline": "default",
+          "target": "direct",
+          "baselineMetrics": {
+            "p50Ms": 0.706511,
+            "p99Ms": 1.551094,
+            "meanMs": 0.7527012630000001,
+            "qps": 1328.0788442798655
+          },
+          "targetMetrics": {
+            "p50Ms": 0.225052,
+            "p99Ms": 0.535364,
+            "meanMs": 0.266887026,
+            "qps": 3743.1869645789816
+          },
+          "changePercent": {
+            "p50Ms": -68.14600197307614,
+            "p99Ms": -65.48474818418484,
+            "meanMs": -64.54276894178668,
+            "qps": 181.8497546814458
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 2,
+          "payloadChars": 1024,
+          "baseline": "default",
+          "target": "direct",
+          "baselineMetrics": {
+            "p50Ms": 0.895313,
+            "p99Ms": 1.627917,
+            "meanMs": 0.9432916090000001,
+            "qps": 1059.7588060809007
+          },
+          "targetMetrics": {
+            "p50Ms": 0.192657,
+            "p99Ms": 0.50224,
+            "meanMs": 0.246062103,
+            "qps": 4060.3022611624338
+          },
+          "changePercent": {
+            "p50Ms": -78.48160364029117,
+            "p99Ms": -69.14830424401244,
+            "meanMs": -73.91452434726364,
+            "qps": 283.13456211587027
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 3,
+          "payloadChars": 1024,
+          "baseline": "default",
+          "target": "direct",
+          "baselineMetrics": {
+            "p50Ms": 0.595625,
+            "p99Ms": 1.198385,
+            "meanMs": 0.657053027,
+            "qps": 1521.382315679257
+          },
+          "targetMetrics": {
+            "p50Ms": 0.391771,
+            "p99Ms": 0.610782,
+            "meanMs": 0.379428325,
+            "qps": 2632.907671939883
+          },
+          "changePercent": {
+            "p50Ms": -34.22522560335781,
+            "p99Ms": -49.0329067870509,
+            "meanMs": -42.25301316510029,
+            "qps": 73.06022587520083
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 4,
+          "payloadChars": 1024,
+          "baseline": "default",
+          "target": "direct",
+          "baselineMetrics": {
+            "p50Ms": 0.743125,
+            "p99Ms": 1.134428,
+            "meanMs": 0.775180701,
+            "qps": 1289.5061535343254
+          },
+          "targetMetrics": {
+            "p50Ms": 0.215052,
+            "p99Ms": 0.485885,
+            "meanMs": 0.252485695,
+            "qps": 3956.647519578857
+          },
+          "changePercent": {
+            "p50Ms": -71.06112699747688,
+            "p99Ms": -57.16916366662318,
+            "meanMs": -67.42879503136649,
+            "qps": 206.83432636085786
+          }
+        }
+      ],
+      "pairSummaries": [
+        {
+          "phase": "concurrent",
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "dedicated",
+          "pairCount": 2,
+          "metrics": {
+            "p50Ms": {
+              "roundChangesPercent": [
+                -7.34589776540423,
+                -10.668820975783976
+              ],
+              "medianChangePercent": -9.007359370594102,
+              "rangePercent": [
+                -10.668820975783976,
+                -7.34589776540423
+              ],
+              "favorablePairs": 2
+            },
+            "p99Ms": {
+              "roundChangesPercent": [
+                -10.724510622778006,
+                -4.408430038682143
+              ],
+              "medianChangePercent": -7.566470330730074,
+              "rangePercent": [
+                -10.724510622778006,
+                -4.408430038682143
+              ],
+              "favorablePairs": 2
+            },
+            "meanMs": {
+              "roundChangesPercent": [
+                -8.194323531643988,
+                -11.78466351355345
+              ],
+              "medianChangePercent": -9.98949352259872,
+              "rangePercent": [
+                -11.78466351355345,
+                -8.194323531643988
+              ],
+              "favorablePairs": 2
+            },
+            "qps": {
+              "roundChangesPercent": [
+                13.957184462174176,
+                13.307320364638109
+              ],
+              "medianChangePercent": 13.632252413406142,
+              "rangePercent": [
+                13.307320364638109,
+                13.957184462174176
+              ],
+              "favorablePairs": 2
+            }
+          }
+        },
+        {
+          "phase": "serial",
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "dedicated",
+          "pairCount": 4,
+          "metrics": {
+            "p50Ms": {
+              "roundChangesPercent": [
+                -23.847442724663647,
+                -13.072926381823546,
+                -32.02827665559664,
+                -10.71550659259305
+              ],
+              "medianChangePercent": -18.460184553243597,
+              "rangePercent": [
+                -32.02827665559664,
+                -10.71550659259305
+              ],
+              "favorablePairs": 4
+            },
+            "p99Ms": {
+              "roundChangesPercent": [
+                -34.23281310966222,
+                28.42554219460034,
+                -41.101287113573605,
+                -13.229883122504926
+              ],
+              "medianChangePercent": -23.731348116083574,
+              "rangePercent": [
+                -41.101287113573605,
+                28.42554219460034
+              ],
+              "favorablePairs": 3
+            },
+            "meanMs": {
+              "roundChangesPercent": [
+                -25.367406058816755,
+                -4.036117609315248,
+                -32.025545505361485,
+                -10.446810753103296
+              ],
+              "medianChangePercent": -17.907108405960024,
+              "rangePercent": [
+                -32.025545505361485,
+                -4.036117609315248
+              ],
+              "favorablePairs": 4
+            },
+            "qps": {
+              "roundChangesPercent": [
+                33.98395922099282,
+                4.205309755510367,
+                47.12738740052627,
+                11.667212911777769
+              ],
+              "medianChangePercent": 22.825586066385295,
+              "rangePercent": [
+                4.205309755510367,
+                47.12738740052627
+              ],
+              "favorablePairs": 4
+            }
+          }
+        },
+        {
+          "phase": "serial",
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "direct",
+          "pairCount": 4,
+          "metrics": {
+            "p50Ms": {
+              "roundChangesPercent": [
+                -64.66087455237906,
+                -70.04348164661609,
+                -61.79175277039135,
+                -44.08533145422935
+              ],
+              "medianChangePercent": -63.226313661385205,
+              "rangePercent": [
+                -70.04348164661609,
+                -44.08533145422935
+              ],
+              "favorablePairs": 4
+            },
+            "p99Ms": {
+              "roundChangesPercent": [
+                -71.51227407745952,
+                -60.192507376607395,
+                -63.817562015063345,
+                -38.29661872925786
+              ],
+              "medianChangePercent": -62.00503469583537,
+              "rangePercent": [
+                -71.51227407745952,
+                -38.29661872925786
+              ],
+              "favorablePairs": 4
+            },
+            "meanMs": {
+              "roundChangesPercent": [
+                -68.27595413130032,
+                -67.49492813236297,
+                -62.11950862628124,
+                -48.37295511667706
+              ],
+              "medianChangePercent": -64.80721837932211,
+              "rangePercent": [
+                -68.27595413130032,
+                -48.37295511667706
+              ],
+              "favorablePairs": 4
+            },
+            "qps": {
+              "roundChangesPercent": [
+                214.87748217389205,
+                207.354720376413,
+                163.7786522128695,
+                93.5272225366316
+              ],
+              "medianChangePercent": 185.56668629464127,
+              "rangePercent": [
+                93.5272225366316,
+                214.87748217389205
+              ],
+              "favorablePairs": 4
+            }
+          }
+        },
+        {
+          "phase": "serial",
+          "payloadChars": 1024,
+          "baseline": "default",
+          "target": "dedicated",
+          "pairCount": 4,
+          "metrics": {
+            "p50Ms": {
+              "roundChangesPercent": [
+                -29.222333410237056,
+                -31.81513057444715,
+                -3.6726128016789095,
+                -38.491640033641715
+              ],
+              "medianChangePercent": -30.518731992342104,
+              "rangePercent": [
+                -38.491640033641715,
+                -3.6726128016789095
+              ],
+              "favorablePairs": 4
+            },
+            "p99Ms": {
+              "roundChangesPercent": [
+                -49.202498365669655,
+                -40.76657470866144,
+                -20.761441439937922,
+                -43.680339342823
+              ],
+              "medianChangePercent": -42.22345702574222,
+              "rangePercent": [
+                -49.202498365669655,
+                -20.761441439937922
+              ],
+              "favorablePairs": 4
+            },
+            "meanMs": {
+              "roundChangesPercent": [
+                -29.06837582920331,
+                -34.49494874071334,
+                -7.3641071590406115,
+                -39.436749986891115
+              ],
+              "medianChangePercent": -31.781662284958323,
+              "rangePercent": [
+                -39.436749986891115,
+                -7.3641071590406115
+              ],
+              "favorablePairs": 4
+            },
+            "qps": {
+              "roundChangesPercent": [
+                40.98460443512839,
+                52.661762061559884,
+                7.93654777765016,
+                65.12150970612085
+              ],
+              "medianChangePercent": 46.82318324834414,
+              "rangePercent": [
+                7.93654777765016,
+                65.12150970612085
+              ],
+              "favorablePairs": 4
+            }
+          }
+        },
+        {
+          "phase": "serial",
+          "payloadChars": 1024,
+          "baseline": "default",
+          "target": "direct",
+          "pairCount": 4,
+          "metrics": {
+            "p50Ms": {
+              "roundChangesPercent": [
+                -68.14600197307614,
+                -78.48160364029117,
+                -34.22522560335781,
+                -71.06112699747688
+              ],
+              "medianChangePercent": -69.60356448527651,
+              "rangePercent": [
+                -78.48160364029117,
+                -34.22522560335781
+              ],
+              "favorablePairs": 4
+            },
+            "p99Ms": {
+              "roundChangesPercent": [
+                -65.48474818418484,
+                -69.14830424401244,
+                -49.0329067870509,
+                -57.16916366662318
+              ],
+              "medianChangePercent": -61.32695592540401,
+              "rangePercent": [
+                -69.14830424401244,
+                -49.0329067870509
+              ],
+              "favorablePairs": 4
+            },
+            "meanMs": {
+              "roundChangesPercent": [
+                -64.54276894178668,
+                -73.91452434726364,
+                -42.25301316510029,
+                -67.42879503136649
+              ],
+              "medianChangePercent": -65.98578198657658,
+              "rangePercent": [
+                -73.91452434726364,
+                -42.25301316510029
+              ],
+              "favorablePairs": 4
+            },
+            "qps": {
+              "roundChangesPercent": [
+                181.8497546814458,
+                283.13456211587027,
+                73.06022587520083,
+                206.83432636085786
+              ],
+              "medianChangePercent": 194.34204052115183,
+              "rangePercent": [
+                73.06022587520083,
+                283.13456211587027
+              ],
+              "favorablePairs": 4
+            }
+          }
+        }
+      ]
+    },
+    {
+      "run": "dispatchperf2",
+      "directory": "docs\\benchmarks\\runs\\2026-10-09-xiaomi14ultra\\ordered-dispatch2",
+      "valid": true,
+      "serial": "925c23bb",
+      "rows": 28096,
+      "serialBlocks": 24,
+      "concurrentBlocks": 4,
+      "apkSha256": "4494F5299DF407EA3DB2DFE915B14057A39A6DCE5F4171217237FF8F88E1F0A4",
+      "sourceFingerprint": "0F1397E9022693ED274C5D94966F78F8AC355703B6EA833433B150FB4E91ED79",
+      "apkSnapshotAudit": [
+        {
+          "path": "D:\\Developer\\WorkSpace\\ModernIpc\\.gradle\\ordered-dispatch2.apk",
+          "available": true,
+          "sha256": "4494F5299DF407EA3DB2DFE915B14057A39A6DCE5F4171217237FF8F88E1F0A4"
+        },
+        {
+          "path": "D:\\Developer\\WorkSpace\\ModernIpc\\.gradle\\ordered-dispatch2-installed.apk",
+          "available": true,
+          "sha256": "4494F5299DF407EA3DB2DFE915B14057A39A6DCE5F4171217237FF8F88E1F0A4"
+        }
+      ],
+      "artifactHashes": {
+        "evidence": "A3442819822F918A8F53F923946F3DC189D2410647881DD9CCC493E07F3852DB",
+        "qualification": "01214D93D39534AEAF4E2C6C7CA5E1E7D1B82A58BDD521967D464FA024235B56",
+        "foreground": "5D1240C21EA2FCC2A2B9A3620B2A7EBF8B5025894B5923EC76A1208A3C3C85EA",
+        "logcat": "DF2B6FAB23DFC70982D133186C236A69331678C8832CC1DEB1E1F601DE65AE91",
+        "samples": "45AB0E9B1E2583709E9855D420E2F677181617354A4CC1A5016A94F83E2C66C9"
+      },
+      "checks": {
+        "passes": 4,
+        "resultBlocks": 28,
+        "done": 1,
+        "traceDisabled": true,
+        "defaultRestored": true,
+        "pending": 0,
+        "requests": 0,
+        "subscriptions": 0
+      },
+      "foreground": {
+        "valid": true,
+        "ruleVersion": "foreground-coverage-v1",
+        "targetSamplePeriodMs": 500,
+        "permittedMaxGapMs": 1000,
+        "scope": "activity_events_with_bounded_periodic_sample_coverage",
+        "observations": 39,
+        "sampleCount": 37,
+        "requiredSampleCount": 18,
+        "durationMs": 18910,
+        "maxGapMs": 505,
+        "observationMaxGapMs": 505,
+        "errors": []
+      },
+      "sessionProcessInventory": {
+        "file": "processes.txt",
+        "available": true,
+        "observedTestAppProcesses": [],
+        "scope": "end-of-capture process presence only; not continuous residency or utilization",
+        "sha256": "5ABBA282FC2B77FECA9991FFBF7242849D0797BE6113CD3EAC1044756AB25AF7"
+      },
+      "blocks": [
+        {
+          "phase": "serial",
+          "round": 1,
+          "mode": "default",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 948144062,
+          "blockSeconds": 0.948144062,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.797552,
+          "p99Ms": 1.953437,
+          "meanMs": 0.947770306,
+          "maxMs": 2.311927,
+          "qps": 1054.6920453107261
+        },
+        {
+          "phase": "serial",
+          "round": 1,
+          "mode": "dedicated",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 776608333,
+          "blockSeconds": 0.776608333,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.650313,
+          "p99Ms": 1.6125,
+          "meanMs": 0.776302968,
+          "maxMs": 5.549895,
+          "qps": 1287.650360558261
+        },
+        {
+          "phase": "serial",
+          "round": 1,
+          "mode": "direct",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 302265313,
+          "blockSeconds": 0.302265313,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.304843,
+          "p99Ms": 0.441927,
+          "meanMs": 0.301855504,
+          "maxMs": 0.939218,
+          "qps": 3308.3518253382913
+        },
+        {
+          "phase": "serial",
+          "round": 1,
+          "mode": "default",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 901634010,
+          "blockSeconds": 0.90163401,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.789219,
+          "p99Ms": 1.651927,
+          "meanMs": 0.901229001,
+          "maxMs": 1.812865,
+          "qps": 1109.0974707132
+        },
+        {
+          "phase": "serial",
+          "round": 1,
+          "mode": "dedicated",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 728246198,
+          "blockSeconds": 0.728246198,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.626302,
+          "p99Ms": 1.432709,
+          "meanMs": 0.727951708,
+          "maxMs": 2.812031,
+          "qps": 1373.161992120692
+        },
+        {
+          "phase": "serial",
+          "round": 1,
+          "mode": "direct",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 417200625,
+          "blockSeconds": 0.417200625,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.416563,
+          "p99Ms": 0.581823,
+          "meanMs": 0.41678874099999996,
+          "maxMs": 1.073281,
+          "qps": 2396.928336336984
+        },
+        {
+          "phase": "serial",
+          "round": 2,
+          "mode": "direct",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 388406146,
+          "blockSeconds": 0.388406146,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.410157,
+          "p99Ms": 0.609844,
+          "meanMs": 0.388021681,
+          "maxMs": 0.993645,
+          "qps": 2574.6245529286757
+        },
+        {
+          "phase": "serial",
+          "round": 2,
+          "mode": "dedicated",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 899192552,
+          "blockSeconds": 0.899192552,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.847239,
+          "p99Ms": 1.523282,
+          "meanMs": 0.898816226,
+          "maxMs": 3.151823,
+          "qps": 1112.1088556347383
+        },
+        {
+          "phase": "serial",
+          "round": 2,
+          "mode": "default",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 1042264479,
+          "blockSeconds": 1.042264479,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 1.01724,
+          "p99Ms": 1.579948,
+          "meanMs": 1.041813355,
+          "maxMs": 2.238906,
+          "qps": 959.44937215883
+        },
+        {
+          "phase": "serial",
+          "round": 2,
+          "mode": "direct",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 301963906,
+          "blockSeconds": 0.301963906,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.297552,
+          "p99Ms": 0.466771,
+          "meanMs": 0.30155242,
+          "maxMs": 0.892135,
+          "qps": 3311.654075636444
+        },
+        {
+          "phase": "serial",
+          "round": 2,
+          "mode": "dedicated",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 828797291,
+          "blockSeconds": 0.828797291,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.860677,
+          "p99Ms": 1.375469,
+          "meanMs": 0.828379343,
+          "maxMs": 1.558593,
+          "qps": 1206.5676503279014
+        },
+        {
+          "phase": "serial",
+          "round": 2,
+          "mode": "default",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 807437239,
+          "blockSeconds": 0.807437239,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.730156,
+          "p99Ms": 1.447864,
+          "meanMs": 0.807049732,
+          "maxMs": 2.592239,
+          "qps": 1238.4863512593083
+        },
+        {
+          "phase": "serial",
+          "round": 3,
+          "mode": "direct",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 301838333,
+          "blockSeconds": 0.301838333,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.300885,
+          "p99Ms": 0.44401,
+          "meanMs": 0.301445721,
+          "maxMs": 1.046562,
+          "qps": 3313.031814285828
+        },
+        {
+          "phase": "serial",
+          "round": 3,
+          "mode": "dedicated",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 565923958,
+          "blockSeconds": 0.565923958,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.504739,
+          "p99Ms": 1.251458,
+          "meanMs": 0.565682778,
+          "maxMs": 1.412448,
+          "qps": 1767.0218513703567
+        },
+        {
+          "phase": "serial",
+          "round": 3,
+          "mode": "default",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 856591458,
+          "blockSeconds": 0.856591458,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.817604,
+          "p99Ms": 1.437343,
+          "meanMs": 0.8561598229999999,
+          "maxMs": 1.546041,
+          "qps": 1167.4176652833257
+        },
+        {
+          "phase": "serial",
+          "round": 3,
+          "mode": "direct",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 388527760,
+          "blockSeconds": 0.38852776,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.40875,
+          "p99Ms": 0.553125,
+          "meanMs": 0.38813326299999995,
+          "maxMs": 0.913021,
+          "qps": 2573.818663562161
+        },
+        {
+          "phase": "serial",
+          "round": 3,
+          "mode": "dedicated",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 994377030,
+          "blockSeconds": 0.99437703,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 1.002187,
+          "p99Ms": 1.459218,
+          "meanMs": 0.993934022,
+          "maxMs": 1.658125,
+          "qps": 1005.6547665828524
+        },
+        {
+          "phase": "serial",
+          "round": 3,
+          "mode": "default",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 1015617812,
+          "blockSeconds": 1.015617812,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 1.054896,
+          "p99Ms": 1.470365,
+          "meanMs": 1.0151323490000002,
+          "maxMs": 1.516563,
+          "qps": 984.6223531967752
+        },
+        {
+          "phase": "serial",
+          "round": 4,
+          "mode": "default",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 757083176,
+          "blockSeconds": 0.757083176,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.649792,
+          "p99Ms": 1.411302,
+          "meanMs": 0.756707907,
+          "maxMs": 1.569635,
+          "qps": 1320.8588325571245
+        },
+        {
+          "phase": "serial",
+          "round": 4,
+          "mode": "dedicated",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 749900052,
+          "blockSeconds": 0.749900052,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.533594,
+          "p99Ms": 1.442969,
+          "meanMs": 0.7495681550000001,
+          "maxMs": 1.653438,
+          "qps": 1333.511042348881
+        },
+        {
+          "phase": "serial",
+          "round": 4,
+          "mode": "direct",
+          "payloadChars": 1024,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 407657396,
+          "blockSeconds": 0.407657396,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.410937,
+          "p99Ms": 0.56875,
+          "meanMs": 0.407212265,
+          "maxMs": 0.871771,
+          "qps": 2453.040248532618
+        },
+        {
+          "phase": "serial",
+          "round": 4,
+          "mode": "default",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 828475000,
+          "blockSeconds": 0.828475,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.764218,
+          "p99Ms": 1.422448,
+          "meanMs": 0.828062816,
+          "maxMs": 1.527187,
+          "qps": 1207.0370258607684
+        },
+        {
+          "phase": "serial",
+          "round": 4,
+          "mode": "dedicated",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 817958437,
+          "blockSeconds": 0.817958437,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.923386,
+          "p99Ms": 1.3425,
+          "meanMs": 0.817549812,
+          "maxMs": 1.502187,
+          "qps": 1222.5560062289571
+        },
+        {
+          "phase": "serial",
+          "round": 4,
+          "mode": "direct",
+          "payloadChars": 16,
+          "concurrency": 1,
+          "count": 1000,
+          "blockNs": 246304792,
+          "blockSeconds": 0.246304792,
+          "rateMeaning": "serial_completion_per_second",
+          "p50Ms": 0.268958,
+          "p99Ms": 0.384011,
+          "meanMs": 0.245940813,
+          "maxMs": 0.886771,
+          "qps": 4060.010330615086
+        },
+        {
+          "phase": "concurrent",
+          "round": 1,
+          "mode": "default",
+          "payloadChars": 16,
+          "concurrency": 16,
+          "count": 1024,
+          "blockNs": 167578489,
+          "blockSeconds": 0.167578489,
+          "rateMeaning": "concurrent_requests_per_second",
+          "p50Ms": 2.35302,
+          "p99Ms": 3.811093,
+          "meanMs": 2.3994666904296875,
+          "maxMs": 8.068489,
+          "qps": 6110.56947768517
+        },
+        {
+          "phase": "concurrent",
+          "round": 1,
+          "mode": "dedicated",
+          "payloadChars": 16,
+          "concurrency": 16,
+          "count": 1024,
+          "blockNs": 134554375,
+          "blockSeconds": 0.134554375,
+          "rateMeaning": "concurrent_requests_per_second",
+          "p50Ms": 2.062136,
+          "p99Ms": 2.840417,
+          "meanMs": 2.0665240390625,
+          "maxMs": 3.491041,
+          "qps": 7610.3062423648435
+        },
+        {
+          "phase": "concurrent",
+          "round": 2,
+          "mode": "dedicated",
+          "payloadChars": 16,
+          "concurrency": 16,
+          "count": 1024,
+          "blockNs": 133153698,
+          "blockSeconds": 0.133153698,
+          "rateMeaning": "concurrent_requests_per_second",
+          "p50Ms": 2.057865,
+          "p99Ms": 2.868646,
+          "meanMs": 2.0460508759765625,
+          "maxMs": 3.383959,
+          "qps": 7690.360954150894
+        },
+        {
+          "phase": "concurrent",
+          "round": 2,
+          "mode": "default",
+          "payloadChars": 16,
+          "concurrency": 16,
+          "count": 1024,
+          "blockNs": 160276771,
+          "blockSeconds": 0.160276771,
+          "rateMeaning": "concurrent_requests_per_second",
+          "p50Ms": 2.408333,
+          "p99Ms": 3.42125,
+          "meanMs": 2.462776173828125,
+          "maxMs": 3.776875,
+          "qps": 6388.94827747684
+        }
+      ],
+      "laneSummaries": [
+        {
+          "phase": "concurrent",
+          "payloadChars": 16,
+          "mode": "dedicated",
+          "blockCount": 2,
+          "medianBlockMetrics": {
+            "p50Ms": 2.0600005,
+            "p99Ms": 2.8545315,
+            "meanMs": 2.0562874575195313,
+            "qps": 7650.333598257868
+          },
+          "blockMetricRanges": {
+            "p50Ms": [
+              2.057865,
+              2.062136
+            ],
+            "p99Ms": [
+              2.840417,
+              2.868646
+            ],
+            "meanMs": [
+              2.0460508759765625,
+              2.0665240390625
+            ],
+            "qps": [
+              7610.3062423648435,
+              7690.360954150894
+            ]
+          }
+        },
+        {
+          "phase": "concurrent",
+          "payloadChars": 16,
+          "mode": "default",
+          "blockCount": 2,
+          "medianBlockMetrics": {
+            "p50Ms": 2.3806765,
+            "p99Ms": 3.6161715,
+            "meanMs": 2.431121432128906,
+            "qps": 6249.758877581005
+          },
+          "blockMetricRanges": {
+            "p50Ms": [
+              2.35302,
+              2.408333
+            ],
+            "p99Ms": [
+              3.42125,
+              3.811093
+            ],
+            "meanMs": [
+              2.3994666904296875,
+              2.462776173828125
+            ],
+            "qps": [
+              6110.56947768517,
+              6388.94827747684
+            ]
+          }
+        },
+        {
+          "phase": "serial",
+          "payloadChars": 16,
+          "mode": "dedicated",
+          "blockCount": 4,
+          "medianBlockMetrics": {
+            "p50Ms": 0.755495,
+            "p99Ms": 1.3589845,
+            "meanMs": 0.79692639,
+            "qps": 1255.103183393609
+          },
+          "blockMetricRanges": {
+            "p50Ms": [
+              0.504739,
+              0.923386
+            ],
+            "p99Ms": [
+              1.251458,
+              1.6125
+            ],
+            "meanMs": [
+              0.565682778,
+              0.828379343
+            ],
+            "qps": [
+              1206.5676503279014,
+              1767.0218513703567
+            ]
+          }
+        },
+        {
+          "phase": "serial",
+          "payloadChars": 16,
+          "mode": "default",
+          "blockCount": 4,
+          "medianBlockMetrics": {
+            "p50Ms": 0.780885,
+            "p99Ms": 1.4426035000000001,
+            "meanMs": 0.8421113195,
+            "qps": 1187.227345572047
+          },
+          "blockMetricRanges": {
+            "p50Ms": [
+              0.730156,
+              0.817604
+            ],
+            "p99Ms": [
+              1.422448,
+              1.953437
+            ],
+            "meanMs": [
+              0.807049732,
+              0.947770306
+            ],
+            "qps": [
+              1054.6920453107261,
+              1238.4863512593083
+            ]
+          }
+        },
+        {
+          "phase": "serial",
+          "payloadChars": 16,
+          "mode": "direct",
+          "blockCount": 4,
+          "medianBlockMetrics": {
+            "p50Ms": 0.2992185,
+            "p99Ms": 0.4429685,
+            "meanMs": 0.3014990705,
+            "qps": 3312.342944961136
+          },
+          "blockMetricRanges": {
+            "p50Ms": [
+              0.268958,
+              0.304843
+            ],
+            "p99Ms": [
+              0.384011,
+              0.466771
+            ],
+            "meanMs": [
+              0.245940813,
+              0.301855504
+            ],
+            "qps": [
+              3308.3518253382913,
+              4060.010330615086
+            ]
+          }
+        },
+        {
+          "phase": "serial",
+          "payloadChars": 1024,
+          "mode": "dedicated",
+          "blockCount": 4,
+          "medianBlockMetrics": {
+            "p50Ms": 0.7367705,
+            "p99Ms": 1.4510934999999998,
+            "meanMs": 0.8241921905,
+            "qps": 1222.8099489918095
+          },
+          "blockMetricRanges": {
+            "p50Ms": [
+              0.533594,
+              1.002187
+            ],
+            "p99Ms": [
+              1.432709,
+              1.523282
+            ],
+            "meanMs": [
+              0.727951708,
+              0.993934022
+            ],
+            "qps": [
+              1005.6547665828524,
+              1373.161992120692
+            ]
+          }
+        },
+        {
+          "phase": "serial",
+          "payloadChars": 1024,
+          "mode": "default",
+          "blockCount": 4,
+          "medianBlockMetrics": {
+            "p50Ms": 0.9032294999999999,
+            "p99Ms": 1.5251565,
+            "meanMs": 0.9581806750000001,
+            "qps": 1046.8599119549876
+          },
+          "blockMetricRanges": {
+            "p50Ms": [
+              0.649792,
+              1.054896
+            ],
+            "p99Ms": [
+              1.411302,
+              1.651927
+            ],
+            "meanMs": [
+              0.756707907,
+              1.041813355
+            ],
+            "qps": [
+              959.44937215883,
+              1320.8588325571245
+            ]
+          }
+        },
+        {
+          "phase": "serial",
+          "payloadChars": 1024,
+          "mode": "direct",
+          "blockCount": 4,
+          "medianBlockMetrics": {
+            "p50Ms": 0.410547,
+            "p99Ms": 0.5752865,
+            "meanMs": 0.39767276399999996,
+            "qps": 2513.4294560473895
+          },
+          "blockMetricRanges": {
+            "p50Ms": [
+              0.40875,
+              0.416563
+            ],
+            "p99Ms": [
+              0.553125,
+              0.609844
+            ],
+            "meanMs": [
+              0.388021681,
+              0.41678874099999996
+            ],
+            "qps": [
+              2396.928336336984,
+              2574.6245529286757
+            ]
+          }
+        }
+      ],
+      "pairedRounds": [
+        {
+          "phase": "concurrent",
+          "round": 1,
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "dedicated",
+          "baselineMetrics": {
+            "p50Ms": 2.35302,
+            "p99Ms": 3.811093,
+            "meanMs": 2.3994666904296875,
+            "qps": 6110.56947768517
+          },
+          "targetMetrics": {
+            "p50Ms": 2.062136,
+            "p99Ms": 2.840417,
+            "meanMs": 2.0665240390625,
+            "qps": 7610.3062423648435
+          },
+          "changePercent": {
+            "p50Ms": -12.362155867778412,
+            "p99Ms": -25.46975369008314,
+            "meanMs": -13.875693823762369,
+            "qps": 24.543322355739082
+          }
+        },
+        {
+          "phase": "concurrent",
+          "round": 2,
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "dedicated",
+          "baselineMetrics": {
+            "p50Ms": 2.408333,
+            "p99Ms": 3.42125,
+            "meanMs": 2.462776173828125,
+            "qps": 6388.94827747684
+          },
+          "targetMetrics": {
+            "p50Ms": 2.057865,
+            "p99Ms": 2.868646,
+            "meanMs": 2.0460508759765625,
+            "qps": 7690.360954150894
+          },
+          "changePercent": {
+            "p50Ms": -14.552306512429958,
+            "p99Ms": -16.15210814760687,
+            "meanMs": -16.920957019159687,
+            "qps": 20.36974819880706
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 1,
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "dedicated",
+          "baselineMetrics": {
+            "p50Ms": 0.797552,
+            "p99Ms": 1.953437,
+            "meanMs": 0.947770306,
+            "qps": 1054.6920453107261
+          },
+          "targetMetrics": {
+            "p50Ms": 0.650313,
+            "p99Ms": 1.6125,
+            "meanMs": 0.776302968,
+            "qps": 1287.650360558261
+          },
+          "changePercent": {
+            "p50Ms": -18.461366782354006,
+            "p99Ms": -17.4531863581984,
+            "meanMs": -18.091655426900456,
+            "qps": 22.087804329547424
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 2,
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "dedicated",
+          "baselineMetrics": {
+            "p50Ms": 0.730156,
+            "p99Ms": 1.447864,
+            "meanMs": 0.807049732,
+            "qps": 1238.4863512593083
+          },
+          "targetMetrics": {
+            "p50Ms": 0.860677,
+            "p99Ms": 1.375469,
+            "meanMs": 0.828379343,
+            "qps": 1206.5676503279014
+          },
+          "changePercent": {
+            "p50Ms": 17.875769013745014,
+            "p99Ms": -5.000124321068833,
+            "meanMs": 2.6429116018837906,
+            "qps": -2.5772347752521907
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 3,
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "dedicated",
+          "baselineMetrics": {
+            "p50Ms": 0.817604,
+            "p99Ms": 1.437343,
+            "meanMs": 0.8561598229999999,
+            "qps": 1167.4176652833257
+          },
+          "targetMetrics": {
+            "p50Ms": 0.504739,
+            "p99Ms": 1.251458,
+            "meanMs": 0.565682778,
+            "qps": 1767.0218513703567
+          },
+          "changePercent": {
+            "p50Ms": -38.26607991154641,
+            "p99Ms": -12.932542893380361,
+            "meanMs": -33.927899580964095,
+            "qps": 51.361582398319314
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 4,
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "dedicated",
+          "baselineMetrics": {
+            "p50Ms": 0.764218,
+            "p99Ms": 1.422448,
+            "meanMs": 0.828062816,
+            "qps": 1207.0370258607684
+          },
+          "targetMetrics": {
+            "p50Ms": 0.923386,
+            "p99Ms": 1.3425,
+            "meanMs": 0.817549812,
+            "qps": 1222.5560062289571
+          },
+          "changePercent": {
+            "p50Ms": 20.827564909489183,
+            "p99Ms": -5.620451503323842,
+            "meanMs": -1.2695901563100742,
+            "qps": 1.2857087260535138
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 1,
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "direct",
+          "baselineMetrics": {
+            "p50Ms": 0.797552,
+            "p99Ms": 1.953437,
+            "meanMs": 0.947770306,
+            "qps": 1054.6920453107261
+          },
+          "targetMetrics": {
+            "p50Ms": 0.304843,
+            "p99Ms": 0.441927,
+            "meanMs": 0.301855504,
+            "qps": 3308.3518253382913
+          },
+          "changePercent": {
+            "p50Ms": -61.77766465384076,
+            "p99Ms": -77.37695149626018,
+            "meanMs": -68.15098530845933,
+            "qps": 213.67941382013623
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 2,
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "direct",
+          "baselineMetrics": {
+            "p50Ms": 0.730156,
+            "p99Ms": 1.447864,
+            "meanMs": 0.807049732,
+            "qps": 1238.4863512593083
+          },
+          "targetMetrics": {
+            "p50Ms": 0.297552,
+            "p99Ms": 0.466771,
+            "meanMs": 0.30155242,
+            "qps": 3311.654075636444
+          },
+          "changePercent": {
+            "p50Ms": -59.24816066703554,
+            "p99Ms": -67.76140576739252,
+            "meanMs": -62.63521217549949,
+            "qps": 167.3952823354987
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 3,
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "direct",
+          "baselineMetrics": {
+            "p50Ms": 0.817604,
+            "p99Ms": 1.437343,
+            "meanMs": 0.8561598229999999,
+            "qps": 1167.4176652833257
+          },
+          "targetMetrics": {
+            "p50Ms": 0.300885,
+            "p99Ms": 0.44401,
+            "meanMs": 0.301445721,
+            "qps": 3313.031814285828
+          },
+          "changePercent": {
+            "p50Ms": -63.1991771077441,
+            "p99Ms": -69.1089739888113,
+            "meanMs": -64.79095223789776,
+            "qps": 183.79147521994827
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 4,
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "direct",
+          "baselineMetrics": {
+            "p50Ms": 0.764218,
+            "p99Ms": 1.422448,
+            "meanMs": 0.828062816,
+            "qps": 1207.0370258607684
+          },
+          "targetMetrics": {
+            "p50Ms": 0.268958,
+            "p99Ms": 0.384011,
+            "meanMs": 0.245940813,
+            "qps": 4060.010330615086
+          },
+          "changePercent": {
+            "p50Ms": -64.80611553247894,
+            "p99Ms": -73.00351225492953,
+            "meanMs": -70.2992564998837,
+            "qps": 236.36170586563333
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 1,
+          "payloadChars": 1024,
+          "baseline": "default",
+          "target": "dedicated",
+          "baselineMetrics": {
+            "p50Ms": 0.789219,
+            "p99Ms": 1.651927,
+            "meanMs": 0.901229001,
+            "qps": 1109.0974707132
+          },
+          "targetMetrics": {
+            "p50Ms": 0.626302,
+            "p99Ms": 1.432709,
+            "meanMs": 0.727951708,
+            "qps": 1373.161992120692
+          },
+          "changePercent": {
+            "p50Ms": -20.642812704711865,
+            "p99Ms": -13.270441127241096,
+            "meanMs": -19.2267773016328,
+            "qps": 23.808955333536797
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 2,
+          "payloadChars": 1024,
+          "baseline": "default",
+          "target": "dedicated",
+          "baselineMetrics": {
+            "p50Ms": 1.01724,
+            "p99Ms": 1.579948,
+            "meanMs": 1.041813355,
+            "qps": 959.44937215883
+          },
+          "targetMetrics": {
+            "p50Ms": 0.847239,
+            "p99Ms": 1.523282,
+            "meanMs": 0.898816226,
+            "qps": 1112.1088556347383
+          },
+          "changePercent": {
+            "p50Ms": -16.71198537218356,
+            "p99Ms": -3.5865737353381166,
+            "meanMs": -13.725791507059338,
+            "qps": 15.91115570094268
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 3,
+          "payloadChars": 1024,
+          "baseline": "default",
+          "target": "dedicated",
+          "baselineMetrics": {
+            "p50Ms": 1.054896,
+            "p99Ms": 1.470365,
+            "meanMs": 1.0151323490000002,
+            "qps": 984.6223531967752
+          },
+          "targetMetrics": {
+            "p50Ms": 1.002187,
+            "p99Ms": 1.459218,
+            "meanMs": 0.993934022,
+            "qps": 1005.6547665828524
+          },
+          "changePercent": {
+            "p50Ms": -4.996606300526318,
+            "p99Ms": -0.7581110812621361,
+            "meanMs": -2.088232831993031,
+            "qps": 2.1360893664247316
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 4,
+          "payloadChars": 1024,
+          "baseline": "default",
+          "target": "dedicated",
+          "baselineMetrics": {
+            "p50Ms": 0.649792,
+            "p99Ms": 1.411302,
+            "meanMs": 0.756707907,
+            "qps": 1320.8588325571245
+          },
+          "targetMetrics": {
+            "p50Ms": 0.533594,
+            "p99Ms": 1.442969,
+            "meanMs": 0.7495681550000001,
+            "qps": 1333.511042348881
+          },
+          "changePercent": {
+            "p50Ms": -17.882337732689845,
+            "p99Ms": 2.243814576894243,
+            "meanMs": -0.9435281346941049,
+            "qps": 0.9578775172561116
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 1,
+          "payloadChars": 1024,
+          "baseline": "default",
+          "target": "direct",
+          "baselineMetrics": {
+            "p50Ms": 0.789219,
+            "p99Ms": 1.651927,
+            "meanMs": 0.901229001,
+            "qps": 1109.0974707132
+          },
+          "targetMetrics": {
+            "p50Ms": 0.416563,
+            "p99Ms": 0.581823,
+            "meanMs": 0.41678874099999996,
+            "qps": 2396.928336336984
+          },
+          "changePercent": {
+            "p50Ms": -47.21832596528973,
+            "p99Ms": -64.7791337026394,
+            "meanMs": -53.75329238877878,
+            "qps": 116.11521075741437
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 2,
+          "payloadChars": 1024,
+          "baseline": "default",
+          "target": "direct",
+          "baselineMetrics": {
+            "p50Ms": 1.01724,
+            "p99Ms": 1.579948,
+            "meanMs": 1.041813355,
+            "qps": 959.44937215883
+          },
+          "targetMetrics": {
+            "p50Ms": 0.410157,
+            "p99Ms": 0.609844,
+            "meanMs": 0.388021681,
+            "qps": 2574.6245529286757
+          },
+          "changePercent": {
+            "p50Ms": -59.67942668396839,
+            "p99Ms": -61.40100813444492,
+            "meanMs": -62.75516347167578,
+            "qps": 168.3439718278814
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 3,
+          "payloadChars": 1024,
+          "baseline": "default",
+          "target": "direct",
+          "baselineMetrics": {
+            "p50Ms": 1.054896,
+            "p99Ms": 1.470365,
+            "meanMs": 1.0151323490000002,
+            "qps": 984.6223531967752
+          },
+          "targetMetrics": {
+            "p50Ms": 0.40875,
+            "p99Ms": 0.553125,
+            "meanMs": 0.38813326299999995,
+            "qps": 2573.818663562161
+          },
+          "changePercent": {
+            "p50Ms": -61.25210447285798,
+            "p99Ms": -62.38178955565454,
+            "meanMs": -61.76525520220616,
+            "qps": 161.4016079571766
+          }
+        },
+        {
+          "phase": "serial",
+          "round": 4,
+          "payloadChars": 1024,
+          "baseline": "default",
+          "target": "direct",
+          "baselineMetrics": {
+            "p50Ms": 0.649792,
+            "p99Ms": 1.411302,
+            "meanMs": 0.756707907,
+            "qps": 1320.8588325571245
+          },
+          "targetMetrics": {
+            "p50Ms": 0.410937,
+            "p99Ms": 0.56875,
+            "meanMs": 0.407212265,
+            "qps": 2453.040248532618
+          },
+          "changePercent": {
+            "p50Ms": -36.758685856397136,
+            "p99Ms": -59.70033345095522,
+            "meanMs": -46.18633408835253,
+            "qps": 85.71555022149037
+          }
+        }
+      ],
+      "pairSummaries": [
+        {
+          "phase": "concurrent",
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "dedicated",
+          "pairCount": 2,
+          "metrics": {
+            "p50Ms": {
+              "roundChangesPercent": [
+                -12.362155867778412,
+                -14.552306512429958
+              ],
+              "medianChangePercent": -13.457231190104185,
+              "rangePercent": [
+                -14.552306512429958,
+                -12.362155867778412
+              ],
+              "favorablePairs": 2
+            },
+            "p99Ms": {
+              "roundChangesPercent": [
+                -25.46975369008314,
+                -16.15210814760687
+              ],
+              "medianChangePercent": -20.810930918845006,
+              "rangePercent": [
+                -25.46975369008314,
+                -16.15210814760687
+              ],
+              "favorablePairs": 2
+            },
+            "meanMs": {
+              "roundChangesPercent": [
+                -13.875693823762369,
+                -16.920957019159687
+              ],
+              "medianChangePercent": -15.398325421461028,
+              "rangePercent": [
+                -16.920957019159687,
+                -13.875693823762369
+              ],
+              "favorablePairs": 2
+            },
+            "qps": {
+              "roundChangesPercent": [
+                24.543322355739082,
+                20.36974819880706
+              ],
+              "medianChangePercent": 22.45653527727307,
+              "rangePercent": [
+                20.36974819880706,
+                24.543322355739082
+              ],
+              "favorablePairs": 2
+            }
+          }
+        },
+        {
+          "phase": "serial",
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "dedicated",
+          "pairCount": 4,
+          "metrics": {
+            "p50Ms": {
+              "roundChangesPercent": [
+                -18.461366782354006,
+                17.875769013745014,
+                -38.26607991154641,
+                20.827564909489183
+              ],
+              "medianChangePercent": -0.29279888430449574,
+              "rangePercent": [
+                -38.26607991154641,
+                20.827564909489183
+              ],
+              "favorablePairs": 2
+            },
+            "p99Ms": {
+              "roundChangesPercent": [
+                -17.4531863581984,
+                -5.000124321068833,
+                -12.932542893380361,
+                -5.620451503323842
+              ],
+              "medianChangePercent": -9.276497198352102,
+              "rangePercent": [
+                -17.4531863581984,
+                -5.000124321068833
+              ],
+              "favorablePairs": 4
+            },
+            "meanMs": {
+              "roundChangesPercent": [
+                -18.091655426900456,
+                2.6429116018837906,
+                -33.927899580964095,
+                -1.2695901563100742
+              ],
+              "medianChangePercent": -9.680622791605265,
+              "rangePercent": [
+                -33.927899580964095,
+                2.6429116018837906
+              ],
+              "favorablePairs": 3
+            },
+            "qps": {
+              "roundChangesPercent": [
+                22.087804329547424,
+                -2.5772347752521907,
+                51.361582398319314,
+                1.2857087260535138
+              ],
+              "medianChangePercent": 11.686756527800469,
+              "rangePercent": [
+                -2.5772347752521907,
+                51.361582398319314
+              ],
+              "favorablePairs": 3
+            }
+          }
+        },
+        {
+          "phase": "serial",
+          "payloadChars": 16,
+          "baseline": "default",
+          "target": "direct",
+          "pairCount": 4,
+          "metrics": {
+            "p50Ms": {
+              "roundChangesPercent": [
+                -61.77766465384076,
+                -59.24816066703554,
+                -63.1991771077441,
+                -64.80611553247894
+              ],
+              "medianChangePercent": -62.48842088079243,
+              "rangePercent": [
+                -64.80611553247894,
+                -59.24816066703554
+              ],
+              "favorablePairs": 4
+            },
+            "p99Ms": {
+              "roundChangesPercent": [
+                -77.37695149626018,
+                -67.76140576739252,
+                -69.1089739888113,
+                -73.00351225492953
+              ],
+              "medianChangePercent": -71.05624312187041,
+              "rangePercent": [
+                -77.37695149626018,
+                -67.76140576739252
+              ],
+              "favorablePairs": 4
+            },
+            "meanMs": {
+              "roundChangesPercent": [
+                -68.15098530845933,
+                -62.63521217549949,
+                -64.79095223789776,
+                -70.2992564998837
+              ],
+              "medianChangePercent": -66.47096877317854,
+              "rangePercent": [
+                -70.2992564998837,
+                -62.63521217549949
+              ],
+              "favorablePairs": 4
+            },
+            "qps": {
+              "roundChangesPercent": [
+                213.67941382013623,
+                167.3952823354987,
+                183.79147521994827,
+                236.36170586563333
+              ],
+              "medianChangePercent": 198.73544452004225,
+              "rangePercent": [
+                167.3952823354987,
+                236.36170586563333
+              ],
+              "favorablePairs": 4
+            }
+          }
+        },
+        {
+          "phase": "serial",
+          "payloadChars": 1024,
+          "baseline": "default",
+          "target": "dedicated",
+          "pairCount": 4,
+          "metrics": {
+            "p50Ms": {
+              "roundChangesPercent": [
+                -20.642812704711865,
+                -16.71198537218356,
+                -4.996606300526318,
+                -17.882337732689845
+              ],
+              "medianChangePercent": -17.2971615524367,
+              "rangePercent": [
+                -20.642812704711865,
+                -4.996606300526318
+              ],
+              "favorablePairs": 4
+            },
+            "p99Ms": {
+              "roundChangesPercent": [
+                -13.270441127241096,
+                -3.5865737353381166,
+                -0.7581110812621361,
+                2.243814576894243
+              ],
+              "medianChangePercent": -2.1723424083001266,
+              "rangePercent": [
+                -13.270441127241096,
+                2.243814576894243
+              ],
+              "favorablePairs": 3
+            },
+            "meanMs": {
+              "roundChangesPercent": [
+                -19.2267773016328,
+                -13.725791507059338,
+                -2.088232831993031,
+                -0.9435281346941049
+              ],
+              "medianChangePercent": -7.907012169526184,
+              "rangePercent": [
+                -19.2267773016328,
+                -0.9435281346941049
+              ],
+              "favorablePairs": 4
+            },
+            "qps": {
+              "roundChangesPercent": [
+                23.808955333536797,
+                15.91115570094268,
+                2.1360893664247316,
+                0.9578775172561116
+              ],
+              "medianChangePercent": 9.023622533683707,
+              "rangePercent": [
+                0.9578775172561116,
+                23.808955333536797
+              ],
+              "favorablePairs": 4
+            }
+          }
+        },
+        {
+          "phase": "serial",
+          "payloadChars": 1024,
+          "baseline": "default",
+          "target": "direct",
+          "pairCount": 4,
+          "metrics": {
+            "p50Ms": {
+              "roundChangesPercent": [
+                -47.21832596528973,
+                -59.67942668396839,
+                -61.25210447285798,
+                -36.758685856397136
+              ],
+              "medianChangePercent": -53.448876324629055,
+              "rangePercent": [
+                -61.25210447285798,
+                -36.758685856397136
+              ],
+              "favorablePairs": 4
+            },
+            "p99Ms": {
+              "roundChangesPercent": [
+                -64.7791337026394,
+                -61.40100813444492,
+                -62.38178955565454,
+                -59.70033345095522
+              ],
+              "medianChangePercent": -61.891398845049736,
+              "rangePercent": [
+                -64.7791337026394,
+                -59.70033345095522
+              ],
+              "favorablePairs": 4
+            },
+            "meanMs": {
+              "roundChangesPercent": [
+                -53.75329238877878,
+                -62.75516347167578,
+                -61.76525520220616,
+                -46.18633408835253
+              ],
+              "medianChangePercent": -57.759273795492476,
+              "rangePercent": [
+                -62.75516347167578,
+                -46.18633408835253
+              ],
+              "favorablePairs": 4
+            },
+            "qps": {
+              "roundChangesPercent": [
+                116.11521075741437,
+                168.3439718278814,
+                161.4016079571766,
+                85.71555022149037
+              ],
+              "medianChangePercent": 138.75840935729548,
+              "rangePercent": [
+                85.71555022149037,
+                168.3439718278814
+              ],
+              "favorablePairs": 4
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "crossCaptureComparison": [
+    {
+      "phase": "concurrent",
+      "payloadChars": 16,
+      "target": "dedicated",
+      "captures": [
+        {
+          "run": "dispatchperf1",
+          "pairCount": 2,
+          "metrics": {
+            "p50Ms": {
+              "roundChangesPercent": [
+                -7.34589776540423,
+                -10.668820975783976
+              ],
+              "medianChangePercent": -9.007359370594102,
+              "rangePercent": [
+                -10.668820975783976,
+                -7.34589776540423
+              ],
+              "favorablePairs": 2
+            },
+            "p99Ms": {
+              "roundChangesPercent": [
+                -10.724510622778006,
+                -4.408430038682143
+              ],
+              "medianChangePercent": -7.566470330730074,
+              "rangePercent": [
+                -10.724510622778006,
+                -4.408430038682143
+              ],
+              "favorablePairs": 2
+            },
+            "meanMs": {
+              "roundChangesPercent": [
+                -8.194323531643988,
+                -11.78466351355345
+              ],
+              "medianChangePercent": -9.98949352259872,
+              "rangePercent": [
+                -11.78466351355345,
+                -8.194323531643988
+              ],
+              "favorablePairs": 2
+            },
+            "qps": {
+              "roundChangesPercent": [
+                13.957184462174176,
+                13.307320364638109
+              ],
+              "medianChangePercent": 13.632252413406142,
+              "rangePercent": [
+                13.307320364638109,
+                13.957184462174176
+              ],
+              "favorablePairs": 2
+            }
+          }
+        },
+        {
+          "run": "dispatchperf2",
+          "pairCount": 2,
+          "metrics": {
+            "p50Ms": {
+              "roundChangesPercent": [
+                -12.362155867778412,
+                -14.552306512429958
+              ],
+              "medianChangePercent": -13.457231190104185,
+              "rangePercent": [
+                -14.552306512429958,
+                -12.362155867778412
+              ],
+              "favorablePairs": 2
+            },
+            "p99Ms": {
+              "roundChangesPercent": [
+                -25.46975369008314,
+                -16.15210814760687
+              ],
+              "medianChangePercent": -20.810930918845006,
+              "rangePercent": [
+                -25.46975369008314,
+                -16.15210814760687
+              ],
+              "favorablePairs": 2
+            },
+            "meanMs": {
+              "roundChangesPercent": [
+                -13.875693823762369,
+                -16.920957019159687
+              ],
+              "medianChangePercent": -15.398325421461028,
+              "rangePercent": [
+                -16.920957019159687,
+                -13.875693823762369
+              ],
+              "favorablePairs": 2
+            },
+            "qps": {
+              "roundChangesPercent": [
+                24.543322355739082,
+                20.36974819880706
+              ],
+              "medianChangePercent": 22.45653527727307,
+              "rangePercent": [
+                20.36974819880706,
+                24.543322355739082
+              ],
+              "favorablePairs": 2
+            }
+          }
+        }
+      ],
+      "sameMedianPairDirection": {
+        "p50Ms": true,
+        "p99Ms": true,
+        "meanMs": true,
+        "qps": true
+      }
+    },
+    {
+      "phase": "serial",
+      "payloadChars": 16,
+      "target": "dedicated",
+      "captures": [
+        {
+          "run": "dispatchperf1",
+          "pairCount": 4,
+          "metrics": {
+            "p50Ms": {
+              "roundChangesPercent": [
+                -23.847442724663647,
+                -13.072926381823546,
+                -32.02827665559664,
+                -10.71550659259305
+              ],
+              "medianChangePercent": -18.460184553243597,
+              "rangePercent": [
+                -32.02827665559664,
+                -10.71550659259305
+              ],
+              "favorablePairs": 4
+            },
+            "p99Ms": {
+              "roundChangesPercent": [
+                -34.23281310966222,
+                28.42554219460034,
+                -41.101287113573605,
+                -13.229883122504926
+              ],
+              "medianChangePercent": -23.731348116083574,
+              "rangePercent": [
+                -41.101287113573605,
+                28.42554219460034
+              ],
+              "favorablePairs": 3
+            },
+            "meanMs": {
+              "roundChangesPercent": [
+                -25.367406058816755,
+                -4.036117609315248,
+                -32.025545505361485,
+                -10.446810753103296
+              ],
+              "medianChangePercent": -17.907108405960024,
+              "rangePercent": [
+                -32.025545505361485,
+                -4.036117609315248
+              ],
+              "favorablePairs": 4
+            },
+            "qps": {
+              "roundChangesPercent": [
+                33.98395922099282,
+                4.205309755510367,
+                47.12738740052627,
+                11.667212911777769
+              ],
+              "medianChangePercent": 22.825586066385295,
+              "rangePercent": [
+                4.205309755510367,
+                47.12738740052627
+              ],
+              "favorablePairs": 4
+            }
+          }
+        },
+        {
+          "run": "dispatchperf2",
+          "pairCount": 4,
+          "metrics": {
+            "p50Ms": {
+              "roundChangesPercent": [
+                -18.461366782354006,
+                17.875769013745014,
+                -38.26607991154641,
+                20.827564909489183
+              ],
+              "medianChangePercent": -0.29279888430449574,
+              "rangePercent": [
+                -38.26607991154641,
+                20.827564909489183
+              ],
+              "favorablePairs": 2
+            },
+            "p99Ms": {
+              "roundChangesPercent": [
+                -17.4531863581984,
+                -5.000124321068833,
+                -12.932542893380361,
+                -5.620451503323842
+              ],
+              "medianChangePercent": -9.276497198352102,
+              "rangePercent": [
+                -17.4531863581984,
+                -5.000124321068833
+              ],
+              "favorablePairs": 4
+            },
+            "meanMs": {
+              "roundChangesPercent": [
+                -18.091655426900456,
+                2.6429116018837906,
+                -33.927899580964095,
+                -1.2695901563100742
+              ],
+              "medianChangePercent": -9.680622791605265,
+              "rangePercent": [
+                -33.927899580964095,
+                2.6429116018837906
+              ],
+              "favorablePairs": 3
+            },
+            "qps": {
+              "roundChangesPercent": [
+                22.087804329547424,
+                -2.5772347752521907,
+                51.361582398319314,
+                1.2857087260535138
+              ],
+              "medianChangePercent": 11.686756527800469,
+              "rangePercent": [
+                -2.5772347752521907,
+                51.361582398319314
+              ],
+              "favorablePairs": 3
+            }
+          }
+        }
+      ],
+      "sameMedianPairDirection": {
+        "p50Ms": true,
+        "p99Ms": true,
+        "meanMs": true,
+        "qps": true
+      }
+    },
+    {
+      "phase": "serial",
+      "payloadChars": 16,
+      "target": "direct",
+      "captures": [
+        {
+          "run": "dispatchperf1",
+          "pairCount": 4,
+          "metrics": {
+            "p50Ms": {
+              "roundChangesPercent": [
+                -64.66087455237906,
+                -70.04348164661609,
+                -61.79175277039135,
+                -44.08533145422935
+              ],
+              "medianChangePercent": -63.226313661385205,
+              "rangePercent": [
+                -70.04348164661609,
+                -44.08533145422935
+              ],
+              "favorablePairs": 4
+            },
+            "p99Ms": {
+              "roundChangesPercent": [
+                -71.51227407745952,
+                -60.192507376607395,
+                -63.817562015063345,
+                -38.29661872925786
+              ],
+              "medianChangePercent": -62.00503469583537,
+              "rangePercent": [
+                -71.51227407745952,
+                -38.29661872925786
+              ],
+              "favorablePairs": 4
+            },
+            "meanMs": {
+              "roundChangesPercent": [
+                -68.27595413130032,
+                -67.49492813236297,
+                -62.11950862628124,
+                -48.37295511667706
+              ],
+              "medianChangePercent": -64.80721837932211,
+              "rangePercent": [
+                -68.27595413130032,
+                -48.37295511667706
+              ],
+              "favorablePairs": 4
+            },
+            "qps": {
+              "roundChangesPercent": [
+                214.87748217389205,
+                207.354720376413,
+                163.7786522128695,
+                93.5272225366316
+              ],
+              "medianChangePercent": 185.56668629464127,
+              "rangePercent": [
+                93.5272225366316,
+                214.87748217389205
+              ],
+              "favorablePairs": 4
+            }
+          }
+        },
+        {
+          "run": "dispatchperf2",
+          "pairCount": 4,
+          "metrics": {
+            "p50Ms": {
+              "roundChangesPercent": [
+                -61.77766465384076,
+                -59.24816066703554,
+                -63.1991771077441,
+                -64.80611553247894
+              ],
+              "medianChangePercent": -62.48842088079243,
+              "rangePercent": [
+                -64.80611553247894,
+                -59.24816066703554
+              ],
+              "favorablePairs": 4
+            },
+            "p99Ms": {
+              "roundChangesPercent": [
+                -77.37695149626018,
+                -67.76140576739252,
+                -69.1089739888113,
+                -73.00351225492953
+              ],
+              "medianChangePercent": -71.05624312187041,
+              "rangePercent": [
+                -77.37695149626018,
+                -67.76140576739252
+              ],
+              "favorablePairs": 4
+            },
+            "meanMs": {
+              "roundChangesPercent": [
+                -68.15098530845933,
+                -62.63521217549949,
+                -64.79095223789776,
+                -70.2992564998837
+              ],
+              "medianChangePercent": -66.47096877317854,
+              "rangePercent": [
+                -70.2992564998837,
+                -62.63521217549949
+              ],
+              "favorablePairs": 4
+            },
+            "qps": {
+              "roundChangesPercent": [
+                213.67941382013623,
+                167.3952823354987,
+                183.79147521994827,
+                236.36170586563333
+              ],
+              "medianChangePercent": 198.73544452004225,
+              "rangePercent": [
+                167.3952823354987,
+                236.36170586563333
+              ],
+              "favorablePairs": 4
+            }
+          }
+        }
+      ],
+      "sameMedianPairDirection": {
+        "p50Ms": true,
+        "p99Ms": true,
+        "meanMs": true,
+        "qps": true
+      }
+    },
+    {
+      "phase": "serial",
+      "payloadChars": 1024,
+      "target": "dedicated",
+      "captures": [
+        {
+          "run": "dispatchperf1",
+          "pairCount": 4,
+          "metrics": {
+            "p50Ms": {
+              "roundChangesPercent": [
+                -29.222333410237056,
+                -31.81513057444715,
+                -3.6726128016789095,
+                -38.491640033641715
+              ],
+              "medianChangePercent": -30.518731992342104,
+              "rangePercent": [
+                -38.491640033641715,
+                -3.6726128016789095
+              ],
+              "favorablePairs": 4
+            },
+            "p99Ms": {
+              "roundChangesPercent": [
+                -49.202498365669655,
+                -40.76657470866144,
+                -20.761441439937922,
+                -43.680339342823
+              ],
+              "medianChangePercent": -42.22345702574222,
+              "rangePercent": [
+                -49.202498365669655,
+                -20.761441439937922
+              ],
+              "favorablePairs": 4
+            },
+            "meanMs": {
+              "roundChangesPercent": [
+                -29.06837582920331,
+                -34.49494874071334,
+                -7.3641071590406115,
+                -39.436749986891115
+              ],
+              "medianChangePercent": -31.781662284958323,
+              "rangePercent": [
+                -39.436749986891115,
+                -7.3641071590406115
+              ],
+              "favorablePairs": 4
+            },
+            "qps": {
+              "roundChangesPercent": [
+                40.98460443512839,
+                52.661762061559884,
+                7.93654777765016,
+                65.12150970612085
+              ],
+              "medianChangePercent": 46.82318324834414,
+              "rangePercent": [
+                7.93654777765016,
+                65.12150970612085
+              ],
+              "favorablePairs": 4
+            }
+          }
+        },
+        {
+          "run": "dispatchperf2",
+          "pairCount": 4,
+          "metrics": {
+            "p50Ms": {
+              "roundChangesPercent": [
+                -20.642812704711865,
+                -16.71198537218356,
+                -4.996606300526318,
+                -17.882337732689845
+              ],
+              "medianChangePercent": -17.2971615524367,
+              "rangePercent": [
+                -20.642812704711865,
+                -4.996606300526318
+              ],
+              "favorablePairs": 4
+            },
+            "p99Ms": {
+              "roundChangesPercent": [
+                -13.270441127241096,
+                -3.5865737353381166,
+                -0.7581110812621361,
+                2.243814576894243
+              ],
+              "medianChangePercent": -2.1723424083001266,
+              "rangePercent": [
+                -13.270441127241096,
+                2.243814576894243
+              ],
+              "favorablePairs": 3
+            },
+            "meanMs": {
+              "roundChangesPercent": [
+                -19.2267773016328,
+                -13.725791507059338,
+                -2.088232831993031,
+                -0.9435281346941049
+              ],
+              "medianChangePercent": -7.907012169526184,
+              "rangePercent": [
+                -19.2267773016328,
+                -0.9435281346941049
+              ],
+              "favorablePairs": 4
+            },
+            "qps": {
+              "roundChangesPercent": [
+                23.808955333536797,
+                15.91115570094268,
+                2.1360893664247316,
+                0.9578775172561116
+              ],
+              "medianChangePercent": 9.023622533683707,
+              "rangePercent": [
+                0.9578775172561116,
+                23.808955333536797
+              ],
+              "favorablePairs": 4
+            }
+          }
+        }
+      ],
+      "sameMedianPairDirection": {
+        "p50Ms": true,
+        "p99Ms": true,
+        "meanMs": true,
+        "qps": true
+      }
+    },
+    {
+      "phase": "serial",
+      "payloadChars": 1024,
+      "target": "direct",
+      "captures": [
+        {
+          "run": "dispatchperf1",
+          "pairCount": 4,
+          "metrics": {
+            "p50Ms": {
+              "roundChangesPercent": [
+                -68.14600197307614,
+                -78.48160364029117,
+                -34.22522560335781,
+                -71.06112699747688
+              ],
+              "medianChangePercent": -69.60356448527651,
+              "rangePercent": [
+                -78.48160364029117,
+                -34.22522560335781
+              ],
+              "favorablePairs": 4
+            },
+            "p99Ms": {
+              "roundChangesPercent": [
+                -65.48474818418484,
+                -69.14830424401244,
+                -49.0329067870509,
+                -57.16916366662318
+              ],
+              "medianChangePercent": -61.32695592540401,
+              "rangePercent": [
+                -69.14830424401244,
+                -49.0329067870509
+              ],
+              "favorablePairs": 4
+            },
+            "meanMs": {
+              "roundChangesPercent": [
+                -64.54276894178668,
+                -73.91452434726364,
+                -42.25301316510029,
+                -67.42879503136649
+              ],
+              "medianChangePercent": -65.98578198657658,
+              "rangePercent": [
+                -73.91452434726364,
+                -42.25301316510029
+              ],
+              "favorablePairs": 4
+            },
+            "qps": {
+              "roundChangesPercent": [
+                181.8497546814458,
+                283.13456211587027,
+                73.06022587520083,
+                206.83432636085786
+              ],
+              "medianChangePercent": 194.34204052115183,
+              "rangePercent": [
+                73.06022587520083,
+                283.13456211587027
+              ],
+              "favorablePairs": 4
+            }
+          }
+        },
+        {
+          "run": "dispatchperf2",
+          "pairCount": 4,
+          "metrics": {
+            "p50Ms": {
+              "roundChangesPercent": [
+                -47.21832596528973,
+                -59.67942668396839,
+                -61.25210447285798,
+                -36.758685856397136
+              ],
+              "medianChangePercent": -53.448876324629055,
+              "rangePercent": [
+                -61.25210447285798,
+                -36.758685856397136
+              ],
+              "favorablePairs": 4
+            },
+            "p99Ms": {
+              "roundChangesPercent": [
+                -64.7791337026394,
+                -61.40100813444492,
+                -62.38178955565454,
+                -59.70033345095522
+              ],
+              "medianChangePercent": -61.891398845049736,
+              "rangePercent": [
+                -64.7791337026394,
+                -59.70033345095522
+              ],
+              "favorablePairs": 4
+            },
+            "meanMs": {
+              "roundChangesPercent": [
+                -53.75329238877878,
+                -62.75516347167578,
+                -61.76525520220616,
+                -46.18633408835253
+              ],
+              "medianChangePercent": -57.759273795492476,
+              "rangePercent": [
+                -62.75516347167578,
+                -46.18633408835253
+              ],
+              "favorablePairs": 4
+            },
+            "qps": {
+              "roundChangesPercent": [
+                116.11521075741437,
+                168.3439718278814,
+                161.4016079571766,
+                85.71555022149037
+              ],
+              "medianChangePercent": 138.75840935729548,
+              "rangePercent": [
+                85.71555022149037,
+                168.3439718278814
+              ],
+              "favorablePairs": 4
+            }
+          }
+        }
+      ],
+      "sameMedianPairDirection": {
+        "p50Ms": true,
+        "p99Ms": true,
+        "meanMs": true,
+        "qps": true
+      }
+    }
+  ]
+}

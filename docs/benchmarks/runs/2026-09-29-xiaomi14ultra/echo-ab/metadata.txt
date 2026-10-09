@@ -1,0 +1,5 @@
+Initial synchronous series a1-a4 / m1-m4.
+ModernIpc built Debug APK SHA-256: 47BB67B492393E116B7239EFF712E0010C265D29B1CE0194896374D39C156E30
+AndLinker built Debug APK SHA-256: 8D4A97B5AA90906506CBB891E8D6D5BD8E8BDC28A50F045D50108CB6018E3410
+The initial series did not preserve device-side installed APK hashes.
+AndLinker initial harness tested only direct synchronous echo; the later main-series APK added Call.enqueue.

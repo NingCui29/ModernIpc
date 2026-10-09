@@ -8,8 +8,6 @@ android {
 
     defaultConfig {
         applicationId = "com.cn.ipc.demo"
-        versionCode = 201
-        versionName = "2.0.1"
     }
     
     buildTypes {
@@ -33,4 +31,3 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.constraintlayout)
 }
-

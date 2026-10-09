@@ -2,6 +2,19 @@ package com.cn.ipc.server
 
 import android.os.IBinder
 
+/** Resources owned by a registered service Stub. Counts are concurrent snapshots, not joins. */
+interface IpcServiceLifecycle {
+    val activeRequestCount: Int
+    val activeSubscriptionCount: Int
+    fun dispose()
+}
+
+/** Generated wire metadata; hashes of handwritten labels are not a compatibility proof. */
+interface IpcServiceSchemaProvider {
+    val ipcDescriptor: String
+    val ipcMethodSignatures: Map<Int, String>
+}
+
 /**
  * 业务服务在注册表中的元数据。
  */
@@ -11,7 +24,8 @@ data class RegisteredService(
     val apiHash: String,
     val requiredCapability: Long = 0L,
     val permission: String? = null,
-    val binder: IBinder
+    val binder: IBinder,
+    val minSupportedClientVersion: Int = 1
 )
 
 /**
@@ -40,6 +54,7 @@ class DefaultIpcServiceRegistry : IpcServiceRegistry {
      * @throws IllegalArgumentException 如果对应的 serviceId 已经被注册过，则抛出异常
      */
     fun register(service: RegisteredService) {
+        require(service.apiVersion >= 1 && service.minSupportedClientVersion in 1..service.apiVersion)
         require(!services.containsKey(service.serviceId)) {
             "ServiceId ${service.serviceId} is already registered."
         }
@@ -63,5 +78,25 @@ class DefaultIpcServiceRegistry : IpcServiceRegistry {
      */
     fun getServiceVersions(): Map<Int, Int> {
         return services.mapValues { it.value.apiVersion }
+    }
+
+    /** Release every registered lifecycle owner even if another owner fails to dispose. */
+    fun dispose() {
+        val owners = java.util.Collections.newSetFromMap(
+            java.util.IdentityHashMap<IpcServiceLifecycle, Boolean>()
+        )
+        services.values.forEach { service ->
+            (service.binder as? IpcServiceLifecycle)?.let { owners.add(it) }
+        }
+        var failure: Throwable? = null
+        owners.forEach { owner ->
+            try {
+                owner.dispose()
+            } catch (error: Throwable) {
+                val previous = failure
+                if (previous == null) failure = error else if (previous !== error) previous.addSuppressed(error)
+            }
+        }
+        failure?.let { throw it }
     }
 }

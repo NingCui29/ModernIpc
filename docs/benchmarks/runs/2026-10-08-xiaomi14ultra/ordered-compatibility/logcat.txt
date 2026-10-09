@@ -1,0 +1,18 @@
+--------- beginning of main
+10-08 11:04:19.252 22162 26267 I IpcCompatibilityProbe: PASS run=compat3 metadataMatch descriptor=true signatures=17 floor=1
+10-08 11:04:19.260 22162 26267 I IpcCompatibilityProbe: PASS run=compat3 additiveSubset clientVersion=1 requestedTransactions=1 extraServerTransactions=true
+10-08 11:04:19.273 22162 26267 I IpcCompatibilityProbe: PASS run=compat3 parameterChange brokerRejected=true controllerRejected=true
+10-08 11:04:19.276 22162 26267 I IpcCompatibilityProbe: PASS run=compat3 returnChange brokerRejected=true controllerRejected=true
+10-08 11:04:19.279 22162 26267 I IpcCompatibilityProbe: PASS run=compat3 modeChange brokerRejected=true controllerRejected=true
+10-08 11:04:19.281 22162 26267 I IpcCompatibilityProbe: PASS run=compat3 envelopeChange brokerRejected=true controllerRejected=true
+10-08 11:04:19.284 22162 26267 I IpcCompatibilityProbe: PASS run=compat3 missingTransaction brokerRejected=true controllerRejected=true
+10-08 11:04:19.286 22162 26267 I IpcCompatibilityProbe: PASS run=compat3 descriptorChange brokerRejected=true controllerRejected=true
+10-08 11:04:19.288 22162 26267 I IpcCompatibilityProbe: PASS run=compat3 futureClientVersion brokerRejected=true controllerRejected=true
+10-08 11:04:19.289 22162 26267 I IpcCompatibilityProbe: PASS run=compat3 schemaCacheIsolation fullCached=true changedSchemaRejected=true subsetAccepted=true
+10-08 11:04:19.298 22162 26267 I IpcCompatibilityProbe: PASS run=compat3 constructionMapMutation fingerprintStable=true originalSnapshotAccepted=true brokerWireAccepted=true copiedMutationRejected=true
+10-08 11:04:19.300 22162 26267 I IpcCompatibilityProbe: PASS run=compat3 legacyFloor userFloor=2 userDenied=true echoFloor=1 echoAllowed=true
+10-08 11:04:19.330 22162 26267 I IpcCompatibilityProbe: PASS run=compat3 strictCache coldMetadata=1 coldChecked=1 hotCalls=100 additionalDiscovery=0 legacy=0
+10-08 11:04:19.339 22162 26267 I IpcCompatibilityProbe: PASS run=compat3 generationRevalidate metadata=2 checked=2 legacy=0 generationAdvanced=true
+10-08 11:04:19.348 22162 26267 I IpcCompatibilityProbe: PASS run=compat3 legacyMethodsMissing metadataRejected=true checkedRejected=true legacyEchoAlive=true
+10-08 11:04:19.348 22162 26267 I IpcCompatibilityProbe: PASS run=compat3 strictLegacyNoFallback explicitFailure=true metadataAttempts=1 checked=0 legacyFallbacks=0
+10-08 11:04:19.351 22162 26383 I IpcCompatibilityProbe: DONE run=compat3 passed=true checks=16 requests=0 subscriptions=0 pending=0

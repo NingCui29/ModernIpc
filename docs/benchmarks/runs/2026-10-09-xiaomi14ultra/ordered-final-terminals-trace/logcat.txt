@@ -1,0 +1,21 @@
+--------- beginning of main
+10-09 09:47:34.345 29062 29062 I IpcForeground: STATE run=terminalfinaltrace event=WAIT_READY elapsedRealtimeMs=813331579 uptimeMs=184884979 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-09 09:47:34.364 29062 29062 I IpcForeground: STATE run=terminalfinaltrace event=FOCUS_GAIN elapsedRealtimeMs=813331598 uptimeMs=184884998 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:47:34.447 29062 29062 I IpcForeground: STATE run=terminalfinaltrace event=WAIT_READY elapsedRealtimeMs=813331682 uptimeMs=184885081 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:47:34.548 29062 29062 I IpcForeground: STATE run=terminalfinaltrace event=WAIT_READY elapsedRealtimeMs=813331782 uptimeMs=184885182 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:47:34.649 29062 29062 I IpcForeground: STATE run=terminalfinaltrace event=WAIT_READY elapsedRealtimeMs=813331883 uptimeMs=184885283 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-09 09:47:34.649 29062 29062 I IpcForeground: STATE run=terminalfinaltrace event=BEGIN elapsedRealtimeMs=813331884 uptimeMs=184885283 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:34.686 29062  1388 I IpcTerminalProbe: PASS run=terminalfinaltrace finiteFlow items=1,2,3 completed=true subscriptions=0
+10-09 09:47:34.690 29062  1385 I IpcTerminalProbe: PASS run=terminalfinaltrace runtimeFlowError itemBeforeError=7 message=flow-runtime-error subscriptions=0
+10-09 09:47:35.151 29062 29062 I IpcForeground: STATE run=terminalfinaltrace event=SAMPLE elapsedRealtimeMs=813332384 uptimeMs=184885784 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:35.653 29062 29062 I IpcForeground: STATE run=terminalfinaltrace event=SAMPLE elapsedRealtimeMs=813332887 uptimeMs=184886287 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:36.134 29062  1385 I IpcTerminalProbe: PASS run=terminalfinaltrace streamOverflow explicitFailure=true consumed=69 subscriptions=0
+10-09 09:47:36.154 29062 29062 I IpcForeground: STATE run=terminalfinaltrace event=SAMPLE elapsedRealtimeMs=813333388 uptimeMs=184886787 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:36.231 29062  1385 I IpcTerminalProbe: PASS run=terminalfinaltrace streamConflate completed=true consumed=4 last=999 overflow=false subscriptions=0
+10-09 09:47:36.239 29062  1369 I IpcTerminalProbe: PASS run=terminalfinaltrace explicitStreamCancel extraError=false subscriptions=0
+10-09 09:47:36.406 29062  1136 I IpcTerminalProbe: PASS run=terminalfinaltrace rpcDeadline defaultMs=150 elapsedMs=154 serverJobObserved=true requests=0 pending=0
+10-09 09:47:36.412 29062  1136 I IpcTerminalProbe: PASS run=terminalfinaltrace asyncParameterError callbackReceived=true message=Missing_payload requests=0 pending=0
+10-09 09:47:36.567 29062  1136 I IpcTerminalProbe: PASS run=terminalfinaltrace badTokenDeadline callbackTrusted=false defaultMs=150 elapsedMs=153 requests=0 pending=0
+10-09 09:47:36.574 29062  1136 I IpcTerminalProbe: DONE run=terminalfinaltrace passed=true checks=8 subscriptions=0 requests=0 pending=0 anchorAlive=true
+10-09 09:47:36.576 29062 29062 I IpcForeground: STATE run=terminalfinaltrace event=END elapsedRealtimeMs=813333810 uptimeMs=184887210 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-09 09:47:36.580 29062 29062 I IpcForeground: END run=terminalfinaltrace started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-terminalfinaltrace.csv scope=activity_events_and_500ms_app_samples
