@@ -1,0 +1,151 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.modernipc",
+    "module": "ipc-runtime-client",
+    "version": "3.0.0-consumer-check-20261022022757175411",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "com.modernipc",
+          "module": "ipc-contract",
+          "version": {
+            "requires": "3.0.0-consumer-check-20261022022757175411"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.7.3"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ipc-runtime-client-3.0.0-consumer-check-20261022022757175411.aar",
+          "url": "ipc-runtime-client-3.0.0-consumer-check-20261022022757175411.aar",
+          "size": 100789,
+          "sha512": "d203abf9521e1da5f275549a9a1b5b720a95ed8b6af4083389728289a4fde570fafea6ffd9a694072794308c2ac7fa6d92c5f65a5acee4664778835148c256fa",
+          "sha256": "9c935682f1dae64abef503f27da76f1ef35f07092a48d8baafcc6e0af9dacf4f",
+          "sha1": "818b3ac24134672bbfb40f18659d20e8449bbe21",
+          "md5": "cfbfad9a25aaa70bec02a25981410f81"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.12.0"
+          }
+        },
+        {
+          "group": "com.modernipc",
+          "module": "ipc-contract",
+          "version": {
+            "requires": "3.0.0-consumer-check-20261022022757175411"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-core",
+          "version": {
+            "requires": "1.7.3"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ipc-runtime-client-3.0.0-consumer-check-20261022022757175411.aar",
+          "url": "ipc-runtime-client-3.0.0-consumer-check-20261022022757175411.aar",
+          "size": 100789,
+          "sha512": "d203abf9521e1da5f275549a9a1b5b720a95ed8b6af4083389728289a4fde570fafea6ffd9a694072794308c2ac7fa6d92c5f65a5acee4664778835148c256fa",
+          "sha256": "9c935682f1dae64abef503f27da76f1ef35f07092a48d8baafcc6e0af9dacf4f",
+          "sha1": "818b3ac24134672bbfb40f18659d20e8449bbe21",
+          "md5": "cfbfad9a25aaa70bec02a25981410f81"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseSourcePublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ipc-runtime-client-3.0.0-consumer-check-20261022022757175411-sources.jar",
+          "url": "ipc-runtime-client-3.0.0-consumer-check-20261022022757175411-sources.jar",
+          "size": 19095,
+          "sha512": "1cbe2ed1a2aa16ed763c07b23b35dba7c82a49dba1e2d54ef8dc83f00e6421dbc158d3d4fdd73fcc8c6afee43ff81ea555eebfa40d015c98bb25954bb953b43b",
+          "sha256": "36aa717ded61bbdcb4b2af157b8562f9cc5177238664fa4df0e019c2728e5eb6",
+          "sha1": "4a4a085829257fc7a4415cf74108dd8b1596d8c3",
+          "md5": "55987dfba0720800ebe95aa883e7f8f6"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseJavaDocPublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ipc-runtime-client-3.0.0-consumer-check-20261022022757175411-javadoc.jar",
+          "url": "ipc-runtime-client-3.0.0-consumer-check-20261022022757175411-javadoc.jar",
+          "size": 333472,
+          "sha512": "5fe60e1efa4427f296c3d9de8b7f2cedefb3ac52171e04901de9b7eae9b9d0a86ac69b385707fc026db62368c2d951a1c71afdd83dacfa29c50feab0c4b62b81",
+          "sha256": "28620ca1152e2da915fe124045ae581788c5b3954769cbeea127ca79ed6d45ac",
+          "sha1": "d1a59d675345367539f779219fc838f8cdfd4f69",
+          "md5": "655a4bff1097a324a299596c1a2bfb6d"
+        }
+      ]
+    }
+  ]
+}

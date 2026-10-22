@@ -4,4 +4,6 @@ docs/releases/** -text -whitespace
 docs/archive/*.zip -text
 # Unified diff context and the frozen benchmark baseline retain their original bytes.
 docs/benchmarks/harness/andlinker-echo.patch -text -whitespace
+patches/*.patch -text -whitespace
 demo-app/src/main/kotlin/com/cn/ipc/demo/LegacyPendingCallRegistry.kt -whitespace
+benchmark-andlinker/src/main/java/com/codezjx/andlinker/** -text -whitespace

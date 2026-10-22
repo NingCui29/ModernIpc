@@ -1,0 +1,69 @@
+{
+  "group": "fault",
+  "tag": "IpcFaultProbe",
+  "expectedPasses": 6,
+  "runId": "fault-engfix2-20261022",
+  "status": "PASSED",
+  "valid": true,
+  "passCount": 6,
+  "doneCount": 1,
+  "foregroundEndCount": 1,
+  "complete": true,
+  "errors": [],
+  "passes": [
+    "PASS run=fault-engfix2-20261022 replyBeforeSendReturns cancelCount=0",
+    "PASS run=fault-engfix2-20261022 explicitCancellation cancelCount=1",
+    "PASS run=fault-engfix2-20261022 cancellationDuringDispatch cancelCount=1",
+    "PASS run=fault-engfix2-20261022 replyDisconnectRace iterations=1000 lateRepliesRejected=true",
+    "PASS run=fault-engfix2-20261022 remoteFlowFactoryError propagated=true normalFlowFirstItem=0",
+    "PASS run=fault-engfix2-20261022 closePendingFailed=true staleConnectionRejected=true reconnectedFlow=true"
+  ],
+  "done": [
+    "DONE run=fault-engfix2-20261022 passed=true"
+  ],
+  "foregroundEnd": [
+    "END run=fault-engfix2-20261022 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-fault-engfix2-20261022.csv scope=activity_events_and_500ms_app_samples"
+  ],
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 3,
+    "sampleCount": 1,
+    "requiredSampleCount": 0,
+    "durationMs": 747,
+    "maxGapMs": 501,
+    "observationMaxGapMs": 501,
+    "errors": [],
+    "sourceSha256": "6F1C9B7F8F1DCE6FC423CC4B31BA4D784A54B733F19EC6053FC8FECCCCA7C50B",
+    "run": "fault-engfix2-20261022",
+    "csv": "foreground-fault-engfix2-20261022.csv"
+  },
+  "observed": {
+    "runId": "fault-engfix2-20261022",
+    "tag": "IpcFaultProbe",
+    "passCount": 6,
+    "doneCount": 1,
+    "foregroundEndCount": 1,
+    "expectedPasses": 6,
+    "complete": true,
+    "valid": true,
+    "errors": [],
+    "passes": [
+      "PASS run=fault-engfix2-20261022 replyBeforeSendReturns cancelCount=0",
+      "PASS run=fault-engfix2-20261022 explicitCancellation cancelCount=1",
+      "PASS run=fault-engfix2-20261022 cancellationDuringDispatch cancelCount=1",
+      "PASS run=fault-engfix2-20261022 replyDisconnectRace iterations=1000 lateRepliesRejected=true",
+      "PASS run=fault-engfix2-20261022 remoteFlowFactoryError propagated=true normalFlowFirstItem=0",
+      "PASS run=fault-engfix2-20261022 closePendingFailed=true staleConnectionRejected=true reconnectedFlow=true"
+    ],
+    "done": [
+      "DONE run=fault-engfix2-20261022 passed=true"
+    ],
+    "foregroundEnd": [
+      "END run=fault-engfix2-20261022 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-fault-engfix2-20261022.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}

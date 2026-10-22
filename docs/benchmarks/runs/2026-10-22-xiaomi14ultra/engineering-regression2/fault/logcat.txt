@@ -1,0 +1,17 @@
+--------- beginning of main
+10-22 11:18:24.579 21942 21942 I IpcForeground: STATE run=fault-engfix2-20261022 event=WAIT_READY elapsedRealtimeMs=15588670 uptimeMs=10578812 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-22 11:18:24.597 21942 21942 I IpcForeground: STATE run=fault-engfix2-20261022 event=FOCUS_GAIN elapsedRealtimeMs=15588688 uptimeMs=10578829 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-22 11:18:24.683 21942 21942 I IpcForeground: STATE run=fault-engfix2-20261022 event=WAIT_READY elapsedRealtimeMs=15588774 uptimeMs=10578916 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-22 11:18:24.783 21942 21942 I IpcForeground: STATE run=fault-engfix2-20261022 event=WAIT_READY elapsedRealtimeMs=15588874 uptimeMs=10579016 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-22 11:18:24.883 21942 21942 I IpcForeground: STATE run=fault-engfix2-20261022 event=WAIT_READY elapsedRealtimeMs=15588974 uptimeMs=10579116 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-22 11:18:24.884 21942 21942 I IpcForeground: STATE run=fault-engfix2-20261022 event=BEGIN elapsedRealtimeMs=15588975 uptimeMs=10579116 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:24.885 21942 22726 I IpcFaultProbe: PASS run=fault-engfix2-20261022 replyBeforeSendReturns cancelCount=0
+10-22 11:18:24.886 21942 22727 I IpcFaultProbe: PASS run=fault-engfix2-20261022 explicitCancellation cancelCount=1
+10-22 11:18:24.887 21942 22727 I IpcFaultProbe: PASS run=fault-engfix2-20261022 cancellationDuringDispatch cancelCount=1
+10-22 11:18:25.385 21942 21942 I IpcForeground: STATE run=fault-engfix2-20261022 event=SAMPLE elapsedRealtimeMs=15589476 uptimeMs=10579617 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:25.583 21942 22803 I IpcFaultProbe: PASS run=fault-engfix2-20261022 replyDisconnectRace iterations=1000 lateRepliesRejected=true
+10-22 11:18:25.616 21942 22803 I IpcFaultProbe: PASS run=fault-engfix2-20261022 remoteFlowFactoryError propagated=true normalFlowFirstItem=0
+10-22 11:18:25.629 21942 22725 I IpcFaultProbe: PASS run=fault-engfix2-20261022 closePendingFailed=true staleConnectionRejected=true reconnectedFlow=true
+10-22 11:18:25.630 21942 22725 I IpcFaultProbe: DONE run=fault-engfix2-20261022 passed=true
+10-22 11:18:25.630 21942 21942 I IpcForeground: STATE run=fault-engfix2-20261022 event=END elapsedRealtimeMs=15589722 uptimeMs=10579863 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:25.640 21942 21942 I IpcForeground: END run=fault-engfix2-20261022 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-fault-engfix2-20261022.csv scope=activity_events_and_500ms_app_samples

@@ -1,0 +1,12 @@
+direct=com.modernipc.consumer.fixture:custom-contract:3.0.0-consumer-check-20261022022757175411
+resolved=com.modernipc.consumer.fixture:custom-contract:3.0.0-consumer-check-20261022022757175411
+resolved=com.modernipc:ipc-annotations:3.0.0-consumer-check-20261022022757175411
+resolved=com.modernipc:ipc-api:3.0.0-consumer-check-20261022022757175411
+resolved=com.modernipc:ipc-contract:3.0.0-consumer-check-20261022022757175411
+resolved=com.modernipc:ipc-runtime-client:3.0.0-consumer-check-20261022022757175411
+resolved=com.modernipc:ipc-runtime-server:3.0.0-consumer-check-20261022022757175411
+resolved=org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20
+resolved=org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20
+resolved=org.jetbrains.kotlin:kotlin-stdlib:1.9.22
+resolved=org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.3
+resolved=org.jetbrains:annotations:23.0.0

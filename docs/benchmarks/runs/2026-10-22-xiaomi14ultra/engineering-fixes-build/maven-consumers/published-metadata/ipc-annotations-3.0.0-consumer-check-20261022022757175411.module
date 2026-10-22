@@ -1,0 +1,113 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.modernipc",
+    "module": "ipc-annotations",
+    "version": "3.0.0-consumer-check-20261022022757175411",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "ipc-annotations-3.0.0-consumer-check-20261022022757175411.jar",
+          "url": "ipc-annotations-3.0.0-consumer-check-20261022022757175411.jar",
+          "size": 5404,
+          "sha512": "1560e8d948ae20d0c52609de3b27d369ad6ac3dd3acedbf1fba9962b9286686cf973be4d89bdd3048b8c66060aa97454015e23a3081dae95cc417b488a424db9",
+          "sha256": "4a78cff40f10b54b8fd7f1260c87a8d4c9755febc1027218b30b8a061b566ac3",
+          "sha1": "d634d64b6d45a88078c97f1cdbc3473b99f24e61",
+          "md5": "c5e84ef4002b2ea0b7d5c11131666596"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ipc-annotations-3.0.0-consumer-check-20261022022757175411.jar",
+          "url": "ipc-annotations-3.0.0-consumer-check-20261022022757175411.jar",
+          "size": 5404,
+          "sha512": "1560e8d948ae20d0c52609de3b27d369ad6ac3dd3acedbf1fba9962b9286686cf973be4d89bdd3048b8c66060aa97454015e23a3081dae95cc417b488a424db9",
+          "sha256": "4a78cff40f10b54b8fd7f1260c87a8d4c9755febc1027218b30b8a061b566ac3",
+          "sha1": "d634d64b6d45a88078c97f1cdbc3473b99f24e61",
+          "md5": "c5e84ef4002b2ea0b7d5c11131666596"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ipc-annotations-3.0.0-consumer-check-20261022022757175411-sources.jar",
+          "url": "ipc-annotations-3.0.0-consumer-check-20261022022757175411-sources.jar",
+          "size": 3677,
+          "sha512": "bc4fbcf80032cdde22d36ee26c86c764626894b12974b22fc35232b9bb545dead73c7523983ebe2ff4dbc95d4a25d5c69320c4a96535719c8156c4f2d5e3bbe2",
+          "sha256": "61910171c6897ce5bfcfb638f69f1caa1686afdaddc9e22fea169504aeb669f8",
+          "sha1": "28c7f2ef3209c0c5d379c05b1380e05fede78ecc",
+          "md5": "41b28ee206a5c98ffe23ced6cf248c5f"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ipc-annotations-3.0.0-consumer-check-20261022022757175411-javadoc.jar",
+          "url": "ipc-annotations-3.0.0-consumer-check-20261022022757175411-javadoc.jar",
+          "size": 261,
+          "sha512": "6d1a37e96e8ad71a6bd6f14ab0f1c9e61eb290725e531c4954b79bf97f6a8c7cf40a8244d7dd3a6220555d1cd1c10cf1ecade426a553171b7c7d7fbd24bb00a2",
+          "sha256": "e3ee751e92ada965149abf14c464b9f98e69ec812e9385ffd52562fd493a1511",
+          "sha1": "bece84f186045ebd41a1a7de1af75cb8436daaa6",
+          "md5": "da5c9d395a90c3ddae13be2bc3e8944d"
+        }
+      ]
+    }
+  ]
+}

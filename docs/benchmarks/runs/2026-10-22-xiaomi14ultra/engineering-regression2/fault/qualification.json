@@ -1,0 +1,17 @@
+{
+  "valid": true,
+  "ruleVersion": "foreground-coverage-v1",
+  "targetSamplePeriodMs": 500,
+  "permittedMaxGapMs": 1000,
+  "scope": "activity_events_with_bounded_periodic_sample_coverage",
+  "observations": 3,
+  "sampleCount": 1,
+  "requiredSampleCount": 0,
+  "durationMs": 747,
+  "maxGapMs": 501,
+  "observationMaxGapMs": 501,
+  "errors": [],
+  "sourceSha256": "6F1C9B7F8F1DCE6FC423CC4B31BA4D784A54B733F19EC6053FC8FECCCCA7C50B",
+  "run": "fault-engfix2-20261022",
+  "csv": "foreground-fault-engfix2-20261022.csv"
+}

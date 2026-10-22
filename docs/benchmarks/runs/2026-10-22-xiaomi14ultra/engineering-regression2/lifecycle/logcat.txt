@@ -1,0 +1,45 @@
+--------- beginning of main
+10-22 11:18:09.155 31863 31863 I IpcForeground: STATE run=lifecycle-engfix2-20261022 event=WAIT_READY elapsedRealtimeMs=15573207 uptimeMs=10563349 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-22 11:18:09.187 31863 31863 I IpcForeground: STATE run=lifecycle-engfix2-20261022 event=FOCUS_GAIN elapsedRealtimeMs=15573278 uptimeMs=10563420 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-22 11:18:09.263 31863 31863 I IpcForeground: STATE run=lifecycle-engfix2-20261022 event=WAIT_READY elapsedRealtimeMs=15573355 uptimeMs=10563496 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-22 11:18:09.363 31863 31863 I IpcForeground: STATE run=lifecycle-engfix2-20261022 event=WAIT_READY elapsedRealtimeMs=15573454 uptimeMs=10563596 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-22 11:18:09.464 31863 31863 I IpcForeground: STATE run=lifecycle-engfix2-20261022 event=WAIT_READY elapsedRealtimeMs=15573555 uptimeMs=10563696 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-22 11:18:09.465 31863 31863 I IpcForeground: STATE run=lifecycle-engfix2-20261022 event=BEGIN elapsedRealtimeMs=15573556 uptimeMs=10563697 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:09.543 31863 21876 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 closeHeldRequest failed=true cause=IllegalStateException
+10-22 11:18:09.796 31863 21876 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 close cycle=1 subscriptions=0 requests=0 eventsQuiet=true
+10-22 11:18:09.914 31863 21873 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 reconnect cycle=1 subscriptions=1 generation=2
+10-22 11:18:09.967 31863 31863 I IpcForeground: STATE run=lifecycle-engfix2-20261022 event=SAMPLE elapsedRealtimeMs=15574057 uptimeMs=10564198 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:10.173 31863 21869 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 close cycle=2 subscriptions=0 requests=0 eventsQuiet=true
+10-22 11:18:10.298 31863 21876 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 reconnect cycle=2 subscriptions=1 generation=3
+10-22 11:18:10.470 31863 31863 I IpcForeground: STATE run=lifecycle-engfix2-20261022 event=SAMPLE elapsedRealtimeMs=15574560 uptimeMs=10564701 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:10.560 31863 21756 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 close cycle=3 subscriptions=0 requests=0 eventsQuiet=true
+10-22 11:18:10.683 31863 21924 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 reconnect cycle=3 subscriptions=1 generation=4
+10-22 11:18:10.940 31863 21757 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 close cycle=4 subscriptions=0 requests=0 eventsQuiet=true
+10-22 11:18:10.973 31863 31863 I IpcForeground: STATE run=lifecycle-engfix2-20261022 event=SAMPLE elapsedRealtimeMs=15575063 uptimeMs=10565205 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:11.065 31863 21924 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 reconnect cycle=4 subscriptions=1 generation=5
+10-22 11:18:11.328 31863 21924 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 close cycle=5 subscriptions=0 requests=0 eventsQuiet=true
+10-22 11:18:11.452 31863 21757 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 reconnect cycle=5 subscriptions=1 generation=6
+10-22 11:18:11.477 31863 31863 I IpcForeground: STATE run=lifecycle-engfix2-20261022 event=SAMPLE elapsedRealtimeMs=15575567 uptimeMs=10565708 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:11.713 31863 21873 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 close cycle=6 subscriptions=0 requests=0 eventsQuiet=true
+10-22 11:18:11.838 31863 21757 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 reconnect cycle=6 subscriptions=1 generation=7
+10-22 11:18:11.981 31863 31863 I IpcForeground: STATE run=lifecycle-engfix2-20261022 event=SAMPLE elapsedRealtimeMs=15576071 uptimeMs=10566212 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:12.099 31863 21878 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 close cycle=7 subscriptions=0 requests=0 eventsQuiet=true
+10-22 11:18:12.220 31863 21869 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 reconnect cycle=7 subscriptions=1 generation=8
+10-22 11:18:12.479 31863 21757 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 close cycle=8 subscriptions=0 requests=0 eventsQuiet=true
+10-22 11:18:12.483 31863 31863 I IpcForeground: STATE run=lifecycle-engfix2-20261022 event=SAMPLE elapsedRealtimeMs=15576573 uptimeMs=10566715 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:12.605 31863 21869 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 reconnect cycle=8 subscriptions=1 generation=9
+10-22 11:18:12.869 31863 21869 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 explicitDispose collectorEnded=true reconnectRejected=true subscriptions=0 requests=0
+10-22 11:18:12.987 31863 31863 I IpcForeground: STATE run=lifecycle-engfix2-20261022 event=SAMPLE elapsedRealtimeMs=15577077 uptimeMs=10567218 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:13.159 31863 21759 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 ownerCancellation disposed=true collectorEnded=true requestFailed=true subscriptions=0 requests=0 eventsQuiet=true
+10-22 11:18:13.176 31863 21756 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 serviceDestroy oldStubRejected=true binderStillAlive=true recreatedStub=true subscriptions=0 requests=0
+10-22 11:18:13.182 31863 21757 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 nullBinding disconnected=true failureElapsedMs=3 bindingTimeoutMs=5000 lateCallbackStable=true pending=0 syntheticWaiter=true
+10-22 11:18:13.185 21766 21766 I IpcLifecycleProbe: DELAYED_BIND started delayMs=1500
+10-22 11:18:13.491 31863 31863 I IpcForeground: STATE run=lifecycle-engfix2-20261022 event=SAMPLE elapsedRealtimeMs=15577581 uptimeMs=10567722 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:13.994 31863 31863 I IpcForeground: STATE run=lifecycle-engfix2-20261022 event=SAMPLE elapsedRealtimeMs=15578084 uptimeMs=10568225 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:14.498 31863 31863 I IpcForeground: STATE run=lifecycle-engfix2-20261022 event=SAMPLE elapsedRealtimeMs=15578588 uptimeMs=10568729 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:14.687 21766 21766 I IpcLifecycleProbe: DELAYED_BIND returned=true
+10-22 11:18:15.004 31863 31863 I IpcForeground: STATE run=lifecycle-engfix2-20261022 event=SAMPLE elapsedRealtimeMs=15579093 uptimeMs=10569235 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:15.099 31863 21759 I IpcLifecycleProbe: PASS run=lifecycle-engfix2-20261022 bindingTimeout disconnected=true failureElapsedMs=206 bindingTimeoutMs=200 lateCallbackStable=true pending=0 syntheticWaiter=true
+10-22 11:18:15.108 31863 21757 I IpcLifecycleProbe: DONE run=lifecycle-engfix2-20261022 passed=true cycles=8 subscriptions=0 requests=0 anchorAlive=true
+10-22 11:18:15.113 31863 31863 I IpcForeground: STATE run=lifecycle-engfix2-20261022 event=END elapsedRealtimeMs=15579202 uptimeMs=10569344 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:15.119 31863 31863 I IpcForeground: END run=lifecycle-engfix2-20261022 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-lifecycle-engfix2-20261022.csv scope=activity_events_and_500ms_app_samples

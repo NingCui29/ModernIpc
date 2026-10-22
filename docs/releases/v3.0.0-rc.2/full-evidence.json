@@ -1,0 +1,10 @@
+{
+  "archive": "ModernIpc-3.0.0-rc.2-evidence-full.zip",
+  "archiveSha256": "f7f21910a5a266283695d39e34799d13899bd643dcb765986655cc8dd8320169",
+  "manifestSha256": "58b70be7670a4a4b8264224e3c0bf3c55dcc2d2c6df3faf7bbda8a577b2ff94d",
+  "sourceFiles": 1930,
+  "sourceBytes": 550892387,
+  "apkFiles": 56,
+  "uniqueApkHashes": 17,
+  "remoteAttachment": "PENDING"
+}

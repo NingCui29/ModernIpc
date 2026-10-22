@@ -1,0 +1,61 @@
+{
+  "status": "PASSED",
+  "documents": 12,
+  "linksChecked": 408,
+  "missing": [],
+  "pythonSyntax": "PASSED",
+  "workflowYamlSyntax": "PASSED",
+  "documentsHashes": [
+    {
+      "path": "README.md",
+      "sha256": "B8DDA4221D6C2D14299CB4CF931156ED9920309C345BF95D97E577E31DAA3636"
+    },
+    {
+      "path": "docs/ModernIPC_Architecture.md",
+      "sha256": "17F4F61F9B76FE2C16897D00DF158B0DEB8F59E13148E2AC9ADAB837A866715A"
+    },
+    {
+      "path": "docs/ModernIPC_Business_Interaction_Guide.md",
+      "sha256": "D1BD7CA8C925A0D5F417501B68A7B5829BA158BE129DB4804A5C658BE28B4571"
+    },
+    {
+      "path": "docs/ModernIPC_Engineering_Audit.md",
+      "sha256": "E916C6AA13B65049473263434A1B077B0761BEA19695EF7B64B6F5373550CB3F"
+    },
+    {
+      "path": "docs/ModernIPC_Optimization_Analysis.md",
+      "sha256": "004B857C7DF042D51EF6619D7B87FB3AD9A0201C4F0F9B00B1A0FB9E912A6652"
+    },
+    {
+      "path": "docs/ModernIPC_SDK_Guide.md",
+      "sha256": "1136A7CD040FED24F3E1703144D3C473E21748C0DCD5BC6C236DAE16433E0C5F"
+    },
+    {
+      "path": "docs/ModernIPC_vs_AndLinker.md",
+      "sha256": "6A4A578F84BABEC64C771CFC7B063FF7F5FD60B2F40F5E0A8B614F1D67EB995E"
+    },
+    {
+      "path": "docs/benchmarks/Multi_App_Report.md",
+      "sha256": "5906E563DA604CC2B08C0F971CD4E053DE59B98AA043C9F1EA8E4A8B71981C78"
+    },
+    {
+      "path": "docs/benchmarks/Performance_Report.md",
+      "sha256": "77D68E45C90E581E6C9F72D47B8AF08A1D35640E06E750BDC4141688299CF45A"
+    },
+    {
+      "path": "docs/benchmarks/README.md",
+      "sha256": "0A9CDB7AC51B6C593F5CA88CCD5FFC265D885F80D7BCDC13AB74B86A09F5172D"
+    },
+    {
+      "path": "docs/benchmarks/Regression_Report.md",
+      "sha256": "DD4269A4A6A89EF3FDC4DA64F2125F04FF17CD71D5D3365330F9BDD2AB9F8ABC"
+    },
+    {
+      "path": "patches/README.md",
+      "sha256": "550C384756E781E8BB421F4BD9200724BED0A874045D9A52F13C5476709D2531"
+    }
+  ],
+  "patchArchiveReverseContextChecks": "PASSED (text context only, no patch mutation)",
+  "gitDiffCheck": "PASSED",
+  "checkedUtc": "2026-10-22T03:40:04.872976+00:00"
+}

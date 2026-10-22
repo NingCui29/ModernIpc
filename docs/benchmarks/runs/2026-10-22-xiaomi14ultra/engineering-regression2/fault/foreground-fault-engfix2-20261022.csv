@@ -1,0 +1,9 @@
+elapsedRealtimeMs,uptimeMs,event,lifecycle,focused,interactive,keyguardLocked,deviceLocked,valid
+15588670,10578812,WAIT_READY,RESUMED,false,true,false,false,false
+15588688,10578829,FOCUS_GAIN,RESUMED,true,true,false,false,true
+15588774,10578916,WAIT_READY,RESUMED,true,true,false,false,true
+15588874,10579016,WAIT_READY,RESUMED,true,true,false,false,true
+15588974,10579116,WAIT_READY,RESUMED,true,true,false,false,true
+15588975,10579116,BEGIN,RESUMED,true,true,false,false,true
+15589476,10579617,SAMPLE,RESUMED,true,true,false,false,true
+15589722,10579863,END,RESUMED,true,true,false,false,true

@@ -1,0 +1,9 @@
+{
+  "baseline14": 0,
+  "baselineStaleDeathRegression": 1,
+  "optimized15": 0,
+  "deviceValidation": "NOT_RUN",
+  "sourceBaselineSha256": "9f1373ea3db51dfffdd0204ad9ac5667ede939779cba9fff2d854dbef8267170",
+  "sourceOptimizedSha256": "dfcfccd3069ad02c8334dfea947d3db5e8df026ca710a6290fb208e87447585c",
+  "hostTestSha256": "014459831160e18e47a7a88f25ce80bf25c2f9a59a423efecce26b5fe9bab95c"
+}

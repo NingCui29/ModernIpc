@@ -1,0 +1,71 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Configuration on demand is an incubating feature.
+> Task :ipc-host-tests:checkKotlinGradlePluginConfigurationErrors
+
+> Task :ipc-host-tests:compileClientHostKotlin
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/PendingCallRegistry.kt:94:9 Parameter 'serviceId' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/PendingCallRegistry.kt:95:9 Parameter 'operationId' is never used
+
+> Task :ipc-host-tests:compileClientHostJava NO-SOURCE
+> Task :ipc-host-tests:processClientHostResources NO-SOURCE
+> Task :ipc-host-tests:clientHostClasses UP-TO-DATE
+
+> Task :ipc-host-tests:pendingCallRegistryHostTest
+PASS immediateReply
+PASS cancelDuringDispatch
+PASS disconnectDuringDispatch
+PASS failedDispatch
+PASS cancelledBeforeRegistration
+PASS publicRegisterCompatibility
+PASS parcelFailureAndRemoteError
+PASS replyDisconnectRace1000
+PASS defaultDeadline
+PASS bulkDisconnectAndThrowingCancel
+PASS promptCancellationAfterReply
+PASS callerDispatcherPreserved
+PASS pendingRegistryHost checks=12 deviceValidation=NOT_RUN binderValidation=NOT_RUN
+
+> Task :ipc-host-tests:compileServerHostKotlin
+> Task :ipc-host-tests:compileServerHostJava NO-SOURCE
+> Task :ipc-host-tests:processServerHostResources NO-SOURCE
+> Task :ipc-host-tests:serverHostClasses UP-TO-DATE
+
+> Task :ipc-host-tests:requestTrackerHostTest
+PASS normal_completion_permit_reuse
+PASS cancel_before_start
+PASS duplicate_retains_original_permit
+PASS cancel_uid_isolation
+PASS cancel_callback_isolation
+PASS cancelled_scope_rejection
+PASS scope_cancel_before_start
+PASS dispose_idempotence_rejection
+PASS 128_request_limit
+PASS running_cancel_terminal_owner
+PASS callback_death_before_start
+PASS link_failure_permit_reuse
+PASS null_callback
+PASS concurrent_submit_cancel_dispose_1600
+PASS stale_death_recipient_reused_key
+PASS 15 host tracker cases; Android Binder and device performance were not tested
+
+> Task :ipc-host-tests:compileKotlin NO-SOURCE
+> Task :ipc-host-tests:compileJava NO-SOURCE
+> Task :ipc-host-tests:processResources NO-SOURCE
+> Task :ipc-host-tests:classes UP-TO-DATE
+> Task :ipc-host-tests:compileTestKotlin NO-SOURCE
+> Task :ipc-host-tests:compileTestJava NO-SOURCE
+> Task :ipc-host-tests:processTestResources NO-SOURCE
+> Task :ipc-host-tests:testClasses UP-TO-DATE
+> Task :ipc-host-tests:test NO-SOURCE
+> Task :ipc-host-tests:check
+> Task :check
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.5/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 45s
+5 actionable tasks: 5 executed

@@ -1,0 +1,101 @@
+{
+  "group": "lifecycle",
+  "tag": "IpcLifecycleProbe",
+  "expectedPasses": 22,
+  "runId": "lifecycle-engfix2-20261022",
+  "status": "PASSED",
+  "valid": true,
+  "passCount": 22,
+  "doneCount": 1,
+  "foregroundEndCount": 1,
+  "complete": true,
+  "errors": [],
+  "passes": [
+    "PASS run=lifecycle-engfix2-20261022 closeHeldRequest failed=true cause=IllegalStateException",
+    "PASS run=lifecycle-engfix2-20261022 close cycle=1 subscriptions=0 requests=0 eventsQuiet=true",
+    "PASS run=lifecycle-engfix2-20261022 reconnect cycle=1 subscriptions=1 generation=2",
+    "PASS run=lifecycle-engfix2-20261022 close cycle=2 subscriptions=0 requests=0 eventsQuiet=true",
+    "PASS run=lifecycle-engfix2-20261022 reconnect cycle=2 subscriptions=1 generation=3",
+    "PASS run=lifecycle-engfix2-20261022 close cycle=3 subscriptions=0 requests=0 eventsQuiet=true",
+    "PASS run=lifecycle-engfix2-20261022 reconnect cycle=3 subscriptions=1 generation=4",
+    "PASS run=lifecycle-engfix2-20261022 close cycle=4 subscriptions=0 requests=0 eventsQuiet=true",
+    "PASS run=lifecycle-engfix2-20261022 reconnect cycle=4 subscriptions=1 generation=5",
+    "PASS run=lifecycle-engfix2-20261022 close cycle=5 subscriptions=0 requests=0 eventsQuiet=true",
+    "PASS run=lifecycle-engfix2-20261022 reconnect cycle=5 subscriptions=1 generation=6",
+    "PASS run=lifecycle-engfix2-20261022 close cycle=6 subscriptions=0 requests=0 eventsQuiet=true",
+    "PASS run=lifecycle-engfix2-20261022 reconnect cycle=6 subscriptions=1 generation=7",
+    "PASS run=lifecycle-engfix2-20261022 close cycle=7 subscriptions=0 requests=0 eventsQuiet=true",
+    "PASS run=lifecycle-engfix2-20261022 reconnect cycle=7 subscriptions=1 generation=8",
+    "PASS run=lifecycle-engfix2-20261022 close cycle=8 subscriptions=0 requests=0 eventsQuiet=true",
+    "PASS run=lifecycle-engfix2-20261022 reconnect cycle=8 subscriptions=1 generation=9",
+    "PASS run=lifecycle-engfix2-20261022 explicitDispose collectorEnded=true reconnectRejected=true subscriptions=0 requests=0",
+    "PASS run=lifecycle-engfix2-20261022 ownerCancellation disposed=true collectorEnded=true requestFailed=true subscriptions=0 requests=0 eventsQuiet=true",
+    "PASS run=lifecycle-engfix2-20261022 serviceDestroy oldStubRejected=true binderStillAlive=true recreatedStub=true subscriptions=0 requests=0",
+    "PASS run=lifecycle-engfix2-20261022 nullBinding disconnected=true failureElapsedMs=3 bindingTimeoutMs=5000 lateCallbackStable=true pending=0 syntheticWaiter=true",
+    "PASS run=lifecycle-engfix2-20261022 bindingTimeout disconnected=true failureElapsedMs=206 bindingTimeoutMs=200 lateCallbackStable=true pending=0 syntheticWaiter=true"
+  ],
+  "done": [
+    "DONE run=lifecycle-engfix2-20261022 passed=true cycles=8 subscriptions=0 requests=0 anchorAlive=true"
+  ],
+  "foregroundEnd": [
+    "END run=lifecycle-engfix2-20261022 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-lifecycle-engfix2-20261022.csv scope=activity_events_and_500ms_app_samples"
+  ],
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 13,
+    "sampleCount": 11,
+    "requiredSampleCount": 5,
+    "durationMs": 5646,
+    "maxGapMs": 505,
+    "observationMaxGapMs": 505,
+    "errors": [],
+    "sourceSha256": "FF8FFF423C20D87CA848619A855A77CDC9901D4162ADB2F640EE8F1D0AAB933A",
+    "run": "lifecycle-engfix2-20261022",
+    "csv": "foreground-lifecycle-engfix2-20261022.csv"
+  },
+  "observed": {
+    "runId": "lifecycle-engfix2-20261022",
+    "tag": "IpcLifecycleProbe",
+    "passCount": 22,
+    "doneCount": 1,
+    "foregroundEndCount": 1,
+    "expectedPasses": 22,
+    "complete": true,
+    "valid": true,
+    "errors": [],
+    "passes": [
+      "PASS run=lifecycle-engfix2-20261022 closeHeldRequest failed=true cause=IllegalStateException",
+      "PASS run=lifecycle-engfix2-20261022 close cycle=1 subscriptions=0 requests=0 eventsQuiet=true",
+      "PASS run=lifecycle-engfix2-20261022 reconnect cycle=1 subscriptions=1 generation=2",
+      "PASS run=lifecycle-engfix2-20261022 close cycle=2 subscriptions=0 requests=0 eventsQuiet=true",
+      "PASS run=lifecycle-engfix2-20261022 reconnect cycle=2 subscriptions=1 generation=3",
+      "PASS run=lifecycle-engfix2-20261022 close cycle=3 subscriptions=0 requests=0 eventsQuiet=true",
+      "PASS run=lifecycle-engfix2-20261022 reconnect cycle=3 subscriptions=1 generation=4",
+      "PASS run=lifecycle-engfix2-20261022 close cycle=4 subscriptions=0 requests=0 eventsQuiet=true",
+      "PASS run=lifecycle-engfix2-20261022 reconnect cycle=4 subscriptions=1 generation=5",
+      "PASS run=lifecycle-engfix2-20261022 close cycle=5 subscriptions=0 requests=0 eventsQuiet=true",
+      "PASS run=lifecycle-engfix2-20261022 reconnect cycle=5 subscriptions=1 generation=6",
+      "PASS run=lifecycle-engfix2-20261022 close cycle=6 subscriptions=0 requests=0 eventsQuiet=true",
+      "PASS run=lifecycle-engfix2-20261022 reconnect cycle=6 subscriptions=1 generation=7",
+      "PASS run=lifecycle-engfix2-20261022 close cycle=7 subscriptions=0 requests=0 eventsQuiet=true",
+      "PASS run=lifecycle-engfix2-20261022 reconnect cycle=7 subscriptions=1 generation=8",
+      "PASS run=lifecycle-engfix2-20261022 close cycle=8 subscriptions=0 requests=0 eventsQuiet=true",
+      "PASS run=lifecycle-engfix2-20261022 reconnect cycle=8 subscriptions=1 generation=9",
+      "PASS run=lifecycle-engfix2-20261022 explicitDispose collectorEnded=true reconnectRejected=true subscriptions=0 requests=0",
+      "PASS run=lifecycle-engfix2-20261022 ownerCancellation disposed=true collectorEnded=true requestFailed=true subscriptions=0 requests=0 eventsQuiet=true",
+      "PASS run=lifecycle-engfix2-20261022 serviceDestroy oldStubRejected=true binderStillAlive=true recreatedStub=true subscriptions=0 requests=0",
+      "PASS run=lifecycle-engfix2-20261022 nullBinding disconnected=true failureElapsedMs=3 bindingTimeoutMs=5000 lateCallbackStable=true pending=0 syntheticWaiter=true",
+      "PASS run=lifecycle-engfix2-20261022 bindingTimeout disconnected=true failureElapsedMs=206 bindingTimeoutMs=200 lateCallbackStable=true pending=0 syntheticWaiter=true"
+    ],
+    "done": [
+      "DONE run=lifecycle-engfix2-20261022 passed=true cycles=8 subscriptions=0 requests=0 anchorAlive=true"
+    ],
+    "foregroundEnd": [
+      "END run=lifecycle-engfix2-20261022 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-lifecycle-engfix2-20261022.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}

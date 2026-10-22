@@ -1,0 +1,75 @@
+{
+  "group": "generatedterminal",
+  "tag": "IpcGeneratedTerminalProbe",
+  "expectedPasses": 9,
+  "runId": "generatedterminal-engfix2-20261022",
+  "status": "PASSED",
+  "valid": true,
+  "passCount": 9,
+  "doneCount": 1,
+  "foregroundEndCount": 1,
+  "complete": true,
+  "errors": [],
+  "passes": [
+    "PASS run=generatedterminal-engfix2-20261022 dispatch=default path=raw scenario=__business_timeout__ terminals=1 requests=0",
+    "PASS run=generatedterminal-engfix2-20261022 dispatch=default path=adapter scenario=__business_timeout__ elapsedMs=85 pending=0 requests=0",
+    "PASS run=generatedterminal-engfix2-20261022 dispatch=default path=raw scenario=__business_cancel__ terminals=1 requests=0",
+    "PASS run=generatedterminal-engfix2-20261022 dispatch=default path=adapter scenario=__business_cancel__ elapsedMs=5 pending=0 requests=0",
+    "PASS run=generatedterminal-engfix2-20261022 dispatch=dedicated path=raw scenario=__business_timeout__ terminals=1 requests=0",
+    "PASS run=generatedterminal-engfix2-20261022 dispatch=dedicated path=adapter scenario=__business_timeout__ elapsedMs=88 pending=0 requests=0",
+    "PASS run=generatedterminal-engfix2-20261022 dispatch=dedicated path=raw scenario=__business_cancel__ terminals=1 requests=0",
+    "PASS run=generatedterminal-engfix2-20261022 dispatch=dedicated path=adapter scenario=__business_cancel__ elapsedMs=4 pending=0 requests=0",
+    "PASS run=generatedterminal-engfix2-20261022 defaultRestored=true pending=0 requests=0 subscriptions=0"
+  ],
+  "done": [
+    "DONE run=generatedterminal-engfix2-20261022 passed=true checks=9"
+  ],
+  "foregroundEnd": [
+    "END run=generatedterminal-engfix2-20261022 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-generatedterminal-engfix2-20261022.csv scope=activity_events_and_500ms_app_samples"
+  ],
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 3,
+    "sampleCount": 1,
+    "requiredSampleCount": 0,
+    "durationMs": 602,
+    "maxGapMs": 501,
+    "observationMaxGapMs": 501,
+    "errors": [],
+    "sourceSha256": "C5AF767F77475ED51877A360AB4DFCA942A21BAE9BE1A8256AE1F56F4D515116",
+    "run": "generatedterminal-engfix2-20261022",
+    "csv": "foreground-generatedterminal-engfix2-20261022.csv"
+  },
+  "observed": {
+    "runId": "generatedterminal-engfix2-20261022",
+    "tag": "IpcGeneratedTerminalProbe",
+    "passCount": 9,
+    "doneCount": 1,
+    "foregroundEndCount": 1,
+    "expectedPasses": 9,
+    "complete": true,
+    "valid": true,
+    "errors": [],
+    "passes": [
+      "PASS run=generatedterminal-engfix2-20261022 dispatch=default path=raw scenario=__business_timeout__ terminals=1 requests=0",
+      "PASS run=generatedterminal-engfix2-20261022 dispatch=default path=adapter scenario=__business_timeout__ elapsedMs=85 pending=0 requests=0",
+      "PASS run=generatedterminal-engfix2-20261022 dispatch=default path=raw scenario=__business_cancel__ terminals=1 requests=0",
+      "PASS run=generatedterminal-engfix2-20261022 dispatch=default path=adapter scenario=__business_cancel__ elapsedMs=5 pending=0 requests=0",
+      "PASS run=generatedterminal-engfix2-20261022 dispatch=dedicated path=raw scenario=__business_timeout__ terminals=1 requests=0",
+      "PASS run=generatedterminal-engfix2-20261022 dispatch=dedicated path=adapter scenario=__business_timeout__ elapsedMs=88 pending=0 requests=0",
+      "PASS run=generatedterminal-engfix2-20261022 dispatch=dedicated path=raw scenario=__business_cancel__ terminals=1 requests=0",
+      "PASS run=generatedterminal-engfix2-20261022 dispatch=dedicated path=adapter scenario=__business_cancel__ elapsedMs=4 pending=0 requests=0",
+      "PASS run=generatedterminal-engfix2-20261022 defaultRestored=true pending=0 requests=0 subscriptions=0"
+    ],
+    "done": [
+      "DONE run=generatedterminal-engfix2-20261022 passed=true checks=9"
+    ],
+    "foregroundEnd": [
+      "END run=generatedterminal-engfix2-20261022 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-generatedterminal-engfix2-20261022.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}

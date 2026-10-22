@@ -1,0 +1,25 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Configuration on demand is an incubating feature.
+
+> Configure project :contract-consumer
+WARNING: The option 'android.enableBuildCache' is deprecated.
+The current default is 'false'.
+It was removed in version 7.0 of the Android Gradle plugin.
+The Android-specific build caches were superseded by the Gradle build cache (https://docs.gradle.org/current/userguide/build_cache.html).
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+
+> Task :contract-consumer:checkKotlinGradlePluginConfigurationErrors
+> Task :contract-consumer:preBuild UP-TO-DATE
+> Task :contract-consumer:preReleaseBuild UP-TO-DATE
+> Task :contract-consumer:generateReleaseResValues FROM-CACHE
+> Task :contract-consumer:generateReleaseResources UP-TO-DATE
+> Task :contract-consumer:packageReleaseResources
+> Task :contract-consumer:parseReleaseLocalResources FROM-CACHE
+> Task :contract-consumer:processReleaseManifest
+> Task :contract-consumer:generateReleaseRFile
+> Task :contract-consumer:compileReleaseKotlin
+> Task :contract-consumer:verifyPublishedCompileGraph
+
+BUILD SUCCESSFUL in 32s
+8 actionable tasks: 6 executed, 2 from cache

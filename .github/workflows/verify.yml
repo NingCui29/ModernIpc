@@ -1,0 +1,51 @@
+name: Verify source and host state machines
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  host-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17 for Gradle and host JVMs
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+
+      - name: Set up Android SDK for project configuration
+        uses: android-actions/setup-android@v3
+        with:
+          packages: platform-tools
+          log-accepted-android-sdk-licenses: false
+
+      - name: Install required SDK components
+        run: sdkmanager 'platforms;android-34' 'build-tools;34.0.0'
+
+      - name: Run Gradle verification gates
+        run: bash ./gradlew --console=plain --max-workers=2 :check
+
+      - name: Set up Python for independent Maven consumers
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Verify isolated Maven metadata and POM-only consumers
+        run: python scripts/verify_maven_consumers.py --java-home "$JAVA_HOME" --android-sdk "$ANDROID_HOME"
+
+      - name: State validation scope
+        run: echo 'Host state-machine and isolated Maven consumer gates passed. Android Binder and device performance were not tested.'

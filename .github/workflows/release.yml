@@ -100,7 +100,23 @@ jobs:
           print('Python syntax and source contracts passed; no device test was run.')
           PY
 
-      - name: Build six SDKs, shared example library and five debug APKs
+      - name: Verify release signer and publication validation regressions
+        run: python -m unittest discover -s tests/release -p 'test_*.py' -v
+
+      - name: Run host state-machine and build verification gates
+        shell: bash
+        run: bash ./gradlew --console=plain --max-workers=2 :check
+
+      - name: Set up Python for independent Maven consumers
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Verify isolated Maven metadata and POM-only consumers
+        shell: bash
+        run: python scripts/verify_maven_consumers.py --java-home "$JAVA_HOME" --android-sdk "$ANDROID_HOME"
+
+      - name: Build six SDKs, shared example library and six debug APKs
         shell: bash
         run: |
           bash ./gradlew --console=plain --max-workers=2 \
@@ -113,7 +129,8 @@ jobs:
             :ipc-compiler:publishJavaPublicationToProjectLocalRepository \
             :demo-client-common:publishReleasePublicationToProjectLocalRepository \
             :demo-app:assembleDebug :app-server:assembleDebug \
-            :app-client1:assembleDebug :app-client2:assembleDebug :app-client3:assembleDebug
+            :app-client1:assembleDebug :app-client2:assembleDebug :app-client3:assembleDebug \
+            :benchmark-andlinker:assembleDebug
 
       - name: Verify versions, dependency metadata, signatures and release assets
         shell: bash
@@ -143,48 +160,15 @@ jobs:
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_REPOSITORY: ${{ github.repository }}
 
-      - name: Verify seven published POMs from GitHub Packages
+      - name: Verify all seven published Maven artifacts and metadata from GitHub Packages
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
-          python - <<'PY'
-          import base64, os, time, urllib.error, urllib.request, xml.etree.ElementTree as ET
-          modules = ('ipc-api', 'ipc-contract', 'ipc-runtime-client', 'ipc-runtime-server',
-                     'ipc-annotations', 'ipc-compiler', 'demo-client-common')
-          version = os.environ['RELEASE_VERSION']
-          auth = base64.b64encode((os.environ['GITHUB_ACTOR'] + ':' + os.environ['GITHUB_TOKEN']).encode()).decode()
-          namespace = {'m': 'http://maven.apache.org/POM/4.0.0'}
-          for module in modules:
-              url = 'https://maven.pkg.github.com/' + os.environ['GITHUB_REPOSITORY'] + '/com/modernipc/' + module + '/' + version + '/' + module + '-' + version + '.pom'
-              request = urllib.request.Request(url, headers={'Authorization': 'Basic ' + auth})
-              body = None
-              for attempt in range(3):
-                  try:
-                      with urllib.request.urlopen(request, timeout=60) as response:
-                          if response.status != 200:
-                              raise SystemExit('Published POM HTTP status differs for ' + module)
-                          body = response.read()
-                      break
-                  except urllib.error.HTTPError as error:
-                      if error.code == 404 and attempt < 2:
-                          time.sleep(10)
-                          continue
-                      raise SystemExit('Published POM request failed for ' + module + '; HTTP ' + str(error.code))
-                  except urllib.error.URLError:
-                      raise SystemExit('Published POM network request failed for ' + module)
-              pom = ET.fromstring(body)
-              for name, expected in (('groupId', 'com.modernipc'), ('artifactId', module), ('version', version)):
-                  if pom.findtext('m:' + name, namespaces=namespace) != expected:
-                      raise SystemExit('Published POM coordinate differs for ' + module)
-              for dependency in pom.findall('m:dependencies/m:dependency', namespace):
-                  if dependency.findtext('m:groupId', namespaces=namespace) == 'com.modernipc':
-                      if dependency.findtext('m:artifactId', namespaces=namespace) not in modules or dependency.findtext('m:version', namespaces=namespace) != version:
-                          raise SystemExit('Published POM internal dependency differs for ' + module)
-              print('Verified published POM:', module + ':' + version)
-          PY
+          python .github/scripts/prepare_release.py \
+            --version "$RELEASE_VERSION" --verify-github-packages
 
       - name: Create release and upload verified assets
         uses: softprops/action-gh-release@v2

@@ -1,0 +1,25 @@
+# WITHDRAWN — 原 D1 取消降噪建议已撤回（2026-10-22）
+
+此文件保留原路径用于审计追溯，内容已替换为撤回说明，**不是 unified diff，不能使用 git apply**。
+
+原建议在生成 Async handler 中新增 CancellationException 分支：
+当 `_disposed` 为 false 且 `asyncCoroutineScope.isActive` 为 true 时直接重抛，以推断调用方已取消。
+该推断不成立，原建议不应应用。
+
+## 反例与风险
+
+1. 业务体内部 `withTimeout(100) { delay(1000) }` 抛出 TimeoutCancellationException，父服务 scope 仍可活跃，而客户端仍在等待。
+2. 业务体主动抛出 CancellationException 也不证明客户端放弃等待。
+3. 原建议重抛后，Tracker 对已经 started 的请求只清理、不补回错误，客户端将被迫等到自身截止时间。
+4. 原建议另建服务关闭错误回包分支，遗漏 server_reply trace。
+
+## 保留的协议
+
+- 未启动的取消请求由 Tracker 上报错误。
+- 已启动请求由生成业务体发送唯一终态；当前 catch (e: Exception) 保持。
+- 客户端已删除 pending 时忽略迟到回包。
+- server_reply 表示尝试回包，不承诺客户端消费。
+
+本轮不更改取消/错误 wire 协议；新增真实生成 Stub 的内部超时、主动取消异常设备探针，caller 取消、dispose 和 scope 关闭由原框架探针继续验证，分别登记本轮执行状态。
+
+原审计经历、失败原型边界见 ../docs/ModernIPC_Engineering_Audit.md 第 4 节。

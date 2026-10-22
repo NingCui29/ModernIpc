@@ -1,6 +1,55 @@
 # 小米性能报告
 
-发布候选3.0.0-rc.1另完成七个库产物与五个APK的统一构建和本地产物校验，详见[发布记录](../releases/v3.0.0-rc.1/build-result.json)。该发布版安装与小米验收NOT_RUN。本文保留此前开发阶段的APK、时间和证明范围。
+## 0. 2026-10-21/22：Async 请求管理与独立调度
+
+本轮只使用 Xiaomi 14 Ultra `925c23bb`，Android 16。优化候选为未发布工作区源码，不等于固定 `v3.0.0-rc.1` 标签。10/21 已通过 [73 项框架回归、独立 4 项专用 scope 检查和同 UID 鉴权微测](runs/2026-10-21-xiaomi14ultra/async-regression1/summary.json)。
+
+10/22 后续工程审计修复产生新 APK `D0E76...`，其 73+4+9 项功能验收见[回归报告](Regression_Report.md#0-2026-10-22工程修复与生成-stub-业务异常回归)。新包没有重跑性能，本节数值与结论仍严格属于下列 `4F7ED...` 候选。
+
+### 实验身份与方法
+
+- 基线 APK：`23A2802FD636F03E5821CEAF335F73907193B27560959486605E5908F7B26701`。
+- 候选 APK：`4F7ED1169CC6069EB360AF3D2AAAA7CF8D12BEC0B43FE3CBD79ABDD2FF6AB70F`。
+- AndLinker 对照 APK：`1D4ABA4DA5EE599610EDFDA1BFA8D3A6EF7BAB949640C10D319A1450B1FA3BE2`；独立 `benchmark-andlinker` 壳包含固定上游 `7ae01bfd` 的 37 个原始 Java 文件，来源与逐文件 SHA 见[清单](../../benchmark-andlinker/upstream-manifest.json)。不包含可选 Rx 适配器。
+- 三 APK 均为同一 AGP 8.2.0 / JDK 17 / targetSdk 34 的不混淆 Debug 构建。安装前后拉回 base.apk 校验，Modern 基线与候选同签名，没有卸载或清数据。
+- 四轮平衡顺序，每轮四个 lane；每块预热 50 次、串行测量 1000 次，16/1024 个 ASCII 字符，逐次核对原样返回。共 16 次有效运行、64 CSV、64,000 次成功测量，全部原始结果与各轮指标见[comparison.json](runs/2026-10-22-xiaomi14ultra/async-compare1/comparison.json)。
+- baseline-default 与 candidate-default 是受控跨 APK 比较；candidate-default 与 candidate-dedicated 使用同一个候选 APK。两库仍有协议、取消、容量和执行线程差异；AndLinker enqueue 保留默认主线程 callback，Direct/sync 仅作为独立语义参考。
+
+### 串行结果与判断
+
+下表是四轮各块 P50/P99 的中位数，单位 ms，不是合池请求分位数。
+
+| 路径 | 16 字符 P50 | 16 字符 P99 | 1024 字符 P50 | 1024 字符 P99 |
+| --- | ---: | ---: | ---: | ---: |
+| 原版 Async / Default | 0.799714 | 1.955990 | 0.867448 | 1.828307 |
+| 请求管理候选 / Default | 0.804453 | 1.999792 | 0.821510 | 1.770651 |
+| 同候选 / 专用 Async scope | 0.769609 | 1.876250 | 0.731693 | 1.797995 |
+| AndLinker enqueue | 0.334766 | 0.617995 | 0.367292 | 0.549375 |
+
+**请求管理改动没有证明稳定提速。** 候选 Default 的 16/1024 字符 P50 仅分别赢 2/4、1/4 个同轮配对；配对变化百分比的中位数为 −2.45% / +15.94%。单看上表 P50 中位数之比会得到 +0.59% / −5.30%，两种统计方向不同，不能选择有利口径宣称加速。保留对象合并与旧死亡通知竞态修复，不承诺 RTT 收益。
+
+**专用 scope 对串行 P50 有方向性改善，P99 不稳定。** 同候选 Default→dedicated 的 16/1024 字符 P50 分别赢 4/4、3/4 轮，配对百分比中位数 −4.14% / −10.25%；P99 均只赢 2/4 轮，配对中位数 −2.85% / +1.60%。该完整 Async 路径相对 AndLinker enqueue 的 P50 中位数之比仍为 **2.30 / 1.99 倍**，本轮没有追平 AndLinker。
+
+### 同 APK 并发边界
+
+另用同一候选 APK 跑既有 `IpcDispatchBenchmark`，24 个串行块和 4 个 16 并发块，共 **28,096 次成功测量、4 PASS / 1 DONE**，请求 trace 关闭、结束恢复 Default，pending/requests/subscriptions 归零。[身份与门禁](runs/2026-10-22-xiaomi14ultra/async-dispatch1/evidence.json)、[逐次 CSV](runs/2026-10-22-xiaomi14ultra/async-dispatch1/dispatchperf/dispatch-dispatchperf-asyncopt2.csv)、[分块复算](runs/2026-10-22-xiaomi14ultra/async-dispatch1/analysis.json)。
+
+| 16 并发、16 字符 | Default 成功 QPS | 专用 scope 成功 QPS | Default P99 ms | 专用 scope P99 ms |
+| --- | ---: | ---: | ---: | ---: |
+| 第 1 轮 | 6707 | 7998 | 3.907 | 2.745 |
+| 第 2 轮 | 6861 | 8165 | 3.394 | 2.749 |
+
+两轮吞吐均增加约 19%，P99 均下降；只支持当前极短 Echo 的并发配置选择。该额外 capture 的串行 16/1024 字符 P50 配对分别有 1/4、2/4 轮反向，进一步说明不应把专用 scope 改为通用默认，也不与两库四轮结果合池。没有新增 AndLinker 并发吞吐测试。
+
+### 资格与限制
+
+四轮 16/16 前台资格有效，最大周期观察间隔 501–503 ms；设备前后均 Awake、USB 供电、Thermal Status 0，BatteryService 电量 32%、温度 29.7–31.6°C。未固定 CPU 频率、后台负载、JIT 或 GC；ThermalService 缓存温度不作为与 BatteryService 同步的采样值。
+
+10/21 的[首次采集](runs/2026-10-21-xiaomi14ultra/async-compare1/comparison.json)在两组 Modern 之后被小米 `INSTALL_FAILED_USER_RESTRICTED` 拒绝安装 AndLinker 中断，保留但不合池。10/22 用户允许安装后重新完成四轮。未改变 SDK 默认 dispatcher，没有删除鉴权、Schema、取消、许可、死亡监听或终态；四个业务 App 的场景验收仍未执行。
+
+复现工具：[四方采集](harness/capture_async_compare.py)、[功能回归](harness/capture_async_regression.py)默认只 prepare；显式 `--execute` 才访问固定小米，硬件门禁先于安装。构建退出码、失败尝试、宿主 JDK C2 崩溃与最终构建记录见[构建目录](runs/2026-10-21-xiaomi14ultra/async-optimization-build/)。
+
+发布候选3.0.0-rc.1另完成七个库产物与五个APK的统一构建和本地产物校验，详见[发布记录](../releases/v3.0.0-rc.1/build-result.json)。标签对应的本地包23A280本轮仅作为安装后的性能基线；完整框架门禁属于4F7ED工作区候选。本文保留各阶段APK、时间和证明范围。
 
 整理日期：2026-10-09。本文是性能数字、采集方法与证据限制的统一入口；仅涉及 Xiaomi 14 Ultra（`925c23bb`、`24031PN0DC`、Android 16）。具体历史系统构建为 `BP2A.250605.031.A3`，后续运行以各目录保存的设备快照为准。没有在其他设备补测。
 
@@ -14,7 +63,7 @@
 | 冷发现与关闭 | 后续版本具备有界可取消等待，历史 64 项回归通过 | 属于响应性和清理正确性修复；预热 Echo 没有测出冷发现优化收益 |
 | 请求 trace | 两端文件和内核 Binder flow 可关联 1000 个完整请求 | 已定位准入、调度和恢复成本；诊断 trace 不能替代关闭 trace 后的性能 A/B |
 | 服务端专用调度器 | 两个同 APK run 中，1024 字符八个 P50 配对、16 并发四个配对均改善；16 字符串行第二次出现反向配对 | 保留为短、非阻塞业务的应用侧可选 Scope；demo 默认仍为 Default |
-| 当前源码性能 | 新握手隔离及业务场景 APK 已构建，未做新性能采集 | 最新源码没有可用于更新上述排名或收益的性能结果 |
+| 本轮工作区候选 | 4F7ED 候选完成 73+4 项检查及本节四轮两库对照 | 默认请求管理无稳定 RTT 收益；专用 Async scope 可选，尚未追平 AndLinker |
 
 生命周期、终态、协议与各版本验收见[回归报告](Regression_Report.md)；四包业务及当前设备状态见[多 App 报告](Multi_App_Report.md)；优化取舍见[优化分析](../ModernIPC_Optimization_Analysis.md)。
 

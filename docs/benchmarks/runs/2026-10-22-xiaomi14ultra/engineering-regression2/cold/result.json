@@ -1,0 +1,81 @@
+{
+  "group": "cold",
+  "tag": "IpcColdProbe",
+  "expectedPasses": 12,
+  "runId": "cold-engfix2-20261022",
+  "status": "PASSED",
+  "valid": true,
+  "passCount": 12,
+  "doneCount": 1,
+  "foregroundEndCount": 1,
+  "complete": true,
+  "errors": [],
+  "passes": [
+    "PASS run=cold-engfix2-20261022 mainColdAsync mainTicks=15/300ms result=true discoveryBeforePending=true",
+    "PASS run=cold-engfix2-20261022 coldAsyncDeadline defaultCallTimeoutMs=150 elapsedMs=154 timeout=true pending=0 lateChecked=0",
+    "PASS run=cold-engfix2-20261022 flowDiscoveryDeadline defaultCallTimeoutMs=150 elapsedMs=170 collectorEnded=true timeout=true values=0 pending=0 lateChecked=0",
+    "PASS run=cold-engfix2-20261022 cancelDiscovery elapsedMs=1 callerCancelled=true remoteStillBlockedBeforeRelease=true pending=0 lateChecked=0",
+    "PASS run=cold-engfix2-20261022 concurrentSingleFlight callers=16 metadata=1 checked=1 hotCalls=10 additionalDiscovery=0",
+    "PASS run=cold-engfix2-20261022 sharedDiscoveryCancelOne waiters=16 cancelled=1 succeeded=15 metadata=1 checked=1 legacy=0 pending=0",
+    "PASS run=cold-engfix2-20261022 closeDuringDiscovery elapsedMs=5 warmedPendingFailed=true discoveryWaiterFailed=true remoteStillBlockedBeforeRelease=true pending=0",
+    "PASS run=cold-engfix2-20261022 disposeDuringDiscovery elapsedMs=4 warmedPendingFailed=true discoveryWaiterFailed=true remoteStillBlockedBeforeRelease=true pending=0",
+    "PASS run=cold-engfix2-20261022 lateGeneration generationAdvanced=true freshResolvedBeforeOldRelease=true oldFailed=true metadata=2 checked=1",
+    "PASS run=cold-engfix2-20261022 failureRetry firstFailure=true retrySucceeded=true metadata=2 checked=1 legacy=0",
+    "PASS run=cold-engfix2-20261022 strictSchemaRejection explicitCompatibilityFailure=true rejectedChecked=0 legacyFallback=0 validSchemaRetry=true",
+    "PASS run=cold-engfix2-20261022 boundedSaturation workerLimit=4 fifthRejected=true elapsedMs=1 retrySucceeded=true recoveryRejections=0 peakBlocked=4"
+  ],
+  "done": [
+    "DONE run=cold-engfix2-20261022 passed=true checks=12 requests=0 subscriptions=0 pending=0 watchdogs=0"
+  ],
+  "foregroundEnd": [
+    "END run=cold-engfix2-20261022 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-cold-engfix2-20261022.csv scope=activity_events_and_500ms_app_samples"
+  ],
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 5,
+    "sampleCount": 3,
+    "requiredSampleCount": 1,
+    "durationMs": 1701,
+    "maxGapMs": 502,
+    "observationMaxGapMs": 502,
+    "errors": [],
+    "sourceSha256": "E22124A44C05397E52ADED0711735542B36DC492719EAB00A447E99DFFDE002F",
+    "run": "cold-engfix2-20261022",
+    "csv": "foreground-cold-engfix2-20261022.csv"
+  },
+  "observed": {
+    "runId": "cold-engfix2-20261022",
+    "tag": "IpcColdProbe",
+    "passCount": 12,
+    "doneCount": 1,
+    "foregroundEndCount": 1,
+    "expectedPasses": 12,
+    "complete": true,
+    "valid": true,
+    "errors": [],
+    "passes": [
+      "PASS run=cold-engfix2-20261022 mainColdAsync mainTicks=15/300ms result=true discoveryBeforePending=true",
+      "PASS run=cold-engfix2-20261022 coldAsyncDeadline defaultCallTimeoutMs=150 elapsedMs=154 timeout=true pending=0 lateChecked=0",
+      "PASS run=cold-engfix2-20261022 flowDiscoveryDeadline defaultCallTimeoutMs=150 elapsedMs=170 collectorEnded=true timeout=true values=0 pending=0 lateChecked=0",
+      "PASS run=cold-engfix2-20261022 cancelDiscovery elapsedMs=1 callerCancelled=true remoteStillBlockedBeforeRelease=true pending=0 lateChecked=0",
+      "PASS run=cold-engfix2-20261022 concurrentSingleFlight callers=16 metadata=1 checked=1 hotCalls=10 additionalDiscovery=0",
+      "PASS run=cold-engfix2-20261022 sharedDiscoveryCancelOne waiters=16 cancelled=1 succeeded=15 metadata=1 checked=1 legacy=0 pending=0",
+      "PASS run=cold-engfix2-20261022 closeDuringDiscovery elapsedMs=5 warmedPendingFailed=true discoveryWaiterFailed=true remoteStillBlockedBeforeRelease=true pending=0",
+      "PASS run=cold-engfix2-20261022 disposeDuringDiscovery elapsedMs=4 warmedPendingFailed=true discoveryWaiterFailed=true remoteStillBlockedBeforeRelease=true pending=0",
+      "PASS run=cold-engfix2-20261022 lateGeneration generationAdvanced=true freshResolvedBeforeOldRelease=true oldFailed=true metadata=2 checked=1",
+      "PASS run=cold-engfix2-20261022 failureRetry firstFailure=true retrySucceeded=true metadata=2 checked=1 legacy=0",
+      "PASS run=cold-engfix2-20261022 strictSchemaRejection explicitCompatibilityFailure=true rejectedChecked=0 legacyFallback=0 validSchemaRetry=true",
+      "PASS run=cold-engfix2-20261022 boundedSaturation workerLimit=4 fifthRejected=true elapsedMs=1 retrySucceeded=true recoveryRejections=0 peakBlocked=4"
+    ],
+    "done": [
+      "DONE run=cold-engfix2-20261022 passed=true checks=12 requests=0 subscriptions=0 pending=0 watchdogs=0"
+    ],
+    "foregroundEnd": [
+      "END run=cold-engfix2-20261022 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-cold-engfix2-20261022.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}

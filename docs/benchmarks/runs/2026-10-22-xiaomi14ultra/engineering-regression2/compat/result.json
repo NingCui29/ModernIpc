@@ -1,0 +1,89 @@
+{
+  "group": "compat",
+  "tag": "IpcCompatibilityProbe",
+  "expectedPasses": 16,
+  "runId": "compat-engfix2-20261022",
+  "status": "PASSED",
+  "valid": true,
+  "passCount": 16,
+  "doneCount": 1,
+  "foregroundEndCount": 1,
+  "complete": true,
+  "errors": [],
+  "passes": [
+    "PASS run=compat-engfix2-20261022 metadataMatch descriptor=true signatures=17 floor=1",
+    "PASS run=compat-engfix2-20261022 additiveSubset clientVersion=1 requestedTransactions=1 extraServerTransactions=true",
+    "PASS run=compat-engfix2-20261022 parameterChange brokerRejected=true controllerRejected=true",
+    "PASS run=compat-engfix2-20261022 returnChange brokerRejected=true controllerRejected=true",
+    "PASS run=compat-engfix2-20261022 modeChange brokerRejected=true controllerRejected=true",
+    "PASS run=compat-engfix2-20261022 envelopeChange brokerRejected=true controllerRejected=true",
+    "PASS run=compat-engfix2-20261022 missingTransaction brokerRejected=true controllerRejected=true",
+    "PASS run=compat-engfix2-20261022 descriptorChange brokerRejected=true controllerRejected=true",
+    "PASS run=compat-engfix2-20261022 futureClientVersion brokerRejected=true controllerRejected=true",
+    "PASS run=compat-engfix2-20261022 schemaCacheIsolation fullCached=true changedSchemaRejected=true subsetAccepted=true",
+    "PASS run=compat-engfix2-20261022 constructionMapMutation fingerprintStable=true originalSnapshotAccepted=true brokerWireAccepted=true copiedMutationRejected=true",
+    "PASS run=compat-engfix2-20261022 legacyFloor userFloor=2 userDenied=true echoFloor=1 echoAllowed=true",
+    "PASS run=compat-engfix2-20261022 strictCache coldMetadata=1 coldChecked=1 hotCalls=100 additionalDiscovery=0 legacy=0",
+    "PASS run=compat-engfix2-20261022 generationRevalidate metadata=2 checked=2 legacy=0 generationAdvanced=true",
+    "PASS run=compat-engfix2-20261022 legacyMethodsMissing metadataRejected=true checkedRejected=true legacyEchoAlive=true",
+    "PASS run=compat-engfix2-20261022 strictLegacyNoFallback explicitFailure=true metadataAttempts=1 checked=0 legacyFallbacks=0"
+  ],
+  "done": [
+    "DONE run=compat-engfix2-20261022 passed=true checks=16 requests=0 subscriptions=0 pending=0"
+  ],
+  "foregroundEnd": [
+    "END run=compat-engfix2-20261022 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-compat-engfix2-20261022.csv scope=activity_events_and_500ms_app_samples"
+  ],
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 2,
+    "sampleCount": 0,
+    "requiredSampleCount": 0,
+    "durationMs": 104,
+    "maxGapMs": 104,
+    "observationMaxGapMs": 104,
+    "errors": [],
+    "sourceSha256": "C71F520CD01530D48EB4E7C0218C0E0CCEBB052FD567812249F55CF012E59D12",
+    "run": "compat-engfix2-20261022",
+    "csv": "foreground-compat-engfix2-20261022.csv"
+  },
+  "observed": {
+    "runId": "compat-engfix2-20261022",
+    "tag": "IpcCompatibilityProbe",
+    "passCount": 16,
+    "doneCount": 1,
+    "foregroundEndCount": 1,
+    "expectedPasses": 16,
+    "complete": true,
+    "valid": true,
+    "errors": [],
+    "passes": [
+      "PASS run=compat-engfix2-20261022 metadataMatch descriptor=true signatures=17 floor=1",
+      "PASS run=compat-engfix2-20261022 additiveSubset clientVersion=1 requestedTransactions=1 extraServerTransactions=true",
+      "PASS run=compat-engfix2-20261022 parameterChange brokerRejected=true controllerRejected=true",
+      "PASS run=compat-engfix2-20261022 returnChange brokerRejected=true controllerRejected=true",
+      "PASS run=compat-engfix2-20261022 modeChange brokerRejected=true controllerRejected=true",
+      "PASS run=compat-engfix2-20261022 envelopeChange brokerRejected=true controllerRejected=true",
+      "PASS run=compat-engfix2-20261022 missingTransaction brokerRejected=true controllerRejected=true",
+      "PASS run=compat-engfix2-20261022 descriptorChange brokerRejected=true controllerRejected=true",
+      "PASS run=compat-engfix2-20261022 futureClientVersion brokerRejected=true controllerRejected=true",
+      "PASS run=compat-engfix2-20261022 schemaCacheIsolation fullCached=true changedSchemaRejected=true subsetAccepted=true",
+      "PASS run=compat-engfix2-20261022 constructionMapMutation fingerprintStable=true originalSnapshotAccepted=true brokerWireAccepted=true copiedMutationRejected=true",
+      "PASS run=compat-engfix2-20261022 legacyFloor userFloor=2 userDenied=true echoFloor=1 echoAllowed=true",
+      "PASS run=compat-engfix2-20261022 strictCache coldMetadata=1 coldChecked=1 hotCalls=100 additionalDiscovery=0 legacy=0",
+      "PASS run=compat-engfix2-20261022 generationRevalidate metadata=2 checked=2 legacy=0 generationAdvanced=true",
+      "PASS run=compat-engfix2-20261022 legacyMethodsMissing metadataRejected=true checkedRejected=true legacyEchoAlive=true",
+      "PASS run=compat-engfix2-20261022 strictLegacyNoFallback explicitFailure=true metadataAttempts=1 checked=0 legacyFallbacks=0"
+    ],
+    "done": [
+      "DONE run=compat-engfix2-20261022 passed=true checks=16 requests=0 subscriptions=0 pending=0"
+    ],
+    "foregroundEnd": [
+      "END run=compat-engfix2-20261022 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-compat-engfix2-20261022.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}

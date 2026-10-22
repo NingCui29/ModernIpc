@@ -1,0 +1,330 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Configuration on demand is an incubating feature.
+> Task :build-logic:checkKotlinGradlePluginConfigurationErrors
+> Task :build-logic:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:extractPrecompiledScriptPluginPlugins
+> Task :build-logic:compilePluginsBlocks UP-TO-DATE
+
+> Task :build-logic:generatePrecompiledScriptPluginAccessors
+WARNING: The option 'android.enableBuildCache' is deprecated.
+The current default is 'false'.
+It was removed in version 7.0 of the Android Gradle plugin.
+The Android-specific build caches were superseded by the Gradle build cache (https://docs.gradle.org/current/userguide/build_cache.html).
+
+> Task :build-logic:generateScriptPluginAdapters
+> Task :build-logic:compileKotlin
+> Task :build-logic:compileJava NO-SOURCE
+> Task :build-logic:pluginDescriptors UP-TO-DATE
+> Task :build-logic:processResources UP-TO-DATE
+> Task :build-logic:classes UP-TO-DATE
+> Task :build-logic:jar
+
+> Configure project :ipc-contract
+WARNING: The option 'android.enableBuildCache' is deprecated.
+The current default is 'false'.
+It was removed in version 7.0 of the Android Gradle plugin.
+The Android-specific build caches were superseded by the Gradle build cache (https://docs.gradle.org/current/userguide/build_cache.html).
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+
+> Task :ipc-annotations:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-annotations:compileKotlin UP-TO-DATE
+> Task :ipc-annotations:compileJava NO-SOURCE
+> Task :ipc-annotations:processResources NO-SOURCE
+> Task :ipc-annotations:classes UP-TO-DATE
+> Task :ipc-annotations:jar UP-TO-DATE
+> Task :ipc-annotations:javadoc NO-SOURCE
+> Task :ipc-annotations:javadocJar UP-TO-DATE
+> Task :ipc-annotations:sourcesJar UP-TO-DATE
+> Task :ipc-annotations:generateMetadataFileForJavaPublication
+> Task :ipc-annotations:generatePomFileForJavaPublication
+> Task :ipc-annotations:publishJavaPublicationToProjectLocalRepository
+> Task :ipc-compiler:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-compiler:compileKotlin UP-TO-DATE
+> Task :ipc-compiler:compileJava NO-SOURCE
+> Task :ipc-compiler:processResources UP-TO-DATE
+> Task :ipc-compiler:classes UP-TO-DATE
+> Task :ipc-compiler:jar UP-TO-DATE
+> Task :ipc-compiler:javadoc NO-SOURCE
+> Task :ipc-compiler:javadocJar UP-TO-DATE
+> Task :ipc-compiler:sourcesJar
+> Task :ipc-compiler:generateMetadataFileForJavaPublication
+> Task :ipc-compiler:generatePomFileForJavaPublication
+> Task :ipc-compiler:publishJavaPublicationToProjectLocalRepository
+> Task :ipc-contract:preBuild UP-TO-DATE
+> Task :ipc-contract:preReleaseBuild UP-TO-DATE
+> Task :ipc-contract:compileReleaseAidl UP-TO-DATE
+> Task :ipc-contract:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :ipc-contract:mergeReleaseNativeLibs NO-SOURCE
+> Task :ipc-contract:stripReleaseDebugSymbols NO-SOURCE
+> Task :ipc-contract:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :ipc-contract:generateReleaseResValues UP-TO-DATE
+> Task :ipc-contract:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :ipc-contract:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-contract:generateReleaseResources UP-TO-DATE
+> Task :ipc-contract:packageReleaseResources UP-TO-DATE
+> Task :ipc-contract:parseReleaseLocalResources UP-TO-DATE
+> Task :ipc-contract:processReleaseManifest UP-TO-DATE
+> Task :ipc-contract:generateReleaseRFile UP-TO-DATE
+> Task :ipc-contract:compileReleaseKotlin UP-TO-DATE
+> Task :ipc-contract:extractReleaseAnnotations UP-TO-DATE
+> Task :ipc-contract:javaPreCompileRelease UP-TO-DATE
+> Task :ipc-contract:compileReleaseJavaWithJavac UP-TO-DATE
+> Task :ipc-contract:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :ipc-contract:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :ipc-contract:mergeReleaseShaders UP-TO-DATE
+> Task :ipc-contract:compileReleaseShaders NO-SOURCE
+> Task :ipc-contract:generateReleaseAssets UP-TO-DATE
+> Task :ipc-contract:packageReleaseAssets UP-TO-DATE
+> Task :ipc-contract:prepareLintJarForPublish UP-TO-DATE
+> Task :ipc-contract:prepareReleaseArtProfile UP-TO-DATE
+> Task :ipc-contract:processReleaseJavaRes UP-TO-DATE
+> Task :ipc-contract:mergeReleaseJavaResource UP-TO-DATE
+> Task :ipc-contract:syncReleaseLibJars UP-TO-DATE
+> Task :ipc-contract:writeReleaseAarMetadata UP-TO-DATE
+> Task :ipc-contract:bundleReleaseAar UP-TO-DATE
+> Task :ipc-contract:javaDocReleaseGeneration UP-TO-DATE
+> Task :ipc-contract:javaDocReleaseJar UP-TO-DATE
+> Task :ipc-contract:sourceReleaseJar UP-TO-DATE
+> Task :ipc-contract:generateMetadataFileForReleasePublication
+> Task :ipc-contract:generatePomFileForReleasePublication
+> Task :ipc-contract:publishReleasePublicationToProjectLocalRepository
+> Task :ipc-runtime-client:preBuild UP-TO-DATE
+> Task :ipc-runtime-client:preReleaseBuild UP-TO-DATE
+> Task :ipc-runtime-client:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :ipc-runtime-client:mergeReleaseNativeLibs NO-SOURCE
+> Task :ipc-runtime-client:stripReleaseDebugSymbols NO-SOURCE
+> Task :ipc-runtime-client:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :ipc-runtime-client:generateReleaseResValues UP-TO-DATE
+> Task :ipc-runtime-client:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :ipc-contract:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :ipc-runtime-client:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-runtime-client:generateReleaseResources UP-TO-DATE
+> Task :ipc-runtime-client:packageReleaseResources UP-TO-DATE
+> Task :ipc-runtime-client:parseReleaseLocalResources UP-TO-DATE
+> Task :ipc-runtime-client:processReleaseManifest UP-TO-DATE
+> Task :ipc-runtime-client:generateReleaseRFile UP-TO-DATE
+
+> Task :ipc-runtime-client:compileReleaseKotlin
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/ModernIpcRouter.kt:21:32 Parameter 'serviceClass' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/PendingCallRegistry.kt:94:9 Parameter 'serviceId' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/PendingCallRegistry.kt:95:9 Parameter 'operationId' is never used
+
+> Task :ipc-runtime-client:extractReleaseAnnotations
+> Task :ipc-runtime-client:javaPreCompileRelease UP-TO-DATE
+> Task :ipc-runtime-client:compileReleaseJavaWithJavac NO-SOURCE
+> Task :ipc-runtime-client:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :ipc-runtime-client:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :ipc-runtime-client:mergeReleaseShaders UP-TO-DATE
+> Task :ipc-runtime-client:compileReleaseShaders NO-SOURCE
+> Task :ipc-runtime-client:generateReleaseAssets UP-TO-DATE
+> Task :ipc-runtime-client:packageReleaseAssets UP-TO-DATE
+> Task :ipc-runtime-client:prepareLintJarForPublish UP-TO-DATE
+> Task :ipc-runtime-client:prepareReleaseArtProfile UP-TO-DATE
+> Task :ipc-runtime-client:processReleaseJavaRes UP-TO-DATE
+> Task :ipc-runtime-client:mergeReleaseJavaResource UP-TO-DATE
+> Task :ipc-runtime-client:syncReleaseLibJars
+> Task :ipc-runtime-client:writeReleaseAarMetadata UP-TO-DATE
+> Task :ipc-runtime-client:bundleReleaseAar
+
+> Task :ipc-runtime-client:javaDocReleaseGeneration
+Initializing plugins
+Dokka is performing: documentation for :ipc-runtime-client
+Validity check
+Creating documentation models
+Transforming documentation model before merging
+Merging documentation models
+Transforming documentation model after merging
+Creating pages
+Transforming pages
+Rendering
+Failed to download package-list from https://kotlinlang.org/api/latest/jvm/stdlib/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+
+Initializing plugins
+Dokka is performing: documentation for :ipc-runtime-client
+Validity check
+Creating documentation models
+Transforming documentation model before merging
+Merging documentation models
+Transforming documentation model after merging
+Creating pages
+Transforming pages
+Rendering
+Failed to download package-list from https://docs.oracle.com/javase/8/docs/api/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+Failed to download package-list from https://kotlinlang.org/api/latest/jvm/stdlib/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+
+
+> Task :ipc-runtime-client:javaDocReleaseJar
+> Task :ipc-runtime-client:sourceReleaseJar
+> Task :ipc-runtime-client:generateMetadataFileForReleasePublication
+> Task :ipc-runtime-client:generatePomFileForReleasePublication
+> Task :ipc-runtime-client:publishReleasePublicationToProjectLocalRepository
+> Task :ipc-runtime-server:preBuild UP-TO-DATE
+> Task :ipc-runtime-server:preReleaseBuild UP-TO-DATE
+> Task :ipc-runtime-server:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :ipc-runtime-server:mergeReleaseNativeLibs NO-SOURCE
+> Task :ipc-runtime-server:stripReleaseDebugSymbols NO-SOURCE
+> Task :ipc-runtime-server:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :ipc-runtime-server:generateReleaseResValues UP-TO-DATE
+> Task :ipc-runtime-server:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :ipc-runtime-server:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-runtime-server:generateReleaseResources UP-TO-DATE
+> Task :ipc-runtime-server:packageReleaseResources UP-TO-DATE
+> Task :ipc-runtime-server:parseReleaseLocalResources UP-TO-DATE
+> Task :ipc-runtime-server:processReleaseManifest UP-TO-DATE
+> Task :ipc-runtime-server:generateReleaseRFile UP-TO-DATE
+
+> Task :ipc-runtime-server:compileReleaseKotlin
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcTelemetry.kt:20:9 Parameter 'traceId' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcTelemetry.kt:21:9 Parameter 'serviceId' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcTelemetry.kt:22:9 Parameter 'operationId' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcTelemetry.kt:23:9 Parameter 'durationMs' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcTelemetry.kt:24:9 Parameter 'isSuccess' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcTelemetry.kt:34:26 Parameter 'serviceId' is never used
+
+> Task :ipc-runtime-server:extractReleaseAnnotations
+> Task :ipc-runtime-server:javaPreCompileRelease UP-TO-DATE
+> Task :ipc-runtime-server:compileReleaseJavaWithJavac NO-SOURCE
+> Task :ipc-runtime-server:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :ipc-runtime-server:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :ipc-runtime-server:mergeReleaseShaders UP-TO-DATE
+> Task :ipc-runtime-server:compileReleaseShaders NO-SOURCE
+> Task :ipc-runtime-server:generateReleaseAssets UP-TO-DATE
+> Task :ipc-runtime-server:packageReleaseAssets UP-TO-DATE
+> Task :ipc-runtime-server:prepareLintJarForPublish UP-TO-DATE
+> Task :ipc-runtime-server:prepareReleaseArtProfile UP-TO-DATE
+> Task :ipc-runtime-server:processReleaseJavaRes UP-TO-DATE
+> Task :ipc-runtime-server:mergeReleaseJavaResource UP-TO-DATE
+> Task :ipc-runtime-server:syncReleaseLibJars
+> Task :ipc-runtime-server:writeReleaseAarMetadata UP-TO-DATE
+> Task :ipc-runtime-server:bundleReleaseAar
+
+> Task :ipc-runtime-server:javaDocReleaseGeneration
+Initializing plugins
+Dokka is performing: documentation for :ipc-runtime-server
+Validity check
+Creating documentation models
+Transforming documentation model before merging
+Merging documentation models
+Transforming documentation model after merging
+Creating pages
+Transforming pages
+Rendering
+Failed to download package-list from https://developer.android.com/reference/kotlin/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+Failed to download package-list from https://kotlinlang.org/api/latest/jvm/stdlib/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+Failed to download package-list from https://developer.android.com/reference/androidx/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+Failed to download package-list from https://docs.oracle.com/javase/8/docs/api/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+Failed to download package-list from https://developer.android.com/reference/kotlin/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+Failed to download package-list from https://kotlinlang.org/api/latest/jvm/stdlib/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+Failed to download package-list from https://developer.android.com/reference/androidx/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+
+Initializing plugins
+Dokka is performing: documentation for :ipc-runtime-server
+Validity check
+Creating documentation models
+Transforming documentation model before merging
+Merging documentation models
+Transforming documentation model after merging
+Creating pages
+Transforming pages
+Rendering
+Failed to download package-list from https://docs.oracle.com/javase/8/docs/api/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+Failed to download package-list from https://kotlinlang.org/api/latest/jvm/stdlib/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+Failed to download package-list from https://developer.android.com/reference/kotlin/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+Failed to download package-list from https://docs.oracle.com/javase/8/docs/api/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+Failed to download package-list from https://kotlinlang.org/api/latest/jvm/stdlib/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+
+
+> Task :ipc-runtime-server:javaDocReleaseJar
+> Task :ipc-runtime-server:sourceReleaseJar
+> Task :ipc-runtime-server:generateMetadataFileForReleasePublication
+> Task :ipc-runtime-server:generatePomFileForReleasePublication
+> Task :ipc-runtime-server:publishReleasePublicationToProjectLocalRepository
+> Task :ipc-api:preBuild UP-TO-DATE
+> Task :ipc-api:preReleaseBuild UP-TO-DATE
+> Task :ipc-api:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :ipc-api:mergeReleaseNativeLibs NO-SOURCE
+> Task :ipc-api:stripReleaseDebugSymbols NO-SOURCE
+> Task :ipc-api:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :ipc-api:generateReleaseResValues UP-TO-DATE
+> Task :ipc-api:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :ipc-api:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-api:generateReleaseResources UP-TO-DATE
+> Task :ipc-api:packageReleaseResources UP-TO-DATE
+> Task :ipc-api:parseReleaseLocalResources UP-TO-DATE
+> Task :ipc-api:processReleaseManifest UP-TO-DATE
+> Task :ipc-api:generateReleaseRFile UP-TO-DATE
+> Task :ipc-runtime-client:bundleLibCompileToJarRelease
+> Task :ipc-runtime-server:bundleLibCompileToJarRelease
+> Task :ipc-api:kspReleaseKotlin
+
+> Task :ipc-api:compileReleaseKotlin
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-api/build/generated/ksp/release/kotlin/com/cn/ipc/api/hub/IMessageHubServiceServerStub.kt:325:35 Unnecessary safe call on a non-null receiver of type IBinder
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-api/build/generated/ksp/release/kotlin/com/cn/ipc/api/test/IBenchmarkEchoServiceServerStub.kt:371:35 Unnecessary safe call on a non-null receiver of type IBinder
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-api/build/generated/ksp/release/kotlin/com/cn/ipc/api/test/IBenchmarkEchoServiceServerStub.kt:471:35 Unnecessary safe call on a non-null receiver of type IBinder
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-api/build/generated/ksp/release/kotlin/com/cn/ipc/api/test/IBenchmarkEchoServiceServerStub.kt:570:35 Unnecessary safe call on a non-null receiver of type IBinder
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-api/build/generated/ksp/release/kotlin/com/cn/ipc/api/test/IUserServiceServerStub.kt:263:35 Unnecessary safe call on a non-null receiver of type IBinder
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-api/build/generated/ksp/release/kotlin/com/cn/ipc/api/test/IUserServiceServerStub.kt:362:35 Unnecessary safe call on a non-null receiver of type IBinder
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-api/src/main/kotlin/com/cn/ipc/api/hub/MultiAppScenarioMessage.kt:70:63 No cast needed
+
+> Task :ipc-api:extractReleaseAnnotations
+> Task :ipc-api:javaPreCompileRelease FROM-CACHE
+> Task :ipc-api:compileReleaseJavaWithJavac NO-SOURCE
+> Task :ipc-api:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :ipc-api:mergeReleaseConsumerProguardFiles UP-TO-DATE
+> Task :ipc-api:mergeReleaseShaders UP-TO-DATE
+> Task :ipc-api:compileReleaseShaders NO-SOURCE
+> Task :ipc-api:generateReleaseAssets UP-TO-DATE
+> Task :ipc-api:packageReleaseAssets UP-TO-DATE
+> Task :ipc-api:prepareLintJarForPublish UP-TO-DATE
+> Task :ipc-api:prepareReleaseArtProfile UP-TO-DATE
+> Task :ipc-api:processReleaseJavaRes UP-TO-DATE
+> Task :ipc-api:mergeReleaseJavaResource UP-TO-DATE
+> Task :ipc-api:syncReleaseLibJars
+> Task :ipc-api:writeReleaseAarMetadata UP-TO-DATE
+> Task :ipc-api:bundleReleaseAar
+
+> Task :ipc-api:javaDocReleaseGeneration
+Initializing plugins
+Dokka is performing: documentation for :ipc-api
+Validity check
+Creating documentation models
+Transforming documentation model before merging
+Merging documentation models
+Transforming documentation model after merging
+Creating pages
+Transforming pages
+Rendering
+Failed to download package-list from https://kotlinlang.org/api/latest/jvm/stdlib/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+Failed to download package-list from https://docs.oracle.com/javase/8/docs/api/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+Failed to download package-list from https://developer.android.com/reference/androidx/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+Failed to download package-list from https://kotlinlang.org/api/latest/jvm/stdlib/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+Failed to download package-list from https://docs.oracle.com/javase/8/docs/api/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+
+Initializing plugins
+Dokka is performing: documentation for :ipc-api
+Validity check
+Creating documentation models
+Transforming documentation model before merging
+Merging documentation models
+Transforming documentation model after merging
+Creating pages
+Transforming pages
+Rendering
+Failed to download package-list from https://kotlinlang.org/api/latest/jvm/stdlib/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+Failed to download package-list from https://developer.android.com/reference/kotlin/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+Failed to download package-list from https://developer.android.com/reference/androidx/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+Failed to download package-list from https://docs.oracle.com/javase/8/docs/api/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+Failed to download package-list from https://kotlinlang.org/api/latest/jvm/stdlib/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+Failed to download package-list from https://developer.android.com/reference/kotlin/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+Failed to download package-list from https://developer.android.com/reference/androidx/package-list, this might suggest that remote resource is not available, module is empty or dokka output got corrupted
+
+
+> Task :ipc-api:javaDocReleaseJar UP-TO-DATE
+> Task :ipc-api:sourceReleaseJar UP-TO-DATE
+> Task :ipc-api:generateMetadataFileForReleasePublication
+> Task :ipc-api:generatePomFileForReleasePublication
+> Task :ipc-api:publishReleasePublicationToProjectLocalRepository
+
+BUILD SUCCESSFUL in 10m 39s
+149 actionable tasks: 53 executed, 1 from cache, 95 up-to-date

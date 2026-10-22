@@ -12,25 +12,50 @@ import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.Semaphore
-import java.util.concurrent.atomic.AtomicBoolean
 
 /** Caps in-flight RPCs and keeps their jobs addressable by the original caller. */
 class IpcRequestTracker(maxInFlight: Int = 128) {
     private data class Key(val uid: Int, val callback: IBinder, val requestId: Long)
 
     private val permits = Semaphore(maxInFlight)
-    private val jobs = ConcurrentHashMap<Key, Job>()
+    private val requests = ConcurrentHashMap<Key, RequestEntry>()
     private val lifecycleLock = Any()
     @Volatile private var disposed = false
 
+    /** One object owns start visibility, death notification and completion cleanup. */
+    private inner class RequestEntry(val key: Key, val scope: CoroutineScope) :
+        IBinder.DeathRecipient, (Throwable?) -> Unit {
+        lateinit var job: Job
+        @Volatile var started = false
+
+        override fun binderDied() {
+            // A delayed notification belongs to this job, even if its key has been reused.
+            job.cancel()
+        }
+
+        override fun invoke(cause: Throwable?) {
+            requests.remove(key, this)
+            try { key.callback.unlinkToDeath(this, 0) } catch (_: Exception) {}
+            permits.release()
+            if (cause != null && !started) {
+                val message = when {
+                    disposed -> "SERVER_DISPOSED"
+                    !scope.isActive -> "SERVER_SCOPE_CANCELLED"
+                    else -> "REQUEST_CANCELLED"
+                }
+                sendError(key.callback, key.requestId, message)
+            }
+        }
+    }
+
     /** Snapshot of tracked jobs; cancellation is complete only after this reaches zero. */
-    val activeRequestCount: Int get() = jobs.size
+    val activeRequestCount: Int get() = requests.size
 
     fun dispose() {
         val activeJobs = synchronized(lifecycleLock) {
             if (disposed) return
             disposed = true
-            jobs.values.toList()
+            requests.values.map { it.job }
         }
         activeJobs.forEach { it.cancel(CancellationException("SERVER_DISPOSED")) }
     }
@@ -38,69 +63,56 @@ class IpcRequestTracker(maxInFlight: Int = 128) {
     fun submit(callback: IBinder?, requestId: Long, scope: CoroutineScope, block: suspend () -> Unit) {
         if (callback == null) return
         val key = Key(Binder.getCallingUid(), callback, requestId)
-        val started = AtomicBoolean(false)
         val tracing = IpcRequestTrace.nowIfEnabled() != 0L
         var rejection: String? = null
-        val job = synchronized(lifecycleLock) {
+        val entry = synchronized(lifecycleLock) {
             when {
                 disposed -> { rejection = "SERVER_DISPOSED"; null }
                 !scope.isActive -> { rejection = "SERVER_SCOPE_CANCELLED"; null }
                 !permits.tryAcquire() -> { rejection = "SERVER_BUSY"; null }
                 else -> {
-                    val candidate = if (tracing) {
+                    val candidate = RequestEntry(key, scope)
+                    candidate.job = if (tracing) {
                         scope.launch(start = CoroutineStart.LAZY) {
-                            started.set(true)
+                            candidate.started = true
                             IpcRequestTrace.recordAt("server", "server_job_start", requestId, callback = callback)
                             block()
                         }
                     } else {
                         // Keep the disabled wrapper's captures identical to the ordinary request path.
                         scope.launch(start = CoroutineStart.LAZY) {
-                            started.set(true)
+                            candidate.started = true
                             block()
                         }
                     }
-                    if (jobs.putIfAbsent(key, candidate) == null) {
+                    if (requests.putIfAbsent(key, candidate) == null) {
                         candidate
                     } else {
                         permits.release()
-                        candidate.cancel()
+                        candidate.job.cancel()
                         rejection = "DUPLICATE_REQUEST"
                         null
                     }
                 }
             }
         }
-        if (job == null) {
+        if (entry == null) {
             sendError(callback, requestId, rejection ?: "SERVER_UNAVAILABLE")
             return
         }
-        val recipient = IBinder.DeathRecipient { jobs[key]?.cancel() }
         try {
-            callback.linkToDeath(recipient, 0)
+            callback.linkToDeath(entry, 0)
         } catch (_: Exception) {
-            job.cancel()
+            entry.job.cancel()
         }
-        job.invokeOnCompletion { cause ->
-            jobs.remove(key, job)
-            try { callback.unlinkToDeath(recipient, 0) } catch (_: Exception) {}
-            permits.release()
-            if (cause != null && !started.get()) {
-                val message = when {
-                    disposed -> "SERVER_DISPOSED"
-                    !scope.isActive -> "SERVER_SCOPE_CANCELLED"
-                    else -> "REQUEST_CANCELLED"
-                }
-                sendError(callback, requestId, message)
-            }
-        }
+        entry.job.invokeOnCompletion(entry)
         IpcRequestTrace.recordAt("server", "server_enqueued", requestId, callback = callback)
-        job.start()
+        entry.job.start()
     }
 
     fun cancel(callback: IBinder?, requestId: Long) {
         if (callback == null) return
-        jobs[Key(Binder.getCallingUid(), callback, requestId)]?.cancel()
+        requests[Key(Binder.getCallingUid(), callback, requestId)]?.job?.cancel()
     }
 
     /** A decoded request may fail validation before it is admitted to the tracker. */

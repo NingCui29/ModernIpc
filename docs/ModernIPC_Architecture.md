@@ -1,10 +1,10 @@
 # ModernIpc 架构分析与核心调用链
 
-发布版3.0.0-rc.1的产物与构建身份见[发布记录](releases/v3.0.0-rc.1/build-result.json)。下文设备测量与门禁仍属于各自历史APK；发布版设备验收NOT_RUN。
+固定发布版 `3.0.0-rc.1` 的产物与构建身份见[发布记录](releases/v3.0.0-rc.1/build-result.json)，该标签产物的设备验收仍为 **NOT_RUN**。下文本次新增 API 与优化属于未发布工作区候选，不代表该标签或 Maven 产物已包含它们。
 
-核对日期：2026-10-09。本文维护当前模块、生命周期、请求/流协议和严格 Schema 调用链。当前四场景 APK 仅完成构建验证，设备验收尚未运行；历史 APK 的功能与性能范围分别见[回归报告](benchmarks/Regression_Report.md)、[性能报告](benchmarks/Performance_Report.md)和[多 App 报告](benchmarks/Multi_App_Report.md)。
+核对日期：2026-10-22。本文维护当前模块、生命周期、请求/流协议和严格 Schema 调用链。依赖修复后的未发布 demo APK SHA-256 为 `D0E76D896BDC3F0C9F01E14073F34201FFE79BFC6B07106E7885EA4181F28A9A`，在小米 `925c23bb` 通过原框架 73 项、独立 Async scope 4 项、新增业务取消/超时终态 9 项及同 UID 鉴权微测，见[本轮 summary](benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-regression2/summary.json)。性能数据仍属于此前 `4F7ED...` APK；四个多 App 业务场景仍未完成设备验收。各版本功能和性能范围分别见[回归报告](benchmarks/Regression_Report.md)、[性能报告](benchmarks/Performance_Report.md)和[多 App 报告](benchmarks/Multi_App_Report.md)。
 
-当前源码有独立有界 HandshakeExecutor：最多4个握手worker，绑定截止/解绑取消本地waiter，旧结果按连接与Job身份拒绝；与业务发现的4worker分池。握手隔离在4494调度实测后新增，其9项探针尚未通过设备验收，具体身份与步骤见[回归报告](benchmarks/Regression_Report.md)。
+当前源码有独立有界 HandshakeExecutor：最多4个握手worker，绑定截止/解绑取消本地waiter，旧结果按连接与Job身份拒绝；与业务发现的4worker分池。握手隔离在 `4494...` 调度实测后新增，其 9 项探针已包含在本次候选通过的 73 项小米回归中；固定发布标签的设备验收状态保持独立，具体步骤见[回归报告](benchmarks/Regression_Report.md)。
 
 ## 1. 总体架构与模块
 
@@ -18,7 +18,7 @@ ModernIpc 的核心是 **KSP 生成代理、Stub 和事务 Schema，AIDL Broker 
 | 流 | NEXT/COMPLETE/ERROR、旧代次过滤、捕获 Binder 退订、明确接收容量策略 | 无订阅数量上限、credit、消费 ACK 和重放 |
 | 业务中枢 | 在线表、内存路由与 SharedFlow | 无持久队列、可靠投递、离线补发和心跳过期清理 |
 
-[模块清单](../settings.gradle.kts)包含 12 个模块，另有 build-logic。图中省略外部库及应用对 runtime 的直接依赖；实线由使用方指向依赖，虚线表示生成关系。
+[模块清单](../settings.gradle.kts)包含 14 个模块，另有 build-logic。新增 `ipc-host-tests` 仅用于 JVM 状态机门禁；独立 `benchmark-andlinker` 仅用于对照测试，两者均不属于 SDK 发布模块。AndLinker 的 37 个上游 Java 文件固定并保持字节不变，来源与哈希见[上游清单](../benchmark-andlinker/upstream-manifest.json)。图中省略外部库及应用对 runtime 的直接依赖；实线由使用方指向依赖，虚线表示生成或测试源码关系。
 
 ```mermaid
 flowchart TD
@@ -36,9 +36,12 @@ flowchart TD
     SERVER["app-server"] --> API
     CLIENTS["app-client1 / 2 / 3"] --> COMMON["demo-client-common"]
     COMMON --> API
+    BENCH["benchmark-andlinker：独立对照 APK"] --> UPSTREAM["固定 AndLinker 上游 37 个 Java 文件"]
+    HOST["ipc-host-tests：12+15 项 JVM 门禁"] -. "编译真实源码与 host doubles" .-> RC
+    HOST -. "编译真实源码与 host doubles" .-> RS
 ```
 
-[ipc-api](../ipc-api/build.gradle.kts)同时依赖双端 runtime 并运行 KSP，包含接口、代理和 Stub，并非纯契约包。后续可分离契约/DTO、客户端适配器、服务端 Stub，支持按侧生成；接口 Flow 仍依赖协程。拆分的 APK 体积收益需要另测。
+[ipc-api](../ipc-api/build.gradle.kts)包含接口、代理和 Stub，并运行 KSP；公开 ABI 通过 `api` 导出 contract、annotations、双端 runtime 和 coroutines，两端 runtime 也导出协程类型。`SOURCE` 注解导出属于定义新契约的便利性。独立 Maven metadata/POM-only 消费编译已通过，见[修复审计](ModernIPC_Engineering_Audit.md)。后续可分离契约/DTO、客户端适配器、服务端 Stub，支持按侧生成；接口 Flow 仍依赖协程。拆分的 APK 体积收益需要另测。
 
 ## 2. 运行时与严格发现
 
@@ -58,8 +61,8 @@ flowchart LR
         B --> STUB["ServerStub / SchemaProvider"]
         STUB --> AUTH["每事务鉴权"]
         AUTH --> MODE{"模式"}
-        MODE -- "Async" --> T["RequestTracker / 宿主scope"]
-        MODE -- "Stream" --> J["订阅Job / 宿主scope"]
+        MODE -- "Async" --> T["RequestTracker / asyncCoroutineScope"]
+        MODE -- "Stream" --> J["订阅Job / coroutineScope"]
         MODE -- "Direct / Oneway" --> IMPL["业务实现"]
         T --> IMPL
         J --> IMPL
@@ -170,7 +173,7 @@ close/dispose 完成不等于收到远端 Job 取消 ACK；oneway 取消/退订�
 
 | 模式 | Binder方式 | 业务线程 | 终结与资源 |
 | --- | --- | --- | --- |
-| Async | oneway请求+独立oneway回调 | 宿主scope | 默认入口截止30s覆盖冷发现+pending；另发取消；每Stub128共享许可 |
+| Async | oneway请求+独立oneway回调 | asyncCoroutineScope，默认回落coroutineScope | 默认入口截止30s覆盖冷发现+pending；另发取消；每Stub128共享许可 |
 | Direct | 同步请求/reply | Binder线程 | 发现等待有限；业务transact无默认截止/远端取消；不经过tracker |
 | Stream | 同步订阅+oneway事件/退订 | 工厂在Binder线程，collect在宿主scope | 发现等待有截止，业务流无整段截止；NEXT/COMPLETE/ERROR；无订阅上限 |
 | Oneway | 单向请求 | Binder线程 | 无执行回执/业务取消；不经过tracker |
@@ -216,7 +219,11 @@ sequenceDiagram
 
 [Tracker](../ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcRequestTracker.kt)按 UID/callback/requestId 跟踪，超限回 SERVER_BUSY，重复回 DUPLICATE_REQUEST，scope失效/已dispose回String错误。128是每Stub所有UID共享许可，不是线程池大小。正常完成不误发取消，关闭及超时通过原Binder取消；idempotent不启用自动重放/去重。
 
-coroutineScope 是生成 Stub 的宿主配置点，runtime 不替宿主强制选择 dispatcher。[demo MyBrokerService](../demo-app/src/main/kotlin/com/cn/ipc/demo/MyBrokerService.kt)默认使用 Dispatchers.Default，另可为短任务注入专用单线程 dispatcher；两种 scope 共享 SupervisorJob，空闲时切换，测试 finally 恢复 Default，Service 销毁时取消 Job 并关闭已创建的执行器。仍通过原 Tracker 的 LAZY Job，不改 Binder 线程执行方式、调用方恢复上下文、鉴权、取消或许可。历史4494 APK两轮配置实测各28,096次、零失败，但16字符第二轮部分配对反向，因此保留默认配置；接入方式见[SDK可选调度配置](ModernIPC_SDK_Guide.md#9-可选短任务调度配置)，条件与数据见[性能报告](benchmarks/Performance_Report.md)。
+本次候选由单个 RequestEntry 持有 Job、启动标记、死亡监听和完成清理，完成时按 key 与 entry 身份摘除记录、解除监听及归还许可。晚到死亡通知只取消该 entry 的原 Job，不能按复用 key 误取消新请求。LAZY 登记、重复拒绝、128 许可和实际完成后清理的顺序继续保留；这是局部对象组织调整，不能单凭源码推断端到端耗时收益。
+
+本次未发布候选为生成 Stub 新增 `protected open val asyncCoroutineScope`，默认 getter 返回宿主的 `coroutineScope`。只有 `_requests.submit` 改用新属性；Flow 的订阅 Job 创建、收集与 scope 存活检查仍使用原 `coroutineScope`。不覆盖时保留原调度配置，runtime 不强制选择 dispatcher，也不改变客户端恢复上下文、鉴权、取消或 128 许可。scope getter 必须返回宿主持有的稳定实例，不能每次新建 scope。[生成器](../ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/ServerStubGenerator.kt)的 dispose 取消两个 scope，宿主负责关闭自建执行器；两个 scope 可共享该服务自己的父 Job，共享 Job 同时意味着取消生命周期相连。
+
+[demo MyBrokerService](../demo-app/src/main/kotlin/com/cn/ipc/demo/MyBrokerService.kt)让 Flow 固定使用 Default，Async 默认同样使用 Default，受控实验可为 Async 选择专用单线程 dispatcher。两种配置共享 SupervisorJob，成功路径与 finally 清理均恢复 Default，Service 销毁时取消 Job 并关闭已创建执行器。动态选择仅用于单客户端、Async 空闲实验，计数快照不提供多客户端生产切换原子性。本次独立 4 项 scope 检查通过专用选择、取消与并行 Flow、截止及恢复；性能对照另见[性能报告](benchmarks/Performance_Report.md)，接入代码见[SDK可选调度配置](ModernIPC_SDK_Guide.md#9-可选短任务调度配置)。这项 API 不在固定 `v3.0.0-rc.1` 标签产物中。
 
 可识别callback的基本类型请求可返回鉴权/非空校验错误。Parcelable先鉴权再反序列化；坏Token、损坏帧或无法定位callback仍可能无业务回包，由本地截止终结。
 
@@ -325,6 +332,8 @@ flowchart TD
 
 跨包示例有signature绑定权限及包可见性。业务Token确认接口，身份来自当前Binder UID；同UID准入，异UID实时检查包名及签名。示例额外限制clientId，Async取消与Stream退订检查原所有权。源码：[CallerAuthenticator](../ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/CallerAuthenticator.kt)、[示例宿主](../app-server/src/main/kotlin/com/cn/ipc/server/app/ServerBrokerService.kt)。
 
+本次候选让每个生成 Stub 复用一个 CallerAuthenticator 实例，经 `authorizeCurrentCaller` 执行事务鉴权；同 UID 可直接准入，异 UID 的当前包名和签名检查仍逐事务执行，没有新增跨请求的调用方许可缓存。复用校验器对象不等于跳过鉴权，覆盖 `authorizeCaller` 时宿主必须保留身份与策略校验。
+
 | 协议项 | 当前行为 |
 | --- | --- |
 | protocolMajor/minor | 主版本必须相等；当前Broker次版本1 |
@@ -372,8 +381,9 @@ flowchart TD
     LOCAL --> D["作废旧发现容器 / 失败唤醒waiter"]
     LOCAL --> U["取消超时及重连 / 解绑"]
     DESTROY["Service.onDestroy"] --> REG["Registry.dispose生命周期owner"]
-    REG --> STUB["拒绝新任务 / 取消请求、订阅、scope"]
+    REG --> STUB["拒绝新任务 / 取消请求、订阅及两个scope"]
     STUB --> DONE["Job实际完成 / 计数与许可、死亡监听回收"]
+    DESTROY --> EXEC["宿主关闭自建executor"]
 ```
 
 计数是并发快照，不是join或消费确认；非协作任务可能在dispose后继续占用计数，不能提前清表伪造归零。仍需订阅上限、per-UID预算、结构化RpcError、遥测、单侧发布物与可靠业务消息；永久不兼容绑定的错误分类和大payload传输也未完善。
@@ -390,7 +400,7 @@ Async 记录 client_entry/resolved/registered/send/reply/resume 与 server_recei
 
 | 需要确认 | 文档与范围 |
 | --- | --- |
-| 生命周期、终态、兼容、故障、冷发现与握手 | [回归报告](benchmarks/Regression_Report.md)：历史52/4、64/5与当前待验收73/6按APK区分。 |
+| 生命周期、终态、兼容、故障、冷发现与握手 | [回归报告](benchmarks/Regression_Report.md)：历史52/4、64/5与本次候选通过的73/6、独立4项scope及鉴权微测试按APK区分。 |
 | 分配、CPU、RTT、AndLinker与调度实验 | [性能报告](benchmarks/Performance_Report.md)：同构建内部配对，保留反向样本和未知长尾。 |
 | 多App部署、投递与业务确认 | [业务指南](ModernIPC_Business_Interaction_Guide.md)与[多App验证](benchmarks/Multi_App_Report.md)：当前四场景build通过、设备NOT_RUN。 |
 | 优化选择与下一轮实施门槛 | [优化分析](ModernIPC_Optimization_Analysis.md)：源码成本、trace定位、单因素候选与回归要求。 |

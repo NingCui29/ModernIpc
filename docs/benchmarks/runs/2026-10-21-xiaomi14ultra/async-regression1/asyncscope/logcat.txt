@@ -1,0 +1,14 @@
+--------- beginning of main
+10-21 16:40:20.978  1938  1938 I IpcForeground: STATE run=asyncscope-asyncopt1 event=WAIT_READY elapsedRealtimeMs=58367057 uptimeMs=8789253 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-21 16:40:21.000  1938  1938 I IpcForeground: STATE run=asyncscope-asyncopt1 event=FOCUS_GAIN elapsedRealtimeMs=58367077 uptimeMs=8789273 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-21 16:40:21.080  1938  1938 I IpcForeground: STATE run=asyncscope-asyncopt1 event=WAIT_READY elapsedRealtimeMs=58367159 uptimeMs=8789355 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-21 16:40:21.180  1938  1938 I IpcForeground: STATE run=asyncscope-asyncopt1 event=WAIT_READY elapsedRealtimeMs=58367259 uptimeMs=8789455 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-21 16:40:21.281  1938  1938 I IpcForeground: STATE run=asyncscope-asyncopt1 event=WAIT_READY elapsedRealtimeMs=58367360 uptimeMs=8789556 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-21 16:40:21.288  1938  1938 I IpcForeground: STATE run=asyncscope-asyncopt1 event=BEGIN elapsedRealtimeMs=58367361 uptimeMs=8789557 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:40:21.311  1938  3460 I IpcAsyncScopeProbe: PASS run=asyncscope-asyncopt1 dedicatedSelected=true traceDisabled=true
+10-21 16:40:21.434  1938  3511 I IpcAsyncScopeProbe: PASS run=asyncscope-asyncopt1 dedicatedCancel=true concurrentFlow=0,1,2 pending=0 requests=0 subscriptions=0
+10-21 16:40:21.589  1938  3511 I IpcAsyncScopeProbe: PASS run=asyncscope-asyncopt1 dedicatedDeadline=true pending=0 requests=0 subscriptions=0
+10-21 16:40:21.597  1938  3511 I IpcAsyncScopeProbe: PASS run=asyncscope-asyncopt1 defaultRestored=true pending=0 requests=0 subscriptions=0
+10-21 16:40:21.597  1938  3511 I IpcAsyncScopeProbe: DONE run=asyncscope-asyncopt1 passed=true checks=4
+10-21 16:40:21.601  1938  1938 I IpcForeground: STATE run=asyncscope-asyncopt1 event=END elapsedRealtimeMs=58367679 uptimeMs=8789875 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:40:21.609  1938  1938 I IpcForeground: END run=asyncscope-asyncopt1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-asyncscope-asyncopt1.csv scope=activity_events_and_500ms_app_samples

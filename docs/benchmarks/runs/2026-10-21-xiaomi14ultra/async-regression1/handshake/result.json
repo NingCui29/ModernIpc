@@ -1,0 +1,75 @@
+{
+  "group": "handshake",
+  "tag": "IpcHandshakeProbe",
+  "expectedPasses": 9,
+  "runId": "handshake-asyncopt1",
+  "status": "PASSED",
+  "valid": true,
+  "passCount": 9,
+  "doneCount": 1,
+  "foregroundEndCount": 1,
+  "complete": true,
+  "errors": [],
+  "passes": [
+    "PASS run=handshake-asyncopt1 rawKeepBinding remoteProcess=true handshakeAttempts=0 serverPid=2222",
+    "PASS run=handshake-asyncopt1 closeBlockedHandshake elapsedMs=2 remoteStillBlockedBeforeRelease=true lateReplyNoRevive=true generation=0 pending=0",
+    "PASS run=handshake-asyncopt1 disposeBlockedHandshake elapsedMs=2 remoteStillBlockedBeforeRelease=true lateReplyNoRevive=true generation=0 pending=0",
+    "PASS run=handshake-asyncopt1 bindingTimeoutRetry bindingTimeoutMs=600 elapsedMs=608 maxReconnectAttempts=0 disconnectedBeforeRelease=true lateReplyNoRevive=true explicitRetry=true attempts=2 pending=0",
+    "PASS run=handshake-asyncopt1 boundedReconnect bindingTimeoutMs=600 maxReconnectAttempts=1 attempts=2 finalDisconnected=true lateRepliesNoRevive=true pending=0",
+    "PASS run=handshake-asyncopt1 lateHandshakeIsolation freshConnectedBeforeOldRelease=true attempts=2 oldReplyDidNotReplaceConnected=true generation=1 pending=0",
+    "PASS run=handshake-asyncopt1 ownerCancelBlockedHandshake elapsedMs=5 autoDisposedBeforeExplicitJoin=true remoteStillBlockedBeforeRelease=true lateReplyNoRevive=true pending=0",
+    "PASS run=handshake-asyncopt1 boundedHandshakePool workerLimit=4 fifthDisconnected=true elapsedMs=4 bindingTimeoutMs=5000 serverAttempts=4 peakBlocked=4 pending=0",
+    "PASS run=handshake-asyncopt1 handshakeCapacityRecovered releaseRecovered=true connectedControllers=5 serverAttempts=5 replies=5 pending=0 watchdogs=0"
+  ],
+  "done": [
+    "DONE run=handshake-asyncopt1 passed=true checks=9 pending=0 blocked=0 watchdogs=0"
+  ],
+  "foregroundEnd": [
+    "END run=handshake-asyncopt1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-handshake-asyncopt1.csv scope=activity_events_and_500ms_app_samples"
+  ],
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 10,
+    "sampleCount": 8,
+    "requiredSampleCount": 4,
+    "durationMs": 4078,
+    "maxGapMs": 504,
+    "observationMaxGapMs": 504,
+    "errors": [],
+    "sourceSha256": "45C13DE484632A3F80EC6D70B70E52627774F773E6D02FD8FE9E22780F9FAA8F",
+    "run": "handshake-asyncopt1",
+    "csv": "foreground-handshake-asyncopt1.csv"
+  },
+  "observed": {
+    "runId": "handshake-asyncopt1",
+    "tag": "IpcHandshakeProbe",
+    "passCount": 9,
+    "doneCount": 1,
+    "foregroundEndCount": 1,
+    "expectedPasses": 9,
+    "complete": true,
+    "valid": true,
+    "errors": [],
+    "passes": [
+      "PASS run=handshake-asyncopt1 rawKeepBinding remoteProcess=true handshakeAttempts=0 serverPid=2222",
+      "PASS run=handshake-asyncopt1 closeBlockedHandshake elapsedMs=2 remoteStillBlockedBeforeRelease=true lateReplyNoRevive=true generation=0 pending=0",
+      "PASS run=handshake-asyncopt1 disposeBlockedHandshake elapsedMs=2 remoteStillBlockedBeforeRelease=true lateReplyNoRevive=true generation=0 pending=0",
+      "PASS run=handshake-asyncopt1 bindingTimeoutRetry bindingTimeoutMs=600 elapsedMs=608 maxReconnectAttempts=0 disconnectedBeforeRelease=true lateReplyNoRevive=true explicitRetry=true attempts=2 pending=0",
+      "PASS run=handshake-asyncopt1 boundedReconnect bindingTimeoutMs=600 maxReconnectAttempts=1 attempts=2 finalDisconnected=true lateRepliesNoRevive=true pending=0",
+      "PASS run=handshake-asyncopt1 lateHandshakeIsolation freshConnectedBeforeOldRelease=true attempts=2 oldReplyDidNotReplaceConnected=true generation=1 pending=0",
+      "PASS run=handshake-asyncopt1 ownerCancelBlockedHandshake elapsedMs=5 autoDisposedBeforeExplicitJoin=true remoteStillBlockedBeforeRelease=true lateReplyNoRevive=true pending=0",
+      "PASS run=handshake-asyncopt1 boundedHandshakePool workerLimit=4 fifthDisconnected=true elapsedMs=4 bindingTimeoutMs=5000 serverAttempts=4 peakBlocked=4 pending=0",
+      "PASS run=handshake-asyncopt1 handshakeCapacityRecovered releaseRecovered=true connectedControllers=5 serverAttempts=5 replies=5 pending=0 watchdogs=0"
+    ],
+    "done": [
+      "DONE run=handshake-asyncopt1 passed=true checks=9 pending=0 blocked=0 watchdogs=0"
+    ],
+    "foregroundEnd": [
+      "END run=handshake-asyncopt1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-handshake-asyncopt1.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}

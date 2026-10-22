@@ -1,0 +1,19 @@
+ipc-runtime-client\src\main\kotlin\com\cn\ipc\client\PendingCallRegistry.kt:94:9: warning: parameter 'serviceId' is never used
+        serviceId: Int,
+        ^
+ipc-runtime-client\src\main\kotlin\com\cn\ipc\client\PendingCallRegistry.kt:95:9: warning: parameter 'operationId' is never used
+        operationId: Int,
+        ^
+PASS immediateReply
+PASS cancelDuringDispatch
+PASS disconnectDuringDispatch
+PASS failedDispatch
+PASS cancelledBeforeRegistration
+PASS publicRegisterCompatibility
+PASS parcelFailureAndRemoteError
+PASS replyDisconnectRace1000
+PASS defaultDeadline
+PASS bulkDisconnectAndThrowingCancel
+PASS promptCancellationAfterReply
+PASS callerDispatcherPreserved
+PASS pendingRegistryHost checks=12 deviceValidation=NOT_RUN binderValidation=NOT_RUN

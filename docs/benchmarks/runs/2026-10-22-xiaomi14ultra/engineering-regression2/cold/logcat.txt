@@ -1,0 +1,27 @@
+--------- beginning of main
+10-22 11:18:27.761 22286 22286 I IpcForeground: STATE run=cold-engfix2-20261022 event=WAIT_READY elapsedRealtimeMs=15591852 uptimeMs=10581993 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-22 11:18:27.779 22286 22286 I IpcForeground: STATE run=cold-engfix2-20261022 event=FOCUS_GAIN elapsedRealtimeMs=15591870 uptimeMs=10582011 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-22 11:18:27.863 22286 22286 I IpcForeground: STATE run=cold-engfix2-20261022 event=WAIT_READY elapsedRealtimeMs=15591954 uptimeMs=10582096 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-22 11:18:27.967 22286 22286 I IpcForeground: STATE run=cold-engfix2-20261022 event=WAIT_READY elapsedRealtimeMs=15592058 uptimeMs=10582200 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-22 11:18:28.068 22286 22286 I IpcForeground: STATE run=cold-engfix2-20261022 event=WAIT_READY elapsedRealtimeMs=15592159 uptimeMs=10582300 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-22 11:18:28.068 22286 22286 I IpcForeground: STATE run=cold-engfix2-20261022 event=BEGIN elapsedRealtimeMs=15592159 uptimeMs=10582300 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:28.082 22286 22937 I IpcColdProbe: START run=cold-engfix2-20261022 checks=12 clientPid=22286 serverPid=22945
+10-22 11:18:28.426 22286 22939 I IpcColdProbe: PASS run=cold-engfix2-20261022 mainColdAsync mainTicks=15/300ms result=true discoveryBeforePending=true
+10-22 11:18:28.571 22286 22286 I IpcForeground: STATE run=cold-engfix2-20261022 event=SAMPLE elapsedRealtimeMs=15592661 uptimeMs=10582802 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:28.638 22286 22937 I IpcColdProbe: PASS run=cold-engfix2-20261022 coldAsyncDeadline defaultCallTimeoutMs=150 elapsedMs=154 timeout=true pending=0 lateChecked=0
+10-22 11:18:28.873 22286 22937 I IpcColdProbe: PASS run=cold-engfix2-20261022 flowDiscoveryDeadline defaultCallTimeoutMs=150 elapsedMs=170 collectorEnded=true timeout=true values=0 pending=0 lateChecked=0
+10-22 11:18:28.941 22286 22987 I IpcColdProbe: PASS run=cold-engfix2-20261022 cancelDiscovery elapsedMs=1 callerCancelled=true remoteStillBlockedBeforeRelease=true pending=0 lateChecked=0
+10-22 11:18:29.073 22286 22286 I IpcForeground: STATE run=cold-engfix2-20261022 event=SAMPLE elapsedRealtimeMs=15593163 uptimeMs=10583304 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:29.166 22286 22987 I IpcColdProbe: PASS run=cold-engfix2-20261022 concurrentSingleFlight callers=16 metadata=1 checked=1 hotCalls=10 additionalDiscovery=0
+10-22 11:18:29.222 22286 23015 I IpcColdProbe: PASS run=cold-engfix2-20261022 sharedDiscoveryCancelOne waiters=16 cancelled=1 succeeded=15 metadata=1 checked=1 legacy=0 pending=0
+10-22 11:18:29.322 22286 23016 I IpcColdProbe: PASS run=cold-engfix2-20261022 closeDuringDiscovery elapsedMs=5 warmedPendingFailed=true discoveryWaiterFailed=true remoteStillBlockedBeforeRelease=true pending=0
+10-22 11:18:29.415 22286 22938 I IpcColdProbe: PASS run=cold-engfix2-20261022 disposeDuringDiscovery elapsedMs=4 warmedPendingFailed=true discoveryWaiterFailed=true remoteStillBlockedBeforeRelease=true pending=0
+10-22 11:18:29.500 22286 22939 I IpcColdProbe: PASS run=cold-engfix2-20261022 lateGeneration generationAdvanced=true freshResolvedBeforeOldRelease=true oldFailed=true metadata=2 checked=1
+10-22 11:18:29.545 22286 22938 I IpcColdProbe: PASS run=cold-engfix2-20261022 failureRetry firstFailure=true retrySucceeded=true metadata=2 checked=1 legacy=0
+10-22 11:18:29.574 22286 22286 I IpcForeground: STATE run=cold-engfix2-20261022 event=SAMPLE elapsedRealtimeMs=15593665 uptimeMs=10583806 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:29.596 22286 23017 I IpcColdProbe: PASS run=cold-engfix2-20261022 strictSchemaRejection explicitCompatibilityFailure=true rejectedChecked=0 legacyFallback=0 validSchemaRetry=true
+10-22 11:18:29.715 22286 23017 I IpcColdProbe: PASS run=cold-engfix2-20261022 boundedSaturation workerLimit=4 fifthRejected=true elapsedMs=1 retrySucceeded=true recoveryRejections=0 peakBlocked=4
+10-22 11:18:29.759 22286 23017 I IpcColdProbe: DONE run=cold-engfix2-20261022 passed=true checks=12 requests=0 subscriptions=0 pending=0 watchdogs=0
+10-22 11:18:29.764 22286 23017 I IpcColdProbe: RAW run=cold-engfix2-20261022 checks=12 file=cold-cold-engfix2-20261022.csv
+10-22 11:18:29.770 22286 22286 I IpcForeground: STATE run=cold-engfix2-20261022 event=END elapsedRealtimeMs=15593860 uptimeMs=10584002 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:29.771 22286 22286 I IpcForeground: END run=cold-engfix2-20261022 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-cold-engfix2-20261022.csv scope=activity_events_and_500ms_app_samples

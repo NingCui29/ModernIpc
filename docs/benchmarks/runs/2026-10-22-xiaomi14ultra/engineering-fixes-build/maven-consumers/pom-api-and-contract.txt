@@ -1,0 +1,60 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Configuration on demand is an incubating feature.
+
+> Configure project :api-consumer
+WARNING: The option 'android.enableBuildCache' is deprecated.
+The current default is 'false'.
+It was removed in version 7.0 of the Android Gradle plugin.
+The Android-specific build caches were superseded by the Gradle build cache (https://docs.gradle.org/current/userguide/build_cache.html).
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+
+> Task :api-consumer:checkKotlinGradlePluginConfigurationErrors
+> Task :api-consumer:preBuild UP-TO-DATE
+> Task :api-consumer:preReleaseBuild UP-TO-DATE
+> Task :api-consumer:generateReleaseResValues FROM-CACHE
+> Task :api-consumer:generateReleaseResources UP-TO-DATE
+> Task :api-consumer:packageReleaseResources FROM-CACHE
+> Task :api-consumer:parseReleaseLocalResources FROM-CACHE
+> Task :api-consumer:processReleaseManifest FROM-CACHE
+> Task :api-consumer:generateReleaseRFile FROM-CACHE
+> Task :api-consumer:compileReleaseKotlin FROM-CACHE
+> Task :api-consumer:verifyPublishedCompileGraph
+> Task :custom-contract:preBuild UP-TO-DATE
+> Task :custom-contract:preReleaseBuild UP-TO-DATE
+> Task :custom-contract:mergeReleaseJniLibFolders FROM-CACHE
+> Task :custom-contract:mergeReleaseNativeLibs NO-SOURCE
+> Task :custom-contract:stripReleaseDebugSymbols NO-SOURCE
+> Task :custom-contract:copyReleaseJniLibsProjectAndLocalJars
+> Task :custom-contract:generateReleaseResValues FROM-CACHE
+> Task :custom-contract:extractDeepLinksForAarRelease FROM-CACHE
+> Task :custom-contract:checkKotlinGradlePluginConfigurationErrors
+> Task :custom-contract:generateReleaseResources UP-TO-DATE
+> Task :custom-contract:packageReleaseResources FROM-CACHE
+> Task :custom-contract:parseReleaseLocalResources FROM-CACHE
+> Task :custom-contract:processReleaseManifest FROM-CACHE
+> Task :custom-contract:generateReleaseRFile FROM-CACHE
+> Task :custom-contract:kspReleaseKotlin
+> Task :custom-contract:compileReleaseKotlin FROM-CACHE
+> Task :custom-contract:extractReleaseAnnotations FROM-CACHE
+> Task :custom-contract:javaPreCompileRelease
+> Task :custom-contract:compileReleaseJavaWithJavac NO-SOURCE
+> Task :custom-contract:mergeReleaseGeneratedProguardFiles
+> Task :custom-contract:mergeReleaseConsumerProguardFiles
+> Task :custom-contract:mergeReleaseShaders FROM-CACHE
+> Task :custom-contract:compileReleaseShaders NO-SOURCE
+> Task :custom-contract:generateReleaseAssets UP-TO-DATE
+> Task :custom-contract:packageReleaseAssets FROM-CACHE
+> Task :custom-contract:prepareLintJarForPublish
+> Task :custom-contract:prepareReleaseArtProfile
+> Task :custom-contract:processReleaseJavaRes
+> Task :custom-contract:mergeReleaseJavaResource
+> Task :custom-contract:syncReleaseLibJars FROM-CACHE
+> Task :custom-contract:writeReleaseAarMetadata
+> Task :custom-contract:bundleReleaseAar
+> Task :custom-contract:generateMetadataFileForReleasePublication
+> Task :custom-contract:generatePomFileForReleasePublication
+> Task :custom-contract:publishReleasePublicationToFixtureRepository
+
+BUILD SUCCESSFUL in 50s
+35 actionable tasks: 17 executed, 18 from cache

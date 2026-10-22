@@ -1,6 +1,6 @@
 # 验证索引
 
-核对日期：2026-10-09。测试限定 **Xiaomi 14 Ultra / `925c23bb`**。本目录将按日期拆分的报告归总为三份；原始输出仍按实际采集日期保留，不修改运行身份或跨版本合算结果。
+核对日期：2026-10-22。测试限定 **Xiaomi 14 Ultra / `925c23bb`**。本目录将按日期拆分的报告归总为三份；原始输出仍按实际采集日期保留，不修改运行身份或跨版本合算结果。
 
 ## 按问题阅读
 
@@ -16,6 +16,8 @@
 
 | 构建身份 / 时点 | 已有证据 | 未完成的证明 |
 | --- | --- | --- |
+| 工程修复候选 / `D0E76D89...` / 10/22 | [新包73+4+9项小米回归及authmicro](runs/2026-10-22-xiaomi14ultra/engineering-regression2/summary.json)；[174源码身份与125task构建](runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/build-result.json)；[六SDK隔离Maven消费与27项host](runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/archive.json)。首次锁屏未开始的运行保留。 | 新包性能与四App业务未测，远端CI未执行；未覆盖旧RC1制品或发布新版本。 |
+| Async 工作区候选 / `4F7ED116...` / 10/21–22 | [73项框架+4项独立scope及authmicro](runs/2026-10-21-xiaomi14ultra/async-regression1/summary.json)；[四轮64,000次对照](runs/2026-10-22-xiaomi14ultra/async-compare1/comparison.json)；[同APK16并发](runs/2026-10-22-xiaomi14ultra/async-dispatch1/evidence.json)。 | 默认请求管理无稳定RTT收益；专用scope P99不稳定，本轮未追平AndLinker。四App业务仍未验收，API未发布。 |
 | 发布候选3.0.0-rc.1 | [七库+五APK统一构建](../releases/v3.0.0-rc.1/build-result.json)退出码0、429任务；产物版本、POM/module与同签名校验。 | 发布APK安装、小米框架/业务回归和新性能均NOT_RUN。 |
 | 四场景开发快照 / demo `22DAB065...` | 五应用统一构建退出码 0；35 个核心源码文件与会议构建相同；Hub Schema 前后相同；离线采集器检查及 prepare。 | 安装、会议 6 阶段、新场景 8 阶段、完整框架回归与实际业务性能均 NOT_RUN。15:04 指定小米未连接。 |
 | 握手隔离 / `40268409...` | 五应用构建、安装包哈希校验。 | 当时锁屏/Dozing；新增握手 9 项、64 项回归及 trace 未运行。 |
@@ -29,6 +31,8 @@
 - [2026-09-29 运行目录](runs/2026-09-29-xiaomi14ultra)：原版示例、同负载两库 echo、Direct 和调度消融。
 - [2026-10-08 运行目录](runs/2026-10-08-xiaomi14ultra)：鉴权、顺序修复、pending、发送前检查与早期冷发现。
 - [2026-10-09 运行目录](runs/2026-10-09-xiaomi14ultra)：trace/dispatcher、握手构建、业务构建及 prepare。
+- [2026-10-21 运行目录](runs/2026-10-21-xiaomi14ultra)：请求管理优化构建、73+4项设备回归，以及被安装限制中断的首次性能采集。
+- [2026-10-22 运行目录](runs/2026-10-22-xiaomi14ultra)：4F7ED 的完整四轮两库对照与同 APK 并发调度；D0E76 的工程修复构建、Maven/host 和 73+4+9 项小米回归，二者身份分开。
 - [采集与复算工具](harness)：`capture_request_trace.py`、`capture_cross_package_smoke.py`、`capture_multi_app_case.py` 和 `capture_multi_app_scenarios.py` 默认 prepare，`--execute` 才操作设备。`capture_ordered.py` 直接通过 ADB 读取当前日志与快照，使用前按回归报告核对设备及运行身份；离线分析脚本读取已有文件。
 
 原始目录中的 [auth 摘要](runs/2026-10-08-xiaomi14ultra/auth-allocation/summary.md)、[dispatcher 摘要](runs/2026-10-09-xiaomi14ultra/dispatch-analysis/summary.md)、[历史握手步骤](runs/2026-10-09-xiaomi14ultra/handshake-build/next-steps.md)保持原样，它们属于对应构建时点。当前执行计划以回归和多 App 报告为准。

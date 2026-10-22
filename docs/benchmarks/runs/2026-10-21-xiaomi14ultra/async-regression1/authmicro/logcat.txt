@@ -1,0 +1,18 @@
+--------- beginning of main
+10-21 16:40:17.043  1367  1367 I IpcForeground: STATE run=authmicro-asyncopt1 event=WAIT_READY elapsedRealtimeMs=58363110 uptimeMs=8785307 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-21 16:40:17.063  1367  1367 I IpcForeground: STATE run=authmicro-asyncopt1 event=FOCUS_GAIN elapsedRealtimeMs=58363142 uptimeMs=8785338 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-21 16:40:17.144  1367  1367 I IpcForeground: STATE run=authmicro-asyncopt1 event=WAIT_READY elapsedRealtimeMs=58363222 uptimeMs=8785418 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-21 16:40:17.244  1367  1367 I IpcForeground: STATE run=authmicro-asyncopt1 event=WAIT_READY elapsedRealtimeMs=58363323 uptimeMs=8785519 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-21 16:40:17.345  1367  1367 I IpcForeground: STATE run=authmicro-asyncopt1 event=WAIT_READY elapsedRealtimeMs=58363423 uptimeMs=8785620 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-21 16:40:17.345  1367  1367 I IpcForeground: STATE run=authmicro-asyncopt1 event=BEGIN elapsedRealtimeMs=58363424 uptimeMs=8785620 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:40:17.462  3086  3174 I IpcAuthMicro: TIME batch=0 mode=legacy count=50000 wallNs=86426719 cpuNs=85065837
+10-21 16:40:17.483  3086  3174 I IpcAuthMicro: TIME batch=1 mode=optimized count=50000 wallNs=20711718 cpuNs=20170890
+10-21 16:40:17.500  3086  3174 I IpcAuthMicro: TIME batch=2 mode=optimized count=50000 wallNs=16933229 cpuNs=16707707
+10-21 16:40:17.540  3086  3174 I IpcAuthMicro: TIME batch=3 mode=legacy count=50000 wallNs=40101927 cpuNs=39491506
+10-21 16:40:17.582  3086  3174 I IpcAuthMicro: ALLOC batch=0 mode=legacy count=50000 beforeBytes=13449032 afterBytes=16660296 bytes=3211264 gc=0
+10-21 16:40:17.599  3086  3174 I IpcAuthMicro: ALLOC batch=1 mode=optimized count=50000 beforeBytes=16660296 afterBytes=16660296 bytes=0 gc=0
+10-21 16:40:17.617  3086  3174 I IpcAuthMicro: ALLOC batch=2 mode=optimized count=50000 beforeBytes=16660296 afterBytes=16660296 bytes=0 gc=0
+10-21 16:40:17.659  3086  3174 I IpcAuthMicro: ALLOC batch=3 mode=legacy count=50000 beforeBytes=16660296 afterBytes=19855176 bytes=3194880 gc=0
+10-21 16:40:17.659  3086  3174 I IpcAuthMicro: DONE sameUid=true countPerBatch=50000
+10-21 16:40:17.662  1367  1367 I IpcForeground: STATE run=authmicro-asyncopt1 event=END elapsedRealtimeMs=58363740 uptimeMs=8785936 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:40:17.667  1367  1367 I IpcForeground: END run=authmicro-asyncopt1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-authmicro-asyncopt1.csv scope=activity_events_and_500ms_app_samples

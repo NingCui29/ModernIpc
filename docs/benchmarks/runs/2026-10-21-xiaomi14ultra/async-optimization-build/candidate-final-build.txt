@@ -1,0 +1,230 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Configuration on demand is an incubating feature.
+> Task :build-logic:checkKotlinGradlePluginConfigurationErrors
+> Task :build-logic:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:compileKotlin UP-TO-DATE
+> Task :build-logic:compileJava NO-SOURCE
+> Task :build-logic:pluginDescriptors UP-TO-DATE
+> Task :build-logic:processResources UP-TO-DATE
+> Task :build-logic:classes UP-TO-DATE
+> Task :build-logic:jar UP-TO-DATE
+
+> Configure project :demo-app
+WARNING: The option 'android.enableBuildCache' is deprecated.
+The current default is 'false'.
+It was removed in version 7.0 of the Android Gradle plugin.
+The Android-specific build caches were superseded by the Gradle build cache (https://docs.gradle.org/current/userguide/build_cache.html).
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+
+> Task :demo-app:preBuild UP-TO-DATE
+> Task :demo-app:preDebugBuild UP-TO-DATE
+> Task :demo-app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :demo-app:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-api:preBuild UP-TO-DATE
+> Task :ipc-api:preDebugBuild UP-TO-DATE
+> Task :ipc-api:writeDebugAarMetadata UP-TO-DATE
+> Task :ipc-contract:preBuild UP-TO-DATE
+> Task :ipc-contract:preDebugBuild UP-TO-DATE
+> Task :ipc-contract:writeDebugAarMetadata UP-TO-DATE
+> Task :ipc-runtime-client:preBuild UP-TO-DATE
+> Task :ipc-runtime-client:preDebugBuild UP-TO-DATE
+> Task :ipc-runtime-client:writeDebugAarMetadata UP-TO-DATE
+> Task :ipc-runtime-server:preBuild UP-TO-DATE
+> Task :ipc-runtime-server:preDebugBuild UP-TO-DATE
+> Task :ipc-runtime-server:writeDebugAarMetadata UP-TO-DATE
+> Task :demo-app:checkDebugAarMetadata UP-TO-DATE
+> Task :demo-app:generateDebugResValues UP-TO-DATE
+> Task :ipc-api:generateDebugResValues UP-TO-DATE
+> Task :ipc-api:generateDebugResources UP-TO-DATE
+> Task :ipc-api:packageDebugResources UP-TO-DATE
+> Task :ipc-contract:generateDebugResValues UP-TO-DATE
+> Task :ipc-contract:generateDebugResources UP-TO-DATE
+> Task :ipc-contract:packageDebugResources UP-TO-DATE
+> Task :ipc-runtime-client:generateDebugResValues UP-TO-DATE
+> Task :ipc-runtime-client:generateDebugResources UP-TO-DATE
+> Task :ipc-runtime-client:packageDebugResources UP-TO-DATE
+> Task :ipc-runtime-server:generateDebugResValues UP-TO-DATE
+> Task :ipc-runtime-server:generateDebugResources UP-TO-DATE
+> Task :ipc-runtime-server:packageDebugResources UP-TO-DATE
+> Task :demo-app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :demo-app:generateDebugResources UP-TO-DATE
+> Task :demo-app:mergeDebugResources UP-TO-DATE
+> Task :demo-app:packageDebugResources UP-TO-DATE
+> Task :demo-app:parseDebugLocalResources UP-TO-DATE
+> Task :demo-app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :demo-app:extractDeepLinksDebug UP-TO-DATE
+> Task :ipc-api:extractDeepLinksDebug UP-TO-DATE
+> Task :ipc-api:processDebugManifest UP-TO-DATE
+> Task :ipc-contract:extractDeepLinksDebug UP-TO-DATE
+> Task :ipc-contract:processDebugManifest UP-TO-DATE
+> Task :ipc-runtime-client:extractDeepLinksDebug UP-TO-DATE
+> Task :ipc-runtime-client:processDebugManifest UP-TO-DATE
+> Task :ipc-runtime-server:extractDeepLinksDebug UP-TO-DATE
+> Task :ipc-runtime-server:processDebugManifest UP-TO-DATE
+> Task :demo-app:processDebugMainManifest UP-TO-DATE
+> Task :demo-app:processDebugManifest UP-TO-DATE
+> Task :demo-app:processDebugManifestForPackage UP-TO-DATE
+> Task :ipc-api:compileDebugLibraryResources UP-TO-DATE
+> Task :ipc-api:parseDebugLocalResources UP-TO-DATE
+> Task :ipc-api:generateDebugRFile UP-TO-DATE
+> Task :ipc-contract:compileDebugLibraryResources UP-TO-DATE
+> Task :ipc-contract:parseDebugLocalResources UP-TO-DATE
+> Task :ipc-contract:generateDebugRFile UP-TO-DATE
+> Task :ipc-runtime-client:compileDebugLibraryResources UP-TO-DATE
+> Task :ipc-runtime-client:parseDebugLocalResources UP-TO-DATE
+> Task :ipc-runtime-client:generateDebugRFile UP-TO-DATE
+> Task :ipc-runtime-server:compileDebugLibraryResources UP-TO-DATE
+> Task :ipc-runtime-server:parseDebugLocalResources UP-TO-DATE
+> Task :ipc-runtime-server:generateDebugRFile UP-TO-DATE
+> Task :demo-app:processDebugResources UP-TO-DATE
+> Task :ipc-annotations:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-annotations:compileKotlin UP-TO-DATE
+> Task :ipc-annotations:compileJava NO-SOURCE
+> Task :ipc-annotations:processResources NO-SOURCE
+> Task :ipc-annotations:classes UP-TO-DATE
+> Task :ipc-annotations:jar UP-TO-DATE
+> Task :ipc-api:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-compiler:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-compiler:compileKotlin UP-TO-DATE
+> Task :ipc-compiler:compileJava NO-SOURCE
+> Task :ipc-compiler:processResources UP-TO-DATE
+> Task :ipc-compiler:classes UP-TO-DATE
+> Task :ipc-compiler:jar UP-TO-DATE
+> Task :ipc-contract:compileDebugAidl UP-TO-DATE
+> Task :ipc-contract:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-contract:compileDebugKotlin UP-TO-DATE
+> Task :ipc-contract:javaPreCompileDebug UP-TO-DATE
+> Task :ipc-contract:compileDebugJavaWithJavac UP-TO-DATE
+> Task :ipc-contract:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :ipc-runtime-client:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-runtime-client:compileDebugKotlin UP-TO-DATE
+> Task :ipc-runtime-client:javaPreCompileDebug UP-TO-DATE
+> Task :ipc-runtime-client:compileDebugJavaWithJavac NO-SOURCE
+> Task :ipc-runtime-client:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :ipc-runtime-server:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-runtime-server:compileDebugKotlin UP-TO-DATE
+> Task :ipc-runtime-server:javaPreCompileDebug UP-TO-DATE
+> Task :ipc-runtime-server:compileDebugJavaWithJavac NO-SOURCE
+> Task :ipc-runtime-server:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :ipc-api:kspDebugKotlin UP-TO-DATE
+> Task :ipc-api:compileDebugKotlin UP-TO-DATE
+> Task :ipc-api:javaPreCompileDebug UP-TO-DATE
+> Task :ipc-api:compileDebugJavaWithJavac NO-SOURCE
+> Task :ipc-api:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :demo-app:kspDebugKotlin
+
+> Task :demo-app:compileDebugKotlin
+w: file:///D:/Developer/WorkSpace/ModernIpc/demo-app/src/main/kotlin/com/cn/ipc/demo/IpcLifecycleProbe.kt:61:65 Unnecessary non-null assertion (!!) on a non-null receiver of type Deferred<Result<String>>
+w: file:///D:/Developer/WorkSpace/ModernIpc/demo-app/src/main/kotlin/com/cn/ipc/demo/LegacyPendingCallRegistry.kt:36:9 Parameter 'serviceId' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/demo-app/src/main/kotlin/com/cn/ipc/demo/LegacyPendingCallRegistry.kt:37:9 Parameter 'operationId' is never used
+
+> Task :demo-app:javaPreCompileDebug UP-TO-DATE
+> Task :demo-app:compileDebugJavaWithJavac NO-SOURCE
+> Task :demo-app:mergeDebugShaders UP-TO-DATE
+> Task :demo-app:compileDebugShaders NO-SOURCE
+> Task :demo-app:generateDebugAssets UP-TO-DATE
+> Task :ipc-api:mergeDebugShaders UP-TO-DATE
+> Task :ipc-api:compileDebugShaders NO-SOURCE
+> Task :ipc-api:generateDebugAssets UP-TO-DATE
+> Task :ipc-api:packageDebugAssets UP-TO-DATE
+> Task :ipc-contract:mergeDebugShaders UP-TO-DATE
+> Task :ipc-contract:compileDebugShaders NO-SOURCE
+> Task :ipc-contract:generateDebugAssets UP-TO-DATE
+> Task :ipc-contract:packageDebugAssets UP-TO-DATE
+> Task :ipc-runtime-client:mergeDebugShaders UP-TO-DATE
+> Task :ipc-runtime-client:compileDebugShaders NO-SOURCE
+> Task :ipc-runtime-client:generateDebugAssets UP-TO-DATE
+> Task :ipc-runtime-client:packageDebugAssets UP-TO-DATE
+> Task :ipc-runtime-server:mergeDebugShaders UP-TO-DATE
+> Task :ipc-runtime-server:compileDebugShaders NO-SOURCE
+> Task :ipc-runtime-server:generateDebugAssets UP-TO-DATE
+> Task :ipc-runtime-server:packageDebugAssets UP-TO-DATE
+> Task :demo-app:mergeDebugAssets UP-TO-DATE
+> Task :demo-app:compressDebugAssets UP-TO-DATE
+> Task :demo-app:processDebugJavaRes UP-TO-DATE
+> Task :ipc-api:processDebugJavaRes UP-TO-DATE
+> Task :ipc-contract:processDebugJavaRes UP-TO-DATE
+> Task :ipc-runtime-client:processDebugJavaRes UP-TO-DATE
+> Task :ipc-runtime-server:processDebugJavaRes UP-TO-DATE
+> Task :demo-app:mergeDebugJavaResource UP-TO-DATE
+> Task :demo-app:checkDebugDuplicateClasses UP-TO-DATE
+> Task :demo-app:desugarDebugFileDependencies UP-TO-DATE
+> Task :demo-app:mergeExtDexDebug UP-TO-DATE
+> Task :ipc-api:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :ipc-contract:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :ipc-runtime-client:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :ipc-runtime-server:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :demo-app:mergeLibDexDebug UP-TO-DATE
+> Task :demo-app:dexBuilderDebug
+> Task :demo-app:mergeProjectDexDebug
+> Task :demo-app:mergeDebugJniLibFolders UP-TO-DATE
+> Task :ipc-api:mergeDebugJniLibFolders UP-TO-DATE
+> Task :ipc-api:mergeDebugNativeLibs NO-SOURCE
+> Task :ipc-api:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :ipc-contract:mergeDebugJniLibFolders UP-TO-DATE
+> Task :ipc-contract:mergeDebugNativeLibs NO-SOURCE
+> Task :ipc-contract:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :ipc-runtime-client:mergeDebugJniLibFolders UP-TO-DATE
+> Task :ipc-runtime-client:mergeDebugNativeLibs NO-SOURCE
+> Task :ipc-runtime-client:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :ipc-runtime-server:mergeDebugJniLibFolders UP-TO-DATE
+> Task :ipc-runtime-server:mergeDebugNativeLibs NO-SOURCE
+> Task :ipc-runtime-server:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :demo-app:mergeDebugNativeLibs NO-SOURCE
+> Task :demo-app:stripDebugDebugSymbols NO-SOURCE
+> Task :demo-app:validateSigningDebug UP-TO-DATE
+> Task :demo-app:writeDebugAppMetadata UP-TO-DATE
+> Task :demo-app:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :demo-app:packageDebug
+> Task :demo-app:createDebugApkListingFileRedirect UP-TO-DATE
+> Task :demo-app:assembleDebug
+> Task :benchmark-andlinker:preBuild UP-TO-DATE
+> Task :benchmark-andlinker:preDebugBuild UP-TO-DATE
+> Task :benchmark-andlinker:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :benchmark-andlinker:checkKotlinGradlePluginConfigurationErrors
+> Task :benchmark-andlinker:checkDebugAarMetadata UP-TO-DATE
+> Task :benchmark-andlinker:generateDebugResValues UP-TO-DATE
+> Task :benchmark-andlinker:mapDebugSourceSetPaths UP-TO-DATE
+> Task :benchmark-andlinker:generateDebugResources UP-TO-DATE
+> Task :benchmark-andlinker:mergeDebugResources UP-TO-DATE
+> Task :benchmark-andlinker:packageDebugResources UP-TO-DATE
+> Task :benchmark-andlinker:parseDebugLocalResources UP-TO-DATE
+> Task :benchmark-andlinker:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :benchmark-andlinker:extractDeepLinksDebug UP-TO-DATE
+> Task :benchmark-andlinker:processDebugMainManifest UP-TO-DATE
+> Task :benchmark-andlinker:processDebugManifest UP-TO-DATE
+> Task :benchmark-andlinker:processDebugManifestForPackage UP-TO-DATE
+> Task :benchmark-andlinker:processDebugResources UP-TO-DATE
+> Task :benchmark-andlinker:compileDebugKotlin NO-SOURCE
+> Task :benchmark-andlinker:javaPreCompileDebug UP-TO-DATE
+> Task :benchmark-andlinker:compileDebugJavaWithJavac
+> Task :benchmark-andlinker:mergeDebugShaders UP-TO-DATE
+> Task :benchmark-andlinker:compileDebugShaders NO-SOURCE
+> Task :benchmark-andlinker:generateDebugAssets UP-TO-DATE
+> Task :benchmark-andlinker:mergeDebugAssets UP-TO-DATE
+> Task :benchmark-andlinker:compressDebugAssets UP-TO-DATE
+> Task :benchmark-andlinker:processDebugJavaRes NO-SOURCE
+> Task :benchmark-andlinker:mergeDebugJavaResource UP-TO-DATE
+> Task :benchmark-andlinker:checkDebugDuplicateClasses UP-TO-DATE
+> Task :benchmark-andlinker:desugarDebugFileDependencies UP-TO-DATE
+> Task :benchmark-andlinker:mergeExtDexDebug UP-TO-DATE
+> Task :benchmark-andlinker:mergeLibDexDebug UP-TO-DATE
+> Task :benchmark-andlinker:dexBuilderDebug
+> Task :benchmark-andlinker:mergeProjectDexDebug
+> Task :benchmark-andlinker:mergeDebugJniLibFolders UP-TO-DATE
+> Task :benchmark-andlinker:mergeDebugNativeLibs NO-SOURCE
+> Task :benchmark-andlinker:stripDebugDebugSymbols NO-SOURCE
+> Task :benchmark-andlinker:validateSigningDebug UP-TO-DATE
+> Task :benchmark-andlinker:writeDebugAppMetadata UP-TO-DATE
+> Task :benchmark-andlinker:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :benchmark-andlinker:packageDebug
+> Task :benchmark-andlinker:createDebugApkListingFileRedirect UP-TO-DATE
+> Task :benchmark-andlinker:assembleDebug
+
+BUILD SUCCESSFUL in 33s
+156 actionable tasks: 18 executed, 138 up-to-date

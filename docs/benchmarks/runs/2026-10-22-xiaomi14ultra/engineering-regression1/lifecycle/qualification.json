@@ -1,0 +1,20 @@
+{
+  "valid": false,
+  "ruleVersion": "foreground-coverage-v1",
+  "targetSamplePeriodMs": 500,
+  "permittedMaxGapMs": 1000,
+  "scope": "activity_events_with_bounded_periodic_sample_coverage",
+  "observations": 0,
+  "sampleCount": 0,
+  "requiredSampleCount": null,
+  "durationMs": null,
+  "maxGapMs": null,
+  "observationMaxGapMs": null,
+  "errors": [
+    "Expected exactly one BEGIN followed by exactly one final END",
+    "RuntimeError: Probe failure: FAILED run=lifecycle-engfix-20261022"
+  ],
+  "sourceSha256": "00B18AF6BC92711D8330F9A3D8B188AC8A8DC6AE83CA89520CEC16FD14AD0B38",
+  "run": "lifecycle-engfix-20261022",
+  "csv": "foreground-lifecycle-engfix-20261022.csv"
+}

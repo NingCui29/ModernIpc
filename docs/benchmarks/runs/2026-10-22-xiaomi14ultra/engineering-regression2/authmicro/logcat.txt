@@ -1,0 +1,18 @@
+--------- beginning of main
+10-22 11:18:39.054 22880 22880 I IpcForeground: STATE run=authmicro-engfix2-20261022 event=WAIT_READY elapsedRealtimeMs=15603145 uptimeMs=10593286 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-22 11:18:39.107 22880 22880 I IpcForeground: STATE run=authmicro-engfix2-20261022 event=FOCUS_GAIN elapsedRealtimeMs=15603179 uptimeMs=10593320 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-22 11:18:39.154 22880 22880 I IpcForeground: STATE run=authmicro-engfix2-20261022 event=WAIT_READY elapsedRealtimeMs=15603245 uptimeMs=10593386 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-22 11:18:39.254 22880 22880 I IpcForeground: STATE run=authmicro-engfix2-20261022 event=WAIT_READY elapsedRealtimeMs=15603345 uptimeMs=10593486 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-22 11:18:39.356 22880 22880 I IpcForeground: STATE run=authmicro-engfix2-20261022 event=WAIT_READY elapsedRealtimeMs=15603446 uptimeMs=10593588 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-22 11:18:39.356 22880 22880 I IpcForeground: STATE run=authmicro-engfix2-20261022 event=BEGIN elapsedRealtimeMs=15603447 uptimeMs=10593588 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:39.442 23550 23578 I IpcAuthMicro: TIME batch=0 mode=legacy count=50000 wallNs=57544844 cpuNs=57192285
+10-22 11:18:39.454 23550 23578 I IpcAuthMicro: TIME batch=1 mode=optimized count=50000 wallNs=12504010 cpuNs=12447811
+10-22 11:18:39.464 23550 23578 I IpcAuthMicro: TIME batch=2 mode=optimized count=50000 wallNs=10360886 cpuNs=10329791
+10-22 11:18:39.489 23550 23578 I IpcAuthMicro: TIME batch=3 mode=legacy count=50000 wallNs=24890625 cpuNs=24786718
+10-22 11:18:39.526 23550 23578 I IpcAuthMicro: ALLOC batch=0 mode=legacy count=50000 beforeBytes=13042024 afterBytes=16253288 bytes=3211264 gc=0
+10-22 11:18:39.542 23550 23578 I IpcAuthMicro: ALLOC batch=1 mode=optimized count=50000 beforeBytes=16253288 afterBytes=16253288 bytes=0 gc=0
+10-22 11:18:39.558 23550 23578 I IpcAuthMicro: ALLOC batch=2 mode=optimized count=50000 beforeBytes=16253288 afterBytes=16253288 bytes=0 gc=0
+10-22 11:18:39.597 23550 23578 I IpcAuthMicro: ALLOC batch=3 mode=legacy count=50000 beforeBytes=16253288 afterBytes=19448168 bytes=3194880 gc=0
+10-22 11:18:39.597 23550 23578 I IpcAuthMicro: DONE sameUid=true countPerBatch=50000
+10-22 11:18:39.600 22880 22880 I IpcForeground: STATE run=authmicro-engfix2-20261022 event=END elapsedRealtimeMs=15603691 uptimeMs=10593832 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:39.607 22880 22880 I IpcForeground: END run=authmicro-engfix2-20261022 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-authmicro-engfix2-20261022.csv scope=activity_events_and_500ms_app_samples

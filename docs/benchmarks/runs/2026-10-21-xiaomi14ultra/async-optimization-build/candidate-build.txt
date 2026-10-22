@@ -1,0 +1,124 @@
+Configuration on demand is an incubating feature.
+> Task :build-logic:checkKotlinGradlePluginConfigurationErrors
+> Task :build-logic:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:compileKotlin UP-TO-DATE
+> Task :build-logic:compileJava NO-SOURCE
+> Task :build-logic:pluginDescriptors UP-TO-DATE
+> Task :build-logic:processResources UP-TO-DATE
+> Task :build-logic:classes UP-TO-DATE
+> Task :build-logic:jar UP-TO-DATE
+
+> Configure project :demo-app
+WARNING: The option 'android.enableBuildCache' is deprecated.
+The current default is 'false'.
+It was removed in version 7.0 of the Android Gradle plugin.
+The Android-specific build caches were superseded by the Gradle build cache (https://docs.gradle.org/current/userguide/build_cache.html).
+
+> Task :demo-app:preBuild UP-TO-DATE
+> Task :demo-app:preDebugBuild UP-TO-DATE
+> Task :demo-app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :demo-app:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-api:preBuild UP-TO-DATE
+> Task :ipc-api:preDebugBuild UP-TO-DATE
+> Task :ipc-api:writeDebugAarMetadata UP-TO-DATE
+> Task :ipc-contract:preBuild UP-TO-DATE
+> Task :ipc-contract:preDebugBuild UP-TO-DATE
+> Task :ipc-contract:writeDebugAarMetadata UP-TO-DATE
+> Task :ipc-runtime-client:preBuild UP-TO-DATE
+> Task :ipc-runtime-server:preBuild UP-TO-DATE
+> Task :ipc-runtime-client:preDebugBuild UP-TO-DATE
+> Task :ipc-runtime-server:preDebugBuild UP-TO-DATE
+> Task :ipc-runtime-client:writeDebugAarMetadata UP-TO-DATE
+> Task :ipc-runtime-server:writeDebugAarMetadata UP-TO-DATE
+> Task :ipc-api:generateDebugResValues UP-TO-DATE
+> Task :ipc-api:generateDebugResources UP-TO-DATE
+> Task :demo-app:checkDebugAarMetadata UP-TO-DATE
+> Task :ipc-api:packageDebugResources UP-TO-DATE
+> Task :demo-app:generateDebugResValues UP-TO-DATE
+> Task :ipc-contract:generateDebugResValues UP-TO-DATE
+> Task :ipc-contract:generateDebugResources UP-TO-DATE
+> Task :ipc-runtime-client:generateDebugResValues UP-TO-DATE
+> Task :ipc-runtime-client:generateDebugResources UP-TO-DATE
+> Task :ipc-runtime-client:packageDebugResources UP-TO-DATE
+> Task :ipc-contract:packageDebugResources UP-TO-DATE
+> Task :demo-app:generateDebugResources UP-TO-DATE
+> Task :ipc-runtime-server:generateDebugResValues UP-TO-DATE
+> Task :ipc-runtime-server:generateDebugResources UP-TO-DATE
+> Task :demo-app:packageDebugResources UP-TO-DATE
+> Task :ipc-runtime-server:packageDebugResources UP-TO-DATE
+> Task :ipc-api:extractDeepLinksDebug UP-TO-DATE
+> Task :demo-app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :ipc-api:processDebugManifest UP-TO-DATE
+> Task :ipc-contract:extractDeepLinksDebug UP-TO-DATE
+> Task :ipc-contract:processDebugManifest UP-TO-DATE
+> Task :ipc-runtime-client:extractDeepLinksDebug UP-TO-DATE
+> Task :ipc-runtime-client:processDebugManifest UP-TO-DATE
+> Task :ipc-runtime-server:extractDeepLinksDebug UP-TO-DATE
+> Task :ipc-runtime-server:processDebugManifest UP-TO-DATE
+> Task :ipc-api:compileDebugLibraryResources UP-TO-DATE
+> Task :ipc-api:parseDebugLocalResources UP-TO-DATE
+> Task :ipc-api:generateDebugRFile UP-TO-DATE
+> Task :ipc-contract:compileDebugLibraryResources UP-TO-DATE
+> Task :ipc-contract:parseDebugLocalResources UP-TO-DATE
+> Task :ipc-contract:generateDebugRFile UP-TO-DATE
+> Task :ipc-runtime-client:compileDebugLibraryResources UP-TO-DATE
+> Task :ipc-runtime-client:parseDebugLocalResources UP-TO-DATE
+> Task :ipc-runtime-client:generateDebugRFile UP-TO-DATE
+> Task :ipc-runtime-server:compileDebugLibraryResources UP-TO-DATE
+> Task :ipc-runtime-server:parseDebugLocalResources UP-TO-DATE
+> Task :demo-app:mergeDebugResources UP-TO-DATE
+> Task :ipc-runtime-server:generateDebugRFile UP-TO-DATE
+> Task :ipc-annotations:checkKotlinGradlePluginConfigurationErrors
+> Task :demo-app:parseDebugLocalResources UP-TO-DATE
+> Task :demo-app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :demo-app:extractDeepLinksDebug UP-TO-DATE
+> Task :demo-app:processDebugMainManifest UP-TO-DATE
+> Task :demo-app:processDebugManifest UP-TO-DATE
+> Task :demo-app:processDebugManifestForPackage UP-TO-DATE
+> Task :ipc-annotations:compileKotlin UP-TO-DATE
+> Task :ipc-annotations:compileJava NO-SOURCE
+> Task :ipc-annotations:processResources NO-SOURCE
+> Task :ipc-annotations:classes UP-TO-DATE
+> Task :ipc-annotations:jar UP-TO-DATE
+> Task :ipc-api:checkKotlinGradlePluginConfigurationErrors
+> Task :demo-app:processDebugResources UP-TO-DATE
+> Task :ipc-compiler:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-contract:compileDebugAidl UP-TO-DATE
+> Task :ipc-contract:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-contract:compileDebugKotlin UP-TO-DATE
+> Task :ipc-contract:javaPreCompileDebug UP-TO-DATE
+> Task :ipc-contract:compileDebugJavaWithJavac UP-TO-DATE
+> Task :ipc-contract:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :ipc-runtime-client:checkKotlinGradlePluginConfigurationErrors
+
+> Task :ipc-runtime-client:compileDebugKotlin FAILED
+Failed to restore task outputs as snapshot file D:\Developer\WorkSpace\ModernIpc\ipc-runtime-client\build\snapshot\kotlin\compileDebugKotlin\0.zip does not exist!
+On recompilation full rebuild will be performed.
+e: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/PendingCallRegistry.kt:16:9 Class 'PendingCall' is not abstract and does not implement abstract base class member public abstract fun toByte(): Byte defined in java.util.concurrent.atomic.AtomicInteger
+
+> Task :ipc-compiler:compileKotlin
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/ClientAdapterGenerator.kt:90:35 Variable 'transactionCode' initializer is redundant
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/ClientAdapterGenerator.kt:141:39 Unnecessary non-null assertion (!!) on a non-null receiver of type KSType
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/ClientAdapterGenerator.kt:211:114 Unnecessary safe call on a non-null receiver of type KSType?
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/IpcSymbolProcessor.kt:115:124 Unnecessary safe call on a non-null receiver of type KSType?
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/ServerStubGenerator.kt:170:35 Variable 'transactionCode' initializer is redundant
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':ipc-runtime-client:compileDebugKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 19s
+69 actionable tasks: 9 executed, 60 up-to-date

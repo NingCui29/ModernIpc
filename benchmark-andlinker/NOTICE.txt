@@ -1,0 +1,5 @@
+This benchmark contains AndLinker by codezjx, Copyright 2018 codezjx, licensed under Apache License 2.0.
+Upstream: https://github.com/codezjx/AndLinker
+Commit: 7ae01bfd87ddcf021319148a8727a95345cf350e
+Core Java and non-Rx adapters are vendored without modifications. RxJava adapters and the original sample application are excluded.
+The benchmark shell is maintained by ModernIpc. Logging is disabled using the public AndLinker.enableLogger(false) API; no library logging patch is applied.

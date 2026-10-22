@@ -1,0 +1,75 @@
+{
+  "group": "handshake",
+  "tag": "IpcHandshakeProbe",
+  "expectedPasses": 9,
+  "runId": "handshake-engfix2-20261022",
+  "status": "PASSED",
+  "valid": true,
+  "passCount": 9,
+  "doneCount": 1,
+  "foregroundEndCount": 1,
+  "complete": true,
+  "errors": [],
+  "passes": [
+    "PASS run=handshake-engfix2-20261022 rawKeepBinding remoteProcess=true handshakeAttempts=0 serverPid=23172",
+    "PASS run=handshake-engfix2-20261022 closeBlockedHandshake elapsedMs=2 remoteStillBlockedBeforeRelease=true lateReplyNoRevive=true generation=0 pending=0",
+    "PASS run=handshake-engfix2-20261022 disposeBlockedHandshake elapsedMs=2 remoteStillBlockedBeforeRelease=true lateReplyNoRevive=true generation=0 pending=0",
+    "PASS run=handshake-engfix2-20261022 bindingTimeoutRetry bindingTimeoutMs=600 elapsedMs=607 maxReconnectAttempts=0 disconnectedBeforeRelease=true lateReplyNoRevive=true explicitRetry=true attempts=2 pending=0",
+    "PASS run=handshake-engfix2-20261022 boundedReconnect bindingTimeoutMs=600 maxReconnectAttempts=1 attempts=2 finalDisconnected=true lateRepliesNoRevive=true pending=0",
+    "PASS run=handshake-engfix2-20261022 lateHandshakeIsolation freshConnectedBeforeOldRelease=true attempts=2 oldReplyDidNotReplaceConnected=true generation=1 pending=0",
+    "PASS run=handshake-engfix2-20261022 ownerCancelBlockedHandshake elapsedMs=4 autoDisposedBeforeExplicitJoin=true remoteStillBlockedBeforeRelease=true lateReplyNoRevive=true pending=0",
+    "PASS run=handshake-engfix2-20261022 boundedHandshakePool workerLimit=4 fifthDisconnected=true elapsedMs=2 bindingTimeoutMs=5000 serverAttempts=4 peakBlocked=4 pending=0",
+    "PASS run=handshake-engfix2-20261022 handshakeCapacityRecovered releaseRecovered=true connectedControllers=5 serverAttempts=5 replies=5 pending=0 watchdogs=0"
+  ],
+  "done": [
+    "DONE run=handshake-engfix2-20261022 passed=true checks=9 pending=0 blocked=0 watchdogs=0"
+  ],
+  "foregroundEnd": [
+    "END run=handshake-engfix2-20261022 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-handshake-engfix2-20261022.csv scope=activity_events_and_500ms_app_samples"
+  ],
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 10,
+    "sampleCount": 8,
+    "requiredSampleCount": 4,
+    "durationMs": 4055,
+    "maxGapMs": 504,
+    "observationMaxGapMs": 504,
+    "errors": [],
+    "sourceSha256": "8488FFFA5A78953F2C92B1A12A7693C096C84EFC84E919AFF4023823BAB166DC",
+    "run": "handshake-engfix2-20261022",
+    "csv": "foreground-handshake-engfix2-20261022.csv"
+  },
+  "observed": {
+    "runId": "handshake-engfix2-20261022",
+    "tag": "IpcHandshakeProbe",
+    "passCount": 9,
+    "doneCount": 1,
+    "foregroundEndCount": 1,
+    "expectedPasses": 9,
+    "complete": true,
+    "valid": true,
+    "errors": [],
+    "passes": [
+      "PASS run=handshake-engfix2-20261022 rawKeepBinding remoteProcess=true handshakeAttempts=0 serverPid=23172",
+      "PASS run=handshake-engfix2-20261022 closeBlockedHandshake elapsedMs=2 remoteStillBlockedBeforeRelease=true lateReplyNoRevive=true generation=0 pending=0",
+      "PASS run=handshake-engfix2-20261022 disposeBlockedHandshake elapsedMs=2 remoteStillBlockedBeforeRelease=true lateReplyNoRevive=true generation=0 pending=0",
+      "PASS run=handshake-engfix2-20261022 bindingTimeoutRetry bindingTimeoutMs=600 elapsedMs=607 maxReconnectAttempts=0 disconnectedBeforeRelease=true lateReplyNoRevive=true explicitRetry=true attempts=2 pending=0",
+      "PASS run=handshake-engfix2-20261022 boundedReconnect bindingTimeoutMs=600 maxReconnectAttempts=1 attempts=2 finalDisconnected=true lateRepliesNoRevive=true pending=0",
+      "PASS run=handshake-engfix2-20261022 lateHandshakeIsolation freshConnectedBeforeOldRelease=true attempts=2 oldReplyDidNotReplaceConnected=true generation=1 pending=0",
+      "PASS run=handshake-engfix2-20261022 ownerCancelBlockedHandshake elapsedMs=4 autoDisposedBeforeExplicitJoin=true remoteStillBlockedBeforeRelease=true lateReplyNoRevive=true pending=0",
+      "PASS run=handshake-engfix2-20261022 boundedHandshakePool workerLimit=4 fifthDisconnected=true elapsedMs=2 bindingTimeoutMs=5000 serverAttempts=4 peakBlocked=4 pending=0",
+      "PASS run=handshake-engfix2-20261022 handshakeCapacityRecovered releaseRecovered=true connectedControllers=5 serverAttempts=5 replies=5 pending=0 watchdogs=0"
+    ],
+    "done": [
+      "DONE run=handshake-engfix2-20261022 passed=true checks=9 pending=0 blocked=0 watchdogs=0"
+    ],
+    "foregroundEnd": [
+      "END run=handshake-engfix2-20261022 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-handshake-engfix2-20261022.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}

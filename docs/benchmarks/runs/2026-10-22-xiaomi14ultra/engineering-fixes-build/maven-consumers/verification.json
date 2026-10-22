@@ -1,0 +1,206 @@
+{
+  "version": "3.0.0-consumer-check-20261022022757175411",
+  "repository": "D:\\Developer\\WorkSpace\\ModernIpc\\.gradle\\maven-consumer\\3.0.0-consumer-check-20261022022757175411\\repository",
+  "deviceValidation": "NOT_RUN",
+  "status": "PASSED",
+  "steps": [
+    {
+      "name": "publish-sdk",
+      "exitCode": 0,
+      "log": "D:\\Developer\\WorkSpace\\ModernIpc\\.gradle\\maven-consumer\\3.0.0-consumer-check-20261022022757175411\\publish-sdk.txt"
+    },
+    {
+      "name": "metadata-api-and-contract",
+      "exitCode": 0,
+      "log": "D:\\Developer\\WorkSpace\\ModernIpc\\.gradle\\maven-consumer\\3.0.0-consumer-check-20261022022757175411\\metadata-api-and-contract.txt"
+    },
+    {
+      "name": "metadata-contract-consumer",
+      "exitCode": 0,
+      "log": "D:\\Developer\\WorkSpace\\ModernIpc\\.gradle\\maven-consumer\\3.0.0-consumer-check-20261022022757175411\\metadata-contract-consumer.txt"
+    },
+    {
+      "name": "pom-api-and-contract",
+      "exitCode": 0,
+      "log": "D:\\Developer\\WorkSpace\\ModernIpc\\.gradle\\maven-consumer\\3.0.0-consumer-check-20261022022757175411\\pom-api-and-contract.txt"
+    },
+    {
+      "name": "pom-contract-consumer",
+      "exitCode": 0,
+      "log": "D:\\Developer\\WorkSpace\\ModernIpc\\.gradle\\maven-consumer\\3.0.0-consumer-check-20261022022757175411\\pom-contract-consumer.txt"
+    }
+  ],
+  "metadata": [
+    {
+      "module": "ipc-annotations",
+      "pomCompileExports": [],
+      "apiVariants": [
+        "apiElements"
+      ]
+    },
+    {
+      "module": "ipc-compiler",
+      "pomCompileExports": [],
+      "apiVariants": [
+        "apiElements"
+      ]
+    },
+    {
+      "module": "ipc-contract",
+      "pomCompileExports": [
+        "org.jetbrains.kotlin:kotlin-stdlib"
+      ],
+      "apiVariants": [
+        "releaseVariantReleaseApiPublication"
+      ]
+    },
+    {
+      "module": "ipc-runtime-client",
+      "pomCompileExports": [
+        "com.modernipc:ipc-contract",
+        "org.jetbrains.kotlin:kotlin-stdlib",
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core"
+      ],
+      "apiVariants": [
+        "releaseVariantReleaseApiPublication"
+      ]
+    },
+    {
+      "module": "ipc-runtime-server",
+      "pomCompileExports": [
+        "com.modernipc:ipc-contract",
+        "org.jetbrains.kotlin:kotlin-stdlib",
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core"
+      ],
+      "apiVariants": [
+        "releaseVariantReleaseApiPublication"
+      ]
+    },
+    {
+      "module": "ipc-api",
+      "pomCompileExports": [
+        "com.modernipc:ipc-annotations",
+        "com.modernipc:ipc-contract",
+        "com.modernipc:ipc-runtime-client",
+        "com.modernipc:ipc-runtime-server",
+        "org.jetbrains.kotlin:kotlin-stdlib",
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core"
+      ],
+      "apiVariants": [
+        "releaseVariantReleaseApiPublication"
+      ]
+    }
+  ],
+  "consumers": {
+    "metadata": {
+      "apiOnly": {
+        "directDependencies": [
+          "com.modernipc:ipc-api:3.0.0-consumer-check-20261022022757175411"
+        ],
+        "resolvedCompileModules": [
+          "com.modernipc:ipc-annotations:3.0.0-consumer-check-20261022022757175411",
+          "com.modernipc:ipc-api:3.0.0-consumer-check-20261022022757175411",
+          "com.modernipc:ipc-contract:3.0.0-consumer-check-20261022022757175411",
+          "com.modernipc:ipc-runtime-client:3.0.0-consumer-check-20261022022757175411",
+          "com.modernipc:ipc-runtime-server:3.0.0-consumer-check-20261022022757175411",
+          "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20",
+          "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20",
+          "org.jetbrains.kotlin:kotlin-stdlib:1.9.22",
+          "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.3",
+          "org.jetbrains:annotations:23.0.0"
+        ]
+      },
+      "contractOnly": {
+        "directDependencies": [
+          "com.modernipc.consumer.fixture:custom-contract:3.0.0-consumer-check-20261022022757175411"
+        ],
+        "resolvedCompileModules": [
+          "com.modernipc.consumer.fixture:custom-contract:3.0.0-consumer-check-20261022022757175411",
+          "com.modernipc:ipc-annotations:3.0.0-consumer-check-20261022022757175411",
+          "com.modernipc:ipc-api:3.0.0-consumer-check-20261022022757175411",
+          "com.modernipc:ipc-contract:3.0.0-consumer-check-20261022022757175411",
+          "com.modernipc:ipc-runtime-client:3.0.0-consumer-check-20261022022757175411",
+          "com.modernipc:ipc-runtime-server:3.0.0-consumer-check-20261022022757175411",
+          "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20",
+          "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20",
+          "org.jetbrains.kotlin:kotlin-stdlib:1.9.22",
+          "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.3",
+          "org.jetbrains:annotations:23.0.0"
+        ]
+      },
+      "asyncAndFlowKsp": "PASSED"
+    },
+    "pom": {
+      "apiOnly": {
+        "directDependencies": [
+          "com.modernipc:ipc-api:3.0.0-consumer-check-20261022022757175411"
+        ],
+        "resolvedCompileModules": [
+          "com.modernipc:ipc-annotations:3.0.0-consumer-check-20261022022757175411",
+          "com.modernipc:ipc-api:3.0.0-consumer-check-20261022022757175411",
+          "com.modernipc:ipc-contract:3.0.0-consumer-check-20261022022757175411",
+          "com.modernipc:ipc-runtime-client:3.0.0-consumer-check-20261022022757175411",
+          "com.modernipc:ipc-runtime-server:3.0.0-consumer-check-20261022022757175411",
+          "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20",
+          "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20",
+          "org.jetbrains.kotlin:kotlin-stdlib:1.9.22",
+          "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.3",
+          "org.jetbrains:annotations:23.0.0"
+        ]
+      },
+      "contractOnly": {
+        "directDependencies": [
+          "com.modernipc.consumer.fixture:custom-contract:3.0.0-consumer-check-20261022022757175411"
+        ],
+        "resolvedCompileModules": [
+          "com.modernipc.consumer.fixture:custom-contract:3.0.0-consumer-check-20261022022757175411",
+          "com.modernipc:ipc-annotations:3.0.0-consumer-check-20261022022757175411",
+          "com.modernipc:ipc-api:3.0.0-consumer-check-20261022022757175411",
+          "com.modernipc:ipc-contract:3.0.0-consumer-check-20261022022757175411",
+          "com.modernipc:ipc-runtime-client:3.0.0-consumer-check-20261022022757175411",
+          "com.modernipc:ipc-runtime-server:3.0.0-consumer-check-20261022022757175411",
+          "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20",
+          "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20",
+          "org.jetbrains.kotlin:kotlin-stdlib:1.9.22",
+          "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.3",
+          "org.jetbrains:annotations:23.0.0"
+        ]
+      },
+      "asyncAndFlowKsp": "PASSED"
+    }
+  },
+  "existingReleaseNegativeControl": {
+    "version": "3.0.0-rc.1",
+    "readOnly": true,
+    "status": "REJECTED",
+    "reason": "Public dependencies missing from ipc-api POM compile scope: {('com.modernipc', 'ipc-runtime-client'), ('org.jetbrains.kotlinx', 'kotlinx-coroutines-core'), ('com.modernipc', 'ipc-contract'), ('com.modernipc', 'ipc-runtime-server'), ('com.modernipc', 'ipc-annotations')}"
+  },
+  "wrapperInvocationStaticCheck": {
+    "status": "PASSED",
+    "commands": {
+      "nt": [
+        "gradlew.bat"
+      ],
+      "posix": [
+        "bash",
+        "gradlew"
+      ]
+    },
+    "linuxExecution": "NOT_RUN"
+  },
+  "rootHostCheck": {
+    "status": "PASSED",
+    "pendingRegistryCases": 12,
+    "requestTrackerCases": 15,
+    "exitCode": 0,
+    "log": ".gradle\\maven-consumer\\3.0.0-consumer-check-20261022022757175411\\host-check-retry.txt",
+    "firstAttempt": {
+      "status": "FAILED",
+      "exitCode": 1,
+      "cause": "PowerShell split unquoted Gradle property into a task name; retry quoted the property",
+      "log": ".gradle\\maven-consumer\\3.0.0-consumer-check-20261022022757175411\\host-check.txt"
+    },
+    "deviceValidation": "NOT_RUN",
+    "binderValidation": "NOT_RUN"
+  }
+}
