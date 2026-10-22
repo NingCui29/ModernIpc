@@ -1,0 +1,9 @@
+--------- beginning of main
+10-22 09:01:14.203 20618 25702 I IpcEchoBench: PASS run=asynccompare-opt2-l3-r1 libraryLoggerDisabled=true upstreamUnmodified=true callbackExecutor=main
+10-22 09:01:14.608 20618 25702 I IpcEchoBench: RESULT mode=async run=asynccompare-opt2-l3-r1 size=16 count=1000 warmup=50 failures=0 blockNs=369594739 meanMs=0.36907031199999996 p50Ms=0.356563 p90Ms=0.448438 p99Ms=0.557344 file=andlinker-async-asynccompare-opt2-l3-r1-16.csv
+10-22 09:01:14.911 20618 25702 I IpcEchoBench: RESULT mode=sync run=asynccompare-opt2-l3-r1 size=16 count=1000 warmup=50 failures=0 blockNs=284445468 meanMs=0.283786039 p50Ms=0.27026 p90Ms=0.33927 p99Ms=0.5 file=andlinker-asynccompare-opt2-l3-r1-16.csv
+10-22 09:01:15.360 20618 25702 I IpcEchoBench: RESULT mode=async run=asynccompare-opt2-l3-r1 size=1024 count=1000 warmup=50 failures=0 blockNs=427461458 meanMs=0.426977289 p50Ms=0.417031 p90Ms=0.47375 p99Ms=0.561042 file=andlinker-async-asynccompare-opt2-l3-r1-1024.csv
+10-22 09:01:15.479 20618 25702 I IpcEchoBench: RESULT mode=sync run=asynccompare-opt2-l3-r1 size=1024 count=1000 warmup=50 failures=0 blockNs=103693698 meanMs=0.103437869 p50Ms=0.088542 p90Ms=0.104844 p99Ms=0.378281 file=andlinker-asynccompare-opt2-l3-r1-1024.csv
+10-22 09:01:15.479 20618 25702 I IpcEchoBench: PASS run=asynccompare-opt2-l3-r1 uniqueCallbacks=2100 duplicateCallbacks=0
+10-22 09:01:15.479 20618 25702 I IpcEchoBench: DONE run=asynccompare-opt2-l3-r1 passed=true count=4000
+10-22 09:01:15.481 20618 20618 I IpcForeground: END run=asynccompare-opt2-l3-r1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-asynccompare-opt2-l3-r1.csv scope=activity_events_and_500ms_app_samples

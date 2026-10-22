@@ -14,7 +14,9 @@ afterEvaluate {
         repositories {
             maven {
                 name = "ProjectLocal"
-                url = uri("${project.rootProject.projectDir}/local-maven")
+                // Consumer verification publishes a fresh version into an isolated repository.
+                url = uri(providers.gradleProperty("projectLocalRepository")
+                    .orElse("${project.rootProject.projectDir}/local-maven").get())
             }
             
             // 新增 GitHub Packages 远程仓库配置

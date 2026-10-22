@@ -1,0 +1,1563 @@
+POWER MANAGER (dumpsys power)
+
+Power Manager State:
+  Settings power_manager_constants:
+    no_cached_wake_locks=true
+  mDirty=0x0
+  mWakefulness=Awake
+  mWakefulnessChanging=false
+  mIsPowered=true
+  mPlugType=2
+  mBatteryLevel=57
+  mDreamsBatteryLevelDrain=0
+  mDockState=0
+  mStayOn=false
+  mProximityPositive=false
+  mBootCompleted=true
+  mSystemReady=true
+  mEnhancedDischargeTimeElapsed=0
+  mLastEnhancedDischargeTimeUpdatedElapsed=0
+  mEnhancedDischargePredictionIsPersonalized=false
+  mUseAutoSuspend=true
+  mHalAutoSuspendModeEnabled=false
+  mHalInteractiveModeEnabled=true
+  mWakeLockSummary=0x0
+  mNotifyLongScheduled=+6s618ms
+  mNotifyLongDispatched=-54s782ms
+  mNotifyLongNextCheck=(none)
+  mRequestWaitForNegativeProximity=false
+  mInterceptedPowerKeyForProximity=false
+  mSandmanScheduled=false
+  mBatteryLevelLow=false
+  mLightDeviceIdleMode=false
+  mDeviceIdleMode=false
+  mDeviceIdleWhitelist=[1000, 1001, 2000, 6101, 6102, 10085, 10086, 10089, 10127, 10128, 10129, 10137, 10140, 10142, 10143, 10157, 10163, 10164, 10165, 10166, 10167, 10170, 10177, 10180, 10185, 10187, 10190, 10203, 10204, 10205, 10216, 10219, 10231, 10237, 10238, 10252, 10259, 10260, 10261, 10264, 10269, 10270, 10272, 10274, 10275, 10276, 10279, 10312, 10359, 10374, 10385, 10464]
+  mDeviceIdleTempWhitelist=[1000]
+  mLowPowerStandbyActive=false
+  mLastWakeTime=7368717 (1404177 ms ago)
+  mLastSleepTime=7352118 (1420776 ms ago)
+  mLastSleepReason=timeout
+  mLastGlobalWakeTimeRealtime=56946525 (in 48173631 ms)
+  mLastGlobalSleepTimeRealtime=56889768 (in 48116874 ms)
+  mLastInteractivePowerHintTime=8771514 (1380 ms ago)
+  mLastScreenBrightnessBoostTime=0 (8772894 ms ago)
+  mScreenBrightnessBoostInProgress=false
+  mHoldingWakeLockSuspendBlocker=false
+  mHoldingDisplaySuspendBlocker=true
+  mLastFlipTime=0
+  mIsFaceDown=false
+
+Settings and Configuration:
+  mDecoupleHalAutoSuspendModeFromDisplayConfig=true
+  mDecoupleHalInteractiveModeFromDisplayConfig=false
+  mWakeUpWhenPluggedOrUnpluggedConfig=true
+  mWakeUpWhenPluggedOrUnpluggedInTheaterModeConfig=false
+  mTheaterModeEnabled=false
+  mKeepDreamingWhenUnplugging=false
+  mSuspendWhenScreenOffDueToProximityConfig=false
+  mDreamsSupportedConfig=false
+  mDreamsEnabledByDefaultConfig=true
+  mDreamsActivatedOnSleepByDefaultConfig=false
+  mDreamsActivatedOnDockByDefaultConfig=true
+  mDreamsActivatedWhilePosturedByDefaultConfig=false
+  mDreamsEnabledOnBatteryConfig=false
+  mDreamsBatteryLevelMinimumWhenPoweredConfig=-1
+  mDreamsBatteryLevelMinimumWhenNotPoweredConfig=15
+  mDreamsBatteryLevelDrainCutoffConfig=5
+  mDreamsEnabledSetting=true
+  mDreamsActivateOnSleepSetting=false
+  mDreamsActivateOnDockSetting=true
+  mDreamsActivateWhilePosturedSetting=false
+  mDozeAfterScreenOff=true
+  mBrightWhenDozingConfig=false
+  mMinimumScreenOffTimeoutConfig=6000
+  mMaximumScreenDimDurationConfig=18000
+  mMaximumScreenDimRatioConfig=0.29999995
+  mAttentiveTimeoutConfig=-1
+  mAttentiveTimeoutSetting=-1
+  mAttentiveWarningDurationConfig=30000
+  mScreenOffTimeoutSetting=600000
+  mSleepTimeoutSetting=-1
+  mMaximumScreenOffTimeoutFromDeviceAdmin=9223372036854775807 (enforced=false)
+  mStayOnWhilePluggedInSetting=0
+  mUserActivityTimeoutOverrideFromWindowManager=-1
+  mUserInactiveOverrideFromWindowManager=false
+  mDozeScreenStateOverrideFromDreamManager=1
+  mDrawWakeLockOverrideFromSidekick=false
+  mDozeScreenBrightnessOverrideFromDreamManager=-1
+  mUseNormalBrightnessForDoze=false
+  mScreenBrightnessMinimum=8.54597E-4
+  mScreenBrightnessMaximum=1.0
+  mScreenBrightnessDefault=0.07496032
+  mDoubleTapWakeEnabled=false
+  mForegroundProfile=0
+  mUserId=0
+
+Attentive timeout: -1 ms
+Sleep timeout: -1 ms
+Screen off timeout: 600000 ms
+Screen dim duration: 18000 ms
+mScreenProjectionEnabled: false
+mHangUpEnabled: false
+mSynergyModeEnable: false
+mIsKeyguardHasShownWhenExitHangup: true
+mSituatedDimmingDueToSynergy: false
+mLastRequestDimmingTime: 0
+mPendingSetDirtyDueToRequestDimming: false
+mUserActivityTimeoutOverrideFromMirrorManager: -1
+mSituatedDimmingDueToAttention: false
+mTouchInteractiveUnavailable: false
+mIsPowerSuperSaveModeEnabled: false
+mIsPowerSaveModeEnabled: false
+mAlwaysOnEnabled: false
+mIsFullAod: false
+mIsSubFullAod: false
+mBeingHangUp: false
+mDisableRotationDueToHangUp: false
+
+mIsFreeFormOrSplitWindowMode: false
+
+UID states (changing=false changed=false):
+  UID 1000:   ACTIVE  count=1 state=0
+  UID 1001:   ACTIVE  count=0 state=0
+  UID 1002:   ACTIVE  count=0 state=0
+  UID 1027:   ACTIVE  count=0 state=0
+  UID 1068:   ACTIVE  count=0 state=0
+  UID 1073:   ACTIVE  count=0 state=0
+  UID 6101: INACTIVE  count=0 state=19
+  UID 6102: INACTIVE  count=0 state=10
+  UID 6110: INACTIVE  count=0 state=19
+  UID u0a23: INACTIVE  count=0 state=19
+  UID u0a81:   ACTIVE  count=0 state=0
+  UID u0a83: INACTIVE  count=0 state=19
+  UID u0a85: INACTIVE  count=0 state=19
+  UID u0a88: INACTIVE  count=0 state=19
+  UID u0a89: INACTIVE  count=0 state=19
+  UID u0a93: INACTIVE  count=0 state=19
+  UID u0a96:   ACTIVE  count=0 state=15
+  UID u0a99: INACTIVE  count=0 state=19
+  UID u0a101: INACTIVE  count=0 state=19
+  UID u0a113:   ACTIVE  count=0 state=0
+  UID u0a118:   ACTIVE  count=0 state=0
+  UID u0a119: INACTIVE  count=0 state=19
+  UID u0a122: INACTIVE  count=0 state=19
+  UID u0a123: INACTIVE  count=0 state=8
+  UID u0a124: INACTIVE  count=0 state=19
+  UID u0a125: INACTIVE  count=1 state=19
+  UID u0a127:   ACTIVE  count=0 state=4
+  UID u0a128: INACTIVE  count=0 state=19
+  UID u0a129:   ACTIVE  count=0 state=3
+  UID u0a130: INACTIVE  count=0 state=19
+  UID u0a133: INACTIVE  count=0 state=19
+  UID u0a134:   ACTIVE  count=0 state=5
+  UID u0a135:   ACTIVE  count=0 state=5
+  UID u0a136: INACTIVE  count=0 state=19
+  UID u0a139: INACTIVE  count=0 state=19
+  UID u0a140: INACTIVE  count=0 state=19
+  UID u0a142:   ACTIVE  count=0 state=5
+  UID u0a143:   ACTIVE  count=0 state=4
+  UID u0a150:   ACTIVE  count=0 state=0
+  UID u0a151: INACTIVE  count=0 state=19
+  UID u0a155: INACTIVE  count=0 state=19
+  UID u0a156: INACTIVE  count=0 state=19
+  UID u0a157:   ACTIVE  count=0 state=19
+  UID u0a162:   ACTIVE  count=0 state=5
+  UID u0a163: INACTIVE  count=0 state=19
+  UID u0a164: INACTIVE  count=0 state=19
+  UID u0a165: INACTIVE  count=0 state=8
+  UID u0a166: INACTIVE  count=0 state=19
+  UID u0a167: INACTIVE  count=0 state=8
+  UID u0a168: INACTIVE  count=0 state=19
+  UID u0a169: INACTIVE  count=0 state=19
+  UID u0a170:   ACTIVE  count=0 state=4
+  UID u0a175: INACTIVE  count=0 state=19
+  UID u0a176:   ACTIVE  count=0 state=0
+  UID u0a177:   ACTIVE  count=0 state=5
+  UID u0a180: INACTIVE  count=0 state=19
+  UID u0a181:   ACTIVE  count=0 state=4
+  UID u0a182:   ACTIVE  count=0 state=5
+  UID u0a183:   ACTIVE  count=0 state=0
+  UID u0a184: INACTIVE  count=0 state=19
+  UID u0a185:   ACTIVE  count=0 state=5
+  UID u0a187:   ACTIVE  count=0 state=6
+  UID u0a189: INACTIVE  count=0 state=19
+  UID u0a190: INACTIVE  count=0 state=19
+  UID u0a203: INACTIVE  count=0 state=8
+  UID u0a216:   ACTIVE  count=0 state=0
+  UID u0a217:   ACTIVE  count=0 state=0
+  UID u0a219:   ACTIVE  count=0 state=0
+  UID u0a222: INACTIVE  count=0 state=19
+  UID u0a224:   ACTIVE  count=0 state=0
+  UID u0a226: INACTIVE  count=0 state=19
+  UID u0a229:   ACTIVE  count=0 state=6
+  UID u0a231: INACTIVE  count=0 state=10
+  UID u0a235: INACTIVE  count=0 state=19
+  UID u0a237: INACTIVE  count=0 state=19
+  UID u0a246:   ACTIVE  count=0 state=0
+  UID u0a249: INACTIVE  count=0 state=19
+  UID u0a250:   ACTIVE  count=0 state=3
+  UID u0a252: INACTIVE  count=0 state=19
+  UID u0a253: INACTIVE  count=0 state=19
+  UID u0a259: INACTIVE  count=0 state=19
+  UID u0a260: INACTIVE  count=0 state=19
+  UID u0a264: INACTIVE  count=0 state=19
+  UID u0a267: INACTIVE  count=0 state=19
+  UID u0a270: INACTIVE  count=0 state=19
+  UID u0a271: INACTIVE  count=0 state=19
+  UID u0a272: INACTIVE  count=0 state=19
+  UID u0a275: INACTIVE  count=0 state=10
+  UID u0a303:   ACTIVE  count=0 state=5
+  UID u0a345: INACTIVE  count=0 state=19
+  UID u0a354: INACTIVE  count=0 state=19
+  UID u0a374:   ACTIVE  count=0 state=4
+  UID u0a376: INACTIVE  count=0 state=19
+  UID u0a396:   ACTIVE  count=0 state=2
+  UID u0a400:   ACTIVE  count=0 state=0
+  UID u0a409:   ACTIVE  count=0 state=5
+  UID u0a411: INACTIVE  count=0 state=19
+  UID u0i1: INACTIVE  count=0 state=19
+  UID u999s1000:   ACTIVE  count=0 state=19
+  UID u999s1001:   ACTIVE  count=0 state=19
+  UID u999s1027:   ACTIVE  count=0 state=19
+  UID u999a129: INACTIVE  count=0 state=10
+  UID u999a143:   ACTIVE  count=0 state=19
+  UID u999a249:   ACTIVE  count=0 state=19
+  UID u999a312: INACTIVE  count=0 state=10
+
+Looper state:
+  Looper (PowerManagerService, tid 72) {b34b045}
+    (MessageQueue is using Concurrent implementation)
+    State: android.os.MessageQueue$TimedParkStateNode@66874a8
+    PriorityQueue Messages: 
+    AsyncPriorityQueue Messages: 
+    Message 1: { when=+354ms what=1 target=com.android.server.display.AutomaticBrightnessController$AutomaticBrightnessHandler }
+    Message 2: { when=+354ms what=0 target=com.android.server.display.DualSensorPolicy$DualSensorPolicyHandler }
+    Message 3: { when=+6s615ms what=4 target=android.os.Handler }
+    Message 4: { when=+2m35s277ms what=1 target=android.os.Handler }
+    (Total messages: 5, polling=true, quitting=false)
+    Dump time: 2026-10-21 16:40:04.622 GMT+08:00
+    Package: system_server
+    Current looper: Looper (PowerManagerService, tid=2874)
+
+
+Wake Locks: size=2
+  SCREEN_DIM_WAKE_LOCK              'InCallPresenterDimmed' DISABLED (uid=10125 pid=16838 pkg=com.android.incallui)
+  PARTIAL_WAKE_LOCK                 '*job*r/com.android.vending/com.google.android.finsky.scheduler.process.mainimpl.PhoneskyJobServiceMain' DISABLED (uid=1000 pid=2521 pkg=android ws=WorkSource{ chains=WorkChain{(10123), (1000, JobScheduler)}})
+
+Suspend Blockers: size=5
+  PowerManagerService.Booting: ref count=0 []
+  PowerManagerService.WakeLocks: ref count=0 []
+  PowerManagerService.Display: ref count=1 [holding display: (10-21 16:16:40.465)]
+  PowerManagerService.Broadcasts: ref count=0 []
+  PowerManagerService.WirelessChargerDetector: ref count=0 []
+
+Display Power: com.android.server.power.PowerManagerService$2@ff50bc1
+
+Battery saving stats:
+  Battery Saver is currently: OFF
+    Times full enabled: 0
+    Times adaptive enabled: 0
+  
+  Drain stats:
+                     Battery saver OFF                          ON
+  NonDoze NonIntr:     95m    117mAh(  5%)     73.7mAh/h          0m      0mAh(  0%)      0.0mAh/h
+             Intr:     64m    587mAh( 14%)    546.7mAh/h          0m      0mAh(  0%)      0.0mAh/h
+  Deep    NonIntr:    739m    308mAh(  6%)     25.0mAh/h          0m      0mAh(  0%)      0.0mAh/h
+             Intr:      1m      7mAh(  0%)    256.0mAh/h          0m      0mAh(  0%)      0.0mAh/h
+  Light   NonIntr:     46m     26mAh(  0%)     33.6mAh/h          0m      0mAh(  0%)      0.0mAh/h
+             Intr:      1m      9mAh(  1%)    398.6mAh/h          0m      0mAh(  0%)      0.0mAh/h
+
+Battery saver policy (*NOTE* they only apply when battery saver is ON):
+  Settings: battery_saver_constants
+    value: 
+  Settings: (overlay)
+    value: 
+  DeviceConfig: battery_saver
+    location_mode: 
+  mAccessibilityEnabled=true
+  mAutomotiveProjectionActive=false
+  mPolicyLevel=0
+  
+  Policy 'default full'
+    advertise_is_enabled=true
+    disable_vibration=false
+    disable_animation=false
+    defer_full_backup=true
+    defer_keyvalue_backup=true
+    enable_firewall=true
+    enable_datasaver=false
+    disable_launch_boost=false
+    enable_brightness_adjustment=false
+    adjust_brightness_factor=0.5
+    location_mode=3
+    force_all_apps_standby=true
+    force_background_check=true
+    disable_optional_sensors=true
+    disable_aod=true
+    soundtrigger_mode=0
+    enable_quick_doze=true
+    enable_night_mode=false
+  
+  Policy 'current full'
+    advertise_is_enabled=true
+    disable_vibration=false
+    disable_animation=false
+    defer_full_backup=true
+    defer_keyvalue_backup=true
+    enable_firewall=true
+    enable_datasaver=false
+    disable_launch_boost=false
+    enable_brightness_adjustment=false
+    adjust_brightness_factor=0.5
+    location_mode=3
+    force_all_apps_standby=true
+    force_background_check=true
+    disable_optional_sensors=true
+    disable_aod=true
+    soundtrigger_mode=0
+    enable_quick_doze=true
+    enable_night_mode=false
+  
+  Policy 'default adaptive'
+    advertise_is_enabled=false
+    disable_vibration=false
+    disable_animation=false
+    defer_full_backup=false
+    defer_keyvalue_backup=false
+    enable_firewall=false
+    enable_datasaver=false
+    disable_launch_boost=false
+    enable_brightness_adjustment=false
+    adjust_brightness_factor=1.0
+    location_mode=0
+    force_all_apps_standby=false
+    force_background_check=false
+    disable_optional_sensors=false
+    disable_aod=false
+    soundtrigger_mode=0
+    enable_quick_doze=false
+    enable_night_mode=false
+  
+  Policy 'current adaptive'
+    advertise_is_enabled=false
+    disable_vibration=false
+    disable_animation=false
+    defer_full_backup=false
+    defer_keyvalue_backup=false
+    enable_firewall=false
+    enable_datasaver=false
+    disable_launch_boost=false
+    enable_brightness_adjustment=false
+    adjust_brightness_factor=1.0
+    location_mode=0
+    force_all_apps_standby=false
+    force_background_check=false
+    disable_optional_sensors=false
+    disable_aod=false
+    soundtrigger_mode=0
+    enable_quick_doze=false
+    enable_night_mode=false
+  
+  Policy 'effective'
+    advertise_is_enabled=false
+    disable_vibration=false
+    disable_animation=false
+    defer_full_backup=false
+    defer_keyvalue_backup=false
+    enable_firewall=false
+    enable_datasaver=false
+    disable_launch_boost=false
+    enable_brightness_adjustment=false
+    adjust_brightness_factor=1.0
+    location_mode=0
+    force_all_apps_standby=false
+    force_background_check=false
+    disable_optional_sensors=false
+    disable_aod=false
+    soundtrigger_mode=0
+    enable_quick_doze=false
+    enable_night_mode=false
+
+Battery saver state machine:
+  Enabled=false
+    full=false
+    adaptive=false
+  mState=1
+  mLastChangedIntReason=0
+  mLastChangedStrReason=null
+  mBootCompleted=true
+  mSettingsLoaded=true
+  mBatteryStatusSet=true
+  mIsPowered=true
+  mBatteryLevel=57
+  mIsBatteryLevelLow=false
+  mSettingAutomaticBatterySaver=0
+  mSettingBatterySaverEnabled=false
+  mSettingBatterySaverEnabledSticky=false
+  mSettingBatterySaverStickyAutoDisableEnabled=true
+  mSettingBatterySaverStickyAutoDisableThreshold=90
+  mSettingBatterySaverTriggerThreshold=0
+  mBatterySaverStickyBehaviourDisabled=false
+  mBatterySaverTurnedOffNotificationEnabled=false
+  mDynamicPowerSavingsDefaultDisableThreshold=80
+  mDynamicPowerSavingsDisableThreshold=80
+  mDynamicPowerSavingsEnableBatterySaver=false
+  mLastAdaptiveBatterySaverChangedExternallyElapsed=0
+AttentionDetector:
+ mIsSettingEnabled=false
+ mMaxExtensionMillis=900000
+ mPreDimCheckDurationMillis=2000
+ mEffectivePostDimTimeout=0
+ mLastUserActivityTime(excludingAttention)=8771514
+ mAttentionServiceSupported=true
+ mRequested=false
+
+Profile power states: size=0
+Display Group User Activity:
+  displayGroupId=0
+  userActivitySummary=0x1
+  lastUserActivityTime=8346174 (426730 ms ago)
+  lastUserActivityTimeNoChangeLights=8771514 (1390 ms ago)
+  mWakeLockSummary=0x0
+
+Wireless Charger Detector State:
+  mGravitySensor={Sensor name="gravity  Non-wakeup", vendor="QTI", version=1, type=9, maxRange=156.91, resolution=0.01, power=0.515, minDelay=5000}
+  mPoweredWirelessly=false
+  mAtRest=false
+  mRestX=0.0, mRestY=0.0, mRestZ=0.0
+  mDetectionInProgress=false
+  mDetectionStartTime=0 (never)
+  mMustUpdateRestPosition=false
+  mTotalSamples=0
+  mMovingSamples=0
+  mFirstSampleX=0.0, mFirstSampleY=0.0, mFirstSampleZ=0.0
+  mLastSampleX=0.0, mLastSampleY=0.0, mLastSampleZ=0.0
+Notifier:
+Partial Wakelock Log:
+Wake Lock Log
+  10-21 00:32:06.652 - 99910129 (com.google.android.gsf,...) - ACQ wake:com.google.android.gms/.chimera.GmsIntentOperationService - 913 (partial)
+  10-21 00:32:06.652 - 99910129 (com.google.android.gsf,...) - ACQ Checkin Service (partial)
+  10-21 00:32:06.652 - 99910129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.p.s.s.PhenotypeConfigurator (partial)
+  10-21 00:32:30.097 - 6110 (com.xiaomi.finddevice) - ACQ :FindDeviceJobExecutorWakeLock (partial)
+  10-21 00:32:30.332 - 6110 (com.xiaomi.finddevice) - ACQ :FindDeviceJobExecutorWakeLock (partial)
+  10-21 00:32:32.429 - 6110 (com.xiaomi.finddevice) - ACQ *job*r/com.xiaomi.finddevice/.v2.job.BatchJobService (partial)
+  10-21 00:43:13.398 - 99910129 (com.google.android.gsf,...) - ACQ *job*r/@SyncManager@com.google.android.gms.chromesync/com.google:android (partial)
+  10-21 00:43:13.414 - 99910129 (com.google.android.gsf,...) - ACQ *sync*/com.google.android.gms.chromesync/com.google (partial)
+  10-21 00:50:45.611 - 10431 (com.android.chrome) - ACQ AudioSpatial (partial)
+  10-21 00:53:17.447 - 10129 (com.google.android.gsf,...) - ACQ CollectionLib (partial)
+  10-21 00:58:07.821 - 10431 (com.android.chrome) - ACQ AudioSpatial (partial)
+  10-21 07:50:06.601 - 10260 (com.android.deskclock) - ACQ *launch* (partial)
+  10-21 08:00:15.268 - 10260 (com.android.deskclock) - ACQ *launch* (partial)
+  10-21 08:10:16.759 - 10260 (com.android.deskclock) - ACQ DC:AlarmClock (partial)
+  10-21 08:10:16.792 - 10260 (com.android.deskclock) - ACQ *vibrator* (partial)
+  10-21 08:10:16.919 - 10260 (com.android.deskclock) - ACQ AudioMix (partial)
+  10-21 08:21:40.856 - 10290 (com.autonavi.minimap) - ACQ AudioIn (partial)
+  10-21 08:25:46.302 - 99910249 (com.android.permissioncontroller) - ACQ *alarm* (partial)
+  10-21 08:50:16.828 - 10463 (com.kedacom.kdmoa) - ACQ *launch* (partial)
+  10-21 09:07:19.766 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:12:21.702 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:14:38.313 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:14:58.774 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:16:03.754 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:17:20.757 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:21:12.653 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:26:45.693 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:27:35.764 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:31:19.681 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:31:46.250 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:32:08.671 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:32:34.739 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:33:11.662 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:35:23.677 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:35:51.670 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:36:47.741 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:37:35.732 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:40:52.690 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:41:48.673 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:44:49.672 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:46:04.785 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:47:21.619 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:51:50.717 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:56:52.723 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 09:57:35.723 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:00:01.667 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:01:26.683 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:02:10.673 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:06:54.704 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:07:35.639 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:11:55.720 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:12:35.651 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:16:57.720 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:17:35.662 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:21:59.649 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:27:00.654 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:30:00.006 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:32:02.680 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:37:04.670 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:41:06.728 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:42:06.648 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:47:08.699 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:47:32.638 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:51:48.677 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:52:10.694 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:52:34.623 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 10:57:14.631 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 11:02:13.677 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 11:07:16.635 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 11:12:17.632 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 11:17:19.697 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 11:22:21.672 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 11:27:23.673 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 11:32:15.634 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 11:37:26.616 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 11:42:28.684 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 11:47:29.668 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 11:52:30.606 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 11:57:31.649 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 12:02:17.639 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 12:07:33.652 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 12:12:35.590 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 12:17:35.598 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 12:22:38.581 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 12:27:34.634 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 12:27:46.586 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 12:32:19.582 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 12:32:38.812 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 12:37:35.632 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 12:37:39.006 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 12:42:35.616 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 12:47:34.636 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 12:48:03.598 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 12:48:03.615 - 1000 (System) - ACQ deviceidle_maint (partial)
+  10-21 12:48:03.862 - 99910312 (com.tencent.mm) - ACQ *job*r/com.tencent.mm/androidx.work.impl.background.systemjob.SystemJobService (partial)
+  10-21 12:48:04.160 - 10187 (com.xiaomi.xmsf) - ACQ *job*r/com.xiaomi.xmsf/com.xiaomi.xms.atom.engine.job.ClientAIScheduler (partial)
+  10-21 12:48:04.161 - 10187 (com.xiaomi.xmsf) - ACQ *job*r/com.xiaomi.xmsf/com.xiaomi.xms.atom.engine.job.ClientAIScheduler (partial)
+  10-21 12:48:09.900 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 12:52:34.573 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 12:57:35.569 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 12:57:45.797 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:02:20.620 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:02:35.633 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:02:53.011 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:07:35.546 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:07:54.625 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:12:34.614 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:16:39.825 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:17:34.553 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:18:43.600 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:19:51.634 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:20:00.006 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:20:12.051 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:20:20.458 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:20:28.257 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:26:26.844 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:26:37.297 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:26:44.622 - 99910312 (com.tencent.mm) - ACQ MicroMsg.CoreService (partial)
+  10-21 13:27:00.003 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:27:14.019 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:27:21.458 - 10430 (com.google.android.gm) - ACQ Icing (partial)
+  10-21 13:27:22.595 - 10430 (com.google.android.gm) - ACQ Icing (partial)
+  10-21 13:28:00.004 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:28:03.924 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:29:00.000 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:30:00.013 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:31:00.012 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:32:00.001 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:32:33.929 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:33:00.012 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:34:00.015 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:34:59.576 - 10275 (com.tencent.mobileqq) - ACQ *alarm* (partial)
+  10-21 13:35:00.007 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:36:00.002 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:37:00.007 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:37:59.602 - 10275 (com.tencent.mobileqq) - ACQ *alarm* (partial)
+  10-21 13:38:00.001 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:39:00.001 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:39:12.585 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:39:28.212 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:39:50.844 - 10178 (com.xiaomi.smarthome) - ACQ *launch* (partial)
+  10-21 13:40:00.002 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:40:02.823 - 10178 (com.xiaomi.smarthome) - ACQ *launch* (partial)
+  10-21 13:40:04.361 - 1041 - ACQ AudioMix (partial)
+  10-21 13:40:04.361 - 1041 - ACQ AudioMix (partial)
+  10-21 13:40:04.361 - 1041 - ACQ AudioMix (partial)
+  10-21 13:40:04.362 - 1041 - ACQ AudioMix (partial)
+  10-21 13:40:04.363 - 1041 - ACQ AudioMix (partial)
+  10-21 13:40:22.524 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:41:00.611 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:41:28.597 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 13:48:20.919 - 1000 (System) - ACQ dream:doze (doze)
+  10-21 14:02:00.977 - 1041 - ACQ AudioMix (partial)
+  10-21 14:02:00.977 - 1041 - ACQ AudioMix (partial)
+  10-21 14:02:00.978 - 1041 - ACQ AudioMix (partial)
+  10-21 14:02:00.979 - 1041 - ACQ AudioMix (partial)
+  10-21 14:02:00.979 - 1041 - ACQ AudioMix (partial)
+  10-21 14:02:00.980 - 1041 - ACQ AudioMix (partial)
+  10-21 14:02:48.050 - 99910129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.c.u.QosUploaderService (partial)
+  10-21 14:03:00.005 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 14:03:12.198 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 14:03:28.392 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 14:04:00.002 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 14:04:12.248 - 1000 (System) - ACQ dream:doze (doze)
+  10-21 14:04:22.364 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 14:05:28.531 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 14:05:47.867 - 10275 (com.tencent.mobileqq) - ACQ *alarm* (partial)
+  10-21 14:06:44.592 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 14:07:34.563 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 14:12:34.573 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 14:17:34.604 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 14:22:35.570 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 14:23:14.529 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 14:27:34.530 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 14:28:16.523 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 14:28:19.706 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 14:32:21.564 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 14:33:18.555 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 14:33:19.734 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 14:34:13.554 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 14:35:28.552 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 15:19:06.615 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.c.u.QosUploaderService (partial)
+  10-21 15:19:06.627 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.c.u.QosUploaderService (partial)
+  10-21 15:20:00.002 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 15:20:22.557 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 15:21:27.656 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 15:22:33.934 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 15:22:35.643 - 99910312 (com.tencent.mm) - ACQ MicroMsg.SyncService (partial)
+  10-21 15:22:42.707 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 15:23:36.474 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 15:27:35.560 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 15:28:37.536 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 15:32:24.543 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 15:32:35.600 - 99910312 (com.tencent.mm) - ACQ MicroMsg.SyncService (partial)
+  10-21 15:33:39.532 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 15:37:34.553 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 15:38:10.482 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 15:42:33.945 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 15:42:33.992 - 99910312 (com.tencent.mm) - ACQ MicroMsg.Alarm (partial)
+  10-21 15:42:35.621 - 99910312 (com.tencent.mm) - ACQ MicroMsg.SyncService (partial)
+  10-21 15:42:35.679 - 99910312 (com.tencent.mm) - ACQ MicroMsg.MMAutoAuth (partial)
+  10-21 16:15:31.468 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:15:31.471 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:15:31.471 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:15:31.506 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:15:31.676 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.p.s.s.PhenotypeConfigurator (partial)
+  10-21 16:15:31.805 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.a.a.b.l.AuthCronService (partial)
+  10-21 16:15:54.396 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:16:40.512 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:16:40.623 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:17:00.003 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:17:10.449 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:17:40.465 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:18:00.006 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:18:10.485 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:18:40.512 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:19:00.005 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:19:10.524 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:19:40.540 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:20:00.001 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:20:10.553 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:20:40.574 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:21:00.007 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:21:02.075 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:21:10.585 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:21:40.602 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:22:00.002 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:22:10.617 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:22:40.631 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:23:00.003 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:23:10.650 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:23:40.661 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:24:00.004 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:24:10.673 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:24:40.686 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:25:00.007 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:25:10.699 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:25:36.291 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:25:40.712 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:26:00.006 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:26:10.720 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:26:40.739 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:27:00.009 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:27:10.748 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:27:38.815 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:27:39.813 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:27:40.768 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:28:00.011 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:28:04.043 - 99910129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.c.u.QosUploaderService (partial)
+  10-21 16:28:04.746 - --- - ACQ UNKNOWN (partial)
+  10-21 16:28:04.760 - --- - ACQ UNKNOWN (partial)
+  10-21 16:28:04.775 - --- - ACQ UNKNOWN (partial)
+  10-21 16:28:04.795 - --- - ACQ UNKNOWN (partial)
+  10-21 16:28:04.861 - --- - REL UNKNOWN
+  10-21 16:28:04.869 - --- - ACQ UNKNOWN (partial)
+  10-21 16:28:04.915 - --- - ACQ UNKNOWN (partial)
+  10-21 16:28:04.919 - --- - REL UNKNOWN
+  10-21 16:28:04.922 - --- - ACQ UNKNOWN (partial)
+  10-21 16:28:04.931 - --- - REL UNKNOWN
+  10-21 16:28:04.953 - --- - REL UNKNOWN
+  10-21 16:28:04.956 - --- - REL UNKNOWN
+  10-21 16:28:04.958 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:28:04.960 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:28:04.961 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:28:04.986 - --- (com.google.android.gsf,...) - ACQ UNKNOWN (partial)
+  10-21 16:28:04.990 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:28:05.001 - --- (com.google.android.gsf,...) - ACQ UNKNOWN (partial)
+  10-21 16:28:05.051 - --- (com.google.android.gsf,...) - REL UNKNOWN
+  10-21 16:28:05.062 - --- (com.google.android.gsf,...) - ACQ UNKNOWN (partial)
+  10-21 16:28:05.101 - --- (com.google.android.gsf,...) - REL UNKNOWN
+  10-21 16:28:05.106 - --- (com.google.android.gsf,...) - REL UNKNOWN
+  10-21 16:28:05.109 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:28:05.111 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:28:05.112 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:28:05.121 - --- (com.google.android.gsf,...) - ACQ UNKNOWN (partial)
+  10-21 16:28:05.122 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:28:05.129 - --- (com.google.android.gsf,...) - ACQ UNKNOWN (partial)
+  10-21 16:28:05.693 - 99910312 (com.tencent.mm) - ACQ *alarm* (partial)
+  10-21 16:28:05.695 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:28:05.699 - 99910129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.s.d.OdlhPppCleanupJob (partial)
+  10-21 16:28:05.703 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:28:05.706 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:28:05.709 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:28:05.709 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:28:05.711 - 99910312 (com.tencent.mm) - ACQ MicroMsg.Alarm (partial)
+  10-21 16:28:05.713 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:28:05.715 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:28:05.715 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:28:05.717 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:28:05.718 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:28:05.719 - 99910312 (com.tencent.mm) - REL *alarm*
+  10-21 16:28:05.724 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:28:05.725 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:28:05.726 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:28:05.727 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:28:05.737 - --- (com.tencent.mm) - REL UNKNOWN
+  10-21 16:28:05.749 - --- (com.tencent.mm) - ACQ UNKNOWN (partial)
+  10-21 16:28:05.818 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:28:05.819 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:28:05.821 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:28:05.822 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:28:05.874 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:28:05.913 - 99910312 (com.tencent.mm) - REL MicroMsg.Alarm
+  10-21 16:28:06.220 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:28:06.228 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:28:06.245 - 1000 (System) - REL NetworkStats
+  10-21 16:28:06.249 - --- (System) - REL UNKNOWN
+  10-21 16:28:06.260 - --- (System) - ACQ UNKNOWN (partial)
+  10-21 16:28:06.267 - --- (System) - REL UNKNOWN
+  10-21 16:28:06.275 - --- (System) - ACQ UNKNOWN (partial)
+  10-21 16:28:06.285 - --- (System) - REL UNKNOWN
+  10-21 16:28:06.302 - --- (System) - ACQ UNKNOWN (partial)
+  10-21 16:28:06.313 - --- (System) - REL UNKNOWN
+  10-21 16:28:06.328 - --- (System) - ACQ UNKNOWN (partial)
+  10-21 16:28:06.340 - --- (System) - REL UNKNOWN
+  10-21 16:28:06.344 - --- (System) - REL UNKNOWN
+  10-21 16:28:06.346 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:28:06.348 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:28:06.350 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:28:06.374 - --- (com.google.android.gsf,...) - ACQ UNKNOWN (partial)
+  10-21 16:28:06.377 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:28:06.394 - --- (com.google.android.gsf,...) - REL UNKNOWN
+  10-21 16:28:06.395 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:28:06.397 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:28:06.399 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:28:06.418 - --- (com.google.android.gsf,...) - ACQ UNKNOWN (partial)
+  10-21 16:28:06.430 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:28:06.437 - --- (com.google.android.gsf,...) - REL UNKNOWN
+  10-21 16:28:06.439 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:28:06.446 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:28:06.449 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:28:06.463 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.a.a.e.s.AppRestrictionsSyncService (partial)
+  10-21 16:28:06.466 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:28:10.781 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:28:10.795 - 1000 (System) - REL *alarm*
+  10-21 16:28:16.251 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:28:16.271 - 1000 (System) - REL NetworkStats
+  10-21 16:28:27.347 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:28:27.351 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:28:27.354 - --- (System) - ACQ UNKNOWN (partial)
+  10-21 16:28:27.358 - --- (System) - ACQ UNKNOWN (partial)
+  10-21 16:28:27.361 - --- (System) - REL UNKNOWN
+  10-21 16:28:27.361 - --- (System) - ACQ UNKNOWN (partial)
+  10-21 16:28:27.364 - --- (System) - ACQ UNKNOWN (partial)
+  10-21 16:28:27.364 - 1000 (System) - REL NetworkStats
+  10-21 16:28:27.365 - --- (System) - REL UNKNOWN
+  10-21 16:28:27.374 - --- (System) - REL UNKNOWN
+  10-21 16:28:27.386 - 1000 (System) - REL *alarm*
+  10-21 16:28:27.391 - --- (System) - REL UNKNOWN
+  10-21 16:28:36.866 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*/c.g.a.g/.a.a.e.s.AppRestrictionsSyncService
+  10-21 16:28:36.868 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:28:36.882 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:28:36.883 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:28:36.902 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.o.s.ModelCleanUpTaskService (partial)
+  10-21 16:28:36.905 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:28:36.954 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*/c.g.a.g/.o.s.ModelCleanUpTaskService
+  10-21 16:28:36.956 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:28:36.957 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:28:36.960 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:28:36.983 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.a.c.r.ReEnrollmentService (partial)
+  10-21 16:28:36.996 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:28:40.795 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:28:40.814 - 1000 (System) - REL *alarm*
+  10-21 16:29:00.007 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:29:00.009 - 1000 (System) - REL *alarm*
+  10-21 16:29:04.158 - 99910129 (com.google.android.gsf,...) - REL *gms_scheduler*/c.g.a.g/.c.u.QosUploaderService
+  10-21 16:29:04.161 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:29:04.164 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:29:04.166 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:29:04.172 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:29:07.032 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*/c.g.a.g/.a.c.r.ReEnrollmentService
+  10-21 16:29:07.035 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:29:07.038 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:29:07.041 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:29:07.072 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/c.g.a.c.s.ContextManagerLogsUploadBoundService (partial)
+  10-21 16:29:07.075 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:29:07.078 - 10129 (com.google.android.gsf,...) - ACQ CMWakeLock (partial)
+  10-21 16:29:07.079 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*/c.g.a.g/c.g.a.c.s.ContextManagerLogsUploadBoundService
+  10-21 16:29:07.081 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:29:07.083 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:29:07.085 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:29:07.095 - 10129 (com.google.android.gsf,...) - REL CMWakeLock
+  10-21 16:29:07.108 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.c.c.RefreshGcmTaskService (partial)
+  10-21 16:29:07.119 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:29:07.135 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*/c.g.a.g/.c.c.RefreshGcmTaskService
+  10-21 16:29:07.137 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:29:07.140 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:29:07.142 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:29:07.163 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.s.f.r.RegionMddDownloadScheduleService (partial)
+  10-21 16:29:07.166 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:29:07.174 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*/c.g.a.g/.s.f.r.RegionMddDownloadScheduleService
+  10-21 16:29:07.175 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:29:07.176 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:29:07.178 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:29:07.196 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.s.d.s.StoreVisitsProcessingService (partial)
+  10-21 16:29:07.201 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:29:07.209 - 99910129 (com.google.android.gsf,...) - REL *gms_scheduler*/c.g.a.g/.s.d.OdlhPppCleanupJob
+  10-21 16:29:07.219 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*/c.g.a.g/.s.d.s.StoreVisitsProcessingService
+  10-21 16:29:07.222 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:29:07.226 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:29:07.229 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:29:07.234 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.g.HeartbeatAlarm$ConnectionInfoPersistService (partial)
+  10-21 16:29:07.266 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.s.d.u.BatchDeidentifiedDataUploadService (partial)
+  10-21 16:29:07.271 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:29:07.273 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*/c.g.a.g/.g.HeartbeatAlarm$ConnectionInfoPersistService
+  10-21 16:29:07.287 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.a.f.s.FolsomPublicKeyUpdateService (partial)
+  10-21 16:29:07.294 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*/c.g.a.g/.s.d.u.BatchDeidentifiedDataUploadService
+  10-21 16:29:07.297 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:29:07.299 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:29:07.302 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:29:07.320 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.c.u.QosUploaderService (partial)
+  10-21 16:29:07.343 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:29:07.343 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*/c.g.a.g/.a.f.s.FolsomPublicKeyUpdateService
+  10-21 16:29:07.359 - 99910129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.a.f.s.FolsomPublicKeyUpdateService (partial)
+  10-21 16:29:07.390 - 99910129 (com.google.android.gsf,...) - REL *gms_scheduler*/c.g.a.g/.a.f.s.FolsomPublicKeyUpdateService
+  10-21 16:29:07.408 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.s.s.SettingsLoggingService (partial)
+  10-21 16:29:07.431 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*/c.g.a.g/.s.s.SettingsLoggingService
+  10-21 16:29:07.452 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.d.DroidGuardFastRefreshGmsTaskBoundService (partial)
+  10-21 16:29:10.810 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:29:10.824 - 1000 (System) - REL *alarm*
+  10-21 16:29:12.346 - 10129 (com.google.android.gsf,...) - ACQ *alarm* (partial)
+  10-21 16:29:12.365 - 10129 (com.google.android.gsf,...) - REL *alarm*
+  10-21 16:29:12.374 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:29:12.402 - 99910129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.a.f.s.FolsomPublicKeyUpdateService (partial)
+  10-21 16:29:12.411 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:29:12.450 - 99910129 (com.google.android.gsf,...) - REL *gms_scheduler*/c.g.a.g/.a.f.s.FolsomPublicKeyUpdateService
+  10-21 16:29:12.454 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:29:12.459 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:29:12.461 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:29:12.466 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:29:16.252 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:29:16.266 - 1000 (System) - REL NetworkStats
+  10-21 16:29:23.253 - 10123 (com.android.vending) - ACQ *job*r/com.android.vending/com.google.android.finsky.scheduler.process.mainimpl.PhoneskyJobServiceMain (partial)
+  10-21 16:29:23.256 - 10123 (com.android.vending) - ACQ *job*r/com.android.vending/com.google.android.finsky.scheduler.process.mainimpl.PhoneskyJobServiceMain (partial)
+  10-21 16:29:23.265 - 10123 (com.android.vending) - REL *job*r/com.android.vending/com.google.android.finsky.scheduler.process.mainimpl.PhoneskyJobServiceMain
+  10-21 16:29:23.265 - 10123 (com.android.vending) - ACQ *job*r/com.android.vending/com.google.android.finsky.scheduler.process.mainimpl.PhoneskyJobServiceMain (partial)
+  10-21 16:29:23.266 - 10123 (com.android.vending) - ACQ *job*r/com.android.vending/com.google.android.finsky.scheduler.process.mainimpl.PhoneskyJobServiceMain (partial)
+  10-21 16:29:23.266 - 10123 (com.android.vending) - REL *job*r/com.android.vending/com.google.android.finsky.scheduler.process.mainimpl.PhoneskyJobServiceMain
+  10-21 16:29:23.267 - 10123 (com.android.vending) - ACQ *job*r/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground (partial)
+  10-21 16:29:23.267 - 10123 (com.android.vending) - ACQ *job*r/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground (partial)
+  10-21 16:29:23.269 - 10123 (com.android.vending) - REL *job*r/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground
+  10-21 16:29:23.269 - 10123 (com.android.vending) - ACQ *job*r/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground (partial)
+  10-21 16:29:23.270 - 10123 (com.android.vending) - ACQ *job*r/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground (partial)
+  10-21 16:29:23.270 - 10123 (com.android.vending) - REL *job*r/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground
+  10-21 16:29:23.338 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:29:23.339 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:29:23.339 - 1000 (System) - ACQ *telephony-radio* (partial)
+  10-21 16:29:23.344 - 1000 (System) - REL *telephony-radio*
+  10-21 16:29:23.344 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:29:23.344 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:29:23.395 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:29:23.397 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:29:23.397 - 1000 (System) - ACQ *telephony-radio* (partial)
+  10-21 16:29:23.404 - 1000 (System) - REL *telephony-radio*
+  10-21 16:29:23.404 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:29:23.404 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:29:23.426 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:29:23.426 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:29:23.426 - 1000 (System) - ACQ *telephony-radio* (partial)
+  10-21 16:29:23.431 - 1000 (System) - REL *telephony-radio*
+  10-21 16:29:23.431 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:29:23.431 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:29:32.874 - 10123 (com.android.vending) - ACQ *job*e/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground (partial)
+  10-21 16:29:32.875 - 10123 (com.android.vending) - ACQ *job*e/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground (partial)
+  10-21 16:29:32.881 - 10123 (com.android.vending) - REL *job*e/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground
+  10-21 16:29:32.898 - 10123 (com.android.vending) - ACQ *job*r/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground (partial)
+  10-21 16:29:32.899 - 10123 (com.android.vending) - ACQ *job*r/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground (partial)
+  10-21 16:29:32.904 - 10123 (com.android.vending) - REL *job*r/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground
+  10-21 16:29:32.908 - 10123 (com.android.vending) - REL *job*r/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground
+  10-21 16:29:32.912 - 10123 (com.android.vending) - REL *job*r/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground
+  10-21 16:29:40.824 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:29:40.842 - 1000 (System) - REL *alarm*
+  10-21 16:30:00.007 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:30:00.010 - 1000 (System) - REL *alarm*
+  10-21 16:30:07.391 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*/c.g.a.g/.c.u.QosUploaderService
+  10-21 16:30:07.394 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:30:07.398 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:30:07.399 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:30:07.417 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.c.u.QosUploaderService (partial)
+  10-21 16:30:07.426 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:30:07.431 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*/c.g.a.g/.c.u.QosUploaderService
+  10-21 16:30:07.433 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:30:07.435 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:30:07.435 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:30:07.442 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.a.a.b.a.GcmTaskService (partial)
+  10-21 16:30:07.447 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:30:07.478 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*/c.g.a.g/.d.DroidGuardFastRefreshGmsTaskBoundService
+  10-21 16:30:07.485 - 99910129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.d.DroidGuardFastRefreshGmsTaskBoundService (partial)
+  10-21 16:30:10.842 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:30:10.861 - 1000 (System) - REL *alarm*
+  10-21 16:30:16.251 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:30:16.290 - 1000 (System) - REL NetworkStats
+  10-21 16:30:22.007 - 10123 (com.android.vending) - REL *job*r/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground
+  10-21 16:30:24.517 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:30:24.517 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:30:24.517 - 10127 (com.xiaomi.aicr) - ACQ *telephony-radio* (partial)
+  10-21 16:30:24.527 - 10127 (com.xiaomi.aicr) - REL *telephony-radio*
+  10-21 16:30:24.527 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:30:24.527 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:30:27.917 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:30:27.931 - 1000 (System) - REL NetworkStats
+  10-21 16:30:27.933 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:30:27.940 - 1000 (System) - REL NetworkStats
+  10-21 16:30:29.304 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:30:29.320 - 1000 (System) - REL NetworkStats
+  10-21 16:30:30.954 - 1000 (System) - ACQ NotificationManagerService:post:android (partial)
+  10-21 16:30:30.966 - 1000 (System) - REL NotificationManagerService:post:android
+  10-21 16:30:35.015 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:30:35.021 - 1000 (System) - REL *alarm*
+  10-21 16:30:37.572 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*/c.g.a.g/.a.a.b.a.GcmTaskService
+  10-21 16:30:37.579 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:30:37.593 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:30:37.595 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:30:37.622 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*/c.g.a.g/.m.d.u.s.StorageCleanupService (partial)
+  10-21 16:30:37.625 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:30:37.683 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*/c.g.a.g/.m.d.u.s.StorageCleanupService
+  10-21 16:30:37.685 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:30:37.688 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:30:37.689 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:30:37.696 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:30:39.554 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:30:39.567 - 1000 (System) - REL *alarm*
+  10-21 16:30:40.858 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:30:40.879 - 1000 (System) - REL *alarm*
+  10-21 16:30:50.016 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:30:50.022 - 1000 (System) - REL *alarm*
+  10-21 16:30:50.031 - 10123 (com.android.vending) - REL *job*r/com.android.vending/com.google.android.finsky.scheduler.process.mainimpl.PhoneskyJobServiceMain
+  10-21 16:30:50.042 - 10123 (com.android.vending) - REL *job*r/com.android.vending/com.google.android.finsky.scheduler.process.mainimpl.PhoneskyJobServiceMain
+  10-21 16:31:00.002 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:31:00.006 - 1000 (System) - REL *alarm*
+  10-21 16:31:07.507 - 99910129 (com.google.android.gsf,...) - REL *gms_scheduler*/c.g.a.g/.d.DroidGuardFastRefreshGmsTaskBoundService
+  10-21 16:31:07.540 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:31:07.543 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:31:07.545 - 10129 (com.google.android.gsf,...) - ACQ *gms_scheduler*:internal (partial)
+  10-21 16:31:07.553 - 10129 (com.google.android.gsf,...) - REL *gms_scheduler*:internal
+  10-21 16:31:10.882 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:31:10.906 - 1000 (System) - REL *alarm*
+  10-21 16:31:11.150 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:31:11.152 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:31:11.152 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:31:11.161 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:31:11.161 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:31:11.162 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:31:16.249 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:31:16.274 - 1000 (System) - REL NetworkStats
+  10-21 16:31:40.910 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:31:40.940 - 1000 (System) - REL *alarm*
+  10-21 16:31:46.870 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:31:46.898 - 1000 (System) - REL NetworkStats
+  10-21 16:31:47.953 - 10140 (com.android.mms) - ACQ *alarm* (partial)
+  10-21 16:31:47.971 - 10140 (com.android.mms) - REL *alarm*
+  10-21 16:32:00.003 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:32:00.007 - 1000 (System) - REL *alarm*
+  10-21 16:32:01.258 - 10140 (com.android.mms) - ACQ *job*r/com.android.mms/com.miui.smsextra.service.TemplateUpdateService (partial)
+  10-21 16:32:01.260 - 10140 (com.android.mms) - ACQ *job*r/com.android.mms/com.miui.smsextra.service.TemplateUpdateService (partial)
+  10-21 16:32:01.282 - 10140 (com.android.mms) - REL *job*r/com.android.mms/com.miui.smsextra.service.TemplateUpdateService
+  10-21 16:32:01.282 - 10163 (com.xiaomi.market) - ACQ *job*r/com.xiaomi.market/.business_core.update.manual.ManualUpdateScheduler (partial)
+  10-21 16:32:01.283 - 10163 (com.xiaomi.market) - ACQ *job*r/com.xiaomi.market/.business_core.update.manual.ManualUpdateScheduler (partial)
+  10-21 16:32:01.286 - 10163 (com.xiaomi.market) - REL *job*r/com.xiaomi.market/.business_core.update.manual.ManualUpdateScheduler
+  10-21 16:32:01.311 - 10163 (com.xiaomi.market) - REL *job*r/com.xiaomi.market/.business_core.update.manual.ManualUpdateScheduler
+  10-21 16:32:01.320 - 10163 (com.xiaomi.market) - ACQ NotificationManagerService:post:com.xiaomi.market (partial)
+  10-21 16:32:01.320 - 10163 (com.xiaomi.market) - REL NotificationManagerService:post:com.xiaomi.market
+  10-21 16:32:01.329 - 10163 (com.xiaomi.market) - ACQ com.xiaomi.market.data.WakeLockManager/CheckUpdateService (partial)
+  10-21 16:32:03.404 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:32:03.405 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:32:03.405 - 10127 (com.xiaomi.aicr) - ACQ *telephony-radio* (partial)
+  10-21 16:32:03.420 - 10127 (com.xiaomi.aicr) - REL *telephony-radio*
+  10-21 16:32:03.420 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:32:03.421 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:32:05.841 - 10140 (com.android.mms) - REL *job*r/com.android.mms/com.miui.smsextra.service.TemplateUpdateService
+  10-21 16:32:06.671 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:32:06.691 - 1000 (System) - REL NetworkStats
+  10-21 16:32:07.758 - 10163 (com.xiaomi.market) - REL com.xiaomi.market.data.WakeLockManager/CheckUpdateService
+  10-21 16:32:10.938 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:32:10.955 - 1000 (System) - REL *alarm*
+  10-21 16:32:16.252 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:32:16.270 - 1000 (System) - REL NetworkStats
+  10-21 16:32:18.820 - 10275 (com.tencent.mobileqq) - ACQ *alarm* (partial)
+  10-21 16:32:18.832 - 10275 (com.tencent.mobileqq) - ACQ *job*r/com.tencent.mobileqq/.msf.service.MSFAliveJobService (partial)
+  10-21 16:32:18.834 - 10275 (com.tencent.mobileqq) - ACQ *job*r/com.tencent.mobileqq/.msf.service.MSFAliveJobService (partial)
+  10-21 16:32:18.840 - 10275 (com.tencent.mobileqq) - REL *job*r/com.tencent.mobileqq/.msf.service.MSFAliveJobService
+  10-21 16:32:18.846 - 1000 (System) - REL *alarm*
+  10-21 16:32:18.847 - 10275 (com.tencent.mobileqq) - REL *job*r/com.tencent.mobileqq/.msf.service.MSFAliveJobService
+  10-21 16:32:25.533 - 10101 (com.mobiletools.systemhelper) - ACQ *alarm* (partial)
+  10-21 16:32:25.549 - 10101 (com.mobiletools.systemhelper) - REL *alarm*
+  10-21 16:32:32.896 - 10123 (com.android.vending) - REL *job*e/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground
+  10-21 16:32:35.610 - 99910312 (com.tencent.mm) - ACQ *alarm* (partial)
+  10-21 16:32:35.618 - 99910312 (com.tencent.mm) - ACQ MicroMsg.MMAutoAuth (partial)
+  10-21 16:32:35.632 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:32:35.636 - 99910312 (com.tencent.mm) - ACQ MicroMsg.Alarm (partial)
+  10-21 16:32:35.637 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:32:35.638 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:32:35.640 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:32:35.640 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:32:35.641 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:32:35.642 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:32:35.643 - 99910312 (com.tencent.mm) - REL MicroMsg.MMAutoAuth
+  10-21 16:32:35.643 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:32:35.644 - 99910312 (com.tencent.mm) - ACQ MicroMsg.MMAutoAuth (partial)
+  10-21 16:32:35.644 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:32:35.645 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:32:35.646 - 99910312 (com.tencent.mm) - REL *alarm*
+  10-21 16:32:35.673 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:32:35.676 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:32:35.678 - 99910312 (com.tencent.mm) - ACQ MicroMsg.SyncService (partial)
+  10-21 16:32:35.679 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:32:35.681 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:32:35.682 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:32:35.683 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:32:35.684 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:32:35.685 - 99910312 (com.tencent.mm) - REL MicroMsg.MMAutoAuth
+  10-21 16:32:35.687 - 99910312 (com.tencent.mm) - ACQ MicroMsg.MMAutoAuth (partial)
+  10-21 16:32:35.687 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:32:35.710 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:32:35.711 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:32:35.712 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:32:35.721 - 1000 (System) - REL NetworkStats
+  10-21 16:32:35.748 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:32:35.840 - 99910312 (com.tencent.mm) - REL MicroMsg.Alarm
+  10-21 16:32:36.146 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:32:36.189 - 99910312 (com.tencent.mm) - REL MicroMsg.MMAutoAuth
+  10-21 16:32:36.220 - 99910312 (com.tencent.mm) - ACQ MicroMsg.MMAutoAuth (partial)
+  10-21 16:32:36.227 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:32:36.230 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:32:36.236 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:32:36.238 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:32:36.240 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:32:36.242 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:32:36.271 - 99910312 (com.tencent.mm) - REL MicroMsg.SyncService
+  10-21 16:32:36.646 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:32:36.648 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:32:36.650 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:32:36.651 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:32:36.724 - 99910312 (com.tencent.mm) - REL MicroMsg.MMAutoAuth
+  10-21 16:32:36.753 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:32:36.755 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:32:36.758 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:32:36.759 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:32:36.810 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:32:37.656 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:32:37.658 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:32:37.660 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:32:37.661 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:32:37.715 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:32:40.956 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:32:40.979 - 1000 (System) - REL *alarm*
+  10-21 16:32:42.071 - 99910312 (com.tencent.mm) - ACQ MicroMsg.MMAutoAuth (partial)
+  10-21 16:32:42.078 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:32:42.081 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:32:42.084 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:32:42.574 - 99910312 (com.tencent.mm) - REL MicroMsg.MMAutoAuth
+  10-21 16:32:43.091 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:32:43.093 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:32:43.098 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:32:43.100 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:32:43.152 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:32:52.107 - 1000 (System) - ACQ GeofenceHardwareImpl (partial)
+  10-21 16:32:52.107 - 1000 (System) - REL GeofenceHardwareImpl
+  10-21 16:32:54.040 - 1000 (System) - ACQ SysUI:BroadcastSender (partial)
+  10-21 16:32:54.050 - 1000 (System) - REL SysUI:BroadcastSender
+  10-21 16:32:54.399 - 10219 (com.qualcomm.qti.devicestatisticsservice,...) - ACQ QcrilOemhookMsgTunnel (partial)
+  10-21 16:32:54.401 - 10219 (com.qualcomm.qti.devicestatisticsservice,...) - REL QcrilOemhookMsgTunnel
+  10-21 16:32:54.419 - 10219 (com.qualcomm.qti.devicestatisticsservice,...) - ACQ QcrilOemhookMsgTunnel (partial)
+  10-21 16:32:54.422 - 10219 (com.qualcomm.qti.devicestatisticsservice,...) - REL QcrilOemhookMsgTunnel
+  10-21 16:32:54.597 - 10219 (com.qualcomm.qti.devicestatisticsservice,...) - ACQ QcrilOemhookMsgTunnel (partial)
+  10-21 16:32:54.599 - 10219 (com.qualcomm.qti.devicestatisticsservice,...) - REL QcrilOemhookMsgTunnel
+  10-21 16:32:54.619 - 10219 (com.qualcomm.qti.devicestatisticsservice,...) - ACQ QcrilOemhookMsgTunnel (partial)
+  10-21 16:32:54.621 - 10219 (com.qualcomm.qti.devicestatisticsservice,...) - REL QcrilOemhookMsgTunnel
+  10-21 16:32:58.534 - 1000 (System) - ACQ SysUI:BroadcastSender (partial)
+  10-21 16:32:58.539 - 1000 (System) - REL SysUI:BroadcastSender
+  10-21 16:33:00.010 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:33:00.013 - 1000 (System) - REL *alarm*
+  10-21 16:33:10.981 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:33:11.007 - 1000 (System) - REL *alarm*
+  10-21 16:33:11.323 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:33:11.345 - 1000 (System) - REL *alarm*
+  10-21 16:33:11.352 - 1000 (System) - ACQ *job*r/com.miui.daemon/.performance.cloudcontrol.CloudControlSyncService (partial)
+  10-21 16:33:11.355 - 1000 (System) - ACQ *job*r/com.miui.daemon/.performance.cloudcontrol.CloudControlSyncService (partial)
+  10-21 16:33:11.358 - 1000 (System) - REL *job*r/com.miui.daemon/.performance.cloudcontrol.CloudControlSyncService
+  10-21 16:33:11.401 - 1000 (System) - REL *job*r/com.miui.daemon/.performance.cloudcontrol.CloudControlSyncService
+  10-21 16:33:11.598 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:33:11.599 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:33:11.599 - 1000 (System) - ACQ *telephony-radio* (partial)
+  10-21 16:33:11.606 - 1000 (System) - REL *telephony-radio*
+  10-21 16:33:11.606 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:33:11.607 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:33:16.252 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:33:16.267 - 1000 (System) - REL NetworkStats
+  10-21 16:33:35.307 - 99910312 (com.tencent.mm) - ACQ StnManagerCallback (partial)
+  10-21 16:33:35.317 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:33:35.332 - 1000 (System) - REL NetworkStats
+  10-21 16:33:35.347 - 99910312 (com.tencent.mm) - ACQ MicroMsg.MMAutoAuth (partial)
+  10-21 16:33:35.352 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:35.355 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:33:35.358 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:35.817 - 99910312 (com.tencent.mm) - REL StnManagerCallback
+  10-21 16:33:35.850 - 99910312 (com.tencent.mm) - REL MicroMsg.MMAutoAuth
+  10-21 16:33:36.362 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:33:36.364 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:33:36.367 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:36.368 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:33:37.047 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:37.050 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:33:37.054 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:37.077 - 99910312 (com.tencent.mm) - ACQ MicroMsg.MMAutoAuth (partial)
+  10-21 16:33:37.082 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:37.084 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:33:37.086 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:33:37.087 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:33:37.088 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:37.088 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:33:37.374 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:33:37.376 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:33:37.378 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:37.380 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:33:37.580 - 99910312 (com.tencent.mm) - REL MicroMsg.MMAutoAuth
+  10-21 16:33:38.059 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:33:38.062 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:33:38.064 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:38.065 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:33:38.384 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:33:38.386 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:33:38.388 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:38.389 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:33:39.072 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:33:39.074 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:33:39.076 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:39.077 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:33:39.394 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:33:39.397 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:33:39.401 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:39.402 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:33:40.085 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:33:40.087 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:33:40.090 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:40.092 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:33:40.410 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:33:40.413 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:33:40.416 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:40.417 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:33:40.848 - 99910312 (com.tencent.mm) - ACQ MicroMsg.MMAutoAuth (partial)
+  10-21 16:33:40.855 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:40.858 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:33:40.862 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:33:40.864 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:33:40.866 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:40.867 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:33:41.005 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:33:41.023 - 1000 (System) - REL *alarm*
+  10-21 16:33:41.096 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:33:41.099 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:33:41.101 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:41.103 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:33:41.155 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:33:41.350 - 99910312 (com.tencent.mm) - REL MicroMsg.MMAutoAuth
+  10-21 16:33:41.421 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:33:41.423 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:33:41.425 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:41.426 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:33:42.432 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:33:42.434 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:33:42.437 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:42.438 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:33:43.447 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:33:43.450 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:33:43.453 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:43.455 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:33:44.462 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:33:44.465 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:33:44.468 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:44.470 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:33:45.475 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:33:45.477 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:33:45.479 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:33:45.481 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:33:45.537 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:34:00.009 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:34:00.011 - 1000 (System) - REL *alarm*
+  10-21 16:34:10.156 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:34:10.170 - 1000 (System) - REL NetworkStats
+  10-21 16:34:10.173 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:34:10.178 - 1000 (System) - REL NetworkStats
+  10-21 16:34:11.025 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:34:11.035 - 1000 (System) - REL *alarm*
+  10-21 16:34:16.254 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:34:16.282 - 1000 (System) - REL NetworkStats
+  10-21 16:34:20.647 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:34:20.666 - 1000 (System) - REL NetworkStats
+  10-21 16:34:41.038 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:34:41.058 - 1000 (System) - REL *alarm*
+  10-21 16:35:00.011 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:35:00.013 - 1000 (System) - REL *alarm*
+  10-21 16:35:11.058 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:35:11.082 - 1000 (System) - REL *alarm*
+  10-21 16:35:16.251 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:35:16.291 - 1000 (System) - REL NetworkStats
+  10-21 16:35:36.730 - 10187 (com.xiaomi.xmsf) - ACQ NotificationManagerService:post:com.mipay.wallet (partial)
+  10-21 16:35:36.764 - 10187 (com.xiaomi.xmsf) - REL NotificationManagerService:post:com.mipay.wallet
+  10-21 16:35:41.083 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:35:41.105 - 1000 (System) - REL *alarm*
+  10-21 16:36:00.008 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:36:00.017 - 1000 (System) - REL *alarm*
+  10-21 16:36:11.108 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:36:11.132 - 1000 (System) - REL *alarm*
+  10-21 16:36:16.253 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:36:16.275 - 1000 (System) - REL NetworkStats
+  10-21 16:36:26.793 - 10140 (com.android.mms) - ACQ *alarm* (partial)
+  10-21 16:36:26.805 - 10140 (com.android.mms) - REL *alarm*
+  10-21 16:36:28.709 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:36:28.710 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:36:28.710 - 10127 (com.xiaomi.aicr) - ACQ *telephony-radio* (partial)
+  10-21 16:36:28.721 - 10127 (com.xiaomi.aicr) - REL *telephony-radio*
+  10-21 16:36:28.721 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:36:28.722 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:36:36.178 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:36:36.181 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:36:36.181 - 1000 (System) - ACQ *telephony-radio* (partial)
+  10-21 16:36:36.186 - 1000 (System) - REL *telephony-radio*
+  10-21 16:36:36.186 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:36:36.187 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:36:41.135 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:36:41.161 - 1000 (System) - REL *alarm*
+  10-21 16:36:43.529 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:36:43.546 - 1000 (System) - REL *alarm*
+  10-21 16:36:43.574 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:36:43.575 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:36:43.575 - 10127 (com.xiaomi.aicr) - ACQ *telephony-radio* (partial)
+  10-21 16:36:43.586 - 10127 (com.xiaomi.aicr) - REL *telephony-radio*
+  10-21 16:36:43.586 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:36:43.587 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:36:51.575 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:36:51.603 - 1000 (System) - REL NetworkStats
+  10-21 16:37:00.013 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:37:00.015 - 1000 (System) - REL *alarm*
+  10-21 16:37:07.419 - 99910312 (com.tencent.mm) - ACQ MicroMsg.MMAutoAuth (partial)
+  10-21 16:37:07.428 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:37:07.432 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:37:07.436 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:37:07.691 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:37:07.704 - 1000 (System) - REL NetworkStats
+  10-21 16:37:07.929 - 99910312 (com.tencent.mm) - REL MicroMsg.MMAutoAuth
+  10-21 16:37:08.443 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:37:08.445 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:37:08.449 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:37:08.451 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:37:09.459 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:37:09.463 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:37:09.466 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:37:09.467 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:37:10.473 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:37:10.475 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:37:10.478 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:37:10.479 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:37:11.161 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:37:11.190 - 1000 (System) - REL *alarm*
+  10-21 16:37:11.489 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:37:11.493 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:37:11.495 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:37:11.497 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:37:12.504 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:37:12.507 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:37:12.510 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:37:12.511 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:37:13.519 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:37:13.521 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:37:13.524 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:37:13.526 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:37:14.532 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  10-21 16:37:14.534 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:37:14.536 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  10-21 16:37:14.538 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  10-21 16:37:14.589 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  10-21 16:37:33.928 - 10187 (com.xiaomi.xmsf) - ACQ *alarm* (partial)
+  10-21 16:37:33.961 - 10187 (com.xiaomi.xmsf) - REL *alarm*
+  10-21 16:37:41.188 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:37:41.203 - 1000 (System) - REL *alarm*
+  10-21 16:37:42.981 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:37:42.982 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:37:42.982 - 10127 (com.xiaomi.aicr) - ACQ *telephony-radio* (partial)
+  10-21 16:37:42.992 - 10127 (com.xiaomi.aicr) - REL *telephony-radio*
+  10-21 16:37:42.992 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:37:42.993 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:38:00.010 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:38:00.012 - 1000 (System) - REL *alarm*
+  10-21 16:38:09.819 - 10123 (com.android.vending) - ACQ *job*r/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground (partial)
+  10-21 16:38:09.821 - 10123 (com.android.vending) - ACQ *job*r/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground (partial)
+  10-21 16:38:09.830 - 10123 (com.android.vending) - REL *job*r/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground
+  10-21 16:38:09.830 - 10123 (com.android.vending) - ACQ *job*r/com.android.vending/com.google.android.finsky.scheduler.process.mainimpl.PhoneskyJobServiceMain (partial)
+  10-21 16:38:09.831 - 10123 (com.android.vending) - ACQ *job*r/com.android.vending/com.google.android.finsky.scheduler.process.mainimpl.PhoneskyJobServiceMain (partial)
+  10-21 16:38:09.835 - 10123 (com.android.vending) - REL *job*r/com.android.vending/com.google.android.finsky.scheduler.process.mainimpl.PhoneskyJobServiceMain
+  10-21 16:38:09.835 - 10123 (com.android.vending) - ACQ *job*r/com.android.vending/com.google.android.finsky.scheduler.process.mainimpl.PhoneskyJobServiceMain (partial)
+  10-21 16:38:09.835 - 10123 (com.android.vending) - ACQ *job*r/com.android.vending/com.google.android.finsky.scheduler.process.mainimpl.PhoneskyJobServiceMain (partial)
+  10-21 16:38:09.837 - 10123 (com.android.vending) - REL *job*r/com.android.vending/com.google.android.finsky.scheduler.process.mainimpl.PhoneskyJobServiceMain
+  10-21 16:38:09.848 - 10123 (com.android.vending) - REL *job*r/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground
+  10-21 16:38:09.859 - 10261 (com.android.email) - ACQ *job*r/@SyncManager@com.android.email.provider/com.android.email:android (partial)
+  10-21 16:38:09.861 - 10261 (com.android.email) - ACQ *job*r/@SyncManager@com.android.email.provider/com.android.email:android (partial)
+  10-21 16:38:09.864 - 10261 (com.android.email) - REL *job*r/@SyncManager@com.android.email.provider/com.android.email:android
+  10-21 16:38:09.864 - 10261 (com.android.email) - ACQ *job*r/@SyncManager@com.android.email.provider/com.android.email:android (partial)
+  10-21 16:38:09.865 - 10261 (com.android.email) - ACQ *job*r/@SyncManager@com.android.email.provider/com.android.email:android (partial)
+  10-21 16:38:09.869 - 10261 (com.android.email) - REL *job*r/@SyncManager@com.android.email.provider/com.android.email:android
+  10-21 16:38:09.873 - 1000 (System) - ACQ SyncLoopWakeLock (partial)
+  10-21 16:38:09.875 - 1000 (System) - REL SyncLoopWakeLock
+  10-21 16:38:09.875 - 1000 (System) - ACQ SyncLoopWakeLock (partial)
+  10-21 16:38:09.876 - 10261 (com.android.email) - REL *job*r/@SyncManager@com.android.email.provider/com.android.email:android
+  10-21 16:38:09.881 - 1000 (System) - REL SyncLoopWakeLock
+  10-21 16:38:09.882 - 10261 (com.android.email) - REL *job*r/@SyncManager@com.android.email.provider/com.android.email:android
+  10-21 16:38:11.203 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:38:11.223 - 1000 (System) - REL *alarm*
+  10-21 16:38:16.249 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:38:16.294 - 1000 (System) - REL NetworkStats
+  10-21 16:38:41.221 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:38:41.236 - 1000 (System) - REL *alarm*
+  10-21 16:39:00.008 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:39:00.012 - 1000 (System) - REL *alarm*
+  10-21 16:39:11.237 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:39:11.251 - 1000 (System) - REL *alarm*
+  10-21 16:39:16.249 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:39:16.268 - 1000 (System) - REL NetworkStats
+  10-21 16:39:28.684 - 10123 (com.android.vending) - ACQ *job*e/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground (partial)
+  10-21 16:39:28.686 - 10123 (com.android.vending) - ACQ *job*e/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground (partial)
+  10-21 16:39:28.692 - 10123 (com.android.vending) - REL *job*e/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground
+  10-21 16:39:28.695 - 10123 (com.android.vending) - ACQ *job*r/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground (partial)
+  10-21 16:39:28.696 - 10123 (com.android.vending) - ACQ *job*r/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground (partial)
+  10-21 16:39:28.698 - 10123 (com.android.vending) - REL *job*r/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground
+  10-21 16:39:28.745 - 10123 (com.android.vending) - REL *job*r/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground
+  10-21 16:39:28.754 - 10123 (com.android.vending) - REL *job*e/com.android.vending/com.google.android.finsky.scheduler.process.backgroundimpl.PhoneskyJobServiceBackground
+  10-21 16:39:29.036 - 10123 (com.android.vending) - ACQ *job*e/com.android.vending/com.google.android.finsky.scheduler.process.quicklaunchimpl.PhoneskyJobServiceQuickLaunch (partial)
+  10-21 16:39:29.038 - 10123 (com.android.vending) - ACQ *job*e/com.android.vending/com.google.android.finsky.scheduler.process.quicklaunchimpl.PhoneskyJobServiceQuickLaunch (partial)
+  10-21 16:39:29.045 - 10123 (com.android.vending) - REL *job*e/com.android.vending/com.google.android.finsky.scheduler.process.quicklaunchimpl.PhoneskyJobServiceQuickLaunch
+  10-21 16:39:29.076 - 10123 (com.android.vending) - REL *job*e/com.android.vending/com.google.android.finsky.scheduler.process.quicklaunchimpl.PhoneskyJobServiceQuickLaunch
+  10-21 16:39:29.086 - 10123 (com.android.vending) - ACQ *job*r/com.android.vending/com.google.android.finsky.instantapps.InstantAppsSharedPreferencesService (partial)
+  10-21 16:39:29.087 - 10123 (com.android.vending) - ACQ *job*r/com.android.vending/com.google.android.finsky.instantapps.InstantAppsSharedPreferencesService (partial)
+  10-21 16:39:29.093 - 10123 (com.android.vending) - REL *job*r/com.android.vending/com.google.android.finsky.instantapps.InstantAppsSharedPreferencesService
+  10-21 16:39:29.239 - 10123 (com.android.vending) - REL *job*r/com.android.vending/com.google.android.finsky.instantapps.InstantAppsSharedPreferencesService
+  10-21 16:39:31.317 - 1000 (System) - ACQ NetworkStats (partial)
+  10-21 16:39:31.333 - 1000 (System) - REL NetworkStats
+  10-21 16:39:41.246 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:39:41.258 - 1000 (System) - REL *alarm*
+  10-21 16:39:43.971 - 1000 (System) - ACQ *launch* (partial)
+  10-21 16:39:44.049 - 1000 (System) - ACQ installer:packages (partial)
+  10-21 16:39:44.049 - 10396 (com.cn.ipc.demo) - REL *launch*
+  10-21 16:39:44.059 - 10123 (com.android.vending) - REL *job*r/com.android.vending/com.google.android.finsky.scheduler.process.mainimpl.PhoneskyJobServiceMain
+  10-21 16:39:44.059 - 10123 (com.android.vending) - REL *job*r/com.android.vending/com.google.android.finsky.scheduler.process.mainimpl.PhoneskyJobServiceMain
+  10-21 16:39:44.118 - 1000 (System) - REL installer:packages
+  10-21 16:39:44.417 - 1000 (System) - ACQ *job*r/com.miui.cleanmaster/androidx.work.impl.background.systemjob.SystemJobService (partial)
+  10-21 16:39:44.420 - 1000 (System) - ACQ *job*r/com.miui.cleanmaster/androidx.work.impl.background.systemjob.SystemJobService (partial)
+  10-21 16:39:44.424 - 1000 (System) - REL *job*r/com.miui.cleanmaster/androidx.work.impl.background.systemjob.SystemJobService
+  10-21 16:39:44.472 - 1000 (System) - REL *job*r/com.miui.cleanmaster/androidx.work.impl.background.systemjob.SystemJobService
+  10-21 16:39:44.475 - 1000 (System) - ACQ *job*r/com.miui.cleanmaster/androidx.work.impl.background.systemjob.SystemJobService (partial)
+  10-21 16:39:44.483 - 1000 (System) - ACQ *job*r/com.miui.cleanmaster/androidx.work.impl.background.systemjob.SystemJobService (partial)
+  10-21 16:39:44.485 - 1000 (System) - REL *job*r/com.miui.cleanmaster/androidx.work.impl.background.systemjob.SystemJobService
+  10-21 16:39:44.490 - 1000 (System) - REL *job*r/com.miui.cleanmaster/androidx.work.impl.background.systemjob.SystemJobService
+  10-21 16:39:44.494 - 1000 (System) - ACQ *job*r/com.miui.cleanmaster/androidx.work.impl.background.systemjob.SystemJobService (partial)
+  10-21 16:39:44.496 - 1000 (System) - ACQ *job*r/com.miui.cleanmaster/androidx.work.impl.background.systemjob.SystemJobService (partial)
+  10-21 16:39:44.503 - 1000 (System) - REL *job*r/com.miui.cleanmaster/androidx.work.impl.background.systemjob.SystemJobService
+  10-21 16:39:44.510 - 1000 (System) - REL *job*r/com.miui.cleanmaster/androidx.work.impl.background.systemjob.SystemJobService
+  10-21 16:39:44.717 - 10129 (com.google.android.gsf,...) - ACQ IntentOp:.c.b.BackgroundBroadcastReceiverSupport$GmsReceiverIntentOperation (partial)
+  10-21 16:39:44.717 - 10129 (com.google.android.gsf,...) - ACQ IntentOp:.c.b.BackgroundBroadcastReceiverSupport$PersistentReceiverIntentOperation (partial)
+  10-21 16:39:44.719 - 10129 (com.google.android.gsf,...) - ACQ IntentOp:.c.b.BackgroundBroadcastReceiverSupport$PersistentReceiverIntentOperation (partial)
+  10-21 16:39:44.722 - 10129 (com.google.android.gsf,...) - ACQ IntentOp:.c.b.BackgroundBroadcastReceiverSupport$GmsReceiverIntentOperation (partial)
+  10-21 16:39:44.723 - 10129 (com.google.android.gsf,...) - ACQ IntentOp:.c.b.BackgroundBroadcastReceiverSupport$PersistentReceiverIntentOperation (partial)
+  10-21 16:39:44.726 - 10129 (com.google.android.gsf,...) - REL IntentOp:.c.b.BackgroundBroadcastReceiverSupport$PersistentReceiverIntentOperation
+  10-21 16:39:44.732 - 10129 (com.google.android.gsf,...) - REL IntentOp:.c.b.BackgroundBroadcastReceiverSupport$GmsReceiverIntentOperation
+  10-21 16:39:44.734 - 10129 (com.google.android.gsf,...) - REL IntentOp:.c.b.BackgroundBroadcastReceiverSupport$PersistentReceiverIntentOperation
+  10-21 16:39:44.750 - 10129 (com.google.android.gsf,...) - REL IntentOp:.c.b.BackgroundBroadcastReceiverSupport$GmsReceiverIntentOperation
+  10-21 16:39:44.757 - 10129 (com.google.android.gsf,...) - REL IntentOp:.c.b.BackgroundBroadcastReceiverSupport$PersistentReceiverIntentOperation
+  10-21 16:39:44.758 - 10129 (com.google.android.gsf,...) - ACQ Icing (partial)
+  10-21 16:39:44.762 - 10129 (com.google.android.gsf,...) - REL Icing
+  10-21 16:39:44.765 - 10129 (com.google.android.gsf,...) - ACQ Icing (partial)
+  10-21 16:39:44.773 - 10396 (com.cn.ipc.demo) - REL Icing
+  10-21 16:39:44.783 - 10129 (com.google.android.gsf,...) - ACQ Icing (partial)
+  10-21 16:39:44.793 - 10129 (com.google.android.gsf,...) - REL Icing
+  10-21 16:39:45.651 - 10396 (com.cn.ipc.demo) - ACQ *launch* (partial)
+  10-21 16:39:45.986 - 10396 (com.cn.ipc.demo) - REL *launch*
+  10-21 16:39:54.096 - 10396 (com.cn.ipc.demo) - ACQ *launch* (partial)
+  10-21 16:39:54.405 - 10396 (com.cn.ipc.demo) - REL *launch*
+  10-21 16:39:58.954 - 10396 (com.cn.ipc.demo) - ACQ *launch* (partial)
+  10-21 16:39:59.272 - 10396 (com.cn.ipc.demo) - REL *launch*
+  10-21 16:40:00.008 - 1000 (System) - ACQ *alarm* (partial)
+  10-21 16:40:00.009 - 1000 (System) - REL *alarm*
+  10-21 16:40:01.917 - 10396 (com.cn.ipc.demo) - ACQ *launch* (partial)
+  10-21 16:40:02.250 - 10396 (com.cn.ipc.demo) - REL *launch*
+  10-21 16:40:04.152 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:40:04.153 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  10-21 16:40:04.153 - 10127 (com.xiaomi.aicr) - ACQ *telephony-radio* (partial)
+  10-21 16:40:04.164 - 10127 (com.xiaomi.aicr) - REL *telephony-radio*
+  10-21 16:40:04.164 - 1001 (com.android.mms.service,...) - ACQ *telephony-radio* (partial)
+  10-21 16:40:04.165 - 1001 (com.android.mms.service,...) - REL *telephony-radio*
+  -
+  Events: 988, Time-Resets: 137
+  Buffer, Bytes used: 3069
+  Tag Database: size(64), entries: 64, Bytes used: 7662
+
+Full Wakelock Log:
+Wake Lock Log
+  10-21 00:34:00.727 - 10431 (com.android.chrome) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 00:34:43.940 - 10431 (com.android.chrome) - REL WindowManager/displayId:0
+  10-21 00:42:33.344 - 10431 (com.android.chrome) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 00:47:27.893 - 10431 (com.android.chrome) - REL WindowManager/displayId:0
+  10-21 00:50:45.646 - 10431 (com.android.chrome) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 00:56:21.535 - 10431 (com.android.chrome) - REL WindowManager/displayId:0
+  10-21 00:56:21.591 - 10431 (com.android.chrome) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 00:57:42.636 - 10431 (com.android.chrome) - REL WindowManager/displayId:0
+  10-21 00:57:45.407 - 10431 (com.android.chrome) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 00:57:47.648 - 10431 (com.android.chrome) - REL WindowManager/displayId:0
+  10-21 00:58:07.808 - 10431 (com.android.chrome) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 00:58:59.815 - 10431 (com.android.chrome) - REL WindowManager/displayId:0
+  10-21 07:50:01.079 - 10260 (com.android.deskclock) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 07:50:01.525 - 10260 (com.android.deskclock) - ACQ DC:AlarmClock (screen-bright,acq-causes-wake)
+  10-21 07:50:01.526 - 10260 (com.android.deskclock) - REL DC:AlarmClock
+  10-21 07:50:06.661 - 10260 (com.android.deskclock) - REL WindowManager/displayId:0
+  10-21 07:50:07.261 - 10260 (com.android.deskclock) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 07:50:07.546 - 10260 (com.android.deskclock) - REL WindowManager/displayId:0
+  10-21 08:00:07.906 - 10260 (com.android.deskclock) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 08:00:08.395 - 10260 (com.android.deskclock) - ACQ DC:AlarmClock (screen-bright,acq-causes-wake)
+  10-21 08:00:08.396 - 10260 (com.android.deskclock) - REL DC:AlarmClock
+  10-21 08:00:15.301 - 10260 (com.android.deskclock) - REL WindowManager/displayId:0
+  10-21 08:00:15.945 - 10260 (com.android.deskclock) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 08:00:16.185 - 10260 (com.android.deskclock) - REL WindowManager/displayId:0
+  10-21 08:10:17.010 - 10260 (com.android.deskclock) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 08:10:17.376 - 10260 (com.android.deskclock) - ACQ DC:AlarmClock (screen-bright,acq-causes-wake)
+  10-21 08:10:17.376 - 10260 (com.android.deskclock) - REL DC:AlarmClock
+  10-21 08:11:03.404 - 10260 (com.android.deskclock) - REL WindowManager/displayId:0
+  10-21 08:11:04.507 - 1000 (System) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 08:11:04.799 - 1000 (System) - REL WindowManager/displayId:0
+  10-21 08:19:54.888 - 1000 (System) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 08:19:55.319 - 1000 (System) - REL WindowManager/displayId:0
+  10-21 08:21:41.012 - 10290 (com.autonavi.minimap) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 08:37:03.598 - 10290 (com.autonavi.minimap) - REL WindowManager/displayId:0
+  10-21 08:50:15.786 - 10463 (com.kedacom.kdmoa) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 08:50:17.218 - 10463 (com.kedacom.kdmoa) - REL WindowManager/displayId:0
+  10-21 09:00:22.518 - 10463 (com.kedacom.kdmoa) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 09:00:23.137 - 10463 (com.kedacom.kdmoa) - REL WindowManager/displayId:0
+  10-21 13:26:43.897 - 10441 (com.v2ray.ang) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 13:26:46.158 - 10441 (com.v2ray.ang) - REL WindowManager/displayId:0
+  10-21 13:40:05.124 - 10178 (com.xiaomi.smarthome) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 13:40:08.493 - 10178 (com.xiaomi.smarthome) - REL WindowManager/displayId:0
+  10-21 14:02:00.828 - 1000 (System) - ACQ InCallWakeLockController (full)
+  10-21 14:02:01.023 - 10125 (com.android.incallui) - ACQ InCallPresenter (screen-bright,on-after-release,acq-causes-wake)
+  10-21 14:02:01.023 - 10125 (com.android.incallui) - REL InCallPresenter
+  10-21 14:02:01.096 - 10125 (com.android.incallui) - ACQ InCallPresenterDimmed (screen-dim)
+  10-21 14:02:01.294 - 10125 (com.android.incallui) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 14:02:06.624 - 1000 (System) - REL InCallWakeLockController
+  10-21 14:02:07.008 - 1000 (System) - REL WindowManager/displayId:0
+  10-21 14:02:07.347 - 1000 (System) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 14:02:36.190 - 10125 (com.android.incallui) - ACQ InCallPresenter (screen-bright,on-after-release,acq-causes-wake)
+  10-21 14:02:36.190 - 10125 (com.android.incallui) - REL InCallPresenter
+  10-21 14:02:36.333 - 1000 (System) - REL WindowManager/displayId:0
+  10-21 14:02:38.376 - 1000 (System) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 14:02:38.810 - 1000 (System) - REL WindowManager/displayId:0
+  10-21 14:02:41.778 - 10125 (com.android.incallui) - REL InCallPresenterDimmed
+  10-21 16:15:31.264 - 1000 (System) - ACQ wireless_charge (screen-bright)
+  10-21 16:15:33.552 - 1000 (System) - REL wireless_charge
+  10-21 16:16:40.480 - 1000 (System) - ACQ wireless_charge (screen-bright)
+  10-21 16:16:42.693 - 1000 (System) - REL wireless_charge
+  10-21 16:26:56.694 - 10396 (com.cn.ipc.demo) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 16:26:59.138 - 10396 (com.cn.ipc.demo) - REL WindowManager/displayId:0
+  10-21 16:39:45.965 - 10396 (com.cn.ipc.demo) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 16:39:51.905 - 10396 (com.cn.ipc.demo) - REL WindowManager/displayId:0
+  10-21 16:39:54.389 - 10396 (com.cn.ipc.demo) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 16:39:56.695 - 10396 (com.cn.ipc.demo) - REL WindowManager/displayId:0
+  10-21 16:39:59.241 - 10396 (com.cn.ipc.demo) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 16:39:59.684 - 10396 (com.cn.ipc.demo) - REL WindowManager/displayId:0
+  10-21 16:40:02.224 - 10396 (com.cn.ipc.demo) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  10-21 16:40:03.239 - 10396 (com.cn.ipc.demo) - REL WindowManager/displayId:0
+  -
+  Events: 70, Time-Resets: 58
+  Buffer, Bytes used: 697
+  Tag Database: size(16), entries: 14, Bytes used: 1090
+
+
+Wakefulness Session Observer:
+default timeout: 600000
+override timeout: -1
+  Wakefulness Session Power Group powerGroupId: 0
+    current wakefulness: 1
+    current user activity event: 0
+    current user activity duration: 12757
+    previous user activity event: 2
+    previous user activity duration: 430701
+    is in override timeout: false
+    mIsInteractive: true
+    current screen policy: 3
+    current screen policy duration: 1404198
+    previous screen policy: 1
+    past screen policy duration: 15891
+
+FaceDownDetector:
+  mFaceDown=false
+  mActive=false
+  mLastFlipTime=0
+  mSensorMaxLatencyMicros=2000000
+  mUserInteractionBackoffMillis=60000
+  mPreviousResultTime=0
+  mPreviousResultType=1
+  mMillisSaved=0
+  mZAccelerationThreshold=-9.5
+  mAccelerationThreshold=0.2
+  mTimeThreshold=PT1S
+  mEnabledOverride=true
+AmbientDisplaySuppressionController:
+ ambientDisplaySuppressed=false
+ mSuppressionTokens={}
+
+Low Power Standby Controller:
+  mIsActive=false
+  mIsEnabled=false
+  mSupportedConfig=false
+  mEnabledByDefaultConfig=false
+  mStandbyTimeoutConfig=0
+  mEnableCustomPolicy=false
+  Allowed UIDs=[]
+  
+  UID allowed reasons:
+
+ScreenTimeoutOverridePolicy:
+  mScreenTimeoutOverrideConfig=-1
+  mLastAutoReleaseReason=-1
+PowerManagerFlags:
+ enable_early_screen_timeout_detector:                 true (def:true)
+ improve_wakelock_latency:                             true (def:true)
+ per_display_wake_by_touch:                            true (def:true)
+ framework_wakelock_info:                              false (def:false)
+ move_wsc_logging_to_notifier:                         true (def:true)
+ wakelock_attribution_via_workchain:                   true (def:true)
+ disable_frozen_process_wakelocks:                     false (def:false)

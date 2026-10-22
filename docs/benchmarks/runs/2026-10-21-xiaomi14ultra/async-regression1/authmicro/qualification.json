@@ -1,0 +1,17 @@
+{
+  "valid": true,
+  "ruleVersion": "foreground-coverage-v1",
+  "targetSamplePeriodMs": 500,
+  "permittedMaxGapMs": 1000,
+  "scope": "activity_events_with_bounded_periodic_sample_coverage",
+  "observations": 2,
+  "sampleCount": 0,
+  "requiredSampleCount": 0,
+  "durationMs": 316,
+  "maxGapMs": 316,
+  "observationMaxGapMs": 316,
+  "errors": [],
+  "sourceSha256": "255A7B320A1FF3F91633BB528A9491A95FCDE2396DD7C574304781DB009A1C35",
+  "run": "authmicro-asyncopt1",
+  "csv": "foreground-authmicro-asyncopt1.csv"
+}

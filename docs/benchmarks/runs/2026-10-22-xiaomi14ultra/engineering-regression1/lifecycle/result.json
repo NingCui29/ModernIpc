@@ -1,0 +1,42 @@
+{
+  "group": "lifecycle",
+  "tag": "IpcLifecycleProbe",
+  "expectedPasses": 22,
+  "runId": "lifecycle-engfix-20261022",
+  "status": "FAILED",
+  "valid": false,
+  "error": "RuntimeError: Probe failure: FAILED run=lifecycle-engfix-20261022",
+  "foregroundQualification": {
+    "valid": false,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 0,
+    "sampleCount": 0,
+    "requiredSampleCount": null,
+    "durationMs": null,
+    "maxGapMs": null,
+    "observationMaxGapMs": null,
+    "errors": [
+      "Expected exactly one BEGIN followed by exactly one final END",
+      "RuntimeError: Probe failure: FAILED run=lifecycle-engfix-20261022"
+    ],
+    "sourceSha256": "00B18AF6BC92711D8330F9A3D8B188AC8A8DC6AE83CA89520CEC16FD14AD0B38",
+    "run": "lifecycle-engfix-20261022",
+    "csv": "foreground-lifecycle-engfix-20261022.csv"
+  },
+  "observed": {
+    "runId": "lifecycle-engfix-20261022",
+    "tag": "IpcLifecycleProbe",
+    "passCount": 0,
+    "doneCount": 0,
+    "foregroundEndCount": 0,
+    "expectedPasses": 22,
+    "complete": false,
+    "valid": false,
+    "errors": [
+      "FAILED run=lifecycle-engfix-20261022"
+    ]
+  }
+}

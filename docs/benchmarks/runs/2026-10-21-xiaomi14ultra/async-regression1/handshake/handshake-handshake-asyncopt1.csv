@@ -1,0 +1,10 @@
+case,elapsedMs,details
+rawKeepBinding,,"remoteProcess=true handshakeAttempts=0 serverPid=2222"
+closeBlockedHandshake,2,"elapsedMs=2 remoteStillBlockedBeforeRelease=true lateReplyNoRevive=true generation=0 pending=0"
+disposeBlockedHandshake,2,"elapsedMs=2 remoteStillBlockedBeforeRelease=true lateReplyNoRevive=true generation=0 pending=0"
+bindingTimeoutRetry,608,"bindingTimeoutMs=600 elapsedMs=608 maxReconnectAttempts=0 disconnectedBeforeRelease=true lateReplyNoRevive=true explicitRetry=true attempts=2 pending=0"
+boundedReconnect,,"bindingTimeoutMs=600 maxReconnectAttempts=1 attempts=2 finalDisconnected=true lateRepliesNoRevive=true pending=0"
+lateHandshakeIsolation,,"freshConnectedBeforeOldRelease=true attempts=2 oldReplyDidNotReplaceConnected=true generation=1 pending=0"
+ownerCancelBlockedHandshake,5,"elapsedMs=5 autoDisposedBeforeExplicitJoin=true remoteStillBlockedBeforeRelease=true lateReplyNoRevive=true pending=0"
+boundedHandshakePool,4,"workerLimit=4 fifthDisconnected=true elapsedMs=4 bindingTimeoutMs=5000 serverAttempts=4 peakBlocked=4 pending=0"
+handshakeCapacityRecovered,,"releaseRecovered=true connectedControllers=5 serverAttempts=5 replies=5 pending=0 watchdogs=0"

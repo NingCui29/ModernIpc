@@ -1,0 +1,31 @@
+PASS normal_completion_permit_reuse
+PASS cancel_before_start
+PASS duplicate_retains_original_permit
+PASS cancel_uid_isolation
+PASS cancel_callback_isolation
+PASS cancelled_scope_rejection
+PASS scope_cancel_before_start
+PASS dispose_idempotence_rejection
+PASS 128_request_limit
+PASS running_cancel_terminal_owner
+PASS callback_death_before_start
+PASS link_failure_permit_reuse
+PASS null_callback
+PASS concurrent_submit_cancel_dispose_1600
+Exception in thread "main" java.lang.IllegalStateException: Old death callback cancelled the replacement job
+	at com.cn.ipc.server.host.RequestTrackerHostTestKt.staleDeathRecipientDoesNotCancelReusedKey(RequestTrackerHostTest.kt:228)
+	at com.cn.ipc.server.host.RequestTrackerHostTestKt.access$staleDeathRecipientDoesNotCancelReusedKey(RequestTrackerHostTest.kt:1)
+	at com.cn.ipc.server.host.RequestTrackerHostTestKt$main$1.invoke(RequestTrackerHostTest.kt:299)
+	at com.cn.ipc.server.host.RequestTrackerHostTestKt$main$1.invoke(RequestTrackerHostTest.kt:299)
+	at com.cn.ipc.server.host.RequestTrackerHostTestKt.main(RequestTrackerHostTest.kt:301)
+Traceback (most recent call last):
+  File "D:\Developer\WorkSpace\ModernIpc\ipc-runtime-server\src\test\host\run.py", line 62, in <module>
+    main()
+    ~~~~^^
+  File "D:\Developer\WorkSpace\ModernIpc\ipc-runtime-server\src\test\host\run.py", line 58, in main
+    subprocess.run(command, check=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python314\Lib\subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['C:\\Users\\Work\\.jdks\\ms-17.0.16\\bin\\java.exe', '-cp', 'C:\\Users\\Work\\AppData\\Local\\Temp\\modernipc-tracker-host-99oix3zk\\tracker-host.jar;C:\\Users\\Work\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlin\\kotlin-stdlib\\1.9.22\\d6c44cd08d8f3f9bece8101216dbe6553365c6e3\\kotlin-stdlib-1.9.22.jar;C:\\Users\\Work\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains.kotlinx\\kotlinx-coroutines-core-jvm\\1.7.3\\2b09627576f0989a436a00a4a54b55fa5026fb86\\kotlinx-coroutines-core-jvm-1.7.3.jar;C:\\Users\\Work\\.gradle\\caches\\modules-2\\files-2.1\\org.jetbrains\\annotations\\13.0\\919f0dfe192fb4e063e7dacadee7f8bb9a2672a9\\annotations-13.0.jar', 'com.cn.ipc.server.host.RequestTrackerHostTestKt']' returned non-zero exit status 1.

@@ -1,6 +1,8 @@
-"""Validate six SDKs, a shared example library and five APKs, then package a release.
+"""Validate SDK publications, a shared example library and application APKs.
 
-No credentials or devices are accessed. Repository evidence includes only files
+Local validation and packaging do not access credentials or devices. The explicit
+--verify-github-packages mode uses environment credentials for authenticated reads.
+Repository evidence includes only files
 tracked under docs/benchmarks/runs at HEAD; ignored historical APKs are not
 silently claimed to be present. Use --validate-only before committing changes,
 then run packaging from a clean, committed worktree.
@@ -9,6 +11,7 @@ then run packaging from a clean, committed worktree.
 from __future__ import annotations
 
 import argparse
+import base64
 import hashlib
 import json
 import os
@@ -16,6 +19,10 @@ import re
 import shutil
 import subprocess
 import sys
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
 import xml.etree.ElementTree as ET
 import zipfile
 from datetime import datetime, timezone
@@ -23,6 +30,9 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "scripts"))
+from verify_maven_consumers import verify_publication
+
 GROUP = "com.modernipc"
 SDK_MODULES = {
     "ipc-api": "aar",
@@ -40,6 +50,7 @@ APK_MODULES = {
     "app-client1": "com.cn.ipc.client1",
     "app-client2": "com.cn.ipc.client2",
     "app-client3": "com.cn.ipc.client3",
+    "benchmark-andlinker": "com.cn.ipc.benchmark.andlinker",
 }
 POM_NS = {"m": "http://maven.apache.org/POM/4.0.0"}
 
@@ -157,13 +168,65 @@ def validate_publications(version: str) -> list[dict]:
                     if algorithm in artifact:
                         require(artifact[algorithm].lower() == digest(path, algorithm),
                                 f"Gradle artifact {algorithm} differs: {name}")
+        public_api = None
+        if module in SDK_MODULES:
+            try:
+                public_api = verify_publication(ROOT / "local-maven", module, version)
+            except (RuntimeError, KeyError) as error:
+                raise ReleaseError(f"Public API export validation failed: {module}: {error}") from error
         publications.append({
             "module": module, "kind": "sdk" if module in SDK_MODULES else "shared-example",
             "coordinate": f"{GROUP}:{module}:{version}", "directory": directory.relative_to(ROOT).as_posix(),
+            "publicApiVerification": public_api,
             "files": [{"name": path.name, "size": path.stat().st_size, "sha256": digest(path)}
                       for path in files],
         })
     return publications
+
+
+def verify_remote_publications(publications: list[dict]) -> list[dict]:
+    """Compare every uploaded primary Maven file with its validated local bytes."""
+    repository = os.environ.get("GITHUB_REPOSITORY", "")
+    actor, token = os.environ.get("GITHUB_ACTOR", ""), os.environ.get("GITHUB_TOKEN", "")
+    require(bool(re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repository)),
+            "Set GITHUB_REPOSITORY to owner/repository for remote verification")
+    require(bool(actor and token), "Set GITHUB_ACTOR and GITHUB_TOKEN for remote verification")
+    authorization = "Basic " + base64.b64encode(f"{actor}:{token}".encode()).decode()
+    verified = []
+    for publication in publications:
+        directory = Path(publication["directory"]).relative_to("local-maven").as_posix()
+        for artifact in publication["files"]:
+            if Path(artifact["name"]).suffix not in {".aar", ".jar", ".pom", ".module"}:
+                continue
+            relative = directory + "/" + artifact["name"]
+            url = "https://maven.pkg.github.com/" + repository + "/" + urllib.parse.quote(relative, safe="/")
+            for attempt in range(3):
+                request = urllib.request.Request(url)
+                # Redirected object-storage downloads must not receive the GitHub token.
+                request.add_unredirected_header("Authorization", authorization)
+                try:
+                    with urllib.request.urlopen(request, timeout=60) as response:
+                        require(response.status == 200, f"Published artifact HTTP status differs: {relative}")
+                        checksum, size = hashlib.sha256(), 0
+                        for block in iter(lambda: response.read(1024 * 1024), b""):
+                            checksum.update(block)
+                            size += len(block)
+                    break
+                except urllib.error.HTTPError as error:
+                    if error.code in {404, 429, 500, 502, 503, 504} and attempt < 2:
+                        time.sleep(10)
+                        continue
+                    raise ReleaseError(f"Published artifact request failed: {relative}; HTTP {error.code}") from None
+                except (urllib.error.URLError, TimeoutError):
+                    if attempt < 2:
+                        time.sleep(10)
+                        continue
+                    raise ReleaseError(f"Published artifact network request failed: {relative}") from None
+            require(size == artifact["size"] and checksum.hexdigest() == artifact["sha256"],
+                    f"Published artifact bytes differ: {relative}")
+            verified.append({"path": relative, "size": size, "sha256": checksum.hexdigest()})
+            print("Verified published artifact:", relative)
+    return verified
 
 
 def resolve_android_tools(args: argparse.Namespace) -> tuple[Path, Path]:
@@ -198,6 +261,20 @@ def signer_command(signer: Path) -> list[str]:
     return [str(signer)]
 
 
+def signer_fingerprints(output: str, module: str) -> list[str]:
+    """Read application signer digests; a source stamp is a different identity."""
+    lines = [line.strip() for line in output.splitlines()
+             if line.strip().startswith(("Signer ", "Signer("))
+             and " certificate SHA-256 digest:" in line]
+    pattern = re.compile(
+        r"Signer(?: #[1-9]\d*|[ \t]*\(minSdkVersion=\d+(?:, maxSdkVersion=\d+)?\))"
+        r" certificate SHA-256 digest:[ \t]*([0-9a-fA-F]{64})[ \t]*")
+    matches = [pattern.fullmatch(line) for line in lines]
+    require(bool(matches) and all(matches),
+            f"Cannot verify signer: {module}; public apksigner stdout={output!r}")
+    return sorted({match.group(1).lower() for match in matches})
+
+
 def validate_apks(version: str, code: int, aapt: Path, signer: Path) -> list[dict]:
     apks = []
     certificates = None
@@ -210,12 +287,11 @@ def validate_apks(version: str, code: int, aapt: Path, signer: Path) -> list[dic
         require(match.groups() == (package, str(code), version), f"APK identity/version differs: {module}")
         require("application-debuggable" in badging, f"Expected an explicitly debug APK: {module}")
         result = command(signer_command(signer) + ["verify", "--print-certs", str(path)])
-        fingerprints = sorted(set(re.findall(r"(?m)^Signer #\d+ certificate SHA-256 digest:\s*([0-9a-fA-F]+)\s*$", result)))
-        require(bool(fingerprints) and all(len(item) == 64 for item in fingerprints), f"Cannot verify signer: {module}")
-        fingerprints = [item.lower() for item in fingerprints]
+        fingerprints = signer_fingerprints(result, module)
         if certificates is None:
             certificates = fingerprints
-        require(fingerprints == certificates, f"Five APKs do not share the same signing certificate: {module}")
+        require(fingerprints == certificates,
+                f"The {len(APK_MODULES)} APKs do not share the same signing certificate: {module}")
         apks.append({"module": module, "package": package, "versionName": version,
                      "versionCode": code, "debuggable": True,
                      "sourcePath": path.relative_to(ROOT).as_posix(),
@@ -310,11 +386,18 @@ def main() -> int:
     parser.add_argument("--android-sdk")
     parser.add_argument("--aapt")
     parser.add_argument("--apksigner")
+    parser.add_argument("--verify-github-packages", action="store_true",
+                        help="Verify all seven remote Maven publications against validated local bytes")
     parser.add_argument("--validate-only", action="store_true", help="Validate local artifacts without archiving HEAD or requiring a clean worktree")
     args = parser.parse_args()
     try:
         code = validate_version(args.version)
         publications = validate_publications(args.version)
+        if args.verify_github_packages:
+            verified = verify_remote_publications(publications)
+            print(json.dumps({"status": "REMOTE_VERIFIED", "version": args.version,
+                              "publications": len(publications), "artifactFiles": len(verified)}, ensure_ascii=True))
+            return 0
         aapt, signer = resolve_android_tools(args)
         apks = validate_apks(args.version, code, aapt, signer)
         output = None if args.validate_only else package_release(args, args.version, code, publications, apks)

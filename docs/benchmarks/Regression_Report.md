@@ -1,10 +1,59 @@
 # ModernIPC 小米功能回归报告
 
-发布候选3.0.0-rc.1另完成七个库产物与五个APK的统一构建和本地产物校验，详见[发布记录](../releases/v3.0.0-rc.1/build-result.json)。该发布版安装与小米验收NOT_RUN。本文保留此前开发阶段的APK、时间和证明范围。
+## 0. 2026-10-22：工程修复与生成 Stub 业务异常回归
+
+本轮 demo APK SHA-256 为 `D0E76D896BDC3F0C9F01E14073F34201FFE79BFC6B07106E7885EA4181F28A9A`。修复公开依赖导出并补充设备探针后，`:demo-app:assembleDebug` 退出码 0、125 tasks；构建身份、174 份源码/配置 SHA 和日志见[build-result.json](runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/build-result.json)。
+
+仅在 Xiaomi 14 Ultra `925c23bb` / `24031PN0DC` / Android 16 执行。安装前后拉包 SHA 与新包一致，九组前台资格全部有效，最大周期观察间隔 505 ms；完整[summary](runs/2026-10-22-xiaomi14ultra/engineering-regression2/summary.json)。
+
+| 门禁 | 本轮结果与范围 |
+| --- | --- |
+| 原六组框架回归 | 73 PASS / 6 DONE；生命周期、终态、兼容、故障、冷发现与握手 |
+| 独立 Async scope | 4 PASS / 1 DONE；取消、Flow 并行、截止及恢复 |
+| 新增生成 Stub 业务异常 | 9 PASS / 1 DONE；Default/专用 scope × 内部 timeout/主动 CancellationException × raw Binder/生成 Adapter，共 8 项，另默认恢复及健康请求 1 项 |
+| 同 UID 鉴权微测 | 独立 4 TIME / 4 ALLOC / 1 DONE；不计入上述 PASS，不证明跨 UID 攻击拒绝 |
+| 根 Gradle `:check` | 客户端 12 + 服务端 15 项 host 检查全通过；真实状态机源码配合 Android doubles |
+| 独立 Maven 消费 | 六 SDK 隔离临时版本，metadata/POM-only 两路径的 API-only、Async+Flow KSP 及 contract-only 下游均编译通过 |
+
+新 [IpcGeneratedTerminalProbe](../../demo-app/src/main/kotlin/com/cn/ipc/demo/IpcGeneratedTerminalProbe.kt)直接验证 status=0 错误回包、原 requestId、50 ms 观察窗口内唯一终态，以及生成客户端收到远端普通异常而非自身 2 秒 watchdog。两种调度下，业务内部 timeout 与业务主动抛出的取消异常都保留错误终态，最终 pending、请求、订阅归零并恢复 Default。它不把 50 ms 内的观察扩展为任意时间的形式证明。原取消降噪 `0003` 已撤回，详见[审计](../ModernIPC_Engineering_Audit.md)。
+
+首轮 [engineering-regression1](runs/2026-10-22-xiaomi14ultra/engineering-regression1/summary.json)因锁屏/Dozing 没有进入 BEGIN（started=false、PASS=0）后前台等待超时，原记录保留；设备随后断开，用户重新连接解锁后以**同一 APK**完成第二轮。失败未作为功能失败或性能样本计入，成功也未覆盖首次记录。
+
+独立消费与 host 原始日志、旧 RC1 导出缺失的只读反证见[归档](runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/archive.json)。Linux wrapper 已修为 Bash 启动，远端 CI 本轮 **NOT_RUN**；旧发布物未覆盖。新 APK 未重跑 AndLinker 性能，四个多 App 业务场景也仍待设备验收。
+
+复跑命令（实际执行前须保持指定小米已解锁、页面前台）：
+
+```powershell
+python docs/benchmarks/harness/capture_async_regression.py --output 全新的证据目录 --run-id 唯一ASCII后缀 --apk demo-app/build/outputs/apk/debug/demo-app-debug.apk --include-generated-terminals --execute
+```
+
+省略 `--execute` 只生成计划且不调用 ADB；省略 `--include-generated-terminals` 保留旧的八组采集兼容性。所有操作固定 `-s 925c23bb` 并校验小米型号。
+
+## 0.1. 2026-10-21：Async 优化候选已通过框架门禁
+
+本次未发布工作区候选 demo APK 为 `4F7ED1169CC6069EB360AF3D2AAAA7CF8D12BEC0B43FE3CBD79ABDD2FF6AB70F`。在 Xiaomi 14 Ultra `925c23bb` 上安装前后拉包 SHA 一致，原六组 **73 PASS / 6 DONE** 全通过；独立专用 Async scope **4 PASS / 1 DONE** 通过；同 UID 鉴权微测独立记录 **4 TIME / 4 ALLOC / 1 DONE**，不计为跨 UID 攻击测试。完整[身份、计数与前台资格](runs/2026-10-21-xiaomi14ultra/async-regression1/summary.json)。
+
+| 门禁 | 本轮结果 |
+| --- | --- |
+| 生命周期、关闭、重连与 dispose | 22 PASS |
+| 请求与 Flow 终态、截止及非法帧 | 8 PASS |
+| 严格 Schema 与代次缓存兼容 | 16 PASS |
+| 回复/断连竞争、取消与故障 | 6 PASS |
+| 冷发现与清理 | 12 PASS |
+| 独立握手隔离、饱和与恢复 | 9 PASS；此前未完成的设备验收本轮完成 |
+| 独立短任务 scope | 4 PASS：选择专用 scope；持有 Async 同时收集 Flow 并显式取消；截止后归零；恢复 Default |
+
+八组前台资格均有效，周期观察最大间隔不超过 505 ms；结束请求、订阅与 pending 按各探针归零。专用 scope 与 Flow scope 在 demo 共用同一个父 Job；未单独验证两个独立父 Job 的资源销毁，也未验收四个跨 App 业务场景。
+
+本地主机另有客户端 **12 项**、服务端 **15 项**定向测试：包括各 1000 次回复/断连竞争、1600 次并发提交/取消/dispose、UID/Callback key 隔离及许可边界。冻结旧 Tracker 在“旧死亡通知不应取消复用 key 的新 Job”用例失败，候选通过。主机 Android doubles 不证明真实 Binder 行为；原始日志与基线源码在[构建目录](runs/2026-10-21-xiaomi14ultra/async-optimization-build/)。本次采用请求记录合并并保留先登记后启动，鉴权入口未改。
+
+本节只验收该候选；固定发布标签、此前历史 APK、同签名多 App 与实际业务性能分别保持自己的证据边界。10/22 新性能结果见[性能报告第 0 节](Performance_Report.md#0-2026-10-2122async-请求管理与独立调度)。
+
+发布候选3.0.0-rc.1另完成七个库产物与五个APK的统一构建和本地产物校验，详见[发布记录](../releases/v3.0.0-rc.1/build-result.json)。标签对应的本地包23A280本轮仅作为安装后的性能基线；完整框架门禁属于4F7ED工作区候选。本文保留各阶段APK、时间和证明范围。
 
 更新日期：2026-10-09。设备范围为 Xiaomi 14 Ultra（`925c23bb`、`24031PN0DC`、Android 16）。本报告按生命周期、请求与流终态、协议兼容、冷发现与握手、请求 trace 汇总已有验证。性能数值与收益判断统一见[性能报告](Performance_Report.md)，跨应用业务验收见[多 App 报告](Multi_App_Report.md)。
 
-**当前源码只完成构建验证。** 此前四场景开发构建的 demo APK 为 `22DAB0…`；指定小米设备在 2026-10-09 15:04 不可用，安装和设备验收均为 `NOT_RUN`。此前 `402684…` 握手隔离 APK 已安装，但设备进入 Dozing、锁屏，新增握手 9 项及该版本完整回归没有运行。已通过的 `52 PASS / 4 DONE`、`64 PASS / 5 DONE` 只属于下面列出的历史 APK，不能作为当前版本通过证明。
+**以下为 10/9 及以前的历史状态。** 四场景开发构建 `22DAB0…` 当时未安装；`402684…` 当时因 Dozing/锁屏未运行新增握手和完整回归。其结果不改写为本轮候选通过；当前工作区候选的 73+4 项门禁见第 0 节。
 
 ## 1. 构建与验收身份
 
@@ -36,8 +85,8 @@
 | 严格兼容 `IpcCompatibilityProbe` | 16 | 16 | 16 |
 | 故障 `IpcFaultProbe` | 6 | 6 | 6 |
 | 冷发现 `IpcColdProbe` | 未包含 | 12 | 12 |
-| 握手隔离 `IpcHandshakeProbe` | 未包含 | 未包含 | 9，未运行 |
-| 合计 | **52 PASS / 4 DONE** | **64 PASS / 5 DONE** | **73 PASS / 6 DONE 为目标，尚未达到** |
+| 握手隔离 `IpcHandshakeProbe` | 未包含 | 未包含 | 9，4F7ED 候选已通过 |
+| 合计 | **52 PASS / 4 DONE** | **64 PASS / 5 DONE** | **4F7ED 候选 73 PASS / 6 DONE，另有独立 scope 4 项** |
 
 这里的 PASS 是探针断言数；三客户端 smoke、trace 完整性和业务场景另行计数，不加入 64 或 73 项。
 

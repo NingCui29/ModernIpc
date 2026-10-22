@@ -1,0 +1,89 @@
+{
+  "group": "compat",
+  "tag": "IpcCompatibilityProbe",
+  "expectedPasses": 16,
+  "runId": "compat-asyncopt1",
+  "status": "PASSED",
+  "valid": true,
+  "passCount": 16,
+  "doneCount": 1,
+  "foregroundEndCount": 1,
+  "complete": true,
+  "errors": [],
+  "passes": [
+    "PASS run=compat-asyncopt1 metadataMatch descriptor=true signatures=17 floor=1",
+    "PASS run=compat-asyncopt1 additiveSubset clientVersion=1 requestedTransactions=1 extraServerTransactions=true",
+    "PASS run=compat-asyncopt1 parameterChange brokerRejected=true controllerRejected=true",
+    "PASS run=compat-asyncopt1 returnChange brokerRejected=true controllerRejected=true",
+    "PASS run=compat-asyncopt1 modeChange brokerRejected=true controllerRejected=true",
+    "PASS run=compat-asyncopt1 envelopeChange brokerRejected=true controllerRejected=true",
+    "PASS run=compat-asyncopt1 missingTransaction brokerRejected=true controllerRejected=true",
+    "PASS run=compat-asyncopt1 descriptorChange brokerRejected=true controllerRejected=true",
+    "PASS run=compat-asyncopt1 futureClientVersion brokerRejected=true controllerRejected=true",
+    "PASS run=compat-asyncopt1 schemaCacheIsolation fullCached=true changedSchemaRejected=true subsetAccepted=true",
+    "PASS run=compat-asyncopt1 constructionMapMutation fingerprintStable=true originalSnapshotAccepted=true brokerWireAccepted=true copiedMutationRejected=true",
+    "PASS run=compat-asyncopt1 legacyFloor userFloor=2 userDenied=true echoFloor=1 echoAllowed=true",
+    "PASS run=compat-asyncopt1 strictCache coldMetadata=1 coldChecked=1 hotCalls=100 additionalDiscovery=0 legacy=0",
+    "PASS run=compat-asyncopt1 generationRevalidate metadata=2 checked=2 legacy=0 generationAdvanced=true",
+    "PASS run=compat-asyncopt1 legacyMethodsMissing metadataRejected=true checkedRejected=true legacyEchoAlive=true",
+    "PASS run=compat-asyncopt1 strictLegacyNoFallback explicitFailure=true metadataAttempts=1 checked=0 legacyFallbacks=0"
+  ],
+  "done": [
+    "DONE run=compat-asyncopt1 passed=true checks=16 requests=0 subscriptions=0 pending=0"
+  ],
+  "foregroundEnd": [
+    "END run=compat-asyncopt1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-compat-asyncopt1.csv scope=activity_events_and_500ms_app_samples"
+  ],
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 2,
+    "sampleCount": 0,
+    "requiredSampleCount": 0,
+    "durationMs": 131,
+    "maxGapMs": 131,
+    "observationMaxGapMs": 131,
+    "errors": [],
+    "sourceSha256": "14CEE4EF0A1A50E6B622BE621E6E51C5D4C159AB122F450A7649842688FF7247",
+    "run": "compat-asyncopt1",
+    "csv": "foreground-compat-asyncopt1.csv"
+  },
+  "observed": {
+    "runId": "compat-asyncopt1",
+    "tag": "IpcCompatibilityProbe",
+    "passCount": 16,
+    "doneCount": 1,
+    "foregroundEndCount": 1,
+    "expectedPasses": 16,
+    "complete": true,
+    "valid": true,
+    "errors": [],
+    "passes": [
+      "PASS run=compat-asyncopt1 metadataMatch descriptor=true signatures=17 floor=1",
+      "PASS run=compat-asyncopt1 additiveSubset clientVersion=1 requestedTransactions=1 extraServerTransactions=true",
+      "PASS run=compat-asyncopt1 parameterChange brokerRejected=true controllerRejected=true",
+      "PASS run=compat-asyncopt1 returnChange brokerRejected=true controllerRejected=true",
+      "PASS run=compat-asyncopt1 modeChange brokerRejected=true controllerRejected=true",
+      "PASS run=compat-asyncopt1 envelopeChange brokerRejected=true controllerRejected=true",
+      "PASS run=compat-asyncopt1 missingTransaction brokerRejected=true controllerRejected=true",
+      "PASS run=compat-asyncopt1 descriptorChange brokerRejected=true controllerRejected=true",
+      "PASS run=compat-asyncopt1 futureClientVersion brokerRejected=true controllerRejected=true",
+      "PASS run=compat-asyncopt1 schemaCacheIsolation fullCached=true changedSchemaRejected=true subsetAccepted=true",
+      "PASS run=compat-asyncopt1 constructionMapMutation fingerprintStable=true originalSnapshotAccepted=true brokerWireAccepted=true copiedMutationRejected=true",
+      "PASS run=compat-asyncopt1 legacyFloor userFloor=2 userDenied=true echoFloor=1 echoAllowed=true",
+      "PASS run=compat-asyncopt1 strictCache coldMetadata=1 coldChecked=1 hotCalls=100 additionalDiscovery=0 legacy=0",
+      "PASS run=compat-asyncopt1 generationRevalidate metadata=2 checked=2 legacy=0 generationAdvanced=true",
+      "PASS run=compat-asyncopt1 legacyMethodsMissing metadataRejected=true checkedRejected=true legacyEchoAlive=true",
+      "PASS run=compat-asyncopt1 strictLegacyNoFallback explicitFailure=true metadataAttempts=1 checked=0 legacyFallbacks=0"
+    ],
+    "done": [
+      "DONE run=compat-asyncopt1 passed=true checks=16 requests=0 subscriptions=0 pending=0"
+    ],
+    "foregroundEnd": [
+      "END run=compat-asyncopt1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-compat-asyncopt1.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}

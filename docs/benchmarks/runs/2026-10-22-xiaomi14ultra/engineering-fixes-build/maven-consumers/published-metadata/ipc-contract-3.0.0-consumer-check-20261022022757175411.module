@@ -1,0 +1,130 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.modernipc",
+    "module": "ipc-contract",
+    "version": "3.0.0-consumer-check-20261022022757175411",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ipc-contract-3.0.0-consumer-check-20261022022757175411.aar",
+          "url": "ipc-contract-3.0.0-consumer-check-20261022022757175411.aar",
+          "size": 38522,
+          "sha512": "dc7decc26df9646cb5b4ef5150f6e44d1da9e1c750203ee9f72bd27b28b68ac7e0a0712b5176e31fe9a8068fdf525cddc49c0d0c4ab50cf2700e1cd4c796d727",
+          "sha256": "000b0f7db54f9c1e9a3d12562421976645e836a0987e902d6d0207eedcfd7b02",
+          "sha1": "beddc7afc19e6acc7ab2d8492a5de9332e6e139d",
+          "md5": "722c19fad5343e915e9470e3c5f597b8"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-parcelize-runtime",
+          "version": {
+            "requires": "1.9.22"
+          }
+        },
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.12.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ipc-contract-3.0.0-consumer-check-20261022022757175411.aar",
+          "url": "ipc-contract-3.0.0-consumer-check-20261022022757175411.aar",
+          "size": 38522,
+          "sha512": "dc7decc26df9646cb5b4ef5150f6e44d1da9e1c750203ee9f72bd27b28b68ac7e0a0712b5176e31fe9a8068fdf525cddc49c0d0c4ab50cf2700e1cd4c796d727",
+          "sha256": "000b0f7db54f9c1e9a3d12562421976645e836a0987e902d6d0207eedcfd7b02",
+          "sha1": "beddc7afc19e6acc7ab2d8492a5de9332e6e139d",
+          "md5": "722c19fad5343e915e9470e3c5f597b8"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseSourcePublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ipc-contract-3.0.0-consumer-check-20261022022757175411-sources.jar",
+          "url": "ipc-contract-3.0.0-consumer-check-20261022022757175411-sources.jar",
+          "size": 7415,
+          "sha512": "6dca1289b9b8ad7cb69af5559090d01e433d36322b7813b6b22d81923c10b6f4b09bd973a49bc304af25be766b3cc27ac25c21d974d8accfabc29a92fd5612df",
+          "sha256": "83f2f51f1f138cb625e518192d80306a79abe46d48ee90f42d5ad625e8db7dc5",
+          "sha1": "15299d7a5389b46420cfb9719297fa7d04a9bae6",
+          "md5": "4a4136107a3dd1fa7f44c4a35ff1a62f"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseJavaDocPublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ipc-contract-3.0.0-consumer-check-20261022022757175411-javadoc.jar",
+          "url": "ipc-contract-3.0.0-consumer-check-20261022022757175411-javadoc.jar",
+          "size": 333294,
+          "sha512": "c01f34403450b1fed64c58fd2eb8a7e667ccbd7a32c8b8acf30fab2e80ba13cd46d4fc598232defc0772cdf0c1ee09e3a77a8c03e91631cd482376f0798ff809",
+          "sha256": "2ac94046f2e7504cae670fa5e2b3b55ddac2cd93b84fcafaefe23fc1e2a8ce39",
+          "sha1": "d21a8b8e96a3a9c5ea648d664ca56ff39a51c413",
+          "md5": "0ada86692cbf15824c9a7ac7c658441c"
+        }
+      ]
+    }
+  ]
+}

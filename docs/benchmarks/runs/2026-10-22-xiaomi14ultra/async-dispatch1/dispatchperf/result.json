@@ -1,0 +1,65 @@
+{
+  "group": "dispatchperf",
+  "tag": "IpcDispatchBench",
+  "expectedPasses": 4,
+  "runId": "dispatchperf-asyncopt2",
+  "status": "PASSED",
+  "valid": true,
+  "passCount": 4,
+  "doneCount": 1,
+  "foregroundEndCount": 1,
+  "complete": true,
+  "errors": [],
+  "passes": [
+    "PASS run=dispatchperf-asyncopt2 traceDisabled=true",
+    "PASS run=dispatchperf-asyncopt2 serialBlocks=24 count=24000 failures=0",
+    "PASS run=dispatchperf-asyncopt2 concurrentBlocks=4 count=4096 failures=0",
+    "PASS run=dispatchperf-asyncopt2 defaultRestored=true pending=0 requests=0 subscriptions=0"
+  ],
+  "done": [
+    "DONE run=dispatchperf-asyncopt2 passed=true checks=4 serialBlocks=24 concurrentBlocks=4"
+  ],
+  "foregroundEnd": [
+    "END run=dispatchperf-asyncopt2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-dispatchperf-asyncopt2.csv scope=activity_events_and_500ms_app_samples"
+  ],
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 37,
+    "sampleCount": 35,
+    "requiredSampleCount": 17,
+    "durationMs": 17861,
+    "maxGapMs": 505,
+    "observationMaxGapMs": 505,
+    "errors": [],
+    "sourceSha256": "8B35D68E1E23217575A49809CF0D5A54FDF7AF2F8DEA096B44AE8A5D0BDFB15F",
+    "run": "dispatchperf-asyncopt2",
+    "csv": "foreground-dispatchperf-asyncopt2.csv"
+  },
+  "observed": {
+    "runId": "dispatchperf-asyncopt2",
+    "tag": "IpcDispatchBench",
+    "passCount": 4,
+    "doneCount": 1,
+    "foregroundEndCount": 1,
+    "expectedPasses": 4,
+    "complete": true,
+    "valid": true,
+    "errors": [],
+    "passes": [
+      "PASS run=dispatchperf-asyncopt2 traceDisabled=true",
+      "PASS run=dispatchperf-asyncopt2 serialBlocks=24 count=24000 failures=0",
+      "PASS run=dispatchperf-asyncopt2 concurrentBlocks=4 count=4096 failures=0",
+      "PASS run=dispatchperf-asyncopt2 defaultRestored=true pending=0 requests=0 subscriptions=0"
+    ],
+    "done": [
+      "DONE run=dispatchperf-asyncopt2 passed=true checks=4 serialBlocks=24 concurrentBlocks=4"
+    ],
+    "foregroundEnd": [
+      "END run=dispatchperf-asyncopt2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-dispatchperf-asyncopt2.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}

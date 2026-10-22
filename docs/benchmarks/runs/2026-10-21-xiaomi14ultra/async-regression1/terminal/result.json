@@ -1,0 +1,73 @@
+{
+  "group": "terminal",
+  "tag": "IpcTerminalProbe",
+  "expectedPasses": 8,
+  "runId": "terminal-asyncopt1",
+  "status": "PASSED",
+  "valid": true,
+  "passCount": 8,
+  "doneCount": 1,
+  "foregroundEndCount": 1,
+  "complete": true,
+  "errors": [],
+  "passes": [
+    "PASS run=terminal-asyncopt1 finiteFlow items=1,2,3 completed=true subscriptions=0",
+    "PASS run=terminal-asyncopt1 runtimeFlowError itemBeforeError=7 message=flow-runtime-error subscriptions=0",
+    "PASS run=terminal-asyncopt1 streamOverflow explicitFailure=true consumed=69 subscriptions=0",
+    "PASS run=terminal-asyncopt1 streamConflate completed=true consumed=4 last=999 overflow=false subscriptions=0",
+    "PASS run=terminal-asyncopt1 explicitStreamCancel extraError=false subscriptions=0",
+    "PASS run=terminal-asyncopt1 rpcDeadline defaultMs=150 elapsedMs=154 serverJobObserved=true requests=0 pending=0",
+    "PASS run=terminal-asyncopt1 asyncParameterError callbackReceived=true message=Missing_payload requests=0 pending=0",
+    "PASS run=terminal-asyncopt1 badTokenDeadline callbackTrusted=false defaultMs=150 elapsedMs=152 requests=0 pending=0"
+  ],
+  "done": [
+    "DONE run=terminal-asyncopt1 passed=true checks=8 subscriptions=0 requests=0 pending=0 anchorAlive=true"
+  ],
+  "foregroundEnd": [
+    "END run=terminal-asyncopt1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-terminal-asyncopt1.csv scope=activity_events_and_500ms_app_samples"
+  ],
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 5,
+    "sampleCount": 3,
+    "requiredSampleCount": 1,
+    "durationMs": 1992,
+    "maxGapMs": 504,
+    "observationMaxGapMs": 504,
+    "errors": [],
+    "sourceSha256": "9CB2552143D56C3EF8126282AE83903B70B44800544828DBEB1088EC40F3BFC3",
+    "run": "terminal-asyncopt1",
+    "csv": "foreground-terminal-asyncopt1.csv"
+  },
+  "observed": {
+    "runId": "terminal-asyncopt1",
+    "tag": "IpcTerminalProbe",
+    "passCount": 8,
+    "doneCount": 1,
+    "foregroundEndCount": 1,
+    "expectedPasses": 8,
+    "complete": true,
+    "valid": true,
+    "errors": [],
+    "passes": [
+      "PASS run=terminal-asyncopt1 finiteFlow items=1,2,3 completed=true subscriptions=0",
+      "PASS run=terminal-asyncopt1 runtimeFlowError itemBeforeError=7 message=flow-runtime-error subscriptions=0",
+      "PASS run=terminal-asyncopt1 streamOverflow explicitFailure=true consumed=69 subscriptions=0",
+      "PASS run=terminal-asyncopt1 streamConflate completed=true consumed=4 last=999 overflow=false subscriptions=0",
+      "PASS run=terminal-asyncopt1 explicitStreamCancel extraError=false subscriptions=0",
+      "PASS run=terminal-asyncopt1 rpcDeadline defaultMs=150 elapsedMs=154 serverJobObserved=true requests=0 pending=0",
+      "PASS run=terminal-asyncopt1 asyncParameterError callbackReceived=true message=Missing_payload requests=0 pending=0",
+      "PASS run=terminal-asyncopt1 badTokenDeadline callbackTrusted=false defaultMs=150 elapsedMs=152 requests=0 pending=0"
+    ],
+    "done": [
+      "DONE run=terminal-asyncopt1 passed=true checks=8 subscriptions=0 requests=0 pending=0 anchorAlive=true"
+    ],
+    "foregroundEnd": [
+      "END run=terminal-asyncopt1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-terminal-asyncopt1.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}

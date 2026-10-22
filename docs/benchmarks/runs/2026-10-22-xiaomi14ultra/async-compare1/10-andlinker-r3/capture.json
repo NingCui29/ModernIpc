@@ -1,0 +1,95 @@
+{
+  "lane": "andlinker",
+  "round": 3,
+  "runId": "asynccompare-opt2-l3-r3",
+  "valid": true,
+  "identity": {
+    "path": "D:\\Developer\\WorkSpace\\ModernIpc\\docs\\benchmarks\\runs\\2026-10-21-xiaomi14ultra\\async-optimization-build\\andlinker-final-debug.apk",
+    "package": "com.cn.ipc.benchmark.andlinker",
+    "sha256": "1D4ABA4DA5EE599610EDFDA1BFA8D3A6EF7BAB949640C10D319A1450B1FA3BE2",
+    "bytes": 855106,
+    "versionCode": 30001,
+    "versionName": "3.0.0-rc.1",
+    "targetSdk": 34,
+    "minSdk": 21,
+    "debuggable": true,
+    "signerCertificateSha256": [
+      "E964B185170E37C175A222AAA2AF8849EDA522AE5901B3209806EC2780DE233C"
+    ]
+  },
+  "installed": {
+    "apkSha256": "1D4ABA4DA5EE599610EDFDA1BFA8D3A6EF7BAB949640C10D319A1450B1FA3BE2",
+    "remotePath": "/data/app/~~04do3g5rGoQ8SFF0mE9Gww==/com.cn.ipc.benchmark.andlinker-tZbeQGo7VSEFpJZdgIS16g==/base.apk"
+  },
+  "installedAfter": {
+    "apkSha256": "1D4ABA4DA5EE599610EDFDA1BFA8D3A6EF7BAB949640C10D319A1450B1FA3BE2",
+    "remotePath": "/data/app/~~04do3g5rGoQ8SFF0mE9Gww==/com.cn.ipc.benchmark.andlinker-tZbeQGo7VSEFpJZdgIS16g==/base.apk"
+  },
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 4,
+    "sampleCount": 2,
+    "requiredSampleCount": 1,
+    "durationMs": 1333,
+    "maxGapMs": 501,
+    "observationMaxGapMs": 501,
+    "errors": [],
+    "sourceSha256": "8E20DBC1CE78CB2B1C3D79DE3EA3A4CFBCB303B2FC01067307C4DD9B521609CA",
+    "run": "asynccompare-opt2-l3-r3",
+    "csv": "foreground-asynccompare-opt2-l3-r3.csv"
+  },
+  "blocks": [
+    {
+      "mode": "sync",
+      "payloadChars": 16,
+      "csv": "andlinker-asynccompare-opt2-l3-r3-16.csv",
+      "count": 1000,
+      "meanMs": 0.21033136300000002,
+      "p50Ms": 0.20151,
+      "p90Ms": 0.257344,
+      "p99Ms": 0.330573,
+      "maxMs": 0.419531,
+      "sha256": "3FCF1E86130DE6369CA8E87F6C624CC95A0AFBAB75389CAC43FD23AE6D64F6D2"
+    },
+    {
+      "mode": "sync",
+      "payloadChars": 1024,
+      "csv": "andlinker-asynccompare-opt2-l3-r3-1024.csv",
+      "count": 1000,
+      "meanMs": 0.232537597,
+      "p50Ms": 0.227396,
+      "p90Ms": 0.264063,
+      "p99Ms": 0.343073,
+      "maxMs": 0.575156,
+      "sha256": "677A387705EE6A5228307745159E79AB412F09A72CAF3961C18DDFD55F8B9A64"
+    },
+    {
+      "mode": "async",
+      "payloadChars": 16,
+      "csv": "andlinker-async-asynccompare-opt2-l3-r3-16.csv",
+      "count": 1000,
+      "meanMs": 0.379680259,
+      "p50Ms": 0.33875,
+      "p90Ms": 0.412656,
+      "p99Ms": 0.881406,
+      "maxMs": 6.345885,
+      "sha256": "E676DFAC9F86D7E9538751EAB176F3F34BA91D3735E3F09882AFB6F0134B71F2"
+    },
+    {
+      "mode": "async",
+      "payloadChars": 1024,
+      "csv": "andlinker-async-asynccompare-opt2-l3-r3-1024.csv",
+      "count": 1000,
+      "meanMs": 0.380233139,
+      "p50Ms": 0.370781,
+      "p90Ms": 0.427396,
+      "p99Ms": 0.537708,
+      "maxMs": 2.30302,
+      "sha256": "5864B9A3E777D6D00F0591F380DD64D11A3E7B88A3148DE6434B7B7311153C15"
+    }
+  ]
+}

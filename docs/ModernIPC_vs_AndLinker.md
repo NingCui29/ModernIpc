@@ -2,9 +2,11 @@
 
 发布版3.0.0-rc.1的产物与构建身份见[发布记录](releases/v3.0.0-rc.1/build-result.json)。下文设备测量与门禁仍属于各自历史APK；发布版设备验收NOT_RUN。
 
-对比基准：ModernIpc 为本仓库 2026-10-09 工作区源码；AndLinker 固定为已核对的[上游提交 7ae01bfd](https://github.com/codezjx/AndLinker/tree/7ae01bfd87ddcf021319148a8727a95345cf350e)。本文负责架构、调用语义及迁移差异。性能样本与APK统一见[性能报告](benchmarks/Performance_Report.md)，功能验收见[回归报告](benchmarks/Regression_Report.md)，四场景构建与设备状态见[多App报告](benchmarks/Multi_App_Report.md)。当前新APK没有新增AndLinker配对或设备性能结果。
+对比基准：ModernIpc 为本仓库 2026-10-21/22 未发布工作区候选；AndLinker 固定为已核对的[上游提交 7ae01bfd](https://github.com/codezjx/AndLinker/tree/7ae01bfd87ddcf021319148a8727a95345cf350e)。本文负责架构、调用语义及迁移差异。性能样本与APK统一见[性能报告](benchmarks/Performance_Report.md)，功能验收见[回归报告](benchmarks/Regression_Report.md)，四场景构建与设备状态见[多App报告](benchmarks/Multi_App_Report.md)。本轮已完成同targetSdk34的四轮对照；历史9/29数据保留原身份。
 
 模块与调用链见[架构分析](ModernIPC_Architecture.md)，优化推理与历史变体见[优化分析](ModernIPC_Optimization_Analysis.md)。
+
+10/22 随后完成公开依赖导出与自动门禁修复，新 D0E76 APK 已通过 73+4+9 项小米回归；见[工程审计](ModernIPC_Engineering_Audit.md)。本文的四轮性能对照仍绑定旧候选 4F7ED，未把该结果移用于新 APK；AndLinker enqueue 计时包含等待回调完成及结果校验。
 
 ## 1. 接口模型与实现对比
 
@@ -160,6 +162,21 @@ ModernIpc 的生命周期、请求唯一终结、流终态与严格兼容会引�
 
 ## 5. 性能对比与为什么 AndLinker 更快
 
+### 2026-10-22 当前候选对照
+
+仅小米925c23bb，同AGP/JDK、targetSdk34、不混淆Debug、前台同包分进程。原版Default、请求管理候选Default、同候选专用Async scope与AndLinker四lane平衡换序；每档50次预热、1000次测量、四轮，16个有效运行共64,000次成功。AndLinker测试壳包含37个未经改动的固定上游Java文件，日志关闭，enqueue保持默认main callback。
+
+| 各轮P50的中位数（ms） | 16字符 | 1024字符 |
+| --- | ---: | ---: |
+| 原版 Async / Default | 0.799714 | 0.867448 |
+| 请求管理候选 / Default | 0.804453 | 0.821510 |
+| 同候选 / 专用 Async scope | 0.769609 | 0.731693 |
+| AndLinker enqueue | 0.334766 | 0.367292 |
+
+请求管理Default改动没有稳定收益；专用scope对16/1024字符P50分别赢4/4、3/4同轮配对，P99均只赢2/4。本轮最好的完整Async配置相对AndLinker enqueue的P50中位数之比仍为2.30/1.99，不能称已追平。专用scope不减少协议事务，也不删除取消/鉴权/许可/唯一终态；应用仍须承担完整Async链成本。仅四轮、未固定频率与JIT/GC，不能精确给出每项差额。
+
+候选SHA为 `4F7ED1169CC6069EB360AF3D2AAAA7CF8D12BEC0B43FE3CBD79ABDD2FF6AB70F`，AndLinker对照SHA为 `1D4ABA4DA5EE599610EDFDA1BFA8D3A6EF7BAB949640C10D319A1450B1FA3BE2`。原始CSV、逐轮P99、配对口径、并发边界和安装失败记录统一见[性能报告](benchmarks/Performance_Report.md)。同期候选通过73项原框架门禁及独立4项scope检查；未发布到固定标签，未完成四App业务验收。
+
 ### 同负载历史结果
 
 2026-09-29 小米925c23bb、Debug、同包分进程、16/1024字符原样echo、每档50次预热、四轮各1000次串行调用，均返回正确、失败0。下表为各轮P50的中位数，单位ms：
@@ -209,8 +226,8 @@ Direct省略Async协作取消与128在途许可，适合明确的短方法；真
 
 历史 echo 已统一设备、同包分进程、负载与采样次数，尚未统一 targetSdk、构建工具和异步调度模型。历史同APK变量配对分别记录局部分配与RTT；后续真实业务、生成代理整体和suspend/Direct都需绑定新的源码及安装包哈希。新的两库速度结论需要新的配对数据。测试继续限定小米设备，统一签名/包拓扑、前后台状态、输入与返回，报告成功吞吐、失败数、P50/P90/P99、CPU、温度、电量及重连结果。Oneway 应测服务端完成时间，不能用客户端提交时间替代。
 
-### 当前待验收状态
+### 业务待验收与已完成框架门禁
 
-4494调度实测之后新增的HandshakeExecutor已构建，402684版本五包安装哈希通过，但新增9项与完整回归因当时锁屏未运行。最新四场景版本22DAB065已五包构建，指定小米未连接、安装和设备验收NOT_RUN；旧版本通过数与性能不能移用。详见[验证索引](benchmarks/README.md)。
+新增HandshakeExecutor的9项与既有64项已在本轮4F7ED候选完成；独立scope4项及同UIDauthmicro分别计数。旧402684/22DAB065的未验收记录仍保留原身份；四个跨App业务场景没有在本轮运行，不能把框架通过当作业务通过。详见[验证索引](benchmarks/README.md)。
 
 归总前原文在[归档ZIP](archive/pre-consolidation-2026-10-09.zip)。

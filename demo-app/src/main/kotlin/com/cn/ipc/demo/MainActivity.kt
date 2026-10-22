@@ -90,7 +90,16 @@ class MainActivity : AppCompatActivity() {
                 benchmarkForeground = foreground
                 try {
                     foreground.run {
-                        if (runId.startsWith("handshake")) {
+                        if (runId.startsWith("generatedterminal")) {
+                            withTimeout(45_000) { IpcGeneratedTerminalProbe.run(controller, runId) }
+                        } else if (runId.startsWith("asyncscope")) {
+                            withTimeout(30_000) { IpcAsyncScopeProbe.run(controller, runId) }
+                        } else if (runId.startsWith("asynccompare")) {
+                            withTimeout(120_000) {
+                                IpcAsyncComparisonBenchmark.run(controller, filesDir, runId,
+                                    this@MainActivity.intent.getStringExtra("ipc_async_dispatch") ?: "default")
+                            }
+                        } else if (runId.startsWith("handshake")) {
                             withTimeout(90_000) {
                                 controller.awaitConnected(10_000)
                                 IpcHandshakeProbe.run(this@MainActivity, runId)

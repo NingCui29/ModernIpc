@@ -1,0 +1,197 @@
+{
+  "repository": "https://github.com/codezjx/AndLinker",
+  "commit": "7ae01bfd87ddcf021319148a8727a95345cf350e",
+  "modifications": [],
+  "excluded": [
+    "adapter/rxjava",
+    "adapter/rxjava2",
+    "original sample application"
+  ],
+  "files": [
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/AndLinker.java",
+      "path": "src/main/java/com/codezjx/andlinker/AndLinker.java",
+      "sha256": "8a5ad51863e79ba0f948caeff52d19e65c8a407e736e33508f951deb3a1a953e"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/AndLinkerBinder.java",
+      "path": "src/main/java/com/codezjx/andlinker/AndLinkerBinder.java",
+      "sha256": "1d13be8c35567541d95e54d480bf2a373d539c8a64396707652c654789fd36b7"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/ArrayType.java",
+      "path": "src/main/java/com/codezjx/andlinker/ArrayType.java",
+      "sha256": "3d71d8de5cf9a0e59299c7e60f1fde5ca1a5d5c3d292b7edf27e6f5e293fdd5a"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/BaseTypeWrapper.java",
+      "path": "src/main/java/com/codezjx/andlinker/BaseTypeWrapper.java",
+      "sha256": "172cd916f77630eedb19127effc32ffd3cac57e5746e6036611c097a1e38e658"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/Call.java",
+      "path": "src/main/java/com/codezjx/andlinker/Call.java",
+      "sha256": "344228ad5590c9467698b3d2ff9e73ec8fd6d6586498395bd8955ad750a7c99e"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/CallAdapter.java",
+      "path": "src/main/java/com/codezjx/andlinker/CallAdapter.java",
+      "sha256": "4d5294c5d39205b086e7a868b4724c2368d3fb374c67797c0fc47bb395efdd63"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/Callback.java",
+      "path": "src/main/java/com/codezjx/andlinker/Callback.java",
+      "sha256": "6d6315a0600b2a38c96e3c8510a1b1a7e31920b45380bcdef3f9d1b766d7f3ca"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/CallbackTypeWrapper.java",
+      "path": "src/main/java/com/codezjx/andlinker/CallbackTypeWrapper.java",
+      "sha256": "b23849cffcde182bb2605bb3a85f17fdb87b711ca8625b7af6764da14b481f93"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/Dispatcher.java",
+      "path": "src/main/java/com/codezjx/andlinker/Dispatcher.java",
+      "sha256": "31b070697a9471a0ea1f374224d767c6c0005e3a4e84321a75538897abfe3a1b"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/ICallback.java",
+      "path": "src/main/java/com/codezjx/andlinker/ICallback.java",
+      "sha256": "4cbc81eefbe229d4032dbcced67d7e015d685eb352e2eb2ed667570efb4d1f0f"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/ITransfer.java",
+      "path": "src/main/java/com/codezjx/andlinker/ITransfer.java",
+      "sha256": "7ec5addf9477891314dae5b402dda550bf4cc0606ecdc10f03bebbc2e7d7d148"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/InOutTypeWrapper.java",
+      "path": "src/main/java/com/codezjx/andlinker/InOutTypeWrapper.java",
+      "sha256": "7bfffdc3f5a0b8b555d3cd6a4f403f4fb141b814190ae754ae3b2910452d7aa7"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/InTypeWrapper.java",
+      "path": "src/main/java/com/codezjx/andlinker/InTypeWrapper.java",
+      "sha256": "c0aa1278732d67783bfd59e4694da5b6bfa3759326fd002c432502acac7edfc3"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/Invoker.java",
+      "path": "src/main/java/com/codezjx/andlinker/Invoker.java",
+      "sha256": "8ff09c886f6123c584789f3f9ec01ccfc25fbf519faef9e56ea933b8e06b6a6f"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/LinkerBinderImpl.java",
+      "path": "src/main/java/com/codezjx/andlinker/LinkerBinderImpl.java",
+      "sha256": "556d1b1a9570ed52c8b16cc2c57aa1d89572032cd92541fe3003ef8d689bbba7"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/Logger.java",
+      "path": "src/main/java/com/codezjx/andlinker/Logger.java",
+      "sha256": "78894a5c1c3f149a5d53fc6350197ff3153b9566ca4364914282817f00350401"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/MethodExecutor.java",
+      "path": "src/main/java/com/codezjx/andlinker/MethodExecutor.java",
+      "sha256": "bb884531ba0b475c7250d9fc985637c4f62a54b1a3976c1d73b19d0e2eefb895"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/OutType.java",
+      "path": "src/main/java/com/codezjx/andlinker/OutType.java",
+      "sha256": "7fd980006e380867b298d898f43e3d1e5d9fa1b9e391fa2a7e784ca13b79b40a"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/OutTypeWrapper.java",
+      "path": "src/main/java/com/codezjx/andlinker/OutTypeWrapper.java",
+      "sha256": "d1fe0a7264b9761b53531053d210f0bea5a0330b3e3096622ef8f102327d8571"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/ParameterHandler.java",
+      "path": "src/main/java/com/codezjx/andlinker/ParameterHandler.java",
+      "sha256": "f44669a1ba6fe47a0d191806dc6185b35d1816d5d4051b8481e872574e0228c8"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/RemoteCall.java",
+      "path": "src/main/java/com/codezjx/andlinker/RemoteCall.java",
+      "sha256": "e9373016854e8b7230b6c19052f91bbaa9574553233666def15f11d645ef5909"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/Request.java",
+      "path": "src/main/java/com/codezjx/andlinker/Request.java",
+      "sha256": "2d70c86647d00b9b2ccb49b40da49d51ab5ba2b5980db388dffa5acd23f7e29b"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/RequestBuilder.java",
+      "path": "src/main/java/com/codezjx/andlinker/RequestBuilder.java",
+      "sha256": "70398872cc54c5c1fb5f01bd8b8ff2d3ed264c5e0719e8d9a1c06a1f43b04ba2"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/Response.java",
+      "path": "src/main/java/com/codezjx/andlinker/Response.java",
+      "sha256": "aa58725b64336ca22fbb20a9d7a5275c5356ed3738ba1106dce24b739ecc562a"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/ServiceMethod.java",
+      "path": "src/main/java/com/codezjx/andlinker/ServiceMethod.java",
+      "sha256": "134e85a0a4a106b58a49ec264277993f82d000171e994b2b3bb23d20918df212"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/SuperParcelable.java",
+      "path": "src/main/java/com/codezjx/andlinker/SuperParcelable.java",
+      "sha256": "303a843b3ec68c4ee6c18a09b298f6bf809a12220789604024c9e1da76fae983"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/Type.java",
+      "path": "src/main/java/com/codezjx/andlinker/Type.java",
+      "sha256": "5f71c808958a660078c8d5db78e17be1fe1025523e8b1424feffdb3d4acba8e9"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/TypeFactory.java",
+      "path": "src/main/java/com/codezjx/andlinker/TypeFactory.java",
+      "sha256": "89a14ea333586b82c12b41c294f9181b9b97da6d6f9fbfa20aac2c49cbc69955"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/Utils.java",
+      "path": "src/main/java/com/codezjx/andlinker/Utils.java",
+      "sha256": "9cd9273aa1dc4759531fc1431bde324bb38c96d74c6db896be1c06ef7dce024c"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/adapter/DefaultCallAdapterFactory.java",
+      "path": "src/main/java/com/codezjx/andlinker/adapter/DefaultCallAdapterFactory.java",
+      "sha256": "2ebbed8d21b3e33980ae12db9e4dadc858ac7d4ae2be97d24650a37d15f9cb6c"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/adapter/OriginalCallAdapterFactory.java",
+      "path": "src/main/java/com/codezjx/andlinker/adapter/OriginalCallAdapterFactory.java",
+      "sha256": "199bde0be4ae53e1d161313897cb3742e5bfac02091efb1b6d5b9254eb0838be"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/annotation/Callback.java",
+      "path": "src/main/java/com/codezjx/andlinker/annotation/Callback.java",
+      "sha256": "0bb34cba4a184c4c08530f68ace615cb34a56227639898a079dfd849d1032970"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/annotation/In.java",
+      "path": "src/main/java/com/codezjx/andlinker/annotation/In.java",
+      "sha256": "3fc08452311863c2f80070d491598410b03eff4bf4f3e950eecb52f437f071f9"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/annotation/Inout.java",
+      "path": "src/main/java/com/codezjx/andlinker/annotation/Inout.java",
+      "sha256": "810affbf54eec42e19ecbc441ae43a10093cd76c3dbea7025e666d7c9800abcc"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/annotation/OneWay.java",
+      "path": "src/main/java/com/codezjx/andlinker/annotation/OneWay.java",
+      "sha256": "32a49a057af1db381cde4548d244a002b9fd108ba2466a645036131ec788215e"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/annotation/Out.java",
+      "path": "src/main/java/com/codezjx/andlinker/annotation/Out.java",
+      "sha256": "203aa920d08953a183e3af25b21bbbdf5e6113fd21b8cb83165d69a6605d56eb"
+    },
+    {
+      "upstreamPath": "andlinker/src/main/java/com/codezjx/andlinker/annotation/RemoteInterface.java",
+      "path": "src/main/java/com/codezjx/andlinker/annotation/RemoteInterface.java",
+      "sha256": "09f0ba248654ce36eb905877abea8997378dfc809db943deabf497dbb2e53fd7"
+    }
+  ]
+}

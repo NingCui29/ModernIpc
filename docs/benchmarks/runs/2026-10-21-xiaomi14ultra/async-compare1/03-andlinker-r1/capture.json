@@ -1,0 +1,20 @@
+{
+  "lane": "andlinker",
+  "round": 1,
+  "runId": "asynccompare-opt1-l3-r1",
+  "valid": false,
+  "identity": {
+    "path": "D:\\Developer\\WorkSpace\\ModernIpc\\docs\\benchmarks\\runs\\2026-10-21-xiaomi14ultra\\async-optimization-build\\andlinker-final-debug.apk",
+    "package": "com.cn.ipc.benchmark.andlinker",
+    "sha256": "1D4ABA4DA5EE599610EDFDA1BFA8D3A6EF7BAB949640C10D319A1450B1FA3BE2",
+    "bytes": 855106,
+    "versionCode": 30001,
+    "versionName": "3.0.0-rc.1",
+    "targetSdk": 34,
+    "minSdk": 21,
+    "debuggable": true,
+    "signerCertificateSha256": [
+      "E964B185170E37C175A222AAA2AF8849EDA522AE5901B3209806EC2780DE233C"
+    ]
+  }
+}

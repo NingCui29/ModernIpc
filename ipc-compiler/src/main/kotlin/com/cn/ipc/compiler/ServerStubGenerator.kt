@@ -89,6 +89,13 @@ class ServerStubGenerator(
                     .build()
             )
             .addProperty(
+                PropertySpec.builder("asyncCoroutineScope", ClassName("kotlinx.coroutines", "CoroutineScope"))
+                    .addModifiers(KModifier.PROTECTED, KModifier.OPEN)
+                    .addKdoc("Async request scope; defaults to coroutineScope. Override only with an owner-managed scope.\n")
+                    .getter(FunSpec.getterBuilder().addStatement("return coroutineScope").build())
+                    .build()
+            )
+            .addProperty(
                 PropertySpec.builder("_subscriptionJobs", mapType)
                     .initializer("java.util.concurrent.ConcurrentHashMap<Long, Triple<Int, kotlinx.coroutines.Job, java.util.concurrent.atomic.AtomicBoolean>>()")
                     .addModifiers(KModifier.PRIVATE)
@@ -130,6 +137,7 @@ class ServerStubGenerator(
                 .endControlFlow()
                 .addStatement("_requests.dispose()")
                 .addStatement("subscriptions.forEach { it.cancel(kotlinx.coroutines.CancellationException(%S)) }", "SERVER_DISPOSED")
+                .addStatement("asyncCoroutineScope.cancel()")
                 .addStatement("coroutineScope.cancel()")
                 .build())
             .addFunction(FunSpec.builder("ensureOpen")
@@ -218,7 +226,7 @@ class ServerStubGenerator(
                         }
                     }
                     // 开启协程执行挂起函数
-                    onTransactFun.beginControlFlow("_requests.submit(responseBinder, requestId, coroutineScope)")
+                    onTransactFun.beginControlFlow("_requests.submit(responseBinder, requestId, asyncCoroutineScope)")
                     onTransactFun.beginControlFlow("try")
                     
                     // invoke function 调用实际的服务接口方法

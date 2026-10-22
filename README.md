@@ -12,6 +12,7 @@ Android Binder IPC SDK 与示例工程：用 Kotlin 接口和注解描述业务�
 | 与 AndLinker 的架构、语义、性能及迁移对比 | [库对比](docs/ModernIPC_vs_AndLinker.md) |
 | 优化依据、已实施改动与剩余候选 | [优化分析](docs/ModernIPC_Optimization_Analysis.md) |
 | 当前验证状态与原始证据导航 | [验证索引](docs/benchmarks/README.md) |
+| 接入缺陷修复、审计纠正与撤回补丁 | [工程审计](docs/ModernIPC_Engineering_Audit.md) |
 
 测试报告按问题合并为 [性能报告](docs/benchmarks/Performance_Report.md)、[回归报告](docs/benchmarks/Regression_Report.md)、[多 App 验证报告](docs/benchmarks/Multi_App_Report.md)。日期、APK、失败运行与原始样本在各报告中保留。
 
@@ -27,6 +28,7 @@ Android Binder IPC SDK 与示例工程：用 Kotlin 接口和注解描述业务�
 | demo-app | 同包分进程示例和受控诊断入口。 |
 | demo-client-common | 跨包客户端共享页面与四个业务场景。 |
 | app-server、app-client1/2/3 | 中枢与三个独立包、独立 UID 的客户端。 |
+| ipc-host-tests / benchmark-andlinker | 状态机 host 门禁 / 独立 AndLinker 对照 APK，均不发布为 SDK。 |
 
 ```mermaid
 flowchart LR
@@ -61,13 +63,29 @@ flowchart LR
 
 这些状态保存在 Activity 内存中。路由返回不代表消费；业务确认表示页面数据处理，未证明物理呈现、持久提交或硬件执行。SharedFlow 不补离线消息，重连不自动重放业务 RPC。
 
-## 发布与验证状态（2026-10-09）
+## 工程审计修复（2026-10-22）
 
-发布候选版 **3.0.0-rc.1**，版本分支 `codex/v3.0.0-rc.1`。七个库产物与五个Debug APK统一构建 **BUILD SUCCESSFUL in 12m34s，退出码0，429任务**；Maven内部版本、APK版本与同签名校验通过。demo APK SHA-256为 `23a2802fd636f03e5821ceaf335f73907193b27560959486605e5908f7b26701`，完整身份见[发布构建记录](docs/releases/v3.0.0-rc.1/build-result.json)，内容与迁移范围见[发布说明](.github/release-notes.md)。
+已补全 `ipc-api` 和两端 runtime 的公开依赖导出，修正 SDK 契约依赖骨架。独立 Maven metadata/POM-only 消费编译与 Gradle `:check` 的 **27 项 host 检查**均通过，日常与发布 CI 已接入对应门禁。原 `0003` 取消降噪补丁已撤回，保留业务取消异常的错误终态。
 
-**发布版安装与小米设备验收仍为NOT_RUN**。此前15:04指定小米未连接，四场景开发版22DAB065...的旧构建记录继续保留在[多App报告](docs/benchmarks/Multi_App_Report.md)。Release提供七份publication、五APK、Maven仓库、源码、证据归档及SHA-256清单；Debug签名用于示例部署。
+新 demo APK `D0E76D89...` 仅在小米 `925c23bb` 复跑：原框架 **73 项**、独立 scope **4 项**、新增生成 Stub 业务取消/超时终态 **9 项**全通过；[设备清单](docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-regression2/summary.json)、[构建身份](docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/build-result.json)。首次锁屏未进入测试的失败记录也保留。该快照是随后 rc.2 发布前的功能验收，不将下节旧 APK 性能结果移用于新包；四个多 App 业务场景仍待验收。
 
-历史 `4494F529...` APK 已通过 **64 PASS / 5 DONE** 与完整成功请求 trace；之后的握手隔离新增 9 项探针仍待设备验收。历史性能结果不能证明当前 APK 的加速或两库排名，参见[回归报告](docs/benchmarks/Regression_Report.md)和[性能报告](docs/benchmarks/Performance_Report.md)。
+## Async 优化与小米实测（2026-10-21/22）
+
+发布前性能候选 `4F7ED116...` 合并客户端 pending 状态及服务端请求对象，修复旧死亡通知误取消后续请求；新增仅供 Async 的可选 `asyncCoroutineScope`，Flow 保持原 scope，SDK 默认 dispatcher 未改。小米 `925c23bb` 已通过 **73 项框架回归 + 独立 4 项 scope 检查**。
+
+同 targetSdk 34、同 AGP 的四轮两库对照共 **64,000 次成功测量**：请求管理改动没有稳定 RTT 收益；专用 Async scope 的 16/1024 字符 P50 为 **0.770 / 0.732 ms**，AndLinker enqueue 为 **0.335 / 0.367 ms**，本轮仍未追平。专用 scope 的 P99 不稳定；另一次同 APK 16 并发短 Echo 两轮成功吞吐约增加 19%，不代表阻塞业务容量。完整统计与限制见[性能报告](docs/benchmarks/Performance_Report.md)、[回归报告](docs/benchmarks/Regression_Report.md)，配置见[SDK 指南](docs/ModernIPC_SDK_Guide.md#9-可选短任务调度配置)。
+
+新增 `benchmark-andlinker` 仅用于测试，固定上游核心 Java，不接入 SDK 或四个业务 App。框架回归不代替四场景业务验收；新 API 不属于固定发布标签。
+
+## 发布构建历史（2026-10-09）
+
+当前发布目标为 **3.0.0-rc.2**，版本分支 `codex/v3.0.0-rc.2`，交付七个库与六个 Debug APK（含独立 AndLinker 对照）。构建与验证见[rc.2 发布记录](docs/releases/v3.0.0-rc.2/README.md)，内容与迁移见[本次发布说明](.github/release-notes.md)。
+
+以下保留 **3.0.0-rc.1** 的历史构建记录，版本分支 `codex/v3.0.0-rc.1`。七个库产物与五个Debug APK统一构建 **BUILD SUCCESSFUL in 12m34s，退出码0，429任务**；Maven内部版本、APK版本与同签名校验通过。demo APK SHA-256为 `23a2802fd636f03e5821ceaf335f73907193b27560959486605e5908f7b26701`，完整身份见[发布构建记录](docs/releases/v3.0.0-rc.1/build-result.json)。
+
+该本地包 `23A280...` 在本轮作为性能基线安装；完整框架门禁仅属于上述 `4F7ED...` 候选。四场景开发版22DAB065...的未验收记录继续保留在[多App报告](docs/benchmarks/Multi_App_Report.md)。本地发布集合包含七份publication、五APK、Maven仓库、源码、证据归档及SHA-256清单；Debug签名用于示例部署，远端发布状态需另行核实。
+
+历史 `4494F529...` APK 的 **64 PASS / 5 DONE** 与成功请求 trace 仍保留原身份；新增握手 9 项已在本轮候选完成。各版本不混用通过数和性能数据。
 
 ## 使用边界
 

@@ -1,0 +1,218 @@
+Configuration on demand is an incubating feature.
+> Task :build-logic:checkKotlinGradlePluginConfigurationErrors
+> Task :build-logic:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:compileKotlin UP-TO-DATE
+> Task :build-logic:compileJava NO-SOURCE
+> Task :build-logic:pluginDescriptors UP-TO-DATE
+> Task :build-logic:processResources UP-TO-DATE
+> Task :build-logic:classes UP-TO-DATE
+> Task :build-logic:jar UP-TO-DATE
+
+> Configure project :demo-app
+WARNING: The option 'android.enableBuildCache' is deprecated.
+The current default is 'false'.
+It was removed in version 7.0 of the Android Gradle plugin.
+The Android-specific build caches were superseded by the Gradle build cache (https://docs.gradle.org/current/userguide/build_cache.html).
+
+> Task :demo-app:preBuild UP-TO-DATE
+> Task :demo-app:preDebugBuild UP-TO-DATE
+> Task :demo-app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :demo-app:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-api:preBuild UP-TO-DATE
+> Task :ipc-api:preDebugBuild UP-TO-DATE
+> Task :ipc-contract:preBuild UP-TO-DATE
+> Task :ipc-contract:preDebugBuild UP-TO-DATE
+> Task :ipc-api:writeDebugAarMetadata UP-TO-DATE
+> Task :ipc-contract:writeDebugAarMetadata UP-TO-DATE
+> Task :ipc-runtime-client:preBuild UP-TO-DATE
+> Task :ipc-runtime-server:preBuild UP-TO-DATE
+> Task :ipc-runtime-client:preDebugBuild UP-TO-DATE
+> Task :ipc-runtime-server:preDebugBuild UP-TO-DATE
+> Task :ipc-runtime-client:writeDebugAarMetadata UP-TO-DATE
+> Task :ipc-runtime-server:writeDebugAarMetadata UP-TO-DATE
+> Task :ipc-api:generateDebugResValues UP-TO-DATE
+> Task :ipc-api:generateDebugResources UP-TO-DATE
+> Task :ipc-api:packageDebugResources UP-TO-DATE
+> Task :ipc-contract:generateDebugResValues UP-TO-DATE
+> Task :ipc-contract:generateDebugResources UP-TO-DATE
+> Task :ipc-contract:packageDebugResources UP-TO-DATE
+> Task :ipc-runtime-client:generateDebugResValues UP-TO-DATE
+> Task :ipc-runtime-client:generateDebugResources UP-TO-DATE
+> Task :demo-app:checkDebugAarMetadata UP-TO-DATE
+> Task :demo-app:generateDebugResValues UP-TO-DATE
+> Task :ipc-runtime-server:generateDebugResValues UP-TO-DATE
+> Task :ipc-runtime-client:packageDebugResources UP-TO-DATE
+> Task :ipc-runtime-server:generateDebugResources UP-TO-DATE
+> Task :demo-app:generateDebugResources UP-TO-DATE
+> Task :ipc-runtime-server:packageDebugResources UP-TO-DATE
+> Task :demo-app:packageDebugResources UP-TO-DATE
+> Task :ipc-api:extractDeepLinksDebug UP-TO-DATE
+> Task :ipc-api:processDebugManifest UP-TO-DATE
+> Task :ipc-contract:extractDeepLinksDebug UP-TO-DATE
+> Task :ipc-contract:processDebugManifest UP-TO-DATE
+> Task :ipc-runtime-client:extractDeepLinksDebug UP-TO-DATE
+> Task :ipc-runtime-client:processDebugManifest UP-TO-DATE
+> Task :ipc-runtime-server:extractDeepLinksDebug UP-TO-DATE
+> Task :demo-app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :ipc-runtime-server:processDebugManifest UP-TO-DATE
+> Task :ipc-api:compileDebugLibraryResources UP-TO-DATE
+> Task :ipc-api:parseDebugLocalResources UP-TO-DATE
+> Task :ipc-api:generateDebugRFile UP-TO-DATE
+> Task :ipc-contract:compileDebugLibraryResources UP-TO-DATE
+> Task :ipc-contract:parseDebugLocalResources UP-TO-DATE
+> Task :ipc-contract:generateDebugRFile UP-TO-DATE
+> Task :ipc-runtime-client:compileDebugLibraryResources UP-TO-DATE
+> Task :ipc-runtime-client:parseDebugLocalResources UP-TO-DATE
+> Task :ipc-runtime-client:generateDebugRFile UP-TO-DATE
+> Task :ipc-runtime-server:compileDebugLibraryResources UP-TO-DATE
+> Task :ipc-runtime-server:parseDebugLocalResources UP-TO-DATE
+> Task :ipc-runtime-server:generateDebugRFile UP-TO-DATE
+> Task :ipc-annotations:checkKotlinGradlePluginConfigurationErrors
+> Task :demo-app:mergeDebugResources UP-TO-DATE
+> Task :ipc-annotations:compileKotlin UP-TO-DATE
+> Task :demo-app:parseDebugLocalResources UP-TO-DATE
+> Task :ipc-annotations:compileJava NO-SOURCE
+> Task :ipc-annotations:processResources NO-SOURCE
+> Task :ipc-annotations:classes UP-TO-DATE
+> Task :demo-app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :ipc-annotations:jar UP-TO-DATE
+> Task :demo-app:extractDeepLinksDebug UP-TO-DATE
+> Task :ipc-api:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-compiler:checkKotlinGradlePluginConfigurationErrors
+> Task :demo-app:processDebugMainManifest UP-TO-DATE
+> Task :demo-app:processDebugManifest UP-TO-DATE
+> Task :demo-app:processDebugManifestForPackage UP-TO-DATE
+> Task :ipc-compiler:compileKotlin UP-TO-DATE
+> Task :ipc-compiler:compileJava NO-SOURCE
+> Task :ipc-compiler:processResources UP-TO-DATE
+> Task :ipc-compiler:classes UP-TO-DATE
+> Task :demo-app:processDebugResources UP-TO-DATE
+> Task :ipc-contract:compileDebugAidl UP-TO-DATE
+> Task :ipc-contract:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-contract:compileDebugKotlin UP-TO-DATE
+> Task :ipc-contract:javaPreCompileDebug UP-TO-DATE
+> Task :ipc-contract:compileDebugJavaWithJavac UP-TO-DATE
+> Task :ipc-contract:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :ipc-runtime-client:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-compiler:jar
+> Task :ipc-runtime-server:checkKotlinGradlePluginConfigurationErrors
+
+> Task :ipc-runtime-server:compileDebugKotlin
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcTelemetry.kt:20:9 Parameter 'traceId' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcTelemetry.kt:21:9 Parameter 'serviceId' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcTelemetry.kt:22:9 Parameter 'operationId' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcTelemetry.kt:23:9 Parameter 'durationMs' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcTelemetry.kt:24:9 Parameter 'isSuccess' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcTelemetry.kt:34:26 Parameter 'serviceId' is never used
+
+> Task :ipc-runtime-client:javaPreCompileDebug UP-TO-DATE
+> Task :ipc-runtime-server:javaPreCompileDebug UP-TO-DATE
+> Task :ipc-runtime-server:compileDebugJavaWithJavac NO-SOURCE
+> Task :ipc-runtime-server:bundleLibCompileToJarDebug
+> Task :ipc-api:javaPreCompileDebug
+> Task :demo-app:javaPreCompileDebug FROM-CACHE
+> Task :demo-app:mergeDebugShaders UP-TO-DATE
+> Task :demo-app:compileDebugShaders NO-SOURCE
+> Task :demo-app:generateDebugAssets UP-TO-DATE
+> Task :ipc-api:mergeDebugShaders UP-TO-DATE
+> Task :ipc-api:compileDebugShaders NO-SOURCE
+> Task :ipc-api:generateDebugAssets UP-TO-DATE
+> Task :ipc-api:packageDebugAssets UP-TO-DATE
+> Task :ipc-contract:mergeDebugShaders UP-TO-DATE
+> Task :ipc-contract:compileDebugShaders NO-SOURCE
+> Task :ipc-contract:generateDebugAssets UP-TO-DATE
+> Task :ipc-contract:packageDebugAssets UP-TO-DATE
+> Task :ipc-runtime-client:mergeDebugShaders UP-TO-DATE
+> Task :ipc-runtime-client:compileDebugShaders NO-SOURCE
+> Task :ipc-runtime-client:generateDebugAssets UP-TO-DATE
+> Task :ipc-runtime-client:packageDebugAssets UP-TO-DATE
+> Task :ipc-runtime-server:mergeDebugShaders UP-TO-DATE
+> Task :ipc-runtime-server:compileDebugShaders NO-SOURCE
+> Task :ipc-runtime-server:generateDebugAssets UP-TO-DATE
+> Task :ipc-runtime-server:packageDebugAssets UP-TO-DATE
+> Task :demo-app:mergeDebugAssets UP-TO-DATE
+> Task :demo-app:compressDebugAssets UP-TO-DATE
+> Task :ipc-contract:processDebugJavaRes UP-TO-DATE
+> Task :ipc-runtime-server:processDebugJavaRes UP-TO-DATE
+> Task :demo-app:checkDebugDuplicateClasses UP-TO-DATE
+> Task :demo-app:desugarDebugFileDependencies UP-TO-DATE
+> Task :demo-app:mergeExtDexDebug UP-TO-DATE
+> Task :ipc-contract:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :ipc-runtime-server:bundleLibRuntimeToJarDebug
+
+> Task :ipc-runtime-client:compileDebugKotlin
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/ModernIpcRouter.kt:21:32 Parameter 'serviceClass' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/PendingCallRegistry.kt:94:9 Parameter 'serviceId' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/PendingCallRegistry.kt:95:9 Parameter 'operationId' is never used
+
+> Task :ipc-runtime-client:compileDebugJavaWithJavac NO-SOURCE
+> Task :ipc-runtime-client:bundleLibCompileToJarDebug
+> Task :ipc-runtime-client:processDebugJavaRes UP-TO-DATE
+> Task :ipc-runtime-client:bundleLibRuntimeToJarDebug
+> Task :demo-app:mergeDebugJniLibFolders UP-TO-DATE
+> Task :ipc-contract:mergeDebugJniLibFolders UP-TO-DATE
+> Task :ipc-contract:mergeDebugNativeLibs NO-SOURCE
+> Task :ipc-contract:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :ipc-runtime-client:mergeDebugJniLibFolders UP-TO-DATE
+> Task :ipc-runtime-client:mergeDebugNativeLibs NO-SOURCE
+> Task :ipc-runtime-client:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :ipc-runtime-server:mergeDebugJniLibFolders UP-TO-DATE
+> Task :ipc-runtime-server:mergeDebugNativeLibs NO-SOURCE
+> Task :ipc-runtime-server:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :demo-app:validateSigningDebug UP-TO-DATE
+> Task :demo-app:writeDebugAppMetadata UP-TO-DATE
+> Task :demo-app:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :benchmark-andlinker:preBuild UP-TO-DATE
+> Task :benchmark-andlinker:preDebugBuild UP-TO-DATE
+> Task :benchmark-andlinker:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :benchmark-andlinker:checkKotlinGradlePluginConfigurationErrors
+> Task :benchmark-andlinker:checkDebugAarMetadata
+> Task :benchmark-andlinker:generateDebugResValues
+> Task :benchmark-andlinker:mapDebugSourceSetPaths
+> Task :benchmark-andlinker:generateDebugResources
+The message received from the daemon indicates that the daemon has disappeared.
+Build request sent: Build{id=b8368138-4e60-486d-9ef9-4d10afc946cd, currentDir=D:\Developer\WorkSpace\ModernIpc}
+Attempting to read last messages from the daemon log...
+Daemon pid: 34624
+  log file: C:\Users\Work\.gradle\daemon\8.5\daemon-34624.out.log
+----- Last  20 lines from daemon log file - daemon-34624.out.log -----
+2026-10-21T16:24:06.120+0800 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: [USERDOMAIN_ROAMINGPROFILE, BROWSER_USE_ACCESS_VERIFYING_IDENTITY, PROCESSOR_LEVEL, GIT_PAGER, ALLUSERSPROFILE, CODEX_MCP_NODE_PATH, CODEX_SHELL, PROCESSOR_ARCHITECTURE, __COMPAT_LAYER, PSModulePath, SystemDrive, GH_PAGER, CODEX_CLI_PATH, CODEX_APP_TOOLS_PIPE_PATH, COLORTERM, NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S, DIRNAME, USERNAME, CODEX_TASK_WORKSPACE_VERIFYING_IDENTITY, LEVEL_ZERO_V1_SDK_PATH, ProgramFiles(x86), CODEX_INTERNAL_ORIGINATOR_OVERRIDE, APP_HOME, CODEX_SAGE_BACKFILL_TRACKER_TAB_REUSE, DEFAULT_JVM_OPTS, PATHEXT, SHELL, DriverData, OneDriveConsumer, IntelliJ IDEA Community Edition, PAGER, ANDROID_NDK_HOME, CODEX_PERMISSION_PROFILE, CODEX_WINDOWS_SANDBOX_PACKAGE_FAMILY, LOG_FORMAT, ProgramData, HDC_SERVER_PORT, ProgramW6432, HOMEPATH, LC_ALL, PROCESSOR_IDENTIFIER, ProgramFiles, PUBLIC, ZSH_TMUX_AUTOSTARTED, windir, LC_CTYPE, CODEX_SESSION_ID, ZES_ENABLE_SYSMAN, LOCALAPPDATA, ChocolateyLastPathUpdate, USERDOMAIN, LOGONSERVER, JAVA_HOME, PROMPT, RUST_LOG, TERM, LANG, GRADLE_HOME, OLLAMA_KEEP_ALIVE, OneDrive, APPDATA, GRADLE_USER_HOME, CODEX_APPLY_PATCH_PRESERVE_LINE_ENDINGS, JAVA_EXE, ChocolateyInstall, CODEX_THREAD_ID, NO_COLOR, VBOX_MSI_INSTALL_PATH, CODEX_CI, CommonProgramFiles, Path, PyCharm, DISABLE_AUTO_UPDATE, OS, COMPUTERNAME, CODEX_TOOL_CALL_ID, PROCESSOR_REVISION, CLASSPATH, CommonProgramW6432, ComSpec, APP_BASE_NAME, ZSH_TMUX_AUTOSTART, =D:, SystemRoot, TEMP, HOMEDRIVE, USERPROFILE, TMP, CommonProgramFiles(x86), CODEX_TECTONIC_PATH, CODEX_VERSION, NUMBER_OF_PROCESSORS]
+2026-10-21T16:24:06.121+0800 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+2026-10-21T16:24:06.121+0800 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 34624). The daemon log file: C:\Users\Work\.gradle\daemon\8.5\daemon-34624.out.log
+2026-10-21T16:24:06.121+0800 [INFO] [org.gradle.launcher.daemon.server.exec.LogAndCheckHealth] Starting 3rd build in daemon [uptime: 6 mins 35.235 secs, performance: 100%, GC rate: 0.00/s, heap usage: 0% of 4 GiB, non-heap usage: 18% of 1 GiB]
+2026-10-21T16:24:06.122+0800 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+2026-10-21T16:24:06.122+0800 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=05854a7e-62ce-44d2-bd2d-c8b4b15f9b73,javaHome=C:\Users\Work\.jdks\ms-17.0.16,daemonRegistryDir=C:\Users\Work\.gradle\daemon,pid=34624,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,daemonOpts=-XX:MaxMetaspaceSize=1024m,-XX:+HeapDumpOnOutOfMemoryError,--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-Xmx4096m,-Dfile.encoding=UTF-8,-Duser.country=CN,-Duser.language=zh,-Duser.variant]
+Configuration on demand is an incubating feature.
+WARNING: The option 'android.enableBuildCache' is deprecated.
+The current default is 'false'.
+It was removed in version 7.0 of the Android Gradle plugin.
+The Android-specific build caches were superseded by the Gradle build cache (https://docs.gradle.org/current/userguide/build_cache.html).
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcTelemetry.kt:20:9 Parameter 'traceId' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcTelemetry.kt:21:9 Parameter 'serviceId' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcTelemetry.kt:22:9 Parameter 'operationId' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcTelemetry.kt:23:9 Parameter 'durationMs' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcTelemetry.kt:24:9 Parameter 'isSuccess' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcTelemetry.kt:34:26 Parameter 'serviceId' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/ModernIpcRouter.kt:21:32 Parameter 'serviceClass' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/PendingCallRegistry.kt:94:9 Parameter 'serviceId' is never used
+w: file:///D:/Developer/WorkSpace/ModernIpc/ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/PendingCallRegistry.kt:95:9 Parameter 'operationId' is never used
+----- End of the daemon log -----
+
+JVM crash log found: file:///D:/Developer/WorkSpace/ModernIpc/hs_err_pid34624.log
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Gradle build daemon disappeared unexpectedly (it may have been killed or may have crashed)
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+> Task :ipc-api:kspDebugKotlin
+> Task :benchmark-andlinker:mergeDebugResources

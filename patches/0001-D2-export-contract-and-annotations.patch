@@ -1,0 +1,53 @@
+diff --git a/ipc-api/build.gradle.kts b/ipc-api/build.gradle.kts
+index 437c00d..5184b97 100644
+--- a/ipc-api/build.gradle.kts
++++ b/ipc-api/build.gradle.kts
+@@ -8,12 +8,13 @@ android {
+ }
+ 
+ dependencies {
+-    implementation(project(":ipc-contract"))
+-    implementation(project(":ipc-annotations"))
+-    implementation(project(":ipc-runtime-client"))
+-    implementation(project(":ipc-runtime-server"))
++    // Generated Adapters, Stubs and schemas expose these types in their public ABI.
++    api(project(":ipc-contract"))
++    api(project(":ipc-annotations"))
++    api(project(":ipc-runtime-client"))
++    api(project(":ipc-runtime-server"))
+     implementation(libs.androidx.core.ktx)
+-    implementation(libs.kotlinx.coroutines.core)
++    api(libs.kotlinx.coroutines.core)
+     
+     ksp(project(":ipc-compiler"))
+-}
+\ No newline at end of file
++}
+diff --git a/ipc-runtime-client/build.gradle.kts b/ipc-runtime-client/build.gradle.kts
+index 20c9594..7220523 100644
+--- a/ipc-runtime-client/build.gradle.kts
++++ b/ipc-runtime-client/build.gradle.kts
+@@ -11,5 +11,6 @@ dependencies {
+     // api 传递导出：使用方模块无需再重复声明 ipc-contract
+     api(project(":ipc-contract"))
+     implementation(libs.androidx.core.ktx)
+-    implementation(libs.kotlinx.coroutines.core)
+-}
+\ No newline at end of file
++    // CoroutineScope, Flow and coroutine handles are part of the public API.
++    api(libs.kotlinx.coroutines.core)
++}
+diff --git a/ipc-runtime-server/build.gradle.kts b/ipc-runtime-server/build.gradle.kts
+index 60ae262..2b15b99 100644
+--- a/ipc-runtime-server/build.gradle.kts
++++ b/ipc-runtime-server/build.gradle.kts
+@@ -11,5 +11,6 @@ dependencies {
+     // api 传递导出：使用方模块无需再重复声明 ipc-contract
+     api(project(":ipc-contract"))
+     implementation(libs.androidx.core.ktx)
+-    implementation(libs.kotlinx.coroutines.core)
+-}
+\ No newline at end of file
++    // Service scopes and request jobs are part of the public API.
++    api(libs.kotlinx.coroutines.core)
++}

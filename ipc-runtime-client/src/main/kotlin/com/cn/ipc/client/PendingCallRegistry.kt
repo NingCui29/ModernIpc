@@ -13,12 +13,53 @@ private const val CALL_CANCEL_SENT = 4
 /**
  * 等待中的调用记录。
  */
-private data class PendingCall(
+private class PendingCall(
+    val requestId: Long,
     val generation: Long,
     val continuation: CancellableContinuation<Any?>,
     val deserializer: ((android.os.Parcel) -> Any?)? = null,
-    val onConnectionClosed: (() -> Unit)? = null
-)
+    private val onConnectionClosed: (() -> Unit)? = null,
+    private val onRemoteCancel: ((Long) -> Unit)? = null
+) : AtomicInteger(0) {
+    override fun toByte(): Byte = get().toByte()
+    override fun toShort(): Short = get().toShort()
+
+    // Keep the monotonic send/cancel state in this record instead of allocating
+    // a separate atomic and a captured connection-close callback for each call.
+    private fun mark(flag: Int): Int {
+        while (true) {
+            val previous = get()
+            val updated = previous or flag
+            if (previous == updated || compareAndSet(previous, updated)) return updated
+        }
+    }
+
+    fun markAborted() {
+        mark(CALL_ABORTED)
+    }
+
+    fun markDispatched() {
+        if ((mark(CALL_DISPATCHED) and CALL_ABORTED) != 0) cancelRemoteIfDispatched()
+    }
+
+    fun cancelRemoteIfDispatched() {
+        while (true) {
+            val previous = get()
+            if ((previous and (CALL_DISPATCHED or CALL_ABORTED)) != (CALL_DISPATCHED or CALL_ABORTED) ||
+                (previous and CALL_CANCEL_SENT) != 0) return
+            if (compareAndSet(previous, previous or CALL_CANCEL_SENT)) {
+                try { onRemoteCancel?.invoke(requestId) } catch (_: Exception) {}
+                return
+            }
+        }
+    }
+
+    fun connectionClosed() {
+        markAborted()
+        cancelRemoteIfDispatched()
+        onConnectionClosed?.invoke()
+    }
+}
 
 /**
  * 用于管理挂起函数的挂起状态。
@@ -58,43 +99,24 @@ class PendingCallRegistry(private val defaultCallTimeoutMs: Long = 30_000L) {
         block: (Long) -> Unit
     ): T = kotlinx.coroutines.suspendCancellableCoroutine { cont ->
         val requestId = requestCounter.incrementAndGet()
-        // One state allocation per request; bits are monotonic across callback/dispatch races.
-        val callState = AtomicInteger(0)
-        fun mark(flag: Int): Int {
-            while (true) {
-                val previous = callState.get()
-                val updated = previous or flag
-                if (previous == updated || callState.compareAndSet(previous, updated)) return updated
-            }
-        }
-        fun cancelRemoteIfDispatched() {
-            while (true) {
-                val previous = callState.get()
-                if ((previous and (CALL_DISPATCHED or CALL_ABORTED)) != (CALL_DISPATCHED or CALL_ABORTED) ||
-                    (previous and CALL_CANCEL_SENT) != 0) return
-                if (callState.compareAndSet(previous, previous or CALL_CANCEL_SENT)) {
-                    try { onRemoteCancel?.invoke(requestId) } catch (_: Exception) {}
-                    return
-                }
-            }
-        }
-        register(requestId, generation, cont, deserializer) {
-            mark(CALL_ABORTED)
-            cancelRemoteIfDispatched()
-        }
+        @Suppress("UNCHECKED_CAST")
+        val pending = PendingCall(requestId, generation, cont as CancellableContinuation<Any?>,
+            deserializer, onRemoteCancel = onRemoteCancel)
+        pendingMap[requestId] = pending
         cont.invokeOnCancellation {
-            mark(CALL_ABORTED)
-            cancel(requestId)
-            cancelRemoteIfDispatched()
+            pending.markAborted()
+            pendingMap.remove(requestId, pending)
+            pending.cancelRemoteIfDispatched()
         }
         try {
             if (cont.isActive) {
                 block(requestId)
-                val dispatchedState = mark(CALL_DISPATCHED)
-                if ((dispatchedState and CALL_ABORTED) != 0) cancelRemoteIfDispatched()
+                // A cancel must follow the request transaction, including cancellation
+                // or disconnect while that transaction is still being submitted.
+                pending.markDispatched()
             }
         } catch (e: Exception) {
-            if (cancel(requestId) && cont.isActive) cont.resumeWithException(e)
+            if (pendingMap.remove(requestId, pending) && cont.isActive) cont.resumeWithException(e)
         }
     }
 
@@ -133,7 +155,8 @@ class PendingCallRegistry(private val defaultCallTimeoutMs: Long = 30_000L) {
         onConnectionClosed: (() -> Unit)? = null
     ) {
         @Suppress("UNCHECKED_CAST")
-        pendingMap[requestId] = PendingCall(generation, continuation as CancellableContinuation<Any?>, deserializer, onConnectionClosed)
+        pendingMap[requestId] = PendingCall(requestId, generation,
+            continuation as CancellableContinuation<Any?>, deserializer, onConnectionClosed)
     }
 
     /**
@@ -199,7 +222,7 @@ class PendingCallRegistry(private val defaultCallTimeoutMs: Long = 30_000L) {
         while (iterator.hasNext()) {
             val entry = iterator.next()
             if (entry.value.generation == generation && pendingMap.remove(entry.key, entry.value)) {
-                try { entry.value.onConnectionClosed?.invoke() } catch (_: Exception) {}
+                try { entry.value.connectionClosed() } catch (_: Exception) {}
                 if (entry.value.continuation.isActive) {
                     entry.value.continuation.resumeWithException(error)
                 }
@@ -211,7 +234,7 @@ class PendingCallRegistry(private val defaultCallTimeoutMs: Long = 30_000L) {
     fun failAll(error: Throwable) {
         pendingMap.entries.forEach { entry ->
             if (pendingMap.remove(entry.key, entry.value)) {
-                try { entry.value.onConnectionClosed?.invoke() } catch (_: Exception) {}
+                try { entry.value.connectionClosed() } catch (_: Exception) {}
                 if (entry.value.continuation.isActive) entry.value.continuation.resumeWithException(error)
             }
         }

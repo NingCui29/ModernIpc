@@ -8,12 +8,13 @@ android {
 }
 
 dependencies {
-    implementation(project(":ipc-contract"))
-    implementation(project(":ipc-annotations"))
-    implementation(project(":ipc-runtime-client"))
-    implementation(project(":ipc-runtime-server"))
+    // Generated Adapters, Stubs and schemas expose these types in their public ABI.
+    api(project(":ipc-contract"))
+    api(project(":ipc-annotations"))
+    api(project(":ipc-runtime-client"))
+    api(project(":ipc-runtime-server"))
     implementation(libs.androidx.core.ktx)
-    implementation(libs.kotlinx.coroutines.core)
+    api(libs.kotlinx.coroutines.core)
     
     ksp(project(":ipc-compiler"))
 }

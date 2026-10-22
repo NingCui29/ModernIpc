@@ -11,6 +11,8 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.awaitCancellation
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.withTimeout
 
 /**
  * IPC 服务端点服务 (Broker Service)。
@@ -77,7 +79,8 @@ open class MyBrokerService : IpcBrokerService() {
         val echoStub = object : IBenchmarkEchoServiceServerStub(this) {
             @Volatile private var legacyAuthBenchmark = false
             @Volatile private var traceRunId: String? = null
-            override val coroutineScope: CoroutineScope get() = selectedEchoScope
+            override val coroutineScope: CoroutineScope get() = defaultEchoScope
+            override val asyncCoroutineScope: CoroutineScope get() = selectedEchoScope
             override fun authorizeCaller() {
                 if (legacyAuthBenchmark) {
                     val authenticator = com.cn.ipc.server.CallerAuthenticator(this@MyBrokerService)
@@ -86,7 +89,11 @@ open class MyBrokerService : IpcBrokerService() {
                     super.authorizeCaller()
                 }
             }
-            override suspend fun echo(payload: String): String = payload
+            override suspend fun echo(payload: String): String = when (payload) {
+                "__business_timeout__" -> withTimeout<String>(80) { awaitCancellation() }
+                "__business_cancel__" -> throw CancellationException("probe-business-cancel")
+                else -> payload
+            }
             override fun echoDirect(payload: String): String {
                 if (payload == "__error__") throw IllegalArgumentException("bench-error")
                 if (payload.startsWith("__trace_start__:")) {

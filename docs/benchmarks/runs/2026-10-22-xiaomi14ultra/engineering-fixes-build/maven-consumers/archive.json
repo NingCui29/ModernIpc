@@ -1,0 +1,425 @@
+{
+  "schemaVersion": 1,
+  "createdAtUtc": "2026-10-22T02:56:14.529853+00:00",
+  "version": "3.0.0-consumer-check-20261022022757175411",
+  "status": "PASSED",
+  "originalRoot": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411",
+  "archiveRoot": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers",
+  "bytePreservation": "Original evidence bytes were copied without rewriting paths or line endings; every source and target SHA-256 was compared.",
+  "verificationReportPaths": "Absolute paths in the original verification.json intentionally still refer to the original build folder. Use the source-to-target entries below to locate archived evidence.",
+  "validation": {
+    "sdkPublications": 6,
+    "metadataModes": [
+      "metadata",
+      "pom"
+    ],
+    "apiOnlyCompilations": 2,
+    "contractOnlyCompilations": 2,
+    "asyncAndFlowKspGenerations": 2,
+    "pendingRegistryHostCases": 12,
+    "requestTrackerHostCases": 15,
+    "rootHostRetryExitCode": 0
+  },
+  "boundaries": {
+    "platform": "Windows with JDK 17 and C1-only Gradle compilation",
+    "linux": "Only the Windows/POSIX wrapper command expressions were statically evaluated. Linux Gradle execution and GitHub CI were NOT_RUN.",
+    "deviceValidation": "NOT_RUN",
+    "binderValidation": "NOT_RUN",
+    "historicalNegativeControl": "Existing local-maven 3.0.0-rc.1 was read only and rejected for missing compile-scope exports. Existing release artifacts were not overwritten.",
+    "hostFirstAttempt": "Exit 1 because PowerShell split an unquoted Gradle property into a task name; the quoted retry executed all 27 cases and exited 0.",
+    "documentation": "The normal six-module publications included real source and Javadoc artifacts. Dokka external package-list warnings did not fail publication.",
+    "excluded": [
+      "temporary Maven repository",
+      "binary AAR/JAR artifacts",
+      "Gradle caches",
+      "generated build trees"
+    ],
+    "sourceHashes": "Current workspace source bytes captured at archive time. The Unix wrapper launch fix was added after the successful Windows consumer run; the Windows command branch was unchanged. CI workflow hashes describe configured gates, not an executed CI run."
+  },
+  "files": [
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/verification.json",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/verification.json",
+      "bytes": 8307,
+      "sourceSha256": "33c6ef633b2247ee2507668285f1452260a3384eaaaab23b2932928a6316a428",
+      "targetSha256": "33c6ef633b2247ee2507668285f1452260a3384eaaaab23b2932928a6316a428"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/publish-sdk.txt",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/publish-sdk.txt",
+      "bytes": 22005,
+      "sourceSha256": "97d58212804a3c5ae4258545a539ed0ad1c3f6abf31c3d95922fb20a1723d20e",
+      "targetSha256": "97d58212804a3c5ae4258545a539ed0ad1c3f6abf31c3d95922fb20a1723d20e"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/metadata-api-and-contract.txt",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/metadata-api-and-contract.txt",
+      "bytes": 3728,
+      "sourceSha256": "58d62fd56d70d9252b368a2354eedcfca2b68a6b55cbaeecbdfa179f330748e8",
+      "targetSha256": "58d62fd56d70d9252b368a2354eedcfca2b68a6b55cbaeecbdfa179f330748e8"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/metadata-contract-consumer.txt",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/metadata-contract-consumer.txt",
+      "bytes": 1607,
+      "sourceSha256": "c44903f6ebc50f9870487a851c815e3d58389d589a1b02a94054271382031d3a",
+      "targetSha256": "c44903f6ebc50f9870487a851c815e3d58389d589a1b02a94054271382031d3a"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/pom-api-and-contract.txt",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/pom-api-and-contract.txt",
+      "bytes": 3589,
+      "sourceSha256": "01543a5c011f4bced331587693e03dd3ec4260909ac0845bf8cd7f298272af27",
+      "targetSha256": "01543a5c011f4bced331587693e03dd3ec4260909ac0845bf8cd7f298272af27"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/pom-contract-consumer.txt",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/pom-contract-consumer.txt",
+      "bytes": 1651,
+      "sourceSha256": "a7e2cbd9eba2b1ee6713a7b0462de37852d9c03e806e2a2d441695c388b5190f",
+      "targetSha256": "a7e2cbd9eba2b1ee6713a7b0462de37852d9c03e806e2a2d441695c388b5190f"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/host-check.txt",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/host-check.txt",
+      "bytes": 2385,
+      "sourceSha256": "902017c0c31359403efa147fb8c46958e9d0e3702ee6012fe9fe556642e58e6a",
+      "targetSha256": "902017c0c31359403efa147fb8c46958e9d0e3702ee6012fe9fe556642e58e6a"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/host-check-retry.txt",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/host-check-retry.txt",
+      "bytes": 3220,
+      "sourceSha256": "a18c150d07fef53efe87b7f65eb0d96cb51a690b2679b563dfcac194d5595f19",
+      "targetSha256": "a18c150d07fef53efe87b7f65eb0d96cb51a690b2679b563dfcac194d5595f19"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/host-check-exit-code.txt",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/host-check-exit-code.txt",
+      "bytes": 3,
+      "sourceSha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04",
+      "targetSha256": "f1b2f662800122bed0ff255693df89c4487fbdcf453d3524a42d4ec20c3d9c04"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/host-check-retry-exit-code.txt",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/host-check-retry-exit-code.txt",
+      "bytes": 3,
+      "sourceSha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354",
+      "targetSha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/metadata/build/api-consumer/consumer-compile-graph.txt",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/compile-graphs/metadata/api-consumer.txt",
+      "bytes": 741,
+      "sourceSha256": "9cda7daf4346d6e7b5ee54095e2b9274e09537ae6ec263a49a3a69b8dc4b5999",
+      "targetSha256": "9cda7daf4346d6e7b5ee54095e2b9274e09537ae6ec263a49a3a69b8dc4b5999"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/metadata/build/contract-consumer/consumer-compile-graph.txt",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/compile-graphs/metadata/contract-consumer.txt",
+      "bytes": 864,
+      "sourceSha256": "4fb916dd68b947f9286d0277311204a494afadc1b1c94b29f98261d905d85047",
+      "targetSha256": "4fb916dd68b947f9286d0277311204a494afadc1b1c94b29f98261d905d85047"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/pom/build/api-consumer/consumer-compile-graph.txt",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/compile-graphs/pom/api-consumer.txt",
+      "bytes": 741,
+      "sourceSha256": "9cda7daf4346d6e7b5ee54095e2b9274e09537ae6ec263a49a3a69b8dc4b5999",
+      "targetSha256": "9cda7daf4346d6e7b5ee54095e2b9274e09537ae6ec263a49a3a69b8dc4b5999"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/pom/build/contract-consumer/consumer-compile-graph.txt",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/compile-graphs/pom/contract-consumer.txt",
+      "bytes": 864,
+      "sourceSha256": "4fb916dd68b947f9286d0277311204a494afadc1b1c94b29f98261d905d85047",
+      "targetSha256": "4fb916dd68b947f9286d0277311204a494afadc1b1c94b29f98261d905d85047"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/repository/com/modernipc/ipc-annotations/3.0.0-consumer-check-20261022022757175411/ipc-annotations-3.0.0-consumer-check-20261022022757175411.pom",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/published-metadata/ipc-annotations-3.0.0-consumer-check-20261022022757175411.pom",
+      "bytes": 1033,
+      "sourceSha256": "020e121210f4ee204f1328abfb76616b44ba7bb72dbc9712ce6410664348bba6",
+      "targetSha256": "020e121210f4ee204f1328abfb76616b44ba7bb72dbc9712ce6410664348bba6"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/repository/com/modernipc/ipc-annotations/3.0.0-consumer-check-20261022022757175411/ipc-annotations-3.0.0-consumer-check-20261022022757175411.module",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/published-metadata/ipc-annotations-3.0.0-consumer-check-20261022022757175411.module",
+      "bytes": 4238,
+      "sourceSha256": "b321d2f8c3b2e97f1220b36167b981ba365afa7f45dc2445c3a932f2a5e2b192",
+      "targetSha256": "b321d2f8c3b2e97f1220b36167b981ba365afa7f45dc2445c3a932f2a5e2b192"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/repository/com/modernipc/ipc-compiler/3.0.0-consumer-check-20261022022757175411/ipc-compiler-3.0.0-consumer-check-20261022022757175411.pom",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/published-metadata/ipc-compiler-3.0.0-consumer-check-20261022022757175411.pom",
+      "bytes": 1836,
+      "sourceSha256": "6f3aca342ca32fcefbb142a7ee66d727871fd9aca85bb1ce10b8ad6d9cd40840",
+      "targetSha256": "6f3aca342ca32fcefbb142a7ee66d727871fd9aca85bb1ce10b8ad6d9cd40840"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/repository/com/modernipc/ipc-compiler/3.0.0-consumer-check-20261022022757175411/ipc-compiler-3.0.0-consumer-check-20261022022757175411.module",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/published-metadata/ipc-compiler-3.0.0-consumer-check-20261022022757175411.module",
+      "bytes": 4920,
+      "sourceSha256": "004f82e2bbc9ea96d5afcf66a8fc1d42ca22b33b040b1befea1b6a390abdb9c7",
+      "targetSha256": "004f82e2bbc9ea96d5afcf66a8fc1d42ca22b33b040b1befea1b6a390abdb9c7"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/repository/com/modernipc/ipc-contract/3.0.0-consumer-check-20261022022757175411/ipc-contract-3.0.0-consumer-check-20261022022757175411.pom",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/published-metadata/ipc-contract-3.0.0-consumer-check-20261022022757175411.pom",
+      "bytes": 1450,
+      "sourceSha256": "6ff8926e75d14591cd0ec71695604038ace2a7fd5e9c25ae8f2acccd0e6d2e41",
+      "targetSha256": "6ff8926e75d14591cd0ec71695604038ace2a7fd5e9c25ae8f2acccd0e6d2e41"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/repository/com/modernipc/ipc-contract/3.0.0-consumer-check-20261022022757175411/ipc-contract-3.0.0-consumer-check-20261022022757175411.module",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/published-metadata/ipc-contract-3.0.0-consumer-check-20261022022757175411.module",
+      "bytes": 4561,
+      "sourceSha256": "928c5040e2ae95ff220fe034fc608e5d27ec5810af5c1a48a0a9f3990ba9d764",
+      "targetSha256": "928c5040e2ae95ff220fe034fc608e5d27ec5810af5c1a48a0a9f3990ba9d764"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/repository/com/modernipc/ipc-runtime-client/3.0.0-consumer-check-20261022022757175411/ipc-runtime-client-3.0.0-consumer-check-20261022022757175411.pom",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/published-metadata/ipc-runtime-client-3.0.0-consumer-check-20261022022757175411.pom",
+      "bytes": 1675,
+      "sourceSha256": "2d5606a13c007bdf232a57c791aa08ff6b2d84eda959a8b85c8c53c31af33d9c",
+      "targetSha256": "2d5606a13c007bdf232a57c791aa08ff6b2d84eda959a8b85c8c53c31af33d9c"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/repository/com/modernipc/ipc-runtime-client/3.0.0-consumer-check-20261022022757175411/ipc-runtime-client-3.0.0-consumer-check-20261022022757175411.module",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/published-metadata/ipc-runtime-client-3.0.0-consumer-check-20261022022757175411.module",
+      "bytes": 5188,
+      "sourceSha256": "8e2d13a82a80b9355055640cd9e1a22256112b61cad02e5168bccd1760de21d2",
+      "targetSha256": "8e2d13a82a80b9355055640cd9e1a22256112b61cad02e5168bccd1760de21d2"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/repository/com/modernipc/ipc-runtime-server/3.0.0-consumer-check-20261022022757175411/ipc-runtime-server-3.0.0-consumer-check-20261022022757175411.pom",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/published-metadata/ipc-runtime-server-3.0.0-consumer-check-20261022022757175411.pom",
+      "bytes": 1675,
+      "sourceSha256": "8c0b76ae97472f708fdce3c58f4835b9d6268562f4857a3b7fbe4dfd9d80f050",
+      "targetSha256": "8c0b76ae97472f708fdce3c58f4835b9d6268562f4857a3b7fbe4dfd9d80f050"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/repository/com/modernipc/ipc-runtime-server/3.0.0-consumer-check-20261022022757175411/ipc-runtime-server-3.0.0-consumer-check-20261022022757175411.module",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/published-metadata/ipc-runtime-server-3.0.0-consumer-check-20261022022757175411.module",
+      "bytes": 5186,
+      "sourceSha256": "2f59b0eb8db4162fa7ddb5fa65fa477a3f97347bd9995cc0049e01754d8d50cc",
+      "targetSha256": "2f59b0eb8db4162fa7ddb5fa65fa477a3f97347bd9995cc0049e01754d8d50cc"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/repository/com/modernipc/ipc-api/3.0.0-consumer-check-20261022022757175411/ipc-api-3.0.0-consumer-check-20261022022757175411.pom",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/published-metadata/ipc-api-3.0.0-consumer-check-20261022022757175411.pom",
+      "bytes": 2339,
+      "sourceSha256": "fc8b7722003e7f619fc4d428c74c2cdce8b3946695f777644fba4abe3fae19ed",
+      "targetSha256": "fc8b7722003e7f619fc4d428c74c2cdce8b3946695f777644fba4abe3fae19ed"
+    },
+    {
+      "source": ".gradle/maven-consumer/3.0.0-consumer-check-20261022022757175411/repository/com/modernipc/ipc-api/3.0.0-consumer-check-20261022022757175411/ipc-api-3.0.0-consumer-check-20261022022757175411.module",
+      "target": "docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/published-metadata/ipc-api-3.0.0-consumer-check-20261022022757175411.module",
+      "bytes": 6294,
+      "sourceSha256": "22da5452d59dd0dbe865190dc63b9c0c7c454a1d9176a2b285c771cf94d097f8",
+      "targetSha256": "22da5452d59dd0dbe865190dc63b9c0c7c454a1d9176a2b285c771cf94d097f8"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "path": ".github/workflows/release.yml",
+      "bytes": 10110,
+      "sha256": "1d0183065b875ae20105c292a88c949fa901a4969acd60c4fb79441deef1415c"
+    },
+    {
+      "path": ".github/workflows/verify.yml",
+      "bytes": 1502,
+      "sha256": "837c3c4d2974d04f7a3a467734a8db243761086e8c687e01794397f84882f6ba"
+    },
+    {
+      "path": "build-logic/src/main/kotlin/convention.publish.gradle.kts",
+      "bytes": 2496,
+      "sha256": "de281d775406893289921c49a9b15e8a86ccf80cf54a37062526415e1368e15e"
+    },
+    {
+      "path": "build.gradle.kts",
+      "bytes": 771,
+      "sha256": "373c3c612b22f7975abe5ab2e6ffe5c54f1a85933e89eac587ab28a85763c6c4"
+    },
+    {
+      "path": "gradle/libs.versions.toml",
+      "bytes": 3362,
+      "sha256": "d90ad0e8ccb073915da224f24d9288fa65cbfa71338b799442665d8b996a8f99"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.properties",
+      "bytes": 287,
+      "sha256": "b19c7e6d4e30e8679035d4651536eb9f32d411b9b077a8a5f4f32af1d7a702ce"
+    },
+    {
+      "path": "gradle.properties",
+      "bytes": 179,
+      "sha256": "ed143182806ee88ae2b7b0843ec3324f4edab943efcf91e0a165d099450cbb38"
+    },
+    {
+      "path": "ipc-api/build.gradle.kts",
+      "bytes": 497,
+      "sha256": "47e7fa146e91d02ae39cf9519431f4e972e0eb6a1eb23d1f0ec611cedba2a998"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/ClientAdapterGenerator.kt",
+      "bytes": 24978,
+      "sha256": "6f119fb8996f2f841d4e2cf396d888c1cf229da18e0832619c5fda03f11a355f"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/IpcProcessorProvider.kt",
+      "bytes": 848,
+      "sha256": "06f5eda2ae124427668ebe6d2cf948aeb45789543d3a8415728fc273210e54a1"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/IpcSchemaGenerator.kt",
+      "bytes": 6091,
+      "sha256": "1003d2c2258b20e0454b8746a546e32c0cba5954dd7e08719e4cc5624a0160c8"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/IpcSymbolProcessor.kt",
+      "bytes": 10743,
+      "sha256": "88f682d420141bf3bb7898d2fcb647a85b0166f711cae87d1947281722b945e2"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/ServerStubGenerator.kt",
+      "bytes": 34753,
+      "sha256": "4449cdab5afe48d0f39f38bdc5208c9e9f0fe317011ad468c3c3459936a9b80c"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/WireTypeModel.kt",
+      "bytes": 3102,
+      "sha256": "ad3dfc1ae4816c8a517835cdbb47f2085beff54eab636af4894cab2e1f20ff3a"
+    },
+    {
+      "path": "ipc-host-tests/build.gradle.kts",
+      "bytes": 2299,
+      "sha256": "4bce44a822e7f41c0e68b4d1dc18ad22c2b45ceea6d4be8e5e08c3c8ee771866"
+    },
+    {
+      "path": "ipc-runtime-client/build.gradle.kts",
+      "bytes": 484,
+      "sha256": "68357cd407be8249ef438a2b3104b7a518f00caa2fbdd826b904fafb4cbfff49"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/PendingCallRegistry.kt",
+      "bytes": 9082,
+      "sha256": "095c96c19c95c18e6d9506a88e91159321b28b61c0e252607eab171509d57aa0"
+    },
+    {
+      "path": "ipc-runtime-client/src/test/host/ParcelStub.kt",
+      "bytes": 415,
+      "sha256": "57daa205e1caa0270dbebe139a22e43dddf3ccd22087f19f0f35a42e110eb0f3"
+    },
+    {
+      "path": "ipc-runtime-client/src/test/host/PendingCallRegistryHostTest.kt",
+      "bytes": 11644,
+      "sha256": "62719c7a3f22fd938e3d4de757d1554b6ca929014a4bfb659c5d9ed0befdfdde"
+    },
+    {
+      "path": "ipc-runtime-client/src/test/host/run.py",
+      "bytes": 3278,
+      "sha256": "81b8da61e3ec68b900d170957dcdb6f7c257f268d279ada100dd7591bcf89304"
+    },
+    {
+      "path": "ipc-runtime-server/build.gradle.kts",
+      "bytes": 473,
+      "sha256": "6033213a0f8d46f7c27fb15541f1b07a7097ac9d183803a34c48cfb6cdd684ef"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcRequestTracker.kt",
+      "bytes": 5614,
+      "sha256": "dfcfccd3069ad02c8334dfea947d3db5e8df026ca710a6290fb208e87447585c"
+    },
+    {
+      "path": "ipc-runtime-server/src/test/host/AndroidStubs.kt",
+      "bytes": 939,
+      "sha256": "65686b84080cfdd20a996a738bb06cee98fc6eb16f07474e622f7ae0700ff267"
+    },
+    {
+      "path": "ipc-runtime-server/src/test/host/RequestTrackerHostTest.kt",
+      "bytes": 11803,
+      "sha256": "014459831160e18e47a7a88f25ce80bf25c2f9a59a423efecce26b5fe9bab95c"
+    },
+    {
+      "path": "ipc-runtime-server/src/test/host/run.py",
+      "bytes": 3429,
+      "sha256": "c03f400bbd85f34aa7c59656283c19a4dc9f8740abfcfe3dca9146d1367877cc"
+    },
+    {
+      "path": "ipc-runtime-server/src/test/host/TraceStub.kt",
+      "bytes": 306,
+      "sha256": "49b3dcc96bc4f6a76d36264da85d2b285d4ee7201da9949f5489c226827bbd2c"
+    },
+    {
+      "path": "scripts/verify_maven_consumers.py",
+      "bytes": 12096,
+      "sha256": "f1cc2ffaadd916304307c39c76b77a3abb523572ff35536299aa729b620648f6"
+    },
+    {
+      "path": "settings.gradle.kts",
+      "bytes": 803,
+      "sha256": "4cf15626c387d7b33b0e297fdfdb5845b7839589e546268ab89a7b53facd30b7"
+    },
+    {
+      "path": "tests/maven-consumer/api-consumer/build.gradle.kts",
+      "bytes": 285,
+      "sha256": "69df2bddb4900eb723f148a7081187414cecf2d01f883060056cafe640d1705f"
+    },
+    {
+      "path": "tests/maven-consumer/api-consumer/src/main/AndroidManifest.xml",
+      "bytes": 13,
+      "sha256": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f"
+    },
+    {
+      "path": "tests/maven-consumer/api-consumer/src/main/kotlin/com/modernipc/consumer/ApiConsumer.kt",
+      "bytes": 1745,
+      "sha256": "dfc45fbed8fb6f1f3ae4792b8e74ae53d7834cb9dffd6ba9066ffec6b87eb21a"
+    },
+    {
+      "path": "tests/maven-consumer/build.gradle.kts",
+      "bytes": 1839,
+      "sha256": "0bd2c7fc37acf40724ff36574c588c51191c1a043b74fedcc738b1d5d95daea1"
+    },
+    {
+      "path": "tests/maven-consumer/contract-consumer/build.gradle.kts",
+      "bytes": 306,
+      "sha256": "8c1e3520dc9de70cc2db6f8f525af0d707908e90e8376440c9ebfc74aa86af69"
+    },
+    {
+      "path": "tests/maven-consumer/contract-consumer/src/main/AndroidManifest.xml",
+      "bytes": 13,
+      "sha256": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f"
+    },
+    {
+      "path": "tests/maven-consumer/contract-consumer/src/main/kotlin/com/modernipc/consumer/ContractConsumer.kt",
+      "bytes": 1192,
+      "sha256": "e32014ead6f72296b89f54aa90596ac8729e3287b178580599c819a2cfa024ba"
+    },
+    {
+      "path": "tests/maven-consumer/custom-contract/build.gradle.kts",
+      "bytes": 792,
+      "sha256": "2ed546d492dadf14892785fcd419ba035774eb97103d5de64f5086656cf84b8d"
+    },
+    {
+      "path": "tests/maven-consumer/custom-contract/src/main/AndroidManifest.xml",
+      "bytes": 13,
+      "sha256": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f"
+    },
+    {
+      "path": "tests/maven-consumer/custom-contract/src/main/kotlin/com/modernipc/consumer/contract/ICustomService.kt",
+      "bytes": 486,
+      "sha256": "584bdaeba303b485bfee230d8972b9644e34968d25fdb42cb0dc0afd633a6785"
+    },
+    {
+      "path": "tests/maven-consumer/gradle.properties",
+      "bytes": 328,
+      "sha256": "4af245487fbb2882bf722d8eaf480be51142105b0d20fa008030bb72d8a4380a"
+    },
+    {
+      "path": "tests/maven-consumer/settings.gradle.kts",
+      "bytes": 1157,
+      "sha256": "648faa873316a9e0a614aa2f68cfe9fa45f2b496687d76b241cd92fea9ba2814"
+    }
+  ]
+}

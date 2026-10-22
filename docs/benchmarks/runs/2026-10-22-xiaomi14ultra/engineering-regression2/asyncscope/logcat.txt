@@ -1,0 +1,14 @@
+--------- beginning of main
+10-22 11:18:42.156 23054 23054 I IpcForeground: STATE run=asyncscope-engfix2-20261022 event=WAIT_READY elapsedRealtimeMs=15606247 uptimeMs=10596388 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-22 11:18:42.219 23054 23054 I IpcForeground: STATE run=asyncscope-engfix2-20261022 event=FOCUS_GAIN elapsedRealtimeMs=15606291 uptimeMs=10596432 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-22 11:18:42.279 23054 23054 I IpcForeground: STATE run=asyncscope-engfix2-20261022 event=WAIT_READY elapsedRealtimeMs=15606355 uptimeMs=10596496 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-22 11:18:42.380 23054 23054 I IpcForeground: STATE run=asyncscope-engfix2-20261022 event=WAIT_READY elapsedRealtimeMs=15606471 uptimeMs=10596612 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-22 11:18:42.481 23054 23054 I IpcForeground: STATE run=asyncscope-engfix2-20261022 event=WAIT_READY elapsedRealtimeMs=15606572 uptimeMs=10596713 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-22 11:18:42.481 23054 23054 I IpcForeground: STATE run=asyncscope-engfix2-20261022 event=BEGIN elapsedRealtimeMs=15606572 uptimeMs=10596714 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:42.504 23054 23776 I IpcAsyncScopeProbe: PASS run=asyncscope-engfix2-20261022 dedicatedSelected=true traceDisabled=true
+10-22 11:18:42.622 23054 23775 I IpcAsyncScopeProbe: PASS run=asyncscope-engfix2-20261022 dedicatedCancel=true concurrentFlow=0,1,2 pending=0 requests=0 subscriptions=0
+10-22 11:18:42.775 23054 23775 I IpcAsyncScopeProbe: PASS run=asyncscope-engfix2-20261022 dedicatedDeadline=true pending=0 requests=0 subscriptions=0
+10-22 11:18:42.781 23054 23775 I IpcAsyncScopeProbe: PASS run=asyncscope-engfix2-20261022 defaultRestored=true pending=0 requests=0 subscriptions=0
+10-22 11:18:42.781 23054 23775 I IpcAsyncScopeProbe: DONE run=asyncscope-engfix2-20261022 passed=true checks=4
+10-22 11:18:42.784 23054 23054 I IpcForeground: STATE run=asyncscope-engfix2-20261022 event=END elapsedRealtimeMs=15606875 uptimeMs=10597016 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-22 11:18:42.791 23054 23054 I IpcForeground: END run=asyncscope-engfix2-20261022 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-asyncscope-engfix2-20261022.csv scope=activity_events_and_500ms_app_samples

@@ -1,0 +1,17 @@
+--------- beginning of main
+10-21 16:40:02.215 32554 32554 I IpcForeground: STATE run=fault-asyncopt1 event=WAIT_READY elapsedRealtimeMs=58348294 uptimeMs=8770490 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-21 16:40:02.234 32554 32554 I IpcForeground: STATE run=fault-asyncopt1 event=FOCUS_GAIN elapsedRealtimeMs=58348313 uptimeMs=8770509 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-21 16:40:02.316 32554 32554 I IpcForeground: STATE run=fault-asyncopt1 event=WAIT_READY elapsedRealtimeMs=58348395 uptimeMs=8770591 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-21 16:40:02.418 32554 32554 I IpcForeground: STATE run=fault-asyncopt1 event=WAIT_READY elapsedRealtimeMs=58348497 uptimeMs=8770693 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-21 16:40:02.519 32554 32554 I IpcForeground: STATE run=fault-asyncopt1 event=WAIT_READY elapsedRealtimeMs=58348598 uptimeMs=8770794 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-21 16:40:02.520 32554 32554 I IpcForeground: STATE run=fault-asyncopt1 event=BEGIN elapsedRealtimeMs=58348599 uptimeMs=8770795 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:40:02.521 32554   872 I IpcFaultProbe: PASS run=fault-asyncopt1 replyBeforeSendReturns cancelCount=0
+10-21 16:40:02.522 32554   868 I IpcFaultProbe: PASS run=fault-asyncopt1 explicitCancellation cancelCount=1
+10-21 16:40:02.523 32554   868 I IpcFaultProbe: PASS run=fault-asyncopt1 cancellationDuringDispatch cancelCount=1
+10-21 16:40:03.022 32554 32554 I IpcForeground: STATE run=fault-asyncopt1 event=SAMPLE elapsedRealtimeMs=58349100 uptimeMs=8771297 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:40:03.185 32554  1059 I IpcFaultProbe: PASS run=fault-asyncopt1 replyDisconnectRace iterations=1000 lateRepliesRejected=true
+10-21 16:40:03.220 32554   869 I IpcFaultProbe: PASS run=fault-asyncopt1 remoteFlowFactoryError propagated=true normalFlowFirstItem=0
+10-21 16:40:03.233 32554  1059 I IpcFaultProbe: PASS run=fault-asyncopt1 closePendingFailed=true staleConnectionRejected=true reconnectedFlow=true
+10-21 16:40:03.233 32554  1059 I IpcFaultProbe: DONE run=fault-asyncopt1 passed=true
+10-21 16:40:03.234 32554 32554 I IpcForeground: STATE run=fault-asyncopt1 event=END elapsedRealtimeMs=58349312 uptimeMs=8771509 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:40:03.238 32554 32554 I IpcForeground: END run=fault-asyncopt1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-fault-asyncopt1.csv scope=activity_events_and_500ms_app_samples

@@ -1,0 +1,21 @@
+--------- beginning of main
+10-21 16:39:54.375 29217 29217 I IpcForeground: STATE run=terminal-asyncopt1 event=WAIT_READY elapsedRealtimeMs=58340453 uptimeMs=8762649 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-21 16:39:54.395 29217 29217 I IpcForeground: STATE run=terminal-asyncopt1 event=FOCUS_GAIN elapsedRealtimeMs=58340473 uptimeMs=8762669 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-21 16:39:54.479 29217 29217 I IpcForeground: STATE run=terminal-asyncopt1 event=WAIT_READY elapsedRealtimeMs=58340557 uptimeMs=8762754 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-21 16:39:54.579 29217 29217 I IpcForeground: STATE run=terminal-asyncopt1 event=WAIT_READY elapsedRealtimeMs=58340658 uptimeMs=8762854 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-21 16:39:54.679 29217 29217 I IpcForeground: STATE run=terminal-asyncopt1 event=WAIT_READY elapsedRealtimeMs=58340758 uptimeMs=8762954 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-21 16:39:54.679 29217 29217 I IpcForeground: STATE run=terminal-asyncopt1 event=BEGIN elapsedRealtimeMs=58340758 uptimeMs=8762955 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:39:54.713 29217   323 I IpcTerminalProbe: PASS run=terminal-asyncopt1 finiteFlow items=1,2,3 completed=true subscriptions=0
+10-21 16:39:54.717 29217   317 I IpcTerminalProbe: PASS run=terminal-asyncopt1 runtimeFlowError itemBeforeError=7 message=flow-runtime-error subscriptions=0
+10-21 16:39:55.182 29217 29217 I IpcForeground: STATE run=terminal-asyncopt1 event=SAMPLE elapsedRealtimeMs=58341260 uptimeMs=8763457 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:39:55.686 29217 29217 I IpcForeground: STATE run=terminal-asyncopt1 event=SAMPLE elapsedRealtimeMs=58341764 uptimeMs=8763960 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:39:56.189 29217 29217 I IpcForeground: STATE run=terminal-asyncopt1 event=SAMPLE elapsedRealtimeMs=58342266 uptimeMs=8764462 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:39:56.228 29217   314 I IpcTerminalProbe: PASS run=terminal-asyncopt1 streamOverflow explicitFailure=true consumed=69 subscriptions=0
+10-21 16:39:56.331 29217 32699 I IpcTerminalProbe: PASS run=terminal-asyncopt1 streamConflate completed=true consumed=4 last=999 overflow=false subscriptions=0
+10-21 16:39:56.340 29217   314 I IpcTerminalProbe: PASS run=terminal-asyncopt1 explicitStreamCancel extraError=false subscriptions=0
+10-21 16:39:56.505 29217 32699 I IpcTerminalProbe: PASS run=terminal-asyncopt1 rpcDeadline defaultMs=150 elapsedMs=154 serverJobObserved=true requests=0 pending=0
+10-21 16:39:56.509 29217 32699 I IpcTerminalProbe: PASS run=terminal-asyncopt1 asyncParameterError callbackReceived=true message=Missing_payload requests=0 pending=0
+10-21 16:39:56.663 29217 32699 I IpcTerminalProbe: PASS run=terminal-asyncopt1 badTokenDeadline callbackTrusted=false defaultMs=150 elapsedMs=152 requests=0 pending=0
+10-21 16:39:56.670 29217 32698 I IpcTerminalProbe: DONE run=terminal-asyncopt1 passed=true checks=8 subscriptions=0 requests=0 pending=0 anchorAlive=true
+10-21 16:39:56.672 29217 29217 I IpcForeground: STATE run=terminal-asyncopt1 event=END elapsedRealtimeMs=58342750 uptimeMs=8764947 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:39:56.676 29217 29217 I IpcForeground: END run=terminal-asyncopt1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-terminal-asyncopt1.csv scope=activity_events_and_500ms_app_samples

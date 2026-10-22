@@ -1,0 +1,65 @@
+{
+  "group": "asyncscope",
+  "tag": "IpcAsyncScopeProbe",
+  "expectedPasses": 4,
+  "runId": "asyncscope-engfix2-20261022",
+  "status": "PASSED",
+  "valid": true,
+  "passCount": 4,
+  "doneCount": 1,
+  "foregroundEndCount": 1,
+  "complete": true,
+  "errors": [],
+  "passes": [
+    "PASS run=asyncscope-engfix2-20261022 dedicatedSelected=true traceDisabled=true",
+    "PASS run=asyncscope-engfix2-20261022 dedicatedCancel=true concurrentFlow=0,1,2 pending=0 requests=0 subscriptions=0",
+    "PASS run=asyncscope-engfix2-20261022 dedicatedDeadline=true pending=0 requests=0 subscriptions=0",
+    "PASS run=asyncscope-engfix2-20261022 defaultRestored=true pending=0 requests=0 subscriptions=0"
+  ],
+  "done": [
+    "DONE run=asyncscope-engfix2-20261022 passed=true checks=4"
+  ],
+  "foregroundEnd": [
+    "END run=asyncscope-engfix2-20261022 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-asyncscope-engfix2-20261022.csv scope=activity_events_and_500ms_app_samples"
+  ],
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 2,
+    "sampleCount": 0,
+    "requiredSampleCount": 0,
+    "durationMs": 303,
+    "maxGapMs": 303,
+    "observationMaxGapMs": 303,
+    "errors": [],
+    "sourceSha256": "9D178FADA646A2C57D125025C0C04AF4E0E966D564D283DD91D0D1987AF4E7A1",
+    "run": "asyncscope-engfix2-20261022",
+    "csv": "foreground-asyncscope-engfix2-20261022.csv"
+  },
+  "observed": {
+    "runId": "asyncscope-engfix2-20261022",
+    "tag": "IpcAsyncScopeProbe",
+    "passCount": 4,
+    "doneCount": 1,
+    "foregroundEndCount": 1,
+    "expectedPasses": 4,
+    "complete": true,
+    "valid": true,
+    "errors": [],
+    "passes": [
+      "PASS run=asyncscope-engfix2-20261022 dedicatedSelected=true traceDisabled=true",
+      "PASS run=asyncscope-engfix2-20261022 dedicatedCancel=true concurrentFlow=0,1,2 pending=0 requests=0 subscriptions=0",
+      "PASS run=asyncscope-engfix2-20261022 dedicatedDeadline=true pending=0 requests=0 subscriptions=0",
+      "PASS run=asyncscope-engfix2-20261022 defaultRestored=true pending=0 requests=0 subscriptions=0"
+    ],
+    "done": [
+      "DONE run=asyncscope-engfix2-20261022 passed=true checks=4"
+    ],
+    "foregroundEnd": [
+      "END run=asyncscope-engfix2-20261022 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-asyncscope-engfix2-20261022.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}

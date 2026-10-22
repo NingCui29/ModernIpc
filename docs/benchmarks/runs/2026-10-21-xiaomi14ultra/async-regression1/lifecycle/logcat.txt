@@ -1,0 +1,45 @@
+--------- beginning of main
+10-21 16:39:45.947 25246 25246 I IpcForeground: STATE run=lifecycle-asyncopt1 event=WAIT_READY elapsedRealtimeMs=58332026 uptimeMs=8754222 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+10-21 16:39:45.973 25246 25246 I IpcForeground: STATE run=lifecycle-asyncopt1 event=FOCUS_GAIN elapsedRealtimeMs=58332051 uptimeMs=8754247 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-21 16:39:46.048 25246 25246 I IpcForeground: STATE run=lifecycle-asyncopt1 event=WAIT_READY elapsedRealtimeMs=58332127 uptimeMs=8754323 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-21 16:39:46.149 25246 25246 I IpcForeground: STATE run=lifecycle-asyncopt1 event=WAIT_READY elapsedRealtimeMs=58332228 uptimeMs=8754424 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-21 16:39:46.250 25246 25246 I IpcForeground: STATE run=lifecycle-asyncopt1 event=WAIT_READY elapsedRealtimeMs=58332329 uptimeMs=8754525 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+10-21 16:39:46.251 25246 25246 I IpcForeground: STATE run=lifecycle-asyncopt1 event=BEGIN elapsedRealtimeMs=58332330 uptimeMs=8754526 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:39:46.306 25246 32266 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 closeHeldRequest failed=true cause=IllegalStateException
+10-21 16:39:46.569 25246 32384 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 close cycle=1 subscriptions=0 requests=0 eventsQuiet=true
+10-21 16:39:46.688 25246 32395 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 reconnect cycle=1 subscriptions=1 generation=2
+10-21 16:39:46.753 25246 25246 I IpcForeground: STATE run=lifecycle-asyncopt1 event=SAMPLE elapsedRealtimeMs=58332831 uptimeMs=8755027 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:39:46.946 25246 32384 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 close cycle=2 subscriptions=0 requests=0 eventsQuiet=true
+10-21 16:39:47.067 25246 32283 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 reconnect cycle=2 subscriptions=1 generation=3
+10-21 16:39:47.255 25246 25246 I IpcForeground: STATE run=lifecycle-asyncopt1 event=SAMPLE elapsedRealtimeMs=58333332 uptimeMs=8755529 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:39:47.329 25246 32284 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 close cycle=3 subscriptions=0 requests=0 eventsQuiet=true
+10-21 16:39:47.455 25246 32384 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 reconnect cycle=3 subscriptions=1 generation=4
+10-21 16:39:47.714 25246 32383 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 close cycle=4 subscriptions=0 requests=0 eventsQuiet=true
+10-21 16:39:47.758 25246 25246 I IpcForeground: STATE run=lifecycle-asyncopt1 event=SAMPLE elapsedRealtimeMs=58333836 uptimeMs=8756033 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:39:47.843 25246 32284 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 reconnect cycle=4 subscriptions=1 generation=5
+10-21 16:39:48.103 25246 32284 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 close cycle=5 subscriptions=0 requests=0 eventsQuiet=true
+10-21 16:39:48.224 25246 32480 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 reconnect cycle=5 subscriptions=1 generation=6
+10-21 16:39:48.261 25246 25246 I IpcForeground: STATE run=lifecycle-asyncopt1 event=SAMPLE elapsedRealtimeMs=58334339 uptimeMs=8756535 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:39:48.484 25246 32284 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 close cycle=6 subscriptions=0 requests=0 eventsQuiet=true
+10-21 16:39:48.605 25246 32266 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 reconnect cycle=6 subscriptions=1 generation=7
+10-21 16:39:48.765 25246 25246 I IpcForeground: STATE run=lifecycle-asyncopt1 event=SAMPLE elapsedRealtimeMs=58334842 uptimeMs=8757038 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:39:48.863 25246 32284 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 close cycle=7 subscriptions=0 requests=0 eventsQuiet=true
+10-21 16:39:48.985 25246 32266 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 reconnect cycle=7 subscriptions=1 generation=8
+10-21 16:39:49.246 25246 32383 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 close cycle=8 subscriptions=0 requests=0 eventsQuiet=true
+10-21 16:39:49.265 25246 25246 I IpcForeground: STATE run=lifecycle-asyncopt1 event=SAMPLE elapsedRealtimeMs=58335344 uptimeMs=8757540 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:39:49.369 25246 32395 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 reconnect cycle=8 subscriptions=1 generation=9
+10-21 16:39:49.631 25246 32383 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 explicitDispose collectorEnded=true reconnectRejected=true subscriptions=0 requests=0
+10-21 16:39:49.767 25246 25246 I IpcForeground: STATE run=lifecycle-asyncopt1 event=SAMPLE elapsedRealtimeMs=58335845 uptimeMs=8758042 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:39:49.917 25246 32563 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 ownerCancellation disposed=true collectorEnded=true requestFailed=true subscriptions=0 requests=0 eventsQuiet=true
+10-21 16:39:49.940 25246 32563 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 serviceDestroy oldStubRejected=true binderStillAlive=true recreatedStub=true subscriptions=0 requests=0
+10-21 16:39:49.945 25246 32481 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 nullBinding disconnected=true failureElapsedMs=3 bindingTimeoutMs=5000 lateCallbackStable=true pending=0 syntheticWaiter=true
+10-21 16:39:49.948 32307 32307 I IpcLifecycleProbe: DELAYED_BIND started delayMs=1500
+10-21 16:39:50.271 25246 25246 I IpcForeground: STATE run=lifecycle-asyncopt1 event=SAMPLE elapsedRealtimeMs=58336348 uptimeMs=8758545 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:39:50.775 25246 25246 I IpcForeground: STATE run=lifecycle-asyncopt1 event=SAMPLE elapsedRealtimeMs=58336853 uptimeMs=8759049 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:39:51.279 25246 25246 I IpcForeground: STATE run=lifecycle-asyncopt1 event=SAMPLE elapsedRealtimeMs=58337357 uptimeMs=8759553 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:39:51.450 32307 32307 I IpcLifecycleProbe: DELAYED_BIND returned=true
+10-21 16:39:51.782 25246 25246 I IpcForeground: STATE run=lifecycle-asyncopt1 event=SAMPLE elapsedRealtimeMs=58337860 uptimeMs=8760056 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:39:51.859 25246 32563 I IpcLifecycleProbe: PASS run=lifecycle-asyncopt1 bindingTimeout disconnected=true failureElapsedMs=205 bindingTimeoutMs=200 lateCallbackStable=true pending=0 syntheticWaiter=true
+10-21 16:39:51.873 25246 32563 I IpcLifecycleProbe: DONE run=lifecycle-asyncopt1 passed=true cycles=8 subscriptions=0 requests=0 anchorAlive=true
+10-21 16:39:51.877 25246 25246 I IpcForeground: STATE run=lifecycle-asyncopt1 event=END elapsedRealtimeMs=58337955 uptimeMs=8760151 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+10-21 16:39:51.885 25246 25246 I IpcForeground: END run=lifecycle-asyncopt1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-lifecycle-asyncopt1.csv scope=activity_events_and_500ms_app_samples

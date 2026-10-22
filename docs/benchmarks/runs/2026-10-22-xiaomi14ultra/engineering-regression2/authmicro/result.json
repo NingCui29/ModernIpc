@@ -1,0 +1,95 @@
+{
+  "group": "authmicro",
+  "tag": "IpcAuthMicro",
+  "expectedPasses": 0,
+  "runId": "authmicro-engfix2-20261022",
+  "status": "PASSED",
+  "valid": true,
+  "passCount": 0,
+  "doneCount": 1,
+  "foregroundEndCount": 1,
+  "complete": true,
+  "errors": [],
+  "authProbe": {
+    "timeCount": 4,
+    "allocationCount": 4,
+    "doneCount": 1,
+    "timings": [
+      "TIME batch=0 mode=legacy count=50000 wallNs=57544844 cpuNs=57192285",
+      "TIME batch=1 mode=optimized count=50000 wallNs=12504010 cpuNs=12447811",
+      "TIME batch=2 mode=optimized count=50000 wallNs=10360886 cpuNs=10329791",
+      "TIME batch=3 mode=legacy count=50000 wallNs=24890625 cpuNs=24786718"
+    ],
+    "allocations": [
+      "ALLOC batch=0 mode=legacy count=50000 beforeBytes=13042024 afterBytes=16253288 bytes=3211264 gc=0",
+      "ALLOC batch=1 mode=optimized count=50000 beforeBytes=16253288 afterBytes=16253288 bytes=0 gc=0",
+      "ALLOC batch=2 mode=optimized count=50000 beforeBytes=16253288 afterBytes=16253288 bytes=0 gc=0",
+      "ALLOC batch=3 mode=legacy count=50000 beforeBytes=16253288 afterBytes=19448168 bytes=3194880 gc=0"
+    ],
+    "done": [
+      "DONE sameUid=true countPerBatch=50000"
+    ]
+  },
+  "passes": [],
+  "done": [
+    "DONE sameUid=true countPerBatch=50000"
+  ],
+  "foregroundEnd": [
+    "END run=authmicro-engfix2-20261022 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-authmicro-engfix2-20261022.csv scope=activity_events_and_500ms_app_samples"
+  ],
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 2,
+    "sampleCount": 0,
+    "requiredSampleCount": 0,
+    "durationMs": 244,
+    "maxGapMs": 244,
+    "observationMaxGapMs": 244,
+    "errors": [],
+    "sourceSha256": "23C3BEB85EB2F8C661B7B2186ED9872BCF29C888E4B044FE0B4A3A0564127870",
+    "run": "authmicro-engfix2-20261022",
+    "csv": "foreground-authmicro-engfix2-20261022.csv"
+  },
+  "observed": {
+    "runId": "authmicro-engfix2-20261022",
+    "tag": "IpcAuthMicro",
+    "passCount": 0,
+    "doneCount": 1,
+    "foregroundEndCount": 1,
+    "expectedPasses": 0,
+    "complete": true,
+    "valid": true,
+    "errors": [],
+    "authProbe": {
+      "timeCount": 4,
+      "allocationCount": 4,
+      "doneCount": 1,
+      "timings": [
+        "TIME batch=0 mode=legacy count=50000 wallNs=57544844 cpuNs=57192285",
+        "TIME batch=1 mode=optimized count=50000 wallNs=12504010 cpuNs=12447811",
+        "TIME batch=2 mode=optimized count=50000 wallNs=10360886 cpuNs=10329791",
+        "TIME batch=3 mode=legacy count=50000 wallNs=24890625 cpuNs=24786718"
+      ],
+      "allocations": [
+        "ALLOC batch=0 mode=legacy count=50000 beforeBytes=13042024 afterBytes=16253288 bytes=3211264 gc=0",
+        "ALLOC batch=1 mode=optimized count=50000 beforeBytes=16253288 afterBytes=16253288 bytes=0 gc=0",
+        "ALLOC batch=2 mode=optimized count=50000 beforeBytes=16253288 afterBytes=16253288 bytes=0 gc=0",
+        "ALLOC batch=3 mode=legacy count=50000 beforeBytes=16253288 afterBytes=19448168 bytes=3194880 gc=0"
+      ],
+      "done": [
+        "DONE sameUid=true countPerBatch=50000"
+      ]
+    },
+    "passes": [],
+    "done": [
+      "DONE sameUid=true countPerBatch=50000"
+    ],
+    "foregroundEnd": [
+      "END run=authmicro-engfix2-20261022 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-authmicro-engfix2-20261022.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}

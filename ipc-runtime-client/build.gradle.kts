@@ -11,5 +11,6 @@ dependencies {
     // api 传递导出：使用方模块无需再重复声明 ipc-contract
     api(project(":ipc-contract"))
     implementation(libs.androidx.core.ktx)
-    implementation(libs.kotlinx.coroutines.core)
+    // CoroutineScope, Flow and coroutine handles are part of the public API.
+    api(libs.kotlinx.coroutines.core)
 }

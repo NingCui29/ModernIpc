@@ -1,0 +1,141 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.modernipc",
+    "module": "ipc-compiler",
+    "version": "3.0.0-consumer-check-20261022022757175411",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "ipc-compiler-3.0.0-consumer-check-20261022022757175411.jar",
+          "url": "ipc-compiler-3.0.0-consumer-check-20261022022757175411.jar",
+          "size": 60992,
+          "sha512": "9973cf51d7609cb2383e774b0c61f56722a0fed534a6c0d5b517c8c2f16d46231622f2771af0ea895200d77a67bb0adeb3795d569c654d66bffb9ab693d6f43e",
+          "sha256": "e4ab46944bf1594876ba1bddfac5a2387aeab1abd046d59b2fb2c0731fee9521",
+          "sha1": "8076e0e8dd2c509e04120edf2d7b7861abc6cb6f",
+          "md5": "dddd484e68ddc2fd9691bfe0e9714140"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        },
+        {
+          "group": "com.modernipc",
+          "module": "ipc-annotations",
+          "version": {
+            "requires": "3.0.0-consumer-check-20261022022757175411"
+          }
+        },
+        {
+          "group": "com.google.devtools.ksp",
+          "module": "symbol-processing-api",
+          "version": {
+            "requires": "1.9.22-1.0.17"
+          }
+        },
+        {
+          "group": "com.squareup",
+          "module": "kotlinpoet",
+          "version": {
+            "requires": "1.15.3"
+          }
+        },
+        {
+          "group": "com.squareup",
+          "module": "kotlinpoet-ksp",
+          "version": {
+            "requires": "1.15.3"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ipc-compiler-3.0.0-consumer-check-20261022022757175411.jar",
+          "url": "ipc-compiler-3.0.0-consumer-check-20261022022757175411.jar",
+          "size": 60992,
+          "sha512": "9973cf51d7609cb2383e774b0c61f56722a0fed534a6c0d5b517c8c2f16d46231622f2771af0ea895200d77a67bb0adeb3795d569c654d66bffb9ab693d6f43e",
+          "sha256": "e4ab46944bf1594876ba1bddfac5a2387aeab1abd046d59b2fb2c0731fee9521",
+          "sha1": "8076e0e8dd2c509e04120edf2d7b7861abc6cb6f",
+          "md5": "dddd484e68ddc2fd9691bfe0e9714140"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ipc-compiler-3.0.0-consumer-check-20261022022757175411-sources.jar",
+          "url": "ipc-compiler-3.0.0-consumer-check-20261022022757175411-sources.jar",
+          "size": 18738,
+          "sha512": "1ac90c324e3fb490f91d83d9b905ea17fcf3ac08f4bb4aaad2cc5af3912dec5aad1853f280f75940b446cd3697095dfb40388ef9a3a404310c2c4e17f90d01a5",
+          "sha256": "3e8f02c7b51601276b28d879fbea7f3695333d23afd974bab6c149a944fe8a44",
+          "sha1": "5d540cde82ccabd2745637424e9d96e892ccc7b0",
+          "md5": "b8beda7a6793c1ccc0eb08b35aef9d78"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ipc-compiler-3.0.0-consumer-check-20261022022757175411-javadoc.jar",
+          "url": "ipc-compiler-3.0.0-consumer-check-20261022022757175411-javadoc.jar",
+          "size": 261,
+          "sha512": "1eaaf40430234ea3c2058f4e767102727dadaaabdb5fdd0c514a472a21a63c238998e43792f92960f6a29d93bd7513f4d5f2ed3422018d0a24f357cafb558baf",
+          "sha256": "4a672a5f23b79c0c7e1a20751ad8fa3e40cad5e022c47d711fd51582bed31afc",
+          "sha1": "0432ac36d0583e7a6362fea1ad0419606452e1c0",
+          "md5": "2f4cf17a6fdf3d0c7d1d4f3b08a72627"
+        }
+      ]
+    }
+  ]
+}

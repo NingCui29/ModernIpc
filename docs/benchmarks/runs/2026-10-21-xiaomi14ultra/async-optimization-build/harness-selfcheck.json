@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "createdUtc": "2026-10-21T08:27:30.467343+00:00",
+  "adbInvoked": false,
+  "checks": [
+    {
+      "name": "every_lane_once_per_period",
+      "status": "PASS"
+    },
+    {
+      "name": "baseline_candidate_precedence_ABBA",
+      "status": "PASS"
+    },
+    {
+      "name": "all_37_vendored_sources_match_upstream",
+      "status": "PASS"
+    },
+    {
+      "name": "four_candidate_csv_blocks_and_foreground_accepted",
+      "status": "PASS"
+    },
+    {
+      "name": "wrong_dispatch_ack_rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "prepare_never_constructs_device",
+      "status": "PASS"
+    },
+    {
+      "name": "non_xiaomi_manufacturer_rejected_before_mutation",
+      "status": "PASS"
+    },
+    {
+      "name": "fixed_serial_on_all_constructed_adb_commands",
+      "status": "PASS"
+    },
+    {
+      "name": "modern_mode_order_same_within_round_and_balanced_across_rounds",
+      "status": "PASS"
+    },
+    {
+      "name": "andlinker_shell_payload_and_mode_order_matches_frozen_modern_baseline",
+      "status": "PASS"
+    }
+  ],
+  "harnessSha256": "0dd1de484b56c71aca0fa618b0e2315cec2bc03012be0d182ab746a5a6dc9eb4",
+  "vendorSourceCommit": "7ae01bfd87ddcf021319148a8727a95345cf350e",
+  "andlinkerBenchmarkShellSha256": "450f63c4da95f3a7c9b6582ba6f71f6b34d83ee73b4528be0cd63b56e82cdee8"
+}
