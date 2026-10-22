@@ -1,6 +1,6 @@
 # ModernIpc 架构分析与核心调用链
 
-固定发布版 `3.0.0-rc.1` 的产物与构建身份见[发布记录](releases/v3.0.0-rc.1/build-result.json)，该标签产物的设备验收仍为 **NOT_RUN**。下文本次新增 API 与优化属于未发布工作区候选，不代表该标签或 Maven 产物已包含它们。
+固定发布版 `3.0.0-rc.1` 的产物与构建身份见[发布记录](releases/v3.0.0-rc.1/build-result.json)，该标签产物的设备验收仍为 **NOT_RUN**。下文本次新增 API、优化与依赖修复已随 `3.0.0-rc.2` 交付，见[发布核验](releases/v3.0.0-rc.2/publication-result.json)；不代表旧 `3.0.0-rc.1` 标签或旧 Maven 产物已包含它们。
 
 核对日期：2026-10-22。本文维护当前模块、生命周期、请求/流协议和严格 Schema 调用链。依赖修复后的未发布 demo APK SHA-256 为 `D0E76D896BDC3F0C9F01E14073F34201FFE79BFC6B07106E7885EA4181F28A9A`，在小米 `925c23bb` 通过原框架 73 项、独立 Async scope 4 项、新增业务取消/超时终态 9 项及同 UID 鉴权微测，见[本轮 summary](benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-regression2/summary.json)。性能数据仍属于此前 `4F7ED...` APK；四个多 App 业务场景仍未完成设备验收。各版本功能和性能范围分别见[回归报告](benchmarks/Regression_Report.md)、[性能报告](benchmarks/Performance_Report.md)和[多 App 报告](benchmarks/Multi_App_Report.md)。
 

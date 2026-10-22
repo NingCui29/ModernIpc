@@ -79,7 +79,7 @@ flowchart LR
 
 ## 发布构建历史（2026-10-09）
 
-当前发布目标为 **3.0.0-rc.2**，版本分支 `codex/v3.0.0-rc.2`，交付七个库与六个 Debug APK（含独立 AndLinker 对照）。构建与验证见[rc.2 发布记录](docs/releases/v3.0.0-rc.2/README.md)，内容与迁移见[本次发布说明](.github/release-notes.md)。
+已发布预发行版 **3.0.0-rc.2**，版本分支 `codex/v3.0.0-rc.2`，交付七个库与六个 Debug APK（含独立 AndLinker 对照）。七库、六 APK 与完整证据等 49 个 Release 附件均已发布，构建与远端验证见[rc.2 发布记录](docs/releases/v3.0.0-rc.2/README.md)，内容与迁移见[本次发布说明](.github/release-notes.md)。
 
 以下保留 **3.0.0-rc.1** 的历史构建记录，版本分支 `codex/v3.0.0-rc.1`。七个库产物与五个Debug APK统一构建 **BUILD SUCCESSFUL in 12m34s，退出码0，429任务**；Maven内部版本、APK版本与同签名校验通过。demo APK SHA-256为 `23a2802fd636f03e5821ceaf335f73907193b27560959486605e5908f7b26701`，完整身份见[发布构建记录](docs/releases/v3.0.0-rc.1/build-result.json)。
 

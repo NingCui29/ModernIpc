@@ -1,0 +1,582 @@
+{
+  "version": "3.0.0-rc.2",
+  "status": "PUBLISHED_AND_VERIFIED",
+  "verifiedUtc": "2026-10-22T09:09:35.933534+00:00",
+  "releaseUrl": "https://github.com/NingCui29/ModernIpc/releases/tag/v3.0.0-rc.2",
+  "releaseId": 420494540,
+  "tag": "v3.0.0-rc.2",
+  "releaseSourceCommit": "ebe2794ce3a9295877624bbe68d8ee71f7b590fb",
+  "versionBranch": "codex/v3.0.0-rc.2",
+  "defaultBranch": "master",
+  "verificationCi": [
+    {
+      "id": 39748853744,
+      "head_branch": "codex/v3.0.0-rc.2",
+      "head_sha": "ebe2794ce3a9295877624bbe68d8ee71f7b590fb",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/NingCui29/ModernIpc/actions/runs/39748853744"
+    },
+    {
+      "id": 39748853822,
+      "head_branch": "master",
+      "head_sha": "ebe2794ce3a9295877624bbe68d8ee71f7b590fb",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/NingCui29/ModernIpc/actions/runs/39748853822"
+    }
+  ],
+  "releaseCi": {
+    "id": 39749858132,
+    "head_sha": "ebe2794ce3a9295877624bbe68d8ee71f7b590fb",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/NingCui29/ModernIpc/actions/runs/39749858132"
+  },
+  "maven": {
+    "repository": "https://maven.pkg.github.com/NingCui29/ModernIpc",
+    "version": "3.0.0-rc.2",
+    "publications": 7,
+    "primaryFilesVerified": 35,
+    "method": "Release CI downloaded every published primary artifact/metadata/sources/javadoc and compared size and SHA256 to validated local publications"
+  },
+  "releaseAssets": {
+    "total": 49,
+    "main": 46,
+    "fullEvidenceSupplement": 3,
+    "method": "Downloaded CI manifest and SHA256SUMS; compared all main assets to GitHub server SHA256 digests and sizes",
+    "files": [
+      {
+        "id": 665245500,
+        "name": "app-client1-3.0.0-rc.2-debug.apk",
+        "size": 6077381,
+        "digest": "sha256:2f427ea4e32c34ff7d0361573eecae26016d66a60f170567ea80a9a8798e4fbe",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/app-client1-3.0.0-rc.2-debug.apk"
+      },
+      {
+        "id": 665245491,
+        "name": "app-client2-3.0.0-rc.2-debug.apk",
+        "size": 6077365,
+        "digest": "sha256:1c22a9b2ad11172fe792570e1d509eafc6a67ca8d15927a808b040fc48111975",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/app-client2-3.0.0-rc.2-debug.apk"
+      },
+      {
+        "id": 665245493,
+        "name": "app-client3-3.0.0-rc.2-debug.apk",
+        "size": 6077362,
+        "digest": "sha256:77e2915e388bdc976b7fdb005bf8d89aa0d2d4cab9bb36c97a250b3fad9ded73",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/app-client3-3.0.0-rc.2-debug.apk"
+      },
+      {
+        "id": 665245490,
+        "name": "app-server-3.0.0-rc.2-debug.apk",
+        "size": 5828575,
+        "digest": "sha256:c119c716abb40dade0b9a69690e1437647c93e86d6ec432bc9cce4772b399195",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/app-server-3.0.0-rc.2-debug.apk"
+      },
+      {
+        "id": 665245494,
+        "name": "benchmark-andlinker-3.0.0-rc.2-debug.apk",
+        "size": 845376,
+        "digest": "sha256:29d0338e5a45557e799c073f7b6b8ba4ac666dd468c6fe97ece6e643d950a98d",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/benchmark-andlinker-3.0.0-rc.2-debug.apk"
+      },
+      {
+        "id": 665245486,
+        "name": "demo-app-3.0.0-rc.2-debug.apk",
+        "size": 6253846,
+        "digest": "sha256:b1fd3d1e99c2c398f706cc2e20f897b85486dd77e73e36594394c8aeb505e099",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/demo-app-3.0.0-rc.2-debug.apk"
+      },
+      {
+        "id": 665245489,
+        "name": "demo-client-common-3.0.0-rc.2-javadoc.jar",
+        "size": 336048,
+        "digest": "sha256:6f19584f53340f14df632aea753ce7898d338e290b58f1402ee473b16ff2108f",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/demo-client-common-3.0.0-rc.2-javadoc.jar"
+      },
+      {
+        "id": 665245495,
+        "name": "demo-client-common-3.0.0-rc.2-sources.jar",
+        "size": 24056,
+        "digest": "sha256:0d109157b77b7f00d208dc035c4ff899a3e1e5841db75e7922f02a84d3cd22e2",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/demo-client-common-3.0.0-rc.2-sources.jar"
+      },
+      {
+        "id": 665245485,
+        "name": "demo-client-common-3.0.0-rc.2.aar",
+        "size": 180176,
+        "digest": "sha256:84a519f690a1500ad54ffb00a01e71e7a6156237a9ae0b9c63e7f82772cc8942",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/demo-client-common-3.0.0-rc.2.aar"
+      },
+      {
+        "id": 665245488,
+        "name": "demo-client-common-3.0.0-rc.2.module",
+        "size": 5360,
+        "digest": "sha256:aacb74ecc25ca344f0fa15c9079d2872712f50a67eda66380676e38508136ac2",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/demo-client-common-3.0.0-rc.2.module"
+      },
+      {
+        "id": 665245475,
+        "name": "demo-client-common-3.0.0-rc.2.pom",
+        "size": 2520,
+        "digest": "sha256:5527b43457bc09c0a356ad1c014e99189f14b3d7133271fdc25034c84fa26a89",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/demo-client-common-3.0.0-rc.2.pom"
+      },
+      {
+        "id": 665245487,
+        "name": "evidence-repository.zip",
+        "size": 37861782,
+        "digest": "sha256:6be6dcd681a53e9d7c00334e572a2566175a05e2705d9cce028700d17ec5091d",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/evidence-repository.zip"
+      },
+      {
+        "id": 665278152,
+        "name": "FULL_EVIDENCE_SHA256SUMS.txt",
+        "size": 222,
+        "digest": "sha256:6dea27980cb1b98f10350951bb4644cdd018bef6a284565333e18899cb2489f0",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/FULL_EVIDENCE_SHA256SUMS.txt"
+      },
+      {
+        "id": 665245479,
+        "name": "ipc-annotations-3.0.0-rc.2-javadoc.jar",
+        "size": 261,
+        "digest": "sha256:562c7645d56aae7da3cb741453f7ca7011d40ed520a4884089d4887961d83d35",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-annotations-3.0.0-rc.2-javadoc.jar"
+      },
+      {
+        "id": 665245469,
+        "name": "ipc-annotations-3.0.0-rc.2-sources.jar",
+        "size": 3656,
+        "digest": "sha256:fbe97769ae24d77133665fe524fd3e988cdd2f1f9a15b4e7dd05f4da3722c93a",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-annotations-3.0.0-rc.2-sources.jar"
+      },
+      {
+        "id": 665245484,
+        "name": "ipc-annotations-3.0.0-rc.2.jar",
+        "size": 5404,
+        "digest": "sha256:40878e3ba203fae6a319c8cffc3ec3afcedb782d3d323b35de321269e3df5727",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-annotations-3.0.0-rc.2.jar"
+      },
+      {
+        "id": 665245471,
+        "name": "ipc-annotations-3.0.0-rc.2.module",
+        "size": 3959,
+        "digest": "sha256:727998062c6d138df02515b7d18e3179859d60fd9dfbbbffce1bf2c370df4691",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-annotations-3.0.0-rc.2.module"
+      },
+      {
+        "id": 665245482,
+        "name": "ipc-annotations-3.0.0-rc.2.pom",
+        "size": 982,
+        "digest": "sha256:816b0b76a355c9f0c6530f419dc3bbf1046a929df1c39c1003ad83016c6f29fc",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-annotations-3.0.0-rc.2.pom"
+      },
+      {
+        "id": 665245474,
+        "name": "ipc-api-3.0.0-rc.2-javadoc.jar",
+        "size": 320471,
+        "digest": "sha256:3dbbdd1d067e226ec23affd9a3469623d5feb5cf6451e6b76632d56722e17e6c",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-api-3.0.0-rc.2-javadoc.jar"
+      },
+      {
+        "id": 665245472,
+        "name": "ipc-api-3.0.0-rc.2-sources.jar",
+        "size": 7536,
+        "digest": "sha256:87c3eb87a01262bf37455cd41562c090d242e863ab5c3c6b4a2e0b49f233ee01",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-api-3.0.0-rc.2-sources.jar"
+      },
+      {
+        "id": 665245478,
+        "name": "ipc-api-3.0.0-rc.2.aar",
+        "size": 261059,
+        "digest": "sha256:5691ee6e29f0feaf0c4c6e7655659b34fafac67779a9e7ffbb4fad177da799a8",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-api-3.0.0-rc.2.aar"
+      },
+      {
+        "id": 665245466,
+        "name": "ipc-api-3.0.0-rc.2.module",
+        "size": 5767,
+        "digest": "sha256:cd0a2b9e1cc11d031981d8e9e0a9b9f61ae2e58c6a8c8768fb0e7d9012c2bd47",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-api-3.0.0-rc.2.module"
+      },
+      {
+        "id": 665245467,
+        "name": "ipc-api-3.0.0-rc.2.pom",
+        "size": 2126,
+        "digest": "sha256:4dbb3eb7d7af805d8d9ac2ce5410bebaf9c08a6a7cb99d0f70af5067f69cc805",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-api-3.0.0-rc.2.pom"
+      },
+      {
+        "id": 665245470,
+        "name": "ipc-compiler-3.0.0-rc.2-javadoc.jar",
+        "size": 261,
+        "digest": "sha256:4d89721e60c9c8271ddcea1425c4893d3bdb2ac42a18a6291622d0a1fc9c3208",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-compiler-3.0.0-rc.2-javadoc.jar"
+      },
+      {
+        "id": 665245480,
+        "name": "ipc-compiler-3.0.0-rc.2-sources.jar",
+        "size": 18667,
+        "digest": "sha256:192a3187e2edaaeb56890fd607fb4334f2618286373af68c4abffda4cd51a9d5",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-compiler-3.0.0-rc.2-sources.jar"
+      },
+      {
+        "id": 665245477,
+        "name": "ipc-compiler-3.0.0-rc.2.jar",
+        "size": 60992,
+        "digest": "sha256:e94114f4dd7ec3c19307e099ea6dc5647279d0cf53173e488965bc733d389ea8",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-compiler-3.0.0-rc.2.jar"
+      },
+      {
+        "id": 665245473,
+        "name": "ipc-compiler-3.0.0-rc.2.module",
+        "size": 4610,
+        "digest": "sha256:7817b964cd8a9358bcbc0451e915546736f682593a432f6621ec2c6a746086fb",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-compiler-3.0.0-rc.2.module"
+      },
+      {
+        "id": 665245464,
+        "name": "ipc-compiler-3.0.0-rc.2.pom",
+        "size": 1730,
+        "digest": "sha256:4ddcf2652d023103e933ed28ff3cb12f299603a63c2097cb42c06c1bee309b9c",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-compiler-3.0.0-rc.2.pom"
+      },
+      {
+        "id": 665245463,
+        "name": "ipc-contract-3.0.0-rc.2-javadoc.jar",
+        "size": 334601,
+        "digest": "sha256:b6cf48bf472c0703ae2ba7f95d38cf0df0e9811f5917739c064e12d07dac3abd",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-contract-3.0.0-rc.2-javadoc.jar"
+      },
+      {
+        "id": 665245465,
+        "name": "ipc-contract-3.0.0-rc.2-sources.jar",
+        "size": 7379,
+        "digest": "sha256:7aadf9aeb488f21fae8799279aa40d09fe51ae40397f733c45e0186762120cac",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-contract-3.0.0-rc.2-sources.jar"
+      },
+      {
+        "id": 665245460,
+        "name": "ipc-contract-3.0.0-rc.2.aar",
+        "size": 38516,
+        "digest": "sha256:d4664ca5d9f56322724b3f940a59e1360cf26f818913f88354c41d5c1a469a47",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-contract-3.0.0-rc.2.aar"
+      },
+      {
+        "id": 665245453,
+        "name": "ipc-contract-3.0.0-rc.2.module",
+        "size": 4282,
+        "digest": "sha256:3918de84745f97d38984d6449178f79d140dfa658a5ce77968f30cfbaf6723f4",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-contract-3.0.0-rc.2.module"
+      },
+      {
+        "id": 665245454,
+        "name": "ipc-contract-3.0.0-rc.2.pom",
+        "size": 1385,
+        "digest": "sha256:2404a77701bb63227639dae1ca8d9bb4ad0cb6ce5086d9afbb5c907b522eca0a",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-contract-3.0.0-rc.2.pom"
+      },
+      {
+        "id": 665245455,
+        "name": "ipc-runtime-client-3.0.0-rc.2-javadoc.jar",
+        "size": 333715,
+        "digest": "sha256:02545fc2d00ca3d4646a08b19b1f68497d1edcf19aea4f7f41d11b9596279115",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-runtime-client-3.0.0-rc.2-javadoc.jar"
+      },
+      {
+        "id": 665245456,
+        "name": "ipc-runtime-client-3.0.0-rc.2-sources.jar",
+        "size": 19011,
+        "digest": "sha256:20adc563a70e735a270acbc2ffc820bac45451ce4fb2419e6a0e48e98b0e07da",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-runtime-client-3.0.0-rc.2-sources.jar"
+      },
+      {
+        "id": 665245468,
+        "name": "ipc-runtime-client-3.0.0-rc.2.aar",
+        "size": 100785,
+        "digest": "sha256:66eab51e3e2251196a2ea1bc12c87577a1b06dab3403023146672a4f67eef9f6",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-runtime-client-3.0.0-rc.2.aar"
+      },
+      {
+        "id": 665245446,
+        "name": "ipc-runtime-client-3.0.0-rc.2.module",
+        "size": 4847,
+        "digest": "sha256:30f011efb493838be07824e7a3e47a656cbafd825e2763704abc15c1d1a60dc7",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-runtime-client-3.0.0-rc.2.module"
+      },
+      {
+        "id": 665245449,
+        "name": "ipc-runtime-client-3.0.0-rc.2.pom",
+        "size": 1573,
+        "digest": "sha256:f1693b7cf1a89a30b04895e70a155ad4eaa937d8e61e5aeba1180f9df14dc19f",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-runtime-client-3.0.0-rc.2.pom"
+      },
+      {
+        "id": 665245452,
+        "name": "ipc-runtime-server-3.0.0-rc.2-javadoc.jar",
+        "size": 344536,
+        "digest": "sha256:3c2809c6a2c0a3cd36e711267b50103334436bc1407d3a427297f643bf47203c",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-runtime-server-3.0.0-rc.2-javadoc.jar"
+      },
+      {
+        "id": 665245461,
+        "name": "ipc-runtime-server-3.0.0-rc.2-sources.jar",
+        "size": 12518,
+        "digest": "sha256:9709528b67e894a0558268e35b5c466896affbfbd43fced8d49d5bd50e0844f6",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-runtime-server-3.0.0-rc.2-sources.jar"
+      },
+      {
+        "id": 665245447,
+        "name": "ipc-runtime-server-3.0.0-rc.2.aar",
+        "size": 34591,
+        "digest": "sha256:63ddd19badb98a31496ba8319bbecb151fa7c0bc713a338e27ab1609bc2db0ad",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-runtime-server-3.0.0-rc.2.aar"
+      },
+      {
+        "id": 665245441,
+        "name": "ipc-runtime-server-3.0.0-rc.2.module",
+        "size": 4845,
+        "digest": "sha256:dd6ccaa708d6cd01adacd76a9ae6574af0d04ceb1c67aec3bb7b7cbf2219b2d7",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-runtime-server-3.0.0-rc.2.module"
+      },
+      {
+        "id": 665245445,
+        "name": "ipc-runtime-server-3.0.0-rc.2.pom",
+        "size": 1573,
+        "digest": "sha256:56fe934560f831f03fcda181ce270b7258f0fb7f94cabbfb32ca7d5c4b6304e1",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ipc-runtime-server-3.0.0-rc.2.pom"
+      },
+      {
+        "id": 665245451,
+        "name": "manifest.json",
+        "size": 493334,
+        "digest": "sha256:766400bce88959269e1a60fbfb308c21dc75c55f1c0ceb35659654d77a84a902",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/manifest.json"
+      },
+      {
+        "id": 665245448,
+        "name": "maven-repository.zip",
+        "size": 2456946,
+        "digest": "sha256:36746397e37c14611a06787714f96132272147b1403b8f40b56fd54442c63788",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/maven-repository.zip"
+      },
+      {
+        "id": 665267954,
+        "name": "ModernIpc-3.0.0-rc.2-evidence-full-manifest.json",
+        "size": 537926,
+        "digest": "sha256:58b70be7670a4a4b8264224e3c0bf3c55dcc2d2c6df3faf7bbda8a577b2ff94d",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ModernIpc-3.0.0-rc.2-evidence-full-manifest.json"
+      },
+      {
+        "id": 665251031,
+        "name": "ModernIpc-3.0.0-rc.2-evidence-full.zip",
+        "size": 306232722,
+        "digest": "sha256:f7f21910a5a266283695d39e34799d13899bd643dcb765986655cc8dd8320169",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ModernIpc-3.0.0-rc.2-evidence-full.zip"
+      },
+      {
+        "id": 665245492,
+        "name": "SHA256SUMS.txt",
+        "size": 4435,
+        "digest": "sha256:c38d6aff072ab73816f92f6b624c5db8a9e910f839ed1f61c75f7de35e13e43c",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/SHA256SUMS.txt"
+      },
+      {
+        "id": 665245450,
+        "name": "source.zip",
+        "size": 38833601,
+        "digest": "sha256:8c36226bd2623f984e32315195d1e30e058effb18e80bb69ffc20a9260ed6c51",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/source.zip"
+      }
+    ]
+  },
+  "fullEvidence": {
+    "sourceFiles": 1930,
+    "sourceBytes": 550892387,
+    "apkFiles": 56,
+    "uniqueApkSha256": 17,
+    "uploadedAssets": [
+      {
+        "name": "ModernIpc-3.0.0-rc.2-evidence-full.zip",
+        "action": "skipped-existing",
+        "verification": "api-sha256-and-size-matched",
+        "remote": {
+          "id": 665251031,
+          "name": "ModernIpc-3.0.0-rc.2-evidence-full.zip",
+          "size": 306232722,
+          "digest": "sha256:f7f21910a5a266283695d39e34799d13899bd643dcb765986655cc8dd8320169",
+          "state": "uploaded",
+          "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ModernIpc-3.0.0-rc.2-evidence-full.zip"
+        }
+      },
+      {
+        "name": "ModernIpc-3.0.0-rc.2-evidence-full-manifest.json",
+        "action": "skipped-existing",
+        "verification": "api-sha256-and-size-matched",
+        "remote": {
+          "id": 665267954,
+          "name": "ModernIpc-3.0.0-rc.2-evidence-full-manifest.json",
+          "size": 537926,
+          "digest": "sha256:58b70be7670a4a4b8264224e3c0bf3c55dcc2d2c6df3faf7bbda8a577b2ff94d",
+          "state": "uploaded",
+          "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ModernIpc-3.0.0-rc.2-evidence-full-manifest.json"
+        }
+      },
+      {
+        "name": "FULL_EVIDENCE_SHA256SUMS.txt",
+        "action": "uploaded",
+        "verification": "api-sha256-and-size-matched",
+        "remote": {
+          "id": 665278152,
+          "name": "FULL_EVIDENCE_SHA256SUMS.txt",
+          "size": 222,
+          "digest": "sha256:6dea27980cb1b98f10350951bb4644cdd018bef6a284565333e18899cb2489f0",
+          "state": "uploaded",
+          "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/FULL_EVIDENCE_SHA256SUMS.txt"
+        }
+      }
+    ]
+  },
+  "publishedApks": [
+    {
+      "module": "demo-app",
+      "package": "com.cn.ipc.demo",
+      "versionName": "3.0.0-rc.2",
+      "versionCode": 30002,
+      "debuggable": true,
+      "sourcePath": "demo-app/build/outputs/apk/debug/demo-app-debug.apk",
+      "releaseName": "demo-app-3.0.0-rc.2-debug.apk",
+      "size": 6253846,
+      "sha256": "b1fd3d1e99c2c398f706cc2e20f897b85486dd77e73e36594394c8aeb505e099",
+      "signerCertificateSha256": [
+        "69e47d569c404d03a2015a35678ef042d06271d97959efbf727f13b0116e4bec"
+      ]
+    },
+    {
+      "module": "app-server",
+      "package": "com.cn.ipc.server.app",
+      "versionName": "3.0.0-rc.2",
+      "versionCode": 30002,
+      "debuggable": true,
+      "sourcePath": "app-server/build/outputs/apk/debug/app-server-debug.apk",
+      "releaseName": "app-server-3.0.0-rc.2-debug.apk",
+      "size": 5828575,
+      "sha256": "c119c716abb40dade0b9a69690e1437647c93e86d6ec432bc9cce4772b399195",
+      "signerCertificateSha256": [
+        "69e47d569c404d03a2015a35678ef042d06271d97959efbf727f13b0116e4bec"
+      ]
+    },
+    {
+      "module": "app-client1",
+      "package": "com.cn.ipc.client1",
+      "versionName": "3.0.0-rc.2",
+      "versionCode": 30002,
+      "debuggable": true,
+      "sourcePath": "app-client1/build/outputs/apk/debug/app-client1-debug.apk",
+      "releaseName": "app-client1-3.0.0-rc.2-debug.apk",
+      "size": 6077381,
+      "sha256": "2f427ea4e32c34ff7d0361573eecae26016d66a60f170567ea80a9a8798e4fbe",
+      "signerCertificateSha256": [
+        "69e47d569c404d03a2015a35678ef042d06271d97959efbf727f13b0116e4bec"
+      ]
+    },
+    {
+      "module": "app-client2",
+      "package": "com.cn.ipc.client2",
+      "versionName": "3.0.0-rc.2",
+      "versionCode": 30002,
+      "debuggable": true,
+      "sourcePath": "app-client2/build/outputs/apk/debug/app-client2-debug.apk",
+      "releaseName": "app-client2-3.0.0-rc.2-debug.apk",
+      "size": 6077365,
+      "sha256": "1c22a9b2ad11172fe792570e1d509eafc6a67ca8d15927a808b040fc48111975",
+      "signerCertificateSha256": [
+        "69e47d569c404d03a2015a35678ef042d06271d97959efbf727f13b0116e4bec"
+      ]
+    },
+    {
+      "module": "app-client3",
+      "package": "com.cn.ipc.client3",
+      "versionName": "3.0.0-rc.2",
+      "versionCode": 30002,
+      "debuggable": true,
+      "sourcePath": "app-client3/build/outputs/apk/debug/app-client3-debug.apk",
+      "releaseName": "app-client3-3.0.0-rc.2-debug.apk",
+      "size": 6077362,
+      "sha256": "77e2915e388bdc976b7fdb005bf8d89aa0d2d4cab9bb36c97a250b3fad9ded73",
+      "signerCertificateSha256": [
+        "69e47d569c404d03a2015a35678ef042d06271d97959efbf727f13b0116e4bec"
+      ]
+    },
+    {
+      "module": "benchmark-andlinker",
+      "package": "com.cn.ipc.benchmark.andlinker",
+      "versionName": "3.0.0-rc.2",
+      "versionCode": 30002,
+      "debuggable": true,
+      "sourcePath": "benchmark-andlinker/build/outputs/apk/debug/benchmark-andlinker-debug.apk",
+      "releaseName": "benchmark-andlinker-3.0.0-rc.2-debug.apk",
+      "size": 845376,
+      "sha256": "29d0338e5a45557e799c073f7b6b8ba4ac666dd468c6fe97ece6e643d950a98d",
+      "signerCertificateSha256": [
+        "69e47d569c404d03a2015a35678ef042d06271d97959efbf727f13b0116e4bec"
+      ]
+    }
+  ],
+  "deviceValidation": {
+    "serial": "925c23bb",
+    "latestReleaseApks": "NOT_RUN",
+    "historicalEvidenceMustMatchRecordedApkAndSourceHashes": true
+  },
+  "provenance": "The immutable release tag identifies the runtime source commit. This post-publication document records actual CI and server digest results; it does not change release binaries or transfer earlier APK device results."
+}

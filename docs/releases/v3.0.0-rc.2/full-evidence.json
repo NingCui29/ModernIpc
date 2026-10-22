@@ -6,5 +6,47 @@
   "sourceBytes": 550892387,
   "apkFiles": 56,
   "uniqueApkHashes": 17,
-  "remoteAttachment": "PENDING"
+  "remoteAttachment": "VERIFIED",
+  "releaseUrl": "https://github.com/NingCui29/ModernIpc/releases/tag/v3.0.0-rc.2",
+  "verifiedAssets": [
+    {
+      "name": "ModernIpc-3.0.0-rc.2-evidence-full.zip",
+      "action": "skipped-existing",
+      "verification": "api-sha256-and-size-matched",
+      "remote": {
+        "id": 665251031,
+        "name": "ModernIpc-3.0.0-rc.2-evidence-full.zip",
+        "size": 306232722,
+        "digest": "sha256:f7f21910a5a266283695d39e34799d13899bd643dcb765986655cc8dd8320169",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ModernIpc-3.0.0-rc.2-evidence-full.zip"
+      }
+    },
+    {
+      "name": "ModernIpc-3.0.0-rc.2-evidence-full-manifest.json",
+      "action": "skipped-existing",
+      "verification": "api-sha256-and-size-matched",
+      "remote": {
+        "id": 665267954,
+        "name": "ModernIpc-3.0.0-rc.2-evidence-full-manifest.json",
+        "size": 537926,
+        "digest": "sha256:58b70be7670a4a4b8264224e3c0bf3c55dcc2d2c6df3faf7bbda8a577b2ff94d",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/ModernIpc-3.0.0-rc.2-evidence-full-manifest.json"
+      }
+    },
+    {
+      "name": "FULL_EVIDENCE_SHA256SUMS.txt",
+      "action": "uploaded",
+      "verification": "api-sha256-and-size-matched",
+      "remote": {
+        "id": 665278152,
+        "name": "FULL_EVIDENCE_SHA256SUMS.txt",
+        "size": 222,
+        "digest": "sha256:6dea27980cb1b98f10350951bb4644cdd018bef6a284565333e18899cb2489f0",
+        "state": "uploaded",
+        "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/FULL_EVIDENCE_SHA256SUMS.txt"
+      }
+    }
+  ]
 }
