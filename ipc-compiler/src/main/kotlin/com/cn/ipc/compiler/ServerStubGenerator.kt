@@ -162,6 +162,10 @@ class ServerStubGenerator(
             if (function.simpleName.asString() in listOf("equals", "hashCode", "toString")) return@forEach
 
             val funName = function.simpleName.asString()
+            // Decoded arguments never use caller-chosen names in the transaction handler.
+            val argumentNames = function.parameters.withIndex().associate { (index, param) ->
+                param to "__ipcArgument$index"
+            }
             val isSuspend = function.modifiers.contains(Modifier.SUSPEND)
             val isDirect = function.annotations.any { it.shortName.asString() == "IpcDirect" }
             val returnType = function.returnType?.resolve()
@@ -198,7 +202,7 @@ class ServerStubGenerator(
                     onTransactFun.addStatement("val requestId = data.readLong()")
                     // 读取并解析请求参数
                     function.parameters.forEach { param ->
-                        val paramName = param.name!!.asString()
+                        val paramName = argumentNames.getValue(param)
                         val readName = if (nativeAsync) "_raw_$paramName" else paramName
                         when (requireNotNull(WireTypeModel.resolve(param.type.resolve())).kind) {
                             WireTypeKind.STRING -> onTransactFun.addStatement(if (nativeAsync) "val %L = data.readString()" else "val %L = data.readString()!!", readName)
@@ -216,10 +220,10 @@ class ServerStubGenerator(
                         onTransactFun.beginControlFlow("try")
                         onTransactFun.addStatement("authorizeCaller()")
                         function.parameters.forEach { param ->
-                            val name = param.name!!.asString()
+                            val name = argumentNames.getValue(param)
                             val type = param.type.resolve()
                             if (requireNotNull(WireTypeModel.resolve(type)).kind in setOf(WireTypeKind.STRING, WireTypeKind.BYTES)) {
-                                onTransactFun.addStatement("val %L = requireNotNull(_raw_%L) { %S }", name, name, "Missing $name")
+                                onTransactFun.addStatement("val %L = requireNotNull(_raw_%L) { %S }", name, name, "Missing ${param.name!!.asString()}")
                             } else {
                                 onTransactFun.addStatement("val %L = _raw_%L", name, name)
                             }
@@ -230,8 +234,8 @@ class ServerStubGenerator(
                     onTransactFun.beginControlFlow("try")
                     
                     // invoke function 调用实际的服务接口方法
-                    val args = function.parameters.joinToString(", ") { it.name!!.asString() }
-                    onTransactFun.addStatement("val result = %L(%L)", funName, args)
+                    val args = function.parameters.joinToString(", ") { argumentNames.getValue(it) }
+                    onTransactFun.addStatement("val result = %N(%L)", funName, args)
                     onTransactFun.addStatement("com.cn.ipc.IpcRequestTrace.recordAt(%S, %S, requestId, callback = responseBinder)", "server", "server_business_done")
                     
                     // send response 发送成功响应
@@ -297,19 +301,19 @@ class ServerStubGenerator(
                     onTransactFun.addStatement("ensureOpen()")
                     onTransactFun.addStatement("val response = reply ?: return false")
                     function.parameters.forEach { param ->
-                        val name = param.name!!.asString()
+                        val name = argumentNames.getValue(param)
                         when (requireNotNull(WireTypeModel.resolve(param.type.resolve())).kind) {
-                            WireTypeKind.STRING -> onTransactFun.addStatement("val %L = data.readString() ?: throw IllegalArgumentException(%S)", name, "Missing $name")
+                            WireTypeKind.STRING -> onTransactFun.addStatement("val %L = data.readString() ?: throw IllegalArgumentException(%S)", name, "Missing ${param.name!!.asString()}")
                             WireTypeKind.INT -> onTransactFun.addStatement("val %L = data.readInt()", name)
                             WireTypeKind.LONG -> onTransactFun.addStatement("val %L = data.readLong()", name)
                             WireTypeKind.BOOLEAN -> onTransactFun.addStatement("val %L = data.readInt() == 1", name)
-                            WireTypeKind.BYTES -> onTransactFun.addStatement("val %L = data.createByteArray() ?: throw IllegalArgumentException(%S)", name, "Missing $name")
+                            WireTypeKind.BYTES -> onTransactFun.addStatement("val %L = data.createByteArray() ?: throw IllegalArgumentException(%S)", name, "Missing ${param.name!!.asString()}")
                             else -> error("Unsupported Direct parameter")
                         }
                     }
-                    val args = function.parameters.joinToString(", ") { it.name!!.asString() }
+                    val args = function.parameters.joinToString(", ") { argumentNames.getValue(it) }
                     onTransactFun.beginControlFlow("val result = try")
-                    onTransactFun.addStatement("%L(%L)", funName, args)
+                    onTransactFun.addStatement("%N(%L)", funName, args)
                     onTransactFun.nextControlFlow("catch (error: Exception)")
                     onTransactFun.addStatement("response.writeNoException()")
                     onTransactFun.addStatement("response.writeInt(0)")
@@ -330,7 +334,7 @@ class ServerStubGenerator(
                     onTransactFun.addStatement("authorizeCaller()")
                     onTransactFun.addStatement("ensureOpen()")
                     function.parameters.forEach { param ->
-                        val paramName = param.name!!.asString()
+                        val paramName = argumentNames.getValue(param)
                         when (requireNotNull(WireTypeModel.resolve(param.type.resolve())).kind) {
                             WireTypeKind.STRING -> onTransactFun.addStatement("val %L = data.readString()!!", paramName)
                             WireTypeKind.INT -> onTransactFun.addStatement("val %L = data.readInt()", paramName)
@@ -364,8 +368,8 @@ class ServerStubGenerator(
                         |}
                         |""".trimMargin()
                     )
-                    val args = function.parameters.joinToString(", ") { it.name!!.asString() }
-                    onTransactFun.addStatement("val flow = %L(%L)", funName, args)
+                    val args = function.parameters.joinToString(", ") { argumentNames.getValue(it) }
+                    onTransactFun.addStatement("val flow = %N(%L)", funName, args)
                     onTransactFun.beginControlFlow("val job = coroutineScope.launch(start = kotlinx.coroutines.CoroutineStart.LAZY)")
                     onTransactFun.beginControlFlow("try")
                     onTransactFun.beginControlFlow("flow.collect { item ->")
@@ -384,7 +388,7 @@ class ServerStubGenerator(
                         WireTypeKind.STRING -> onTransactFun.addStatement("eventData.writeString(item)")
                         WireTypeKind.PARCELABLE -> onTransactFun.addStatement("eventData.writeParcelable(item as android.os.Parcelable, 0)")
                     }
-                    onTransactFun.addStatement("observerBinder?.transact(1, eventData, null, android.os.IBinder.FLAG_ONEWAY)")
+                    onTransactFun.addStatement("if (!observerBinder.transact(1, eventData, null, android.os.IBinder.FLAG_ONEWAY)) throw android.os.RemoteException(%S)", "IPC stream observer rejected event")
                     onTransactFun.nextControlFlow("finally")
                     onTransactFun.addStatement("eventData.recycle()")
                     onTransactFun.endControlFlow()
@@ -394,7 +398,16 @@ class ServerStubGenerator(
                     onTransactFun.addStatement("kotlinx.coroutines.currentCoroutineContext().ensureActive()")
                     onTransactFun.addStatement("sendTerminal(2)")
                     onTransactFun.nextControlFlow("catch (cancelled: kotlinx.coroutines.CancellationException)")
-                    onTransactFun.addStatement("sendTerminal(3, if (_disposed.get()) %S else %S)", "SERVER_DISPOSED", "SERVER_SCOPE_CANCELLED")
+                    onTransactFun.addCode(
+                        """
+                        |val message = when {
+                        |    _disposed.get() -> "SERVER_DISPOSED"
+                        |    !coroutineScope.isActive -> "SERVER_SCOPE_CANCELLED"
+                        |    else -> cancelled.message ?: "Remote stream cancelled"
+                        |}
+                        |sendTerminal(3, message)
+                        |""".trimMargin()
+                    )
                     onTransactFun.addStatement("throw cancelled")
                     onTransactFun.nextControlFlow("catch (e: Exception)")
                     onTransactFun.addStatement("sendTerminal(3, e.message ?: %S)", "Remote stream error")
@@ -447,7 +460,7 @@ class ServerStubGenerator(
                     onTransactFun.addStatement("ensureOpen()")
                     // 处理单向调用
                     function.parameters.forEach { param ->
-                        val paramName = param.name!!.asString()
+                        val paramName = argumentNames.getValue(param)
                         when (requireNotNull(WireTypeModel.resolve(param.type.resolve())).kind) {
                             WireTypeKind.STRING -> onTransactFun.addStatement("val %L = data.readString()!!", paramName)
                             WireTypeKind.INT -> onTransactFun.addStatement("val %L = data.readInt()", paramName)
@@ -458,8 +471,8 @@ class ServerStubGenerator(
                             else -> error("Floating point Oneway parameters are unsupported")
                         }
                     }
-                    val args = function.parameters.joinToString(", ") { it.name!!.asString() }
-                    onTransactFun.addStatement("%L(%L)", funName, args)
+                    val args = function.parameters.joinToString(", ") { argumentNames.getValue(it) }
+                    onTransactFun.addStatement("%N(%L)", funName, args)
                 }
                 onTransactFun.addStatement("return true")
                 onTransactFun.endControlFlow()

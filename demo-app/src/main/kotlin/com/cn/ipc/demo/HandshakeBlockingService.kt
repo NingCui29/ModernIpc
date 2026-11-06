@@ -79,7 +79,10 @@ class HandshakeBlockingService : MyBrokerService() {
                         }
                         if (gate != null) {
                             val active = activeBlocked.incrementAndGet()
-                            peakBlocked.updateAndGet { maxOf(it, active) }
+                            while (true) {
+                                    val previous = peakBlocked.get()
+                                    if (previous >= active || peakBlocked.compareAndSet(previous, active)) break
+                                }
                             entered.incrementAndGet()
                             try {
                                 if (!gate.latch.await(10_000, TimeUnit.MILLISECONDS)) {

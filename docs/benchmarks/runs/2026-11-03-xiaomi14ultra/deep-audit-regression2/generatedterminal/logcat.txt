@@ -1,0 +1,20 @@
+--------- beginning of main
+11-03 16:27:32.244 24956 24956 I IpcForeground: STATE run=generatedterminal-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34137532 uptimeMs=6098156 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+11-03 16:27:32.295 24956 24956 I IpcForeground: STATE run=generatedterminal-deepaudit2 event=FOCUS_GAIN elapsedRealtimeMs=34137568 uptimeMs=6098192 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:27:32.345 24956 24956 I IpcForeground: STATE run=generatedterminal-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34137633 uptimeMs=6098257 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:27:32.446 24956 24956 I IpcForeground: STATE run=generatedterminal-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34137734 uptimeMs=6098359 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:27:32.547 24956 24956 I IpcForeground: STATE run=generatedterminal-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34137835 uptimeMs=6098459 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:27:32.547 24956 24956 I IpcForeground: STATE run=generatedterminal-deepaudit2 event=BEGIN elapsedRealtimeMs=34137835 uptimeMs=6098459 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:27:32.706 24956 25978 I IpcGeneratedTerminal: PASS run=generatedterminal-deepaudit2 dispatch=default path=raw scenario=__business_timeout__ terminals=1 requests=0
+11-03 16:27:32.791 24956 25978 I IpcGeneratedTerminal: PASS run=generatedterminal-deepaudit2 dispatch=default path=adapter scenario=__business_timeout__ elapsedMs=85 pending=0 requests=0
+11-03 16:27:32.843 24956 25978 I IpcGeneratedTerminal: PASS run=generatedterminal-deepaudit2 dispatch=default path=raw scenario=__business_cancel__ terminals=1 requests=0
+11-03 16:27:32.845 24956 25978 I IpcGeneratedTerminal: PASS run=generatedterminal-deepaudit2 dispatch=default path=adapter scenario=__business_cancel__ elapsedMs=2 pending=0 requests=0
+11-03 16:27:32.983 24956 25978 I IpcGeneratedTerminal: PASS run=generatedterminal-deepaudit2 dispatch=dedicated path=raw scenario=__business_timeout__ terminals=1 requests=0
+11-03 16:27:33.049 24956 24956 I IpcForeground: STATE run=generatedterminal-deepaudit2 event=SAMPLE elapsedRealtimeMs=34138337 uptimeMs=6098961 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:27:33.072 24956 25978 I IpcGeneratedTerminal: PASS run=generatedterminal-deepaudit2 dispatch=dedicated path=adapter scenario=__business_timeout__ elapsedMs=89 pending=0 requests=0
+11-03 16:27:33.129 24956 25978 I IpcGeneratedTerminal: PASS run=generatedterminal-deepaudit2 dispatch=dedicated path=raw scenario=__business_cancel__ terminals=1 requests=0
+11-03 16:27:33.134 24956 25978 I IpcGeneratedTerminal: PASS run=generatedterminal-deepaudit2 dispatch=dedicated path=adapter scenario=__business_cancel__ elapsedMs=4 pending=0 requests=0
+11-03 16:27:33.138 24956 25978 I IpcGeneratedTerminal: PASS run=generatedterminal-deepaudit2 defaultRestored=true pending=0 requests=0 subscriptions=0
+11-03 16:27:33.138 24956 25978 I IpcGeneratedTerminal: DONE run=generatedterminal-deepaudit2 passed=true checks=9
+11-03 16:27:33.141 24956 24956 I IpcForeground: STATE run=generatedterminal-deepaudit2 event=END elapsedRealtimeMs=34138428 uptimeMs=6099052 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:27:33.147 24956 24956 I IpcForeground: END run=generatedterminal-deepaudit2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-generatedterminal-deepaudit2.csv scope=activity_events_and_500ms_app_samples

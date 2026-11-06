@@ -1,0 +1,20 @@
+{
+  "valid": false,
+  "ruleVersion": "foreground-coverage-v1",
+  "targetSamplePeriodMs": 500,
+  "permittedMaxGapMs": 1000,
+  "scope": "activity_events_with_bounded_periodic_sample_coverage",
+  "observations": 0,
+  "sampleCount": 0,
+  "requiredSampleCount": null,
+  "durationMs": null,
+  "maxGapMs": null,
+  "observationMaxGapMs": null,
+  "errors": [
+    "Expected exactly one BEGIN followed by exactly one final END",
+    "RuntimeError: Probe failure: FAILED run=lifecycle-deepaudit1"
+  ],
+  "sourceSha256": "DB66E1C5A224816DA5B83592727E39BE869C5EFFAA9460FDE6549AEC459AC988",
+  "run": "lifecycle-deepaudit1",
+  "csv": "foreground-lifecycle-deepaudit1.csv"
+}

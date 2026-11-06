@@ -105,7 +105,7 @@ jobs:
 
       - name: Run host state-machine and build verification gates
         shell: bash
-        run: bash ./gradlew --console=plain --max-workers=2 :check
+        run: bash ./gradlew --console=plain --max-workers=2 check
 
       - name: Set up Python for independent Maven consumers
         uses: actions/setup-python@v5

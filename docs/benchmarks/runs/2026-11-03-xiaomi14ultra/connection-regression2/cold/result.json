@@ -1,0 +1,81 @@
+{
+  "group": "cold",
+  "tag": "IpcColdProbe",
+  "expectedPasses": 12,
+  "runId": "cold-nov03attempt2",
+  "status": "PASSED",
+  "valid": true,
+  "passCount": 12,
+  "doneCount": 1,
+  "foregroundEndCount": 1,
+  "complete": true,
+  "errors": [],
+  "passes": [
+    "PASS run=cold-nov03attempt2 mainColdAsync mainTicks=14/300ms result=true discoveryBeforePending=true",
+    "PASS run=cold-nov03attempt2 coldAsyncDeadline defaultCallTimeoutMs=150 elapsedMs=154 timeout=true pending=0 lateChecked=0",
+    "PASS run=cold-nov03attempt2 flowDiscoveryDeadline defaultCallTimeoutMs=150 elapsedMs=183 collectorEnded=true timeout=true values=0 pending=0 lateChecked=0",
+    "PASS run=cold-nov03attempt2 cancelDiscovery elapsedMs=1 callerCancelled=true remoteStillBlockedBeforeRelease=true pending=0 lateChecked=0",
+    "PASS run=cold-nov03attempt2 concurrentSingleFlight callers=16 metadata=1 checked=1 hotCalls=10 additionalDiscovery=0",
+    "PASS run=cold-nov03attempt2 sharedDiscoveryCancelOne waiters=16 cancelled=1 succeeded=15 metadata=1 checked=1 legacy=0 pending=0",
+    "PASS run=cold-nov03attempt2 closeDuringDiscovery elapsedMs=5 warmedPendingFailed=true discoveryWaiterFailed=true remoteStillBlockedBeforeRelease=true pending=0",
+    "PASS run=cold-nov03attempt2 disposeDuringDiscovery elapsedMs=4 warmedPendingFailed=true discoveryWaiterFailed=true remoteStillBlockedBeforeRelease=true pending=0",
+    "PASS run=cold-nov03attempt2 lateGeneration generationAdvanced=true freshResolvedBeforeOldRelease=true oldFailed=true metadata=2 checked=1",
+    "PASS run=cold-nov03attempt2 failureRetry firstFailure=true retrySucceeded=true metadata=2 checked=1 legacy=0",
+    "PASS run=cold-nov03attempt2 strictSchemaRejection explicitCompatibilityFailure=true rejectedChecked=0 legacyFallback=0 validSchemaRetry=true",
+    "PASS run=cold-nov03attempt2 boundedSaturation workerLimit=4 fifthRejected=true elapsedMs=1 retrySucceeded=true recoveryRejections=0 peakBlocked=4"
+  ],
+  "done": [
+    "DONE run=cold-nov03attempt2 passed=true checks=12 requests=0 subscriptions=0 pending=0 watchdogs=0"
+  ],
+  "foregroundEnd": [
+    "END run=cold-nov03attempt2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-cold-nov03attempt2.csv scope=activity_events_and_500ms_app_samples"
+  ],
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 5,
+    "sampleCount": 3,
+    "requiredSampleCount": 1,
+    "durationMs": 1759,
+    "maxGapMs": 503,
+    "observationMaxGapMs": 503,
+    "errors": [],
+    "sourceSha256": "10C3912F0F78EBE65FF0E96598F286C59A8262E30A1E7A859BE1175EE866A518",
+    "run": "cold-nov03attempt2",
+    "csv": "foreground-cold-nov03attempt2.csv"
+  },
+  "observed": {
+    "runId": "cold-nov03attempt2",
+    "tag": "IpcColdProbe",
+    "passCount": 12,
+    "doneCount": 1,
+    "foregroundEndCount": 1,
+    "expectedPasses": 12,
+    "complete": true,
+    "valid": true,
+    "errors": [],
+    "passes": [
+      "PASS run=cold-nov03attempt2 mainColdAsync mainTicks=14/300ms result=true discoveryBeforePending=true",
+      "PASS run=cold-nov03attempt2 coldAsyncDeadline defaultCallTimeoutMs=150 elapsedMs=154 timeout=true pending=0 lateChecked=0",
+      "PASS run=cold-nov03attempt2 flowDiscoveryDeadline defaultCallTimeoutMs=150 elapsedMs=183 collectorEnded=true timeout=true values=0 pending=0 lateChecked=0",
+      "PASS run=cold-nov03attempt2 cancelDiscovery elapsedMs=1 callerCancelled=true remoteStillBlockedBeforeRelease=true pending=0 lateChecked=0",
+      "PASS run=cold-nov03attempt2 concurrentSingleFlight callers=16 metadata=1 checked=1 hotCalls=10 additionalDiscovery=0",
+      "PASS run=cold-nov03attempt2 sharedDiscoveryCancelOne waiters=16 cancelled=1 succeeded=15 metadata=1 checked=1 legacy=0 pending=0",
+      "PASS run=cold-nov03attempt2 closeDuringDiscovery elapsedMs=5 warmedPendingFailed=true discoveryWaiterFailed=true remoteStillBlockedBeforeRelease=true pending=0",
+      "PASS run=cold-nov03attempt2 disposeDuringDiscovery elapsedMs=4 warmedPendingFailed=true discoveryWaiterFailed=true remoteStillBlockedBeforeRelease=true pending=0",
+      "PASS run=cold-nov03attempt2 lateGeneration generationAdvanced=true freshResolvedBeforeOldRelease=true oldFailed=true metadata=2 checked=1",
+      "PASS run=cold-nov03attempt2 failureRetry firstFailure=true retrySucceeded=true metadata=2 checked=1 legacy=0",
+      "PASS run=cold-nov03attempt2 strictSchemaRejection explicitCompatibilityFailure=true rejectedChecked=0 legacyFallback=0 validSchemaRetry=true",
+      "PASS run=cold-nov03attempt2 boundedSaturation workerLimit=4 fifthRejected=true elapsedMs=1 retrySucceeded=true recoveryRejections=0 peakBlocked=4"
+    ],
+    "done": [
+      "DONE run=cold-nov03attempt2 passed=true checks=12 requests=0 subscriptions=0 pending=0 watchdogs=0"
+    ],
+    "foregroundEnd": [
+      "END run=cold-nov03attempt2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-cold-nov03attempt2.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}

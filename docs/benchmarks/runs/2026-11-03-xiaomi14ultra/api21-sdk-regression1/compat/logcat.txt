@@ -1,0 +1,26 @@
+--------- beginning of main
+11-03 16:46:51.564 26884 26884 I IpcForeground: STATE run=compat-api21sdk1 event=WAIT_READY elapsedRealtimeMs=35296852 uptimeMs=7257476 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+11-03 16:46:51.592 26884 26884 I IpcForeground: STATE run=compat-api21sdk1 event=FOCUS_GAIN elapsedRealtimeMs=35296880 uptimeMs=7257504 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:46:51.664 26884 26884 I IpcForeground: STATE run=compat-api21sdk1 event=WAIT_READY elapsedRealtimeMs=35296953 uptimeMs=7257577 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:46:51.765 26884 26884 I IpcForeground: STATE run=compat-api21sdk1 event=WAIT_READY elapsedRealtimeMs=35297053 uptimeMs=7257677 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:46:51.866 26884 26884 I IpcForeground: STATE run=compat-api21sdk1 event=WAIT_READY elapsedRealtimeMs=35297154 uptimeMs=7257778 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:46:51.866 26884 26884 I IpcForeground: STATE run=compat-api21sdk1 event=BEGIN elapsedRealtimeMs=35297155 uptimeMs=7257779 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:51.889 26884 31088 I IpcCompatibilityProbe: PASS run=compat-api21sdk1 metadataMatch descriptor=true signatures=17 floor=1
+11-03 16:46:51.896 26884 31088 I IpcCompatibilityProbe: PASS run=compat-api21sdk1 additiveSubset clientVersion=1 requestedTransactions=1 extraServerTransactions=true
+11-03 16:46:51.908 26884 31088 I IpcCompatibilityProbe: PASS run=compat-api21sdk1 parameterChange brokerRejected=true controllerRejected=true
+11-03 16:46:51.910 26884 31088 I IpcCompatibilityProbe: PASS run=compat-api21sdk1 returnChange brokerRejected=true controllerRejected=true
+11-03 16:46:51.911 26884 31088 I IpcCompatibilityProbe: PASS run=compat-api21sdk1 modeChange brokerRejected=true controllerRejected=true
+11-03 16:46:51.912 26884 31088 I IpcCompatibilityProbe: PASS run=compat-api21sdk1 envelopeChange brokerRejected=true controllerRejected=true
+11-03 16:46:51.913 26884 31088 I IpcCompatibilityProbe: PASS run=compat-api21sdk1 missingTransaction brokerRejected=true controllerRejected=true
+11-03 16:46:51.914 26884 31088 I IpcCompatibilityProbe: PASS run=compat-api21sdk1 descriptorChange brokerRejected=true controllerRejected=true
+11-03 16:46:51.915 26884 31088 I IpcCompatibilityProbe: PASS run=compat-api21sdk1 futureClientVersion brokerRejected=true controllerRejected=true
+11-03 16:46:51.915 26884 31088 I IpcCompatibilityProbe: PASS run=compat-api21sdk1 schemaCacheIsolation fullCached=true changedSchemaRejected=true subsetAccepted=true
+11-03 16:46:51.920 26884 31088 I IpcCompatibilityProbe: PASS run=compat-api21sdk1 constructionMapMutation fingerprintStable=true originalSnapshotAccepted=true brokerWireAccepted=true copiedMutationRejected=true
+11-03 16:46:51.921 26884 31088 I IpcCompatibilityProbe: PASS run=compat-api21sdk1 legacyFloor userFloor=2 userDenied=true echoFloor=1 echoAllowed=true
+11-03 16:46:51.949 26884 31088 I IpcCompatibilityProbe: PASS run=compat-api21sdk1 strictCache coldMetadata=1 coldChecked=1 hotCalls=100 additionalDiscovery=0 legacy=0
+11-03 16:46:51.963 26884 31142 I IpcCompatibilityProbe: PASS run=compat-api21sdk1 generationRevalidate metadata=2 checked=2 legacy=0 generationAdvanced=true
+11-03 16:46:51.971 26884 31141 I IpcCompatibilityProbe: PASS run=compat-api21sdk1 legacyMethodsMissing metadataRejected=true checkedRejected=true legacyEchoAlive=true
+11-03 16:46:51.972 26884 31141 I IpcCompatibilityProbe: PASS run=compat-api21sdk1 strictLegacyNoFallback explicitFailure=true metadataAttempts=1 checked=0 legacyFallbacks=0
+11-03 16:46:51.974 26884 31143 I IpcCompatibilityProbe: DONE run=compat-api21sdk1 passed=true checks=16 requests=0 subscriptions=0 pending=0
+11-03 16:46:51.975 26884 26884 I IpcForeground: STATE run=compat-api21sdk1 event=END elapsedRealtimeMs=35297263 uptimeMs=7257887 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:51.978 26884 26884 I IpcForeground: END run=compat-api21sdk1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-compat-api21sdk1.csv scope=activity_events_and_500ms_app_samples

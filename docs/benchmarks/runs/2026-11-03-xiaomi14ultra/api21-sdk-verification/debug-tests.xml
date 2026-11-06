@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.cn.ipc.demo.regression.RuntimeRegressionTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2026-11-03T08:44:20" hostname="BLUE" time="7.398">
+  <properties/>
+  <testcase name="registrationDetachesOutsideManagerLock" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="2.758"/>
+  <testcase name="generatedArgumentsKeepBusinessValuesWithTraceOnAndOff" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="0.39"/>
+  <testcase name="rawFlowHasOneTerminalAndQuietUnsubscribe" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="0.114"/>
+  <testcase name="flowBusinessCancellationKeepsCauseAndScopeAlive" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="0.089"/>
+  <testcase name="rawRequestIdRemainsIndependentOfBusinessRequestId" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="0.026"/>
+  <testcase name="brokerRechecksCrossUidAuthorizationAfterSuccessfulCall" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="0.027"/>
+  <testcase name="closeFailsOldWaitersEvenWhenConnectionImmediatelyReopens" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="0.038"/>
+  <testcase name="broadcastPreservesFailFastAndCancellationContract" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="0.022"/>
+  <testcase name="awaitConnectionFailsPromptlyAndCanStartFreshAttempt" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="0.026"/>
+  <testcase name="subscriptionCallbacksCanUnregisterReenterAndBroadcastConcurrently" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="0.021"/>
+  <testcase name="clearingOldGenerationCannotRemoveReplacementSubscription" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="0.024"/>
+  <testcase name="closedAndDeadObserversCannotRegisterAndStaleDeathCannotRemoveReplacement" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="0.021"/>
+  <testcase name="registryRegistrationIsAtomicAndDisposalClosesBeforeCallbacks" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="0.025"/>
+  <testcase name="rejectedStreamEventTerminatesAndReleasesSubscription" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="0.025"/>
+  <testcase name="deathAndDisconnectRespectZeroAndOneRetryInBothOrders" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="3.76"/>
+  <testcase name="breakingParcelableRevisionRequiresVersionFloor" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="0.026"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

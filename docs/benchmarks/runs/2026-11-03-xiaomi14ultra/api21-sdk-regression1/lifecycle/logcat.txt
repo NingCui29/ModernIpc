@@ -1,0 +1,45 @@
+--------- beginning of main
+11-03 16:46:38.868 26507 26507 I IpcForeground: STATE run=lifecycle-api21sdk1 event=WAIT_READY elapsedRealtimeMs=35284156 uptimeMs=7244780 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+11-03 16:46:38.885 26507 26507 I IpcForeground: STATE run=lifecycle-api21sdk1 event=FOCUS_GAIN elapsedRealtimeMs=35284174 uptimeMs=7244798 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:46:38.968 26507 26507 I IpcForeground: STATE run=lifecycle-api21sdk1 event=WAIT_READY elapsedRealtimeMs=35284257 uptimeMs=7244881 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:46:39.069 26507 26507 I IpcForeground: STATE run=lifecycle-api21sdk1 event=WAIT_READY elapsedRealtimeMs=35284358 uptimeMs=7244982 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:46:39.170 26507 26507 I IpcForeground: STATE run=lifecycle-api21sdk1 event=WAIT_READY elapsedRealtimeMs=35284458 uptimeMs=7245082 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:46:39.170 26507 26507 I IpcForeground: STATE run=lifecycle-api21sdk1 event=BEGIN elapsedRealtimeMs=35284459 uptimeMs=7245083 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:39.231 26507 30578 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 closeHeldRequest failed=true cause=IllegalStateException
+11-03 16:46:39.484 26507 30578 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 close cycle=1 subscriptions=0 requests=0 eventsQuiet=true
+11-03 16:46:39.606 26507 30644 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 reconnect cycle=1 subscriptions=1 generation=2
+11-03 16:46:39.672 26507 26507 I IpcForeground: STATE run=lifecycle-api21sdk1 event=SAMPLE elapsedRealtimeMs=35284960 uptimeMs=7245584 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:39.864 26507 30641 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 close cycle=2 subscriptions=0 requests=0 eventsQuiet=true
+11-03 16:46:39.986 26507 30640 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 reconnect cycle=2 subscriptions=1 generation=3
+11-03 16:46:40.175 26507 26507 I IpcForeground: STATE run=lifecycle-api21sdk1 event=SAMPLE elapsedRealtimeMs=35285462 uptimeMs=7246086 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:40.242 26507 30640 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 close cycle=3 subscriptions=0 requests=0 eventsQuiet=true
+11-03 16:46:40.363 26507 30641 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 reconnect cycle=3 subscriptions=1 generation=4
+11-03 16:46:40.622 26507 30641 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 close cycle=4 subscriptions=0 requests=0 eventsQuiet=true
+11-03 16:46:40.675 26507 26507 I IpcForeground: STATE run=lifecycle-api21sdk1 event=SAMPLE elapsedRealtimeMs=35285963 uptimeMs=7246587 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:40.749 26507 30641 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 reconnect cycle=4 subscriptions=1 generation=5
+11-03 16:46:41.010 26507 30580 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 close cycle=5 subscriptions=0 requests=0 eventsQuiet=true
+11-03 16:46:41.140 26507 30580 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 reconnect cycle=5 subscriptions=1 generation=6
+11-03 16:46:41.179 26507 26507 I IpcForeground: STATE run=lifecycle-api21sdk1 event=SAMPLE elapsedRealtimeMs=35286466 uptimeMs=7247090 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:41.402 26507 30578 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 close cycle=6 subscriptions=0 requests=0 eventsQuiet=true
+11-03 16:46:41.526 26507 30646 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 reconnect cycle=6 subscriptions=1 generation=7
+11-03 16:46:41.684 26507 26507 I IpcForeground: STATE run=lifecycle-api21sdk1 event=SAMPLE elapsedRealtimeMs=35286970 uptimeMs=7247594 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:41.783 26507 30579 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 close cycle=7 subscriptions=0 requests=0 eventsQuiet=true
+11-03 16:46:41.907 26507 30640 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 reconnect cycle=7 subscriptions=1 generation=8
+11-03 16:46:42.171 26507 30640 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 close cycle=8 subscriptions=0 requests=0 eventsQuiet=true
+11-03 16:46:42.186 26507 26507 I IpcForeground: STATE run=lifecycle-api21sdk1 event=SAMPLE elapsedRealtimeMs=35287473 uptimeMs=7248098 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:42.294 26507 30640 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 reconnect cycle=8 subscriptions=1 generation=9
+11-03 16:46:42.558 26507 30646 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 explicitDispose collectorEnded=true reconnectRejected=true subscriptions=0 requests=0
+11-03 16:46:42.689 26507 26507 I IpcForeground: STATE run=lifecycle-api21sdk1 event=SAMPLE elapsedRealtimeMs=35287976 uptimeMs=7248600 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:42.842 26507 30641 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 ownerCancellation disposed=true collectorEnded=true requestFailed=true subscriptions=0 requests=0 eventsQuiet=true
+11-03 16:46:42.882 26507 30647 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 serviceDestroy oldStubRejected=true binderStillAlive=true recreatedStub=true subscriptions=0 requests=0
+11-03 16:46:42.889 26507 30641 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 nullBinding disconnected=true failureElapsedMs=4 bindingTimeoutMs=5000 lateCallbackStable=true pending=0 syntheticWaiter=true
+11-03 16:46:42.893 30587 30587 I IpcLifecycleProbe: DELAYED_BIND started delayMs=1500
+11-03 16:46:43.192 26507 26507 I IpcForeground: STATE run=lifecycle-api21sdk1 event=SAMPLE elapsedRealtimeMs=35288479 uptimeMs=7249103 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:43.698 26507 26507 I IpcForeground: STATE run=lifecycle-api21sdk1 event=SAMPLE elapsedRealtimeMs=35288984 uptimeMs=7249608 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:44.203 26507 26507 I IpcForeground: STATE run=lifecycle-api21sdk1 event=SAMPLE elapsedRealtimeMs=35289489 uptimeMs=7250113 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:44.394 30587 30587 I IpcLifecycleProbe: DELAYED_BIND returned=true
+11-03 16:46:44.709 26507 26507 I IpcForeground: STATE run=lifecycle-api21sdk1 event=SAMPLE elapsedRealtimeMs=35289994 uptimeMs=7250618 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:44.805 26507 30579 I IpcLifecycleProbe: PASS run=lifecycle-api21sdk1 bindingTimeout disconnected=true failureElapsedMs=206 bindingTimeoutMs=200 lateCallbackStable=true pending=0 syntheticWaiter=true
+11-03 16:46:44.809 26507 30641 I IpcLifecycleProbe: DONE run=lifecycle-api21sdk1 passed=true cycles=8 subscriptions=0 requests=0 anchorAlive=true
+11-03 16:46:44.813 26507 26507 I IpcForeground: STATE run=lifecycle-api21sdk1 event=END elapsedRealtimeMs=35290101 uptimeMs=7250725 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:44.820 26507 26507 I IpcForeground: END run=lifecycle-api21sdk1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-lifecycle-api21sdk1.csv scope=activity_events_and_500ms_app_samples

@@ -1,0 +1,27 @@
+--------- beginning of main
+11-03 16:46:58.811 30979 30979 I IpcForeground: STATE run=cold-api21sdk1 event=WAIT_READY elapsedRealtimeMs=35304099 uptimeMs=7264723 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+11-03 16:46:58.829 30979 30979 I IpcForeground: STATE run=cold-api21sdk1 event=FOCUS_GAIN elapsedRealtimeMs=35304117 uptimeMs=7264741 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:46:58.911 30979 30979 I IpcForeground: STATE run=cold-api21sdk1 event=WAIT_READY elapsedRealtimeMs=35304199 uptimeMs=7264823 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:46:59.011 30979 30979 I IpcForeground: STATE run=cold-api21sdk1 event=WAIT_READY elapsedRealtimeMs=35304299 uptimeMs=7264923 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:46:59.112 30979 30979 I IpcForeground: STATE run=cold-api21sdk1 event=WAIT_READY elapsedRealtimeMs=35304400 uptimeMs=7265024 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:46:59.112 30979 30979 I IpcForeground: STATE run=cold-api21sdk1 event=BEGIN elapsedRealtimeMs=35304400 uptimeMs=7265024 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:59.123 30979 31555 I IpcColdProbe: START run=cold-api21sdk1 checks=12 clientPid=30979 serverPid=31562
+11-03 16:46:59.483 30979 31556 I IpcColdProbe: PASS run=cold-api21sdk1 mainColdAsync mainTicks=14/300ms result=true discoveryBeforePending=true
+11-03 16:46:59.616 30979 30979 I IpcForeground: STATE run=cold-api21sdk1 event=SAMPLE elapsedRealtimeMs=35304903 uptimeMs=7265527 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:59.705 30979 31603 I IpcColdProbe: PASS run=cold-api21sdk1 coldAsyncDeadline defaultCallTimeoutMs=150 elapsedMs=154 timeout=true pending=0 lateChecked=0
+11-03 16:46:59.941 30979 31603 I IpcColdProbe: PASS run=cold-api21sdk1 flowDiscoveryDeadline defaultCallTimeoutMs=150 elapsedMs=168 collectorEnded=true timeout=true values=0 pending=0 lateChecked=0
+11-03 16:47:00.023 30979 31603 I IpcColdProbe: PASS run=cold-api21sdk1 cancelDiscovery elapsedMs=2 callerCancelled=true remoteStillBlockedBeforeRelease=true pending=0 lateChecked=0
+11-03 16:47:00.119 30979 30979 I IpcForeground: STATE run=cold-api21sdk1 event=SAMPLE elapsedRealtimeMs=35305406 uptimeMs=7266030 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:47:00.243 30979 31635 I IpcColdProbe: PASS run=cold-api21sdk1 concurrentSingleFlight callers=16 metadata=1 checked=1 hotCalls=10 additionalDiscovery=0
+11-03 16:47:00.292 30979 31635 I IpcColdProbe: PASS run=cold-api21sdk1 sharedDiscoveryCancelOne waiters=16 cancelled=1 succeeded=15 metadata=1 checked=1 legacy=0 pending=0
+11-03 16:47:00.397 30979 31554 I IpcColdProbe: PASS run=cold-api21sdk1 closeDuringDiscovery elapsedMs=5 warmedPendingFailed=true discoveryWaiterFailed=true remoteStillBlockedBeforeRelease=true pending=0
+11-03 16:47:00.484 30979 31554 I IpcColdProbe: PASS run=cold-api21sdk1 disposeDuringDiscovery elapsedMs=3 warmedPendingFailed=true discoveryWaiterFailed=true remoteStillBlockedBeforeRelease=true pending=0
+11-03 16:47:00.581 30979 31555 I IpcColdProbe: PASS run=cold-api21sdk1 lateGeneration generationAdvanced=true freshResolvedBeforeOldRelease=true oldFailed=true metadata=2 checked=1
+11-03 16:47:00.621 30979 30979 I IpcForeground: STATE run=cold-api21sdk1 event=SAMPLE elapsedRealtimeMs=35305909 uptimeMs=7266533 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:47:00.644 30979 31635 I IpcColdProbe: PASS run=cold-api21sdk1 failureRetry firstFailure=true retrySucceeded=true metadata=2 checked=1 legacy=0
+11-03 16:47:00.694 30979 31554 I IpcColdProbe: PASS run=cold-api21sdk1 strictSchemaRejection explicitCompatibilityFailure=true rejectedChecked=0 legacyFallback=0 validSchemaRetry=true
+11-03 16:47:00.804 30979 31603 I IpcColdProbe: PASS run=cold-api21sdk1 boundedSaturation workerLimit=4 queueLimit=4 ninthRejected=true queuedCancellationReclaimed=true elapsedMs=0 retrySucceeded=true recoveryRejections=0 peakBlocked=4
+11-03 16:47:00.855 30979 31554 I IpcColdProbe: DONE run=cold-api21sdk1 passed=true checks=12 requests=0 subscriptions=0 pending=0 watchdogs=0
+11-03 16:47:00.859 30979 31554 I IpcColdProbe: RAW run=cold-api21sdk1 checks=12 file=cold-cold-api21sdk1.csv
+11-03 16:47:00.864 30979 30979 I IpcForeground: STATE run=cold-api21sdk1 event=END elapsedRealtimeMs=35306152 uptimeMs=7266776 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:47:00.866 30979 30979 I IpcForeground: END run=cold-api21sdk1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-cold-api21sdk1.csv scope=activity_events_and_500ms_app_samples

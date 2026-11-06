@@ -70,6 +70,10 @@ class IpcSymbolProcessor(
             logger.error("@IpcFacade 只能用于 interface，但找到了 ${classDeclaration.classKind}", classDeclaration)
             return false
         }
+        if (classDeclaration.parentDeclaration != null) {
+            logger.error("@IpcFacade requires a top-level interface; nested interfaces are not supported. Move it to package scope.", classDeclaration)
+            return false
+        }
         val facade = classDeclaration.annotations.first { it.shortName.asString() == "IpcFacade" }
         val serviceId = facade.arguments.firstOrNull { it.name?.asString() == "serviceId" }?.value as? Int ?: 0
         val minVersion = facade.arguments.firstOrNull { it.name?.asString() == "minApiVersion" }?.value as? Int ?: 1

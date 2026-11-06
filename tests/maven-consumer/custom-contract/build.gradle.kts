@@ -14,6 +14,9 @@ dependencies {
 }
 
 android.publishing { singleVariant("release") }
+if (providers.gradleProperty("invalidFacade").orNull == "nested") {
+    android.sourceSets.getByName("main").java.srcDir("../negative/nested")
+}
 publishing.repositories.maven {
     name = "Fixture"
     url = uri(providers.gradleProperty("ipcRepository").get())

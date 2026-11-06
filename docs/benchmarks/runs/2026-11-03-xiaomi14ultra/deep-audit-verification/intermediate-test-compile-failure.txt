@@ -1,0 +1,254 @@
+Configuration on demand is an incubating feature.
+> Task :build-logic:checkKotlinGradlePluginConfigurationErrors
+> Task :build-logic:generateExternalPluginSpecBuilders UP-TO-DATE
+> Task :build-logic:extractPrecompiledScriptPluginPlugins UP-TO-DATE
+> Task :build-logic:compilePluginsBlocks UP-TO-DATE
+> Task :build-logic:generatePrecompiledScriptPluginAccessors UP-TO-DATE
+> Task :build-logic:generateScriptPluginAdapters UP-TO-DATE
+> Task :build-logic:compileKotlin UP-TO-DATE
+> Task :build-logic:compileJava NO-SOURCE
+> Task :build-logic:pluginDescriptors UP-TO-DATE
+> Task :build-logic:processResources UP-TO-DATE
+> Task :build-logic:classes UP-TO-DATE
+> Task :build-logic:jar UP-TO-DATE
+
+> Configure project :app-server
+WARNING: The option 'android.enableBuildCache' is deprecated.
+The current default is 'false'.
+It was removed in version 7.0 of the Android Gradle plugin.
+The Android-specific build caches were superseded by the Gradle build cache (https://docs.gradle.org/current/userguide/build_cache.html).
+
+> Task :demo-app:checkKotlinGradlePluginConfigurationErrors
+> Task :demo-app:preBuild UP-TO-DATE
+> Task :demo-app:preDebugBuild UP-TO-DATE
+> Task :ipc-annotations:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-api:preBuild UP-TO-DATE
+> Task :ipc-api:preDebugBuild UP-TO-DATE
+> Task :ipc-api:writeDebugAarMetadata UP-TO-DATE
+> Task :ipc-contract:preBuild UP-TO-DATE
+> Task :ipc-contract:preDebugBuild UP-TO-DATE
+> Task :ipc-contract:writeDebugAarMetadata UP-TO-DATE
+> Task :ipc-runtime-client:preBuild UP-TO-DATE
+> Task :ipc-runtime-client:preDebugBuild UP-TO-DATE
+> Task :ipc-runtime-client:writeDebugAarMetadata UP-TO-DATE
+> Task :ipc-runtime-server:preBuild UP-TO-DATE
+> Task :ipc-runtime-server:preDebugBuild UP-TO-DATE
+> Task :ipc-runtime-server:writeDebugAarMetadata UP-TO-DATE
+> Task :demo-app:checkDebugAarMetadata UP-TO-DATE
+> Task :demo-app:generateDebugResValues UP-TO-DATE
+> Task :ipc-api:generateDebugResValues UP-TO-DATE
+> Task :ipc-annotations:compileKotlin UP-TO-DATE
+> Task :ipc-api:generateDebugResources UP-TO-DATE
+> Task :ipc-annotations:compileJava NO-SOURCE
+> Task :ipc-annotations:processResources NO-SOURCE
+> Task :ipc-annotations:classes UP-TO-DATE
+> Task :ipc-api:packageDebugResources UP-TO-DATE
+> Task :ipc-contract:generateDebugResValues UP-TO-DATE
+> Task :ipc-annotations:jar UP-TO-DATE
+> Task :ipc-contract:generateDebugResources UP-TO-DATE
+> Task :ipc-runtime-client:generateDebugResValues UP-TO-DATE
+> Task :ipc-runtime-client:generateDebugResources UP-TO-DATE
+> Task :ipc-contract:packageDebugResources UP-TO-DATE
+> Task :ipc-runtime-server:generateDebugResValues UP-TO-DATE
+> Task :ipc-runtime-server:generateDebugResources UP-TO-DATE
+> Task :ipc-runtime-client:packageDebugResources UP-TO-DATE
+> Task :demo-app:generateDebugResources UP-TO-DATE
+> Task :demo-app:packageDebugResources UP-TO-DATE
+> Task :ipc-runtime-server:packageDebugResources UP-TO-DATE
+> Task :ipc-api:extractDeepLinksDebug UP-TO-DATE
+> Task :demo-app:parseDebugLocalResources UP-TO-DATE
+> Task :ipc-api:processDebugManifest UP-TO-DATE
+> Task :ipc-contract:extractDeepLinksDebug UP-TO-DATE
+> Task :demo-app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :ipc-contract:processDebugManifest UP-TO-DATE
+> Task :ipc-runtime-client:extractDeepLinksDebug UP-TO-DATE
+> Task :ipc-runtime-client:processDebugManifest UP-TO-DATE
+> Task :ipc-runtime-server:extractDeepLinksDebug UP-TO-DATE
+> Task :ipc-runtime-server:processDebugManifest UP-TO-DATE
+> Task :ipc-api:compileDebugLibraryResources UP-TO-DATE
+> Task :ipc-api:parseDebugLocalResources UP-TO-DATE
+> Task :ipc-api:generateDebugRFile UP-TO-DATE
+> Task :ipc-contract:compileDebugLibraryResources UP-TO-DATE
+> Task :ipc-contract:parseDebugLocalResources UP-TO-DATE
+> Task :ipc-contract:generateDebugRFile UP-TO-DATE
+> Task :ipc-runtime-client:compileDebugLibraryResources UP-TO-DATE
+> Task :ipc-runtime-client:parseDebugLocalResources UP-TO-DATE
+> Task :ipc-runtime-client:generateDebugRFile UP-TO-DATE
+> Task :ipc-runtime-server:compileDebugLibraryResources UP-TO-DATE
+> Task :ipc-runtime-server:parseDebugLocalResources UP-TO-DATE
+> Task :ipc-runtime-server:generateDebugRFile UP-TO-DATE
+> Task :ipc-api:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-compiler:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-compiler:compileKotlin UP-TO-DATE
+> Task :demo-app:mergeDebugResources UP-TO-DATE
+> Task :demo-app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :ipc-compiler:compileJava NO-SOURCE
+> Task :demo-app:extractDeepLinksDebug UP-TO-DATE
+> Task :ipc-compiler:processResources UP-TO-DATE
+> Task :ipc-compiler:classes UP-TO-DATE
+> Task :demo-app:processDebugMainManifest UP-TO-DATE
+> Task :ipc-compiler:jar UP-TO-DATE
+> Task :demo-app:processDebugManifest UP-TO-DATE
+> Task :demo-app:processDebugManifestForPackage UP-TO-DATE
+> Task :ipc-contract:compileDebugAidl UP-TO-DATE
+> Task :ipc-contract:checkKotlinGradlePluginConfigurationErrors
+> Task :demo-app:processDebugResources UP-TO-DATE
+> Task :ipc-runtime-client:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-runtime-client:javaPreCompileDebug UP-TO-DATE
+> Task :ipc-runtime-server:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-runtime-server:javaPreCompileDebug UP-TO-DATE
+> Task :ipc-api:javaPreCompileDebug UP-TO-DATE
+> Task :demo-app:javaPreCompileDebug UP-TO-DATE
+> Task :demo-app:preDebugUnitTestBuild UP-TO-DATE
+> Task :demo-app:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :demo-app:mergeDebugShaders UP-TO-DATE
+> Task :demo-app:compileDebugShaders NO-SOURCE
+> Task :demo-app:generateDebugAssets UP-TO-DATE
+> Task :ipc-api:mergeDebugShaders UP-TO-DATE
+> Task :ipc-api:compileDebugShaders NO-SOURCE
+> Task :ipc-api:generateDebugAssets UP-TO-DATE
+> Task :ipc-api:packageDebugAssets UP-TO-DATE
+> Task :ipc-runtime-client:mergeDebugShaders UP-TO-DATE
+> Task :ipc-runtime-client:compileDebugShaders NO-SOURCE
+> Task :ipc-runtime-client:generateDebugAssets UP-TO-DATE
+> Task :ipc-runtime-client:packageDebugAssets UP-TO-DATE
+> Task :ipc-contract:compileDebugKotlin UP-TO-DATE
+> Task :ipc-contract:javaPreCompileDebug UP-TO-DATE
+> Task :ipc-runtime-server:mergeDebugShaders UP-TO-DATE
+> Task :ipc-runtime-server:compileDebugShaders NO-SOURCE
+> Task :ipc-runtime-server:generateDebugAssets UP-TO-DATE
+> Task :ipc-runtime-server:packageDebugAssets UP-TO-DATE
+> Task :ipc-host-tests:checkKotlinGradlePluginConfigurationErrors
+> Task :ipc-contract:compileDebugJavaWithJavac UP-TO-DATE
+> Task :ipc-contract:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :ipc-host-tests:compileClientHostKotlin UP-TO-DATE
+> Task :ipc-runtime-client:compileDebugKotlin UP-TO-DATE
+> Task :ipc-runtime-client:compileDebugJavaWithJavac NO-SOURCE
+> Task :ipc-runtime-client:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :ipc-contract:mergeDebugShaders UP-TO-DATE
+> Task :ipc-contract:compileDebugShaders NO-SOURCE
+> Task :ipc-contract:generateDebugAssets UP-TO-DATE
+> Task :ipc-contract:packageDebugAssets UP-TO-DATE
+> Task :demo-app:mergeDebugAssets UP-TO-DATE
+> Task :demo-app:packageDebugUnitTestForUnitTest UP-TO-DATE
+> Task :demo-app:generateDebugUnitTestConfig UP-TO-DATE
+> Task :ipc-contract:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :ipc-runtime-server:compileDebugKotlin UP-TO-DATE
+> Task :ipc-runtime-server:compileDebugJavaWithJavac NO-SOURCE
+> Task :ipc-contract:processDebugJavaRes UP-TO-DATE
+> Task :ipc-runtime-server:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :ipc-runtime-client:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :ipc-runtime-client:processDebugJavaRes UP-TO-DATE
+> Task :ipc-runtime-server:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :ipc-runtime-server:processDebugJavaRes UP-TO-DATE
+> Task :ipc-host-tests:compileClientHostJava NO-SOURCE
+> Task :ipc-host-tests:processClientHostResources NO-SOURCE
+> Task :ipc-host-tests:clientHostClasses UP-TO-DATE
+> Task :ipc-api:kspDebugKotlin UP-TO-DATE
+> Task :ipc-api:compileDebugKotlin UP-TO-DATE
+> Task :ipc-api:compileDebugJavaWithJavac NO-SOURCE
+> Task :ipc-api:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :demo-app:kspDebugKotlin UP-TO-DATE
+> Task :demo-app:compileDebugKotlin UP-TO-DATE
+> Task :demo-app:compileDebugJavaWithJavac NO-SOURCE
+> Task :demo-app:bundleDebugClassesToRuntimeJar UP-TO-DATE
+> Task :demo-app:bundleDebugClassesToCompileJar UP-TO-DATE
+
+> Task :ipc-host-tests:pendingCallRegistryHostTest
+PASS immediateReply
+PASS cancelDuringDispatch
+PASS disconnectDuringDispatch
+PASS failedDispatch
+PASS cancelledBeforeRegistration
+PASS publicRegisterCompatibility
+PASS parcelFailureAndRemoteError
+PASS replyDisconnectRace1000
+PASS defaultDeadline
+PASS bulkDisconnectAndThrowingCancel
+PASS promptCancellationAfterReply
+PASS callerDispatcherPreserved
+PASS pendingRegistryHost checks=12 deviceValidation=NOT_RUN binderValidation=NOT_RUN
+
+> Task :ipc-api:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :ipc-api:processDebugJavaRes UP-TO-DATE
+> Task :ipc-host-tests:compileServerHostKotlin UP-TO-DATE
+> Task :ipc-host-tests:compileServerHostJava NO-SOURCE
+> Task :ipc-host-tests:processServerHostResources NO-SOURCE
+> Task :ipc-host-tests:serverHostClasses UP-TO-DATE
+
+> Task :ipc-host-tests:requestTrackerHostTest
+PASS normal_completion_permit_reuse
+PASS cancel_before_start
+PASS duplicate_retains_original_permit
+PASS cancel_uid_isolation
+PASS cancel_callback_isolation
+PASS cancelled_scope_rejection
+PASS scope_cancel_before_start
+PASS dispose_idempotence_rejection
+PASS 128_request_limit
+PASS running_cancel_terminal_owner
+PASS callback_death_before_start
+PASS link_failure_permit_reuse
+PASS null_callback
+PASS concurrent_submit_cancel_dispose_1600
+PASS stale_death_recipient_reused_key
+PASS 15 host tracker cases; Android Binder and device performance were not tested
+
+> Task :demo-app:processDebugJavaRes UP-TO-DATE
+> Task :ipc-host-tests:compileKotlin NO-SOURCE
+> Task :ipc-host-tests:compileJava NO-SOURCE
+> Task :ipc-host-tests:processResources NO-SOURCE
+> Task :ipc-host-tests:classes UP-TO-DATE
+> Task :ipc-host-tests:compileTestKotlin NO-SOURCE
+> Task :ipc-host-tests:compileTestJava NO-SOURCE
+> Task :ipc-host-tests:processTestResources NO-SOURCE
+> Task :ipc-host-tests:testClasses UP-TO-DATE
+> Task :ipc-host-tests:test NO-SOURCE
+> Task :ipc-host-tests:check
+> Task :app-server:preBuild UP-TO-DATE
+> Task :app-server:preDebugBuild UP-TO-DATE
+> Task :app-server:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app-server:checkKotlinGradlePluginConfigurationErrors
+> Task :demo-app:kspDebugUnitTestKotlin
+> Task :app-server:checkDebugAarMetadata UP-TO-DATE
+> Task :app-server:generateDebugResValues UP-TO-DATE
+> Task :app-server:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app-server:generateDebugResources UP-TO-DATE
+> Task :app-server:mergeDebugResources UP-TO-DATE
+> Task :app-server:packageDebugResources UP-TO-DATE
+> Task :app-server:parseDebugLocalResources UP-TO-DATE
+> Task :app-server:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app-server:extractDeepLinksDebug UP-TO-DATE
+> Task :app-server:processDebugMainManifest UP-TO-DATE
+> Task :app-server:processDebugManifest UP-TO-DATE
+> Task :app-server:processDebugManifestForPackage UP-TO-DATE
+> Task :app-server:processDebugResources UP-TO-DATE
+> Task :app-server:kspDebugKotlin
+
+> Task :demo-app:compileDebugUnitTestKotlin
+e: file:///D:/Developer/WorkSpace/ModernIpc/demo-app/src/test/kotlin/com/cn/ipc/demo/regression/RuntimeRegressionTest.kt:163:56 No type arguments expected for fun getApplication(): Application!
+
+> Task :demo-app:compileDebugUnitTestKotlin FAILED
+> Task :app-server:compileDebugKotlin
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':demo-app:compileDebugUnitTestKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.5/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 17s
+130 actionable tasks: 16 executed, 114 up-to-date

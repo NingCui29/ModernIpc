@@ -1,0 +1,65 @@
+{
+  "group": "asyncscope",
+  "tag": "IpcAsyncScopeProbe",
+  "expectedPasses": 4,
+  "runId": "asyncscope-api21sdk1",
+  "status": "PASSED",
+  "valid": true,
+  "passCount": 4,
+  "doneCount": 1,
+  "foregroundEndCount": 1,
+  "complete": true,
+  "errors": [],
+  "passes": [
+    "PASS run=asyncscope-api21sdk1 dedicatedSelected=true traceDisabled=true",
+    "PASS run=asyncscope-api21sdk1 dedicatedCancel=true concurrentFlow=0,1,2 pending=0 requests=0 subscriptions=0",
+    "PASS run=asyncscope-api21sdk1 dedicatedDeadline=true pending=0 requests=0 subscriptions=0",
+    "PASS run=asyncscope-api21sdk1 defaultRestored=true pending=0 requests=0 subscriptions=0"
+  ],
+  "done": [
+    "DONE run=asyncscope-api21sdk1 passed=true checks=4"
+  ],
+  "foregroundEnd": [
+    "END run=asyncscope-api21sdk1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-asyncscope-api21sdk1.csv scope=activity_events_and_500ms_app_samples"
+  ],
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 2,
+    "sampleCount": 0,
+    "requiredSampleCount": 0,
+    "durationMs": 303,
+    "maxGapMs": 303,
+    "observationMaxGapMs": 303,
+    "errors": [],
+    "sourceSha256": "266BA145443092DA751BFC4AB06AA58B6BF28D6ACC98BC32F4D08DC550CCFCFA",
+    "run": "asyncscope-api21sdk1",
+    "csv": "foreground-asyncscope-api21sdk1.csv"
+  },
+  "observed": {
+    "runId": "asyncscope-api21sdk1",
+    "tag": "IpcAsyncScopeProbe",
+    "passCount": 4,
+    "doneCount": 1,
+    "foregroundEndCount": 1,
+    "expectedPasses": 4,
+    "complete": true,
+    "valid": true,
+    "errors": [],
+    "passes": [
+      "PASS run=asyncscope-api21sdk1 dedicatedSelected=true traceDisabled=true",
+      "PASS run=asyncscope-api21sdk1 dedicatedCancel=true concurrentFlow=0,1,2 pending=0 requests=0 subscriptions=0",
+      "PASS run=asyncscope-api21sdk1 dedicatedDeadline=true pending=0 requests=0 subscriptions=0",
+      "PASS run=asyncscope-api21sdk1 defaultRestored=true pending=0 requests=0 subscriptions=0"
+    ],
+    "done": [
+      "DONE run=asyncscope-api21sdk1 passed=true checks=4"
+    ],
+    "foregroundEnd": [
+      "END run=asyncscope-api21sdk1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-asyncscope-api21sdk1.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}

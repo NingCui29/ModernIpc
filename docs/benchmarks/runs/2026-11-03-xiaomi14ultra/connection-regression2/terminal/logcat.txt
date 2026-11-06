@@ -1,0 +1,21 @@
+--------- beginning of main
+11-03 15:58:24.770 10403 10403 I IpcForeground: STATE run=terminal-nov03attempt2 event=WAIT_READY elapsedRealtimeMs=32390056 uptimeMs=4350680 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+11-03 15:58:24.812 10403 10403 I IpcForeground: STATE run=terminal-nov03attempt2 event=FOCUS_GAIN elapsedRealtimeMs=32390100 uptimeMs=4350724 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 15:58:24.870 10403 10403 I IpcForeground: STATE run=terminal-nov03attempt2 event=WAIT_READY elapsedRealtimeMs=32390158 uptimeMs=4350782 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 15:58:24.971 10403 10403 I IpcForeground: STATE run=terminal-nov03attempt2 event=WAIT_READY elapsedRealtimeMs=32390259 uptimeMs=4350883 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 15:58:25.071 10403 10403 I IpcForeground: STATE run=terminal-nov03attempt2 event=WAIT_READY elapsedRealtimeMs=32390359 uptimeMs=4350983 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 15:58:25.071 10403 10403 I IpcForeground: STATE run=terminal-nov03attempt2 event=BEGIN elapsedRealtimeMs=32390360 uptimeMs=4350984 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 15:58:25.103 10403 11516 I IpcTerminalProbe: PASS run=terminal-nov03attempt2 finiteFlow items=1,2,3 completed=true subscriptions=0
+11-03 15:58:25.108 10403 11520 I IpcTerminalProbe: PASS run=terminal-nov03attempt2 runtimeFlowError itemBeforeError=7 message=flow-runtime-error subscriptions=0
+11-03 15:58:25.572 10403 10403 I IpcForeground: STATE run=terminal-nov03attempt2 event=SAMPLE elapsedRealtimeMs=32390860 uptimeMs=4351484 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 15:58:26.074 10403 10403 I IpcForeground: STATE run=terminal-nov03attempt2 event=SAMPLE elapsedRealtimeMs=32391361 uptimeMs=4351985 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 15:58:26.577 10403 10403 I IpcForeground: STATE run=terminal-nov03attempt2 event=SAMPLE elapsedRealtimeMs=32391863 uptimeMs=4352487 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 15:58:26.623 10403 11517 I IpcTerminalProbe: PASS run=terminal-nov03attempt2 streamOverflow explicitFailure=true consumed=69 subscriptions=0
+11-03 15:58:26.724 10403 11520 I IpcTerminalProbe: PASS run=terminal-nov03attempt2 streamConflate completed=true consumed=4 last=999 overflow=false subscriptions=0
+11-03 15:58:26.735 10403 11454 I IpcTerminalProbe: PASS run=terminal-nov03attempt2 explicitStreamCancel extraError=false subscriptions=0
+11-03 15:58:26.904 10403 11517 I IpcTerminalProbe: PASS run=terminal-nov03attempt2 rpcDeadline defaultMs=150 elapsedMs=157 serverJobObserved=true requests=0 pending=0
+11-03 15:58:26.910 10403 11517 I IpcTerminalProbe: PASS run=terminal-nov03attempt2 asyncParameterError callbackReceived=true message=Missing_payload requests=0 pending=0
+11-03 15:58:27.064 10403 11517 I IpcTerminalProbe: PASS run=terminal-nov03attempt2 badTokenDeadline callbackTrusted=false defaultMs=150 elapsedMs=153 requests=0 pending=0
+11-03 15:58:27.071 10403 11519 I IpcTerminalProbe: DONE run=terminal-nov03attempt2 passed=true checks=8 subscriptions=0 requests=0 pending=0 anchorAlive=true
+11-03 15:58:27.074 10403 10403 I IpcForeground: STATE run=terminal-nov03attempt2 event=END elapsedRealtimeMs=32392361 uptimeMs=4352985 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 15:58:27.080 10403 10403 I IpcForeground: END run=terminal-nov03attempt2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-terminal-nov03attempt2.csv scope=activity_events_and_500ms_app_samples

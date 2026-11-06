@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-03",
+  "status": "PASSED",
+  "device": "925c23bb",
+  "model": "24031PN0DC",
+  "installedApkSha256": "C4018EBC4AF682B86AB4C0C9599131F2AACDA8BFFEDBC5EBA9657D760CCAB71A",
+  "installedApkPulledAndVerified": true,
+  "build": "PASSED",
+  "hostStateMachineChecks": 27,
+  "robolectricTests": 12,
+  "deviceRegression": "PASSED",
+  "coreChecks": 73,
+  "dedicatedScopeChecks": 4,
+  "generatedTerminalChecks": 9,
+  "totalDeviceChecks": 86,
+  "andLinkerPerformanceComparison": "NOT_RUN",
+  "deviceEvidence": "../connection-regression2/summary.json",
+  "firstCandidate": {
+    "date": "2026-11-03",
+    "status": "SUPERSEDED",
+    "device": "925c23bb",
+    "model": "24031PN0DC",
+    "installedApkSha256": "EBC7920C6F872FEA74EAA5C2B61EAE5056D3EB1C3CEC98300BFDCFF58D34C615",
+    "installedApkPulledAndVerified": true,
+    "build": "PASSED",
+    "hostStateMachineChecks": 27,
+    "robolectricTests": 12,
+    "deviceRegression": "FAILED_TERMINAL_DIAGNOSTIC",
+    "performance": "NOT_RUN",
+    "logs": [
+      "build.txt",
+      "host-tests.xml"
+    ]
+  },
+  "firstFailureEvidence": "../connection-regression1/summary.json",
+  "fix": "Preserve original parameter names in generated missing-argument diagnostics; keep isolated local variable names.",
+  "logs": [
+    "build-final.txt",
+    "host-tests-final.xml"
+  ]
+}

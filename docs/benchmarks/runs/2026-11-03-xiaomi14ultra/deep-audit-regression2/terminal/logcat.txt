@@ -1,0 +1,21 @@
+--------- beginning of main
+11-03 16:27:03.964 20059 20059 I IpcForeground: STATE run=terminal-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34109252 uptimeMs=6069876 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+11-03 16:27:03.983 20059 20059 I IpcForeground: STATE run=terminal-deepaudit2 event=FOCUS_GAIN elapsedRealtimeMs=34109271 uptimeMs=6069895 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:27:04.065 20059 20059 I IpcForeground: STATE run=terminal-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34109353 uptimeMs=6069977 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:27:04.165 20059 20059 I IpcForeground: STATE run=terminal-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34109453 uptimeMs=6070077 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:27:04.266 20059 20059 I IpcForeground: STATE run=terminal-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34109554 uptimeMs=6070179 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:27:04.267 20059 20059 I IpcForeground: STATE run=terminal-deepaudit2 event=BEGIN elapsedRealtimeMs=34109555 uptimeMs=6070179 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:27:04.299 20059 24063 I IpcTerminalProbe: PASS run=terminal-deepaudit2 finiteFlow items=1,2,3 completed=true subscriptions=0
+11-03 16:27:04.303 20059 24061 I IpcTerminalProbe: PASS run=terminal-deepaudit2 runtimeFlowError itemBeforeError=7 message=flow-runtime-error subscriptions=0
+11-03 16:27:04.768 20059 20059 I IpcForeground: STATE run=terminal-deepaudit2 event=SAMPLE elapsedRealtimeMs=34110056 uptimeMs=6070680 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:27:05.273 20059 20059 I IpcForeground: STATE run=terminal-deepaudit2 event=SAMPLE elapsedRealtimeMs=34110560 uptimeMs=6071184 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:27:05.775 20059 20059 I IpcForeground: STATE run=terminal-deepaudit2 event=SAMPLE elapsedRealtimeMs=34111062 uptimeMs=6071686 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:27:05.809 20059 24061 I IpcTerminalProbe: PASS run=terminal-deepaudit2 streamOverflow explicitFailure=true consumed=69 subscriptions=0
+11-03 16:27:05.909 20059 24064 I IpcTerminalProbe: PASS run=terminal-deepaudit2 streamConflate completed=true consumed=4 last=999 overflow=false subscriptions=0
+11-03 16:27:05.918 20059 24064 I IpcTerminalProbe: PASS run=terminal-deepaudit2 explicitStreamCancel extraError=false subscriptions=0
+11-03 16:27:06.081 20059 24062 I IpcTerminalProbe: PASS run=terminal-deepaudit2 rpcDeadline defaultMs=150 elapsedMs=154 serverJobObserved=true requests=0 pending=0
+11-03 16:27:06.087 20059 24062 I IpcTerminalProbe: PASS run=terminal-deepaudit2 asyncParameterError callbackReceived=true message=Missing_payload requests=0 pending=0
+11-03 16:27:06.244 20059 24062 I IpcTerminalProbe: PASS run=terminal-deepaudit2 badTokenDeadline callbackTrusted=false defaultMs=150 elapsedMs=154 requests=0 pending=0
+11-03 16:27:06.250 20059 24009 I IpcTerminalProbe: DONE run=terminal-deepaudit2 passed=true checks=8 subscriptions=0 requests=0 pending=0 anchorAlive=true
+11-03 16:27:06.253 20059 20059 I IpcForeground: STATE run=terminal-deepaudit2 event=END elapsedRealtimeMs=34111541 uptimeMs=6072165 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:27:06.257 20059 20059 I IpcForeground: END run=terminal-deepaudit2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-terminal-deepaudit2.csv scope=activity_events_and_500ms_app_samples

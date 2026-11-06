@@ -184,9 +184,13 @@ public final class MainActivity extends Activity implements AndLinker.BindCallba
         return value.get();
     }
 
+    private boolean deviceLocked() {
+        return android.os.Build.VERSION.SDK_INT >= 22 ? keyguard.isDeviceLocked() : keyguard.isKeyguardLocked();
+    }
+
     private boolean valid() {
         return lifecycle.equals("RESUMED") && hasWindowFocus() && power.isInteractive()
-                && !keyguard.isKeyguardLocked() && !keyguard.isDeviceLocked();
+                && !keyguard.isKeyguardLocked() && !deviceLocked();
     }
 
     private void observe(String event, boolean forceInvalid) {
@@ -198,7 +202,7 @@ public final class MainActivity extends Activity implements AndLinker.BindCallba
         }
         foreground.add(SystemClock.elapsedRealtime() + "," + SystemClock.uptimeMillis() + "," + event + "," + lifecycle +
                 "," + hasWindowFocus() + "," + power.isInteractive() + "," + keyguard.isKeyguardLocked() +
-                "," + keyguard.isDeviceLocked() + "," + valid);
+                "," + deviceLocked() + "," + valid);
     }
 
     private void end(boolean success) {

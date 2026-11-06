@@ -1,6 +1,6 @@
 # ModernIpc 工程审计与纠正记录
 
-> 初审与复核日期：2026-10-22。范围：SDK、示例、生成器、构建发布配置及验证材料。
+> 第 0–11 节保留 2026-10-22 初审与复核快照；2026-10-30 后续源码修复见第 12 节。范围：SDK、示例、生成器、构建发布配置及验证材料。
 > 本版将初审判断、已核实问题、撤回建议和验证边界分别记录。补丁状态见 [patches/README](../patches/README.md)；不要再次应用已落入源码的归档补丁。
 
 ## 0. 结论与证据边界
@@ -19,7 +19,7 @@
 | `onUnbind() = true` 使纯绑定 Service 存活至进程退出 | 错误。它影响后续 `onRebind()`，不替代 started/bound 生命周期规则 |
 | `minSupportedClientVersion` 比较契约版本是实现 bug | 错误。当前协议明确比较契约版本，与 App versionCode 分离 |
 | 全仓零自动化、关键路径完全无覆盖 | 过度概括。已有 host 脚本、设备探针和采集脚本，缺的是日常自动门禁和部分覆盖 |
-| 第五个调用一定因 4-worker 限制失败 | 不准确。同 key 冷发现共享 flight；不同工作同时占满时才可能快速拒绝 |
+| 第五个调用一定因 4-worker 限制失败 | 不准确。同 key 冷发现共享 flight；11/03 源码允许 4 个执行＋4 个排队，不同工作同时占满容量时才快速拒绝 |
 | docs 工作目录大小就是 Git 入库大小 | 错误。必须分开 tracked、untracked、ignored APK 与其他本地文件 |
 
 ### 0.1 历史执行与本轮执行
@@ -70,7 +70,7 @@ flowchart LR
 | --- | --- | --- |
 | Binder 线程池 | Android 平台 | `onTransact`、Direct、Oneway、回包等 |
 | `HandshakeExecutor` | 进程级，最多 4 worker，`SynchronousQueue` | 无等待队列，满载快速拒绝 |
-| `ServiceDiscoveryCache.workers` | 进程级，最多 4 worker，`SynchronousQueue` | 同 key flight 共享；不同未完成工作有界 |
+| `ServiceDiscoveryCache.workers` | 进程级，最多 4 worker＋4 排队（11/03 源码） | 同 key flight 共享；取消/失效回收排队项 |
 | Controller `controlScope` | 每 Controller | 绑定、状态机、退避、关闭 |
 | `coroutineScope` | 宿主提供 | Flow 收集与订阅 Job |
 | `asyncCoroutineScope` | 宿主可选，默认回落普通 scope | Async 请求 Job |
@@ -315,3 +315,48 @@ Maven/host 的[验证结果](benchmarks/runs/2026-10-22-xiaomi14ultra/engineerin
 4. 继续保持取消、唯一终态、鉴权、4-worker 上限与历史证据；原 `0003` 保持撤回。
 
 本轮纠正的核心是：**以公开类型和执行证据确认修复，以真实生成 handler 与 Tracker 的组合验证终态。** 初审建议本身也应接受相同验证，不把可应用的文本 diff 当成正确性证明。
+
+
+## 12. 2026-10-30：生成代码、重连与订阅修复（未发布）
+
+基于 `e9156f4` 工作区完成以下修复；已发布 `v3.0.0-rc.2` 标签和制品保持不变。这里的源码和主机结果不覆盖旧版或新 APK 的小米验收。
+
+| 问题 | 修复 | 验证入口 |
+| --- | --- | --- |
+| Async 业务 `requestId` 被框架同名变量捕获 | Adapter 保留公开参数名，用尾调用桥接到独立的私有传输方法；Stub 解码使用位置参数别名。各调用模式的参数不再进入框架变量作用域 | `RuntimeRegressionTest`：trace 开/关、多个冲突名、Parcelable、Direct/Oneway/Flow；raw 请求以不同框架/业务 ID 验证回包关联 |
+| `maxReconnectAttempts=0` 被死亡路径绕过 | Binder 死亡复用绑定失败的预算决策，同时保留 `DeadObjectException` | 真实 Controller 配合测试 Context/Binder：预算 0/1 × 两种回调先后顺序，检查绑定次数和死亡监听清理 |
+| Flow 业务取消误报 scope 失效 | 按 disposed、父 scope 活跃性、业务取消原因分类，保留终态 CAS、重抛和 quiet unsubscribe | Adapter 和 raw Stub：业务 timeout/取消、scope 取消、dispose、主动退订；终态数与订阅归零 |
+| 嵌套接口同名生成冲突 | 在 KSP 校验阶段明确拒绝非顶层门面，提示移到包级；不暗改既有 descriptor | 独立 Maven 消费者的 `reject-nested-facades` 负例，必须命中明确诊断且不得出现 `FileAlreadyExistsException` |
+| 辅助订阅管理器重入异常与伪成功 | ID/Binder 双索引、身份关联的死亡清理、锁外回调快照；已关闭或死亡 Binder 的注册抛异常 | 同步重入、并发广播、kill、死亡、替换后旧死亡回调 |
+| 辅助订阅表旧代次清理误删新记录 | 按 key 与旧 record 条件移除，避免 iterator 按 key 删除替换值 | 屏障固定“取旧 entry→注册新 generation→旧清理”的顺序 |
+
+桥接没有新增 coroutine、timeout 或 Binder 事务；本轮没有性能测量，不据此声称 RTT 改善。wire 顺序、schema 及鉴权不变。已经受参数覆盖影响的契约需要重新生成并升级双方；旧生成代码丢失的业务值不能由新对端恢复。
+
+`IpcSubscriptionManager` 每个 Binder 保留一个有效 ID，重复注册替换旧 ID，`kill()` 为永久关闭。广播采用快照语义，已开始的回调可能在 unregister/kill 后完成一次；它不提供等待在途回调结束的保证。该类和 `SubscriptionRegistry` 是公开辅助工具，生成 Stream 继续使用自己的终态/订阅状态机。
+
+验证记录已归档到 [2026-10-30 主机修复证据](benchmarks/runs/2026-10-30-host-corrections/verification.json)。JDK 17 的根 `:check` 已接入 Robolectric 生成代码/生命周期回归，原有 27 项 host 检查继续保留；独立 Maven 验证新增冲突参数正例与嵌套接口负例。Robolectric 为 JVM 上的 Android 模拟，不是实际跨进程 Binder 或小米设备证明。小米 `925c23bb` 本轮未连接，设备/性能/远端 CI 为 `NOT_RUN`。
+
+本轮实际结果：根 `:check` 的原 27 项状态机和新增 8 组 Robolectric 回归全部通过，六 APK 构建成功（317 tasks，1m24s）；10 项发布校验通过；隔离版本 `3.0.0-consumer-check-20261030014150100721` 的 metadata/POM-only 消费与嵌套接口负例全部通过。负例日志中的非零编译退出是预期拒绝，外层验证脚本为 exit 0。
+
+## 13. 2026-11-03 深层审计复核与修复（未发布）
+
+外部审计列出的六项不能全部按原解释处理：并发读本身不等于 Map 损坏，冷发现拒绝已被转换为等待者失败，Flow 溢出是显式终止而非必然应用崩溃，transact 返回 false 不能直接归因于驱动缓冲耗尽，Parcelable opaque 限制原指南已有披露。也没有证据证明每次跨 UID 鉴权必然触发两次系统 IPC 或造成指定程度的 P99 劣化。
+
+| 议题 | 本轮处理 | 验证边界 |
+| --- | --- | --- |
+| API 21 兼容 | 前台锁屏判断加版本守卫；其他探针改用低版本可用的 CAS/putIfAbsent 路径；API 23 统计无数据返回 null；缩短旧系统日志标签 | demo 与 AndLinker lint 均无错误，未使用 API 21 实机 |
+| 服务注册表 | 统一锁、原子重复拒绝、一致版本快照、关闭后拒绝注册、锁外去重 dispose | 主机竞争注册及锁外关闭回调回归；小米正常生命周期回归 |
+| Stream 发送失败 | 事件 transact=false 转为 RemoteException，停止生产并走一次错误终态和清理 | 主机真实生成 Stub＋拒绝回调 Binder，验证停止在第一项、订阅归零、父作用域存活 |
+| 冷发现容量 | 最多 4 执行＋4 排队，取消/失效回收排队项，执行前再检查需求 | 小米实际阻塞 Broker，9 个控制器验证拒绝、取消和恢复；保留 12 项冷发现组 |
+| Broker 鉴权 | 复用鉴权对象、直接校验当前 UID，去掉未使用的身份/Set 构造，实时校验不变 | 主机模拟签名撤销及包名消失；小米三个不同 UID 客户端注册/订阅成功 |
+| Parcelable 演进 | 补版本下限、新事务及旧编码策略示例 | 主机证明 floor=2 拒绝旧契约/legacy；不声称验证任意业务 Parcelable 布局 |
+
+单 RPC 优化未实施：现有客户端独立验证服务标识及 Schema，直接删除会改变兼容与错误边界。永久 UID 放行缓存未实施：必须先解决安装变化、UID 复用和失效窗口。跨 UID 性能 trace、远端信用式背压属于后续设计，不以本轮功能回归替代性能或交付保证。
+
+[本轮构建、测试、Lint 与设备汇总](benchmarks/runs/2026-11-03-xiaomi14ultra/deep-audit-verification/summary.json)。此前 86 项旧 APK 记录仍保留，本轮以 deep-audit-regression2 的新 APK 为准。
+
+## 14. 全量门禁遗漏补正
+
+11/03 后续复核发现 runtime-client 的 DeadObjectException(String) 需 API 23，而 minSdk 为 21。已加版本守卫，21/22 使用无参构造器，保留同一死亡重连预算路径。此前根 :check 与局部 App Lint 不能作为全量子模块通过证明；现已实际运行不带冒号的 check 通过，并修改 verify/release 工作流。
+
+Maven 消费脚本增加根 local.properties 的 SDK 回退、Windows properties 转义解析及优先级测试；在无 SDK 环境变量和无 --android-sdk 参数条件下，metadata/POM-only 消费与负例均已通过。见[独立证据](benchmarks/runs/2026-11-03-xiaomi14ultra/api21-sdk-verification/summary.json)。源码尚未提交发布；历史记录保持各自验证范围。

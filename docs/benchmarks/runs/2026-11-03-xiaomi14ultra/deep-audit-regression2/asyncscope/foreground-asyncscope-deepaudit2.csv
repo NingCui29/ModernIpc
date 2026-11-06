@@ -1,0 +1,13 @@
+elapsedRealtimeMs,uptimeMs,event,lifecycle,focused,interactive,keyguardLocked,deviceLocked,valid
+34134218,6094842,WAIT_READY,RESUMED,false,true,false,false,false
+34134225,6094849,ON_PAUSE,STARTED,false,true,false,false,false
+34134240,6094864,FOCUS_GAIN,STARTED,true,true,false,false,false
+34134261,6094885,FOCUS_LOSS,STARTED,false,true,false,false,false
+34134320,6094944,WAIT_READY,STARTED,false,true,false,false,false
+34134375,6094999,ON_RESUME,STARTED,false,true,false,false,false
+34134388,6095012,FOCUS_GAIN,RESUMED,true,true,false,false,true
+34134421,6095045,WAIT_READY,RESUMED,true,true,false,false,true
+34134521,6095145,WAIT_READY,RESUMED,true,true,false,false,true
+34134622,6095246,WAIT_READY,RESUMED,true,true,false,false,true
+34134622,6095246,BEGIN,RESUMED,true,true,false,false,true
+34134955,6095579,END,RESUMED,true,true,false,false,true

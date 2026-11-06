@@ -8,6 +8,7 @@ import com.google.devtools.ksp.symbol.Modifier
 import com.squareup.kotlinpoet.FileSpec
 import com.squareup.kotlinpoet.CodeBlock
 import com.squareup.kotlinpoet.FunSpec
+import com.squareup.kotlinpoet.NameAllocator
 import com.squareup.kotlinpoet.KModifier
 import com.squareup.kotlinpoet.TypeSpec
 import com.squareup.kotlinpoet.ksp.toClassName
@@ -57,34 +58,45 @@ class ClientAdapterGenerator(
         val schemaClassName = com.squareup.kotlinpoet.ClassName(packageName, "${interfaceName}IpcSchema")
 
         // 2. 为每个接口方法生成对应的 override 实现
-        val functions = classDeclaration.getAllFunctions()
-        functions.forEach { function ->
+        val functions = classDeclaration.getAllFunctions().toList()
+        val methodNames = NameAllocator()
+        functions.forEach { methodNames.newName(it.simpleName.asString()) }
+        functions.forEachIndexed { index, function ->
             // 忽略 Object 的基础方法
-            if (function.simpleName.asString() in listOf("equals", "hashCode", "toString")) return@forEach
+            if (function.simpleName.asString() in listOf("equals", "hashCode", "toString")) return@forEachIndexed
 
             val funName = function.simpleName.asString()
             val isSuspend = function.modifiers.contains(Modifier.SUSPEND)
             val isDirect = function.annotations.any { it.shortName.asString() == "IpcDirect" }
 
-            val funBuilder = FunSpec.builder(funName)
-                .addModifiers(KModifier.OVERRIDE)
-
-            // 如果是挂起函数，需添加 suspend 修饰符
+            // Keep public parameter names, but generate transport code in a separate lexical scope.
+            // A tail-call bridge prevents user names (requestId/controller/data/etc.) from capturing
+            // framework locals, receivers or package names, without another coroutine/timeout.
+            val helperName = methodNames.newName("__ipcInvoke$index")
+            val publicMethod = FunSpec.builder(funName).addModifiers(KModifier.OVERRIDE)
+            val funBuilder = FunSpec.builder(helperName).addModifiers(KModifier.PRIVATE)
             if (isSuspend) {
+                publicMethod.addModifiers(KModifier.SUSPEND)
                 funBuilder.addModifiers(KModifier.SUSPEND)
             }
-
-            // 添加方法参数
-            function.parameters.forEach { param ->
-                val paramName = param.name?.asString() ?: "arg"
-                funBuilder.addParameter(paramName, param.type.toTypeName())
+            val argumentNames = function.parameters.withIndex().associate { (argumentIndex, param) ->
+                val alias = "__ipcArgument$argumentIndex"
+                publicMethod.addParameter(param.name!!.asString(), param.type.toTypeName())
+                funBuilder.addParameter(alias, param.type.toTypeName())
+                param to alias
             }
-
-            // 设置返回类型（Unit 忽略）
             val returnType = function.returnType?.resolve()
             if (returnType != null && returnType.declaration.qualifiedName?.asString() != "kotlin.Unit") {
+                publicMethod.returns(function.returnType!!.toTypeName())
                 funBuilder.returns(function.returnType!!.toTypeName())
             }
+            val arguments = CodeBlock.builder()
+            function.parameters.forEachIndexed { argumentIndex, param ->
+                if (argumentIndex > 0) arguments.add(", ")
+                arguments.add("%N", param.name!!.asString())
+            }
+            publicMethod.addStatement("return (this@%L.%N(%L))", adapterClassName, helperName, arguments.build())
+            typeBuilder.addFunction(publicMethod.build())
 
             // 提取注解中的事务码
             var transactionCode = -1
@@ -155,7 +167,7 @@ class ClientAdapterGenerator(
                     funBuilder.addStatement("_data.writeInterfaceToken(%S)", "$packageName.$interfaceName")
                     funBuilder.addStatement("_data.writeLong(requestId)")
                     function.parameters.forEach { param ->
-                        val paramName = param.name!!.asString()
+                        val paramName = argumentNames.getValue(param)
                         writeParameter(funBuilder, paramName, param.type.resolve())
                     }
                     funBuilder.addStatement("_data.writeStrongBinder(controller.globalResponseBinder)")
@@ -187,7 +199,7 @@ class ClientAdapterGenerator(
                 funBuilder.beginControlFlow("try")
                 funBuilder.addStatement("_data.writeInterfaceToken(%S)", "$packageName.$interfaceName")
                 function.parameters.forEach { param ->
-                    val name = param.name!!.asString()
+                    val name = argumentNames.getValue(param)
                     writeParameter(funBuilder, name, param.type.resolve())
                 }
                 funBuilder.addStatement("val _binder = controller.getServiceBinder(%L, %L, expectedSchema = %T.CLIENT_SCHEMA)", serviceId, minApiVersion, schemaClassName)
@@ -259,7 +271,7 @@ class ClientAdapterGenerator(
                     "Remote stream error", serviceId, minApiVersion, schemaClassName, "$packageName.$interfaceName"
                 )
                 function.parameters.forEach { param ->
-                    val paramName = param.name!!.asString()
+                    val paramName = argumentNames.getValue(param)
                     writeParameter(funBuilder, paramName, param.type.resolve())
                 }
                 funBuilder.addCode(
@@ -309,7 +321,7 @@ class ClientAdapterGenerator(
                 funBuilder.beginControlFlow("try")
                 funBuilder.addStatement("_data.writeInterfaceToken(%S)", "$packageName.$interfaceName")
                 function.parameters.forEach { param ->
-                    val paramName = param.name!!.asString()
+                    val paramName = argumentNames.getValue(param)
                     writeParameter(funBuilder, paramName, param.type.resolve())
                 }
                 funBuilder.addStatement("val _binder = controller.getServiceBinder(%L, %L, expectedSchema = %T.CLIENT_SCHEMA)", serviceId, minApiVersion, schemaClassName)

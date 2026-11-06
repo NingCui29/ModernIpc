@@ -5,6 +5,10 @@ plugins {
 
 android {
     namespace = "com.cn.ipc.demo"
+    testOptions.unitTests.isIncludeAndroidResources = true
+    testOptions.unitTests.all {
+        it.systemProperty("robolectric.dependency.repo.url", "https://repo.maven.apache.org/maven2")
+    }
 
     defaultConfig {
         applicationId = "com.cn.ipc.demo"
@@ -23,6 +27,8 @@ dependencies {
     implementation(project(":ipc-runtime-server"))
     
     ksp(project(":ipc-compiler"))
+    testImplementation("junit:junit:4.13.2")
+    testImplementation("org.robolectric:robolectric:4.13")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.kotlinx.coroutines.core)
@@ -30,4 +36,8 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.constraintlayout)
+}
+
+tasks.withType<Test>().configureEach {
+    javaLauncher.set(javaToolchains.launcherFor { languageVersion.set(JavaLanguageVersion.of(17)) })
 }

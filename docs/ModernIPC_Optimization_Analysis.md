@@ -70,7 +70,7 @@ sequenceDiagram
 
 [ServiceDiscoveryCache](../ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/ServiceDiscoveryCache.kt)在 map/生命周期锁外执行 RPC；同一 Controller 同键共享，一个 waiter 退出不影响其他人，最后 waiter 退出放弃 flight。close/dispose 作废旧容器并唤醒等待者，旧结果不能发布到新容器。
 
-[HandshakeExecutor](../ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/HandshakeExecutor.kt)与发现池分开，每池进程/classloader 内最多4 worker、无队列。取消本地等待不能中断已开始的同步 Binder；4个永久阻塞 RPC 仍会占满各自预算。取消检查和下一次 RPC 之间存在竞态，不能承诺远端不执行。
+[HandshakeExecutor](../ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/HandshakeExecutor.kt)与发现池分开，每池进程/classloader 内最多4 worker。11/03 未发布源码的发现池另有4个排队位置，握手仍无队列；表中历史测量保持原始无队列版本范围。取消本地等待不能中断已开始的同步 Binder；4个永久阻塞 RPC 仍会占满各自预算。取消检查和下一次 RPC 之间存在竞态，不能承诺远端不执行。
 
 ## 3. 已实施优化及证明范围
 

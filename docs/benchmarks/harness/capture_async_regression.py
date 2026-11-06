@@ -272,7 +272,7 @@ def run(args: argparse.Namespace) -> None:
         raise ValueError("Candidate APK differs from --expect-apk-sha256")
     groups = list(GROUPS)
     if args.include_generated_terminals:
-        groups.append(("generatedterminal", "IpcGeneratedTerminalProbe", 9))
+        groups.append(("generatedterminal", "IpcGeneratedTerminal", 9))
     plan = dict(serial=SERIAL, package=PACKAGE, runId=args.run_id,
                 preparedOnly=True, deviceValidation="NOT_RUN", expectedPasses=73, expectedDones=6,
                 expectedDedicatedScopePasses=4, expectedDedicatedScopeDones=1,

@@ -1,0 +1,17 @@
+{
+  "valid": true,
+  "ruleVersion": "foreground-coverage-v1",
+  "targetSamplePeriodMs": 500,
+  "permittedMaxGapMs": 1000,
+  "scope": "activity_events_with_bounded_periodic_sample_coverage",
+  "observations": 13,
+  "sampleCount": 11,
+  "requiredSampleCount": 5,
+  "durationMs": 5642,
+  "maxGapMs": 505,
+  "observationMaxGapMs": 505,
+  "errors": [],
+  "sourceSha256": "E059175A9EAB59E1AE8462406262DCEE67619461C83AEBC17307D45362823C27",
+  "run": "lifecycle-api21sdk1",
+  "csv": "foreground-lifecycle-api21sdk1.csv"
+}

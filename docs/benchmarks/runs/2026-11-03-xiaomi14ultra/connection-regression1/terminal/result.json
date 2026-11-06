@@ -1,0 +1,53 @@
+{
+  "group": "terminal",
+  "tag": "IpcTerminalProbe",
+  "expectedPasses": 8,
+  "runId": "terminal-nov03attempt1",
+  "status": "FAILED",
+  "valid": false,
+  "error": "RuntimeError: Probe failure: FAILED run=terminal-nov03attempt1",
+  "foregroundQualification": {
+    "valid": false,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 5,
+    "sampleCount": 3,
+    "requiredSampleCount": 1,
+    "durationMs": 1822,
+    "maxGapMs": 505,
+    "observationMaxGapMs": 505,
+    "errors": [
+      "RuntimeError: Probe failure: FAILED run=terminal-nov03attempt1"
+    ],
+    "sourceSha256": "434203BD0E12A083A5DC19147540D1DF665A8A57DBC3872863A9B8BB61943946",
+    "run": "terminal-nov03attempt1",
+    "csv": "foreground-terminal-nov03attempt1.csv"
+  },
+  "observed": {
+    "runId": "terminal-nov03attempt1",
+    "tag": "IpcTerminalProbe",
+    "passCount": 6,
+    "doneCount": 0,
+    "foregroundEndCount": 1,
+    "expectedPasses": 8,
+    "complete": false,
+    "valid": false,
+    "errors": [
+      "FAILED run=terminal-nov03attempt1"
+    ],
+    "passes": [
+      "PASS run=terminal-nov03attempt1 finiteFlow items=1,2,3 completed=true subscriptions=0",
+      "PASS run=terminal-nov03attempt1 runtimeFlowError itemBeforeError=7 message=flow-runtime-error subscriptions=0",
+      "PASS run=terminal-nov03attempt1 streamOverflow explicitFailure=true consumed=69 subscriptions=0",
+      "PASS run=terminal-nov03attempt1 streamConflate completed=true consumed=4 last=999 overflow=false subscriptions=0",
+      "PASS run=terminal-nov03attempt1 explicitStreamCancel extraError=false subscriptions=0",
+      "PASS run=terminal-nov03attempt1 rpcDeadline defaultMs=150 elapsedMs=155 serverJobObserved=true requests=0 pending=0"
+    ],
+    "done": [],
+    "foregroundEnd": [
+      "END run=terminal-nov03attempt1 started=true completed=false valid=false invalidObservations=0 firstInvalidEvent=null file=foreground-terminal-nov03attempt1.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}

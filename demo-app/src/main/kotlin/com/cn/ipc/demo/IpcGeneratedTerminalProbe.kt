@@ -14,7 +14,7 @@ import java.util.concurrent.atomic.AtomicInteger
 
 /** Regression for generated error terminals: a business cancellation is not caller abandonment. */
 object IpcGeneratedTerminalProbe {
-    private const val TAG = "IpcGeneratedTerminalProbe"
+    private const val TAG = "IpcGeneratedTerminal"
     private const val TOKEN = "com.cn.ipc.api.test.IBenchmarkEchoService"
 
     suspend fun run(controller: IpcConnectionController, runId: String) = withContext(Dispatchers.Default) {

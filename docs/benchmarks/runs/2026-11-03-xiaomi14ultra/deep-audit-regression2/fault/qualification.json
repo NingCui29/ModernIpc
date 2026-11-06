@@ -1,0 +1,17 @@
+{
+  "valid": true,
+  "ruleVersion": "foreground-coverage-v1",
+  "targetSamplePeriodMs": 500,
+  "permittedMaxGapMs": 1000,
+  "scope": "activity_events_with_bounded_periodic_sample_coverage",
+  "observations": 3,
+  "sampleCount": 1,
+  "requiredSampleCount": 0,
+  "durationMs": 717,
+  "maxGapMs": 501,
+  "observationMaxGapMs": 501,
+  "errors": [],
+  "sourceSha256": "91AE962F69C4E7BB50307ADCA74CAD7566EBBE4700812436ABB65828D176EC3B",
+  "run": "fault-deepaudit2",
+  "csv": "foreground-fault-deepaudit2.csv"
+}

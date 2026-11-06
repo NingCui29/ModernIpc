@@ -19,6 +19,8 @@ class IpcBrokerStub(
     private val serverVersionCode: Long = 201L
 ) : IIpcBroker.Stub() {
 
+    private val authenticator = CallerAuthenticator(context)
+
     private val sessionCounter = AtomicLong(1)
 
     // 协议的主次版本号
@@ -33,7 +35,7 @@ class IpcBrokerStub(
      * @throws IllegalArgumentException 当 ClientHello 为 null 或协议主版本不兼容时抛出
      */
     override fun handshake(client: ClientHello?): ProtocolInfo {
-        CallerAuthenticator(context).let { it.authorize(it.authenticate(), 0) }
+        authenticator.authorizeCurrentCaller(0)
         if (client == null) {
             throw IllegalArgumentException("ClientHello cannot be null")
         }
@@ -71,11 +73,7 @@ class IpcBrokerStub(
      */
     override fun getService(serviceId: Int, minApiVersion: Int): IBinder {
         // M3 阶段: 严谨的鉴权机制集成
-        val authenticator = CallerAuthenticator(context)
-        // 获取调用方身份信息
-        val caller = authenticator.authenticate()
-        // 校验调用方是否有权限访问指定的 serviceId
-        authenticator.authorize(caller, serviceId)
+        authenticator.authorizeCurrentCaller(serviceId)
         
         // 从注册表中查找对应的业务服务
         val service = registry.get(serviceId)
@@ -113,8 +111,7 @@ class IpcBrokerStub(
     }
 
     private fun authorizedService(serviceId: Int): RegisteredService {
-        val authenticator = CallerAuthenticator(context)
-        authenticator.authorize(authenticator.authenticate(), serviceId)
+        authenticator.authorizeCurrentCaller(serviceId)
         return registry.get(serviceId) ?: throw IllegalArgumentException("ServiceId $serviceId not found")
     }
 

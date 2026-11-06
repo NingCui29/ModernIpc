@@ -55,11 +55,12 @@ object IpcHandshakeProbe {
 
     private suspend fun closeBlocked(env: Environment, permanent: Boolean) = withWorker(env) { worker, _ ->
         env.arm()
-        worker.connect()
+        val waiting = CoroutineScope(currentCoroutineContext()).async { runCatching { worker.awaitConnected(10_000) } }
         env.awaitBlocked(1)
         check(worker.state.value === IpcClientState.Binding)
         val started = SystemClock.elapsedRealtime()
         if (permanent) worker.disposeAndJoin() else worker.closeAndJoin()
+        check(withTimeout(1000) { waiting.await() }.isFailure)
         val elapsed = SystemClock.elapsedRealtime() - started
         val terminal = if (permanent) IpcClientState.Disposed else IpcClientState.Closed
         check(elapsed < 500) { "Blocked handshake delayed ${if (permanent) "dispose" else "close"}: ${elapsed}ms" }
@@ -70,15 +71,16 @@ object IpcHandshakeProbe {
         delay(100)
         check(worker.state.value === terminal && worker.currentGeneration == 0L)
         env.pass(if (permanent) "disposeBlockedHandshake" else "closeBlockedHandshake",
-            "elapsedMs=$elapsed remoteStillBlockedBeforeRelease=true lateReplyNoRevive=true generation=0 pending=0", elapsed)
+            "elapsedMs=$elapsed remoteStillBlockedBeforeRelease=true lateReplyNoRevive=true generation=0 pending=0 awaitAttemptVerified=true", elapsed)
     }
 
     private suspend fun bindingTimeoutAndRetry(env: Environment) = withWorker(env, bindingTimeoutMs = 600) { worker, _ ->
         env.arm()
         val started = SystemClock.elapsedRealtime()
-        worker.connect()
+        val waiting = CoroutineScope(currentCoroutineContext()).async { runCatching { worker.awaitConnected(10_000) } }
         env.awaitBlocked(1)
         awaitState(worker, 2000) { it === IpcClientState.Disconnected }
+        check(withTimeout(1000) { waiting.await() }.exceptionOrNull() is android.os.RemoteException)
         val elapsed = SystemClock.elapsedRealtime() - started
         check(elapsed < 1500 && env.read().let { it.activeBlocked == 1 && it.attempts == 1 })
         delay(150)
@@ -88,18 +90,18 @@ object IpcHandshakeProbe {
         delay(100)
         check(worker.state.value === IpcClientState.Disconnected && worker.currentGeneration == 0L)
         // Do not call awaitConnected while testing Disconnected: it intentionally initiates a new connection.
-        worker.connect()
-        awaitState(worker) { it is IpcClientState.Connected }
+        worker.awaitConnected()
         check(IBenchmarkEchoServiceClientAdapter(worker).echo("handshake-timeout-retry") == "handshake-timeout-retry")
         check(env.read().attempts == 2 && worker.currentGeneration == 1L && worker.pendingCallRegistry.activeCallCount == 0)
-        env.pass("bindingTimeoutRetry", "bindingTimeoutMs=600 elapsedMs=$elapsed maxReconnectAttempts=0 disconnectedBeforeRelease=true lateReplyNoRevive=true explicitRetry=true attempts=2 pending=0", elapsed)
+        env.pass("bindingTimeoutRetry", "bindingTimeoutMs=600 elapsedMs=$elapsed maxReconnectAttempts=0 disconnectedBeforeRelease=true lateReplyNoRevive=true explicitRetry=true attempts=2 pending=0 awaitAttemptVerified=true", elapsed)
     }
 
     private suspend fun boundedReconnect(env: Environment) = withWorker(env, bindingTimeoutMs = 600, maxReconnectAttempts = 1) { worker, _ ->
         repeat(2) { env.arm() }
-        worker.connect()
+        val waiting = CoroutineScope(currentCoroutineContext()).async { runCatching { worker.awaitConnected(10_000) } }
         env.awaitBlocked(2, timeoutMs = 3500)
         awaitState(worker, 2500) { it === IpcClientState.Disconnected }
+        check(withTimeout(1000) { waiting.await() }.exceptionOrNull() is android.os.RemoteException)
         check(env.read().let { it.attempts == 2 && it.activeBlocked == 2 })
         delay(150)
         check(worker.state.value === IpcClientState.Disconnected && env.read().attempts == 2)
@@ -108,17 +110,17 @@ object IpcHandshakeProbe {
         delay(100)
         check(worker.state.value === IpcClientState.Disconnected && worker.currentGeneration == 0L)
         check(worker.pendingCallRegistry.activeCallCount == 0)
-        env.pass("boundedReconnect", "bindingTimeoutMs=600 maxReconnectAttempts=1 attempts=2 finalDisconnected=true lateRepliesNoRevive=true pending=0")
+        env.pass("boundedReconnect", "bindingTimeoutMs=600 maxReconnectAttempts=1 attempts=2 finalDisconnected=true lateRepliesNoRevive=true pending=0 awaitAttemptVerified=true")
     }
 
     private suspend fun lateHandshake(env: Environment) = withWorker(env) { worker, _ ->
         env.arm()
-        worker.connect()
+        val waiting = CoroutineScope(currentCoroutineContext()).async { runCatching { worker.awaitConnected(10_000) } }
         env.awaitBlocked(1)
         worker.closeAndJoin()
         check(worker.state.value === IpcClientState.Closed)
-        worker.connect()
-        val fresh = awaitState(worker) { it is IpcClientState.Connected } as IpcClientState.Connected
+        val fresh = worker.awaitConnected()
+        check(withTimeout(1000) { waiting.await() }.isFailure)
         check(env.read().let { it.attempts == 2 && it.activeBlocked == 1 })
         check(fresh.generation == 1L)
         env.release()
@@ -126,7 +128,7 @@ object IpcHandshakeProbe {
         delay(100)
         check(worker.state.value === fresh && worker.currentGeneration == fresh.generation)
         check(IBenchmarkEchoServiceClientAdapter(worker).echo("fresh-handshake") == "fresh-handshake")
-        env.pass("lateHandshakeIsolation", "freshConnectedBeforeOldRelease=true attempts=2 oldReplyDidNotReplaceConnected=true generation=1 pending=0")
+        env.pass("lateHandshakeIsolation", "freshConnectedBeforeOldRelease=true attempts=2 oldReplyDidNotReplaceConnected=true generation=1 pending=0 awaitAttemptVerified=true")
     }
 
     private suspend fun ownerCancellation(env: Environment) = withWorker(env) { worker, owner ->

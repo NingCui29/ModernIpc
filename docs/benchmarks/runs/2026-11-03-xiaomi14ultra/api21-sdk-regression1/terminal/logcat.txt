@@ -1,0 +1,21 @@
+--------- beginning of main
+11-03 16:46:47.045 26700 26700 I IpcForeground: STATE run=terminal-api21sdk1 event=WAIT_READY elapsedRealtimeMs=35292316 uptimeMs=7252940 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+11-03 16:46:47.123 26700 26700 I IpcForeground: STATE run=terminal-api21sdk1 event=FOCUS_GAIN elapsedRealtimeMs=35292404 uptimeMs=7253028 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:46:47.145 26700 26700 I IpcForeground: STATE run=terminal-api21sdk1 event=WAIT_READY elapsedRealtimeMs=35292434 uptimeMs=7253058 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:46:47.246 26700 26700 I IpcForeground: STATE run=terminal-api21sdk1 event=WAIT_READY elapsedRealtimeMs=35292534 uptimeMs=7253158 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:46:47.347 26700 26700 I IpcForeground: STATE run=terminal-api21sdk1 event=WAIT_READY elapsedRealtimeMs=35292635 uptimeMs=7253259 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:46:47.348 26700 26700 I IpcForeground: STATE run=terminal-api21sdk1 event=BEGIN elapsedRealtimeMs=35292636 uptimeMs=7253260 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:47.382 26700 30913 I IpcTerminalProbe: PASS run=terminal-api21sdk1 finiteFlow items=1,2,3 completed=true subscriptions=0
+11-03 16:46:47.386 26700 30858 I IpcTerminalProbe: PASS run=terminal-api21sdk1 runtimeFlowError itemBeforeError=7 message=flow-runtime-error subscriptions=0
+11-03 16:46:47.852 26700 26700 I IpcForeground: STATE run=terminal-api21sdk1 event=SAMPLE elapsedRealtimeMs=35293138 uptimeMs=7253763 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:48.357 26700 26700 I IpcForeground: STATE run=terminal-api21sdk1 event=SAMPLE elapsedRealtimeMs=35293643 uptimeMs=7254267 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:48.859 26700 26700 I IpcForeground: STATE run=terminal-api21sdk1 event=SAMPLE elapsedRealtimeMs=35294146 uptimeMs=7254770 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:48.887 26700 30912 I IpcTerminalProbe: PASS run=terminal-api21sdk1 streamOverflow explicitFailure=true consumed=69 subscriptions=0
+11-03 16:46:48.988 26700 30913 I IpcTerminalProbe: PASS run=terminal-api21sdk1 streamConflate completed=true consumed=4 last=999 overflow=false subscriptions=0
+11-03 16:46:49.001 26700 30859 I IpcTerminalProbe: PASS run=terminal-api21sdk1 explicitStreamCancel extraError=false subscriptions=0
+11-03 16:46:49.176 26700 30859 I IpcTerminalProbe: PASS run=terminal-api21sdk1 rpcDeadline defaultMs=150 elapsedMs=156 serverJobObserved=true requests=0 pending=0
+11-03 16:46:49.182 26700 30859 I IpcTerminalProbe: PASS run=terminal-api21sdk1 asyncParameterError callbackReceived=true message=Missing_payload requests=0 pending=0
+11-03 16:46:49.338 26700 30859 I IpcTerminalProbe: PASS run=terminal-api21sdk1 badTokenDeadline callbackTrusted=false defaultMs=150 elapsedMs=154 requests=0 pending=0
+11-03 16:46:49.345 26700 30912 I IpcTerminalProbe: DONE run=terminal-api21sdk1 passed=true checks=8 subscriptions=0 requests=0 pending=0 anchorAlive=true
+11-03 16:46:49.347 26700 26700 I IpcForeground: STATE run=terminal-api21sdk1 event=END elapsedRealtimeMs=35294635 uptimeMs=7255259 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:46:49.351 26700 26700 I IpcForeground: END run=terminal-api21sdk1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-terminal-api21sdk1.csv scope=activity_events_and_500ms_app_samples

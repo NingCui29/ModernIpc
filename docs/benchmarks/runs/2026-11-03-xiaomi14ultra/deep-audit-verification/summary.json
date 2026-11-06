@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-03",
+  "status": "PASSED",
+  "unpublished": true,
+  "device": "925c23bb",
+  "hardware": {
+    "ro.serialno": "925c23bb",
+    "ro.product.manufacturer": "Xiaomi",
+    "ro.product.model": "24031PN0DC",
+    "ro.product.device": "aurora",
+    "fingerprint": "Xiaomi/aurorapro/aurora:16/BP2A.250605.031.A3/OS3.0.308.0.WNACNXM:user/release-keys",
+    "valid": true
+  },
+  "apkSha256": "7E7EDF39577B3A4241CFF2ED3FB432DAA335920DDA6B85DD114E67E44027A5EC",
+  "installedApkMatches": true,
+  "deviceChecks": 86,
+  "deviceEvidence": "../deep-audit-regression2/summary.json",
+  "foregroundRejectedAttempt": "../deep-audit-regression1/summary.json",
+  "crossPackageEvidence": "../cross-package-smoke-deepaudit1/capture-result.json",
+  "hostChecks": 27,
+  "robolectric": {
+    "name": "com.cn.ipc.demo.regression.RuntimeRegressionTest",
+    "tests": "16",
+    "skipped": "0",
+    "failures": "0",
+    "errors": "0",
+    "timestamp": "2026-11-03T08:28:29",
+    "hostname": "BLUE",
+    "time": "8.353"
+  },
+  "lintErrors": {
+    "demo-lint.xml": 0,
+    "andlinker-lint.xml": 0
+  },
+  "sourceHashes": {
+    "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcServiceRegistry.kt": "7dc1681d45c7bc4af6ff76bb344c7a7facd13ecf5c1fc56c0ce7fc06ed4743a1",
+    "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcBrokerStub.kt": "5fc8a455f04c16f84410c814d8c17e231da74775dd4b630751fbcafa8a91d0f9",
+    "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/ServiceDiscoveryCache.kt": "10d72f6786940e6259cad3e54d4e2c64d3c512091394159ea1b4306b224814d0",
+    "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/ServerStubGenerator.kt": "a1e36b8a0f4bf2d4d104d3793df6eaebaa5fde62eb639e8df620a3cfecd6b559",
+    "demo-app/src/test/kotlin/com/cn/ipc/demo/regression/RuntimeRegressionTest.kt": "132f7413902bee37ec66b8887b7c32317a3c8eacd193fed855a2c038dd469c15",
+    ".github/workflows/verify.yml": "c9924e8104f2102323afe556d643bf2e6acd62d6443e1075b0831ecff02e08fb"
+  },
+  "limits": [
+    "No API 21 physical device test; Xiaomi only.",
+    "No AndLinker performance comparison or cross-UID latency trace.",
+    "Stream rejected-event and authorization-change fault injection are host tests.",
+    "Cross-package smoke proves registration/subscription setup, not routing or per-event delivery.",
+    "Strict dual discovery RPC and real-time cross-UID checks retained; no permanent UID authorization cache.",
+    "CI workflow updated locally, remote CI not run."
+  ]
+}

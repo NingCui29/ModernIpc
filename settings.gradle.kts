@@ -32,3 +32,7 @@ include(":app-server")
 include(":app-client1")
 include(":app-client2")
 include(":app-client3")
+
+check(JavaVersion.current() == JavaVersion.VERSION_17) {
+    "ModernIpc requires JDK 17. Set JAVA_HOME or Android Studio Gradle JDK to Java 17."
+}

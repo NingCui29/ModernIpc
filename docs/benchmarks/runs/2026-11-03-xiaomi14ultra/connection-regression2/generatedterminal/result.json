@@ -1,0 +1,75 @@
+{
+  "group": "generatedterminal",
+  "tag": "IpcGeneratedTerminalProbe",
+  "expectedPasses": 9,
+  "runId": "generatedterminal-nov03attempt2",
+  "status": "PASSED",
+  "valid": true,
+  "passCount": 9,
+  "doneCount": 1,
+  "foregroundEndCount": 1,
+  "complete": true,
+  "errors": [],
+  "passes": [
+    "PASS run=generatedterminal-nov03attempt2 dispatch=default path=raw scenario=__business_timeout__ terminals=1 requests=0",
+    "PASS run=generatedterminal-nov03attempt2 dispatch=default path=adapter scenario=__business_timeout__ elapsedMs=85 pending=0 requests=0",
+    "PASS run=generatedterminal-nov03attempt2 dispatch=default path=raw scenario=__business_cancel__ terminals=1 requests=0",
+    "PASS run=generatedterminal-nov03attempt2 dispatch=default path=adapter scenario=__business_cancel__ elapsedMs=6 pending=0 requests=0",
+    "PASS run=generatedterminal-nov03attempt2 dispatch=dedicated path=raw scenario=__business_timeout__ terminals=1 requests=0",
+    "PASS run=generatedterminal-nov03attempt2 dispatch=dedicated path=adapter scenario=__business_timeout__ elapsedMs=87 pending=0 requests=0",
+    "PASS run=generatedterminal-nov03attempt2 dispatch=dedicated path=raw scenario=__business_cancel__ terminals=1 requests=0",
+    "PASS run=generatedterminal-nov03attempt2 dispatch=dedicated path=adapter scenario=__business_cancel__ elapsedMs=4 pending=0 requests=0",
+    "PASS run=generatedterminal-nov03attempt2 defaultRestored=true pending=0 requests=0 subscriptions=0"
+  ],
+  "done": [
+    "DONE run=generatedterminal-nov03attempt2 passed=true checks=9"
+  ],
+  "foregroundEnd": [
+    "END run=generatedterminal-nov03attempt2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-generatedterminal-nov03attempt2.csv scope=activity_events_and_500ms_app_samples"
+  ],
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 3,
+    "sampleCount": 1,
+    "requiredSampleCount": 0,
+    "durationMs": 601,
+    "maxGapMs": 501,
+    "observationMaxGapMs": 501,
+    "errors": [],
+    "sourceSha256": "8B7FE633D9904770A5EFC5CB9C6CC10C53E8F7C10DFC164F7BFCAE1B4696C61B",
+    "run": "generatedterminal-nov03attempt2",
+    "csv": "foreground-generatedterminal-nov03attempt2.csv"
+  },
+  "observed": {
+    "runId": "generatedterminal-nov03attempt2",
+    "tag": "IpcGeneratedTerminalProbe",
+    "passCount": 9,
+    "doneCount": 1,
+    "foregroundEndCount": 1,
+    "expectedPasses": 9,
+    "complete": true,
+    "valid": true,
+    "errors": [],
+    "passes": [
+      "PASS run=generatedterminal-nov03attempt2 dispatch=default path=raw scenario=__business_timeout__ terminals=1 requests=0",
+      "PASS run=generatedterminal-nov03attempt2 dispatch=default path=adapter scenario=__business_timeout__ elapsedMs=85 pending=0 requests=0",
+      "PASS run=generatedterminal-nov03attempt2 dispatch=default path=raw scenario=__business_cancel__ terminals=1 requests=0",
+      "PASS run=generatedterminal-nov03attempt2 dispatch=default path=adapter scenario=__business_cancel__ elapsedMs=6 pending=0 requests=0",
+      "PASS run=generatedterminal-nov03attempt2 dispatch=dedicated path=raw scenario=__business_timeout__ terminals=1 requests=0",
+      "PASS run=generatedterminal-nov03attempt2 dispatch=dedicated path=adapter scenario=__business_timeout__ elapsedMs=87 pending=0 requests=0",
+      "PASS run=generatedterminal-nov03attempt2 dispatch=dedicated path=raw scenario=__business_cancel__ terminals=1 requests=0",
+      "PASS run=generatedterminal-nov03attempt2 dispatch=dedicated path=adapter scenario=__business_cancel__ elapsedMs=4 pending=0 requests=0",
+      "PASS run=generatedterminal-nov03attempt2 defaultRestored=true pending=0 requests=0 subscriptions=0"
+    ],
+    "done": [
+      "DONE run=generatedterminal-nov03attempt2 passed=true checks=9"
+    ],
+    "foregroundEnd": [
+      "END run=generatedterminal-nov03attempt2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-generatedterminal-nov03attempt2.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}

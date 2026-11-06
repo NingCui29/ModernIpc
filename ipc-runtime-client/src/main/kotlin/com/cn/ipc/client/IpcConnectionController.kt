@@ -19,6 +19,7 @@ import kotlinx.coroutines.DisposableHandle
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.NonCancellable
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.async
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -106,6 +107,7 @@ class IpcConnectionController(
 
     /** 当前的重连尝试计数 */
     private var reconnectAttempts = 0
+    private var connectionAttempt: CompletableDeferred<IpcClientState.Connected>? = null
 
     init {
         require(maxReconnectAttempts >= 0)
@@ -259,15 +261,24 @@ class IpcConnectionController(
      * @return 成功连接后的状态实例
      */
     suspend fun awaitConnected(timeoutMs: Long = 5000L): IpcClientState.Connected {
+        require(timeoutMs > 0)
         check(!isDisposed) { "IPC controller disposed" }
-        val current = _state.value
-        if (current is IpcClientState.Connected) return current
-
-        connect()
         return withTimeout(timeoutMs) {
-            val result = _state.first { it is IpcClientState.Connected || it is IpcClientState.Disposed }
-            check(result is IpcClientState.Connected && !isDisposed) { "IPC controller disposed" }
-            result
+            // Bind completion to an attempt, not a transient StateFlow terminal snapshot.
+            val attempt = controlScope.async {
+                mutex.withLock {
+                    check(!isDisposed) { "IPC controller disposed" }
+                    val connected = _state.value as? IpcClientState.Connected
+                    if (connected != null) return@withLock CompletableDeferred(connected)
+                    val pending = connectionAttempt
+                    if (pending != null && !pending.isCompleted) return@withLock pending
+                    cancelReconnectJobLocked()
+                    resetReconnectAttempts()
+                    doBindServiceLocked()
+                    checkNotNull(connectionAttempt)
+                }
+            }.await()
+            attempt.await()
         }
     }
 
@@ -333,6 +344,7 @@ class IpcConnectionController(
                 cancelReconnectJobLocked()
                 cancelBindingTimeoutLocked()
                 resetReconnectAttempts()
+                connectionAttempt?.completeExceptionally(IllegalStateException("IPC connection closed"))
                 _state.value = if (permanent || isDisposed) IpcClientState.Disposed else IpcClientState.Closed
                 doUnbindServiceLocked()
                 
@@ -352,6 +364,7 @@ class IpcConnectionController(
     private fun doBindServiceLocked() {
         if (isDisposed) return
         doUnbindServiceLocked()
+        if (connectionAttempt?.isCompleted != false) connectionAttempt = CompletableDeferred()
         _state.value = IpcClientState.Binding
         
         val connection = InnerServiceConnection()
@@ -400,20 +413,23 @@ class IpcConnectionController(
      * 在持锁状态下处理绑定失败的逻辑。
      * 具备指数退避重试能力，只有达到重试上限才进入 Disconnected。
      */
-    private fun handleBindFailureLocked() {
+    private fun handleBindFailureLocked(
+        cause: Throwable = RemoteException("IPC bind failed or lost for generation $currentGeneration")
+    ) {
         val shouldReconnect = reconnectAttempts < maxReconnectAttempts
         if (shouldReconnect) {
             reconnectAttempts++
             _state.value = IpcClientState.Reconnecting(attempt = reconnectAttempts)
         } else {
             _state.value = IpcClientState.Disconnected
+            connectionAttempt?.completeExceptionally(cause)
         }
         doUnbindServiceLocked()
         
         // 快速失败在途请求
         pendingCallRegistry.failAllForGeneration(
             currentGeneration,
-            RemoteException("IPC bind failed or lost for generation $currentGeneration")
+            cause
         )
 
         if (shouldReconnect) {
@@ -500,6 +516,7 @@ class IpcConnectionController(
                             broker = broker,
                             protocol = protocolInfo
                         )
+                        connectionAttempt?.complete(_state.value as IpcClientState.Connected)
                         }
                 } catch (cancelled: CancellationException) {
                     throw cancelled
@@ -546,7 +563,7 @@ class IpcConnectionController(
 
     /**
      * 处理服务端 Binder 死亡的事件。
-     * 当收到死亡通知时，会断开现有连接，并将状态推进至 Reconnecting 以触发自动退避重连机制。
+     * 收到死亡通知时断开现有连接，并按与绑定失败相同的预算决定重连或 Disconnected。
      *
      * @param connection 发生死亡事件的底层连接实例
      * @param generation 发生死亡事件的代次，用于避免处理已过期的回调
@@ -559,17 +576,13 @@ class IpcConnectionController(
                 }
                 val currentState = _state.value
                 if (currentState is IpcClientState.Connected && currentState.generation == generation) {
-                    reconnectAttempts = 1
-                    _state.value = IpcClientState.Reconnecting(attempt = reconnectAttempts)
-                    doUnbindServiceLocked()
-                    
-                    // 立即让当前代次的所有在途挂起请求快速失败，杜绝假死卡顿
-                    pendingCallRegistry.failAllForGeneration(
-                        generation,
-                        android.os.DeadObjectException("Server process died for generation $generation")
+                    handleBindFailureLocked(
+                        if (android.os.Build.VERSION.SDK_INT >= 23) {
+                            android.os.DeadObjectException("Server process died for generation $generation")
+                        } else {
+                            android.os.DeadObjectException()
+                        }
                     )
-
-                    scheduleReconnectLocked()
                 }
             }
         }

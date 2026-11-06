@@ -1,0 +1,904 @@
+{
+  "date": "2026-10-30",
+  "baseCommit": "e9156f41563ab18dab32fdb83e8b7c7294c75c14",
+  "state": "UNCOMMITTED_SOURCE_FIXES",
+  "validation": "PASSED",
+  "published": "NOT_RUN",
+  "deviceValidation": "NOT_RUN",
+  "realCrossProcessBinderValidation": "NOT_RUN",
+  "performanceValidation": "NOT_RUN",
+  "remoteCI": "NOT_RUN",
+  "deviceRestriction": "Xiaomi 925c23bb only; not connected; no other device used",
+  "gradle": {
+    "exitCode": 0,
+    "tasks": [
+      ":check",
+      ":demo-app:assembleDebug",
+      ":app-server:assembleDebug",
+      ":app-client1:assembleDebug",
+      ":app-client2:assembleDebug",
+      ":app-client3:assembleDebug",
+      ":benchmark-andlinker:assembleDebug"
+    ],
+    "result": "BUILD SUCCESSFUL in 1m 24s; 317 actionable tasks",
+    "log": "verification-build.txt"
+  },
+  "hostStateMachines": {
+    "passed": 27,
+    "client": 12,
+    "server": 15
+  },
+  "robolectric": {
+    "sdk": 34,
+    "frameworkVersion": "4.13",
+    "tests": 8,
+    "failures": 0,
+    "errors": 0,
+    "cases": [
+      "generatedArgumentsKeepBusinessValuesWithTraceOnAndOff",
+      "rawFlowHasOneTerminalAndQuietUnsubscribe",
+      "flowBusinessCancellationKeepsCauseAndScopeAlive",
+      "rawRequestIdRemainsIndependentOfBusinessRequestId",
+      "subscriptionCallbacksCanUnregisterReenterAndBroadcastConcurrently",
+      "clearingOldGenerationCannotRemoveReplacementSubscription",
+      "closedAndDeadObserversCannotRegisterAndStaleDeathCannotRemoveReplacement",
+      "deathAndDisconnectRespectZeroAndOneRetryInBothOrders"
+    ],
+    "result": "generated-runtime-tests.xml",
+    "boundary": "Real generated code and Controller under JVM Android simulation with controlled Binder/Context; not a device run"
+  },
+  "releaseValidator": {
+    "passed": 10,
+    "command": "python -m unittest discover -s tests/release -v",
+    "evidence": "Console execution in this task; no saved raw log"
+  },
+  "maven": {
+    "status": "PASSED",
+    "version": "3.0.0-consumer-check-20261030014150100721",
+    "report": "maven/verification.json",
+    "modes": [
+      "metadata",
+      "pom"
+    ],
+    "nestedNegativeControl": "PASSED: expected KSP diagnostic, nonzero compiler exit, no FileAlreadyExistsException"
+  },
+  "localDependencyResolution": {
+    "note": "Robolectric dependencies mirrored from existing Gradle cache into ignored task-local Maven directory; run with --offline and task-local init script. Project/CI use Google and Maven Central. No global repository configuration changed.",
+    "initScript": ".gradle/audit-test-repo.init.gradle"
+  },
+  "artifacts": [
+    {
+      "module": "demo-app",
+      "applicationId": "com.cn.ipc.demo",
+      "versionName": "3.0.0-rc.2",
+      "versionCode": 30002,
+      "path": "demo-app/build/outputs/apk/debug/demo-app-debug.apk",
+      "size": 6390204,
+      "sha256": "d753581655d5afeb04e7c27aed2e93ea605dafeab27b211b5310521b9781bb6f",
+      "deviceValidation": "NOT_RUN"
+    },
+    {
+      "module": "app-server",
+      "applicationId": "com.cn.ipc.server.app",
+      "versionName": "3.0.0-rc.2",
+      "versionCode": 30002,
+      "path": "app-server/build/outputs/apk/debug/app-server-debug.apk",
+      "size": 5964932,
+      "sha256": "c0086fc135fd277920d8ede99ab93e911eed694b441db5c7d9e4c964c665095c",
+      "deviceValidation": "NOT_RUN"
+    },
+    {
+      "module": "app-client1",
+      "applicationId": "com.cn.ipc.client1",
+      "versionName": "3.0.0-rc.2",
+      "versionCode": 30002,
+      "path": "app-client1/build/outputs/apk/debug/app-client1-debug.apk",
+      "size": 6291640,
+      "sha256": "f37f6e824fe35c0f2cf81fab44e4db358bb1f94db46d91710882987a0e65b925",
+      "deviceValidation": "NOT_RUN"
+    },
+    {
+      "module": "app-client2",
+      "applicationId": "com.cn.ipc.client2",
+      "versionName": "3.0.0-rc.2",
+      "versionCode": 30002,
+      "path": "app-client2/build/outputs/apk/debug/app-client2-debug.apk",
+      "size": 6291625,
+      "sha256": "27fb3390386300bc3f87c69acc4e876106fd2271156fff1db2d3984c0ef3867e",
+      "deviceValidation": "NOT_RUN"
+    },
+    {
+      "module": "app-client3",
+      "applicationId": "com.cn.ipc.client3",
+      "versionName": "3.0.0-rc.2",
+      "versionCode": 30002,
+      "path": "app-client3/build/outputs/apk/debug/app-client3-debug.apk",
+      "size": 6291620,
+      "sha256": "ee8ccda9515dcb59fcf5c23153d808ca7603371c6547a0f7022fe93b8143d100",
+      "deviceValidation": "NOT_RUN"
+    },
+    {
+      "module": "benchmark-andlinker",
+      "applicationId": "com.cn.ipc.benchmark.andlinker",
+      "versionName": "3.0.0-rc.2",
+      "versionCode": 30002,
+      "path": "benchmark-andlinker/build/outputs/apk/debug/benchmark-andlinker-debug.apk",
+      "size": 845376,
+      "sha256": "899c29c9795fd826d21837682c2fdb2b8fc8b0a2940aa2ffb3ccdc35dcfd6172",
+      "deviceValidation": "NOT_RUN"
+    }
+  ],
+  "sourceFiles": [
+    {
+      "path": ".github/scripts/prepare_release.py",
+      "sha256": "48b51910e33b4f0cc8b16f2182caa71d6e9716ddfed2302d81fe3588d50ce0f2"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "sha256": "52d8df0b916403f26f6419db287e7bc7b8e97eadb98e5e29557153a1d639a8d7"
+    },
+    {
+      "path": ".github/workflows/verify.yml",
+      "sha256": "494f3dabebf4af8c6d425ac8b542d8c87d627c8cb8af0937bd31cf7d5fbe2442"
+    },
+    {
+      "path": "app-client1/build.gradle.kts",
+      "sha256": "a763a725e6150905a9d55760cb4901f27a184c8f63c439111c1f65be38746f65"
+    },
+    {
+      "path": "app-client1/src/main/AndroidManifest.xml",
+      "sha256": "58eb04dd98b379bddf1c6766b380f3ee0ac83d1d240eb35584dacdc7aa3af7de"
+    },
+    {
+      "path": "app-client1/src/main/kotlin/com/cn/ipc/client1/Client1Activity.kt",
+      "sha256": "1e38d7a806f0f57bbf8e04af68646ab8e8e3a911d9e8a28d6edac8eb24164443"
+    },
+    {
+      "path": "app-client2/build.gradle.kts",
+      "sha256": "e7082b95c40bdb7053854cf7fa4f018cb28d3c90e2a13e2de100cc6f586da556"
+    },
+    {
+      "path": "app-client2/src/main/AndroidManifest.xml",
+      "sha256": "24ae63b61a1866cfa140fb66bc75917f5bd3052c55f2d54205e86dacd187628e"
+    },
+    {
+      "path": "app-client2/src/main/kotlin/com/cn/ipc/client2/Client2Activity.kt",
+      "sha256": "7f3e4ce022e48e290089c8b3517014a0eb42bc6bb7ce1f2d100e1061df094f8a"
+    },
+    {
+      "path": "app-client3/build.gradle.kts",
+      "sha256": "196b29eeca3744e0b13470baf580fa6d7c7963541e49a3c02818002569465644"
+    },
+    {
+      "path": "app-client3/src/main/AndroidManifest.xml",
+      "sha256": "6cf6c3794012e653515f30d03706cf8fda7af27e37f3c8ae72a4e59ff887ceff"
+    },
+    {
+      "path": "app-client3/src/main/kotlin/com/cn/ipc/client3/Client3Activity.kt",
+      "sha256": "e0c7a0065a9ce62b74f707b42aea46148cba274e5452bb66f038e85a6a2b0f0b"
+    },
+    {
+      "path": "app-server/build.gradle.kts",
+      "sha256": "45422fad6a652d0618dd15aa60ad00f3836abddbf1a88249c03a9bad1af9d0f8"
+    },
+    {
+      "path": "app-server/src/main/AndroidManifest.xml",
+      "sha256": "07482e62b7379f47be255c6138aa77ee5b07ab6f7161112dceb00215834ac0e1"
+    },
+    {
+      "path": "app-server/src/main/kotlin/com/cn/ipc/server/app/MessageHubServiceImpl.kt",
+      "sha256": "ae3bdc925f22cfe0eac6149a79b0bc8e97567ee40cfa9604709e7fc2678f9562"
+    },
+    {
+      "path": "app-server/src/main/kotlin/com/cn/ipc/server/app/ServerBrokerService.kt",
+      "sha256": "f72f7d8cf263fc05fa7cb50516d6bdd895ed995a2bb5fd00a28988371073df2e"
+    },
+    {
+      "path": "app-server/src/main/kotlin/com/cn/ipc/server/app/ServerMainActivity.kt",
+      "sha256": "b2b0cf190539ebe33d9f9a53cfda1fc2d56d027a53c7c18bf69ccc44bc55f9d7"
+    },
+    {
+      "path": "benchmark-andlinker/build.gradle.kts",
+      "sha256": "4e25fcab8e73123ffb529c64404132bb9afc5bdab47676553bbd172ef8dc74a5"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/AndroidManifest.xml",
+      "sha256": "61f6f534382c1d8eb3f951f5b1d9e3bd48e5f9f18e0ac30edab0a00766666b5c"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/cn/ipc/benchmark/andlinker/EchoService.java",
+      "sha256": "80e8232b5350ff8a973232d8b17562434d03ab83a3aa07f2485d14c386f57261"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/cn/ipc/benchmark/andlinker/IEchoAsync.java",
+      "sha256": "87dfc09dbdea512bf2620aabc4c93b80682ee3346b5d1a3e06209970f90defc5"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/cn/ipc/benchmark/andlinker/IEchoSync.java",
+      "sha256": "be3090b1afb9b3adce2c2462313c6ac17c84ea034ee4a53201cb2100697a1557"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/cn/ipc/benchmark/andlinker/MainActivity.java",
+      "sha256": "450f63c4da95f3a7c9b6582ba6f71f6b34d83ee73b4528be0cd63b56e82cdee8"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/AndLinker.java",
+      "sha256": "8a5ad51863e79ba0f948caeff52d19e65c8a407e736e33508f951deb3a1a953e"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/AndLinkerBinder.java",
+      "sha256": "1d13be8c35567541d95e54d480bf2a373d539c8a64396707652c654789fd36b7"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/ArrayType.java",
+      "sha256": "3d71d8de5cf9a0e59299c7e60f1fde5ca1a5d5c3d292b7edf27e6f5e293fdd5a"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/BaseTypeWrapper.java",
+      "sha256": "172cd916f77630eedb19127effc32ffd3cac57e5746e6036611c097a1e38e658"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/Call.java",
+      "sha256": "344228ad5590c9467698b3d2ff9e73ec8fd6d6586498395bd8955ad750a7c99e"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/CallAdapter.java",
+      "sha256": "4d5294c5d39205b086e7a868b4724c2368d3fb374c67797c0fc47bb395efdd63"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/Callback.java",
+      "sha256": "6d6315a0600b2a38c96e3c8510a1b1a7e31920b45380bcdef3f9d1b766d7f3ca"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/CallbackTypeWrapper.java",
+      "sha256": "b23849cffcde182bb2605bb3a85f17fdb87b711ca8625b7af6764da14b481f93"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/Dispatcher.java",
+      "sha256": "31b070697a9471a0ea1f374224d767c6c0005e3a4e84321a75538897abfe3a1b"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/ICallback.java",
+      "sha256": "4cbc81eefbe229d4032dbcced67d7e015d685eb352e2eb2ed667570efb4d1f0f"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/ITransfer.java",
+      "sha256": "7ec5addf9477891314dae5b402dda550bf4cc0606ecdc10f03bebbc2e7d7d148"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/InOutTypeWrapper.java",
+      "sha256": "7bfffdc3f5a0b8b555d3cd6a4f403f4fb141b814190ae754ae3b2910452d7aa7"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/InTypeWrapper.java",
+      "sha256": "c0aa1278732d67783bfd59e4694da5b6bfa3759326fd002c432502acac7edfc3"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/Invoker.java",
+      "sha256": "8ff09c886f6123c584789f3f9ec01ccfc25fbf519faef9e56ea933b8e06b6a6f"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/LinkerBinderImpl.java",
+      "sha256": "556d1b1a9570ed52c8b16cc2c57aa1d89572032cd92541fe3003ef8d689bbba7"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/Logger.java",
+      "sha256": "78894a5c1c3f149a5d53fc6350197ff3153b9566ca4364914282817f00350401"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/MethodExecutor.java",
+      "sha256": "bb884531ba0b475c7250d9fc985637c4f62a54b1a3976c1d73b19d0e2eefb895"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/OutType.java",
+      "sha256": "7fd980006e380867b298d898f43e3d1e5d9fa1b9e391fa2a7e784ca13b79b40a"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/OutTypeWrapper.java",
+      "sha256": "d1fe0a7264b9761b53531053d210f0bea5a0330b3e3096622ef8f102327d8571"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/ParameterHandler.java",
+      "sha256": "f44669a1ba6fe47a0d191806dc6185b35d1816d5d4051b8481e872574e0228c8"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/RemoteCall.java",
+      "sha256": "e9373016854e8b7230b6c19052f91bbaa9574553233666def15f11d645ef5909"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/Request.java",
+      "sha256": "2d70c86647d00b9b2ccb49b40da49d51ab5ba2b5980db388dffa5acd23f7e29b"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/RequestBuilder.java",
+      "sha256": "70398872cc54c5c1fb5f01bd8b8ff2d3ed264c5e0719e8d9a1c06a1f43b04ba2"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/Response.java",
+      "sha256": "aa58725b64336ca22fbb20a9d7a5275c5356ed3738ba1106dce24b739ecc562a"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/ServiceMethod.java",
+      "sha256": "134e85a0a4a106b58a49ec264277993f82d000171e994b2b3bb23d20918df212"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/SuperParcelable.java",
+      "sha256": "303a843b3ec68c4ee6c18a09b298f6bf809a12220789604024c9e1da76fae983"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/Type.java",
+      "sha256": "5f71c808958a660078c8d5db78e17be1fe1025523e8b1424feffdb3d4acba8e9"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/TypeFactory.java",
+      "sha256": "89a14ea333586b82c12b41c294f9181b9b97da6d6f9fbfa20aac2c49cbc69955"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/Utils.java",
+      "sha256": "9cd9273aa1dc4759531fc1431bde324bb38c96d74c6db896be1c06ef7dce024c"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/adapter/DefaultCallAdapterFactory.java",
+      "sha256": "2ebbed8d21b3e33980ae12db9e4dadc858ac7d4ae2be97d24650a37d15f9cb6c"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/adapter/OriginalCallAdapterFactory.java",
+      "sha256": "199bde0be4ae53e1d161313897cb3742e5bfac02091efb1b6d5b9254eb0838be"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/annotation/Callback.java",
+      "sha256": "0bb34cba4a184c4c08530f68ace615cb34a56227639898a079dfd849d1032970"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/annotation/In.java",
+      "sha256": "3fc08452311863c2f80070d491598410b03eff4bf4f3e950eecb52f437f071f9"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/annotation/Inout.java",
+      "sha256": "810affbf54eec42e19ecbc441ae43a10093cd76c3dbea7025e666d7c9800abcc"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/annotation/OneWay.java",
+      "sha256": "32a49a057af1db381cde4548d244a002b9fd108ba2466a645036131ec788215e"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/annotation/Out.java",
+      "sha256": "203aa920d08953a183e3af25b21bbbdf5e6113fd21b8cb83165d69a6605d56eb"
+    },
+    {
+      "path": "benchmark-andlinker/src/main/java/com/codezjx/andlinker/annotation/RemoteInterface.java",
+      "sha256": "09f0ba248654ce36eb905877abea8997378dfc809db943deabf497dbb2e53fd7"
+    },
+    {
+      "path": "build-logic/build.gradle.kts",
+      "sha256": "30665e71147d76a39a572633a606672e16459091ab68a9eff39e0bbda1faeb97"
+    },
+    {
+      "path": "build-logic/settings.gradle.kts",
+      "sha256": "2dc64e84f62e6beac88afaf9bcf6492bd790947a166da903f90d9f91c2c1dd1d"
+    },
+    {
+      "path": "build-logic/src/main/kotlin/convention.android-application.gradle.kts",
+      "sha256": "4a2137558fba9ab393ca30386f937525b509c161851bdc455e10080b199f74bb"
+    },
+    {
+      "path": "build-logic/src/main/kotlin/convention.android-library.gradle.kts",
+      "sha256": "b1798f31889c27a0cf8a34f6b7238eb28719ad2aaa426aade9e2013700973ace"
+    },
+    {
+      "path": "build-logic/src/main/kotlin/convention.jvm-library.gradle.kts",
+      "sha256": "ccb48b9fe08f26a35b6ae87d8bbe5d5b7938bef94dd663452d1e62978f66443f"
+    },
+    {
+      "path": "build-logic/src/main/kotlin/convention.publish.gradle.kts",
+      "sha256": "de281d775406893289921c49a9b15e8a86ccf80cf54a37062526415e1368e15e"
+    },
+    {
+      "path": "build.gradle.kts",
+      "sha256": "32486702f72449675ea3d40bbd026a9e74bd317c1f91ca5833f89f659e083bb5"
+    },
+    {
+      "path": "demo-app/build.gradle.kts",
+      "sha256": "892d704d3bbc62fa245e1abdea69b4267a657be256c1f00da72aab01861e38e9"
+    },
+    {
+      "path": "demo-app/src/main/AndroidManifest.xml",
+      "sha256": "2b0acbde40ad24f17ffd228d6de8f5464e38f6eb0abbf413d964fcad7b402b46"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/BenchmarkForegroundSession.kt",
+      "sha256": "acb37882ce8ac717602d2b7671b2dd297b98fb0f4f6b51227efd3cc339b53b35"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/ColdDiscoveryBrokerService.kt",
+      "sha256": "63b7b88670e5bffe9bea5e0a089103dee704ff121452f08c73e1db2d13927771"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/CompatibilityBrokerService.kt",
+      "sha256": "4e2e44a6c5c349abaffa5a945f0e5c1c19c7b3fcf10433c3f6dc1313bd1adbec"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/DelayedBindingService.kt",
+      "sha256": "c4091097073bd89de41cab173d95dfec08a8e07ddd7764c85159a3034a7c8136"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/HandshakeBlockingService.kt",
+      "sha256": "70ab74d3a3b616a133192157ec29edfcb1649d92d6618bfb775aa3a3ded4130c"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcAsyncComparisonBenchmark.kt",
+      "sha256": "045efb879536a095dc18fa229deb2bb60c4465f231572979479e2c5b2fcf2f01"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcAsyncScopeProbe.kt",
+      "sha256": "9c5cc6ce33d010aebec81764ac72030c1c08581176e36227084d7ae4601f844e"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcAuthBenchmark.kt",
+      "sha256": "dba20662b6295333aa1a310fa1c04feeabebd11c9fd8379a2419c05e273b488a"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcAuthProbe.kt",
+      "sha256": "dc8d2687c00aa198574d0cc63dfb3003cbd19368814d88be245509647647c583"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcColdDiscoveryProbe.kt",
+      "sha256": "ce2410cd69430e267bd57031a251679aabfc4ca6d7d9b262d91c7c1b2ccead7f"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcCompatibilityProbe.kt",
+      "sha256": "572170063c45d106ad10848ef7dd5ee31d8503fef5f660356bad60989ac37b52"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcDispatchBenchmark.kt",
+      "sha256": "34c55f58dc1d1de153e2558d3835745a81547fedd749a7aa2f31979d168fe9b9"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcEchoBenchmark.kt",
+      "sha256": "f008f592be1a9f1cd2116c385be709af326fe697373333be131b70679648a8d2"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcFaultProbe.kt",
+      "sha256": "7f4c85fee8bdcad528696662f8ce91549378db94e32433eb1427beb05c82a220"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcGeneratedTerminalProbe.kt",
+      "sha256": "1afcdc4950c251a86c756f33c5d7dc1f2b4745eb389ed1a475764a53f61ee8bf"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcGuardBenchmark.kt",
+      "sha256": "f7ff6ababc014f3cc8980e2574ee9877f5f2aadc7ebfd3ea7e036afe66349c6b"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcHandshakeProbe.kt",
+      "sha256": "c9516365662d88668c54e9b64ad73b6d130850ba524207d95d42d66c98e82a2c"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcLifecycleProbe.kt",
+      "sha256": "512a72cecf3b32670897b9156a07cf7f1f4f3a6007aa8bafe805d4bc3ff00242"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcPendingBenchmark.kt",
+      "sha256": "d7c5850ba9d9ead13b874fd291b04b645e8b7d2cb0293579c3d5e63b6be19f0a"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcRequestTraceBenchmark.kt",
+      "sha256": "8dc21cace4f086ea5767eb6ca909ce614d1870951b5d9ed0239b95dee5788380"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/IpcTerminalProbe.kt",
+      "sha256": "c53eeb6c9ced713e153e85ca20b654859dbbcad8f9fdce0b545f9b07219ea785"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/LegacyPendingCallRegistry.kt",
+      "sha256": "e6d5a3994e68c3e1e62830f393aaa7b1321a4306bb45bb4f6c11885eeb95899d"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/MainActivity.kt",
+      "sha256": "34bcdc8399afe68db1fed419698a06c7eb549f55f8b905edb7b3333d1822c824"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/MyBrokerService.kt",
+      "sha256": "073e3d2d8d96f9c4bc1474f33e6231a8202acb2e1e8bf87b29564c04b92bb3c8"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/NullBindingService.kt",
+      "sha256": "4728e189d05a816a557166d2846489e403fd6ba41792f588bac3256bbba26f8e"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/PendingBenchmarkPort.kt",
+      "sha256": "b497fc9fe27830ad131b1ab52943a024acbb1835f96c810abdeff7ab4bb75e9b"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/PendingBenchmarkRaces.kt",
+      "sha256": "30e30718f210ebfe196ec415c74c1098a31c33c06b8b4872c16e078e0f31105b"
+    },
+    {
+      "path": "demo-app/src/main/kotlin/com/cn/ipc/demo/UserServiceImpl.kt",
+      "sha256": "cf617414db30a6e3bccd6146c086505d950986996d23d590e0c37a113f79b0cc"
+    },
+    {
+      "path": "demo-app/src/test/kotlin/com/cn/ipc/demo/regression/IRegressionService.kt",
+      "sha256": "ffc536a5fb76fac07372af5017cf3c8a35acfabfdafd3c275ebc179535503d12"
+    },
+    {
+      "path": "demo-app/src/test/kotlin/com/cn/ipc/demo/regression/RuntimeRegressionTest.kt",
+      "sha256": "f0f2c3c14c38e637845e5b63de39a3329cb010d66131c68d22c4061670dab8c4"
+    },
+    {
+      "path": "demo-client-common/build.gradle.kts",
+      "sha256": "5862e369d067a7653ebe11faaaca61410437b8aa6d4856c0dc94706b8c350cb0"
+    },
+    {
+      "path": "demo-client-common/src/main/AndroidManifest.xml",
+      "sha256": "8ef94a6aec2218c5fd02408d018f6d52602c0ef4473dd1c115c5c6964f1e63e1"
+    },
+    {
+      "path": "demo-client-common/src/main/kotlin/com/cn/ipc/client/common/BaseClientActivity.kt",
+      "sha256": "4923141bada180904a8bae1b4711f35a6fe28c73261491c207d72388aa7da299"
+    },
+    {
+      "path": "demo-client-common/src/main/kotlin/com/cn/ipc/client/common/IpcBenchmarkSuite.kt",
+      "sha256": "aace7d58bd510ad85aaa821cca0b182c290e081f2dba68706bafa789b4dfcf99"
+    },
+    {
+      "path": "demo-client-common/src/main/kotlin/com/cn/ipc/client/common/MeetingBoardDemo.kt",
+      "sha256": "129ef239798a743dc8af9ab082dfed53069e0c06a82ff0fb64003fc013ee903d"
+    },
+    {
+      "path": "demo-client-common/src/main/kotlin/com/cn/ipc/client/common/MultiAppScenarioDemo.kt",
+      "sha256": "80361ad75942dc9ca05213a665f6bf26294a22e7afdd3321cfd83ba8f35c0c37"
+    },
+    {
+      "path": "gradle.properties",
+      "sha256": "b42ce3e86cf00f2607643cdf48f0708bf3202ff7527a22af3c32ebc2c8d03fbf"
+    },
+    {
+      "path": "gradle/libs.versions.toml",
+      "sha256": "d90ad0e8ccb073915da224f24d9288fa65cbfa71338b799442665d8b996a8f99"
+    },
+    {
+      "path": "ipc-annotations/build.gradle.kts",
+      "sha256": "a31bda7df677c6860d12eff0ef07270616a3e188cef8df6f09eadbd802fa0b89"
+    },
+    {
+      "path": "ipc-annotations/src/main/kotlin/com/cn/ipc/annotations/IpcAnnotations.kt",
+      "sha256": "ce0782dc0633464205a2af0be748b2d4cec706e0a13b2a3a91fe72959b68e571"
+    },
+    {
+      "path": "ipc-annotations/src/main/kotlin/com/cn/ipc/annotations/IpcFacade.kt",
+      "sha256": "a06bbb37df5d27beb10bd09d6f055aea4a529625c4ba9554f1d5d2bbdb28fd5a"
+    },
+    {
+      "path": "ipc-api/build.gradle.kts",
+      "sha256": "47e7fa146e91d02ae39cf9519431f4e972e0eb6a1eb23d1f0ec611cedba2a998"
+    },
+    {
+      "path": "ipc-api/src/main/kotlin/com/cn/ipc/api/hub/IMessageHubService.kt",
+      "sha256": "9d3424538fe9d68d00172cf8e9367168bc6427fefb3c2486a7684b7946a1f8ea"
+    },
+    {
+      "path": "ipc-api/src/main/kotlin/com/cn/ipc/api/hub/MeetingBoardMessage.kt",
+      "sha256": "3dbe7f09531e4f8f545aeb6cef7cd5ad682b4b48f94c050467c3e34d1749a6b0"
+    },
+    {
+      "path": "ipc-api/src/main/kotlin/com/cn/ipc/api/hub/MultiAppScenarioMessage.kt",
+      "sha256": "34a94fa6c220caa91443bf5d2a98837c67f6e170f4007ffe43a4be77d2c644f8"
+    },
+    {
+      "path": "ipc-api/src/main/kotlin/com/cn/ipc/api/test/IBenchmarkEchoService.kt",
+      "sha256": "11f96d5b322cd0bf5c224aa58c608350e61290af046e0d30337f85cb616b5817"
+    },
+    {
+      "path": "ipc-api/src/main/kotlin/com/cn/ipc/api/test/IUserService.kt",
+      "sha256": "31905dca5504daa2ce2c18552231aa7d729602b3783813f6fd42c98fca412df5"
+    },
+    {
+      "path": "ipc-compiler/build.gradle.kts",
+      "sha256": "4bd8c1275bdf8ae7b1c52b4b948a47d846b13b823c58e7297f33dce808f1013d"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/ClientAdapterGenerator.kt",
+      "sha256": "eea16a2b1fd718d723187305d6801232f93239defbc777291ef6d37917491bcc"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/IpcProcessorProvider.kt",
+      "sha256": "06f5eda2ae124427668ebe6d2cf948aeb45789543d3a8415728fc273210e54a1"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/IpcSchemaGenerator.kt",
+      "sha256": "1003d2c2258b20e0454b8746a546e32c0cba5954dd7e08719e4cc5624a0160c8"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/IpcSymbolProcessor.kt",
+      "sha256": "281c3cd5e38f95b5e75cc4aa208ec0e67a69b19cffa9efe6c60d079f547b7dd0"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/ServerStubGenerator.kt",
+      "sha256": "b99f1c6784c76522e7a979e4516cced2390ec77fde7bd1b20dd1fa5e640430bc"
+    },
+    {
+      "path": "ipc-compiler/src/main/kotlin/com/cn/ipc/compiler/WireTypeModel.kt",
+      "sha256": "ad3dfc1ae4816c8a517835cdbb47f2085beff54eab636af4894cab2e1f20ff3a"
+    },
+    {
+      "path": "ipc-contract/build.gradle.kts",
+      "sha256": "72332dae205a75d99615222c48ba4a781424df1a2ca31597a1b3bed96aa08eef"
+    },
+    {
+      "path": "ipc-contract/src/main/aidl/com/cn/ipc/ClientHello.aidl",
+      "sha256": "f6ec8ed1e4112f214670a1ec78a6af1dce42dd002a1ce474585f58b1ef83a05d"
+    },
+    {
+      "path": "ipc-contract/src/main/aidl/com/cn/ipc/ClientServiceSchema.aidl",
+      "sha256": "df9cc26a0e7be46d2d36bf550b8b4f880a6dcbd71f5c863fc516e6e8f7d04093"
+    },
+    {
+      "path": "ipc-contract/src/main/aidl/com/cn/ipc/IIpcBroker.aidl",
+      "sha256": "3252d583af246cf3ef581e67abb67a2960c80a7b9cb1f60d4e8a9a533efc372a"
+    },
+    {
+      "path": "ipc-contract/src/main/aidl/com/cn/ipc/ProtocolInfo.aidl",
+      "sha256": "5500dd43bfdcba0e2dcc0703304870543ec05a763763d32881a68f3d141df2d0"
+    },
+    {
+      "path": "ipc-contract/src/main/aidl/com/cn/ipc/RpcError.aidl",
+      "sha256": "57f8aea025f81e2655b9a4f0f442ecef7f9e386bf7605a29e312ad1f97f75419"
+    },
+    {
+      "path": "ipc-contract/src/main/aidl/com/cn/ipc/ServiceSchema.aidl",
+      "sha256": "508df6716a99186a7311c2c5ad7e0d009c612bea2033186464fcc0abf9192661"
+    },
+    {
+      "path": "ipc-contract/src/main/kotlin/com/cn/ipc/IpcRequestTrace.kt",
+      "sha256": "9a262e5f4eb9fef79d12b6c048dc7d9b8d4f98cb8b2da62f11b9bc979e31d6dc"
+    },
+    {
+      "path": "ipc-contract/src/main/kotlin/com/cn/ipc/Models.kt",
+      "sha256": "42eafd2dcb14a0200929b7f9c45039ac637fb769d737aba835b079ecf19cd0c2"
+    },
+    {
+      "path": "ipc-contract/src/main/kotlin/com/cn/ipc/ServiceSchema.kt",
+      "sha256": "33acb04e41d54b4bc66a114dd843465ca8d88edd13032315236ea111694a8b6b"
+    },
+    {
+      "path": "ipc-host-tests/build.gradle.kts",
+      "sha256": "4bce44a822e7f41c0e68b4d1dc18ad22c2b45ceea6d4be8e5e08c3c8ee771866"
+    },
+    {
+      "path": "ipc-runtime-client/build.gradle.kts",
+      "sha256": "68357cd407be8249ef438a2b3104b7a518f00caa2fbdd826b904fafb4cbfff49"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/FlowAdapterHelper.kt",
+      "sha256": "0f3915fc30b81021873b68feaa76fe02c69a794ce591e43f4bbe0afb12456777"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/HandshakeExecutor.kt",
+      "sha256": "844c644fe3f04f31dba5e93c01954265327acd6098a0291162af47f779174c0c"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/IpcClientState.kt",
+      "sha256": "601a457fa9d1b4fc5d9b9b9e3a989fa2ddd73d20845b7fedfbc5ab315ae5e2f0"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/IpcCompatibilityException.kt",
+      "sha256": "737aaedf75c319188a28bea3de428d59256012daa19f471948ac023b2a86cfed"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/IpcConnectionController.kt",
+      "sha256": "64dcaecdbfb257063f91200d0e41a5e1cdfc19ff986b37fac6e3fdc756db103e"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/ModernIpcRouter.kt",
+      "sha256": "2a0ac14358ca866e8e915ddf3a0bfecb482d1c73eb0f379426317f219481785a"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/PendingCallRegistry.kt",
+      "sha256": "095c96c19c95c18e6d9506a88e91159321b28b61c0e252607eab171509d57aa0"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/RxIpcExtensions.kt",
+      "sha256": "106feba1f07dcebb87e2d4593de213c47a2459aa5691026cd29624cc397cd988"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/ServiceDiscoveryCache.kt",
+      "sha256": "28e8754bab47c97bf5d6298c3b64eaf5916de2d703b78567a84b5343a39bb811"
+    },
+    {
+      "path": "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/SubscriptionRegistry.kt",
+      "sha256": "23a99b6b7605976bed8dc8e324be06216fd6f78f1db5cd84accf02f42432552d"
+    },
+    {
+      "path": "ipc-runtime-client/src/test/host/ParcelStub.kt",
+      "sha256": "57daa205e1caa0270dbebe139a22e43dddf3ccd22087f19f0f35a42e110eb0f3"
+    },
+    {
+      "path": "ipc-runtime-client/src/test/host/PendingCallRegistryHostTest.kt",
+      "sha256": "62719c7a3f22fd938e3d4de757d1554b6ca929014a4bfb659c5d9ed0befdfdde"
+    },
+    {
+      "path": "ipc-runtime-client/src/test/host/run.py",
+      "sha256": "81b8da61e3ec68b900d170957dcdb6f7c257f268d279ada100dd7591bcf89304"
+    },
+    {
+      "path": "ipc-runtime-server/build.gradle.kts",
+      "sha256": "6033213a0f8d46f7c27fb15541f1b07a7097ac9d183803a34c48cfb6cdd684ef"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/BoundedDispatcher.kt",
+      "sha256": "b7ea904cbe21d5ec8ba576ddae960551e7c1d80b5ffe37c41194bfb4dd96b710"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/CallerAuthenticator.kt",
+      "sha256": "e1e07812f4bd160ae626f05e7b7b1fb5ca04f87a54814a5ecf349c93e7ab0ca3"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcBrokerService.kt",
+      "sha256": "2e7eeeb5c1e18545fa062243f029799db787d97a567845b1097980735055969c"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcBrokerStub.kt",
+      "sha256": "610a0ef60ef231075457ba86b762d999c125f712289fcf7a372cf4223dc72889"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcRequestTracker.kt",
+      "sha256": "dfcfccd3069ad02c8334dfea947d3db5e8df026ca710a6290fb208e87447585c"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcServiceRegistry.kt",
+      "sha256": "67d82e6375c970758e25adf1ca43ef3e19094c70988774d5ebe0cd671d614899"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcSubscriptionManager.kt",
+      "sha256": "6a91ac7bee1b55a4314dac8c109770d1b73b261d9dd55ddbf1f9422aa967a1c7"
+    },
+    {
+      "path": "ipc-runtime-server/src/main/kotlin/com/cn/ipc/server/IpcTelemetry.kt",
+      "sha256": "c0202e588331e27993becc018d8960a8ff5380a856e7b8fcedbc51e42f4f4d9a"
+    },
+    {
+      "path": "ipc-runtime-server/src/test/host/AndroidStubs.kt",
+      "sha256": "65686b84080cfdd20a996a738bb06cee98fc6eb16f07474e622f7ae0700ff267"
+    },
+    {
+      "path": "ipc-runtime-server/src/test/host/RequestTrackerHostTest.kt",
+      "sha256": "014459831160e18e47a7a88f25ce80bf25c2f9a59a423efecce26b5fe9bab95c"
+    },
+    {
+      "path": "ipc-runtime-server/src/test/host/TraceStub.kt",
+      "sha256": "49b3dcc96bc4f6a76d36264da85d2b285d4ee7201da9949f5489c226827bbd2c"
+    },
+    {
+      "path": "ipc-runtime-server/src/test/host/run.py",
+      "sha256": "c03f400bbd85f34aa7c59656283c19a4dc9f8740abfcfe3dca9146d1367877cc"
+    },
+    {
+      "path": "scripts/verify_maven_consumers.py",
+      "sha256": "27ee1ca91a5c3de8aee637c0cf2e613ba5129463ca50d0e6e95e2652e0c0a23f"
+    },
+    {
+      "path": "settings.gradle.kts",
+      "sha256": "4cf15626c387d7b33b0e297fdfdb5845b7839589e546268ab89a7b53facd30b7"
+    },
+    {
+      "path": "tests/maven-consumer/api-consumer/build.gradle.kts",
+      "sha256": "69df2bddb4900eb723f148a7081187414cecf2d01f883060056cafe640d1705f"
+    },
+    {
+      "path": "tests/maven-consumer/api-consumer/src/main/AndroidManifest.xml",
+      "sha256": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f"
+    },
+    {
+      "path": "tests/maven-consumer/api-consumer/src/main/kotlin/com/modernipc/consumer/ApiConsumer.kt",
+      "sha256": "dfc45fbed8fb6f1f3ae4792b8e74ae53d7834cb9dffd6ba9066ffec6b87eb21a"
+    },
+    {
+      "path": "tests/maven-consumer/build.gradle.kts",
+      "sha256": "0bd2c7fc37acf40724ff36574c588c51191c1a043b74fedcc738b1d5d95daea1"
+    },
+    {
+      "path": "tests/maven-consumer/contract-consumer/build.gradle.kts",
+      "sha256": "8c1e3520dc9de70cc2db6f8f525af0d707908e90e8376440c9ebfc74aa86af69"
+    },
+    {
+      "path": "tests/maven-consumer/contract-consumer/src/main/AndroidManifest.xml",
+      "sha256": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f"
+    },
+    {
+      "path": "tests/maven-consumer/contract-consumer/src/main/kotlin/com/modernipc/consumer/ContractConsumer.kt",
+      "sha256": "5114d1a265ff56fa989a66411169f67279e4d705200f14536f8253292c2c52d9"
+    },
+    {
+      "path": "tests/maven-consumer/custom-contract/build.gradle.kts",
+      "sha256": "ea0d0bb6dec72ab0d2d083ed60532e9c660d75a32ccdae5980124408de6196aa"
+    },
+    {
+      "path": "tests/maven-consumer/custom-contract/src/main/AndroidManifest.xml",
+      "sha256": "571f2735faf5e857752ee057ac8ef63425576a721616c60b86ee5d4c0a2d682f"
+    },
+    {
+      "path": "tests/maven-consumer/custom-contract/src/main/kotlin/com/modernipc/consumer/contract/ICustomService.kt",
+      "sha256": "083a4a0f388845ff9416b0e6df78dadbdd645bce9971e8c99f13c095f9091469"
+    },
+    {
+      "path": "tests/maven-consumer/negative/nested/NestedFacades.kt",
+      "sha256": "bf46a34489242e0c65a70aff0702aabaeefb2540ed8203898e08b4198ef448b0"
+    },
+    {
+      "path": "tests/maven-consumer/settings.gradle.kts",
+      "sha256": "648faa873316a9e0a614aa2f68cfe9fa45f2b496687d76b241cd92fea9ba2814"
+    },
+    {
+      "path": "tests/release/test_prepare_release.py",
+      "sha256": "ac6ca0266c49532d2f7697756be34a0be40a545a9481772e836b8149c5a1e424"
+    }
+  ],
+  "evidenceFiles": [
+    {
+      "path": "verification-build.txt",
+      "size": 26271,
+      "sha256": "61d8c4be1fba16a51344be04dc7eea39f9c9e01c4ef4816f6407c0c740565020"
+    },
+    {
+      "path": "generated-runtime-tests.xml",
+      "size": 1537,
+      "sha256": "e53f5adb4ea412e9eda741184677c7b4c46323bd666bc4a9c55980373a04dcde"
+    },
+    {
+      "path": "maven/publish-sdk.txt",
+      "size": 20737,
+      "sha256": "f588fcdc35fa8a309cdf99bb7fde9d2ea24fd815aa42e16a90809eefc7cf9952"
+    },
+    {
+      "path": "maven/metadata-api-and-contract.txt",
+      "size": 3817,
+      "sha256": "c1c20f4d2afab19a1cbfe5f89638436c4e224593985fae8d0efa88dfd31c7594"
+    },
+    {
+      "path": "maven/metadata-contract-consumer.txt",
+      "size": 1640,
+      "sha256": "b9de8bb105c355c17c9f529d3a31da34b7cb4a4b97e151c3017433e07ed924c7"
+    },
+    {
+      "path": "maven/pom-api-and-contract.txt",
+      "size": 3589,
+      "sha256": "4dee53fae117720648b0b6820626762ca6b441c57e5b9a4fcd76ed7ee408a6c7"
+    },
+    {
+      "path": "maven/pom-contract-consumer.txt",
+      "size": 1650,
+      "sha256": "b727f3ed17b7f17d30c633c093b1cb19e238636887dc49ee3e2bf5296f831cec"
+    },
+    {
+      "path": "maven/reject-nested-facades.txt",
+      "size": 2555,
+      "sha256": "2c8f019a112d972d205bb42956bf0975ba7999abae44499a60b629ccfd0941ca"
+    },
+    {
+      "path": "maven/verification.json",
+      "size": 7229,
+      "sha256": "72d714dc2b08f1a80df55528a3c3fe1b75cb7419a3ca2d5cb8fd3754e9818363"
+    },
+    {
+      "path": "maven/metadata/api-consumer/consumer-compile-graph.txt",
+      "size": 741,
+      "sha256": "197a55bd9599895114aa49aee18d5c8a792da6c9077118e02172fd52def75fc3"
+    },
+    {
+      "path": "maven/metadata/contract-consumer/consumer-compile-graph.txt",
+      "size": 864,
+      "sha256": "b0c860d933d4e0fe4505b116980757a203ef3ea348e89bf716c9d8a94d1d85cf"
+    },
+    {
+      "path": "maven/pom/api-consumer/consumer-compile-graph.txt",
+      "size": 741,
+      "sha256": "197a55bd9599895114aa49aee18d5c8a792da6c9077118e02172fd52def75fc3"
+    },
+    {
+      "path": "maven/pom/contract-consumer/consumer-compile-graph.txt",
+      "size": 864,
+      "sha256": "b0c860d933d4e0fe4505b116980757a203ef3ea348e89bf716c9d8a94d1d85cf"
+    }
+  ]
+}
