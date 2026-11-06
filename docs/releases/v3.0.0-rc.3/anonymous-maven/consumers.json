@@ -1,0 +1,363 @@
+{
+  "version": "3.0.0-rc.3",
+  "repository": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven",
+  "deviceValidation": "NOT_RUN",
+  "status": "PASSED",
+  "steps": [
+    {
+      "name": "metadata-api-and-contract",
+      "exitCode": 0,
+      "log": "/home/runner/work/_temp/anonymous-consumers/metadata-api-and-contract.txt"
+    },
+    {
+      "name": "metadata-contract-consumer",
+      "exitCode": 0,
+      "log": "/home/runner/work/_temp/anonymous-consumers/metadata-contract-consumer.txt"
+    },
+    {
+      "name": "pom-api-and-contract",
+      "exitCode": 0,
+      "log": "/home/runner/work/_temp/anonymous-consumers/pom-api-and-contract.txt"
+    },
+    {
+      "name": "pom-contract-consumer",
+      "exitCode": 0,
+      "log": "/home/runner/work/_temp/anonymous-consumers/pom-contract-consumer.txt"
+    },
+    {
+      "name": "reject-nested-facades",
+      "exitCode": 1,
+      "log": "/home/runner/work/_temp/anonymous-consumers/reject-nested-facades.txt",
+      "expectedFailure": true
+    }
+  ],
+  "metadata": [
+    {
+      "module": "ipc-annotations",
+      "pomCompileExports": [],
+      "apiVariants": [
+        "apiElements"
+      ]
+    },
+    {
+      "module": "ipc-compiler",
+      "pomCompileExports": [],
+      "apiVariants": [
+        "apiElements"
+      ]
+    },
+    {
+      "module": "ipc-contract",
+      "pomCompileExports": [
+        "org.jetbrains.kotlin:kotlin-stdlib"
+      ],
+      "apiVariants": [
+        "releaseVariantReleaseApiPublication"
+      ]
+    },
+    {
+      "module": "ipc-runtime-client",
+      "pomCompileExports": [
+        "com.modernipc:ipc-contract",
+        "org.jetbrains.kotlin:kotlin-stdlib",
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core"
+      ],
+      "apiVariants": [
+        "releaseVariantReleaseApiPublication"
+      ]
+    },
+    {
+      "module": "ipc-runtime-server",
+      "pomCompileExports": [
+        "com.modernipc:ipc-contract",
+        "org.jetbrains.kotlin:kotlin-stdlib",
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core"
+      ],
+      "apiVariants": [
+        "releaseVariantReleaseApiPublication"
+      ]
+    },
+    {
+      "module": "ipc-api",
+      "pomCompileExports": [
+        "com.modernipc:ipc-annotations",
+        "com.modernipc:ipc-contract",
+        "com.modernipc:ipc-runtime-client",
+        "com.modernipc:ipc-runtime-server",
+        "org.jetbrains.kotlin:kotlin-stdlib",
+        "org.jetbrains.kotlinx:kotlinx-coroutines-core"
+      ],
+      "apiVariants": [
+        "releaseVariantReleaseApiPublication"
+      ]
+    }
+  ],
+  "consumers": {
+    "metadata": {
+      "apiOnly": {
+        "directDependencies": [
+          "com.modernipc:ipc-api:3.0.0-rc.3"
+        ],
+        "resolvedCompileModules": [
+          "com.modernipc:ipc-annotations:3.0.0-rc.3",
+          "com.modernipc:ipc-api:3.0.0-rc.3",
+          "com.modernipc:ipc-contract:3.0.0-rc.3",
+          "com.modernipc:ipc-runtime-client:3.0.0-rc.3",
+          "com.modernipc:ipc-runtime-server:3.0.0-rc.3",
+          "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20",
+          "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20",
+          "org.jetbrains.kotlin:kotlin-stdlib:1.9.22",
+          "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.3",
+          "org.jetbrains:annotations:23.0.0"
+        ]
+      },
+      "contractOnly": {
+        "directDependencies": [
+          "com.modernipc.consumer.fixture:custom-contract:3.0.0-rc.3"
+        ],
+        "resolvedCompileModules": [
+          "com.modernipc.consumer.fixture:custom-contract:3.0.0-rc.3",
+          "com.modernipc:ipc-annotations:3.0.0-rc.3",
+          "com.modernipc:ipc-api:3.0.0-rc.3",
+          "com.modernipc:ipc-contract:3.0.0-rc.3",
+          "com.modernipc:ipc-runtime-client:3.0.0-rc.3",
+          "com.modernipc:ipc-runtime-server:3.0.0-rc.3",
+          "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20",
+          "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20",
+          "org.jetbrains.kotlin:kotlin-stdlib:1.9.22",
+          "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.3",
+          "org.jetbrains:annotations:23.0.0"
+        ]
+      },
+      "asyncAndFlowKsp": "PASSED"
+    },
+    "pom": {
+      "apiOnly": {
+        "directDependencies": [
+          "com.modernipc:ipc-api:3.0.0-rc.3"
+        ],
+        "resolvedCompileModules": [
+          "com.modernipc:ipc-annotations:3.0.0-rc.3",
+          "com.modernipc:ipc-api:3.0.0-rc.3",
+          "com.modernipc:ipc-contract:3.0.0-rc.3",
+          "com.modernipc:ipc-runtime-client:3.0.0-rc.3",
+          "com.modernipc:ipc-runtime-server:3.0.0-rc.3",
+          "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20",
+          "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20",
+          "org.jetbrains.kotlin:kotlin-stdlib:1.9.22",
+          "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.3",
+          "org.jetbrains:annotations:23.0.0"
+        ]
+      },
+      "contractOnly": {
+        "directDependencies": [
+          "com.modernipc.consumer.fixture:custom-contract:3.0.0-rc.3"
+        ],
+        "resolvedCompileModules": [
+          "com.modernipc.consumer.fixture:custom-contract:3.0.0-rc.3",
+          "com.modernipc:ipc-annotations:3.0.0-rc.3",
+          "com.modernipc:ipc-api:3.0.0-rc.3",
+          "com.modernipc:ipc-contract:3.0.0-rc.3",
+          "com.modernipc:ipc-runtime-client:3.0.0-rc.3",
+          "com.modernipc:ipc-runtime-server:3.0.0-rc.3",
+          "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.20",
+          "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.20",
+          "org.jetbrains.kotlin:kotlin-stdlib:1.9.22",
+          "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.7.3",
+          "org.jetbrains:annotations:23.0.0"
+        ]
+      },
+      "asyncAndFlowKsp": "PASSED"
+    }
+  },
+  "androidSdkSource": "--android-sdk",
+  "mode": "remote-anonymous",
+  "fixtureRepository": "/home/runner/work/_temp/anonymous-consumers/fixture-repository",
+  "existingReleaseNegativeControl": {
+    "version": "3.0.0-rc.3",
+    "readOnly": true,
+    "status": "NOT_AVAILABLE"
+  },
+  "anonymousDownloads": [
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3.pom",
+      "size": 982,
+      "sha256": "0a694cf63d1a58a34d78a8a437362db7b8f695bed9bc04c19696fd753da0388e",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3.module",
+      "size": 3959,
+      "sha256": "f49189400642241fa98dbb9709ca03ed313c1171d6edeb70d432c85856c3b6ce",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3-javadoc.jar",
+      "size": 261,
+      "sha256": "c60c6409af157c485647445a9abee617d0d926809a55a24e994665f5bd8b1a65",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3-sources.jar",
+      "size": 3656,
+      "sha256": "03d3ecc9b571394115e943a0e0d06b07d81c73f1da314de850bab398f69a9188",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3.jar",
+      "size": 5404,
+      "sha256": "4bb1e1454704cc793e376b35368e8cc37a9d96afdba8b7ad130966e227ddce2b",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3.pom",
+      "size": 1730,
+      "sha256": "647db24b30f4f01b88fd92a6f3284e3e1767e0bf409108f17894122d190dab02",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3.module",
+      "size": 4610,
+      "sha256": "057e37a89539bb4b09c904ce4b0982fe421aa9526f93ccc9e786be1788065101",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3-javadoc.jar",
+      "size": 261,
+      "sha256": "c60c6409af157c485647445a9abee617d0d926809a55a24e994665f5bd8b1a65",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3-sources.jar",
+      "size": 19196,
+      "sha256": "8e05e630a2b0b1aa20b78da3ebbf6a4f90c688f127b854d07a3142e0269a5df3",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3.jar",
+      "size": 63389,
+      "sha256": "09ecdbb5bbc88a570cfdeade3658095fb96d0d8de6f0ad9c882292b7f40acc4b",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3.pom",
+      "size": 1385,
+      "sha256": "76976a2a77cf387dd0fbb8a09ce64031cfde654888783a90614d3d0fc05663bb",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3.module",
+      "size": 4282,
+      "sha256": "03b0cb516e87159a5ec8287ea451405a196816b1fa81afc8a1e5ea34cdc39d7d",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3-javadoc.jar",
+      "size": 334601,
+      "sha256": "b6cf48bf472c0703ae2ba7f95d38cf0df0e9811f5917739c064e12d07dac3abd",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3-sources.jar",
+      "size": 7379,
+      "sha256": "7aadf9aeb488f21fae8799279aa40d09fe51ae40397f733c45e0186762120cac",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3.aar",
+      "size": 38516,
+      "sha256": "d4664ca5d9f56322724b3f940a59e1360cf26f818913f88354c41d5c1a469a47",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3.pom",
+      "size": 1573,
+      "sha256": "17ea55b895877df8867a305efc36b03e767371a36f1012bdedbfa5271fdd31b1",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3.module",
+      "size": 4847,
+      "sha256": "bc1dbce28c54c9ce56ada3a534cd2898d279292bda9d3db897332d0503124e70",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3-javadoc.jar",
+      "size": 333715,
+      "sha256": "02545fc2d00ca3d4646a08b19b1f68497d1edcf19aea4f7f41d11b9596279115",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3-sources.jar",
+      "size": 19258,
+      "sha256": "d64e7247e0fc8a523f59d3c11739c21b9feaa30bcc787d55bd8397624971d108",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3.aar",
+      "size": 102803,
+      "sha256": "74389c8c1c6a687b2acb57175860bd43c065bb5a978f3adb3b9760b5a2b5ffdc",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3.pom",
+      "size": 1573,
+      "sha256": "d9d1510a54db29d8176a3ce9d63469e9ef9d43822917129432874bee1183b301",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3.module",
+      "size": 4845,
+      "sha256": "d2e3e4a64fde382f16aed781251dd946e5b442eb22190b78f98729db9733a839",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3-javadoc.jar",
+      "size": 343886,
+      "sha256": "30fab88e4a644bdfb19bc5fe810c81c2ebacb5297c09d0e29178b607f3ba4ad6",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3-sources.jar",
+      "size": 12228,
+      "sha256": "1d75d04ec67650d00265700e2eb5183be2b87570a948e6f4e574c0a717e0badf",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3.aar",
+      "size": 37822,
+      "sha256": "d56e1013e6e1cb5c3c3800d669e5200f6e2c2594e5c8f79bdcfdec020e2fee6a",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3.pom",
+      "size": 2126,
+      "sha256": "946ee0eaec0f8538e3695e4c96bcca86904e40926beff467cdc4a4cfd904d74d",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3.module",
+      "size": 5767,
+      "sha256": "61d2a3df190b69b600fc7c29404c5795fc5edf12ab9b448a1036fe63d494e9c6",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3-javadoc.jar",
+      "size": 320471,
+      "sha256": "3dbbdd1d067e226ec23affd9a3469623d5feb5cf6451e6b76632d56722e17e6c",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3-sources.jar",
+      "size": 7536,
+      "sha256": "87c3eb87a01262bf37455cd41562c090d242e863ab5c3c6b4a2e0b49f233ee01",
+      "authorization": false
+    },
+    {
+      "url": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven/com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3.aar",
+      "size": 262336,
+      "sha256": "75118740e99a65b60bab04770628ef3a03aa2ea27033d3cb90b26bfc908d3faf",
+      "authorization": false
+    }
+  ]
+}

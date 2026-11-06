@@ -1,0 +1,17 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+> Task :contract-consumer:checkKotlinGradlePluginConfigurationErrors
+> Task :contract-consumer:preBuild UP-TO-DATE
+> Task :contract-consumer:preReleaseBuild UP-TO-DATE
+> Task :contract-consumer:generateReleaseResValues
+> Task :contract-consumer:generateReleaseResources
+> Task :contract-consumer:packageReleaseResources
+> Task :contract-consumer:parseReleaseLocalResources
+> Task :contract-consumer:processReleaseManifest
+> Task :contract-consumer:generateReleaseRFile
+> Task :contract-consumer:compileReleaseKotlin
+> Task :contract-consumer:verifyPublishedCompileGraph
+
+BUILD SUCCESSFUL in 29s
+8 actionable tasks: 8 executed

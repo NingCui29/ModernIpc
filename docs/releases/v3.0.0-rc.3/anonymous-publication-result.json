@@ -1,0 +1,90 @@
+{
+  "status": "VERIFIED",
+  "verifiedUtc": "2026-11-06T08:56:44.046188+00:00",
+  "version": "3.0.0-rc.3",
+  "coordinates": "com.modernipc:<module>:3.0.0-rc.3",
+  "repositoryUrl": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven",
+  "authentication": "NONE",
+  "sourceCommit": "ec28d8ad09b6a07bf7afdd63c51a1d378addceb3",
+  "mavenBranchCommit": "3e3a75163aa4cffc19a68ee655272763d4c95de3",
+  "originalReleaseSourceCommit": "e93743320841b7c80ff2c32dedb976750a40a4ee",
+  "reusedReleaseArchiveSha256": "7e939ff8b24367fb540ee53f0af0a0c94c88888d04a2647ea8ed341450ecb99d",
+  "mavenPublications": 7,
+  "unchangedReleaseFiles": 175,
+  "anonymousFilesVerified": 211,
+  "independentConsumers": {
+    "gradleMetadata": "PASSED",
+    "pomOnly": "PASSED",
+    "asyncAndFlowKsp": "PASSED",
+    "nestedFacadeRejection": "PASSED"
+  },
+  "pythonRegressionTests": 30,
+  "workflows": [
+    {
+      "id": 42190101231,
+      "name": "Publish anonymous Maven repository",
+      "branch": "master",
+      "sourceCommit": "ec28d8ad09b6a07bf7afdd63c51a1d378addceb3",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/NingCui29/ModernIpc/actions/runs/42190101231"
+    },
+    {
+      "id": 42190095772,
+      "name": "Verify source, generated calls and host state machines",
+      "branch": "codex/v3.0.0-rc.3",
+      "sourceCommit": "ec28d8ad09b6a07bf7afdd63c51a1d378addceb3",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/NingCui29/ModernIpc/actions/runs/42190095772"
+    },
+    {
+      "id": 42190096198,
+      "name": "Verify source, generated calls and host state machines",
+      "branch": "master",
+      "sourceCommit": "ec28d8ad09b6a07bf7afdd63c51a1d378addceb3",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/NingCui29/ModernIpc/actions/runs/42190096198"
+    }
+  ],
+  "ciEvidenceArtifact": {
+    "id": 13490150405,
+    "sha256": "0016ee0113a76a130c21500661c9aef740ddc12975af1ef78d6fe593e8568e30"
+  },
+  "evidence": [
+    {
+      "path": "anonymous-maven/consumers.json",
+      "sha256": "366a68d62f19e64b5b52ce87db31f91269c09ae019535970ae9173135417c0fc"
+    },
+    {
+      "path": "anonymous-maven/downloads.json",
+      "sha256": "126cb25a3441ca015849fbd596da5464ca4e9c19d99a70b745f58f69afa09956"
+    },
+    {
+      "path": "anonymous-maven/metadata-api-and-contract.txt",
+      "sha256": "c1617f26950e8c3576a70f231dfb50178de5b5f4778e5b66d10fa78a8ad9ce7c"
+    },
+    {
+      "path": "anonymous-maven/metadata-contract-consumer.txt",
+      "sha256": "1f83071937710842f4907a045e0e785dc0b03113150a836c1329634e42502c14"
+    },
+    {
+      "path": "anonymous-maven/pom-api-and-contract.txt",
+      "sha256": "f8395a182d83789b03fc49c328d10cb6ce3ac17f1667ef687d1481428509ace7"
+    },
+    {
+      "path": "anonymous-maven/pom-contract-consumer.txt",
+      "sha256": "3c8202f6b1c57154e8e970fd7fdb0a2fa2f3292f829196bbe21be0558a99dc0d"
+    },
+    {
+      "path": "anonymous-maven/reject-nested-facades.txt",
+      "sha256": "36fc62a4e3b325edf77d667d0bd64d47722bf25adc6fd5d57b46500914a11b74"
+    },
+    {
+      "path": "anonymous-maven/source-receipt.json",
+      "sha256": "28e7372a1fbd4773c4652a5a238ebe0127b518fd8a44f46fe217284bbab31d8d"
+    }
+  ],
+  "deviceValidation": "NOT_RUN: distribution-only change; existing Release bytes reused"
+}
