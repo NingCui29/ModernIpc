@@ -1,0 +1,201 @@
+{
+  "total_count": 1,
+  "jobs": [
+    {
+      "id": 127692671846,
+      "run_id": 42156767831,
+      "workflow_name": "Build and Publish Release",
+      "head_branch": "v3.0.0-rc.3",
+      "run_url": "https://api.github.com/repos/NingCui29/ModernIpc/actions/runs/42156767831",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOULzmQs8AAAAduxOLZg",
+      "head_sha": "e93743320841b7c80ff2c32dedb976750a40a4ee",
+      "url": "https://api.github.com/repos/NingCui29/ModernIpc/actions/jobs/127692671846",
+      "html_url": "https://github.com/NingCui29/ModernIpc/actions/runs/42156767831/job/127692671846",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-06T03:28:31Z",
+      "started_at": "2026-11-06T03:28:33Z",
+      "completed_at": "2026-11-06T03:39:30Z",
+      "name": "build-and-release",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-11-06T03:28:34Z",
+          "completed_at": "2026-11-06T03:28:35Z"
+        },
+        {
+          "name": "Checkout release tag",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-11-06T03:28:35Z",
+          "completed_at": "2026-11-06T03:28:38Z"
+        },
+        {
+          "name": "Validate immutable release identity",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-11-06T03:28:38Z",
+          "completed_at": "2026-11-06T03:28:38Z"
+        },
+        {
+          "name": "Reject an already published release",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-11-06T03:28:38Z",
+          "completed_at": "2026-11-06T03:28:38Z"
+        },
+        {
+          "name": "Set up JDK 17",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-11-06T03:28:38Z",
+          "completed_at": "2026-11-06T03:28:39Z"
+        },
+        {
+          "name": "Set up Android SDK",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-11-06T03:28:39Z",
+          "completed_at": "2026-11-06T03:28:43Z"
+        },
+        {
+          "name": "Install required SDK components",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-11-06T03:28:43Z",
+          "completed_at": "2026-11-06T03:28:44Z"
+        },
+        {
+          "name": "Validate Python syntax and source scenario contracts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-11-06T03:28:44Z",
+          "completed_at": "2026-11-06T03:28:44Z"
+        },
+        {
+          "name": "Verify release signer and publication validation regressions",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-11-06T03:28:44Z",
+          "completed_at": "2026-11-06T03:28:44Z"
+        },
+        {
+          "name": "Run host state-machine and build verification gates",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-11-06T03:28:44Z",
+          "completed_at": "2026-11-06T03:32:32Z"
+        },
+        {
+          "name": "Set up Python for independent Maven consumers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-11-06T03:32:32Z",
+          "completed_at": "2026-11-06T03:32:32Z"
+        },
+        {
+          "name": "Verify isolated Maven metadata and POM-only consumers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-11-06T03:32:32Z",
+          "completed_at": "2026-11-06T03:34:17Z"
+        },
+        {
+          "name": "Build six SDKs, shared example library and six debug APKs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-11-06T03:34:17Z",
+          "completed_at": "2026-11-06T03:35:09Z"
+        },
+        {
+          "name": "Verify versions, dependency metadata, signatures and release assets",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-11-06T03:35:09Z",
+          "completed_at": "2026-11-06T03:35:17Z"
+        },
+        {
+          "name": "Publish seven explicit publications to GitHub Packages",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-11-06T03:35:17Z",
+          "completed_at": "2026-11-06T03:38:56Z"
+        },
+        {
+          "name": "Verify all seven published Maven artifacts and metadata from GitHub Packages",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-11-06T03:38:56Z",
+          "completed_at": "2026-11-06T03:39:16Z"
+        },
+        {
+          "name": "Create release and upload verified assets",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-11-06T03:39:16Z",
+          "completed_at": "2026-11-06T03:39:21Z"
+        },
+        {
+          "name": "Post Set up Python for independent Maven consumers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 32,
+          "started_at": "2026-11-06T03:39:21Z",
+          "completed_at": "2026-11-06T03:39:21Z"
+        },
+        {
+          "name": "Post Set up JDK 17",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 33,
+          "started_at": "2026-11-06T03:39:21Z",
+          "completed_at": "2026-11-06T03:39:28Z"
+        },
+        {
+          "name": "Post Checkout release tag",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 34,
+          "started_at": "2026-11-06T03:39:28Z",
+          "completed_at": "2026-11-06T03:39:28Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 35,
+          "started_at": "2026-11-06T03:39:28Z",
+          "completed_at": "2026-11-06T03:39:28Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/NingCui29/ModernIpc/check-runs/127692671846",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000903,
+      "runner_name": "GitHub Actions 1000000903",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

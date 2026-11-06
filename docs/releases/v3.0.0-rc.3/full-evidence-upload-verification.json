@@ -1,0 +1,22 @@
+{
+  "status": "VERIFIED",
+  "tag": "v3.0.0-rc.3",
+  "releaseId": 436073138,
+  "name": "FULL_EVIDENCE_SHA256SUMS.txt",
+  "size": 222,
+  "sha256": "4883d38259502dbb25388b195050b52abb44168a9bfa351d753ded77cf9fde76",
+  "preflight": "Previously authenticated-TLS API snapshot contains 48 uploaded assets and no checksum; sole POST writer",
+  "action": "single-post-attempt",
+  "httpStatus": 201,
+  "asset": {
+    "id": 715917700,
+    "name": "FULL_EVIDENCE_SHA256SUMS.txt",
+    "size": 222,
+    "digest": "sha256:4883d38259502dbb25388b195050b52abb44168a9bfa351d753ded77cf9fde76",
+    "state": "uploaded",
+    "browser_download_url": "https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.3/FULL_EVIDENCE_SHA256SUMS.txt"
+  },
+  "totalAssets": 49,
+  "allAssetsUploaded": true,
+  "finishedUtc": "2026-11-06T04:36:40.488651+00:00"
+}
