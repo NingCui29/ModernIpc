@@ -1,0 +1,130 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.modernipc",
+    "module": "ipc-contract",
+    "version": "3.0.0-rc.3",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ipc-contract-3.0.0-rc.3.aar",
+          "url": "ipc-contract-3.0.0-rc.3.aar",
+          "size": 38516,
+          "sha512": "f31be1de13f7c5dc031220bdca7fab53bfa321bde2c45d87c052ec51d3b13e33dee72c7963efbadc14c5179bf91467eb1bc514d4bf59aebd52d7151511765094",
+          "sha256": "d4664ca5d9f56322724b3f940a59e1360cf26f818913f88354c41d5c1a469a47",
+          "sha1": "59066ed7ff22e3c6a7d6f3d272fb6693962730b5",
+          "md5": "3c05567e0b94f85fc6d2476b8e827843"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-parcelize-runtime",
+          "version": {
+            "requires": "1.9.22"
+          }
+        },
+        {
+          "group": "androidx.core",
+          "module": "core-ktx",
+          "version": {
+            "requires": "1.12.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.22"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ipc-contract-3.0.0-rc.3.aar",
+          "url": "ipc-contract-3.0.0-rc.3.aar",
+          "size": 38516,
+          "sha512": "f31be1de13f7c5dc031220bdca7fab53bfa321bde2c45d87c052ec51d3b13e33dee72c7963efbadc14c5179bf91467eb1bc514d4bf59aebd52d7151511765094",
+          "sha256": "d4664ca5d9f56322724b3f940a59e1360cf26f818913f88354c41d5c1a469a47",
+          "sha1": "59066ed7ff22e3c6a7d6f3d272fb6693962730b5",
+          "md5": "3c05567e0b94f85fc6d2476b8e827843"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseSourcePublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ipc-contract-3.0.0-rc.3-sources.jar",
+          "url": "ipc-contract-3.0.0-rc.3-sources.jar",
+          "size": 7379,
+          "sha512": "3d98af13e4ac4574b4f6fa6f871c6b975e54b4ef506088e97061c18718d216ebee1228c55c2ff307e07dc41de7d12789652a422547f703ba45f3eab6012bc891",
+          "sha256": "7aadf9aeb488f21fae8799279aa40d09fe51ae40397f733c45e0186762120cac",
+          "sha1": "ea85ef54014e8f69d545890a4354cf4094453f09",
+          "md5": "ceaed7073c6fd3e64e8fb154c5bb1e19"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseJavaDocPublication",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ipc-contract-3.0.0-rc.3-javadoc.jar",
+          "url": "ipc-contract-3.0.0-rc.3-javadoc.jar",
+          "size": 334601,
+          "sha512": "1402e09ac65f9384554615a4f8a004f53d066d01f86ed6299d38ca35425f0671de09e66b62970a80fad3113211419a01adc83c079393646fccfc9e2f74b359a4",
+          "sha256": "b6cf48bf472c0703ae2ba7f95d38cf0df0e9811f5917739c064e12d07dac3abd",
+          "sha1": "ae783f373e886a35aed0a1a996909df56b726c97",
+          "md5": "994e300e5712318efd7816c871a9ca56"
+        }
+      ]
+    }
+  ]
+}

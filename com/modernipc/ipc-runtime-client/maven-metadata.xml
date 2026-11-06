@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<metadata>
+  <groupId>com.modernipc</groupId>
+  <artifactId>ipc-runtime-client</artifactId>
+  <versioning>
+    <latest>3.0.0-rc.3</latest>
+    <release>3.0.0-rc.3</release>
+    <versions>
+      <version>3.0.0-rc.3</version>
+    </versions>
+    <lastUpdated>20261106033517</lastUpdated>
+  </versioning>
+</metadata>
