@@ -25,6 +25,8 @@ Release 附带 Maven 仓库、源码、仓库证据、manifest 与 SHA256SUMS。
 
 2026-11-06 分发渠道补充复用原 Release 的七模块 Maven 归档，不重建或替换 rc.3 制品，也不移动标签。匿名渠道的远端核验见 [rc.3 发布记录](https://github.com/NingCui29/ModernIpc/blob/master/docs/releases/v3.0.0-rc.3/README.md)。历史 GitHub Packages 渠道继续保留，明确选择它时仍需 `read:packages` 凭据。
 
+[匿名发布工作流](https://github.com/NingCui29/ModernIpc/actions/runs/42190101231)已验证 211 个文件的无凭据下载与哈希；真实 Gradle metadata、POM-only、Async/Flow KSP 编译与嵌套接口负例全部通过。
+
 ## 验证范围
 
 11/03 发布前工作区完整 check 通过，包含 27 项状态机和 debug/release 各 16 组 Robolectric；13 项 Python 回归通过。无 SDK 环境变量/无 --android-sdk 参数的 metadata、POM-only 消费与嵌套接口负例全部通过。

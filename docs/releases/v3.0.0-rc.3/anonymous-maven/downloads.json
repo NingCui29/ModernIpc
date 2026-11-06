@@ -1,0 +1,1488 @@
+{
+  "status": "VERIFIED",
+  "version": "3.0.0-rc.3",
+  "baseUrl": "https://raw.githubusercontent.com/NingCui29/ModernIpc/maven",
+  "verifiedUtc": "2026-11-06T08:46:53.918206+00:00",
+  "authentication": "NONE",
+  "publicationCount": 7,
+  "fileCount": 211,
+  "files": [
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3-javadoc.jar",
+      "size": 336048,
+      "sha256": "6f19584f53340f14df632aea753ce7898d338e290b58f1402ee473b16ff2108f",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3-javadoc.jar.md5",
+      "size": 32,
+      "sha256": "093f75e63fe1667e13113290cc761ed221a799d4a737954c89bbe675ea797c91",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3-javadoc.jar.sha1",
+      "size": 40,
+      "sha256": "9464a4b83d2220e540f9735a47f0b1e1a9db95d7d58e52f820cf314f1616bd87",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3-javadoc.jar.sha256",
+      "size": 64,
+      "sha256": "1789690d8457a25d73480c4abbb9fe5ce251b23775bd7178b2b1b0b3237be364",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3-javadoc.jar.sha512",
+      "size": 128,
+      "sha256": "512f99f0d972226d11ba7d817a6b6e285f62e19428e38c3cbe0e4899e96f2661",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3-sources.jar",
+      "size": 24056,
+      "sha256": "0d109157b77b7f00d208dc035c4ff899a3e1e5841db75e7922f02a84d3cd22e2",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3-sources.jar.md5",
+      "size": 32,
+      "sha256": "16b69cb8f2e72b1d9f019bfa7e9bac34e818cb4e1e3e651e5939b38f4d0606f7",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3-sources.jar.sha1",
+      "size": 40,
+      "sha256": "fcb3104c73cbe4aab6778eaf2e162b55cf3f7cbd87c892065a220ab1dda1f715",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3-sources.jar.sha256",
+      "size": 64,
+      "sha256": "8e6c02b3d5ee430f1363bb50cff6cde1495706c38963b48815f0d523490f03d4",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3-sources.jar.sha512",
+      "size": 128,
+      "sha256": "7ae6a34c593869b1c81632eb1e820eca0aa9f3d4f9e5227b7d84f3365b4f219f",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3.aar",
+      "size": 180176,
+      "sha256": "84a519f690a1500ad54ffb00a01e71e7a6156237a9ae0b9c63e7f82772cc8942",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3.aar.md5",
+      "size": 32,
+      "sha256": "426ac14961966f10cb9a7343d564c65f3df778d0597b0233e0cf735fc5164dd9",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3.aar.sha1",
+      "size": 40,
+      "sha256": "365c1f6f47cf24c7f6b6a058472f075a14b1ac681f99d5648ef06446d18f29ed",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3.aar.sha256",
+      "size": 64,
+      "sha256": "6e7f03ff0a0b26cbc3ea90cdb908643add5e77cb0c9164d224426af9ffb2c657",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3.aar.sha512",
+      "size": 128,
+      "sha256": "51c64e6280b2cb35e178b1d5d7f88888c4be6a67b17d10c83efd8ad06c297c01",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3.module",
+      "size": 5360,
+      "sha256": "b256092117fece5d4a02a666a329924d9d27f6a4b87c99141a017ad57ec3e7e2",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3.module.md5",
+      "size": 32,
+      "sha256": "1ae3926f530e3d64a4e4e82aef077dd0e97b6700502335637206c6fd643c01f3",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3.module.sha1",
+      "size": 40,
+      "sha256": "84a906a2130248ff43c58fe1bf6d650e51c7edb8d9c659324f45ca754752c78f",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3.module.sha256",
+      "size": 64,
+      "sha256": "5f86c24075a84cffe632f78874ae5cb2fe6aebb8a6a8abc2e3f9f4953e95a992",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3.module.sha512",
+      "size": 128,
+      "sha256": "9999fcee6d21bb8540569b0576135d18143a5e116e648815d435767e4140e115",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3.pom",
+      "size": 2520,
+      "sha256": "2e5f918aae391755d634232b86fec4df8352b82117ebfaf5187c25bfe53249f2",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3.pom.md5",
+      "size": 32,
+      "sha256": "9058b9293c473ea8476520ffb551705b4eb392883bc262f2a8431f87acb0ace6",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3.pom.sha1",
+      "size": 40,
+      "sha256": "30317f99c805d0e53960820bc2135f3840819aa08d43417afd3cfbdd06e5e040",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3.pom.sha256",
+      "size": 64,
+      "sha256": "e8d3347113756b4c72e64a64c1ec57ababd309a7cdeb8921bb80252dcaa8fc84",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3.pom.sha512",
+      "size": 128,
+      "sha256": "2ead2e2b93c26ed27dd7df77a3b882f3b77cae1fa02a51c8d23680c797c406fa",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/maven-metadata.xml",
+      "size": 353,
+      "sha256": "fc06bcec629222e9bcd9e2d5c9f39b4a420d3c8caa199d531f9be9ca244b4861",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/maven-metadata.xml.md5",
+      "size": 33,
+      "sha256": "8587243af82ed4899c44d0c1f8d9e40c16bee1c0c8daccd3ad9cd15a74afd9c8",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/maven-metadata.xml.sha1",
+      "size": 41,
+      "sha256": "776a19b29a03563b30d5427a413e03e2168e12222aa8431c6cfdd687ac85f91b",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/maven-metadata.xml.sha256",
+      "size": 65,
+      "sha256": "14bfa57d32dc92af48ba7e927220bed9f34fe84d05673605eda045c0e8511359",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/demo-client-common/maven-metadata.xml.sha512",
+      "size": 129,
+      "sha256": "f86202677c849d9fef1cf6e478c50453e24d99e9aa40434fa560f2d1f8bc9e4a",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3-javadoc.jar",
+      "size": 261,
+      "sha256": "c60c6409af157c485647445a9abee617d0d926809a55a24e994665f5bd8b1a65",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3-javadoc.jar.md5",
+      "size": 32,
+      "sha256": "743793c509b26025008345ff408d3a05634e532306901aaa55a9f5912b2cba3f",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3-javadoc.jar.sha1",
+      "size": 40,
+      "sha256": "23268f427e4ab71438a52face1bafb3c256c7f034107ce594afd111ffade3073",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3-javadoc.jar.sha256",
+      "size": 64,
+      "sha256": "3430d7726afd17e1aa97260cb32d2614623d5e6f8486c2e675ac1982760d96d0",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3-javadoc.jar.sha512",
+      "size": 128,
+      "sha256": "fe3d6b15828c94e559a741f89295c45fd9b985885f33d807cfe71e1b6a602e04",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3-sources.jar",
+      "size": 3656,
+      "sha256": "03d3ecc9b571394115e943a0e0d06b07d81c73f1da314de850bab398f69a9188",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3-sources.jar.md5",
+      "size": 32,
+      "sha256": "851f9075d4bce81328e54159391cbab6aef02a2b5610768c7e8cd00b5195e666",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3-sources.jar.sha1",
+      "size": 40,
+      "sha256": "55114ca730cf72c7d5f48d1b2b4fc25163ffcc26c10e83c6352caf33acc90268",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3-sources.jar.sha256",
+      "size": 64,
+      "sha256": "386b0140df7b36f6233dc6c5e33fa7878db4b4fd2b5babf588f33b4983c10d24",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3-sources.jar.sha512",
+      "size": 128,
+      "sha256": "40aac54fbe6ffec69796c94f497b5c790466d43af2854da7a641109d36599139",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3.jar",
+      "size": 5404,
+      "sha256": "4bb1e1454704cc793e376b35368e8cc37a9d96afdba8b7ad130966e227ddce2b",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3.jar.md5",
+      "size": 32,
+      "sha256": "d63ed9c49824e317664734afb3631b89ab48720ddc9c387c7e41792defb8bf3c",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3.jar.sha1",
+      "size": 40,
+      "sha256": "0069342200fffeb7dfe217e649961281ea7745f5b709c35934657a3b62a71f54",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3.jar.sha256",
+      "size": 64,
+      "sha256": "67c0255cd0e2e209efce5f30929075c664e7103ab8465aa9719d09e0ae58154b",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3.jar.sha512",
+      "size": 128,
+      "sha256": "d39b61e4301ed27ff0a84b70e5bde732537b832fa37dea528f5122298d261c18",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3.module",
+      "size": 3959,
+      "sha256": "f49189400642241fa98dbb9709ca03ed313c1171d6edeb70d432c85856c3b6ce",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3.module.md5",
+      "size": 32,
+      "sha256": "d9b2942fdd0edccba8ba6b74ee97c8f1e4142ff100d5da392040e62a638adb9c",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3.module.sha1",
+      "size": 40,
+      "sha256": "96c5ced0c6441bd1808e175691507a8c3c0085e8737fe57228f1ab4cb98170aa",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3.module.sha256",
+      "size": 64,
+      "sha256": "09d8ee5c03885700084f548a16c3877477345cfde9ba40a61a30ffef911aa6bc",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3.module.sha512",
+      "size": 128,
+      "sha256": "9a852cd5603e6db7f513151df96c755596d90adc75b4da2ff0fa9000b9d62c3f",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3.pom",
+      "size": 982,
+      "sha256": "0a694cf63d1a58a34d78a8a437362db7b8f695bed9bc04c19696fd753da0388e",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3.pom.md5",
+      "size": 32,
+      "sha256": "9be989a46f8a3b12cfe08bc54ce4a50988ebf0b04b923cb106b1fd185cf0100c",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3.pom.sha1",
+      "size": 40,
+      "sha256": "278f61f66214909a5b792aee1249c69658a75f58071afa0db26f72d7fff6d603",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3.pom.sha256",
+      "size": 64,
+      "sha256": "af9aadcbaaee8dbd4479829cca71669f4bfa18cff72093d0a00b56f9e9c687ab",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/3.0.0-rc.3/ipc-annotations-3.0.0-rc.3.pom.sha512",
+      "size": 128,
+      "sha256": "f29c56fee4e0ed4756a47b0c748094cbcc935f4f9140d12370027684dd4b6039",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/maven-metadata.xml",
+      "size": 350,
+      "sha256": "87991b1ef27d6541fb2025c2d12b5f772699faacdbf8e0c54f3c6ac6164cfcce",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/maven-metadata.xml.md5",
+      "size": 33,
+      "sha256": "6e23c6d0c2a42001ff1b95bb5f12d4374c9f03f15602b00a27218a91c8d0739f",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/maven-metadata.xml.sha1",
+      "size": 41,
+      "sha256": "3f084bb56ab2150710c6fcb06d0790db7478c7f8ccea53938452687f3d2e2fd9",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/maven-metadata.xml.sha256",
+      "size": 65,
+      "sha256": "fed2f0c6d74f7875c4184a12c8af18c657fefbd499237e91358a4e5c903d2daa",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-annotations/maven-metadata.xml.sha512",
+      "size": 129,
+      "sha256": "e9463ba864f72ddc9b73dd921aee8e9e14fe7d92da502488c9a8ce9c0804e2be",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3-javadoc.jar",
+      "size": 320471,
+      "sha256": "3dbbdd1d067e226ec23affd9a3469623d5feb5cf6451e6b76632d56722e17e6c",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3-javadoc.jar.md5",
+      "size": 32,
+      "sha256": "3dff390c0e8d1a8c3d5c443f8585778227827358dc639ffaebd5ba5e7642c849",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3-javadoc.jar.sha1",
+      "size": 40,
+      "sha256": "708f7691a5f90c24ad3b2789236984dad8c652bb33d5095bdd1b5a6397094c57",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3-javadoc.jar.sha256",
+      "size": 64,
+      "sha256": "497c4796876f61e648b9da18abec01e4d4528eb9997240471d4668b50454a9af",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3-javadoc.jar.sha512",
+      "size": 128,
+      "sha256": "a7fca2768f8381db735881b71d3b6f662802d3f9797a4feef89c95b495082496",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3-sources.jar",
+      "size": 7536,
+      "sha256": "87c3eb87a01262bf37455cd41562c090d242e863ab5c3c6b4a2e0b49f233ee01",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3-sources.jar.md5",
+      "size": 32,
+      "sha256": "817c35c2d7509098e9aec88215756e8ab47ab4aec99f5f8427f968a6a568e597",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3-sources.jar.sha1",
+      "size": 40,
+      "sha256": "211671252e4068741aec9add8c441c339090708a63d17bd44671044adb96b33e",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3-sources.jar.sha256",
+      "size": 64,
+      "sha256": "1771187f88a773fa7eaae5b3b4db3ebdb2d723cd9da9118a3caf870af137bc12",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3-sources.jar.sha512",
+      "size": 128,
+      "sha256": "656a9d8676251f92def03c16c7430974d09ef9ab0586f7d6671091f46505c898",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3.aar",
+      "size": 262336,
+      "sha256": "75118740e99a65b60bab04770628ef3a03aa2ea27033d3cb90b26bfc908d3faf",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3.aar.md5",
+      "size": 32,
+      "sha256": "0ee00cf4a6027dd579381de759f12b92587c471242fe6271188abc83dfe41429",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3.aar.sha1",
+      "size": 40,
+      "sha256": "227e3beebee8f1914836d535fc09b0f68e679f0d34249520c117f4f658ffbea2",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3.aar.sha256",
+      "size": 64,
+      "sha256": "4c19df4565ccb9df928ab2409a0b6d60ad1de700067358078c7681c4f5de373e",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3.aar.sha512",
+      "size": 128,
+      "sha256": "9f35407856e71addd257037042eb6b23470b393e0f4cd3cd4eeeba0bebef820a",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3.module",
+      "size": 5767,
+      "sha256": "61d2a3df190b69b600fc7c29404c5795fc5edf12ab9b448a1036fe63d494e9c6",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3.module.md5",
+      "size": 32,
+      "sha256": "1704bb6f14a3e415917ea9c2f7f92c6c290b0fb56476fafbde4c338abb7d2d2f",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3.module.sha1",
+      "size": 40,
+      "sha256": "773bf886a44df809d4e6b38cc7e11b084f3d81a57bfc32ac01db53cbe8adfd05",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3.module.sha256",
+      "size": 64,
+      "sha256": "5e9c78daff5ebfd404bc00e09bc08374d59922708f92f43919b46a1304ad6f2d",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3.module.sha512",
+      "size": 128,
+      "sha256": "34d73a35a2c3e7da1ed001b34f746dd183eca31c63f3cb5cfec1f25eb745f096",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3.pom",
+      "size": 2126,
+      "sha256": "946ee0eaec0f8538e3695e4c96bcca86904e40926beff467cdc4a4cfd904d74d",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3.pom.md5",
+      "size": 32,
+      "sha256": "e6d0858385fc968408fbc7c0e65e4a2c4eb4b8b325c89bdc319d708073197156",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3.pom.sha1",
+      "size": 40,
+      "sha256": "403ca3acf0acde59e241f1114666e16bf6aefda35b1292665ba8be909835351b",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3.pom.sha256",
+      "size": 64,
+      "sha256": "91e4357eb1f7377d087fab42cc277a342e31cf9ed43c2124e7e00b6bd4cbc4c2",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/3.0.0-rc.3/ipc-api-3.0.0-rc.3.pom.sha512",
+      "size": 128,
+      "sha256": "a5ef396c64a9a47b9ae089bce23431624fa0c3d1a5df5e472eba1f81d069ddbe",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/maven-metadata.xml",
+      "size": 342,
+      "sha256": "a76b9542b70b6bac496c8b50b9d677393502bdae481e4dd539169aaaafe930f8",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/maven-metadata.xml.md5",
+      "size": 33,
+      "sha256": "328543b22ff147fe624876043fb3dc0c81437a43fa6c6eb3c724485957edbe70",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/maven-metadata.xml.sha1",
+      "size": 41,
+      "sha256": "00887a6a23cfd4000f2e7669a48991339203a2a3563bf9163296f6094f8b1f56",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/maven-metadata.xml.sha256",
+      "size": 65,
+      "sha256": "f80ddae58f733616c9e8462aa2a168a9e41b6373e8e59ac295bbf6d91fa0935f",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-api/maven-metadata.xml.sha512",
+      "size": 129,
+      "sha256": "135adcaffccfa5b739767c59fea25a8acd2db390dfcdffc00e54cf84b09beffa",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3-javadoc.jar",
+      "size": 261,
+      "sha256": "c60c6409af157c485647445a9abee617d0d926809a55a24e994665f5bd8b1a65",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3-javadoc.jar.md5",
+      "size": 32,
+      "sha256": "743793c509b26025008345ff408d3a05634e532306901aaa55a9f5912b2cba3f",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3-javadoc.jar.sha1",
+      "size": 40,
+      "sha256": "23268f427e4ab71438a52face1bafb3c256c7f034107ce594afd111ffade3073",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3-javadoc.jar.sha256",
+      "size": 64,
+      "sha256": "3430d7726afd17e1aa97260cb32d2614623d5e6f8486c2e675ac1982760d96d0",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3-javadoc.jar.sha512",
+      "size": 128,
+      "sha256": "fe3d6b15828c94e559a741f89295c45fd9b985885f33d807cfe71e1b6a602e04",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3-sources.jar",
+      "size": 19196,
+      "sha256": "8e05e630a2b0b1aa20b78da3ebbf6a4f90c688f127b854d07a3142e0269a5df3",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3-sources.jar.md5",
+      "size": 32,
+      "sha256": "842f37c63032c40ac88057ab9d1cd61a47ea9175cf398e3b583fc4dbcc2ff647",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3-sources.jar.sha1",
+      "size": 40,
+      "sha256": "9682fddadce9e20987f783a31eb2ce74fb9a6e9105e606da15091d584b2912f3",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3-sources.jar.sha256",
+      "size": 64,
+      "sha256": "4c2d43d3673e2767314651afa96857ed59cf863f9748fef1d9eeb37bd0c597cc",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3-sources.jar.sha512",
+      "size": 128,
+      "sha256": "83ccc6eac5b4b4999de75676e57c21693b71a9fd849648894a5556116695a6c6",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3.jar",
+      "size": 63389,
+      "sha256": "09ecdbb5bbc88a570cfdeade3658095fb96d0d8de6f0ad9c882292b7f40acc4b",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3.jar.md5",
+      "size": 32,
+      "sha256": "fe7a5964c76591f2ecfdfc16b06b5f3759afd90ec2200c16e553e0ec4734b481",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3.jar.sha1",
+      "size": 40,
+      "sha256": "900a34f49c120b9480274cdd4c15aab864e67c19c8ee601bae8789dd58653fe3",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3.jar.sha256",
+      "size": 64,
+      "sha256": "f3950075089c1eb96df3ee574e568f277fa1e605e7558f6ed4654eca4e186885",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3.jar.sha512",
+      "size": 128,
+      "sha256": "f2f77a6de2723f456177ed9d3c981819637cdc57b7152e3f993f576c1532a6b7",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3.module",
+      "size": 4610,
+      "sha256": "057e37a89539bb4b09c904ce4b0982fe421aa9526f93ccc9e786be1788065101",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3.module.md5",
+      "size": 32,
+      "sha256": "b32615a937d514fd96ba8def83cb53937a9d68080e557f4467274d8c844c994a",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3.module.sha1",
+      "size": 40,
+      "sha256": "554eab05d39dfee60f3ed01c97b805eecedadfc7aeaecb6a8465597a6a50ae8c",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3.module.sha256",
+      "size": 64,
+      "sha256": "2fd7e5833a3a7d319363850dc4ce509512ebbd27e847d1bac62c873fcd4f1d5c",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3.module.sha512",
+      "size": 128,
+      "sha256": "478f911996d9ae835a8293c1b2c97071d1902dbd14193bbfd63fee15ec20f707",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3.pom",
+      "size": 1730,
+      "sha256": "647db24b30f4f01b88fd92a6f3284e3e1767e0bf409108f17894122d190dab02",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3.pom.md5",
+      "size": 32,
+      "sha256": "3d161694da9a5ea968ad9a73bff5966b5d8e99ec408783c760357b0dbfb36c57",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3.pom.sha1",
+      "size": 40,
+      "sha256": "eb173ac082004dfc5c25ec573b633e1dda1081a52d942ed95db0215c9a73e728",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3.pom.sha256",
+      "size": 64,
+      "sha256": "e33a7e7b12021cc7cca1a1c3bb0f9a7f80e613968134c179393bbbf4f5ee76c6",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/3.0.0-rc.3/ipc-compiler-3.0.0-rc.3.pom.sha512",
+      "size": 128,
+      "sha256": "9c3f7c2b01514ffa620b33fbefa5d38c924736b72488ea59d72dc1d4ee0cf56c",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/maven-metadata.xml",
+      "size": 347,
+      "sha256": "b3c817fc4b7dc48cbdf9b81b6b62328d72eed54fda09feefba693fdb666e6e57",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/maven-metadata.xml.md5",
+      "size": 33,
+      "sha256": "c0760d366775840b040e62c3c453181609f4acfcee11215ce14e484581e9533d",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/maven-metadata.xml.sha1",
+      "size": 41,
+      "sha256": "ea69059085c6268357dd92117a55e3d1b7af5a55843dd59de76b137b0c3d8cf5",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/maven-metadata.xml.sha256",
+      "size": 65,
+      "sha256": "ea23f87f6331a76c251f630888a7cb93fe0b004b677c5ae06943150d76f20d75",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-compiler/maven-metadata.xml.sha512",
+      "size": 129,
+      "sha256": "76332ff16d4d5330b972e2dd1883b94f5ae9db09b3c374b14a2b164d1a04613d",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3-javadoc.jar",
+      "size": 334601,
+      "sha256": "b6cf48bf472c0703ae2ba7f95d38cf0df0e9811f5917739c064e12d07dac3abd",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3-javadoc.jar.md5",
+      "size": 32,
+      "sha256": "41f6401db05d31fc8d7d60ea3482c0d1989d1b2ec27e418bbee260acf8456330",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3-javadoc.jar.sha1",
+      "size": 40,
+      "sha256": "fbd9fe7707d9254027adec03e8cd71764e849b81d53ea2433cd89babbeea9e4d",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3-javadoc.jar.sha256",
+      "size": 64,
+      "sha256": "9052e36db8ee5bca201a373c07b5deef011e3ed1a0e217331e9cb17e3768fb29",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3-javadoc.jar.sha512",
+      "size": 128,
+      "sha256": "2129d04a9dd60ec12c319f56819fe285aa454e8e0c1dc6875460e7a271ace9de",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3-sources.jar",
+      "size": 7379,
+      "sha256": "7aadf9aeb488f21fae8799279aa40d09fe51ae40397f733c45e0186762120cac",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3-sources.jar.md5",
+      "size": 32,
+      "sha256": "580911eaf9ecbaeb1857328dd4eabe607179fd06983a7fbd76a93ec6444d4cbe",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3-sources.jar.sha1",
+      "size": 40,
+      "sha256": "75913666d9eeb0b7d2b4acb57a8d2f68470121e07f7f26798efe7e33398c527e",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3-sources.jar.sha256",
+      "size": 64,
+      "sha256": "c9fe88a54c37bd0a09e9be2ea5e05b4b8f25b0aceacaec28960d9411655d2155",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3-sources.jar.sha512",
+      "size": 128,
+      "sha256": "b998666cd7b31cf3778188057d29717d5fdb461cb543407aacbeead16470d792",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3.aar",
+      "size": 38516,
+      "sha256": "d4664ca5d9f56322724b3f940a59e1360cf26f818913f88354c41d5c1a469a47",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3.aar.md5",
+      "size": 32,
+      "sha256": "40ad23c20e7d69df8286989e286c9b8396c402b2542386bd0bdd8dc20b6493dd",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3.aar.sha1",
+      "size": 40,
+      "sha256": "d37d4a7f43d678631b0cabde3c87be24852126bdff21a90facb362facffc1fad",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3.aar.sha256",
+      "size": 64,
+      "sha256": "14aaaa555ed31f0f9e06b9ffcc9e8134afb3d102b688fa1f4b29e177d77135a4",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3.aar.sha512",
+      "size": 128,
+      "sha256": "1332898440fe3ed97ce1d949af68123316b916f3b45dbf93df502c7c8ef13553",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3.module",
+      "size": 4282,
+      "sha256": "03b0cb516e87159a5ec8287ea451405a196816b1fa81afc8a1e5ea34cdc39d7d",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3.module.md5",
+      "size": 32,
+      "sha256": "7d0bf1a265762eeab6bbd99a20f3d54ea845a6a7da35f234d376f9d8d8bab870",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3.module.sha1",
+      "size": 40,
+      "sha256": "0ca8f894d7b0d10a16a4188e59ea9979506cd159a853a369025a3fd610ea4d41",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3.module.sha256",
+      "size": 64,
+      "sha256": "949014647c707d7152240c9233268f4f33714108f765804889c75a6f98f000b6",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3.module.sha512",
+      "size": 128,
+      "sha256": "22e7083d0beb21681e3011505425c49ddaa951f6c6f70935912c49522df94154",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3.pom",
+      "size": 1385,
+      "sha256": "76976a2a77cf387dd0fbb8a09ce64031cfde654888783a90614d3d0fc05663bb",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3.pom.md5",
+      "size": 32,
+      "sha256": "8e451340db687be046c81179a49a08e29f2b66ecedac7f3ba02dc1b3fb05defb",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3.pom.sha1",
+      "size": 40,
+      "sha256": "235e32f69b02b48d6be4bb8497b939dacc1fea3bd699ea0bc01d8aa9fe22d9d9",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3.pom.sha256",
+      "size": 64,
+      "sha256": "53b32862ead554f2767d60275273c675d66a2b1ea0268db182d51665befb31c0",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/3.0.0-rc.3/ipc-contract-3.0.0-rc.3.pom.sha512",
+      "size": 128,
+      "sha256": "cb8f7971792155c0352c8c53374c7cb339421f0a8f3d9456ae6b524e6d5e6b1b",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/maven-metadata.xml",
+      "size": 347,
+      "sha256": "db69587a2bb54d33d5a26c3f57af7e6fe9f6a48aa514fb08c4c61cbd13df332c",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/maven-metadata.xml.md5",
+      "size": 33,
+      "sha256": "ae111642c900ad97fb252bcaeaece2c49ef17edfbf28bbd42eb7ea0fdba0f0ee",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/maven-metadata.xml.sha1",
+      "size": 41,
+      "sha256": "e32f3be5c9eea9ef757fbced5d02de56df66a8a8796667b1b66285a7dd083161",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/maven-metadata.xml.sha256",
+      "size": 65,
+      "sha256": "5ba75ac796e5bd011acde61dd6914f294fa73bcdf9a3bec0bad9ca4ac2751ff9",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-contract/maven-metadata.xml.sha512",
+      "size": 129,
+      "sha256": "b60591f18217c1ddbdea2420cc50f2305d0d66f72adbb1c6212db6c03e5ce39b",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3-javadoc.jar",
+      "size": 333715,
+      "sha256": "02545fc2d00ca3d4646a08b19b1f68497d1edcf19aea4f7f41d11b9596279115",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3-javadoc.jar.md5",
+      "size": 32,
+      "sha256": "fc4d245b35560423658e61c06e17982b917083050fca5d398f5f0b4441cd1e8c",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3-javadoc.jar.sha1",
+      "size": 40,
+      "sha256": "8c98d84d48379d3f4be9ffc95add4be44ec6525ed85ae7a6cd76066d0cd82512",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3-javadoc.jar.sha256",
+      "size": 64,
+      "sha256": "c3ee63cb076b1ee62fa6d075d284637e12618f83c49ac575a6c2df1beca0d4bd",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3-javadoc.jar.sha512",
+      "size": 128,
+      "sha256": "d4327961be2a3a99ec8195aee3bd11d17a935919ae48e306b91bba47dfc67ed6",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3-sources.jar",
+      "size": 19258,
+      "sha256": "d64e7247e0fc8a523f59d3c11739c21b9feaa30bcc787d55bd8397624971d108",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3-sources.jar.md5",
+      "size": 32,
+      "sha256": "88b683f27baa35cba913d599e3ffa6821e9892ebd61c1652ba52096974dcc996",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3-sources.jar.sha1",
+      "size": 40,
+      "sha256": "5a0cf16c8ff4ec53a7e46224aed1a7f452726d886a33762582df00c8eed038f3",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3-sources.jar.sha256",
+      "size": 64,
+      "sha256": "a7e248875149aac72bc61cb2a7afaa06f17758dacaa0ea3fc8b234fe4be9823f",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3-sources.jar.sha512",
+      "size": 128,
+      "sha256": "99d635346c3d4e8663b954f8479d6e544104b68dbbb5c91ee08d599859a3f2ca",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3.aar",
+      "size": 102803,
+      "sha256": "74389c8c1c6a687b2acb57175860bd43c065bb5a978f3adb3b9760b5a2b5ffdc",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3.aar.md5",
+      "size": 32,
+      "sha256": "c70783ef2ba1eb7fa00e5bef73f968b5d3fb1c25d29b5049766034285f618ce2",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3.aar.sha1",
+      "size": 40,
+      "sha256": "78f8f21a0dc9cc60b2f228d8422c653c37dccd94260a90d7629dd919639b9a3b",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3.aar.sha256",
+      "size": 64,
+      "sha256": "8b4fcd90193994286c7c2bdf1a9d6177e44a299ca73d71d929e95f57eeacb3fd",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3.aar.sha512",
+      "size": 128,
+      "sha256": "f216df4743dfe3ef4185cd62ca0165f82139abb222e08760d35f8894d5028ea9",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3.module",
+      "size": 4847,
+      "sha256": "bc1dbce28c54c9ce56ada3a534cd2898d279292bda9d3db897332d0503124e70",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3.module.md5",
+      "size": 32,
+      "sha256": "9bf754643077ee4cca7542e2554106d4ff3a145ed29bdbcf7b17fc0333595595",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3.module.sha1",
+      "size": 40,
+      "sha256": "e116a15733a7b10c545f0d22c2d21d4f7405c8482bf40c0d30592f600b7b1930",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3.module.sha256",
+      "size": 64,
+      "sha256": "c36fc678aab031575eb9bf27cdc7f05eaef32760d1da7d77ad368bef8fdf7776",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3.module.sha512",
+      "size": 128,
+      "sha256": "6486086ec60cc25876816cb7763db878c0f2f75f8f706f49edee0e340c1eb96f",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3.pom",
+      "size": 1573,
+      "sha256": "17ea55b895877df8867a305efc36b03e767371a36f1012bdedbfa5271fdd31b1",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3.pom.md5",
+      "size": 32,
+      "sha256": "86d6bca70dd3a2cd88af9b1335513cb02e262bdcaa39220b09498e759d7c1019",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3.pom.sha1",
+      "size": 40,
+      "sha256": "90f224e1e125bde0544b6ee449a975cb1ada378b453c5289dce47151f90d740c",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3.pom.sha256",
+      "size": 64,
+      "sha256": "cffd3714f74c49322f72af4d5de0da2775cd82ac9c3c8b762b231a6666109267",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/3.0.0-rc.3/ipc-runtime-client-3.0.0-rc.3.pom.sha512",
+      "size": 128,
+      "sha256": "30c5925dc2d2cd905dacb5ea66500a24289badd2dda368c044e0e9e347eb8408",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/maven-metadata.xml",
+      "size": 353,
+      "sha256": "54049943db294af636c9b44bc10dd1c0eae079592bc618b6f69396aa0684a1cc",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/maven-metadata.xml.md5",
+      "size": 33,
+      "sha256": "ca7a239fc47f965ce975fb72cb9d2c90d42880eef6b903f4caafc891242d7d34",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/maven-metadata.xml.sha1",
+      "size": 41,
+      "sha256": "6c5b99d9eb6ac43e46462ac6acf90e5bd825de48a5448ac7f5ff06b9bfb3b353",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/maven-metadata.xml.sha256",
+      "size": 65,
+      "sha256": "8cd3751edb41df824c14323bf8dafa988caa02b74dfd2a7e6a04da863cfb4f75",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-client/maven-metadata.xml.sha512",
+      "size": 129,
+      "sha256": "e795b0e6cd0aa8c4d8931cab697ff3862ef94c030adac470e949a4cc505d622a",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3-javadoc.jar",
+      "size": 343886,
+      "sha256": "30fab88e4a644bdfb19bc5fe810c81c2ebacb5297c09d0e29178b607f3ba4ad6",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3-javadoc.jar.md5",
+      "size": 32,
+      "sha256": "9c41a534ea8642f7cb6fc71bab7474943dc04e0a35a6be23637088b7c17ee981",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3-javadoc.jar.sha1",
+      "size": 40,
+      "sha256": "6f7a1a1f309de79b8c264da92f53502837ae75860230b5a19f64e7f29eae87a9",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3-javadoc.jar.sha256",
+      "size": 64,
+      "sha256": "1381dfef2374656e98f325ed1d47354339240e839641d85f507fd2a8be401385",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3-javadoc.jar.sha512",
+      "size": 128,
+      "sha256": "87452006f82280183687074c6b46a522fb51e3370554fde83af4309692a476c2",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3-sources.jar",
+      "size": 12228,
+      "sha256": "1d75d04ec67650d00265700e2eb5183be2b87570a948e6f4e574c0a717e0badf",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3-sources.jar.md5",
+      "size": 32,
+      "sha256": "856cb8f3ba53eefd349bbffee66e3f7877f3c991792d086832f1239d24f25c36",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3-sources.jar.sha1",
+      "size": 40,
+      "sha256": "ec0f74748277a7f7724761a1cfe7a8be4af5b978f34dfaefb99796f0e8c592cf",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3-sources.jar.sha256",
+      "size": 64,
+      "sha256": "b48b15be70dd569d476e8a6accbcb20bc753d1d2cb635cd0fcab52e32d5302eb",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3-sources.jar.sha512",
+      "size": 128,
+      "sha256": "93fcdda47d3872f71414d0f011fdc691c9611f07a0ab6a8dec9cdb7ecbf50511",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3.aar",
+      "size": 37822,
+      "sha256": "d56e1013e6e1cb5c3c3800d669e5200f6e2c2594e5c8f79bdcfdec020e2fee6a",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3.aar.md5",
+      "size": 32,
+      "sha256": "ffc1e1ef4e1dfa7d033fcd17a7eae8135ed172766b17ba4072521c96c6ae85b1",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3.aar.sha1",
+      "size": 40,
+      "sha256": "4bd834d37ed2b721376f3867ebe071c583a08d54711a351afd5d9fb7418ea429",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3.aar.sha256",
+      "size": 64,
+      "sha256": "678a7009c46d02454ee7c6b7e42ca325073abfa051e9914653fb10cb8281316f",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3.aar.sha512",
+      "size": 128,
+      "sha256": "1dbca5378ed00a9f8b752ffb5311ff7742934dacae07bdf660cfe3e450b8b768",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3.module",
+      "size": 4845,
+      "sha256": "d2e3e4a64fde382f16aed781251dd946e5b442eb22190b78f98729db9733a839",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3.module.md5",
+      "size": 32,
+      "sha256": "e94a93fe82be211c7293e432cb3090f53d5439dc086a7173c0a919191a55b647",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3.module.sha1",
+      "size": 40,
+      "sha256": "a5a0884870bf32f81e7d30449971b7af88a21bd1bacd99eac0bc0a6863a48a71",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3.module.sha256",
+      "size": 64,
+      "sha256": "640bd4516a218b26813465603c72f0b2ff10a2dc28c45993038a332f4eb8f9dc",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3.module.sha512",
+      "size": 128,
+      "sha256": "386a7fbe3db02852bc3ff8f67b3301407648dfd01e85d079da0135a20f56a9ee",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3.pom",
+      "size": 1573,
+      "sha256": "d9d1510a54db29d8176a3ce9d63469e9ef9d43822917129432874bee1183b301",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3.pom.md5",
+      "size": 32,
+      "sha256": "c53363c21ed00e18febdcda2ff8aacad2c78d5c9caf3a7337a3e523be4b4c041",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3.pom.sha1",
+      "size": 40,
+      "sha256": "f2dd2379cc2959ba27724d8b2008f8a7bdbf108562ca8923fc975136a15dea80",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3.pom.sha256",
+      "size": 64,
+      "sha256": "e9d84a813a2d31a20660a4581cfbe81837ad1f025702212176d6cc6d0f1f2d66",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/3.0.0-rc.3/ipc-runtime-server-3.0.0-rc.3.pom.sha512",
+      "size": 128,
+      "sha256": "686a5c311b9e2dc56f9a61365626f2d6fadb57fdb3ed7f6e29d1bc3c218ed795",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/maven-metadata.xml",
+      "size": 353,
+      "sha256": "16a05496250a5e64928c0c8a48c20a3ae5ff0a1ff6d71936e3a3313df1638feb",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/maven-metadata.xml.md5",
+      "size": 33,
+      "sha256": "3fdeb258f2c90b59b459de4fe1df26664290116ef6bc9a2d8badac519993f50e",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/maven-metadata.xml.sha1",
+      "size": 41,
+      "sha256": "b25715acd24a7cb86c6438a3a2b9b98bf63baf4c8c5db3751c68bae26da2a7ea",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/maven-metadata.xml.sha256",
+      "size": 65,
+      "sha256": "025652cf106736d58f894b0f9d07fbd21be50455b4e77cc6a123c76ea66d3c3c",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "com/modernipc/ipc-runtime-server/maven-metadata.xml.sha512",
+      "size": 129,
+      "sha256": "e88f948335e5186a199448924c85d3832162bd2ff9e8254d754cb60aa17eae2c",
+      "status": 200,
+      "authorizationSent": false
+    },
+    {
+      "path": "receipts/3.0.0-rc.3.json",
+      "size": 37304,
+      "sha256": "28e7372a1fbd4773c4652a5a238ebe0127b518fd8a44f46fe217284bbab31d8d",
+      "status": 200,
+      "authorizationSent": false
+    }
+  ]
+}

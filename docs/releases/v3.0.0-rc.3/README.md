@@ -24,6 +24,10 @@
 
 客户端按 [SDK 指南](../../ModernIPC_SDK_Guide.md#0-依赖与生成配置)使用匿名仓库和 `com.modernipc` 独占规则。下载不需要 Token；GitHub Packages 继续作为需要认证的可选渠道。
 
-本次匿名渠道的发布与验证状态：**待执行并补充回执**。验证应分别记录七模块文件的无凭据 HTTP 下载及 SHA-256 对照、metadata/POM-only 独立消费与 KSP 编译。原 `publication-result.json` 仍只证明历史 Release/Packages 发布，不能替代新增渠道的证据；本次渠道调整不涉及 Android APK 变更或设备验收。
+本次匿名渠道的发布与验证状态：**已发布并验证通过**。[匿名发布工作流 42190101231](https://github.com/NingCui29/ModernIpc/actions/runs/42190101231)复用七模块的 175 个原始文件，对制品、模块级元数据及来源回执共 211 个文件完成无凭据 HTTP 下载与 SHA-256 对照。独立消费者的 Gradle metadata、POM-only、Async/Flow KSP 编译及嵌套接口负例全部通过；30 项 Python 回归通过。
+
+分发配置提交为 `ec28d8ad09b6a07bf7afdd63c51a1d378addceb3`，`maven` 分支制品提交为 `3e3a75163aa4cffc19a68ee655272763d4c95de3`。[master 全量验证](https://github.com/NingCui29/ModernIpc/actions/runs/42190096198)与[版本分支全量验证](https://github.com/NingCui29/ModernIpc/actions/runs/42190095772)均通过子模块 `check` 和本地隔离 Maven 消费回归。
+
+结果见[匿名发布回执](anonymous-publication-result.json)、[逐文件下载核验](anonymous-maven/downloads.json)和[真实消费者报告](anonymous-maven/consumers.json)。原 `publication-result.json` 保留历史 Release/Packages 发布证据；本次渠道调整未更改 Android APK，也未新增设备验收。
 
 [本机发布前全量检查](prepublish-check.txt) · [Python 回归](python-check.txt) · [11/03 Maven 与主机证据](../../benchmarks/runs/2026-11-03-xiaomi14ultra/api21-sdk-verification/summary.json) · [审计修复](../../ModernIPC_Engineering_Audit.md)。
