@@ -19,7 +19,8 @@ if (providers.gradleProperty("invalidFacade").orNull == "nested") {
 }
 publishing.repositories.maven {
     name = "Fixture"
-    url = uri(providers.gradleProperty("ipcRepository").get())
+    url = uri(providers.gradleProperty("fixtureRepository")
+        .orElse(providers.gradleProperty("ipcRepository")).get())
 }
 afterEvaluate {
     publishing.publications.create<MavenPublication>("release") {
