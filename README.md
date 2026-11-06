@@ -1,24 +1,32 @@
-# ModernIpc
+# ModernIPC
 
-Android Binder IPC SDK 与示例工程：用 Kotlin 接口和注解描述业务，KSP 生成客户端代理、服务端 Stub 与逐事务 Schema。支持 suspend RPC、短方法同步 RPC、Flow、Oneway、Broker 服务发现、生命周期管理及重连。Broker 使用 AIDL，业务接口无需逐个编写 AIDL。
+[![CI](https://github.com/NingCui29/ModernIpc/actions/workflows/verify.yml/badge.svg?branch=master)](https://github.com/NingCui29/ModernIpc/actions/workflows/verify.yml)
+[![Release](https://img.shields.io/github/v/release/NingCui29/ModernIpc?include_prereleases)](https://github.com/NingCui29/ModernIpc/releases)
 
-## 文档入口
+面向 Android 的 Kotlin Binder IPC 库。通过接口和注解定义跨进程服务，KSP 在编译期生成客户端代理、服务端 Stub 和协议 Schema，支持协程请求、Flow 订阅、同步调用及单向通知。
 
-| 阅读目的 | 唯一主文档 |
-| --- | --- |
-| 模块、连接状态、协议与核心调用链 | [架构分析](docs/ModernIPC_Architecture.md) |
-| API 接入、超时、调度、Maven 发布与消费 | [SDK 指南](docs/ModernIPC_SDK_Guide.md) |
-| 四 APK 部署与会议、工单、配置、遥测案例 | [业务指南](docs/ModernIPC_Business_Interaction_Guide.md) |
-| 与 AndLinker 的架构、语义、性能及迁移对比 | [库对比](docs/ModernIPC_vs_AndLinker.md) |
-| 优化依据、已实施改动与剩余候选 | [优化分析](docs/ModernIPC_Optimization_Analysis.md) |
-| 当前验证状态与原始证据导航 | [验证索引](docs/benchmarks/README.md) |
-| 接入缺陷修复、审计纠正与撤回补丁 | [工程审计](docs/ModernIPC_Engineering_Audit.md) |
+适用于同一 App 的多进程通信，以及同签名 App 之间的服务调用。仓库提供同包分进程示例、四 App 消息中枢和独立 AndLinker 对照工程。
 
-测试报告按问题合并为 [性能报告](docs/benchmarks/Performance_Report.md)、[回归报告](docs/benchmarks/Regression_Report.md)、[多 App 验证报告](docs/benchmarks/Multi_App_Report.md)。日期、APK、失败运行与原始样本在各报告中保留。
+**当前版本：`3.0.0-rc.3`（预发行）。** 七个 Maven 模块已发布，默认渠道支持匿名下载，无需 GitHub 账号或 Token。
+
+[依赖接入](#sdk-依赖接入无需下载凭据) · [调用示例](#调用示例) · [架构与流程](#架构与调用流程) · [示例工程](#示例工程) · [完整文档](#文档)
+
+## 功能
+
+| 调用方式 | 接口形式 | 适用场景 |
+| --- | --- | --- |
+| `@IpcAsync` | `suspend fun` | 请求与响应，支持超时、取消及在途请求管理 |
+| `@IpcStream` | 返回 `Flow<T>` | 持续事件订阅，区分数据、完成和错误终态 |
+| `@IpcDirect` | 普通同步函数 | 后台线程中的短方法调用 |
+| `@IpcOneway` | 返回 `Unit` | 不等待业务结果的单向通知 |
+
+运行时负责 Broker 服务发现、连接重试、Binder 死亡处理及资源清理。生成代码按连接代次隔离旧响应，并在服务发现时校验接口标识、契约版本和事务签名。服务端默认进行 UID / 同签名鉴权。
 
 ## SDK 依赖接入（无需下载凭据）
 
-当前版本为 **3.0.0-rc.3**，坐标保持 `com.modernipc:<module>:3.0.0-rc.3`。默认使用公开 `maven` 分支托管的静态 Maven 仓库；消费者无需 GitHub 账号、Token 或 Maven Central 命名空间验证。在外部工程的 `settings.gradle.kts` 中配置：
+### 1. 添加 Maven 仓库
+
+在宿主工程的 `settings.gradle.kts` 中添加：
 
 ```kotlin
 dependencyResolutionManagement {
@@ -38,7 +46,11 @@ dependencyResolutionManagement {
 }
 ```
 
-业务模块使用仓库已有契约时：
+该地址读取公开 `maven` 分支中的 Maven 制品。`exclusiveContent` 确保 `com.modernipc` 只从这里解析，避免旧 GitHub Packages 仓库返回 `401 Unauthorized`。迁移时删除原 ModernIPC 的 `maven.pkg.github.com` 仓库项；如果它还服务于其他库，可保留其他 group 的配置。
+
+### 2. 选择契约接入方式
+
+**快速体验仓库自带接口**，在应用模块添加：
 
 ```kotlin
 dependencies {
@@ -46,94 +58,211 @@ dependencies {
 }
 ```
 
-定义自己的接口还需配置 `ipc-annotations`、两端 runtime、`ipc-contract` 和 KSP，见 [SDK 指南](docs/ModernIPC_SDK_Guide.md#0-依赖与生成配置)。独占 `com.modernipc` 的规则确保这些依赖只从匿名渠道解析；迁移时删除旧的 ModernIPC `maven.pkg.github.com` 仓库项，其他库仍需使用该服务时保留其独立配置。
+`ipc-api` 包含 UserService、MessageHub 等示例契约、DTO 和已生成的双端代码，并导出所需运行时依赖。它不包含示例应用中的 Android Service 实现。
 
-匿名渠道复用已发布的七模块产物、POM、Gradle metadata、sources/javadoc 与校验文件，不重新编译或替换 `v3.0.0-rc.3`。当前发布和验证结果见 [rc.3 发布记录](docs/releases/v3.0.0-rc.3/README.md)。GitHub Packages 保留为可选认证渠道，不作为默认接入方式。
+**定义自己的业务接口**，新建客户端和服务端共同依赖的 Android library 契约模块，并配置 KSP：
 
-## 模块与调用链
+```kotlin
+plugins {
+    id("com.android.library")
+    id("org.jetbrains.kotlin.android")
+    id("com.google.devtools.ksp")
+}
 
-| 模块 | 职责 |
+val ipcVersion = "3.0.0-rc.3"
+
+dependencies {
+    api("com.modernipc:ipc-annotations:$ipcVersion")
+    api("com.modernipc:ipc-contract:$ipcVersion")
+    api("com.modernipc:ipc-runtime-client:$ipcVersion")
+    api("com.modernipc:ipc-runtime-server:$ipcVersion")
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    ksp("com.modernipc:ipc-compiler:$ipcVersion")
+}
+```
+
+上述代码省略宿主统一管理的插件版本和 `android` 配置。生成代码的公开签名引用运行时与协程类型，因此共享契约模块使用 `api` 导出；只引入 `ipc-api` 不会为其他模块的新接口生成代码。插件配置、类型支持及服务注册见 [SDK 指南](docs/ModernIPC_SDK_Guide.md#0-依赖与生成配置)。
+
+### 3. 环境要求
+
+| 项目 | 当前仓库配置 |
 | --- | --- |
-| ipc-annotations / ipc-compiler | 注解、类型检查、KSP 双端代码与 Schema 生成。 |
-| ipc-contract | Broker AIDL、公共协议、默认关闭的请求 trace。 |
-| ipc-runtime-client | 绑定、独立有界握手与发现、请求关联、取消和重连。 |
-| ipc-runtime-server | Broker、实时鉴权、请求与订阅资源管理。 |
-| ipc-api | 示例契约、DTO 和生成双端实现；当前同时依赖双端 runtime。 |
-| demo-app | 同包分进程示例和受控诊断入口。 |
-| demo-client-common | 跨包客户端共享页面与四个业务场景。 |
-| app-server、app-client1/2/3 | 中枢与三个独立包、独立 UID 的客户端。 |
-| ipc-host-tests / benchmark-andlinker | 状态机 host 门禁 / 独立 AndLinker 对照 APK，均不发布为 SDK。 |
+| Android 最低版本 | API 21 |
+| compileSdk / targetSdk | 34 / 34 |
+| 构建 JDK | 17；JVM 字节码目标为 1.8 |
+| Android Gradle Plugin | 8.2.0 |
+| Kotlin / KSP | 1.9.22 / 1.9.22-1.0.17 |
+| Kotlin Coroutines | 1.7.3 |
+
+版本来源为 [Version Catalog](gradle/libs.versions.toml)。KSP 应与宿主 Kotlin 版本匹配；表中配置不表示所有插件组合及 Android 版本均已实测。
+
+## 调用示例
+
+下面演示 `demo-app` 中已有的 UserService，`context` 和 `scope` 由宿主组件提供。`MyBrokerService` 是示例应用源码中的服务类，已在 Manifest 声明为同 App 的独立 `:server` 进程。
+
+```kotlin
+import android.content.Intent
+import com.cn.ipc.api.test.IUserServiceClientAdapter
+import com.cn.ipc.client.IpcConnectionController
+import com.cn.ipc.demo.MyBrokerService
+import kotlinx.coroutines.launch
+
+val controller = IpcConnectionController(
+    context = context,
+    targetIntent = Intent(context, MyBrokerService::class.java),
+    scope = scope,
+)
+
+scope.launch {
+    try {
+        controller.awaitConnected()
+        val users = IUserServiceClientAdapter(controller)
+        println(users.getUserInfo("42"))
+    } finally {
+        controller.disposeAndJoin()
+    }
+}
+```
+
+这是一次调用后释放连接的示例。持续调用或订阅时，由宿主组件持有并复用 Controller，在组件退出时统一释放。`awaitConnected()` 会启动或加入一次连接尝试；`closeAndJoin()` 关闭后允许重连，`disposeAndJoin()` 永久释放。
+
+完整代码：[接口定义](ipc-api/src/main/kotlin/com/cn/ipc/api/test/IUserService.kt) · [服务注册](demo-app/src/main/kotlin/com/cn/ipc/demo/MyBrokerService.kt) · [业务实现](demo-app/src/main/kotlin/com/cn/ipc/demo/UserServiceImpl.kt) · [Manifest](demo-app/src/main/AndroidManifest.xml)。自定义服务由生成的 `ServerStub` 实现业务，再通过 `RegisteredService` 注册到 Broker。
+
+## 架构与调用流程
+
+业务接口使用 Kotlin 注解描述；Broker 的握手和发现协议使用 AIDL。首次取得业务 Binder 后，业务调用直接进入对应 Stub。
 
 ```mermaid
 flowchart LR
-    API["Kotlin 接口 / ipc-api"] --> KSP["KSP + Schema"]
-    KSP --> C["生成 ClientAdapter"]
-    KSP --> S["生成 ServerStub"]
-    C --> R["Controller / Pending / Flow"]
-    R --> B["Broker / 鉴权与严格发现"]
-    B --> S
-    R -- "业务 Binder 请求" --> S
-    S -- "结果回调 / 流终态" --> R
+    Contract["共享业务接口 + 注解"] --> KSP["KSP 编译期生成"]
+    KSP --> Client["ClientAdapter + Schema"]
+    KSP --> Stub["ServerStub"]
+    subgraph CP["客户端进程"]
+        Client --> Controller["Controller / 连接 / 缓存"]
+        Client --> Pending["请求等待 / Flow 订阅"]
+    end
+    subgraph SP["服务端进程"]
+        Broker["Broker / 鉴权 / Registry"]
+        Stub --> Business["业务实现"]
+    end
+    Controller -- "握手与服务发现" --> Broker
+    Broker -- "返回业务 Binder" --> Controller
+    Client -- "业务 Binder 调用" --> Stub
+    Stub -- "Async 响应 / Stream 事件" --> Pending
 ```
 
-源码入口：[模块配置](settings.gradle.kts)、[MessageHub 契约](ipc-api/src/main/kotlin/com/cn/ipc/api/hub/IMessageHubService.kt)、[Broker AIDL](ipc-contract/src/main/aidl/com/cn/ipc/IIpcBroker.aidl)。
+以下为完成连接后的 Async 请求流程。冷发现按接口 Schema 校验，命中当前连接缓存后复用业务 Binder。
 
-## 构建与业务示例
+```mermaid
+sequenceDiagram
+    participant App as 调用方
+    participant Client as ClientAdapter / Controller
+    participant Broker as Broker
+    participant Server as ServerStub / 业务
+    App->>Client: 调用 suspend 方法
+    opt 当前连接下首次发现服务
+        Client->>Broker: getServiceSchema
+        Broker-->>Client: 服务 Schema
+        Note over Client: 校验接口、版本和事务
+        Client->>Broker: getServiceChecked(CLIENT_SCHEMA)
+        Broker-->>Client: 校验后返回业务 Binder
+    end
+    Client->>Server: 请求参数 + requestId + 回调 Binder
+    Server->>Server: 鉴权、请求准入、执行协程
+    Server-->>Client: 回调结果或错误
+    Client-->>App: 恢复挂起调用
+```
 
-使用 Android SDK、JDK 17 和仓库 Gradle Wrapper：
+| 模块 | 职责 |
+| --- | --- |
+| `ipc-annotations` / `ipc-compiler` | 注解、编译期校验、Adapter / Stub / Schema 生成 |
+| `ipc-contract` | Broker AIDL、公共协议与请求 trace |
+| `ipc-runtime-client` | 连接、发现缓存、请求关联、取消和订阅管理 |
+| `ipc-runtime-server` | Broker、鉴权、服务注册、请求与订阅资源管理 |
+| `ipc-api` | 仓库自带契约、DTO 与生成代码 |
+| `demo-client-common` | 多 App 示例共用页面与业务交互 |
+
+更完整的状态机、终态处理和协议兼容规则见 [架构文档](docs/ModernIPC_Architecture.md)。
+
+## 示例工程
+
+| 工程 | 用途 |
+| --- | --- |
+| `demo-app` | 同 App 分进程调用、Flow、连接恢复与诊断示例 |
+| `app-server` | 跨 App 消息中枢 |
+| `app-client1` / `app-client2` / `app-client3` | 三个独立包、独立 UID 的客户端 |
+| `benchmark-andlinker` | 独立 AndLinker 性能对照，仅用于测试 |
+
+多 App 示例包含四类交互：
+
+| 场景 | 业务流程 |
+| --- | --- |
+| 会议通知 | client1 定向发送，client2 更新会议卡并返回业务确认 |
+| 仓储工单 | client1 分派，client2 接单并完成，其他客户端观察状态 |
+| 配置同步 | client1 广播配置版本，client2 / client3 分别确认 |
+| 遥测告警 | client2 上报温度，client3 判断阈值并广播告警 |
+
+跨 App 接入要求匹配签名、绑定权限和包可见性配置。安装顺序、Manifest 与操作步骤见 [业务指南](docs/ModernIPC_Business_Interaction_Guide.md)。示例业务状态保存在内存中，路由回执与业务确认分别表示不同阶段，未提供持久消息队列或离线补发。
+
+## 构建与验证
+
+在仓库根目录使用 JDK 17、Android SDK 和 Gradle Wrapper。Windows PowerShell：
 
 ```powershell
+# 全量子模块检查：含主机回归、生成代码回归与 Lint
+.\gradlew.bat check
+
+# 构建同包示例及四 App 示例
 .\gradlew.bat :demo-app:assembleDebug :app-server:assembleDebug :app-client1:assembleDebug :app-client2:assembleDebug :app-client3:assembleDebug
+
+# 发布工具与 SDK 路径探测回归
+python -m unittest discover -s tests/release -v
+
+# 从匿名 Maven 仓库实际解析并编译独立消费者
+python scripts/verify_maven_consumers.py --remote-repository https://raw.githubusercontent.com/NingCui29/ModernIpc/maven --version 3.0.0-rc.3 --java-home $env:JAVA_HOME
 ```
 
-跨包示例要求同签名及 signature 绑定权限。安装、启动顺序、按钮操作、DEBUG 验收入口与每个场景的流程图统一见[业务指南](docs/ModernIPC_Business_Interaction_Guide.md)。测试设备限定小米 `925c23bb`。
+Linux / macOS 将 `.\gradlew.bat` 换为 `bash ./gradlew`，Bash 中的 `$env:JAVA_HOME` 改为 `"$JAVA_HOME"`。Python 消费验证从参数、环境变量或根目录 `local.properties` 查找 Android SDK。使用 `check` 执行全量检查；根任务 `:check` 只聚合部分检查。
 
-| 场景 | 协作过程与完成含义 |
+截至 2026-11-06，验证状态如下：
+
+| 验证范围 | 结果与证据 |
 | --- | --- |
-| 会议通知 | client1 定向发布 → client2 更新会议卡 → client1/3 收到同一指令确认。 |
-| 仓储工单 | client1 分派 → client2 接单与手动完成 → client1/3 观察完成态。 |
-| 配置同步 | client1 广播版本 → client2/3 更新演示卡 → 两个来源分别确认。 |
-| 遥测告警 | client2 发送预置 25/35°C 样本 → client3 按 30°C 阈值分析 → 告警广播。 |
+| 当前分发配置 | master 与版本分支全量 CI 通过，30 项 Python 回归通过 |
+| 匿名 Maven | 七模块复用 175 个原始文件；制品、仓库元数据与回执共 211 个文件匿名下载及哈希校验通过 |
+| 独立消费者 | Gradle metadata、POM-only、Async/Flow KSP 编译及嵌套接口负例通过 |
+| 历史真机回归 | 11/03 在小米 14 Ultra 上通过 86 项断言，结果绑定该次记录中的 APK |
+| rc.3 Release APK | 尚未进行该发布 APK 的设备验收，不沿用历史 APK 的通过结果 |
 
-这些状态保存在 Activity 内存中。路由返回不代表消费；业务确认表示页面数据处理，未证明物理呈现、持久提交或硬件执行。SharedFlow 不补离线消息，重连不自动重放业务 RPC。
+分发与消费者证据见 [匿名发布回执](docs/releases/v3.0.0-rc.3/anonymous-publication-result.json)，设备身份与回归结果见 [验证索引](docs/benchmarks/README.md)。真机测试仅使用已确认的小米设备。
 
-## 源码修复（2026-10-30，纳入 rc.3）
+## 性能与使用边界
 
-已修正生成代码业务参数覆盖、零预算死亡重连、Flow 业务取消误分类，以及辅助订阅管理器的重入/死亡清理；KSP 对不支持的嵌套门面给出明确错误。公开参数名与 wire 格式保持，生成代码回归接入根 `:check`，独立 Maven 消费者增加正/负用例。范围与迁移说明见[审计第 12 节](docs/ModernIPC_Engineering_Audit.md#12-2026-10-30生成代码重连与订阅修复未发布)，执行结果见[主机验证记录](docs/benchmarks/runs/2026-10-30-host-corrections/verification.json)。
+已有 AndLinker 对照只支持对应日期、设备、APK 和调用语义下的结论。2026-10-22 小米短 Echo 对照中，ModernIPC 完整 Async 路径仍慢于 AndLinker enqueue；请求管理优化未证明稳定 RTT 收益，专用 Async scope 的收益也取决于负载。这些数据不能作为 rc.3 发布制品的新性能成绩。方法与原始数据见 [性能报告](docs/benchmarks/Performance_Report.md)，功能和协议差异见 [两库对比](docs/ModernIPC_vs_AndLinker.md)。
 
-本轮没有小米或性能实测，已发布 rc.2 制品不包含这些后续变化。
+- Async 默认调用预算为 30 秒，覆盖冷发现和响应等待；取消不能强制中断已开始的同步 Binder，也不能回滚远端副作用。
+- Direct 适用于后台线程中的短方法；Oneway 没有业务完成回执。两者不具备完整 Async 请求的取消与在途限额语义。
+- Flow 区分 NEXT / COMPLETE / ERROR；默认缓冲溢出终止流，可显式选择 CONFLATE。本地缓冲配置不等于远端背压或可靠投递。
+- Schema 检查不验证 Parcelable 内部字段布局。DTO 的新旧版本兼容由业务负责；重连不会自动重放业务请求。
+- 服务发现池为 4 个 worker 加 4 个排队位置，握手池为独立的最多 4 个 worker、无队列；每 Stub 默认允许 128 个 Async 在途请求。
+- 自动回退到 AndLinker、Rx 适配和持久可靠消息尚未接入。
 
-## 工程审计修复（2026-10-22）
+## 文档
 
-已补全 `ipc-api` 和两端 runtime 的公开依赖导出，修正 SDK 契约依赖骨架。独立 Maven metadata/POM-only 消费编译与 Gradle `:check` 的 **27 项 host 检查**均通过，日常与发布 CI 已接入对应门禁。原 `0003` 取消降噪补丁已撤回，保留业务取消异常的错误终态。
+| 阅读目标 | 文档 |
+| --- | --- |
+| 完成双端接入、生命周期管理与发布 | [SDK 指南](docs/ModernIPC_SDK_Guide.md) |
+| 理解模块、状态机、协议与核心调用链 | [架构分析](docs/ModernIPC_Architecture.md) |
+| 部署多 App 并运行业务场景 | [业务指南](docs/ModernIPC_Business_Interaction_Guide.md) |
+| 比较 ModernIPC 与 AndLinker | [库对比](docs/ModernIPC_vs_AndLinker.md) |
+| 查看性能结果与优化取舍 | [性能报告](docs/benchmarks/Performance_Report.md) · [优化分析](docs/ModernIPC_Optimization_Analysis.md) |
+| 查看回归、多 App 验收与原始证据 | [回归报告](docs/benchmarks/Regression_Report.md) · [多 App 报告](docs/benchmarks/Multi_App_Report.md) |
+| 查看源码问题与修复依据 | [工程审计](docs/ModernIPC_Engineering_Audit.md) |
 
-新 demo APK `D0E76D89...` 仅在小米 `925c23bb` 复跑：原框架 **73 项**、独立 scope **4 项**、新增生成 Stub 业务取消/超时终态 **9 项**全通过；[设备清单](docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-regression2/summary.json)、[构建身份](docs/benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/build-result.json)。首次锁屏未进入测试的失败记录也保留。该快照是随后 rc.2 发布前的功能验收，不将下节旧 APK 性能结果移用于新包；四个多 App 业务场景仍待验收。
+## 发布
 
-## Async 优化与小米实测（2026-10-21/22）
+当前预发行版 [v3.0.0-rc.3](https://github.com/NingCui29/ModernIpc/releases/tag/v3.0.0-rc.3) 提供七个库、六个 Debug APK、源码、Maven 仓库及历史验证证据，共 49 个附件。使用者优先通过上方匿名 Maven 配置接入；直接下载见 GitHub Release。
 
-发布前性能候选 `4F7ED116...` 合并客户端 pending 状态及服务端请求对象，修复旧死亡通知误取消后续请求；新增仅供 Async 的可选 `asyncCoroutineScope`，Flow 保持原 scope，SDK 默认 dispatcher 未改。小米 `925c23bb` 已通过 **73 项框架回归 + 独立 4 项 scope 检查**。
+`master` 保存当前源码与文档，`codex/v3.0.0-rc.3` 为版本分支，`v3.0.0-rc.3` 标签固定发布源码，`maven` 分支保存公开制品。匿名渠道复用原 Release 文件，并通过校验阻止同版本内容被覆盖。GitHub Packages 作为可选认证渠道保留。
 
-同 targetSdk 34、同 AGP 的四轮两库对照共 **64,000 次成功测量**：请求管理改动没有稳定 RTT 收益；专用 Async scope 的 16/1024 字符 P50 为 **0.770 / 0.732 ms**，AndLinker enqueue 为 **0.335 / 0.367 ms**，本轮仍未追平。专用 scope 的 P99 不稳定；另一次同 APK 16 并发短 Echo 两轮成功吞吐约增加 19%，不代表阻塞业务容量。完整统计与限制见[性能报告](docs/benchmarks/Performance_Report.md)、[回归报告](docs/benchmarks/Regression_Report.md)，配置见[SDK 指南](docs/ModernIPC_SDK_Guide.md#9-可选短任务调度配置)。
-
-新增 `benchmark-andlinker` 仅用于测试，固定上游核心 Java，不接入 SDK 或四个业务 App。框架回归不代替四场景业务验收；新 API 不属于固定发布标签。
-
-## 发布与历史构建
-
-已发布预发行版 **3.0.0-rc.3**，版本分支 `codex/v3.0.0-rc.3`，标签源码为 `e937433`。交付七个库、六个 Debug APK（含独立 AndLinker 对照）、源码和完整历史证据，共 49 个 Release 附件；七库的 35 个远端 Maven 文件由 CI 校验。发布结果见[rc.3 最终回执](docs/releases/v3.0.0-rc.3/publication-result.json)，范围与限制见[发布记录](docs/releases/v3.0.0-rc.3/README.md)，变更与迁移见[发布说明](.github/release-notes.md)。最终发布 APK 的设备状态为 **NOT_RUN**，不移用 11/03 历史 APK 的 86 项小米通过结果。旧 rc.2 制品及验证保留。
-
-以下保留 **3.0.0-rc.1** 的历史构建记录，版本分支 `codex/v3.0.0-rc.1`。七个库产物与五个Debug APK统一构建 **BUILD SUCCESSFUL in 12m34s，退出码0，429任务**；Maven内部版本、APK版本与同签名校验通过。demo APK SHA-256为 `23a2802fd636f03e5821ceaf335f73907193b27560959486605e5908f7b26701`，完整身份见[发布构建记录](docs/releases/v3.0.0-rc.1/build-result.json)。
-
-该本地包 `23A280...` 在本轮作为性能基线安装；完整框架门禁仅属于上述 `4F7ED...` 候选。四场景开发版22DAB065...的未验收记录继续保留在[多App报告](docs/benchmarks/Multi_App_Report.md)。本地发布集合包含七份publication、五APK、Maven仓库、源码、证据归档及SHA-256清单；Debug签名用于示例部署，远端发布状态需另行核实。
-
-历史 `4494F529...` APK 的 **64 PASS / 5 DONE** 与成功请求 trace 仍保留原身份；新增握手 9 项已在本轮候选完成。各版本不混用通过数和性能数据。
-
-## 使用边界
-
-- Async 默认 30 秒入口预算覆盖可取消冷发现和 pending；取消等待不能中断已经开始的同步 Binder 或回滚远端副作用。
-- Direct 只适合后台线程中的短方法，缺少 Async 的远端取消与在途限额。Oneway 不提供业务完成回执；Main 冷缓存需先挂起预热。
-- Flow 有 NEXT / COMPLETE / ERROR；默认客户端缓冲溢出报错，可选 CONFLATE。源头丢值、离线重放与可靠投递需业务另外设计。
-- 严格 Schema 按连接代次缓存并双端检查；旧 Broker 不隐式降级。Parcelable 字段布局由应用维护。
-- `close` 允许重新连接，`dispose` 永久释放。握手和发现各有独立 4 worker 预算；握手无队列，发现另有 4 个排队位置（11/03 未发布源码）；每 Stub 默认 128 个 Async 在途许可。
-- AndLinker 自动回退、Rx 适配、持久可靠消息及幂等重放尚未接入。
-
-发布配置以[脚本](build-logic/src/main/kotlin/convention.publish.gradle.kts)为准，步骤并入[SDK 指南](docs/ModernIPC_SDK_Guide.md)。归总前 25 份项目 Markdown 的原文与 SHA-256 清单保存在[归档 ZIP](docs/archive/pre-consolidation-2026-10-09.zip)；原始运行记录留在 `docs/benchmarks/runs/`。
+当前变更和升级说明见 [Release 说明](.github/release-notes.md)，制品身份与核验见 [发布记录](docs/releases/v3.0.0-rc.3/README.md)。历史构建、失败尝试和性能样本保留在对应报告及 `docs/benchmarks/runs/`；更早的文档原文见 [归档](docs/archive/pre-consolidation-2026-10-09.zip)。
