@@ -40,6 +40,55 @@ def require(condition: bool, message: str) -> None:
         raise RuntimeError(message)
 
 
+def read_sdk_property(path: Path) -> str | None:
+    """Read sdk.dir using Java properties escapes, including Windows drive paths."""
+    if not path.is_file():
+        return None
+
+    def unescape(value: str) -> str:
+        def replace(match: re.Match) -> str:
+            token = match.group(1)
+            if token.startswith("u"):
+                return chr(int(token[1:], 16))
+            return {"t": "\t", "n": "\n", "r": "\r", "f": "\f"}.get(token, token)
+        return re.sub(r"\\(u[0-9a-fA-F]{4}|.)", replace, value)
+
+    logical = ""
+    result = None
+    for line in path.read_text(encoding="utf-8-sig").splitlines():
+        logical += line.lstrip()
+        trailing = len(logical) - len(logical.rstrip("\\"))
+        if trailing % 2:
+            logical = logical[:-1]
+            continue
+        if not logical.startswith(("#", "!")):
+            match = re.match(r"sdk\.dir(?:\s*[:=]\s*|\s+)(.*)$", logical)
+            if match:
+                result = unescape(match.group(1))
+        logical = ""
+    return result
+
+
+def configure_android_sdk(env: dict[str, str], explicit: Path | None, root: Path = ROOT) -> str:
+    """Precedence: explicit option, ANDROID_HOME, ANDROID_SDK_ROOT, root local.properties."""
+    choices = [
+        ("--android-sdk", str(explicit) if explicit is not None else None),
+        ("ANDROID_HOME", env.get("ANDROID_HOME")),
+        ("ANDROID_SDK_ROOT", env.get("ANDROID_SDK_ROOT")),
+        ("local.properties:sdk.dir", read_sdk_property(root / "local.properties")),
+    ]
+    source, value = next(((key, value) for key, value in choices if value), ("", None))
+    require(value is not None, "Android SDK not found: use --android-sdk, ANDROID_HOME, "
+            "ANDROID_SDK_ROOT or root local.properties sdk.dir")
+    sdk = Path(value).expanduser()
+    if not sdk.is_absolute():
+        sdk = (root if source == "local.properties:sdk.dir" else Path.cwd()) / sdk
+    sdk = sdk.resolve()
+    require(sdk.is_dir(), f"Android SDK directory from {source} does not exist: {sdk}")
+    env["ANDROID_HOME"] = env["ANDROID_SDK_ROOT"] = str(sdk)
+    return source
+
+
 def verify_publication(repository: Path, module: str, version: str) -> dict:
     base = repository / "com" / "modernipc" / module / version / f"{module}-{version}"
     # Version strings may contain dots: Path.with_suffix would truncate such strings.
@@ -125,9 +174,7 @@ def main() -> int:
     env = os.environ.copy()
     if args.java_home:
         env["JAVA_HOME"] = str(args.java_home.resolve())
-    if args.android_sdk:
-        env["ANDROID_HOME"] = str(args.android_sdk.resolve())
-        env["ANDROID_SDK_ROOT"] = str(args.android_sdk.resolve())
+    sdk_source = configure_android_sdk(env, args.android_sdk)
     require(bool(env.get("JAVA_HOME")), "JAVA_HOME or --java-home must select JDK 17")
     wrapper = ROOT / ("gradlew.bat" if os.name == "nt" else "gradlew")
     # The tracked Unix wrapper is mode 100644; invoke Bash without changing the checkout.
@@ -137,7 +184,8 @@ def main() -> int:
     if args.offline:
         common.append("--offline")
     report = {"version": version, "repository": str(repository), "deviceValidation": "NOT_RUN",
-              "status": "RUNNING", "steps": [], "metadata": [], "consumers": {}}
+              "status": "RUNNING", "steps": [], "metadata": [], "consumers": {},
+              "androidSdkSource": sdk_source}
     baseline_pom = (old_repository / "com" / "modernipc" / "ipc-api" / root_version
                     / f"ipc-api-{root_version}.pom")
     report["existingReleaseNegativeControl"] = {"version": root_version, "readOnly": True,
@@ -149,7 +197,7 @@ def main() -> int:
         except (RuntimeError, OSError, ET.ParseError, KeyError) as error:
             report["existingReleaseNegativeControl"].update(status="REJECTED", reason=str(error))
 
-    def run(name: str, project: Path, arguments: list[str]) -> None:
+    def run(name: str, project: Path, arguments: list[str], expected_error: str | None = None) -> None:
         log = output / f"{name}.txt"
         command = common + ["-p", str(project)] + arguments
         print(f"{name}: started (log: {log})", flush=True)
@@ -157,7 +205,15 @@ def main() -> int:
             result = subprocess.run(command, cwd=ROOT, env=env, stdout=stream, stderr=subprocess.STDOUT,
                                     shell=False, check=False)
         report["steps"].append({"name": name, "exitCode": result.returncode, "log": str(log)})
-        require(result.returncode == 0, f"{name} failed with exit {result.returncode}; see {log}")
+        if expected_error is None:
+            require(result.returncode == 0, f"{name} failed with exit {result.returncode}; see {log}")
+        else:
+            diagnostic = log.read_text(encoding="utf-8")
+            require(result.returncode != 0 and expected_error in diagnostic,
+                    f"{name} must reject the fixture with the expected diagnostic; see {log}")
+            require("FileAlreadyExistsException" not in diagnostic,
+                    f"{name} crashed instead of validating the facade; see {log}")
+            report["steps"][-1]["expectedFailure"] = True
         print(f"{name}: passed", flush=True)
 
     try:
@@ -187,6 +243,12 @@ def main() -> int:
                     f"com.modernipc.consumer.fixture:custom-contract:{version}", version),
                 "asyncAndFlowKsp": "PASSED",
             }
+        run("reject-nested-facades", FIXTURE, [
+            f"-PipcVersion={version}", f"-PipcRepository={repository}", "-PmetadataMode=metadata",
+            f"-PconsumerBuildRoot={output / 'negative' / 'build'}", "-PinvalidFacade=nested",
+            "--project-cache-dir", str(output / "negative" / "project-cache"),
+            ":custom-contract:compileReleaseKotlin"],
+            expected_error="@IpcFacade requires a top-level interface")
         report["status"] = "PASSED"
     except (RuntimeError, OSError, ET.ParseError, KeyError) as error:
         report["status"] = "FAILED"

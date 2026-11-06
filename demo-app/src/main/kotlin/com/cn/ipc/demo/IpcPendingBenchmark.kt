@@ -203,7 +203,7 @@ object IpcPendingBenchmark {
         while (service.inspectActiveRequestCount() != 0) delay(2)
     }
 
-    private fun runtimeCount(key: String): Long? = Debug.getRuntimeStat(key)?.toLongOrNull()
+    private fun runtimeCount(key: String): Long? = (if (android.os.Build.VERSION.SDK_INT >= 23) Debug.getRuntimeStat(key)?.toLongOrNull() else null)
     private fun delta(before: Long?, after: Long?): Long? =
         if (before != null && after != null && after >= before) after - before else null
     private fun csv(value: Long?): String = value?.toString() ?: ""

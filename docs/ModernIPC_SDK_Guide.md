@@ -1,8 +1,10 @@
 # ModernIpc SDK 接入与发布指南
 
-核对日期：2026-10-22。本指南介绍共享契约、双端接入、生命周期、请求与 Flow 终态、诊断和 Maven 发布。模块关系与协议图见[架构](ModernIPC_Architecture.md)，四个多 App 案例见[业务指南](ModernIPC_Business_Interaction_Guide.md)。
+核对日期：2026-10-30。本指南介绍共享契约、双端接入、生命周期、请求与 Flow 终态、诊断和 Maven 发布。模块关系与协议图见[架构](ModernIPC_Architecture.md)，四个多 App 案例见[业务指南](ModernIPC_Business_Interaction_Guide.md)。
 
-**当前验收状态**：依赖导出修复后的未发布 demo APK SHA-256 为 `D0E76D896BDC3F0C9F01E14073F34201FFE79BFC6B07106E7885EA4181F28A9A`，2026-10-22 在小米 `925c23bb` 通过原框架 73 项、独立 Async scope 4 项、新增业务取消/超时错误终态 9 项及同 UID 鉴权微测；见[本轮 summary](benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-regression2/summary.json)。独立 Maven metadata/POM-only 消费和 27 项 host 门禁也已通过；见[修复审计](ModernIPC_Engineering_Audit.md#10-本轮修复验收)。性能对照仍绑定此前 `4F7ED...` APK，未转用于本轮新包。固定 `v3.0.0-rc.1` 标签与四个多 App 业务场景的设备验收仍保持各自边界。构建、回归与测量范围分别见[多 App 报告](benchmarks/Multi_App_Report.md)、[回归报告](benchmarks/Regression_Report.md)和[性能报告](benchmarks/Performance_Report.md)。
+**历史小米验收状态（2026-10-22）**：依赖导出修复后的未发布 demo APK SHA-256 为 `D0E76D896BDC3F0C9F01E14073F34201FFE79BFC6B07106E7885EA4181F28A9A`，2026-10-22 在小米 `925c23bb` 通过原框架 73 项、独立 Async scope 4 项、新增业务取消/超时错误终态 9 项及同 UID 鉴权微测；见[本轮 summary](benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-regression2/summary.json)。独立 Maven metadata/POM-only 消费和 27 项 host 门禁也已通过；见[修复审计](ModernIPC_Engineering_Audit.md#10-本轮修复验收)。性能对照仍绑定此前 `4F7ED...` APK，未转用于本轮新包。固定 `v3.0.0-rc.1` 标签与四个多 App 业务场景的设备验收仍保持各自边界。构建、回归与测量范围分别见[多 App 报告](benchmarks/Multi_App_Report.md)、[回归报告](benchmarks/Regression_Report.md)和[性能报告](benchmarks/Performance_Report.md)。
+
+**当前源码补充（尚未发布）**：2026-10-30 修正生成参数隔离、死亡重连预算、Flow 取消分类和辅助订阅工具；详见[修复审计第 12 节](ModernIPC_Engineering_Audit.md#12-2026-10-30生成代码重连与订阅修复未发布)。这些变化不包含在已发布的 rc.2 制品中，新设备验收为 NOT_RUN。
 
 ## 0. 依赖与生成配置
 
@@ -54,6 +56,8 @@ interface IMessageHubService {
 ```
 
 minApiVersion要求服务端API下限；contractVersion是客户端自身契约版本，默认0沿用minApiVersion，不是应用versionCode。KSP生成ClientAdapter、ServerStub、IpcSchema；后者提供DESCRIPTOR、CLIENT_CONTRACT_VERSION、METHOD_SIGNATURES、CLIENT_SCHEMA，宿主仍手工注册。
+
+`@IpcFacade` 只支持包级顶层接口；嵌套门面现在会收到明确 KSP 错误，请移到包级并使用唯一类名。业务参数可使用 `requestId`、`controller`、`data` 等名称，生成 Adapter 保留公开参数名并隔离传输局部变量，Stub 使用位置别名解码。受旧生成器同名覆盖影响的接口需双端重新生成升级；wire schema 相同并不代表旧代码的参数值错误已修复。
 
 每方法只选一种协议，满足suspend/Flow/Unit约束，所有相关事务码在1..0x00ffffff且接口内唯一。不同业务Binder可复用事务码；serviceId需统一分配，Registry拒绝重复注册。
 
@@ -173,6 +177,8 @@ awaitConnected、bindingTimeoutMs 和生成 Async 入口预算仍是不同计时
 
 callSuspendWithinDeadline 是底层 primitive，不再自己创建超时，调用者必须建立有效的外层截止并保留取消生命周期。生成适配器已负责入口预算，通常直接调用适配器；手写调用者若直接使用此 primitive，不会自动获得30秒截止。普通 PendingCallRegistry.callSuspend 保留注册请求默认截止，但不会覆盖它之前的手写发现逻辑。
 
+`maxReconnectAttempts=0` 同时禁用绑定失败与已连接后 Binder 死亡的自动重连；仍允许显式 `connect()`。主机验证覆盖两种死亡/断开回调顺序，小米实际死亡路径尚未复测。
+
 常见失败为兼容异常、断连/释放、String业务错误、SERVER_BUSY、DUPLICATE_REQUEST、SERVER_DISPOSED、SERVER_SCOPE_CANCELLED。RpcError尚未接入，idempotent不自动重试。基本类型帧能识别callback时可立即返回校验错误；坏Token/损坏帧依赖本地截止；Parcelable仍先鉴权再反序列化。
 
 ## 6. Flow终态与缓冲
@@ -182,6 +188,8 @@ callSuspendWithinDeadline 是底层 primitive，不再自己创建超时，调�
 | 1 NEXT | 原item payload | 解码/trySend |
 | 2 COMPLETE | 无payload | 排空缓冲后正常完成 |
 | 3 ERROR | String | 异常结束 |
+
+Flow 业务内部 timeout/主动 `CancellationException` 保留业务消息；只有父 scope 失效才报告 `SERVER_SCOPE_CANCELLED`，销毁报告 `SERVER_DISPOSED`。主动退订保持 quiet 语义。
 
 首事件/终态可早于subId回复；同代次gate和CAS防重复/过期终态。业务异常和scope失效有错误通知，主动collector取消/退订无附加业务错误。旧客户端只解释NEXT，需要升级使用终态语义。
 
@@ -223,6 +231,8 @@ Direct拒绝主线程，服务端Binder线程同步执行并通过同一reply返
 [IpcRequestTrace](../ipc-contract/src/main/kotlin/com/cn/ipc/IpcRequestTrace.kt)默认关闭，start(run)启用当前进程，stopAndFlush(output)停止后返回events/dropped。省略output时事件集中输出Logcat；传入File时事件和END写入该文件，Logcat只记录END摘要。应先结束测量窗口再导出文件。客户端、服务端需各自通过其宿主/测试入口启停；在客户端调用start不会远程启用服务端。历史成功 Echo 的完整性与内核诊断按各自 APK 记录在[性能报告](benchmarks/Performance_Report.md)；错误、取消、冷发现、Direct 和完整 Flow 尚无同等阶段完整性证明。
 
 每进程最多缓冲16,384个事件，超限计入dropped；窗口内不逐事件写Logcat，但仍有Event分配、短同步append和Android Trace marker成本。使用隔离的单客户端/单Controller并保持同一run，按requestId关联双端。callback identity仅在本进程内有意义，服务端generation=0；没有新增wire身份，不能直接用callback数值跨进程连接，也不能把多客户端相同requestId混合。
+
+2026-10-30 的参数隔离修复增加公开方法到私有传输方法的尾调用桥接；`client_entry` 在私有传输方法入口采集，不包含此前桥接指令，外层调用 RTT 则仍包含它。本轮未对该改动进行性能测量。
 
 缺事件、错误/取消链及dropped应单独计数；只对完整链解释分段耗时；区间包含埋点及阶段间工作，不能直接当作纯编码或纯排队时间。早期时间点可在读出requestId/callback后补写，分析应使用记录的原始ns，不能把marker实际出现位置当成早期时间。先结束测量窗口再stopAndFlush，启用trace所得数据也需注明埋点开销。
 
@@ -268,7 +278,7 @@ scope 必须属于该服务生命周期，不共用无关组件的 Job；Stub.di
 
 ### 坐标与本地发布
 
-[发布脚本](../build-logic/src/main/kotlin/convention.publish.gradle.kts)使用 `groupId=com.modernipc`、当前版本 `3.0.0-rc.2`，版本来源为根 `gradle.properties` 的 `VERSION_NAME`，Gradle参数可覆盖；artifactId为模块名。可发布的 Android library 为 `ipc-api`、`ipc-contract`、`ipc-runtime-client`、`ipc-runtime-server`，产物为 release AAR；JVM library `ipc-annotations`、`ipc-compiler` 发布 JAR。`demo-client-common`另发布为示例共用AAR；五个示例应用与一个 AndLinker 对照应用通过六个Debug APK交付，不是SDK坐标。
+[发布脚本](../build-logic/src/main/kotlin/convention.publish.gradle.kts)使用 `groupId=com.modernipc`、当前版本 `3.0.0-rc.3`，版本来源为根 `gradle.properties` 的 `VERSION_NAME`，Gradle参数可覆盖；artifactId为模块名。可发布的 Android library 为 `ipc-api`、`ipc-contract`、`ipc-runtime-client`、`ipc-runtime-server`，产物为 release AAR；JVM library `ipc-annotations`、`ipc-compiler` 发布 JAR。`demo-client-common`另发布为示例共用AAR；五个示例应用与一个 AndLinker 对照应用通过六个Debug APK交付，不是SDK坐标。
 
 ```powershell
 .\gradlew.bat :ipc-api:assembleRelease :ipc-runtime-client:assembleRelease :ipc-runtime-server:assembleRelease
@@ -319,4 +329,35 @@ gpr.key=具有对应权限的令牌
 
 外部使用者需在自己的仓库配置中添加对应 Maven URL `https://maven.pkg.github.com/<owner>/<repo>` 和具备读权限的凭据。远端产物存在性、可见性、版本与权限应通过实际 Gradle resolve 核实；发布是否成功以对应版本的Actions、远端POM和Release附件核验为准。公开仓库的GitHub Maven Packages下载仍需账号与具有read:packages权限的令牌；不要把凭据提交到源码。
 
-[release.yml](../.github/workflows/release.yml)从v标签提取版本并核对VERSION_NAME，以JDK17先执行 host check 和隔离 Maven 消费门禁，再构建六SDK、示例共用AAR和六个同签名Debug APK。验证本地POM/module内部版本和APK版本/签名后发布七个Maven产物、核对远端POM，最后创建Release。附件含SDK及sources/javadoc、APK、Maven仓库、源码、仓库内证据和SHA-256清单；带rc的标签标为预发行。完整历史APK证据由本地另行打包上传，CI仓库证据归档不自动包含Git忽略的历史APK。工作流存在不表示执行成功；设备NOT_RUN与构建成功分别报告。
+[release.yml](../.github/workflows/release.yml)从v标签提取版本并核对VERSION_NAME，以JDK17先执行 host/Robolectric check 和隔离 Maven 消费门禁，再构建六SDK、示例共用AAR和六个同签名Debug APK。验证本地POM/module内部版本和APK版本/签名后发布七个Maven产物、核对远端35个主制品及metadata/sources/javadoc文件的大小和SHA-256，最后创建Release。附件含SDK及sources/javadoc、APK、Maven仓库、源码、仓库内证据和SHA-256清单；带rc的标签标为预发行。完整历史APK证据由本地另行打包上传，CI仓库证据归档不自动包含Git忽略的历史APK。工作流存在不表示执行成功；设备NOT_RUN与构建成功分别报告。
+
+
+### 2026-11-03 未发布补充
+
+Gradle 启动环境要求 Java 17，settings 阶段明确拒绝其他版本；Robolectric Test 任务独立选择 Java 17 launcher。请配置当前 shell 的 JAVA_HOME 或 Android Studio Gradle JDK，不在仓库提交个人安装绝对路径。
+
+awaitConnected 在控制锁内启动或加入连接尝试，并等待该尝试的独立完成对象。重试耗尽返回连接错误，主动关闭结束旧尝试；从 Disconnected/Closed 调用可建立新尝试，不把旧终态误判为新失败。调用方超时/取消仅退出自己的等待，不取消共享连接尝试。
+
+辅助订阅管理器在锁外解除旧注册及失败注册的死亡监听，登记仍在锁内与死亡/kill 串行化。broadcast 忽略 RemoteException，其他异常（包括协程取消）向调用方传播并停止本轮；需要逐观察者业务隔离时，由 action 显式处理及报告可恢复错误，不默认吞掉编程错误。
+
+本轮本机 `:check` 通过：27 项状态机及 12 组 Robolectric 回归。小米 925c23bb（24031PN0DC）新 APK 已完成 86 项真机断言（核心 73、独立作用域 4、生成终态 9），安装前后拉包 SHA-256 与候选包一致。握手组新增连接尝试等待断言，覆盖关闭/销毁、重试耗尽、显式重连及旧握手隔离。首轮发现缺参诊断泄露内部变量别名，修复后完整复跑通过；首轮失败证据保留。解绑锁范围和广播异常策略另有主机定向回归，不将其等同于设备竞态穷举。本轮没有进行 AndLinker 性能对照。见[11/03执行记录](benchmarks/runs/2026-11-03-xiaomi14ultra/connection-fixes/summary.json)。
+
+### 2026-11-03 深层审计修正（未发布）
+
+- 注册表的注册、查询和版本快照在同一锁下执行，重复 serviceId 原子拒绝。dispose 先关闭并清空注册表，再在锁外按对象身份去重释放 Stub；关闭后不能重新注册。重复 dispose 不重复回调，但不承诺等待另一个并发 dispose 完成。注册与关闭竞争时，注册先成功的对象纳入释放；关闭先发生的注册被拒绝，调用方负责释放未被接收的对象。
+- 冷发现仍为严格双 RPC：客户端验证元数据，服务端验证客户端契约后返回 Binder。未新增协议方法或放宽服务标识、版本、签名验证。全进程最多 4 个工作线程和 4 个排队任务；超过容量返回发现失败。最后一个等待者取消或缓存失效会移除排队任务，执行前再检查需求；已经进入同步 Binder 的工作不能可靠中断。排队时间计入调用期限，不使用无限扩容或调用线程代执行。
+- Stream 事件 transact 返回 false 时，生成 Stub 终止生产、尝试一次错误终态并清理订阅；异常也走既有错误终态路径。回调通道失效时无法保证错误送达。客户端缓冲溢出仍为显式失败，不承诺无损远程背压；可用 Flow.buffer 配置本地消费缓冲，但不是远端流量控制。没有添加无限缓冲或隐式丢弃策略。
+- Broker 复用无授权缓存的 CallerAuthenticator，并使用 authorizeCurrentCaller 避免构造未使用的 CallerIdentity/包名 Set；每事务仍验证当前调用 UID，跨 UID 仍实时检查包名与签名。没有永久 uid→允许缓存；不宣称每次必然穿透两次系统 Binder，也不据此声称 P99 改善。
+- API 21 前台门禁使用 isKeyguardLocked 作为保守回退；API 23 以下运行时分配统计返回不可用，而非零。夹具避免 API 24 的 computeIfAbsent/updateAndGet，生成终态日志标签符合旧系统长度要求。
+
+Parcelable 演进示例：OrderDto v1 按 id、name 写入，v2 插入 price 时，即便类名不变也不能认定旧 CREATOR 能读取。若不保留旧编码，应将契约版本和服务 apiVersion 升为 2，并设置 minSupportedClientVersion=2 拒绝旧端；或者保留旧事务和 DTO，新增 v2 事务。只提高 apiVersion/contractVersion、不提高允许旧端的版本下限，不能阻止旧端被接纳。Schema 的 parcelable-opaque 标识不验证字段布局。回归验证版本下限拒绝旧端，不能替代业务 DTO 的新旧编码互读测试。
+
+本轮设备与主机证据见[回归报告](benchmarks/Regression_Report.md)；API 21 行为没有用高版本小米实测冒充。
+
+### 全量检查与 Maven 消费验证入口（11/03 补正）
+
+根任务 `:check` 只聚合显式声明的主机回归，不代表所有子模块 Lint 已运行。完整验证使用 `./gradlew check`（Windows 为 `.\gradlew.bat check`），CI verify/release 已切换到这个入口。运行前仍需选择 JDK 17；Android SDK 和所需组件必须已安装。
+
+`python scripts/verify_maven_consumers.py` 的 SDK 查找顺序为：`--android-sdk`、`ANDROID_HOME`、`ANDROID_SDK_ROOT`、根目录 `local.properties` 的 `sdk.dir`。选定后对子进程统一设置两个 SDK 环境变量，不写入消费工程或全局环境；支持 Java properties 的 Windows 路径转义和续行。显式指定不存在的目录会提前失败，不悄悄改用其他 SDK。“无需 SDK 参数”不代表自动安装 JDK/Android SDK。
+
+Binder 死亡处理在 API 23 以上保留带 generation 的 DeadObjectException 消息，API 21/22 使用无参构造器；两条路径均进入相同重连预算与失败完成逻辑。

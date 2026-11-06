@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.cn.ipc.demo.regression.RuntimeRegressionTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-30T01:46:03" hostname="BLUE" time="9.68">
+  <properties/>
+  <testcase name="generatedArgumentsKeepBusinessValuesWithTraceOnAndOff" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="5.43"/>
+  <testcase name="rawFlowHasOneTerminalAndQuietUnsubscribe" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="0.152"/>
+  <testcase name="flowBusinessCancellationKeepsCauseAndScopeAlive" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="0.132"/>
+  <testcase name="rawRequestIdRemainsIndependentOfBusinessRequestId" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="0.061"/>
+  <testcase name="subscriptionCallbacksCanUnregisterReenterAndBroadcastConcurrently" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="0.062"/>
+  <testcase name="clearingOldGenerationCannotRemoveReplacementSubscription" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="0.059"/>
+  <testcase name="closedAndDeadObserversCannotRegisterAndStaleDeathCannotRemoveReplacement" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="0.041"/>
+  <testcase name="deathAndDisconnectRespectZeroAndOneRetryInBothOrders" classname="com.cn.ipc.demo.regression.RuntimeRegressionTest" time="3.742"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

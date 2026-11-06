@@ -75,8 +75,9 @@ class SubscriptionRegistry {
     fun clearGeneration(generation: Long) {
         val iterator = records.entries.iterator()
         while (iterator.hasNext()) {
-            if (iterator.next().value.generation == generation) {
-                iterator.remove()
+            val entry = iterator.next()
+            if (entry.value.generation == generation) {
+                records.remove(entry.key, entry.value)
             }
         }
     }

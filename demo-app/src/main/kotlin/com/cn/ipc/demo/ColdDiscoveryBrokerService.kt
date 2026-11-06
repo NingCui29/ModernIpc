@@ -88,7 +88,7 @@ class ColdDiscoveryBrokerService : MyBrokerService() {
                         data.enforceInterface(DESCRIPTOR)
                         data.readInt()
                     } finally { data.setDataPosition(position) }
-                    val count = counters.computeIfAbsent(serviceId) { Counters() }
+                    val count = counters.getOrPut(serviceId) { Counters() }
                     when (code) {
                         IBinder.FIRST_CALL_TRANSACTION + 2 -> count.legacy.incrementAndGet()
                         IBinder.FIRST_CALL_TRANSACTION + 4 -> count.checked.incrementAndGet()
@@ -100,7 +100,10 @@ class ColdDiscoveryBrokerService : MyBrokerService() {
                             }
                             if (gate != null) {
                                 val active = activeBlocked.incrementAndGet()
-                                peakBlocked.updateAndGet { maxOf(it, active) }
+                                while (true) {
+                                    val previous = peakBlocked.get()
+                                    if (previous >= active || peakBlocked.compareAndSet(previous, active)) break
+                                }
                                 entered.incrementAndGet()
                                 try {
                                     if (!gate.latch.await(WATCHDOG_MS, TimeUnit.MILLISECONDS)) {

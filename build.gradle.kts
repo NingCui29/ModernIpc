@@ -14,4 +14,5 @@ plugins {
 // These checks make no assertion about Android Binder or device performance.
 tasks.named("check") {
     dependsOn(":ipc-host-tests:check")
+    dependsOn(":demo-app:testDebugUnitTest")
 }

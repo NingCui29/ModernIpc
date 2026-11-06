@@ -21,7 +21,7 @@ from pathlib import Path
 
 
 SERIAL = "925c23bb"
-CAPTURE_DAY = "2026-10-09"
+CAPTURE_DAY = datetime.now().astimezone().date().isoformat()
 ROOT = Path(__file__).resolve().parents[3]
 SECONDS_PER_CLIENT = 5
 PACKAGES = (

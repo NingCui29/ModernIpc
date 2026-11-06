@@ -1,0 +1,18 @@
+--------- beginning of main
+11-03 16:27:25.529 24568 24568 I IpcForeground: STATE run=authmicro-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34130812 uptimeMs=6091436 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+11-03 16:27:25.623 24568 24568 I IpcForeground: STATE run=authmicro-deepaudit2 event=FOCUS_GAIN elapsedRealtimeMs=34130900 uptimeMs=6091524 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:27:25.663 24568 24568 I IpcForeground: STATE run=authmicro-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34130944 uptimeMs=6091568 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:27:25.764 24568 24568 I IpcForeground: STATE run=authmicro-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34131053 uptimeMs=6091677 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:27:25.865 24568 24568 I IpcForeground: STATE run=authmicro-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34131153 uptimeMs=6091777 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:27:25.865 24568 24568 I IpcForeground: STATE run=authmicro-deepaudit2 event=BEGIN elapsedRealtimeMs=34131154 uptimeMs=6091778 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:27:25.977 25116 25144 I IpcAuthMicro: TIME batch=0 mode=legacy count=50000 wallNs=81521719 cpuNs=80572863
+11-03 16:27:25.998 25116 25144 I IpcAuthMicro: TIME batch=1 mode=optimized count=50000 wallNs=20860885 cpuNs=19808385
+11-03 16:27:26.015 25116 25144 I IpcAuthMicro: TIME batch=2 mode=optimized count=50000 wallNs=17081823 cpuNs=16949481
+11-03 16:27:26.054 25116 25144 I IpcAuthMicro: TIME batch=3 mode=legacy count=50000 wallNs=39062552 cpuNs=38655882
+11-03 16:27:26.094 25116 25144 I IpcAuthMicro: ALLOC batch=0 mode=legacy count=50000 beforeBytes=13356552 afterBytes=16567816 bytes=3211264 gc=0
+11-03 16:27:26.110 25116 25144 I IpcAuthMicro: ALLOC batch=1 mode=optimized count=50000 beforeBytes=16567816 afterBytes=16567816 bytes=0 gc=0
+11-03 16:27:26.127 25116 25144 I IpcAuthMicro: ALLOC batch=2 mode=optimized count=50000 beforeBytes=16567816 afterBytes=16567816 bytes=0 gc=0
+11-03 16:27:26.167 25116 25144 I IpcAuthMicro: ALLOC batch=3 mode=legacy count=50000 beforeBytes=16567816 afterBytes=19762696 bytes=3194880 gc=0
+11-03 16:27:26.167 25116 25144 I IpcAuthMicro: DONE sameUid=true countPerBatch=50000
+11-03 16:27:26.170 24568 24568 I IpcForeground: STATE run=authmicro-deepaudit2 event=END elapsedRealtimeMs=34131458 uptimeMs=6092082 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:27:26.174 24568 24568 I IpcForeground: END run=authmicro-deepaudit2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-authmicro-deepaudit2.csv scope=activity_events_and_500ms_app_samples

@@ -1,0 +1,20 @@
+--------- beginning of main
+11-03 16:47:22.299 31857 31857 I IpcForeground: STATE run=generatedterminal-api21sdk1 event=WAIT_READY elapsedRealtimeMs=35327588 uptimeMs=7288212 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+11-03 16:47:22.315 31857 31857 I IpcForeground: STATE run=generatedterminal-api21sdk1 event=FOCUS_GAIN elapsedRealtimeMs=35327603 uptimeMs=7288227 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:47:22.400 31857 31857 I IpcForeground: STATE run=generatedterminal-api21sdk1 event=WAIT_READY elapsedRealtimeMs=35327688 uptimeMs=7288312 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:47:22.501 31857 31857 I IpcForeground: STATE run=generatedterminal-api21sdk1 event=WAIT_READY elapsedRealtimeMs=35327789 uptimeMs=7288413 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:47:22.602 31857 31857 I IpcForeground: STATE run=generatedterminal-api21sdk1 event=WAIT_READY elapsedRealtimeMs=35327890 uptimeMs=7288515 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:47:22.602 31857 31857 I IpcForeground: STATE run=generatedterminal-api21sdk1 event=BEGIN elapsedRealtimeMs=35327891 uptimeMs=7288515 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:47:22.763 31857 32480 I IpcGeneratedTerminal: PASS run=generatedterminal-api21sdk1 dispatch=default path=raw scenario=__business_timeout__ terminals=1 requests=0
+11-03 16:47:22.850 31857 32480 I IpcGeneratedTerminal: PASS run=generatedterminal-api21sdk1 dispatch=default path=adapter scenario=__business_timeout__ elapsedMs=87 pending=0 requests=0
+11-03 16:47:22.906 31857 32480 I IpcGeneratedTerminal: PASS run=generatedterminal-api21sdk1 dispatch=default path=raw scenario=__business_cancel__ terminals=1 requests=0
+11-03 16:47:22.912 31857 32480 I IpcGeneratedTerminal: PASS run=generatedterminal-api21sdk1 dispatch=default path=adapter scenario=__business_cancel__ elapsedMs=5 pending=0 requests=0
+11-03 16:47:23.053 31857 32480 I IpcGeneratedTerminal: PASS run=generatedterminal-api21sdk1 dispatch=dedicated path=raw scenario=__business_timeout__ terminals=1 requests=0
+11-03 16:47:23.106 31857 31857 I IpcForeground: STATE run=generatedterminal-api21sdk1 event=SAMPLE elapsedRealtimeMs=35328393 uptimeMs=7289017 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:47:23.138 31857 32480 I IpcGeneratedTerminal: PASS run=generatedterminal-api21sdk1 dispatch=dedicated path=adapter scenario=__business_timeout__ elapsedMs=85 pending=0 requests=0
+11-03 16:47:23.193 31857 32480 I IpcGeneratedTerminal: PASS run=generatedterminal-api21sdk1 dispatch=dedicated path=raw scenario=__business_cancel__ terminals=1 requests=0
+11-03 16:47:23.197 31857 32480 I IpcGeneratedTerminal: PASS run=generatedterminal-api21sdk1 dispatch=dedicated path=adapter scenario=__business_cancel__ elapsedMs=5 pending=0 requests=0
+11-03 16:47:23.202 31857 32480 I IpcGeneratedTerminal: PASS run=generatedterminal-api21sdk1 defaultRestored=true pending=0 requests=0 subscriptions=0
+11-03 16:47:23.202 31857 32480 I IpcGeneratedTerminal: DONE run=generatedterminal-api21sdk1 passed=true checks=9
+11-03 16:47:23.205 31857 31857 I IpcForeground: STATE run=generatedterminal-api21sdk1 event=END elapsedRealtimeMs=35328492 uptimeMs=7289116 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:47:23.211 31857 31857 I IpcForeground: END run=generatedterminal-api21sdk1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-generatedterminal-api21sdk1.csv scope=activity_events_and_500ms_app_samples

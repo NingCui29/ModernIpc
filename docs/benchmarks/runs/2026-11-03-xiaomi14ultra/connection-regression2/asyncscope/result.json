@@ -1,0 +1,65 @@
+{
+  "group": "asyncscope",
+  "tag": "IpcAsyncScopeProbe",
+  "expectedPasses": 4,
+  "runId": "asyncscope-nov03attempt2",
+  "status": "PASSED",
+  "valid": true,
+  "passCount": 4,
+  "doneCount": 1,
+  "foregroundEndCount": 1,
+  "complete": true,
+  "errors": [],
+  "passes": [
+    "PASS run=asyncscope-nov03attempt2 dedicatedSelected=true traceDisabled=true",
+    "PASS run=asyncscope-nov03attempt2 dedicatedCancel=true concurrentFlow=0,1,2 pending=0 requests=0 subscriptions=0",
+    "PASS run=asyncscope-nov03attempt2 dedicatedDeadline=true pending=0 requests=0 subscriptions=0",
+    "PASS run=asyncscope-nov03attempt2 defaultRestored=true pending=0 requests=0 subscriptions=0"
+  ],
+  "done": [
+    "DONE run=asyncscope-nov03attempt2 passed=true checks=4"
+  ],
+  "foregroundEnd": [
+    "END run=asyncscope-nov03attempt2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-asyncscope-nov03attempt2.csv scope=activity_events_and_500ms_app_samples"
+  ],
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 2,
+    "sampleCount": 0,
+    "requiredSampleCount": 0,
+    "durationMs": 300,
+    "maxGapMs": 300,
+    "observationMaxGapMs": 300,
+    "errors": [],
+    "sourceSha256": "67BABDD08AE85EDC3016898F0FBEDCBED81D595A16C45C65C2633578B404D89E",
+    "run": "asyncscope-nov03attempt2",
+    "csv": "foreground-asyncscope-nov03attempt2.csv"
+  },
+  "observed": {
+    "runId": "asyncscope-nov03attempt2",
+    "tag": "IpcAsyncScopeProbe",
+    "passCount": 4,
+    "doneCount": 1,
+    "foregroundEndCount": 1,
+    "expectedPasses": 4,
+    "complete": true,
+    "valid": true,
+    "errors": [],
+    "passes": [
+      "PASS run=asyncscope-nov03attempt2 dedicatedSelected=true traceDisabled=true",
+      "PASS run=asyncscope-nov03attempt2 dedicatedCancel=true concurrentFlow=0,1,2 pending=0 requests=0 subscriptions=0",
+      "PASS run=asyncscope-nov03attempt2 dedicatedDeadline=true pending=0 requests=0 subscriptions=0",
+      "PASS run=asyncscope-nov03attempt2 defaultRestored=true pending=0 requests=0 subscriptions=0"
+    ],
+    "done": [
+      "DONE run=asyncscope-nov03attempt2 passed=true checks=4"
+    ],
+    "foregroundEnd": [
+      "END run=asyncscope-nov03attempt2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-asyncscope-nov03attempt2.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "status": "PASSED",
+  "fullSubprojectCheck": "PASSED",
+  "hostStateMachineChecks": 27,
+  "robolectricDebug": {
+    "name": "com.cn.ipc.demo.regression.RuntimeRegressionTest",
+    "tests": "16",
+    "skipped": "0",
+    "failures": "0",
+    "errors": "0",
+    "timestamp": "2026-11-03T08:44:20",
+    "hostname": "BLUE",
+    "time": "7.398"
+  },
+  "robolectricRelease": {
+    "name": "com.cn.ipc.demo.regression.RuntimeRegressionTest",
+    "tests": "16",
+    "skipped": "0",
+    "failures": "0",
+    "errors": "0",
+    "timestamp": "2026-11-03T08:44:41",
+    "hostname": "BLUE",
+    "time": "6.845"
+  },
+  "pythonRegressionTests": 13,
+  "pythonRegressionStatus": "PASSED",
+  "deviceChecks": 86,
+  "device": "925c23bb",
+  "deviceEvidence": "../api21-sdk-regression1/summary.json",
+  "apkSha256": "BEC94D05275485B8EB6542D74A5A6C77D1E920AA6D4A7287E8B79A7464C4FD66",
+  "installedApkMatches": true,
+  "limits": [
+    "API 21/22 constructor branch checked by Lint; no physical API 21/22 device tested.",
+    "Only Xiaomi used for device regression.",
+    "No new performance comparison or remote publication."
+  ],
+  "mavenConsumerStatus": "PASSED",
+  "androidSdkSource": "local.properties:sdk.dir",
+  "mavenEvidence": "maven/verification.json",
+  "mavenInvocation": "python scripts/verify_maven_consumers.py --offline --output .gradle/sdk-auto-consumer-validation; ANDROID_HOME and ANDROID_SDK_ROOT removed in child shell; no --android-sdk",
+  "sourceHashes": {
+    "ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/IpcConnectionController.kt": "3e6dadafc992df4a91276103b7937acfc0b5ee2b146148f44ca7d240c8ce6a48",
+    "scripts/verify_maven_consumers.py": "d09429d8c5253cdeb3d759b568c8a5ab8e6cddd82e1ad512ac9b03cead143053",
+    "tests/release/test_sdk_discovery.py": "ef869f4e4b17ebe5a004f518b414b0e68355e97f0b4447cf4e794cca89bf60ae",
+    ".github/workflows/verify.yml": "8cacf2dcb6c2c102151fdaa78e29363dbdd53faa211d9503d93635c730b5c7f5",
+    ".github/workflows/release.yml": "4769a3c5e90421a21c323049acbdd45b9fa1bdd2521bcb10fcc3d9e522323e9b"
+  }
+}

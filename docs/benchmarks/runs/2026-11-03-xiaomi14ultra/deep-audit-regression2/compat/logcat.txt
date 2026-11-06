@@ -1,0 +1,26 @@
+--------- beginning of main
+11-03 16:27:08.246 21301 21301 I IpcForeground: STATE run=compat-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34113534 uptimeMs=6074158 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+11-03 16:27:08.295 21301 21301 I IpcForeground: STATE run=compat-deepaudit2 event=FOCUS_GAIN elapsedRealtimeMs=34113568 uptimeMs=6074192 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:27:08.346 21301 21301 I IpcForeground: STATE run=compat-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34113634 uptimeMs=6074258 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:27:08.446 21301 21301 I IpcForeground: STATE run=compat-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34113734 uptimeMs=6074358 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:27:08.547 21301 21301 I IpcForeground: STATE run=compat-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34113835 uptimeMs=6074459 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:27:08.547 21301 21301 I IpcForeground: STATE run=compat-deepaudit2 event=BEGIN elapsedRealtimeMs=34113836 uptimeMs=6074460 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:27:08.578 21301 24212 I IpcCompatibilityProbe: PASS run=compat-deepaudit2 metadataMatch descriptor=true signatures=17 floor=1
+11-03 16:27:08.584 21301 24212 I IpcCompatibilityProbe: PASS run=compat-deepaudit2 additiveSubset clientVersion=1 requestedTransactions=1 extraServerTransactions=true
+11-03 16:27:08.598 21301 24212 I IpcCompatibilityProbe: PASS run=compat-deepaudit2 parameterChange brokerRejected=true controllerRejected=true
+11-03 16:27:08.600 21301 24212 I IpcCompatibilityProbe: PASS run=compat-deepaudit2 returnChange brokerRejected=true controllerRejected=true
+11-03 16:27:08.601 21301 24212 I IpcCompatibilityProbe: PASS run=compat-deepaudit2 modeChange brokerRejected=true controllerRejected=true
+11-03 16:27:08.602 21301 24212 I IpcCompatibilityProbe: PASS run=compat-deepaudit2 envelopeChange brokerRejected=true controllerRejected=true
+11-03 16:27:08.603 21301 24212 I IpcCompatibilityProbe: PASS run=compat-deepaudit2 missingTransaction brokerRejected=true controllerRejected=true
+11-03 16:27:08.605 21301 24212 I IpcCompatibilityProbe: PASS run=compat-deepaudit2 descriptorChange brokerRejected=true controllerRejected=true
+11-03 16:27:08.606 21301 24212 I IpcCompatibilityProbe: PASS run=compat-deepaudit2 futureClientVersion brokerRejected=true controllerRejected=true
+11-03 16:27:08.606 21301 24212 I IpcCompatibilityProbe: PASS run=compat-deepaudit2 schemaCacheIsolation fullCached=true changedSchemaRejected=true subsetAccepted=true
+11-03 16:27:08.611 21301 24212 I IpcCompatibilityProbe: PASS run=compat-deepaudit2 constructionMapMutation fingerprintStable=true originalSnapshotAccepted=true brokerWireAccepted=true copiedMutationRejected=true
+11-03 16:27:08.612 21301 24212 I IpcCompatibilityProbe: PASS run=compat-deepaudit2 legacyFloor userFloor=2 userDenied=true echoFloor=1 echoAllowed=true
+11-03 16:27:08.638 21301 24212 I IpcCompatibilityProbe: PASS run=compat-deepaudit2 strictCache coldMetadata=1 coldChecked=1 hotCalls=100 additionalDiscovery=0 legacy=0
+11-03 16:27:08.647 21301 24268 I IpcCompatibilityProbe: PASS run=compat-deepaudit2 generationRevalidate metadata=2 checked=2 legacy=0 generationAdvanced=true
+11-03 16:27:08.656 21301 24268 I IpcCompatibilityProbe: PASS run=compat-deepaudit2 legacyMethodsMissing metadataRejected=true checkedRejected=true legacyEchoAlive=true
+11-03 16:27:08.657 21301 24268 I IpcCompatibilityProbe: PASS run=compat-deepaudit2 strictLegacyNoFallback explicitFailure=true metadataAttempts=1 checked=0 legacyFallbacks=0
+11-03 16:27:08.659 21301 24212 I IpcCompatibilityProbe: DONE run=compat-deepaudit2 passed=true checks=16 requests=0 subscriptions=0 pending=0
+11-03 16:27:08.660 21301 21301 I IpcForeground: STATE run=compat-deepaudit2 event=END elapsedRealtimeMs=34113948 uptimeMs=6074572 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:27:08.663 21301 21301 I IpcForeground: END run=compat-deepaudit2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-compat-deepaudit2.csv scope=activity_events_and_500ms_app_samples

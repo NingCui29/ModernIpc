@@ -1,36 +1,38 @@
-# ModernIpc 3.0.0-rc.2
+# ModernIpc 3.0.0-rc.3
 
-本次为预发行版，版本分支 `release/v3.0.0-rc.2`，Android versionCode 为 `30002`。本版本包含 Async 请求管理与可选调度扩展、公开依赖导出修复、自动验证门禁，以及对应源码、文档和实测证据。SDK 版本与 Binder wire protocol 分别管理。
+预发行版，版本分支 `release/v3.0.0-rc.3`，Android versionCode 为 `30003`。本次集中修复连接生命周期、生成代码、订阅清理与 API 21 兼容问题，并完善全量验证和外部 Maven 消费流程。
 
-## 本次变更
+## 变更
 
-- PendingCallRegistry 合并请求状态记录，保留原 Binder 取消、请求所有权与唯一终态。
-- IpcRequestTracker 合并请求记录，修复迟到死亡通知误取消复用 key 的后续请求，保留 UID/callback/requestId 隔离与 128 个在途许可。
-- 生成 Stub 增加可选 `asyncCoroutineScope`，默认回落原 `coroutineScope`；Flow 沿用原 scope，默认调度不变。
-- ipc-api 公开导出 contract、annotations、双端 runtime 和 coroutines；两端 runtime 导出其公开协程类型，修复外部 Maven 使用者缺少编译依赖。
-- 独立 Maven 消费工程覆盖 metadata/POM-only、API-only、自定义 Async+Flow KSP 契约与仅契约下游。
-- 27 项 host 状态机检查接入 Gradle `check`，日常与发布 CI 增加独立 Maven 消费门禁；Gradle wrapper 增加分发校验和。
-- 撤回原取消降噪建议，保留业务内部 timeout/主动 CancellationException 的错误终态；增加真实生成 Stub 的 9 项设备回归。
-- 补齐工程审计、架构与业务流程图、SDK 接入指南和 AndLinker 对比；上游固定提交 `7ae01bfd` 的 37 个 Java 文件保持原字节。
+- awaitConnected 绑定独立连接尝试，关闭结束旧等待；重试耗尽明确失败，新尝试不受旧终态影响。
+- Binder 死亡遵循零次/有限重连预算；DeadObjectException 带消息构造器增加 API 23 守卫。
+- KSP 隔离框架与业务参数名，保留原业务参数诊断；拒绝不支持的嵌套门面并给出明确错误。
+- Flow 业务取消保留错误原因；事件 transact 失败停止生产并进入终态清理。
+- 订阅旧代次按记录身份清理，死亡监听解绑及用户回调置于管理锁外；注册表原子注册、关闭后拒绝注册并锁外去重释放。
+- 冷发现最多 4 个执行线程＋4 个排队任务，取消/失效回收排队容量；保留严格双 RPC 校验。
+- Broker 复用鉴权对象并去掉无用身份分配，逐事务鉴权保留，没有永久 UID 放行缓存。
+- 兼容旧 Android 的锁屏检测、原子操作、统计采样与日志标签；明确 Parcelable 版本下限和字段演进边界。
+- Java 17 启动/测试约束；verify/release 使用全量子模块 check；Maven 消费脚本自动探测根 local.properties SDK。
+- 更新架构、SDK、审计、回归文档及真实成功/失败证据。
 
 ## 全部交付物
 
-- 六 SDK：ipc-annotations、ipc-compiler、ipc-contract、ipc-runtime-client、ipc-runtime-server、ipc-api。
-- 示例共用 AAR：demo-client-common。
-- 六个同签名 Debug APK：demo-app、app-server、app-client1/2/3、benchmark-andlinker。AndLinker APK 仅用于受控对照测量。
-- 七模块主制品、sources/javadoc、POM/Gradle metadata，Maven 仓库 ZIP、完整源码 ZIP、仓库证据 ZIP、manifest 和 SHA256SUMS。
-- 额外完整证据附件 `ModernIpc-3.0.0-rc.2-evidence-full.zip`、逐文件 manifest 和独立校验清单，保留本地历史 APK、Perfetto、原始日志及失败尝试；历史测试按各自源码和 APK SHA 解释。
+六 SDK：ipc-annotations、ipc-compiler、ipc-contract、ipc-runtime-client、ipc-runtime-server、ipc-api；示例共用库 demo-client-common。交付七模块主制品、sources/javadoc、POM/Gradle metadata，以及六个同签名 Debug APK（demo-app、app-server、app-client1/2/3、benchmark-andlinker）。
 
-Maven 坐标：`com.modernipc:<module>:3.0.0-rc.2`。仓库：`https://maven.pkg.github.com/NingCui29/ModernIpc`，下载需要具有 `read:packages` 权限的 GitHub 凭据。
+Release 附带 Maven 仓库、源码、仓库证据、manifest 与 SHA256SUMS。额外完整历史证据 ZIP 含本地保留的 APK、原始日志、Perfetto 和失败尝试，附逐文件清单及独立校验和。
 
-## 验证与性能范围
+坐标：`com.modernipc:<module>:3.0.0-rc.3`。Maven 仓库为 https://maven.pkg.github.com/NingCui29/ModernIpc ，下载需要具有 read:packages 权限的 GitHub 凭据。
 
-发布前工作区 APK `D0E76D896BDC3F0C9F01E14073F34201FFE79BFC6B07106E7885EA4181F28A9A` 仅在小米 `925c23bb` 上通过原框架 73 项、独立 scope 4 项、新增生成 Stub 业务异常终态 9 项；同 UID 鉴权微测独立记录。27 项 host 与独立 Maven 两种解析消费也通过。首次锁屏/Dozing 未开始业务测试的记录保留。
+## 验证范围
 
-四轮性能对照绑定此前 `4F7ED116...` APK：请求管理改动没有稳定串行 RTT 收益；可选专用 scope 部分 P50 改善，但 P99 波动，仍慢于本轮 AndLinker enqueue。enqueue 测量包含等待回调完成与结果校验。该性能结论不移用于新版本 APK。
+11/03 发布前工作区完整 check 通过，包含 27 项状态机和 debug/release 各 16 组 Robolectric；13 项 Python 回归通过。无 SDK 环境变量/无 --android-sdk 参数的 metadata、POM-only 消费与嵌套接口负例全部通过。
 
-最终发布构建、七模块远端制品与附件核验见对应 Actions 和 `docs/releases/v3.0.0-rc.2/`；本版本新 APK 的设备状态按该目录实际记录，四个跨 App 业务场景仍未完成设备验收。
+小米 925c23bb 上的 86 项回归绑定 APK SHA256 `BEC94D05275485B8EB6542D74A5A6C77D1E920AA6D4A7287E8B79A7464C4FD66`。此前四 App 跨 UID 冷启动冒烟通过注册/订阅门禁，但不证明每项业务消息投递。原始失败记录保留。
+
+这些历史设备结果不迁移至版本升级或 CI 重新签名后的 APK。发布 APK 的设备验证状态为 NOT_RUN，API 21/22 仅有静态兼容检查；本次无新 AndLinker 性能对照或跨 UID 延迟结论。远端构建、七库发布及附件校验以 Actions 和 docs/releases/v3.0.0-rc.3 为准。
 
 ## 兼容与迁移
 
-重新运行 KSP 才能获得新的 Stub 扩展点。checked Schema、契约版本比较、鉴权和原取消/终态协议保持；旧 Broker 缺少能力时明确失败。业务取消不回滚副作用，已开始的同步 Binder 不能强制中断；Direct/Oneway 与 Async 的取消和容量语义不同。Parcelable 字段布局仍由应用维护。四个多 App 示例仅保存 Activity 内存状态，不提供离线可靠投递、持久化或硬件执行保证。
+双方重新运行 KSP 才能获得生成代码修复。公开方法参数名和既有 wire 格式保持；已生成错误代码需要重新编译升级。辅助注册表 dispose 后不再接收注册，重复 dispose 不承诺等待其他并发释放完成；broadcast 忽略 RemoteException，其他异常继续向调用方传播。
+
+同步 Binder 调用不能可靠强制中断。Flow 的本地 buffer 配置不等于跨进程信用式背压；通道失效时无法保证终态送达。Parcelable 字段布局仍由业务维护，破坏性变更须保留旧编码/新事务，或提高服务允许的最低客户端契约版本。

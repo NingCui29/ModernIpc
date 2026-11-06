@@ -1,6 +1,6 @@
 # 验证索引
 
-核对日期：2026-10-22。测试限定 **Xiaomi 14 Ultra / `925c23bb`**。本目录将按日期拆分的报告归总为三份；原始输出仍按实际采集日期保留，不修改运行身份或跨版本合算结果。
+核对日期：2026-10-30。真机测试限定 **Xiaomi 14 Ultra / `925c23bb`**。本目录将按日期拆分的报告归总为三份；原始输出仍按实际采集日期保留，不修改运行身份或跨版本合算结果。
 
 ## 按问题阅读
 
@@ -16,6 +16,7 @@
 
 | 构建身份 / 时点 | 已有证据 | 未完成的证明 |
 | --- | --- | --- |
+| 10/30 未发布源码修复 | [主机与独立消费者验证](runs/2026-10-30-host-corrections/verification.json)，覆盖生成参数、死亡重连预算、Flow 错误分类及辅助订阅清理。 | 小米、跨进程 Binder、性能和远端 CI 为 NOT_RUN。 |
 | 发布预览 3.0.0-rc.2 / 10/22 | [远端发布核验](../releases/v3.0.0-rc.2/publication-result.json)：七库、六 APK 与 49 附件；CI success，35 Maven 文件及 Release 附件 SHA 校验。 | 新发布 APK 真机与业务场景 NOT_RUN；D0E76 的 73+4+9、4F7ED 的性能保留原身份。 |
 | 工程修复候选 / `D0E76D89...` / 10/22 | [新包73+4+9项小米回归及authmicro](runs/2026-10-22-xiaomi14ultra/engineering-regression2/summary.json)；[174源码身份与125task构建](runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/build-result.json)；[六SDK隔离Maven消费与27项host](runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/archive.json)。首次锁屏未开始的运行保留。 | 新包性能与四App业务未测，远端CI未执行；未覆盖旧RC1制品或发布新版本。 |
 | Async 工作区候选 / `4F7ED116...` / 10/21–22 | [73项框架+4项独立scope及authmicro](runs/2026-10-21-xiaomi14ultra/async-regression1/summary.json)；[四轮64,000次对照](runs/2026-10-22-xiaomi14ultra/async-compare1/comparison.json)；[同APK16并发](runs/2026-10-22-xiaomi14ultra/async-dispatch1/evidence.json)。 | 默认请求管理无稳定RTT收益；专用scope P99不稳定，本轮未追平AndLinker。四App业务仍未验收，API未发布。 |

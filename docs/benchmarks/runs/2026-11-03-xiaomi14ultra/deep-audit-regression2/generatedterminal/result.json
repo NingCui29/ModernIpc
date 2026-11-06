@@ -1,0 +1,75 @@
+{
+  "group": "generatedterminal",
+  "tag": "IpcGeneratedTerminal",
+  "expectedPasses": 9,
+  "runId": "generatedterminal-deepaudit2",
+  "status": "PASSED",
+  "valid": true,
+  "passCount": 9,
+  "doneCount": 1,
+  "foregroundEndCount": 1,
+  "complete": true,
+  "errors": [],
+  "passes": [
+    "PASS run=generatedterminal-deepaudit2 dispatch=default path=raw scenario=__business_timeout__ terminals=1 requests=0",
+    "PASS run=generatedterminal-deepaudit2 dispatch=default path=adapter scenario=__business_timeout__ elapsedMs=85 pending=0 requests=0",
+    "PASS run=generatedterminal-deepaudit2 dispatch=default path=raw scenario=__business_cancel__ terminals=1 requests=0",
+    "PASS run=generatedterminal-deepaudit2 dispatch=default path=adapter scenario=__business_cancel__ elapsedMs=2 pending=0 requests=0",
+    "PASS run=generatedterminal-deepaudit2 dispatch=dedicated path=raw scenario=__business_timeout__ terminals=1 requests=0",
+    "PASS run=generatedterminal-deepaudit2 dispatch=dedicated path=adapter scenario=__business_timeout__ elapsedMs=89 pending=0 requests=0",
+    "PASS run=generatedterminal-deepaudit2 dispatch=dedicated path=raw scenario=__business_cancel__ terminals=1 requests=0",
+    "PASS run=generatedterminal-deepaudit2 dispatch=dedicated path=adapter scenario=__business_cancel__ elapsedMs=4 pending=0 requests=0",
+    "PASS run=generatedterminal-deepaudit2 defaultRestored=true pending=0 requests=0 subscriptions=0"
+  ],
+  "done": [
+    "DONE run=generatedterminal-deepaudit2 passed=true checks=9"
+  ],
+  "foregroundEnd": [
+    "END run=generatedterminal-deepaudit2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-generatedterminal-deepaudit2.csv scope=activity_events_and_500ms_app_samples"
+  ],
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 3,
+    "sampleCount": 1,
+    "requiredSampleCount": 0,
+    "durationMs": 593,
+    "maxGapMs": 502,
+    "observationMaxGapMs": 502,
+    "errors": [],
+    "sourceSha256": "E06DFD5B3BE526D6941CD719A589357E1C8974EFE2D92A256D95BF6E81B8A289",
+    "run": "generatedterminal-deepaudit2",
+    "csv": "foreground-generatedterminal-deepaudit2.csv"
+  },
+  "observed": {
+    "runId": "generatedterminal-deepaudit2",
+    "tag": "IpcGeneratedTerminal",
+    "passCount": 9,
+    "doneCount": 1,
+    "foregroundEndCount": 1,
+    "expectedPasses": 9,
+    "complete": true,
+    "valid": true,
+    "errors": [],
+    "passes": [
+      "PASS run=generatedterminal-deepaudit2 dispatch=default path=raw scenario=__business_timeout__ terminals=1 requests=0",
+      "PASS run=generatedterminal-deepaudit2 dispatch=default path=adapter scenario=__business_timeout__ elapsedMs=85 pending=0 requests=0",
+      "PASS run=generatedterminal-deepaudit2 dispatch=default path=raw scenario=__business_cancel__ terminals=1 requests=0",
+      "PASS run=generatedterminal-deepaudit2 dispatch=default path=adapter scenario=__business_cancel__ elapsedMs=2 pending=0 requests=0",
+      "PASS run=generatedterminal-deepaudit2 dispatch=dedicated path=raw scenario=__business_timeout__ terminals=1 requests=0",
+      "PASS run=generatedterminal-deepaudit2 dispatch=dedicated path=adapter scenario=__business_timeout__ elapsedMs=89 pending=0 requests=0",
+      "PASS run=generatedterminal-deepaudit2 dispatch=dedicated path=raw scenario=__business_cancel__ terminals=1 requests=0",
+      "PASS run=generatedterminal-deepaudit2 dispatch=dedicated path=adapter scenario=__business_cancel__ elapsedMs=4 pending=0 requests=0",
+      "PASS run=generatedterminal-deepaudit2 defaultRestored=true pending=0 requests=0 subscriptions=0"
+    ],
+    "done": [
+      "DONE run=generatedterminal-deepaudit2 passed=true checks=9"
+    ],
+    "foregroundEnd": [
+      "END run=generatedterminal-deepaudit2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-generatedterminal-deepaudit2.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}

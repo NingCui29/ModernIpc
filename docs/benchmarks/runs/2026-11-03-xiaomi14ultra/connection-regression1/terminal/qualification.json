@@ -1,0 +1,19 @@
+{
+  "valid": false,
+  "ruleVersion": "foreground-coverage-v1",
+  "targetSamplePeriodMs": 500,
+  "permittedMaxGapMs": 1000,
+  "scope": "activity_events_with_bounded_periodic_sample_coverage",
+  "observations": 5,
+  "sampleCount": 3,
+  "requiredSampleCount": 1,
+  "durationMs": 1822,
+  "maxGapMs": 505,
+  "observationMaxGapMs": 505,
+  "errors": [
+    "RuntimeError: Probe failure: FAILED run=terminal-nov03attempt1"
+  ],
+  "sourceSha256": "434203BD0E12A083A5DC19147540D1DF665A8A57DBC3872863A9B8BB61943946",
+  "run": "terminal-nov03attempt1",
+  "csv": "foreground-terminal-nov03attempt1.csv"
+}

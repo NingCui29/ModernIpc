@@ -187,5 +187,5 @@ object IpcGuardBenchmark {
             while (service.inspectActiveRequestCount() != 0) delay(2)
         }
 
-    private fun allocated(): Long? = Debug.getRuntimeStat("art.gc.bytes-allocated")?.toLongOrNull()
+    private fun allocated(): Long? = (if (android.os.Build.VERSION.SDK_INT >= 23) Debug.getRuntimeStat("art.gc.bytes-allocated")?.toLongOrNull() else null)
 }

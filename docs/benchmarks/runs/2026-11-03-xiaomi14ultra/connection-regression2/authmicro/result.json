@@ -1,0 +1,95 @@
+{
+  "group": "authmicro",
+  "tag": "IpcAuthMicro",
+  "expectedPasses": 0,
+  "runId": "authmicro-nov03attempt2",
+  "status": "PASSED",
+  "valid": true,
+  "passCount": 0,
+  "doneCount": 1,
+  "foregroundEndCount": 1,
+  "complete": true,
+  "errors": [],
+  "authProbe": {
+    "timeCount": 4,
+    "allocationCount": 4,
+    "doneCount": 1,
+    "timings": [
+      "TIME batch=0 mode=legacy count=50000 wallNs=81715365 cpuNs=81204225",
+      "TIME batch=1 mode=optimized count=50000 wallNs=19876146 cpuNs=19789216",
+      "TIME batch=2 mode=optimized count=50000 wallNs=16323125 cpuNs=16242607",
+      "TIME batch=3 mode=legacy count=50000 wallNs=35034948 cpuNs=34806092"
+    ],
+    "allocations": [
+      "ALLOC batch=0 mode=legacy count=50000 beforeBytes=12951400 afterBytes=16162664 bytes=3211264 gc=0",
+      "ALLOC batch=1 mode=optimized count=50000 beforeBytes=16162664 afterBytes=16162664 bytes=0 gc=0",
+      "ALLOC batch=2 mode=optimized count=50000 beforeBytes=16162664 afterBytes=16162664 bytes=0 gc=0",
+      "ALLOC batch=3 mode=legacy count=50000 beforeBytes=16162664 afterBytes=19357544 bytes=3194880 gc=0"
+    ],
+    "done": [
+      "DONE sameUid=true countPerBatch=50000"
+    ]
+  },
+  "passes": [],
+  "done": [
+    "DONE sameUid=true countPerBatch=50000"
+  ],
+  "foregroundEnd": [
+    "END run=authmicro-nov03attempt2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-authmicro-nov03attempt2.csv scope=activity_events_and_500ms_app_samples"
+  ],
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 2,
+    "sampleCount": 0,
+    "requiredSampleCount": 0,
+    "durationMs": 263,
+    "maxGapMs": 263,
+    "observationMaxGapMs": 263,
+    "errors": [],
+    "sourceSha256": "D8DB8726DA17BF3B8009D3705F696FE3D78D171B8D8F2AAC4C11BDE6D855216F",
+    "run": "authmicro-nov03attempt2",
+    "csv": "foreground-authmicro-nov03attempt2.csv"
+  },
+  "observed": {
+    "runId": "authmicro-nov03attempt2",
+    "tag": "IpcAuthMicro",
+    "passCount": 0,
+    "doneCount": 1,
+    "foregroundEndCount": 1,
+    "expectedPasses": 0,
+    "complete": true,
+    "valid": true,
+    "errors": [],
+    "authProbe": {
+      "timeCount": 4,
+      "allocationCount": 4,
+      "doneCount": 1,
+      "timings": [
+        "TIME batch=0 mode=legacy count=50000 wallNs=81715365 cpuNs=81204225",
+        "TIME batch=1 mode=optimized count=50000 wallNs=19876146 cpuNs=19789216",
+        "TIME batch=2 mode=optimized count=50000 wallNs=16323125 cpuNs=16242607",
+        "TIME batch=3 mode=legacy count=50000 wallNs=35034948 cpuNs=34806092"
+      ],
+      "allocations": [
+        "ALLOC batch=0 mode=legacy count=50000 beforeBytes=12951400 afterBytes=16162664 bytes=3211264 gc=0",
+        "ALLOC batch=1 mode=optimized count=50000 beforeBytes=16162664 afterBytes=16162664 bytes=0 gc=0",
+        "ALLOC batch=2 mode=optimized count=50000 beforeBytes=16162664 afterBytes=16162664 bytes=0 gc=0",
+        "ALLOC batch=3 mode=legacy count=50000 beforeBytes=16162664 afterBytes=19357544 bytes=3194880 gc=0"
+      ],
+      "done": [
+        "DONE sameUid=true countPerBatch=50000"
+      ]
+    },
+    "passes": [],
+    "done": [
+      "DONE sameUid=true countPerBatch=50000"
+    ],
+    "foregroundEnd": [
+      "END run=authmicro-nov03attempt2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-authmicro-nov03attempt2.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}

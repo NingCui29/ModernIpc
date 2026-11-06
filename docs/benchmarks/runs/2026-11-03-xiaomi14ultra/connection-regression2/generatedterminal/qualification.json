@@ -1,0 +1,17 @@
+{
+  "valid": true,
+  "ruleVersion": "foreground-coverage-v1",
+  "targetSamplePeriodMs": 500,
+  "permittedMaxGapMs": 1000,
+  "scope": "activity_events_with_bounded_periodic_sample_coverage",
+  "observations": 3,
+  "sampleCount": 1,
+  "requiredSampleCount": 0,
+  "durationMs": 601,
+  "maxGapMs": 501,
+  "observationMaxGapMs": 501,
+  "errors": [],
+  "sourceSha256": "8B7FE633D9904770A5EFC5CB9C6CC10C53E8F7C10DFC164F7BFCAE1B4696C61B",
+  "run": "generatedterminal-nov03attempt2",
+  "csv": "foreground-generatedterminal-nov03attempt2.csv"
+}

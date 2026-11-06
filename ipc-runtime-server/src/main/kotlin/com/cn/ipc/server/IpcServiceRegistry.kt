@@ -44,7 +44,9 @@ interface IpcServiceRegistry {
  * 提供注册、获取服务及查询版本的功能。
  */
 class DefaultIpcServiceRegistry : IpcServiceRegistry {
-    // 使用 Map 存储已注册的服务，Key 为 serviceId
+    private val lock = Any()
+    private var closed = false
+    // All access is serialized; disposal callbacks execute outside this lock.
     private val services = mutableMapOf<Int, RegisteredService>()
 
     /**
@@ -53,7 +55,8 @@ class DefaultIpcServiceRegistry : IpcServiceRegistry {
      * @param service 待注册的 [RegisteredService] 对象
      * @throws IllegalArgumentException 如果对应的 serviceId 已经被注册过，则抛出异常
      */
-    fun register(service: RegisteredService) {
+    fun register(service: RegisteredService) = synchronized(lock) {
+        check(!closed) { "IPC service registry is closed" }
         require(service.apiVersion >= 1 && service.minSupportedClientVersion in 1..service.apiVersion)
         require(!services.containsKey(service.serviceId)) {
             "ServiceId ${service.serviceId} is already registered."
@@ -67,17 +70,15 @@ class DefaultIpcServiceRegistry : IpcServiceRegistry {
      * @param serviceId 需要查询的服务标识
      * @return 返回对应的 [RegisteredService] 实例，如果未找到则返回 null
      */
-    override fun get(serviceId: Int): RegisteredService? {
-        return services[serviceId]
-    }
+    override fun get(serviceId: Int): RegisteredService? = synchronized(lock) { services[serviceId] }
     
     /**
      * 获取所有已注册服务的版本信息，主要用于组装握手时的 [ProtocolInfo]。
      *
      * @return 返回一个以 serviceId 为键，以 apiVersion 为值的 Map
      */
-    fun getServiceVersions(): Map<Int, Int> {
-        return services.mapValues { it.value.apiVersion }
+    fun getServiceVersions(): Map<Int, Int> = synchronized(lock) {
+        services.mapValues { it.value.apiVersion }
     }
 
     /** Release every registered lifecycle owner even if another owner fails to dispose. */
@@ -85,8 +86,13 @@ class DefaultIpcServiceRegistry : IpcServiceRegistry {
         val owners = java.util.Collections.newSetFromMap(
             java.util.IdentityHashMap<IpcServiceLifecycle, Boolean>()
         )
-        services.values.forEach { service ->
-            (service.binder as? IpcServiceLifecycle)?.let { owners.add(it) }
+        synchronized(lock) {
+            if (closed) return
+            closed = true
+            services.values.forEach { service ->
+                (service.binder as? IpcServiceLifecycle)?.let { owners.add(it) }
+            }
+            services.clear()
         }
         var failure: Throwable? = null
         owners.forEach { owner ->

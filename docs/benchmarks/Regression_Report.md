@@ -212,7 +212,7 @@ Flow 标准异常头与终态升级要求双方同步升级；没有为旧客户
 
 ### 5.1 已修复与已测的冷发现路径
 
-旧生成 Async 在调用线程同步发现 Broker，截止尚未开始；远程 RPC 位于缓存 `compute` 中，关闭 `clear` 可能等待同一 bin monitor，进而推迟解绑和 failAll。修复后的 [ServiceDiscoveryCache](../../ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/ServiceDiscoveryCache.kt) 让远程发现脱离 compute/Controller Mutex，按同代次同 Schema 合并 Flight；进程内最多 4 个发现 worker、无积压队列。关闭替换并作废捕获缓存容器，晚返回必须校验代次和 Flight 仍被需要。
+旧生成 Async 在调用线程同步发现 Broker，截止尚未开始；远程 RPC 位于缓存 `compute` 中，关闭 `clear` 可能等待同一 bin monitor，进而推迟解绑和 failAll。修复后的 [ServiceDiscoveryCache](../../ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/ServiceDiscoveryCache.kt) 让远程发现脱离 compute/Controller Mutex，按同代次同 Schema 合并 Flight；该历史版本进程内最多 4 个发现 worker、无积压队列（11/03 新增 4 个排队位置，见本文末尾新 APK 回归）。关闭替换并作废捕获缓存容器，晚返回必须校验代次和 Flight 仍被需要。
 
 | coldrelease 12 项中的场景 | `4494` 上的观察 |
 | --- | --- |
@@ -291,7 +291,7 @@ Perfetto 按真实事件 PID/TID 与两向 Binder flow 关联：1000 请求对�
 
 后续 run 使用 `foreground-coverage-v1`，目标 500 ms 采样、最长允许间隙 1000 ms，且生命周期、窗口焦点、interactive 与未锁屏条件有效；记录独立 dumpsys。该资格只证明已记录的应用/电源条件，不保证恒定 CPU 频率、无后台竞争或零 GC/JIT。无效记录保留，新运行用新目录。
 
-仍需补证的路径包括真实在途业务遭进程死亡、跨 UID 取消/权限变更、长期死亡监听与资源计数、历史 APK 升级矩阵、DTO 字段布局，以及 trace 的错误/取消/Flow 分支。`maxReconnectAttempts=0` 在初次绑定失败与连接后 Binder 死亡分支仍有契约不一致风险；握手 probe 的零次/有限重连只覆盖绑定过程，不能视为该死亡分支已收束。guard 到 transact、有效性检查到下一个 Binder RPC 的并发窗口仍需明确错误边界。
+仍需补证的路径包括真实在途业务遭进程死亡、跨 UID 取消/权限变更、长期死亡监听与资源计数、历史 APK 升级矩阵、DTO 字段布局，以及 trace 的错误/取消/Flow 分支。2026-10-30 源码已统一 `maxReconnectAttempts=0` 在绑定失败与 Binder 死亡分支的判断，并新增真实 Controller 的主机回调顺序测试；小米进程死亡验收仍未完成。历史握手 probe 的零次/有限重连只覆盖绑定过程。guard 到 transact、有效性检查到下一个 Binder RPC 的并发窗口仍需明确错误边界。
 
 ## 8. 复现与当前待验收顺序
 
@@ -347,3 +347,36 @@ python docs/benchmarks/harness/capture_cross_package_smoke.py --run-id crosspkgC
 ```
 
 跨包 smoke 不证明路由投递。会议、工单、配置与遥测的完整 UI/业务确认计划、具体边界与更多验收入口见[业务指南](../ModernIPC_Business_Interaction_Guide.md)及[多 App 报告](Multi_App_Report.md)。所有复测结果仍应绑定各自 APK/源码和运行条件，性能变化再按[性能报告](Performance_Report.md)的方法比较。
+
+
+## 2026-10-30 主机补充回归（未发布源码）
+
+生成参数命名、零次/有限重连、Flow 业务与生命周期终态、辅助订阅重入及旧代次清理的验证见[机器记录](runs/2026-10-30-host-corrections/verification.json)和[修复说明](../ModernIPC_Engineering_Audit.md#12-2026-10-30生成代码重连与订阅修复未发布)。使用真实 Kotlin 源码和 KSP 产物，Android 行为由 Robolectric/测试 Binder 模拟；不计入小米 PASS 数，不形成新的 AndLinker 性能结论。
+
+## 2026-11-03 小米连接尝试与终态回归（未发布源码）
+
+指定小米 925c23bb / 24031PN0DC 上完整通过 86 项断言：生命周期 22、终态 8、兼容 16、故障 6、冷发现 12、握手 9、独立作用域 4、生成终态 9。各组前台门禁有效；候选与执行前后拉取 APK 的 SHA-256 均为 `C4018EBC4AF682B86AB4C0C9599131F2AACDA8BFFEDBC5EBA9657D760CCAB71A`。
+
+握手组实际跨进程验证 awaitConnected 关闭/销毁失败、重试耗尽、显式新尝试和旧握手隔离，相关记录含 `awaitAttemptVerified=true`。最终 pending、blocked、watchdogs 均为 0。首轮在空参数诊断断言失败：预期 Missing payload，实际暴露生成局部变量名。修复生成器诊断文本后完整复跑，未放宽断言。
+
+[最终设备证据](runs/2026-11-03-xiaomi14ultra/connection-regression2/summary.json) · [首轮失败](runs/2026-11-03-xiaomi14ultra/connection-regression1/summary.json) · [构建与主机汇总](runs/2026-11-03-xiaomi14ultra/connection-fixes/summary.json)。主机 27 项状态机和 12 组 Robolectric 测试通过，包含解绑锁范围、广播异常策略定向检查。鉴权微测仅属本机内部路径采样，不是 AndLinker 对照或整体性能结论；本轮未发布。
+
+## 2026-11-03 深层审计修复回归（未发布源码）
+
+最终根 :check 通过 27 项状态机和 16 组 Robolectric 回归；demo 与 AndLinker 的 lintDebug 均 0 error，并将两项 Lint 加入 verify 工作流。新增定向主机用例覆盖竞争注册、锁外关闭回调和去重释放、生成 Stream 回调拒绝后停止生产/清理、Parcelable 契约版本下限、成功鉴权后撤销签名/包名时重新拒绝。主机签名结果由测试 Shadow 注入，不冒充真实设备签名更换。
+
+指定小米 925c23bb 的 [deep-audit-regression2](runs/2026-11-03-xiaomi14ultra/deep-audit-regression2/summary.json) 全部 86 项通过，候选与执行前后拉取 APK SHA 一致。冷发现组实际验证 4 个阻塞工作＋4 个排队，第 9 个被拒绝；取消排队等待者后新任务成功占用腾出的容量，放行 Broker 后全部完成，峰值阻塞 4，watchdogs=0。此前 [deep-audit-regression1](runs/2026-11-03-xiaomi14ultra/deep-audit-regression1/summary.json) 因测试页面未获得前台焦点而未开始，作为环境不合格记录保留。
+
+[四 App 冷启动冒烟](runs/2026-11-03-xiaomi14ultra/cross-package-smoke-deepaudit1/capture-result.json)通过：安装与构建包哈希核对、不同 UID 身份记录、三客户端 UI 与服务端注册/订阅记录均满足门禁。此结果不证明每项消息路由投递、不包含跨 UID 延迟 trace，也不是 AndLinker 性能对照。
+
+[汇总与本机日志](runs/2026-11-03-xiaomi14ultra/deep-audit-verification/summary.json)保留初次 Lint 发现以及中途测试编译失败、最终通过结果；API 21 只有静态兼容检查，未在非小米设备或模拟器实测。发布与远端 CI 未执行。
+
+## 2026-11-03 全量子模块检查与 SDK 自动探测补正
+
+此前根 `:check` 与两个 App 的 Lint 未覆盖 runtime-client 独立 Lint。补上 DeadObjectException(String) 的 API 23 守卫后，不带冒号的 `gradlew check` 全量检查通过（584 tasks，42s），包括 runtime-client Lint、27 项 host 状态机、debug/release 各 16 组 Robolectric。verify/release 工作流已改为全量入口，远端 CI 尚未执行。
+
+SDK 自动探测回归与原发布回归合计 13 项 Python 测试通过。清除验证进程的 ANDROID_HOME/ANDROID_SDK_ROOT，且不传 --android-sdk，实际使用根 local.properties 完成隔离 Maven 发布、metadata/POM-only 两种消费和嵌套门面负例。机器报告记录 androidSdkSource=local.properties:sdk.dir；负例内部 BUILD FAILED 为预期诊断，外层验证 PASSED/exit 0。仅发布到本机隔离文件仓库，没有上传 GitHub/Maven 远端。
+
+新 APK 在指定小米 925c23bb 上完整复跑 86 项通过，执行前后拉包 SHA 与候选一致，详见[设备证据](runs/2026-11-03-xiaomi14ultra/api21-sdk-regression1/summary.json)。小米高版本不覆盖 API 21/22 无参构造分支，低版本兼容依据为静态 Lint；不声称低版本实机已测。
+
+[全量检查与 Maven 日志汇总](runs/2026-11-03-xiaomi14ultra/api21-sdk-verification/summary.json)。报告中“服务端 Stream 未检查 transact 返回值”已过时；永久 UID 缓存与直接删除一次发现 RPC 仍未实施，理由见深层审计修复节。

@@ -274,7 +274,7 @@ object IpcColdDiscoveryProbe {
     }
 
     private suspend fun boundedSaturation(env: Environment) = supervisorScope {
-        val workers = List(5) { newController(env.context, env.owner) }
+        val workers = List(9) { newController(env.context, env.owner) }
         try {
             val connections = workers.map { it.awaitConnected(10_000) }
             env.reset()
@@ -282,13 +282,20 @@ object IpcColdDiscoveryProbe {
             val occupied = (0 until 4).map { index -> async { resolveEcho(workers[index], connections[index]) } }
             awaitCondition { env.read().let { it.activeBlocked == 4 && it.peakBlocked == 4 && it.entered == 4 } }
             check(env.read().let { it.metadata == 4 && it.checked == 0 && it.peakBlocked == 4 })
+            val queued = (4 until 8).map { index -> async(start = CoroutineStart.UNDISPATCHED) { resolveEcho(workers[index], connections[index]) } }
+            check(queued.none { it.isCompleted })
             val started = SystemClock.elapsedRealtime()
-            val rejected = runCatching { resolveEcho(workers[4], connections[4]) }.exceptionOrNull()
+            val rejected = runCatching { resolveEcho(workers[8], connections[8]) }.exceptionOrNull()
             val elapsed = SystemClock.elapsedRealtime() - started
             check(rejected != null && causes(rejected).any { it is RejectedExecutionException }) { "Missing bounded discovery rejection: $rejected" }
             check(elapsed < 1000 && env.read().metadata == 4)
+            queued.last().cancelAndJoin()
+            val replacement = async(start = CoroutineStart.UNDISPATCHED) { resolveEcho(workers[8], connections[8]) }
+            check(!replacement.isCompleted)
             env.release()
             occupied.awaitAll()
+            queued.dropLast(1).awaitAll()
+            replacement.await()
             env.awaitIdle()
             var recoveryRejections = 0
             withTimeout(2000) {
@@ -301,8 +308,8 @@ object IpcColdDiscoveryProbe {
                 }
             }
             check(IBenchmarkEchoServiceClientAdapter(workers[4]).echo("budget-recovered") == "budget-recovered")
-            check(env.read().let { it.metadata == 5 && it.checked == 5 && it.peakBlocked == 4 && it.watchdogs == 0 })
-            env.pass("boundedSaturation", "workerLimit=4 fifthRejected=true elapsedMs=$elapsed retrySucceeded=true recoveryRejections=$recoveryRejections peakBlocked=4", elapsed)
+            check(env.read().let { it.metadata == 8 && it.checked == 8 && it.peakBlocked == 4 && it.watchdogs == 0 })
+            env.pass("boundedSaturation", "workerLimit=4 queueLimit=4 ninthRejected=true queuedCancellationReclaimed=true elapsedMs=$elapsed retrySucceeded=true recoveryRejections=$recoveryRejections peakBlocked=4", elapsed)
         } finally {
             withContext(NonCancellable) {
                 env.release()

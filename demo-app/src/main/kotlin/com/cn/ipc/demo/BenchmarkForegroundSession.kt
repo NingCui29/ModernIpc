@@ -101,7 +101,7 @@ class BenchmarkForegroundSession(
         focused = activity.hasWindowFocus(),
         interactive = power.isInteractive,
         keyguardLocked = keyguard.isKeyguardLocked,
-        deviceLocked = keyguard.isDeviceLocked
+        deviceLocked = if (android.os.Build.VERSION.SDK_INT >= 22) keyguard.isDeviceLocked else keyguard.isKeyguardLocked
     )
 
     private data class Snapshot(

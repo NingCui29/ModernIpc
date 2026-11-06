@@ -1,4 +1,4 @@
-name: Verify source and host state machines
+name: Verify source, generated calls and host state machines
 
 on:
   push:
@@ -36,16 +36,19 @@ jobs:
       - name: Install required SDK components
         run: sdkmanager 'platforms;android-34' 'build-tools;34.0.0'
 
-      - name: Run Gradle verification gates
-        run: bash ./gradlew --console=plain --max-workers=2 :check
+      - name: Run verification across all subprojects
+        run: bash ./gradlew --console=plain --max-workers=2 check
 
       - name: Set up Python for independent Maven consumers
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
+      - name: Test release validation and SDK discovery
+        run: python -m unittest discover -s tests/release -v
+
       - name: Verify isolated Maven metadata and POM-only consumers
         run: python scripts/verify_maven_consumers.py --java-home "$JAVA_HOME" --android-sdk "$ANDROID_HOME"
 
       - name: State validation scope
-        run: echo 'Host state-machine and isolated Maven consumer gates passed. Android Binder and device performance were not tested.'
+        run: echo 'Host state-machine, Robolectric generated-call and isolated Maven consumer gates passed. Real cross-process Binder and device performance were not tested.'

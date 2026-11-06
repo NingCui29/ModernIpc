@@ -37,11 +37,11 @@ object IpcAuthProbe {
         }
         // Allocation statistics are process totals and sampled separately from timing.
         for ((index, legacy) in listOf(true, false, false, true).withIndex()) {
-            val beforeBytes = Debug.getRuntimeStat("art.gc.bytes-allocated")?.toLongOrNull()
-            val beforeGc = Debug.getRuntimeStat("art.gc.gc-count")?.toLongOrNull()
+            val beforeBytes = (if (android.os.Build.VERSION.SDK_INT >= 23) Debug.getRuntimeStat("art.gc.bytes-allocated")?.toLongOrNull() else null)
+            val beforeGc = (if (android.os.Build.VERSION.SDK_INT >= 23) Debug.getRuntimeStat("art.gc.gc-count")?.toLongOrNull() else null)
             checks(legacy, COUNT)
-            val afterBytes = Debug.getRuntimeStat("art.gc.bytes-allocated")?.toLongOrNull()
-            val afterGc = Debug.getRuntimeStat("art.gc.gc-count")?.toLongOrNull()
+            val afterBytes = (if (android.os.Build.VERSION.SDK_INT >= 23) Debug.getRuntimeStat("art.gc.bytes-allocated")?.toLongOrNull() else null)
+            val afterGc = (if (android.os.Build.VERSION.SDK_INT >= 23) Debug.getRuntimeStat("art.gc.gc-count")?.toLongOrNull() else null)
             val bytes = if (beforeBytes != null && afterBytes != null) afterBytes - beforeBytes else null
             val gc = if (beforeGc != null && afterGc != null) afterGc - beforeGc else null
             val mode = if (legacy) "legacy" else "optimized"

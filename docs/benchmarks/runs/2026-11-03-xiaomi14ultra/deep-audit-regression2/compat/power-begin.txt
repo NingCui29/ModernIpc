@@ -1,0 +1,1478 @@
+POWER MANAGER (dumpsys power)
+
+Power Manager State:
+  Settings power_manager_constants:
+    no_cached_wake_locks=true
+  mDirty=0x0
+  mWakefulness=Awake
+  mWakefulnessChanging=false
+  mIsPowered=true
+  mPlugType=1
+  mBatteryLevel=94
+  mDreamsBatteryLevelDrain=0
+  mDockState=0
+  mStayOn=false
+  mProximityPositive=false
+  mBootCompleted=true
+  mSystemReady=true
+  mEnhancedDischargeTimeElapsed=0
+  mLastEnhancedDischargeTimeUpdatedElapsed=0
+  mEnhancedDischargePredictionIsPersonalized=false
+  mUseAutoSuspend=true
+  mHalAutoSuspendModeEnabled=false
+  mHalInteractiveModeEnabled=true
+  mWakeLockSummary=0x0
+  mNotifyLongScheduled=+7s142ms
+  mNotifyLongDispatched=-51s235ms
+  mNotifyLongNextCheck=+7s142ms
+  mRequestWaitForNegativeProximity=false
+  mInterceptedPowerKeyForProximity=false
+  mSandmanScheduled=false
+  mBatteryLevelLow=false
+  mLightDeviceIdleMode=false
+  mDeviceIdleMode=false
+  mDeviceIdleWhitelist=[1000, 1001, 2000, 6101, 6102, 10085, 10086, 10089, 10127, 10128, 10129, 10137, 10140, 10142, 10143, 10157, 10163, 10164, 10165, 10166, 10167, 10170, 10177, 10180, 10185, 10187, 10190, 10203, 10204, 10205, 10216, 10219, 10231, 10237, 10238, 10252, 10259, 10260, 10261, 10264, 10269, 10270, 10272, 10274, 10275, 10276, 10279, 10312, 10359, 10374, 10385, 10464]
+  mDeviceIdleTempWhitelist=[1000, 1002, 10178]
+  mLowPowerStandbyActive=false
+  mLastWakeTime=4251590 (1823267 ms ago)
+  mLastSleepTime=4055346 (2019511 ms ago)
+  mLastSleepReason=timeout
+  mLastGlobalWakeTimeRealtime=32290983 (in 26216126 ms)
+  mLastGlobalSleepTimeRealtime=32094728 (in 26019871 ms)
+  mLastInteractivePowerHintTime=6074580 (277 ms ago)
+  mLastScreenBrightnessBoostTime=0 (6074857 ms ago)
+  mScreenBrightnessBoostInProgress=false
+  mHoldingWakeLockSuspendBlocker=false
+  mHoldingDisplaySuspendBlocker=true
+  mLastFlipTime=0
+  mIsFaceDown=false
+
+Settings and Configuration:
+  mDecoupleHalAutoSuspendModeFromDisplayConfig=true
+  mDecoupleHalInteractiveModeFromDisplayConfig=false
+  mWakeUpWhenPluggedOrUnpluggedConfig=true
+  mWakeUpWhenPluggedOrUnpluggedInTheaterModeConfig=false
+  mTheaterModeEnabled=false
+  mKeepDreamingWhenUnplugging=false
+  mSuspendWhenScreenOffDueToProximityConfig=false
+  mDreamsSupportedConfig=false
+  mDreamsEnabledByDefaultConfig=true
+  mDreamsActivatedOnSleepByDefaultConfig=false
+  mDreamsActivatedOnDockByDefaultConfig=true
+  mDreamsActivatedWhilePosturedByDefaultConfig=false
+  mDreamsEnabledOnBatteryConfig=false
+  mDreamsBatteryLevelMinimumWhenPoweredConfig=-1
+  mDreamsBatteryLevelMinimumWhenNotPoweredConfig=15
+  mDreamsBatteryLevelDrainCutoffConfig=5
+  mDreamsEnabledSetting=true
+  mDreamsActivateOnSleepSetting=false
+  mDreamsActivateOnDockSetting=true
+  mDreamsActivateWhilePosturedSetting=false
+  mDozeAfterScreenOff=true
+  mBrightWhenDozingConfig=false
+  mMinimumScreenOffTimeoutConfig=6000
+  mMaximumScreenDimDurationConfig=18000
+  mMaximumScreenDimRatioConfig=0.29999995
+  mAttentiveTimeoutConfig=-1
+  mAttentiveTimeoutSetting=-1
+  mAttentiveWarningDurationConfig=30000
+  mScreenOffTimeoutSetting=600000
+  mSleepTimeoutSetting=-1
+  mMaximumScreenOffTimeoutFromDeviceAdmin=9223372036854775807 (enforced=false)
+  mStayOnWhilePluggedInSetting=0
+  mUserActivityTimeoutOverrideFromWindowManager=-1
+  mUserInactiveOverrideFromWindowManager=false
+  mDozeScreenStateOverrideFromDreamManager=1
+  mDrawWakeLockOverrideFromSidekick=false
+  mDozeScreenBrightnessOverrideFromDreamManager=-1
+  mUseNormalBrightnessForDoze=false
+  mScreenBrightnessMinimum=8.54597E-4
+  mScreenBrightnessMaximum=1.0
+  mScreenBrightnessDefault=0.07496032
+  mDoubleTapWakeEnabled=false
+  mForegroundProfile=0
+  mUserId=0
+
+Attentive timeout: -1 ms
+Sleep timeout: -1 ms
+Screen off timeout: 600000 ms
+Screen dim duration: 18000 ms
+mScreenProjectionEnabled: false
+mHangUpEnabled: false
+mSynergyModeEnable: false
+mIsKeyguardHasShownWhenExitHangup: true
+mSituatedDimmingDueToSynergy: false
+mLastRequestDimmingTime: 0
+mPendingSetDirtyDueToRequestDimming: false
+mUserActivityTimeoutOverrideFromMirrorManager: -1
+mSituatedDimmingDueToAttention: false
+mTouchInteractiveUnavailable: false
+mIsPowerSuperSaveModeEnabled: false
+mIsPowerSaveModeEnabled: false
+mAlwaysOnEnabled: false
+mIsFullAod: false
+mIsSubFullAod: false
+mBeingHangUp: false
+mDisableRotationDueToHangUp: false
+
+mIsFreeFormOrSplitWindowMode: false
+
+UID states (changing=false changed=false):
+  UID 1000:   ACTIVE  count=0 state=0
+  UID 1001:   ACTIVE  count=0 state=0
+  UID 1002:   ACTIVE  count=0 state=0
+  UID 1027:   ACTIVE  count=0 state=0
+  UID 1068:   ACTIVE  count=0 state=0
+  UID 1073:   ACTIVE  count=0 state=0
+  UID 6101: INACTIVE  count=0 state=19
+  UID 6102: INACTIVE  count=0 state=19
+  UID 6110:   ACTIVE  count=0 state=19
+  UID u0a23: INACTIVE  count=0 state=19
+  UID u0a81:   ACTIVE  count=0 state=0
+  UID u0a83: INACTIVE  count=0 state=19
+  UID u0a85: INACTIVE  count=0 state=19
+  UID u0a88: INACTIVE  count=0 state=19
+  UID u0a89: INACTIVE  count=0 state=19
+  UID u0a93: INACTIVE  count=0 state=19
+  UID u0a96:   ACTIVE  count=0 state=15
+  UID u0a99: INACTIVE  count=0 state=19
+  UID u0a101: INACTIVE  count=0 state=19
+  UID u0a113:   ACTIVE  count=0 state=0
+  UID u0a118:   ACTIVE  count=0 state=0
+  UID u0a119: INACTIVE  count=0 state=19
+  UID u0a122: INACTIVE  count=0 state=19
+  UID u0a123: INACTIVE  count=0 state=19
+  UID u0a127:   ACTIVE  count=0 state=4
+  UID u0a128: INACTIVE  count=0 state=19
+  UID u0a129:   ACTIVE  count=0 state=3
+  UID u0a130: INACTIVE  count=0 state=19
+  UID u0a134:   ACTIVE  count=0 state=5
+  UID u0a135:   ACTIVE  count=0 state=5
+  UID u0a136: INACTIVE  count=0 state=19
+  UID u0a139:   ACTIVE  count=0 state=19
+  UID u0a140: INACTIVE  count=0 state=16
+  UID u0a142:   ACTIVE  count=0 state=5
+  UID u0a143:   ACTIVE  count=0 state=4
+  UID u0a150:   ACTIVE  count=0 state=0
+  UID u0a151: INACTIVE  count=0 state=19
+  UID u0a155: INACTIVE  count=0 state=19
+  UID u0a156: INACTIVE  count=0 state=19
+  UID u0a157:   ACTIVE  count=0 state=19
+  UID u0a159: INACTIVE  count=0 state=19
+  UID u0a160: INACTIVE  count=0 state=16
+  UID u0a162:   ACTIVE  count=0 state=5
+  UID u0a163: INACTIVE  count=0 state=19
+  UID u0a164:   ACTIVE  count=0 state=19
+  UID u0a165: INACTIVE  count=0 state=8
+  UID u0a166: INACTIVE  count=0 state=19
+  UID u0a167: INACTIVE  count=0 state=8
+  UID u0a168: INACTIVE  count=0 state=19
+  UID u0a170:   ACTIVE  count=0 state=19
+  UID u0a175: INACTIVE  count=0 state=19
+  UID u0a176:   ACTIVE  count=0 state=0
+  UID u0a177:   ACTIVE  count=0 state=5
+  UID u0a178:   ACTIVE  count=0 state=10
+  UID u0a180:   ACTIVE  count=0 state=19
+  UID u0a181:   ACTIVE  count=0 state=4
+  UID u0a182:   ACTIVE  count=0 state=5
+  UID u0a183:   ACTIVE  count=0 state=0
+  UID u0a184: INACTIVE  count=0 state=19
+  UID u0a185:   ACTIVE  count=0 state=5
+  UID u0a187:   ACTIVE  count=0 state=6
+  UID u0a189: INACTIVE  count=0 state=19
+  UID u0a190: INACTIVE  count=0 state=19
+  UID u0a195: INACTIVE  count=0 state=19
+  UID u0a203: INACTIVE  count=0 state=8
+  UID u0a216:   ACTIVE  count=0 state=0
+  UID u0a217:   ACTIVE  count=0 state=0
+  UID u0a219:   ACTIVE  count=0 state=0
+  UID u0a222: INACTIVE  count=0 state=19
+  UID u0a224:   ACTIVE  count=0 state=0
+  UID u0a226: INACTIVE  count=0 state=19
+  UID u0a229:   ACTIVE  count=0 state=6
+  UID u0a231: INACTIVE  count=0 state=10
+  UID u0a235: INACTIVE  count=0 state=19
+  UID u0a237: INACTIVE  count=0 state=19
+  UID u0a246:   ACTIVE  count=0 state=0
+  UID u0a249: INACTIVE  count=0 state=19
+  UID u0a250:   ACTIVE  count=0 state=3
+  UID u0a252: INACTIVE  count=0 state=19
+  UID u0a253: INACTIVE  count=0 state=19
+  UID u0a259: INACTIVE  count=0 state=19
+  UID u0a260: INACTIVE  count=0 state=19
+  UID u0a264: INACTIVE  count=0 state=19
+  UID u0a267: INACTIVE  count=0 state=19
+  UID u0a270: INACTIVE  count=0 state=19
+  UID u0a271: INACTIVE  count=0 state=19
+  UID u0a272: INACTIVE  count=0 state=19
+  UID u0a354: INACTIVE  count=0 state=19
+  UID u0a374:   ACTIVE  count=0 state=10
+  UID u0a376: INACTIVE  count=0 state=19
+  UID u0a382: INACTIVE  count=0 state=19
+  UID u0a396:   ACTIVE  count=0 state=2
+  UID u0a400:   ACTIVE  count=0 state=0
+  UID u0a409:   ACTIVE  count=0 state=5
+  UID u0a411: INACTIVE  count=0 state=19
+  UID u0a431: INACTIVE  count=0 state=19
+  UID u0a457: INACTIVE  count=0 state=19
+  UID u0i7:   ACTIVE  count=0 state=17
+  UID u999s1000:   ACTIVE  count=0 state=19
+  UID u999s1001:   ACTIVE  count=0 state=19
+  UID u999s1027:   ACTIVE  count=0 state=19
+  UID u999a129:   ACTIVE  count=0 state=10
+  UID u999a143:   ACTIVE  count=0 state=19
+  UID u999a184: INACTIVE  count=0 state=19
+  UID u999a249:   ACTIVE  count=0 state=19
+  UID u999a312: INACTIVE  count=0 state=10
+  UID u999i4: INACTIVE  count=0 state=10
+
+Looper state:
+  Looper (PowerManagerService, tid 71) {38ec852}
+    (MessageQueue is using Concurrent implementation)
+    State: android.os.MessageQueue$TimedParkStateNode@61e01d9
+    PriorityQueue Messages: 
+    AsyncPriorityQueue Messages: 
+    Message 1: { when=+406ms what=0 target=com.android.server.display.DualSensorPolicy$DualSensorPolicyHandler }
+    Message 2: { when=+829ms what=1 target=com.android.server.display.AutomaticBrightnessController$AutomaticBrightnessHandler }
+    Message 3: { when=+7s140ms what=4 target=android.os.Handler }
+    Message 4: { when=+9m17s143ms what=1 target=android.os.Handler }
+    (Total messages: 5, polling=true, quitting=false)
+    Dump time: 2026-11-03 16:27:08.946 GMT+08:00
+    Package: system_server
+    Current looper: Looper (PowerManagerService, tid=2836)
+
+
+Wake Locks: size=0
+
+Suspend Blockers: size=5
+  PowerManagerService.Booting: ref count=0 []
+  PowerManagerService.WakeLocks: ref count=0 []
+  PowerManagerService.Display: ref count=1 [holding display: (11-03 15:56:45.701)]
+  PowerManagerService.Broadcasts: ref count=0 []
+  PowerManagerService.WirelessChargerDetector: ref count=0 []
+
+Display Power: com.android.server.power.PowerManagerService$2@62d179e
+
+Battery saving stats:
+  Battery Saver is currently: OFF
+    Times full enabled: 0
+    Times adaptive enabled: 0
+  
+  Drain stats:
+                     Battery saver OFF                          ON
+  NonDoze NonIntr:     96m     96mAh(  2%)     59.5mAh/h          0m      0mAh(  0%)      0.0mAh/h
+             Intr:     29m    308mAh(  9%)    621.8mAh/h          0m      0mAh(  0%)      0.0mAh/h
+  Deep    NonIntr:    316m    118mAh(  2%)     22.4mAh/h          0m      0mAh(  0%)      0.0mAh/h
+             Intr:      0m      0mAh(  0%)      0.0mAh/h          0m      0mAh(  0%)      0.0mAh/h
+  Light   NonIntr:     88m     52mAh(  1%)     35.3mAh/h          0m      0mAh(  0%)      0.0mAh/h
+             Intr:      1m     15mAh(  0%)    571.9mAh/h          0m      0mAh(  0%)      0.0mAh/h
+
+Battery saver policy (*NOTE* they only apply when battery saver is ON):
+  Settings: battery_saver_constants
+    value: 
+  Settings: (overlay)
+    value: 
+  DeviceConfig: battery_saver
+    location_mode: 
+  mAccessibilityEnabled=true
+  mAutomotiveProjectionActive=false
+  mPolicyLevel=0
+  
+  Policy 'default full'
+    advertise_is_enabled=true
+    disable_vibration=false
+    disable_animation=false
+    defer_full_backup=true
+    defer_keyvalue_backup=true
+    enable_firewall=true
+    enable_datasaver=false
+    disable_launch_boost=false
+    enable_brightness_adjustment=false
+    adjust_brightness_factor=0.5
+    location_mode=3
+    force_all_apps_standby=true
+    force_background_check=true
+    disable_optional_sensors=true
+    disable_aod=true
+    soundtrigger_mode=0
+    enable_quick_doze=true
+    enable_night_mode=false
+  
+  Policy 'current full'
+    advertise_is_enabled=true
+    disable_vibration=false
+    disable_animation=false
+    defer_full_backup=true
+    defer_keyvalue_backup=true
+    enable_firewall=true
+    enable_datasaver=false
+    disable_launch_boost=false
+    enable_brightness_adjustment=false
+    adjust_brightness_factor=0.5
+    location_mode=3
+    force_all_apps_standby=true
+    force_background_check=true
+    disable_optional_sensors=true
+    disable_aod=true
+    soundtrigger_mode=0
+    enable_quick_doze=true
+    enable_night_mode=false
+  
+  Policy 'default adaptive'
+    advertise_is_enabled=false
+    disable_vibration=false
+    disable_animation=false
+    defer_full_backup=false
+    defer_keyvalue_backup=false
+    enable_firewall=false
+    enable_datasaver=false
+    disable_launch_boost=false
+    enable_brightness_adjustment=false
+    adjust_brightness_factor=1.0
+    location_mode=0
+    force_all_apps_standby=false
+    force_background_check=false
+    disable_optional_sensors=false
+    disable_aod=false
+    soundtrigger_mode=0
+    enable_quick_doze=false
+    enable_night_mode=false
+  
+  Policy 'current adaptive'
+    advertise_is_enabled=false
+    disable_vibration=false
+    disable_animation=false
+    defer_full_backup=false
+    defer_keyvalue_backup=false
+    enable_firewall=false
+    enable_datasaver=false
+    disable_launch_boost=false
+    enable_brightness_adjustment=false
+    adjust_brightness_factor=1.0
+    location_mode=0
+    force_all_apps_standby=false
+    force_background_check=false
+    disable_optional_sensors=false
+    disable_aod=false
+    soundtrigger_mode=0
+    enable_quick_doze=false
+    enable_night_mode=false
+  
+  Policy 'effective'
+    advertise_is_enabled=false
+    disable_vibration=false
+    disable_animation=false
+    defer_full_backup=false
+    defer_keyvalue_backup=false
+    enable_firewall=false
+    enable_datasaver=false
+    disable_launch_boost=false
+    enable_brightness_adjustment=false
+    adjust_brightness_factor=1.0
+    location_mode=0
+    force_all_apps_standby=false
+    force_background_check=false
+    disable_optional_sensors=false
+    disable_aod=false
+    soundtrigger_mode=0
+    enable_quick_doze=false
+    enable_night_mode=false
+
+Battery saver state machine:
+  Enabled=false
+    full=false
+    adaptive=false
+  mState=1
+  mLastChangedIntReason=0
+  mLastChangedStrReason=null
+  mBootCompleted=true
+  mSettingsLoaded=true
+  mBatteryStatusSet=true
+  mIsPowered=true
+  mBatteryLevel=94
+  mIsBatteryLevelLow=false
+  mSettingAutomaticBatterySaver=0
+  mSettingBatterySaverEnabled=false
+  mSettingBatterySaverEnabledSticky=false
+  mSettingBatterySaverStickyAutoDisableEnabled=true
+  mSettingBatterySaverStickyAutoDisableThreshold=90
+  mSettingBatterySaverTriggerThreshold=0
+  mBatterySaverStickyBehaviourDisabled=false
+  mBatterySaverTurnedOffNotificationEnabled=false
+  mDynamicPowerSavingsDefaultDisableThreshold=80
+  mDynamicPowerSavingsDisableThreshold=80
+  mDynamicPowerSavingsEnableBatterySaver=false
+  mLastAdaptiveBatterySaverChangedExternallyElapsed=0
+AttentionDetector:
+ mIsSettingEnabled=false
+ mMaxExtensionMillis=900000
+ mPreDimCheckDurationMillis=2000
+ mEffectivePostDimTimeout=0
+ mLastUserActivityTime(excludingAttention)=6074580
+ mAttentionServiceSupported=true
+ mRequested=false
+
+Profile power states: size=0
+Display Group User Activity:
+  displayGroupId=0
+  userActivitySummary=0x1
+  lastUserActivityTime=6050002 (24858 ms ago)
+  lastUserActivityTimeNoChangeLights=6074580 (280 ms ago)
+  mWakeLockSummary=0x0
+
+Wireless Charger Detector State:
+  mGravitySensor={Sensor name="gravity  Non-wakeup", vendor="QTI", version=1, type=9, maxRange=156.91, resolution=0.01, power=0.515, minDelay=5000}
+  mPoweredWirelessly=false
+  mAtRest=false
+  mRestX=0.0, mRestY=0.0, mRestZ=0.0
+  mDetectionInProgress=false
+  mDetectionStartTime=0 (never)
+  mMustUpdateRestPosition=false
+  mTotalSamples=0
+  mMovingSamples=0
+  mFirstSampleX=0.0, mFirstSampleY=0.0, mFirstSampleZ=0.0
+  mLastSampleX=0.0, mLastSampleY=0.0, mLastSampleZ=0.0
+Notifier:
+Partial Wakelock Log:
+Wake Lock Log
+  11-03 06:58:47.042 - 1001 (com.xiaomi.registration,...) - ACQ *job*r/com.android.phone/.FiveGCloudSyncJobService (partial)
+  11-03 08:16:32.342 - 10129 (com.google.android.gms,...) - ACQ *alarm* (partial)
+  11-03 08:20:59.900 - 10260 (com.android.deskclock) - ACQ *alarm* (partial)
+  11-03 08:20:59.918 - 10260 (com.android.deskclock) - ACQ DC:AlarmClock (partial)
+  11-03 08:20:59.954 - 10260 (com.android.deskclock) - ACQ *vibrator* (partial)
+  11-03 08:28:48.179 - 10163 (com.xiaomi.market) - ACQ *alarm* (partial)
+  11-03 08:35:25.340 - 10290 (com.autonavi.minimap) - ACQ *alarm* (partial)
+  11-03 08:36:07.343 - 10290 (com.autonavi.minimap) - ACQ *alarm* (partial)
+  11-03 12:15:42.359 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 12:17:31.395 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 12:21:26.338 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 12:22:33.338 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 12:25:20.333 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 12:27:34.330 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 12:29:15.359 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 12:30:29.330 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 12:32:35.328 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 12:33:09.715 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 12:37:05.317 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 12:41:01.317 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 12:42:38.316 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 12:44:55.373 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 12:45:44.302 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 12:47:39.319 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 12:48:51.362 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 12:52:40.342 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 12:56:41.344 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 12:57:41.307 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:00:36.314 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:02:42.312 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:04:30.334 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:07:43.291 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:08:26.337 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:12:20.333 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:15:45.343 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:16:16.282 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:17:47.338 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:20:11.339 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:22:48.360 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:24:05.334 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:27:49.326 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:28:01.276 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:31:55.289 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:31:55.528 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:31:55.734 - 1000 (System) - ACQ *job*r/android/com.android.server.MountServiceIdler (partial)
+  11-03 13:32:49.649 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:35:49.720 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:37:51.280 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:39:46.265 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:42:43.413 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:42:44.294 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:43:00.006 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:43:03.328 - 10140 (com.android.mms) - ACQ *launch* (partial)
+  11-03 13:43:05.508 - 10140 (com.android.mms) - ACQ *launch* (partial)
+  11-03 13:43:38.880 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:44:52.144 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:45:21.173 - 99910312 (com.tencent.mm) - ACQ StnManagerCallback (partial)
+  11-03 13:45:45.361 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:47:36.280 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:47:37.094 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:48:35.313 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:50:49.270 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:52:31.329 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:53:30.337 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:53:39.333 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:54:45.290 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:55:26.315 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 13:56:01.271 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:00:21.319 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:00:21.829 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:03:16.293 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:04:15.272 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:08:11.258 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:09:24.297 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:11:06.241 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:12:06.291 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:14:26.278 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:15:00.006 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:15:31.291 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:15:40.279 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:15:46.261 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:16:00.271 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:18:47.287 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:19:54.831 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:20:21.268 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:23:48.309 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:25:21.293 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:26:22.327 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:26:22.330 - 1000 (System) - ACQ deviceidle_maint (partial)
+  11-03 14:26:50.325 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:27:38.302 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:28:10.257 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:31:41.279 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:32:40.327 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:33:12.237 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:35:35.262 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:36:40.252 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:37:54.255 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:38:13.322 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:39:10.335 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:43:15.275 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:45:46.295 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:46:00.001 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:46:11.642 - 1000 (System) - ACQ updateTime:animationHelper (draw)
+  11-03 14:46:23.252 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:47:19.722 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:48:57.278 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:51:12.243 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:52:52.567 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:52:52.623 - 99910129 (com.google.android.gms,...) - ACQ *gms_scheduler*/c.g.a.g/.c.u.QosUploaderService (partial)
+  11-03 14:52:52.630 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:53:08.246 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:55:11.259 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:57:58.345 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 14:59:05.240 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:00:56.235 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:02:58.251 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:03:59.331 - 1000 (System) - ACQ deviceidle_maint (partial)
+  11-03 15:52:00.001 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:52:16.344 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:53:30.091 - 1000 (System) - ACQ dream:dream (partial)
+  11-03 15:53:30.202 - 1000 (System) - ACQ DozeService (partial)
+  11-03 15:53:30.250 - 1000 (System) - ACQ AODView (draw)
+  11-03 15:54:16.423 - 10261 (com.android.email) - ACQ *alarm* (partial)
+  11-03 15:54:46.451 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:55:16.464 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:55:46.493 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:56:06.038 - 99910129 (com.google.android.gms,...) - ACQ *gms_scheduler*/c.g.a.g/.c.u.QosUploaderService (partial)
+  11-03 15:56:16.524 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:56:45.691 - 1000 (System) - ACQ PhoneWindowManager.mPowerKeyWakeLock (partial)
+  11-03 15:56:45.802 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:56:46.556 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:57:00.000 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:57:16.572 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:57:46.592 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:57:58.038 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:58:00.001 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:58:13.041 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:58:14.923 - 1000 (System) - ACQ *launch* (partial)
+  11-03 15:58:15.558 - 1000 (System) - ACQ *launch* (partial)
+  11-03 15:58:15.936 - 1000 (System) - ACQ *launch* (partial)
+  11-03 15:58:16.613 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:58:46.562 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:58:46.616 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:59:00.006 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:59:16.624 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:59:39.068 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 15:59:46.647 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:00:00.004 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:00:16.672 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:00:46.695 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:01:00.014 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:01:16.716 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:01:44.722 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:01:46.730 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:01:51.388 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:02:00.005 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:02:16.747 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:02:45.507 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:02:46.762 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:03:00.014 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:03:16.786 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:03:46.806 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:04:00.005 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:04:16.820 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:04:46.843 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:04:56.682 - 10272 (com.miui.weather2) - ACQ *job*r/com.miui.weather2/androidx.work.impl.background.systemjob.SystemJobService (partial)
+  11-03 16:05:00.004 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:05:16.863 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:05:46.883 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:06:00.009 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:06:16.900 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:06:46.927 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:07:00.007 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:07:12.593 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:07:16.952 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:07:46.976 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:08:00.009 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:08:16.995 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:08:47.011 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:09:00.002 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:09:07.861 - 1041 - ACQ AudioMix (partial)
+  11-03 16:09:07.861 - 1041 - ACQ AudioMix (partial)
+  11-03 16:09:07.862 - 1041 - ACQ AudioMix (partial)
+  11-03 16:09:07.863 - 1041 - ACQ AudioMix (partial)
+  11-03 16:09:07.865 - 1041 - ACQ AudioMix (partial)
+  11-03 16:09:08.741 - 1041 - ACQ AudioMix (partial)
+  11-03 16:09:10.429 - 10261 (com.android.email) - ACQ *alarm* (partial)
+  11-03 16:09:17.026 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:09:47.043 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:10:00.009 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:10:17.071 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:10:35.083 - 10127 (com.xiaomi.aicr) - ACQ *telephony-radio* (partial)
+  11-03 16:10:47.092 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:11:00.012 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:11:17.117 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:11:47.143 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:12:00.006 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:12:17.161 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:12:47.189 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:13:00.009 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:13:17.205 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:13:31.054 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:13:31.061 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:13:31.072 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:13:31.073 - 1000 (System) - ACQ *telephony-radio* (partial)
+  11-03 16:13:31.079 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:13:47.220 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:14:00.004 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:14:17.248 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:14:28.215 - 99910312 (com.tencent.mm) - ACQ *alarm* (partial)
+  11-03 16:14:28.247 - 99910312 (com.tencent.mm) - ACQ MicroMsg.SyncService (partial)
+  11-03 16:14:28.318 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:14:28.429 - 99910312 (com.tencent.mm) - ACQ MicroMsg.MMAutoAuth (partial)
+  11-03 16:14:28.436 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:14:28.447 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:14:29.308 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:14:29.312 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  11-03 16:14:29.313 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:14:29.315 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:14:29.316 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  11-03 16:14:30.315 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  11-03 16:14:30.318 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:14:30.320 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:14:30.322 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  11-03 16:14:30.326 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  11-03 16:14:30.327 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:14:30.330 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:14:30.331 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  11-03 16:14:30.918 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:14:30.973 - 99910312 (com.tencent.mm) - REL MicroMsg.SyncService
+  11-03 16:14:31.330 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  11-03 16:14:31.333 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:14:31.336 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:14:31.338 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  11-03 16:14:31.341 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  11-03 16:14:31.343 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:14:31.346 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:14:31.347 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  11-03 16:14:31.389 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:14:31.397 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:14:47.282 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:14:47.294 - 1000 (System) - REL *alarm*
+  11-03 16:15:00.002 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:15:00.004 - 1000 (System) - REL *alarm*
+  11-03 16:15:01.447 - 99910312 (com.tencent.mm) - ACQ fiid-sync (partial)
+  11-03 16:15:03.666 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:15:03.693 - 1000 (System) - REL NetworkStats
+  11-03 16:15:17.294 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:15:17.325 - 1000 (System) - REL *alarm*
+  11-03 16:15:31.476 - 99910312 (com.tencent.mm) - REL fiid-sync
+  11-03 16:15:31.536 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:15:31.594 - 1000 (System) - REL NetworkStats
+  11-03 16:15:35.292 - 99910312 (com.tencent.mm) - ACQ MicroMsg.MMAutoAuth (partial)
+  11-03 16:15:35.302 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:15:35.306 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:15:35.310 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:15:35.797 - 99910312 (com.tencent.mm) - REL MicroMsg.MMAutoAuth
+  11-03 16:15:36.315 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  11-03 16:15:36.317 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:15:36.321 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:15:36.322 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  11-03 16:15:36.375 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:15:47.326 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:15:47.351 - 1000 (System) - REL *alarm*
+  11-03 16:15:48.189 - 10101 (com.mobiletools.systemhelper) - ACQ *alarm* (partial)
+  11-03 16:15:48.212 - 10101 (com.mobiletools.systemhelper) - REL *alarm*
+  11-03 16:16:00.010 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:16:00.013 - 1000 (System) - REL *alarm*
+  11-03 16:16:12.448 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:16:12.461 - 1000 (System) - REL NetworkStats
+  11-03 16:16:12.470 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:16:12.479 - 1000 (System) - REL NetworkStats
+  11-03 16:16:17.354 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:16:17.365 - 1000 (System) - REL *alarm*
+  11-03 16:16:26.102 - 10163 (com.xiaomi.market) - ACQ *alarm* (partial)
+  11-03 16:16:26.120 - 1000 (System) - REL *alarm*
+  11-03 16:16:26.122 - 1000 (System) - ACQ *job*r/com.miui.misightservice/.jobs.service.EventUploadJobService (partial)
+  11-03 16:16:26.125 - 1000 (System) - ACQ *job*r/com.miui.misightservice/.jobs.service.EventUploadJobService (partial)
+  11-03 16:16:26.129 - 1000 (System) - REL *job*r/com.miui.misightservice/.jobs.service.EventUploadJobService
+  11-03 16:16:26.129 - 1000 (System) - ACQ *job*r/com.miui.daemon/.performance.cloudcontrol.CloudControlSyncService (partial)
+  11-03 16:16:26.131 - 1000 (System) - ACQ *job*r/com.miui.daemon/.performance.cloudcontrol.CloudControlSyncService (partial)
+  11-03 16:16:26.133 - 1000 (System) - REL *job*r/com.miui.daemon/.performance.cloudcontrol.CloudControlSyncService
+  11-03 16:16:26.133 - 10163 (com.xiaomi.market) - ACQ *job*r/com.xiaomi.market/.business_core.update.manual.ManualUpdateScheduler (partial)
+  11-03 16:16:26.134 - 10163 (com.xiaomi.market) - ACQ *job*r/com.xiaomi.market/.business_core.update.manual.ManualUpdateScheduler (partial)
+  11-03 16:16:26.139 - 10163 (com.xiaomi.market) - REL *job*r/com.xiaomi.market/.business_core.update.manual.ManualUpdateScheduler
+  11-03 16:16:26.140 - 10159 (com.android.fileexplorer) - ACQ *job*r/com.android.fileexplorer/com.android.cloud.service.ReportCloudDriveSwitchStatusJobService (partial)
+  11-03 16:16:26.140 - 10159 (com.android.fileexplorer) - ACQ *job*r/com.android.fileexplorer/com.android.cloud.service.ReportCloudDriveSwitchStatusJobService (partial)
+  11-03 16:16:26.147 - 10159 (com.android.fileexplorer) - REL *job*r/com.android.fileexplorer/com.android.cloud.service.ReportCloudDriveSwitchStatusJobService
+  11-03 16:16:26.155 - 1000 (System) - REL *job*r/com.miui.misightservice/.jobs.service.EventUploadJobService
+  11-03 16:16:26.178 - 10163 (com.xiaomi.market) - REL *job*r/com.xiaomi.market/.business_core.update.manual.ManualUpdateScheduler
+  11-03 16:16:26.184 - 10159 (com.android.fileexplorer) - REL *job*r/com.android.fileexplorer/com.android.cloud.service.ReportCloudDriveSwitchStatusJobService
+  11-03 16:16:26.194 - 10163 (com.xiaomi.market) - ACQ NotificationManagerService:post:com.xiaomi.market (partial)
+  11-03 16:16:26.195 - 10163 (com.xiaomi.market) - REL NotificationManagerService:post:com.xiaomi.market
+  11-03 16:16:26.201 - 1000 (System) - REL *job*r/com.miui.daemon/.performance.cloudcontrol.CloudControlSyncService
+  11-03 16:16:31.537 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:16:31.571 - 1000 (System) - REL NetworkStats
+  11-03 16:16:47.369 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:16:47.388 - 1000 (System) - REL *alarm*
+  11-03 16:17:00.005 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:17:00.008 - 1000 (System) - REL *alarm*
+  11-03 16:17:04.967 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:17:04.968 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:17:04.968 - 10127 (com.xiaomi.aicr) - ACQ *telephony-radio* (partial)
+  11-03 16:17:04.979 - 10127 (com.xiaomi.aicr) - REL *telephony-radio*
+  11-03 16:17:04.979 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:17:04.980 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:17:16.531 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:17:16.557 - 1000 (System) - REL NetworkStats
+  11-03 16:17:17.389 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:17:17.403 - 1000 (System) - REL *alarm*
+  11-03 16:17:24.718 - 10187 (com.xiaomi.xmsf) - ACQ *alarm* (partial)
+  11-03 16:17:24.741 - 10187 (com.xiaomi.xmsf) - REL *alarm*
+  11-03 16:17:31.538 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:17:31.550 - 1000 (System) - REL NetworkStats
+  11-03 16:17:47.407 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:17:47.428 - 1000 (System) - REL *alarm*
+  11-03 16:18:00.012 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:18:00.015 - 1000 (System) - REL *alarm*
+  11-03 16:18:16.734 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:18:16.745 - 1000 (System) - REL *alarm*
+  11-03 16:18:17.427 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:18:17.451 - 1000 (System) - REL *alarm*
+  11-03 16:18:31.540 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:18:31.566 - 1000 (System) - REL NetworkStats
+  11-03 16:18:47.450 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:18:47.474 - 1000 (System) - REL *alarm*
+  11-03 16:18:55.023 - 10140 (com.android.mms) - ACQ *alarm* (partial)
+  11-03 16:18:55.044 - 10140 (com.android.mms) - REL *alarm*
+  11-03 16:19:00.006 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:19:00.010 - 1000 (System) - REL *alarm*
+  11-03 16:19:17.479 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:19:17.500 - 1000 (System) - REL *alarm*
+  11-03 16:19:31.536 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:19:31.589 - 1000 (System) - REL NetworkStats
+  11-03 16:19:47.502 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:19:47.510 - 1000 (System) - REL *alarm*
+  11-03 16:19:56.788 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:19:56.817 - 1000 (System) - REL NetworkStats
+  11-03 16:19:58.668 - 10167 (com.xiaomi.metoknlp) - ACQ com.xiaomi.location.c.c.e (partial)
+  11-03 16:19:58.690 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:19:58.691 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:19:58.691 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:19:58.701 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:19:58.702 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:19:58.702 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:19:59.651 - 1000 (System) - ACQ *job*r/android/com.android.server.notification.NotificationHistoryJobService (partial)
+  11-03 16:19:59.654 - 1000 (System) - ACQ *job*r/android/com.android.server.notification.NotificationHistoryJobService (partial)
+  11-03 16:19:59.658 - 1000 (System) - REL *job*r/android/com.android.server.notification.NotificationHistoryJobService
+  11-03 16:19:59.658 - 1000 (System) - ACQ *job*r/android/com.android.server.am.MemoryControlJobService (partial)
+  11-03 16:19:59.661 - 1000 (System) - ACQ *job*r/android/com.android.server.am.MemoryControlJobService (partial)
+  11-03 16:19:59.663 - 1000 (System) - REL *job*r/android/com.android.server.am.MemoryControlJobService
+  11-03 16:19:59.673 - 1000 (System) - REL *job*r/android/com.android.server.notification.NotificationHistoryJobService
+  11-03 16:19:59.680 - 1000 (System) - REL *job*r/android/com.android.server.am.MemoryControlJobService
+  11-03 16:20:00.004 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:20:00.008 - 1000 (System) - REL *alarm*
+  11-03 16:20:01.671 - 10167 (com.xiaomi.metoknlp) - REL com.xiaomi.location.c.c.e
+  11-03 16:20:03.710 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:03.712 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:03.712 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:20:03.724 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:20:03.724 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:03.726 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:08.752 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:08.753 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:08.753 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:20:08.766 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:20:08.767 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:08.767 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:09.715 - 99910312 (com.tencent.mm) - ACQ *alarm* (partial)
+  11-03 16:20:09.738 - 99910312 (com.tencent.mm) - REL *alarm*
+  11-03 16:20:13.792 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:13.793 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:13.793 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:20:13.807 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:20:13.808 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:13.809 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:17.512 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:20:17.534 - 1000 (System) - REL *alarm*
+  11-03 16:20:18.832 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:18.833 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:18.833 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:20:18.841 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:20:18.842 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:18.842 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:21.526 - 99910312 (com.tencent.mm) - ACQ MicroMsg.MMAutoAuth (partial)
+  11-03 16:20:21.535 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:20:21.538 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:20:21.543 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:20:21.555 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:20:21.609 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:20:21.620 - 1000 (System) - REL NetworkStats
+  11-03 16:20:21.678 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:20:22.029 - 99910312 (com.tencent.mm) - REL MicroMsg.MMAutoAuth
+  11-03 16:20:22.548 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  11-03 16:20:22.550 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:20:22.553 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:20:22.554 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  11-03 16:20:22.606 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:20:23.865 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:23.866 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:23.866 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:20:23.876 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:20:23.877 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:23.878 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:25.200 - 10187 (com.xiaomi.xmsf) - ACQ NotificationManagerService:post:com.xiaomi.smarthome (partial)
+  11-03 16:20:25.221 - 10187 (com.xiaomi.xmsf) - REL NotificationManagerService:post:com.xiaomi.smarthome
+  11-03 16:20:25.519 - 1000 (System) - ACQ RingtonePlayer (partial)
+  11-03 16:20:26.029 - 1000 (System) - ACQ *vibrator* (partial)
+  11-03 16:20:26.073 - 1000 (System) - REL RingtonePlayer
+  11-03 16:20:26.151 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:20:26.152 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:20:26.152 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:20:26.153 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:20:26.154 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:20:26.154 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:20:26.155 - 1041 (System) - ACQ AudioSpatial (partial)
+  11-03 16:20:26.163 - 1041 (System) - REL AudioMix
+  11-03 16:20:26.163 - 1000 (System) - ACQ AudioMix (partial)
+  11-03 16:20:26.587 - 99910312 (com.tencent.mm) - ACQ MicroMsg.MMAutoAuth (partial)
+  11-03 16:20:26.596 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:20:26.599 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:20:26.603 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:20:27.001 - 1000 (System) - REL *vibrator*
+  11-03 16:20:27.025 - 1000 (System) - REL AudioMix
+  11-03 16:20:27.025 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:20:27.090 - 99910312 (com.tencent.mm) - REL MicroMsg.MMAutoAuth
+  11-03 16:20:27.610 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  11-03 16:20:27.612 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:20:27.615 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:20:27.616 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  11-03 16:20:27.667 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:20:28.153 - 1041 (com.tencent.mm) - REL AudioMix
+  11-03 16:20:28.155 - 1041 (com.tencent.mm) - REL AudioSpatial
+  11-03 16:20:28.156 - 1041 (com.tencent.mm) - REL AudioMix
+  11-03 16:20:28.158 - 1041 (com.tencent.mm) - REL AudioMix
+  11-03 16:20:28.159 - 1041 (com.tencent.mm) - REL AudioMix
+  11-03 16:20:28.167 - 1041 (com.tencent.mm) - REL AudioMix
+  11-03 16:20:28.200 - 1000 (System) - ACQ SysUI:BroadcastSender (partial)
+  11-03 16:20:28.203 - 1000 (System) - ACQ RingtonePlayer (partial)
+  11-03 16:20:28.206 - 1000 (System) - REL RingtonePlayer
+  11-03 16:20:28.208 - 1000 (System) - REL SysUI:BroadcastSender
+  11-03 16:20:28.889 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:28.890 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:28.890 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:20:28.897 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:20:28.897 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:28.897 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:29.049 - 1041 (com.xiaomi.registration,...) - REL AudioMix
+  11-03 16:20:31.299 - 10219 (com.qti.phone,...) - ACQ QcrilOemhookMsgTunnel (partial)
+  11-03 16:20:31.307 - 10219 (com.qti.phone,...) - REL QcrilOemhookMsgTunnel
+  11-03 16:20:33.909 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:33.910 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:33.910 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:20:33.919 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:20:33.919 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:33.920 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:36.226 - 10219 (com.qti.phone,...) - ACQ QcrilOemhookMsgTunnel (partial)
+  11-03 16:20:36.235 - 10219 (com.qti.phone,...) - REL QcrilOemhookMsgTunnel
+  11-03 16:20:38.934 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:38.935 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:38.935 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:20:38.945 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:20:38.945 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:38.945 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:43.965 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:43.965 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:43.966 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:20:43.977 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:20:43.977 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:43.978 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:47.535 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:20:47.557 - 1000 (System) - REL *alarm*
+  11-03 16:20:49.002 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:49.003 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:49.003 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:20:49.016 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:20:49.016 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:49.016 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:54.035 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:54.036 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:54.036 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:20:54.047 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:20:54.048 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:54.049 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:59.066 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:59.067 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:20:59.067 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:20:59.078 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:20:59.078 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:20:59.079 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:21:00.009 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:21:00.012 - 1000 (System) - REL *alarm*
+  11-03 16:21:17.361 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:21:17.362 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:21:17.362 - 1000 (System) - ACQ *telephony-radio* (partial)
+  11-03 16:21:17.368 - 1000 (System) - REL *telephony-radio*
+  11-03 16:21:17.368 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:21:17.369 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:21:17.414 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:21:17.414 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:21:17.414 - 1000 (System) - ACQ *telephony-radio* (partial)
+  11-03 16:21:17.418 - 1000 (System) - REL *telephony-radio*
+  11-03 16:21:17.418 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:21:17.420 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:21:17.438 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:21:17.439 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:21:17.439 - 1000 (System) - ACQ *telephony-radio* (partial)
+  11-03 16:21:17.446 - 1000 (System) - REL *telephony-radio*
+  11-03 16:21:17.446 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:21:17.447 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:21:17.553 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:21:17.559 - 1000 (System) - REL *alarm*
+  11-03 16:21:19.718 - 10187 (com.xiaomi.xmsf) - ACQ *alarm* (partial)
+  11-03 16:21:19.740 - 10187 (com.xiaomi.xmsf) - REL *alarm*
+  11-03 16:21:31.539 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:21:31.565 - 1000 (System) - REL NetworkStats
+  11-03 16:21:35.095 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:21:35.118 - 1000 (System) - REL NetworkStats
+  11-03 16:21:47.564 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:21:47.585 - 1000 (System) - REL *alarm*
+  11-03 16:22:00.011 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:22:00.013 - 1000 (System) - REL *alarm*
+  11-03 16:22:17.586 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:22:17.601 - 1000 (System) - REL *alarm*
+  11-03 16:22:31.537 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:22:31.555 - 1000 (System) - REL NetworkStats
+  11-03 16:22:47.605 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:22:47.624 - 1000 (System) - REL *alarm*
+  11-03 16:23:00.010 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:23:00.011 - 1000 (System) - REL *alarm*
+  11-03 16:23:12.676 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:23:12.677 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:23:12.677 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:23:12.684 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:23:12.684 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:23:12.685 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:23:17.626 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:23:17.654 - 1000 (System) - REL *alarm*
+  11-03 16:23:25.102 - 10140 (com.android.mms) - ACQ *alarm* (partial)
+  11-03 16:23:25.119 - 10140 (com.android.mms) - REL *alarm*
+  11-03 16:23:31.537 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:23:31.564 - 1000 (System) - REL NetworkStats
+  11-03 16:23:47.655 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:23:47.671 - 1000 (System) - REL *alarm*
+  11-03 16:23:50.087 - 10261 (com.android.email) - ACQ *job*r/@SyncManager@com.android.email.provider/com.android.email:android (partial)
+  11-03 16:23:50.087 - 10261 (com.android.email) - ACQ *job*r/@SyncManager@com.android.email.provider/com.android.email:android (partial)
+  11-03 16:23:50.089 - 10261 (com.android.email) - REL *job*r/@SyncManager@com.android.email.provider/com.android.email:android
+  11-03 16:23:50.089 - 10261 (com.android.email) - ACQ *job*r/@SyncManager@com.android.email.provider/com.android.email:android (partial)
+  11-03 16:23:50.089 - 10261 (com.android.email) - ACQ *job*r/@SyncManager@com.android.email.provider/com.android.email:android (partial)
+  11-03 16:23:50.090 - 10261 (com.android.email) - REL *job*r/@SyncManager@com.android.email.provider/com.android.email:android
+  11-03 16:23:50.094 - 1000 (System) - ACQ SyncLoopWakeLock (partial)
+  11-03 16:23:50.096 - 1000 (System) - REL SyncLoopWakeLock
+  11-03 16:23:50.096 - 1000 (System) - ACQ SyncLoopWakeLock (partial)
+  11-03 16:23:50.097 - 10261 (com.android.email) - REL *job*r/@SyncManager@com.android.email.provider/com.android.email:android
+  11-03 16:23:50.106 - 1000 (System) - REL SyncLoopWakeLock
+  11-03 16:23:50.107 - 10261 (com.android.email) - REL *job*r/@SyncManager@com.android.email.provider/com.android.email:android
+  11-03 16:24:00.013 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:24:00.015 - 1000 (System) - REL *alarm*
+  11-03 16:24:08.311 - 99910312 (com.tencent.mm) - ACQ *alarm* (partial)
+  11-03 16:24:08.324 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:24:08.326 - 99910312 (com.tencent.mm) - ACQ MicroMsg.Alarm (partial)
+  11-03 16:24:08.329 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:24:08.330 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  11-03 16:24:08.332 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:24:08.333 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:24:08.334 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  11-03 16:24:08.336 - 99910312 (com.tencent.mm) - REL *alarm*
+  11-03 16:24:08.341 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  11-03 16:24:08.343 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:24:08.344 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:24:08.345 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  11-03 16:24:08.358 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:24:08.370 - 1000 (System) - REL NetworkStats
+  11-03 16:24:08.396 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  11-03 16:24:08.397 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:24:08.399 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:24:08.401 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  11-03 16:24:08.453 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:24:08.529 - 99910312 (com.tencent.mm) - REL MicroMsg.Alarm
+  11-03 16:24:08.837 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:24:14.578 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:24:14.602 - 1000 (System) - REL NetworkStats
+  11-03 16:24:17.676 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:24:17.688 - 1000 (System) - REL *alarm*
+  11-03 16:24:28.221 - 99910312 (com.tencent.mm) - ACQ *alarm* (partial)
+  11-03 16:24:28.240 - 99910312 (com.tencent.mm) - ACQ MicroMsg.Alarm (partial)
+  11-03 16:24:28.242 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:24:28.244 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  11-03 16:24:28.245 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:24:28.247 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:24:28.247 - 99910312 (com.tencent.mm) - ACQ MicroMsg.SyncService (partial)
+  11-03 16:24:28.248 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  11-03 16:24:28.250 - 99910312 (com.tencent.mm) - REL *alarm*
+  11-03 16:24:28.251 - 99910312 (com.tencent.mm) - ACQ MicroMsg.MMAutoAuth (partial)
+  11-03 16:24:28.257 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:24:28.259 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:24:28.260 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  11-03 16:24:28.262 - 99910312 (com.tencent.mm) - REL MicroMsg.MMAutoAuth
+  11-03 16:24:28.263 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:24:28.263 - 99910312 (com.tencent.mm) - ACQ MicroMsg.MMAutoAuth (partial)
+  11-03 16:24:28.265 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  11-03 16:24:28.292 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:24:28.294 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:24:28.330 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:24:28.447 - 99910312 (com.tencent.mm) - REL MicroMsg.Alarm
+  11-03 16:24:28.515 - 99910312 (com.tencent.mm) - REL MicroMsg.SyncService
+  11-03 16:24:28.750 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:24:28.766 - 99910312 (com.tencent.mm) - REL MicroMsg.MMAutoAuth
+  11-03 16:24:29.268 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  11-03 16:24:29.270 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:24:29.272 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:24:29.274 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  11-03 16:24:29.325 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:24:29.333 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  11-03 16:24:29.334 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:24:29.337 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:24:29.338 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  11-03 16:24:29.390 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:24:31.536 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:24:31.562 - 1000 (System) - REL NetworkStats
+  11-03 16:24:47.690 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:24:47.704 - 1000 (System) - REL *alarm*
+  11-03 16:25:00.010 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:25:00.013 - 1000 (System) - REL *alarm*
+  11-03 16:25:14.718 - 10187 (com.xiaomi.xmsf) - ACQ *alarm* (partial)
+  11-03 16:25:14.749 - 10187 (com.xiaomi.xmsf) - REL *alarm*
+  11-03 16:25:17.709 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:25:17.722 - 1000 (System) - REL *alarm*
+  11-03 16:25:31.535 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:25:31.547 - 1000 (System) - REL NetworkStats
+  11-03 16:25:46.945 - 1000 (System) - ACQ *launch* (partial)
+  11-03 16:25:47.003 - 10396 (com.cn.ipc.demo) - REL *launch*
+  11-03 16:25:47.013 - 1000 (System) - ACQ installer:packages (partial)
+  11-03 16:25:47.089 - 1000 (System) - REL installer:packages
+  11-03 16:25:48.502 - 10396 (com.cn.ipc.demo) - ACQ *launch* (partial)
+  11-03 16:25:48.830 - 10396 (com.cn.ipc.demo) - REL *launch*
+  11-03 16:25:51.267 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:25:51.289 - 1000 (System) - REL NetworkStats
+  11-03 16:26:00.009 - 1000 (System) - ACQ *alarm* (partial)
+  11-03 16:26:00.010 - 1000 (System) - REL *alarm*
+  11-03 16:26:05.748 - 10187 (com.xiaomi.xmsf) - ACQ NotificationManagerService:post:com.xiaomi.smarthome (partial)
+  11-03 16:26:05.769 - 10187 (com.xiaomi.xmsf) - REL NotificationManagerService:post:com.xiaomi.smarthome
+  11-03 16:26:06.034 - 1000 (System) - ACQ RingtonePlayer (partial)
+  11-03 16:26:06.540 - 1000 (System) - ACQ *vibrator* (partial)
+  11-03 16:26:06.582 - 1000 (System) - REL RingtonePlayer
+  11-03 16:26:06.661 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:26:06.662 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:26:06.665 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:26:06.667 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:26:06.668 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:26:06.668 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:26:06.669 - 1041 (System) - ACQ AudioSpatial (partial)
+  11-03 16:26:06.678 - 1041 (System) - REL AudioMix
+  11-03 16:26:06.678 - 1000 (System) - ACQ AudioMix (partial)
+  11-03 16:26:07.516 - 1000 (System) - REL *vibrator*
+  11-03 16:26:07.542 - 1000 (System) - REL AudioMix
+  11-03 16:26:07.542 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:26:08.668 - 1041 (System) - REL AudioMix
+  11-03 16:26:08.669 - 1041 (System) - REL AudioMix
+  11-03 16:26:08.670 - 1041 (System) - REL AudioMix
+  11-03 16:26:08.672 - 1041 (System) - REL AudioMix
+  11-03 16:26:08.673 - 1041 (System) - REL AudioSpatial
+  11-03 16:26:08.680 - 1041 (System) - REL AudioMix
+  11-03 16:26:09.602 - 1041 (System) - REL AudioMix
+  11-03 16:26:12.387 - 10219 (com.qti.phone,...) - ACQ QcrilOemhookMsgTunnel (partial)
+  11-03 16:26:12.397 - 10219 (com.qti.phone,...) - REL QcrilOemhookMsgTunnel
+  11-03 16:26:12.540 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:26:12.561 - 1000 (System) - REL NetworkStats
+  11-03 16:26:12.565 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:26:12.571 - 1000 (System) - REL NetworkStats
+  11-03 16:26:15.547 - 1000 (System) - ACQ RingtonePlayer (partial)
+  11-03 16:26:15.550 - 1000 (System) - REL RingtonePlayer
+  11-03 16:26:15.551 - 10178 (com.xiaomi.smarthome) - ACQ *launch* (partial)
+  11-03 16:26:15.815 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:26:15.827 - 1000 (System) - REL NetworkStats
+  11-03 16:26:15.831 - 10178 (com.xiaomi.smarthome) - REL *launch*
+  11-03 16:26:15.881 - 10178 (com.xiaomi.smarthome) - ACQ *launch* (partial)
+  11-03 16:26:15.962 - 10178 (com.xiaomi.smarthome) - REL *launch*
+  11-03 16:26:16.024 - 1000 (System) - ACQ SysUI:BroadcastSender (partial)
+  11-03 16:26:16.028 - 1000 (System) - REL SysUI:BroadcastSender
+  11-03 16:26:16.086 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:26:16.087 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:26:16.087 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:26:16.087 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:26:16.087 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:26:16.088 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:26:16.088 - 1041 (System) - ACQ AudioSpatial (partial)
+  11-03 16:26:16.308 - 10178 (com.xiaomi.smarthome) - ACQ *launch* (partial)
+  11-03 16:26:16.420 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:26:16.420 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:26:16.420 - 1000 (System) - ACQ *telephony-radio* (partial)
+  11-03 16:26:16.429 - 1000 (System) - REL *telephony-radio*
+  11-03 16:26:16.429 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:26:16.430 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:26:16.544 - 10178 (com.xiaomi.smarthome) - REL *launch*
+  11-03 16:26:16.859 - 10178 (com.xiaomi.smarthome) - ACQ MQTT:tag (partial)
+  11-03 16:26:16.859 - 10178 (com.xiaomi.smarthome) - REL MQTT:tag
+  11-03 16:26:17.244 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:26:17.318 - 1000 (System) - REL NetworkStats
+  11-03 16:26:17.678 - 10178 (com.xiaomi.smarthome) - ACQ g1a app.xiaomi:0_97ecb47c5ae4b4447558222574d27c on host ssl://cn.mqtt.io.mi.com:8883 (partial)
+  11-03 16:26:17.679 - 10178 (com.xiaomi.smarthome) - REL g1a app.xiaomi:0_97ecb47c5ae4b4447558222574d27c on host ssl://cn.mqtt.io.mi.com:8883
+  11-03 16:26:18.087 - 1041 (com.xiaomi.smarthome) - REL AudioSpatial
+  11-03 16:26:18.088 - 1041 (com.xiaomi.smarthome) - REL AudioMix
+  11-03 16:26:18.095 - 1041 (com.xiaomi.smarthome) - REL AudioMix
+  11-03 16:26:18.096 - 1041 (com.xiaomi.smarthome) - REL AudioMix
+  11-03 16:26:18.096 - 1041 (com.xiaomi.smarthome) - REL AudioMix
+  11-03 16:26:18.096 - 1041 (com.xiaomi.smarthome) - REL AudioMix
+  11-03 16:26:18.096 - 1041 (com.xiaomi.smarthome) - REL AudioMix
+  11-03 16:26:20.416 - 1041 (com.xiaomi.smarthome) - ACQ AudioMix (partial)
+  11-03 16:26:20.416 - 1041 (com.xiaomi.smarthome) - ACQ AudioMix (partial)
+  11-03 16:26:20.417 - 1041 (com.xiaomi.smarthome) - ACQ AudioMix (partial)
+  11-03 16:26:20.417 - 1041 (com.xiaomi.smarthome) - ACQ AudioMix (partial)
+  11-03 16:26:20.417 - 1041 (com.xiaomi.smarthome) - ACQ AudioMix (partial)
+  11-03 16:26:20.418 - 1041 (com.xiaomi.smarthome) - ACQ AudioMix (partial)
+  11-03 16:26:20.418 - 1041 (com.xiaomi.smarthome) - ACQ AudioSpatial (partial)
+  11-03 16:26:20.445 - 1041 (com.xiaomi.smarthome) - REL AudioMix
+  11-03 16:26:20.445 - 10178 (com.xiaomi.smarthome) - ACQ AudioMix (partial)
+  11-03 16:26:21.511 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:26:21.529 - 1000 (System) - REL NetworkStats
+  11-03 16:26:21.726 - 10178 (com.xiaomi.smarthome) - REL AudioMix
+  11-03 16:26:21.726 - 1041 (com.xiaomi.smarthome) - ACQ AudioMix (partial)
+  11-03 16:26:21.749 - 99910312 (com.tencent.mm) - ACQ MicroMsg.MMAutoAuth (partial)
+  11-03 16:26:21.756 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:26:21.758 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:26:21.762 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:26:22.212 - 10178 (com.xiaomi.smarthome) - ACQ *launch* (partial)
+  11-03 16:26:22.251 - 99910312 (com.tencent.mm) - REL MicroMsg.MMAutoAuth
+  11-03 16:26:22.296 - 10396 (com.cn.ipc.demo) - REL *launch*
+  11-03 16:26:22.372 - 1041 (com.cn.ipc.demo) - REL AudioMix
+  11-03 16:26:22.372 - 10178 (com.xiaomi.smarthome) - ACQ AudioMix (partial)
+  11-03 16:26:22.415 - 1041 (com.xiaomi.smarthome) - REL AudioMix
+  11-03 16:26:22.415 - 1041 (com.xiaomi.smarthome) - REL AudioMix
+  11-03 16:26:22.415 - 1041 (com.xiaomi.smarthome) - REL AudioMix
+  11-03 16:26:22.416 - 1041 (com.xiaomi.smarthome) - REL AudioSpatial
+  11-03 16:26:22.416 - 1041 (com.xiaomi.smarthome) - REL AudioMix
+  11-03 16:26:22.420 - 1041 (com.xiaomi.smarthome) - REL AudioMix
+  11-03 16:26:22.516 - 10178 (com.xiaomi.smarthome) - REL AudioMix
+  11-03 16:26:22.516 - 1041 (com.xiaomi.smarthome) - ACQ AudioMix (partial)
+  11-03 16:26:22.605 - 1041 (com.xiaomi.smarthome) - REL AudioMix
+  11-03 16:26:22.610 - 1041 (com.xiaomi.smarthome) - ACQ AudioMix (partial)
+  11-03 16:26:22.765 - 99910312 (com.tencent.mm) - ACQ MicroMsg:ReentrantGuard (partial)
+  11-03 16:26:22.769 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:26:22.770 - 99910312 (com.tencent.mm) - ACQ MicroMsg.PlatformCommC2JavaCallBack (partial)
+  11-03 16:26:22.771 - 99910312 (com.tencent.mm) - REL MicroMsg:ReentrantGuard
+  11-03 16:26:22.822 - 99910312 (com.tencent.mm) - REL MicroMsg.PlatformCommC2JavaCallBack
+  11-03 16:26:24.618 - 1041 (com.tencent.mm) - REL AudioMix
+  11-03 16:26:24.702 - 10142 (com.miui.home) - ACQ *launch* (partial)
+  11-03 16:26:24.706 - 10142 (com.miui.home) - REL *launch*
+  11-03 16:26:25.091 - 10219 (com.qti.phone,...) - ACQ QcrilOemhookMsgTunnel (partial)
+  11-03 16:26:25.098 - 10219 (com.qti.phone,...) - REL QcrilOemhookMsgTunnel
+  11-03 16:26:25.244 - 10178 (com.xiaomi.smarthome) - ACQ *launch* (partial)
+  11-03 16:26:25.370 - 10167 (com.xiaomi.metoknlp) - ACQ com.xiaomi.location.c.c.e (partial)
+  11-03 16:26:25.394 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:26:25.398 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:26:25.398 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:26:25.427 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:26:25.427 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:26:25.427 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:26:25.913 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:26:25.926 - 1000 (System) - REL NetworkStats
+  11-03 16:26:26.088 - 10170 (com.milink.service) - ACQ NotificationManagerService:post:com.milink.service (partial)
+  11-03 16:26:26.102 - 10170 (com.milink.service) - REL NotificationManagerService:post:com.milink.service
+  11-03 16:26:26.269 - 1000 (System) - ACQ NotificationManagerService:post:com.xiaomi.mi_connect_service (partial)
+  11-03 16:26:26.284 - 1000 (System) - REL NotificationManagerService:post:com.xiaomi.mi_connect_service
+  11-03 16:26:26.466 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:26:26.466 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:26:26.467 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:26:26.467 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:26:26.467 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:26:26.468 - 1041 (System) - ACQ AudioMix (partial)
+  11-03 16:26:26.468 - 1041 (System) - ACQ AudioSpatial (partial)
+  11-03 16:26:26.531 - 10178 (com.xiaomi.smarthome) - REL *launch*
+  11-03 16:26:26.599 - 10374 (com.mi.health) - ACQ *job*r/@androidx.work.systemjobscheduler@com.mi.health/androidx.work.impl.background.systemjob.SystemJobService (partial)
+  11-03 16:26:26.599 - 10374 (com.mi.health) - ACQ *job*r/@androidx.work.systemjobscheduler@com.mi.health/androidx.work.impl.background.systemjob.SystemJobService (partial)
+  11-03 16:26:26.604 - 10374 (com.mi.health) - REL *job*r/@androidx.work.systemjobscheduler@com.mi.health/androidx.work.impl.background.systemjob.SystemJobService
+  11-03 16:26:26.605 - 10374 (com.mi.health) - ACQ *job*r/@androidx.work.systemjobscheduler@com.mi.health/androidx.work.impl.background.systemjob.SystemJobService (partial)
+  11-03 16:26:26.605 - 10374 (com.mi.health) - ACQ *job*r/@androidx.work.systemjobscheduler@com.mi.health/androidx.work.impl.background.systemjob.SystemJobService (partial)
+  11-03 16:26:26.607 - 10374 (com.mi.health) - REL *job*r/@androidx.work.systemjobscheduler@com.mi.health/androidx.work.impl.background.systemjob.SystemJobService
+  11-03 16:26:26.608 - 10374 (com.mi.health) - ACQ *job*r/@androidx.work.systemjobscheduler@com.mi.health/androidx.work.impl.background.systemjob.SystemJobService (partial)
+  11-03 16:26:26.609 - 10374 (com.mi.health) - ACQ *job*r/@androidx.work.systemjobscheduler@com.mi.health/androidx.work.impl.background.systemjob.SystemJobService (partial)
+  11-03 16:26:26.610 - 10374 (com.mi.health) - REL *job*r/@androidx.work.systemjobscheduler@com.mi.health/androidx.work.impl.background.systemjob.SystemJobService
+  11-03 16:26:26.611 - 10374 (com.mi.health) - ACQ *job*r/@androidx.work.systemjobscheduler@com.mi.health/androidx.work.impl.background.systemjob.SystemJobService (partial)
+  11-03 16:26:26.615 - 10374 (com.mi.health) - ACQ *job*r/@androidx.work.systemjobscheduler@com.mi.health/androidx.work.impl.background.systemjob.SystemJobService (partial)
+  11-03 16:26:26.616 - 10374 (com.mi.health) - REL *job*r/@androidx.work.systemjobscheduler@com.mi.health/androidx.work.impl.background.systemjob.SystemJobService
+  11-03 16:26:26.790 - 10374 (com.mi.health) - REL *job*r/@androidx.work.systemjobscheduler@com.mi.health/androidx.work.impl.background.systemjob.SystemJobService
+  11-03 16:26:26.817 - 10374 (com.mi.health) - REL *job*r/@androidx.work.systemjobscheduler@com.mi.health/androidx.work.impl.background.systemjob.SystemJobService
+  11-03 16:26:26.822 - 10374 (com.mi.health) - REL *job*r/@androidx.work.systemjobscheduler@com.mi.health/androidx.work.impl.background.systemjob.SystemJobService
+  11-03 16:26:26.838 - 10374 (com.mi.health) - REL *job*r/@androidx.work.systemjobscheduler@com.mi.health/androidx.work.impl.background.systemjob.SystemJobService
+  11-03 16:26:27.548 - 1000 (System) - ACQ *location* (partial)
+  11-03 16:26:27.556 - 1000 (System) - REL *location*
+  11-03 16:26:27.559 - 10178 (com.xiaomi.smarthome) - ACQ *location* (partial)
+  11-03 16:26:27.560 - 1000 (System) - ACQ *location* (partial)
+  11-03 16:26:27.560 - 10178 (com.xiaomi.smarthome) - REL *location*
+  11-03 16:26:27.561 - 1000 (System) - REL *location*
+  11-03 16:26:27.575 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:26:27.592 - 1000 (System) - REL NetworkStats
+  11-03 16:26:27.991 - 10219 (com.qti.phone,...) - ACQ QcrilOemhookMsgTunnel (partial)
+  11-03 16:26:27.994 - 10219 (com.qti.phone,...) - REL QcrilOemhookMsgTunnel
+  11-03 16:26:28.009 - 10219 (com.qti.phone,...) - ACQ QcrilOemhookMsgTunnel (partial)
+  11-03 16:26:28.015 - 10219 (com.qti.phone,...) - REL QcrilOemhookMsgTunnel
+  11-03 16:26:28.372 - 10167 (com.xiaomi.metoknlp) - REL com.xiaomi.location.c.c.e
+  11-03 16:26:28.466 - 1041 (com.xiaomi.metoknlp) - REL AudioSpatial
+  11-03 16:26:28.471 - 1041 (com.xiaomi.metoknlp) - REL AudioMix
+  11-03 16:26:28.472 - 1041 (com.xiaomi.metoknlp) - REL AudioMix
+  11-03 16:26:28.473 - 1041 (com.xiaomi.metoknlp) - REL AudioMix
+  11-03 16:26:28.473 - 1041 (com.xiaomi.metoknlp) - REL AudioMix
+  11-03 16:26:28.473 - 1041 (com.xiaomi.metoknlp) - REL AudioMix
+  11-03 16:26:28.475 - 1041 (com.xiaomi.metoknlp) - REL AudioMix
+  11-03 16:26:28.914 - 10178 (com.xiaomi.smarthome) - ACQ *launch* (partial)
+  11-03 16:26:28.963 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:26:28.969 - 1000 (System) - REL NetworkStats
+  11-03 16:26:29.021 - 10219 (com.qti.phone,...) - ACQ QcrilOemhookMsgTunnel (partial)
+  11-03 16:26:29.024 - 10219 (com.qti.phone,...) - REL QcrilOemhookMsgTunnel
+  11-03 16:26:29.296 - 10178 (com.xiaomi.smarthome) - REL *launch*
+  11-03 16:26:29.989 - 10178 (com.xiaomi.smarthome) - ACQ *launch* (partial)
+  11-03 16:26:30.114 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:26:30.120 - 1000 (System) - REL NetworkStats
+  11-03 16:26:30.221 - 10178 (com.xiaomi.smarthome) - REL *launch*
+  11-03 16:26:30.418 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:26:30.420 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:26:30.420 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:26:30.439 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:26:30.439 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:26:30.439 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:26:31.820 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:26:31.845 - 1000 (System) - REL NetworkStats
+  11-03 16:26:33.356 - 10219 (com.qti.phone,...) - ACQ QcrilOemhookMsgTunnel (partial)
+  11-03 16:26:33.360 - 10219 (com.qti.phone,...) - REL QcrilOemhookMsgTunnel
+  11-03 16:26:33.671 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:26:33.693 - 1000 (System) - REL NetworkStats
+  11-03 16:26:34.191 - 10219 (com.qti.phone,...) - ACQ QcrilOemhookMsgTunnel (partial)
+  11-03 16:26:34.197 - 10219 (com.qti.phone,...) - REL QcrilOemhookMsgTunnel
+  11-03 16:26:34.213 - 10219 (com.qti.phone,...) - ACQ QcrilOemhookMsgTunnel (partial)
+  11-03 16:26:34.220 - 10219 (com.qti.phone,...) - REL QcrilOemhookMsgTunnel
+  11-03 16:26:35.458 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:26:35.459 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:26:35.459 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:26:35.468 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:26:35.468 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:26:35.469 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:26:35.746 - 10219 (com.qti.phone,...) - ACQ QcrilOemhookMsgTunnel (partial)
+  11-03 16:26:35.752 - 10219 (com.qti.phone,...) - REL QcrilOemhookMsgTunnel
+  11-03 16:26:38.760 - 10219 (com.qti.phone,...) - ACQ QcrilOemhookMsgTunnel (partial)
+  11-03 16:26:38.767 - 10219 (com.qti.phone,...) - REL QcrilOemhookMsgTunnel
+  11-03 16:26:40.485 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:26:40.485 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:26:40.485 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:26:40.493 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:26:40.494 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:26:40.495 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:26:44.171 - 10249 (com.android.permissioncontroller) - ACQ *job*r/com.android.permissioncontroller/.permission.service.PermissionEventCleanupJobService (partial)
+  11-03 16:26:44.171 - 10249 (com.android.permissioncontroller) - ACQ *job*r/com.android.permissioncontroller/.permission.service.PermissionEventCleanupJobService (partial)
+  11-03 16:26:44.177 - 10249 (com.android.permissioncontroller) - REL *job*r/com.android.permissioncontroller/.permission.service.PermissionEventCleanupJobService
+  11-03 16:26:44.204 - 10249 (com.android.permissioncontroller) - REL *job*r/com.android.permissioncontroller/.permission.service.PermissionEventCleanupJobService
+  11-03 16:26:44.961 - 10142 (com.miui.home) - ACQ *launch* (partial)
+  11-03 16:26:44.965 - 10142 (com.miui.home) - REL *launch*
+  11-03 16:26:45.506 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:26:45.507 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:26:45.507 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:26:45.516 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:26:45.516 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:26:45.516 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:26:46.192 - 10219 (com.qti.phone,...) - ACQ QcrilOemhookMsgTunnel (partial)
+  11-03 16:26:46.197 - 10219 (com.qti.phone,...) - REL QcrilOemhookMsgTunnel
+  11-03 16:26:46.210 - 10219 (com.qti.phone,...) - ACQ QcrilOemhookMsgTunnel (partial)
+  11-03 16:26:46.215 - 10219 (com.qti.phone,...) - REL QcrilOemhookMsgTunnel
+  11-03 16:26:50.539 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:26:50.540 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:26:50.540 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:26:50.549 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:26:50.549 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:26:50.550 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:26:53.832 - 1000 (System) - ACQ *launch* (partial)
+  11-03 16:26:53.897 - 1000 (System) - ACQ installer:packages (partial)
+  11-03 16:26:53.900 - 10142 (com.miui.home) - REL *launch*
+  11-03 16:26:53.966 - 1000 (System) - REL installer:packages
+  11-03 16:26:55.476 - 10396 (com.cn.ipc.demo) - ACQ *launch* (partial)
+  11-03 16:26:55.568 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:26:55.569 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:26:55.569 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:26:55.580 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:26:55.580 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:26:55.580 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:26:55.811 - 10396 (com.cn.ipc.demo) - REL *launch*
+  11-03 16:27:00.605 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:27:00.606 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:27:00.606 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:27:00.617 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:27:00.617 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:27:00.618 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:27:03.024 - 1000 (System) - ACQ NetworkStats (partial)
+  11-03 16:27:03.040 - 1000 (System) - REL NetworkStats
+  11-03 16:27:03.694 - 10396 (com.cn.ipc.demo) - ACQ *launch* (partial)
+  11-03 16:27:03.997 - 10396 (com.cn.ipc.demo) - REL *launch*
+  11-03 16:27:05.641 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:27:05.642 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:27:05.642 - 10167 (com.xiaomi.metoknlp) - ACQ *telephony-radio* (partial)
+  11-03 16:27:05.653 - 10167 (com.xiaomi.metoknlp) - REL *telephony-radio*
+  11-03 16:27:05.653 - 1001 (com.xiaomi.registration,...) - ACQ *telephony-radio* (partial)
+  11-03 16:27:05.654 - 1001 (com.xiaomi.registration,...) - REL *telephony-radio*
+  11-03 16:27:07.982 - 10396 (com.cn.ipc.demo) - ACQ *launch* (partial)
+  11-03 16:27:08.330 - 10396 (com.cn.ipc.demo) - REL *launch*
+  -
+  Events: 903, Time-Resets: 151
+  Buffer, Bytes used: 3069
+  Tag Database: size(64), entries: 64, Bytes used: 6448
+
+Full Wakelock Log:
+Wake Lock Log
+  11-03 07:50:01.700 - 10260 (com.android.deskclock) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 07:50:02.156 - 10260 (com.android.deskclock) - ACQ DC:AlarmClock (screen-bright,acq-causes-wake)
+  11-03 07:50:02.158 - 10260 (com.android.deskclock) - REL DC:AlarmClock
+  11-03 07:50:09.863 - 1000 (System) - REL WindowManager/displayId:0
+  11-03 08:00:10.594 - 10260 (com.android.deskclock) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 08:00:11.079 - 10260 (com.android.deskclock) - ACQ DC:AlarmClock (screen-bright,acq-causes-wake)
+  11-03 08:00:11.080 - 10260 (com.android.deskclock) - REL DC:AlarmClock
+  11-03 08:00:21.126 - 1000 (System) - REL WindowManager/displayId:0
+  11-03 08:10:21.597 - 10260 (com.android.deskclock) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 08:10:22.085 - 10260 (com.android.deskclock) - ACQ DC:AlarmClock (screen-bright,acq-causes-wake)
+  11-03 08:10:22.085 - 10260 (com.android.deskclock) - REL DC:AlarmClock
+  11-03 08:11:00.165 - 10260 (com.android.deskclock) - REL WindowManager/displayId:0
+  11-03 08:16:41.492 - 10290 (com.autonavi.minimap) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 08:17:25.657 - 10290 (com.autonavi.minimap) - REL WindowManager/displayId:0
+  11-03 08:18:05.718 - 10290 (com.autonavi.minimap) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 08:36:15.798 - 10290 (com.autonavi.minimap) - REL WindowManager/displayId:0
+  11-03 08:39:13.393 - 10463 (com.kedacom.kdmoa) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 08:39:15.684 - 10463 (com.kedacom.kdmoa) - REL WindowManager/displayId:0
+  11-03 08:39:28.707 - 10463 (com.kedacom.kdmoa) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 08:39:29.359 - 10463 (com.kedacom.kdmoa) - REL WindowManager/displayId:0
+  11-03 09:43:48.247 - 99910312 (com.tencent.mm) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 09:43:51.226 - 99910312 (com.tencent.mm) - REL WindowManager/displayId:0
+  11-03 10:16:04.276 - 1000 (System) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 10:16:06.756 - 1000 (System) - REL WindowManager/displayId:0
+  11-03 10:16:11.006 - 10168 (com.miui.mediaviewer) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 10:18:59.042 - 10168 (com.miui.mediaviewer) - REL WindowManager/displayId:0
+  11-03 15:51:40.931 - 1000 (System) - ACQ wireless_charge (screen-bright)
+  11-03 15:51:41.730 - 1000 (System) - REL wireless_charge
+  11-03 15:51:46.311 - 1000 (System) - ACQ wireless_charge (screen-bright)
+  11-03 15:51:47.115 - 1000 (System) - REL wireless_charge
+  11-03 15:52:12.669 - 1000 (System) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 15:52:12.922 - 1000 (System) - REL WindowManager/displayId:0
+  11-03 15:52:12.954 - 1000 (System) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 15:52:13.123 - 1000 (System) - REL WindowManager/displayId:0
+  11-03 15:52:13.156 - 1000 (System) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 15:52:15.565 - 1000 (System) - REL WindowManager/displayId:0
+  11-03 15:52:19.731 - 1000 (System) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 15:52:23.674 - 1000 (System) - REL WindowManager/displayId:0
+  11-03 15:57:10.682 - 10396 (com.cn.ipc.demo) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 15:57:16.680 - 10396 (com.cn.ipc.demo) - REL WindowManager/displayId:0
+  11-03 15:57:18.696 - 10396 (com.cn.ipc.demo) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 15:57:20.833 - 10396 (com.cn.ipc.demo) - REL WindowManager/displayId:0
+  11-03 15:58:16.670 - 10396 (com.cn.ipc.demo) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 15:58:22.603 - 10396 (com.cn.ipc.demo) - REL WindowManager/displayId:0
+  11-03 15:58:24.780 - 10396 (com.cn.ipc.demo) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 15:58:27.084 - 10396 (com.cn.ipc.demo) - REL WindowManager/displayId:0
+  11-03 15:58:29.204 - 10396 (com.cn.ipc.demo) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 15:58:29.602 - 10396 (com.cn.ipc.demo) - REL WindowManager/displayId:0
+  11-03 15:58:32.198 - 10396 (com.cn.ipc.demo) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 15:58:33.216 - 10396 (com.cn.ipc.demo) - REL WindowManager/displayId:0
+  11-03 15:58:35.453 - 10396 (com.cn.ipc.demo) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 15:58:37.523 - 10396 (com.cn.ipc.demo) - REL WindowManager/displayId:0
+  11-03 15:58:39.940 - 10396 (com.cn.ipc.demo) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 15:58:44.344 - 10396 (com.cn.ipc.demo) - REL WindowManager/displayId:0
+  11-03 15:58:46.735 - 10396 (com.cn.ipc.demo) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 15:58:47.305 - 10396 (com.cn.ipc.demo) - REL WindowManager/displayId:0
+  11-03 15:58:50.343 - 10396 (com.cn.ipc.demo) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 15:58:50.946 - 10396 (com.cn.ipc.demo) - REL WindowManager/displayId:0
+  11-03 15:58:53.839 - 10396 (com.cn.ipc.demo) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 15:58:54.745 - 10396 (com.cn.ipc.demo) - REL WindowManager/displayId:0
+  11-03 16:25:48.827 - 10396 (com.cn.ipc.demo) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 16:25:58.844 - 10396 (com.cn.ipc.demo) - REL WindowManager/displayId:0
+  11-03 16:26:17.116 - 10178 (com.xiaomi.smarthome) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 16:26:22.279 - 10178 (com.xiaomi.smarthome) - REL WindowManager/displayId:0
+  11-03 16:26:55.780 - 10396 (com.cn.ipc.demo) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 16:27:01.895 - 10396 (com.cn.ipc.demo) - REL WindowManager/displayId:0
+  11-03 16:27:03.976 - 10396 (com.cn.ipc.demo) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 16:27:06.263 - 10396 (com.cn.ipc.demo) - REL WindowManager/displayId:0
+  11-03 16:27:08.267 - 10396 (com.cn.ipc.demo) - ACQ WindowManager/displayId:0 (screen-bright,on-after-release)
+  11-03 16:27:08.668 - 10396 (com.cn.ipc.demo) - REL WindowManager/displayId:0
+  -
+  Events: 70, Time-Resets: 62
+  Buffer, Bytes used: 733
+  Tag Database: size(16), entries: 10, Bytes used: 824
+
+
+Wakefulness Session Observer:
+default timeout: 600000
+override timeout: -1
+  Wakefulness Session Power Group powerGroupId: 0
+    current wakefulness: 1
+    current user activity event: 0
+    current user activity duration: 7063
+    previous user activity event: 2
+    previous user activity duration: 45732
+    is in override timeout: false
+    mIsInteractive: true
+    current screen policy: 3
+    current screen policy duration: 1784380
+    previous screen policy: 2
+    past screen policy duration: 1312
+
+FaceDownDetector:
+  mFaceDown=false
+  mActive=false
+  mLastFlipTime=0
+  mSensorMaxLatencyMicros=2000000
+  mUserInteractionBackoffMillis=60000
+  mPreviousResultTime=0
+  mPreviousResultType=1
+  mMillisSaved=0
+  mZAccelerationThreshold=-9.5
+  mAccelerationThreshold=0.2
+  mTimeThreshold=PT1S
+  mEnabledOverride=true
+AmbientDisplaySuppressionController:
+ ambientDisplaySuppressed=false
+ mSuppressionTokens={}
+
+Low Power Standby Controller:
+  mIsActive=false
+  mIsEnabled=false
+  mSupportedConfig=false
+  mEnabledByDefaultConfig=false
+  mStandbyTimeoutConfig=0
+  mEnableCustomPolicy=false
+  Allowed UIDs=[]
+  
+  UID allowed reasons:
+
+ScreenTimeoutOverridePolicy:
+  mScreenTimeoutOverrideConfig=-1
+  mLastAutoReleaseReason=-1
+PowerManagerFlags:
+ enable_early_screen_timeout_detector:                 true (def:true)
+ improve_wakelock_latency:                             true (def:true)
+ per_display_wake_by_touch:                            true (def:true)
+ framework_wakelock_info:                              false (def:false)
+ move_wsc_logging_to_notifier:                         true (def:true)
+ wakelock_attribution_via_workchain:                   true (def:true)
+ disable_frozen_process_wakelocks:                     false (def:false)

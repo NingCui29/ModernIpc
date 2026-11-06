@@ -1,0 +1,33 @@
+--------- beginning of main
+11-03 15:57:18.687 32704 32704 I IpcForeground: STATE run=terminal-nov03attempt1 event=WAIT_READY elapsedRealtimeMs=32323975 uptimeMs=4284599 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+11-03 15:57:18.702 32704 32704 I IpcForeground: STATE run=terminal-nov03attempt1 event=FOCUS_GAIN elapsedRealtimeMs=32323991 uptimeMs=4284615 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 15:57:18.788 32704 32704 I IpcForeground: STATE run=terminal-nov03attempt1 event=WAIT_READY elapsedRealtimeMs=32324076 uptimeMs=4284700 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 15:57:18.889 32704 32704 I IpcForeground: STATE run=terminal-nov03attempt1 event=WAIT_READY elapsedRealtimeMs=32324177 uptimeMs=4284801 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 15:57:18.990 32704 32704 I IpcForeground: STATE run=terminal-nov03attempt1 event=WAIT_READY elapsedRealtimeMs=32324278 uptimeMs=4284902 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 15:57:18.990 32704 32704 I IpcForeground: STATE run=terminal-nov03attempt1 event=BEGIN elapsedRealtimeMs=32324279 uptimeMs=4284903 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 15:57:19.025 32704 10539 I IpcTerminalProbe: PASS run=terminal-nov03attempt1 finiteFlow items=1,2,3 completed=true subscriptions=0
+11-03 15:57:19.032 32704 10539 I IpcTerminalProbe: PASS run=terminal-nov03attempt1 runtimeFlowError itemBeforeError=7 message=flow-runtime-error subscriptions=0
+11-03 15:57:19.493 32704 32704 I IpcForeground: STATE run=terminal-nov03attempt1 event=SAMPLE elapsedRealtimeMs=32324780 uptimeMs=4285404 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 15:57:19.998 32704 32704 I IpcForeground: STATE run=terminal-nov03attempt1 event=SAMPLE elapsedRealtimeMs=32325285 uptimeMs=4285909 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 15:57:20.499 32704 32704 I IpcForeground: STATE run=terminal-nov03attempt1 event=SAMPLE elapsedRealtimeMs=32325787 uptimeMs=4286411 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 15:57:20.519 32704 10592 I IpcTerminalProbe: PASS run=terminal-nov03attempt1 streamOverflow explicitFailure=true consumed=69 subscriptions=0
+11-03 15:57:20.623 32704 10541 I IpcTerminalProbe: PASS run=terminal-nov03attempt1 streamConflate completed=true consumed=4 last=999 overflow=false subscriptions=0
+11-03 15:57:20.635 32704 10641 I IpcTerminalProbe: PASS run=terminal-nov03attempt1 explicitStreamCancel extraError=false subscriptions=0
+11-03 15:57:20.803 32704 10594 I IpcTerminalProbe: PASS run=terminal-nov03attempt1 rpcDeadline defaultMs=150 elapsedMs=155 serverJobObserved=true requests=0 pending=0
+11-03 15:57:20.813 32704 32704 I IpcForeground: STATE run=terminal-nov03attempt1 event=END elapsedRealtimeMs=32326101 uptimeMs=4286725 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 15:57:20.824 32704 32704 I IpcForeground: END run=terminal-nov03attempt1 started=true completed=false valid=false invalidObservations=0 firstInvalidEvent=null file=foreground-terminal-nov03attempt1.csv scope=activity_events_and_500ms_app_samples
+11-03 15:57:20.824 32704 32704 E IpcEchoBench: FAILED run=terminal-nov03attempt1
+11-03 15:57:20.824 32704 32704 E IpcEchoBench: java.lang.IllegalStateException: Wrong null-parameter error: java.lang.RuntimeException: Missing __ipcArgument0
+11-03 15:57:20.824 32704 32704 E IpcEchoBench: 	at com.cn.ipc.demo.IpcTerminalProbe$deadlines$2.invokeSuspend(IpcTerminalProbe.kt:142)
+11-03 15:57:20.824 32704 32704 E IpcEchoBench: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+11-03 15:57:20.824 32704 32704 E IpcEchoBench: 	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:32)
+11-03 15:57:20.824 32704 32704 E IpcEchoBench: 	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:102)
+11-03 15:57:20.824 32704 32704 E IpcEchoBench: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+11-03 15:57:20.824 32704 32704 E IpcEchoBench: 	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:32)
+11-03 15:57:20.824 32704 32704 E IpcEchoBench: 	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:102)
+11-03 15:57:20.824 32704 32704 E IpcEchoBench: 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+11-03 15:57:20.824 32704 32704 E IpcEchoBench: 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:106)
+11-03 15:57:20.824 32704 32704 E IpcEchoBench: 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+11-03 15:57:20.824 32704 32704 E IpcEchoBench: 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+11-03 15:57:20.824 32704 32704 E IpcEchoBench: 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+11-03 15:57:20.824 32704 32704 E IpcEchoBench: 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)

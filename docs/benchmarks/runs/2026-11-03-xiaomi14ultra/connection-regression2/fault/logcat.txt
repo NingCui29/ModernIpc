@@ -1,0 +1,17 @@
+--------- beginning of main
+11-03 15:58:32.190 11332 11332 I IpcForeground: STATE run=fault-nov03attempt2 event=WAIT_READY elapsedRealtimeMs=32397478 uptimeMs=4358103 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+11-03 15:58:32.209 11332 11332 I IpcForeground: STATE run=fault-nov03attempt2 event=FOCUS_GAIN elapsedRealtimeMs=32397498 uptimeMs=4358122 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 15:58:32.291 11332 11332 I IpcForeground: STATE run=fault-nov03attempt2 event=WAIT_READY elapsedRealtimeMs=32397579 uptimeMs=4358203 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 15:58:32.392 11332 11332 I IpcForeground: STATE run=fault-nov03attempt2 event=WAIT_READY elapsedRealtimeMs=32397680 uptimeMs=4358304 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 15:58:32.492 11332 11332 I IpcForeground: STATE run=fault-nov03attempt2 event=WAIT_READY elapsedRealtimeMs=32397780 uptimeMs=4358404 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 15:58:32.492 11332 11332 I IpcForeground: STATE run=fault-nov03attempt2 event=BEGIN elapsedRealtimeMs=32397780 uptimeMs=4358404 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 15:58:32.493 11332 11855 I IpcFaultProbe: PASS run=fault-nov03attempt2 replyBeforeSendReturns cancelCount=0
+11-03 15:58:32.494 11332 11856 I IpcFaultProbe: PASS run=fault-nov03attempt2 explicitCancellation cancelCount=1
+11-03 15:58:32.495 11332 11856 I IpcFaultProbe: PASS run=fault-nov03attempt2 cancellationDuringDispatch cancelCount=1
+11-03 15:58:32.993 11332 11332 I IpcForeground: STATE run=fault-nov03attempt2 event=SAMPLE elapsedRealtimeMs=32398281 uptimeMs=4358905 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 15:58:33.151 11332 11911 I IpcFaultProbe: PASS run=fault-nov03attempt2 replyDisconnectRace iterations=1000 lateRepliesRejected=true
+11-03 15:58:33.189 11332 11854 I IpcFaultProbe: PASS run=fault-nov03attempt2 remoteFlowFactoryError propagated=true normalFlowFirstItem=0
+11-03 15:58:33.204 11332 11854 I IpcFaultProbe: PASS run=fault-nov03attempt2 closePendingFailed=true staleConnectionRejected=true reconnectedFlow=true
+11-03 15:58:33.204 11332 11854 I IpcFaultProbe: DONE run=fault-nov03attempt2 passed=true
+11-03 15:58:33.205 11332 11332 I IpcForeground: STATE run=fault-nov03attempt2 event=END elapsedRealtimeMs=32398493 uptimeMs=4359117 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 15:58:33.209 11332 11332 I IpcForeground: END run=fault-nov03attempt2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-fault-nov03attempt2.csv scope=activity_events_and_500ms_app_samples

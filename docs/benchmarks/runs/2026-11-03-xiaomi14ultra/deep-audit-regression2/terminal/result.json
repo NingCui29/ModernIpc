@@ -1,0 +1,73 @@
+{
+  "group": "terminal",
+  "tag": "IpcTerminalProbe",
+  "expectedPasses": 8,
+  "runId": "terminal-deepaudit2",
+  "status": "PASSED",
+  "valid": true,
+  "passCount": 8,
+  "doneCount": 1,
+  "foregroundEndCount": 1,
+  "complete": true,
+  "errors": [],
+  "passes": [
+    "PASS run=terminal-deepaudit2 finiteFlow items=1,2,3 completed=true subscriptions=0",
+    "PASS run=terminal-deepaudit2 runtimeFlowError itemBeforeError=7 message=flow-runtime-error subscriptions=0",
+    "PASS run=terminal-deepaudit2 streamOverflow explicitFailure=true consumed=69 subscriptions=0",
+    "PASS run=terminal-deepaudit2 streamConflate completed=true consumed=4 last=999 overflow=false subscriptions=0",
+    "PASS run=terminal-deepaudit2 explicitStreamCancel extraError=false subscriptions=0",
+    "PASS run=terminal-deepaudit2 rpcDeadline defaultMs=150 elapsedMs=154 serverJobObserved=true requests=0 pending=0",
+    "PASS run=terminal-deepaudit2 asyncParameterError callbackReceived=true message=Missing_payload requests=0 pending=0",
+    "PASS run=terminal-deepaudit2 badTokenDeadline callbackTrusted=false defaultMs=150 elapsedMs=154 requests=0 pending=0"
+  ],
+  "done": [
+    "DONE run=terminal-deepaudit2 passed=true checks=8 subscriptions=0 requests=0 pending=0 anchorAlive=true"
+  ],
+  "foregroundEnd": [
+    "END run=terminal-deepaudit2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-terminal-deepaudit2.csv scope=activity_events_and_500ms_app_samples"
+  ],
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 5,
+    "sampleCount": 3,
+    "requiredSampleCount": 1,
+    "durationMs": 1986,
+    "maxGapMs": 504,
+    "observationMaxGapMs": 504,
+    "errors": [],
+    "sourceSha256": "D2ACB10BD3D714E048523F38F7FEB79DA49C3C15F17137DBA0DF2B85517B07B7",
+    "run": "terminal-deepaudit2",
+    "csv": "foreground-terminal-deepaudit2.csv"
+  },
+  "observed": {
+    "runId": "terminal-deepaudit2",
+    "tag": "IpcTerminalProbe",
+    "passCount": 8,
+    "doneCount": 1,
+    "foregroundEndCount": 1,
+    "expectedPasses": 8,
+    "complete": true,
+    "valid": true,
+    "errors": [],
+    "passes": [
+      "PASS run=terminal-deepaudit2 finiteFlow items=1,2,3 completed=true subscriptions=0",
+      "PASS run=terminal-deepaudit2 runtimeFlowError itemBeforeError=7 message=flow-runtime-error subscriptions=0",
+      "PASS run=terminal-deepaudit2 streamOverflow explicitFailure=true consumed=69 subscriptions=0",
+      "PASS run=terminal-deepaudit2 streamConflate completed=true consumed=4 last=999 overflow=false subscriptions=0",
+      "PASS run=terminal-deepaudit2 explicitStreamCancel extraError=false subscriptions=0",
+      "PASS run=terminal-deepaudit2 rpcDeadline defaultMs=150 elapsedMs=154 serverJobObserved=true requests=0 pending=0",
+      "PASS run=terminal-deepaudit2 asyncParameterError callbackReceived=true message=Missing_payload requests=0 pending=0",
+      "PASS run=terminal-deepaudit2 badTokenDeadline callbackTrusted=false defaultMs=150 elapsedMs=154 requests=0 pending=0"
+    ],
+    "done": [
+      "DONE run=terminal-deepaudit2 passed=true checks=8 subscriptions=0 requests=0 pending=0 anchorAlive=true"
+    ],
+    "foregroundEnd": [
+      "END run=terminal-deepaudit2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-terminal-deepaudit2.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}

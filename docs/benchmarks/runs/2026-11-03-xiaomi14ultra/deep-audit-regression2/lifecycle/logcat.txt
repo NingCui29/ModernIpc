@@ -1,0 +1,45 @@
+--------- beginning of main
+11-03 16:26:55.766 13510 13510 I IpcForeground: STATE run=lifecycle-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34101054 uptimeMs=6061679 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+11-03 16:26:55.800 13510 13510 I IpcForeground: STATE run=lifecycle-deepaudit2 event=FOCUS_GAIN elapsedRealtimeMs=34101080 uptimeMs=6061704 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:26:55.866 13510 13510 I IpcForeground: STATE run=lifecycle-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34101155 uptimeMs=6061779 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:26:55.967 13510 13510 I IpcForeground: STATE run=lifecycle-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34101255 uptimeMs=6061879 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:26:56.068 13510 13510 I IpcForeground: STATE run=lifecycle-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34101356 uptimeMs=6061980 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:26:56.068 13510 13510 I IpcForeground: STATE run=lifecycle-deepaudit2 event=BEGIN elapsedRealtimeMs=34101357 uptimeMs=6061981 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:26:56.122 13510 23747 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 closeHeldRequest failed=true cause=IllegalStateException
+11-03 16:26:56.374 13510 23747 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 close cycle=1 subscriptions=0 requests=0 eventsQuiet=true
+11-03 16:26:56.495 13510 23745 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 reconnect cycle=1 subscriptions=1 generation=2
+11-03 16:26:56.571 13510 13510 I IpcForeground: STATE run=lifecycle-deepaudit2 event=SAMPLE elapsedRealtimeMs=34101858 uptimeMs=6062482 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:26:56.750 13510 23744 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 close cycle=2 subscriptions=0 requests=0 eventsQuiet=true
+11-03 16:26:56.875 13510 23745 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 reconnect cycle=2 subscriptions=1 generation=3
+11-03 16:26:57.074 13510 13510 I IpcForeground: STATE run=lifecycle-deepaudit2 event=SAMPLE elapsedRealtimeMs=34102360 uptimeMs=6062984 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:26:57.132 13510 23745 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 close cycle=3 subscriptions=0 requests=0 eventsQuiet=true
+11-03 16:26:57.258 13510 23745 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 reconnect cycle=3 subscriptions=1 generation=4
+11-03 16:26:57.516 13510 23762 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 close cycle=4 subscriptions=0 requests=0 eventsQuiet=true
+11-03 16:26:57.575 13510 13510 I IpcForeground: STATE run=lifecycle-deepaudit2 event=SAMPLE elapsedRealtimeMs=34102863 uptimeMs=6063487 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:26:57.643 13510 23745 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 reconnect cycle=4 subscriptions=1 generation=5
+11-03 16:26:57.905 13510 23762 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 close cycle=5 subscriptions=0 requests=0 eventsQuiet=true
+11-03 16:26:58.029 13510 23745 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 reconnect cycle=5 subscriptions=1 generation=6
+11-03 16:26:58.078 13510 13510 I IpcForeground: STATE run=lifecycle-deepaudit2 event=SAMPLE elapsedRealtimeMs=34103365 uptimeMs=6063989 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:26:58.306 13510 23744 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 close cycle=6 subscriptions=0 requests=0 eventsQuiet=true
+11-03 16:26:58.432 13510 23745 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 reconnect cycle=6 subscriptions=1 generation=7
+11-03 16:26:58.583 13510 13510 I IpcForeground: STATE run=lifecycle-deepaudit2 event=SAMPLE elapsedRealtimeMs=34103869 uptimeMs=6064493 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:26:58.692 13510 23745 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 close cycle=7 subscriptions=0 requests=0 eventsQuiet=true
+11-03 16:26:58.819 13510 23745 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 reconnect cycle=7 subscriptions=1 generation=8
+11-03 16:26:59.078 13510 23745 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 close cycle=8 subscriptions=0 requests=0 eventsQuiet=true
+11-03 16:26:59.085 13510 13510 I IpcForeground: STATE run=lifecycle-deepaudit2 event=SAMPLE elapsedRealtimeMs=34104373 uptimeMs=6064997 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:26:59.332 13510 23763 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 reconnect cycle=8 subscriptions=1 generation=9
+11-03 16:26:59.587 13510 13510 I IpcForeground: STATE run=lifecycle-deepaudit2 event=SAMPLE elapsedRealtimeMs=34104875 uptimeMs=6065499 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:26:59.605 13510 23763 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 explicitDispose collectorEnded=true reconnectRejected=true subscriptions=0 requests=0
+11-03 16:26:59.897 13510 23763 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 ownerCancellation disposed=true collectorEnded=true requestFailed=true subscriptions=0 requests=0 eventsQuiet=true
+11-03 16:26:59.934 13510 23824 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 serviceDestroy oldStubRejected=true binderStillAlive=true recreatedStub=true subscriptions=0 requests=0
+11-03 16:26:59.942 13510 23825 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 nullBinding disconnected=true failureElapsedMs=5 bindingTimeoutMs=5000 lateCallbackStable=true pending=0 syntheticWaiter=true
+11-03 16:26:59.946 23698 23698 I IpcLifecycleProbe: DELAYED_BIND started delayMs=1500
+11-03 16:27:00.090 13510 13510 I IpcForeground: STATE run=lifecycle-deepaudit2 event=SAMPLE elapsedRealtimeMs=34105377 uptimeMs=6066001 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:27:00.595 13510 13510 I IpcForeground: STATE run=lifecycle-deepaudit2 event=SAMPLE elapsedRealtimeMs=34105882 uptimeMs=6066506 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:27:01.100 13510 13510 I IpcForeground: STATE run=lifecycle-deepaudit2 event=SAMPLE elapsedRealtimeMs=34106387 uptimeMs=6067011 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:27:01.448 23698 23698 I IpcLifecycleProbe: DELAYED_BIND returned=true
+11-03 16:27:01.606 13510 13510 I IpcForeground: STATE run=lifecycle-deepaudit2 event=SAMPLE elapsedRealtimeMs=34106892 uptimeMs=6067516 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:27:01.858 13510 23744 I IpcLifecycleProbe: PASS run=lifecycle-deepaudit2 bindingTimeout disconnected=true failureElapsedMs=206 bindingTimeoutMs=200 lateCallbackStable=true pending=0 syntheticWaiter=true
+11-03 16:27:01.866 13510 23825 I IpcLifecycleProbe: DONE run=lifecycle-deepaudit2 passed=true cycles=8 subscriptions=0 requests=0 anchorAlive=true
+11-03 16:27:01.872 13510 13510 I IpcForeground: STATE run=lifecycle-deepaudit2 event=END elapsedRealtimeMs=34107159 uptimeMs=6067783 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:27:01.881 13510 13510 I IpcForeground: END run=lifecycle-deepaudit2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-lifecycle-deepaudit2.csv scope=activity_events_and_500ms_app_samples

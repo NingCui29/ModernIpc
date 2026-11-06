@@ -15,6 +15,7 @@ import kotlinx.coroutines.flow.flowOf
 class ContractConsumerStub(context: Context, override val coroutineScope: CoroutineScope) :
     ICustomServiceServerStub(context) {
     override suspend fun echo(payload: String): String = payload
+    override suspend fun correlate(requestId: Long, controller: String, data: String, _data: Int): Long = requestId
     override fun events(): Flow<String> = flowOf("ready")
 }
 

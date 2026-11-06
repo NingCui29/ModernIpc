@@ -63,6 +63,12 @@ flowchart LR
 
 这些状态保存在 Activity 内存中。路由返回不代表消费；业务确认表示页面数据处理，未证明物理呈现、持久提交或硬件执行。SharedFlow 不补离线消息，重连不自动重放业务 RPC。
 
+## 源码修复（2026-10-30，纳入 rc.3）
+
+已修正生成代码业务参数覆盖、零预算死亡重连、Flow 业务取消误分类，以及辅助订阅管理器的重入/死亡清理；KSP 对不支持的嵌套门面给出明确错误。公开参数名与 wire 格式保持，生成代码回归接入根 `:check`，独立 Maven 消费者增加正/负用例。范围与迁移说明见[审计第 12 节](docs/ModernIPC_Engineering_Audit.md#12-2026-10-30生成代码重连与订阅修复未发布)，执行结果见[主机验证记录](docs/benchmarks/runs/2026-10-30-host-corrections/verification.json)。
+
+本轮没有小米或性能实测，已发布 rc.2 制品不包含这些后续变化。
+
 ## 工程审计修复（2026-10-22）
 
 已补全 `ipc-api` 和两端 runtime 的公开依赖导出，修正 SDK 契约依赖骨架。独立 Maven metadata/POM-only 消费编译与 Gradle `:check` 的 **27 项 host 检查**均通过，日常与发布 CI 已接入对应门禁。原 `0003` 取消降噪补丁已撤回，保留业务取消异常的错误终态。
@@ -79,7 +85,7 @@ flowchart LR
 
 ## 发布构建历史（2026-10-09）
 
-已发布预发行版 **3.0.0-rc.2**，版本分支 `release/v3.0.0-rc.2`，交付七个库与六个 Debug APK（含独立 AndLinker 对照）。七库、六 APK 与完整证据等 49 个 Release 附件均已发布，构建与远端验证见[rc.2 发布记录](docs/releases/v3.0.0-rc.2/README.md)，内容与迁移见[本次发布说明](.github/release-notes.md)。
+本次版本 **3.0.0-rc.3**，版本分支 `release/v3.0.0-rc.3`，交付七个库、六个 Debug APK（含独立 AndLinker 对照）、源码和测试证据。发布状态与远端核验见[rc.3 发布记录](docs/releases/v3.0.0-rc.3/README.md)，变更与迁移见[发布说明](.github/release-notes.md)。旧 rc.2 制品及其历史验证保留。
 
 以下保留 **3.0.0-rc.1** 的历史构建记录，版本分支 `release/v3.0.0-rc.1`。七个库产物与五个Debug APK统一构建 **BUILD SUCCESSFUL in 12m34s，退出码0，429任务**；Maven内部版本、APK版本与同签名校验通过。demo APK SHA-256为 `23a2802fd636f03e5821ceaf335f73907193b27560959486605e5908f7b26701`，完整身份见[发布构建记录](docs/releases/v3.0.0-rc.1/build-result.json)。
 
@@ -93,7 +99,7 @@ flowchart LR
 - Direct 只适合后台线程中的短方法，缺少 Async 的远端取消与在途限额。Oneway 不提供业务完成回执；Main 冷缓存需先挂起预热。
 - Flow 有 NEXT / COMPLETE / ERROR；默认客户端缓冲溢出报错，可选 CONFLATE。源头丢值、离线重放与可靠投递需业务另外设计。
 - 严格 Schema 按连接代次缓存并双端检查；旧 Broker 不隐式降级。Parcelable 字段布局由应用维护。
-- `close` 允许重新连接，`dispose` 永久释放。握手和发现各有独立 4 worker 预算，无队列；每 Stub 默认 128 个 Async 在途许可。
+- `close` 允许重新连接，`dispose` 永久释放。握手和发现各有独立 4 worker 预算；握手无队列，发现另有 4 个排队位置（11/03 未发布源码）；每 Stub 默认 128 个 Async 在途许可。
 - AndLinker 自动回退、Rx 适配、持久可靠消息及幂等重放尚未接入。
 
 发布配置以[脚本](build-logic/src/main/kotlin/convention.publish.gradle.kts)为准，步骤并入[SDK 指南](docs/ModernIPC_SDK_Guide.md)。归总前 25 份项目 Markdown 的原文与 SHA-256 清单保存在[归档 ZIP](docs/archive/pre-consolidation-2026-10-09.zip)；原始运行记录留在 `docs/benchmarks/runs/`。

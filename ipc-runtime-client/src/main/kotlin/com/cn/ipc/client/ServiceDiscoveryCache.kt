@@ -4,7 +4,7 @@ import android.os.IBinder
 import kotlinx.coroutines.CompletableDeferred
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.CountDownLatch
-import java.util.concurrent.SynchronousQueue
+import java.util.concurrent.ArrayBlockingQueue
 import java.util.concurrent.ThreadPoolExecutor
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.TimeoutException
@@ -44,8 +44,9 @@ internal class ServiceDiscoveryCache<K : Any> {
                 return created
             }
             try {
-                workers.execute {
+                val task = Runnable {
                     try {
+                        check(!invalidated.get() && created.isNeeded) { "IPC discovery no longer needed" }
                         val binder = resolve { !invalidated.get() && created.isNeeded }
                         check(!invalidated.get() && created.isNeeded) { "IPC discovery no longer needed" }
                         // A concurrent invalidation only affects this detached container, never a new generation.
@@ -57,6 +58,9 @@ internal class ServiceDiscoveryCache<K : Any> {
                         flights.remove(key, created)
                     }
                 }
+                created.queuedTask = task
+                workers.execute(task)
+                if (!created.isNeeded) workers.remove(task)
             } catch (error: java.util.concurrent.RejectedExecutionException) {
                 created.fail(error)
                 flights.remove(key, created)
@@ -77,6 +81,7 @@ internal class ServiceDiscoveryCache<K : Any> {
     }
 
     class Flight {
+        @Volatile var queuedTask: Runnable? = null
         private data class Outcome(val binder: IBinder? = null, val error: Throwable? = null)
         private val outcome = AtomicReference<Outcome?>(null)
         private val result = CompletableDeferred<IBinder>()
@@ -113,6 +118,7 @@ internal class ServiceDiscoveryCache<K : Any> {
 
         private fun finish(value: Outcome) {
             if (!outcome.compareAndSet(null, value)) return
+            queuedTask?.let { workers.remove(it) }
             latch.countDown()
             if (value.error != null) result.completeExceptionally(value.error)
             else result.complete(checkNotNull(value.binder))
@@ -121,8 +127,8 @@ internal class ServiceDiscoveryCache<K : Any> {
 
     companion object {
         // Synchronous Binder cannot be interrupted reliably. Bound stuck work across all controllers.
-        private val workers = ThreadPoolExecutor(0, 4, 30, TimeUnit.SECONDS, SynchronousQueue<Runnable>(),
+        private val workers = ThreadPoolExecutor(4, 4, 30, TimeUnit.SECONDS, ArrayBlockingQueue<Runnable>(4),
             { task -> Thread(task, "IpcServiceDiscovery").apply { isDaemon = true } },
-            ThreadPoolExecutor.AbortPolicy())
+            ThreadPoolExecutor.AbortPolicy()).apply { allowCoreThreadTimeOut(true) }
     }
 }

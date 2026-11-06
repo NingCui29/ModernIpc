@@ -1,0 +1,17 @@
+{
+  "valid": true,
+  "ruleVersion": "foreground-coverage-v1",
+  "targetSamplePeriodMs": 500,
+  "permittedMaxGapMs": 1000,
+  "scope": "activity_events_with_bounded_periodic_sample_coverage",
+  "observations": 2,
+  "sampleCount": 0,
+  "requiredSampleCount": 0,
+  "durationMs": 304,
+  "maxGapMs": 304,
+  "observationMaxGapMs": 304,
+  "errors": [],
+  "sourceSha256": "2E4599516878BDA17A20A695076B7A6C32CA079B81AC2EEA00492F870CBC0D7C",
+  "run": "authmicro-deepaudit2",
+  "csv": "foreground-authmicro-deepaudit2.csv"
+}

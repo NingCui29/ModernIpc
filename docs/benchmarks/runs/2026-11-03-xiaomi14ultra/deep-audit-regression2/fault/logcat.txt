@@ -1,0 +1,17 @@
+--------- beginning of main
+11-03 16:27:11.222 23813 23813 I IpcForeground: STATE run=fault-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34116511 uptimeMs=6077135 lifecycle=RESUMED focused=false interactive=true keyguardLocked=false deviceLocked=false valid=false measuring=false
+11-03 16:27:11.244 23813 23813 I IpcForeground: STATE run=fault-deepaudit2 event=FOCUS_GAIN elapsedRealtimeMs=34116533 uptimeMs=6077157 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:27:11.323 23813 23813 I IpcForeground: STATE run=fault-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34116611 uptimeMs=6077235 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:27:11.423 23813 23813 I IpcForeground: STATE run=fault-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34116711 uptimeMs=6077335 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:27:11.523 23813 23813 I IpcForeground: STATE run=fault-deepaudit2 event=WAIT_READY elapsedRealtimeMs=34116812 uptimeMs=6077436 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=false
+11-03 16:27:11.524 23813 23813 I IpcForeground: STATE run=fault-deepaudit2 event=BEGIN elapsedRealtimeMs=34116812 uptimeMs=6077436 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:27:11.525 23813 24463 I IpcFaultProbe: PASS run=fault-deepaudit2 replyBeforeSendReturns cancelCount=0
+11-03 16:27:11.526 23813 24463 I IpcFaultProbe: PASS run=fault-deepaudit2 explicitCancellation cancelCount=1
+11-03 16:27:11.527 23813 24463 I IpcFaultProbe: PASS run=fault-deepaudit2 cancellationDuringDispatch cancelCount=1
+11-03 16:27:12.025 23813 23813 I IpcForeground: STATE run=fault-deepaudit2 event=SAMPLE elapsedRealtimeMs=34117313 uptimeMs=6077938 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:27:12.190 23813 24487 I IpcFaultProbe: PASS run=fault-deepaudit2 replyDisconnectRace iterations=1000 lateRepliesRejected=true
+11-03 16:27:12.226 23813 24404 I IpcFaultProbe: PASS run=fault-deepaudit2 remoteFlowFactoryError propagated=true normalFlowFirstItem=0
+11-03 16:27:12.239 23813 24466 I IpcFaultProbe: PASS run=fault-deepaudit2 closePendingFailed=true staleConnectionRejected=true reconnectedFlow=true
+11-03 16:27:12.239 23813 24466 I IpcFaultProbe: DONE run=fault-deepaudit2 passed=true
+11-03 16:27:12.240 23813 23813 I IpcForeground: STATE run=fault-deepaudit2 event=END elapsedRealtimeMs=34117529 uptimeMs=6078153 lifecycle=RESUMED focused=true interactive=true keyguardLocked=false deviceLocked=false valid=true measuring=true
+11-03 16:27:12.246 23813 23813 I IpcForeground: END run=fault-deepaudit2 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-fault-deepaudit2.csv scope=activity_events_and_500ms_app_samples

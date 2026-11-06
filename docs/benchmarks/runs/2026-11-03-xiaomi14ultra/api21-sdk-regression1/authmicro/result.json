@@ -1,0 +1,95 @@
+{
+  "group": "authmicro",
+  "tag": "IpcAuthMicro",
+  "expectedPasses": 0,
+  "runId": "authmicro-api21sdk1",
+  "status": "PASSED",
+  "valid": true,
+  "passCount": 0,
+  "doneCount": 1,
+  "foregroundEndCount": 1,
+  "complete": true,
+  "errors": [],
+  "authProbe": {
+    "timeCount": 4,
+    "allocationCount": 4,
+    "doneCount": 1,
+    "timings": [
+      "TIME batch=0 mode=legacy count=50000 wallNs=81554271 cpuNs=80960832",
+      "TIME batch=1 mode=optimized count=50000 wallNs=19413541 cpuNs=19348020",
+      "TIME batch=2 mode=optimized count=50000 wallNs=16026927 cpuNs=15983126",
+      "TIME batch=3 mode=legacy count=50000 wallNs=38096510 cpuNs=37799165"
+    ],
+    "allocations": [
+      "ALLOC batch=0 mode=legacy count=50000 beforeBytes=13613320 afterBytes=16808200 bytes=3194880 gc=0",
+      "ALLOC batch=1 mode=optimized count=50000 beforeBytes=16808200 afterBytes=16808200 bytes=0 gc=0",
+      "ALLOC batch=2 mode=optimized count=50000 beforeBytes=16808200 afterBytes=16808200 bytes=0 gc=0",
+      "ALLOC batch=3 mode=legacy count=50000 beforeBytes=16808200 afterBytes=20019464 bytes=3211264 gc=0"
+    ],
+    "done": [
+      "DONE sameUid=true countPerBatch=50000"
+    ]
+  },
+  "passes": [],
+  "done": [
+    "DONE sameUid=true countPerBatch=50000"
+  ],
+  "foregroundEnd": [
+    "END run=authmicro-api21sdk1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-authmicro-api21sdk1.csv scope=activity_events_and_500ms_app_samples"
+  ],
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 2,
+    "sampleCount": 0,
+    "requiredSampleCount": 0,
+    "durationMs": 278,
+    "maxGapMs": 278,
+    "observationMaxGapMs": 278,
+    "errors": [],
+    "sourceSha256": "0668E8641600120EBA7D45E5CECE2B1663F0185E7586AF96FD9021A95F670C75",
+    "run": "authmicro-api21sdk1",
+    "csv": "foreground-authmicro-api21sdk1.csv"
+  },
+  "observed": {
+    "runId": "authmicro-api21sdk1",
+    "tag": "IpcAuthMicro",
+    "passCount": 0,
+    "doneCount": 1,
+    "foregroundEndCount": 1,
+    "expectedPasses": 0,
+    "complete": true,
+    "valid": true,
+    "errors": [],
+    "authProbe": {
+      "timeCount": 4,
+      "allocationCount": 4,
+      "doneCount": 1,
+      "timings": [
+        "TIME batch=0 mode=legacy count=50000 wallNs=81554271 cpuNs=80960832",
+        "TIME batch=1 mode=optimized count=50000 wallNs=19413541 cpuNs=19348020",
+        "TIME batch=2 mode=optimized count=50000 wallNs=16026927 cpuNs=15983126",
+        "TIME batch=3 mode=legacy count=50000 wallNs=38096510 cpuNs=37799165"
+      ],
+      "allocations": [
+        "ALLOC batch=0 mode=legacy count=50000 beforeBytes=13613320 afterBytes=16808200 bytes=3194880 gc=0",
+        "ALLOC batch=1 mode=optimized count=50000 beforeBytes=16808200 afterBytes=16808200 bytes=0 gc=0",
+        "ALLOC batch=2 mode=optimized count=50000 beforeBytes=16808200 afterBytes=16808200 bytes=0 gc=0",
+        "ALLOC batch=3 mode=legacy count=50000 beforeBytes=16808200 afterBytes=20019464 bytes=3211264 gc=0"
+      ],
+      "done": [
+        "DONE sameUid=true countPerBatch=50000"
+      ]
+    },
+    "passes": [],
+    "done": [
+      "DONE sameUid=true countPerBatch=50000"
+    ],
+    "foregroundEnd": [
+      "END run=authmicro-api21sdk1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-authmicro-api21sdk1.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}

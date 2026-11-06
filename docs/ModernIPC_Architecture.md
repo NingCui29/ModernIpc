@@ -52,7 +52,7 @@ flowchart LR
         A --> SC["CLIENT_SCHEMA"]
         A --> CTRL["Controller / 独立控制scope"]
         CTRL --> DISC["ServiceDiscoveryCache / 同键共享flight"]
-        DISC --> WORK["进程内最多4发现worker / 无队列"]
+        DISC --> WORK["进程内最多4发现worker / 4排队"]
         A --> P["PendingCallRegistry"]
         A --> O["每代次observer Binder"]
     end
@@ -105,7 +105,7 @@ sequenceDiagram
 
 缓存键包含 `(generation, serviceId, minApiVersion, schemaFingerprint)`。ClientServiceSchema 构造时冻结事务表并计算 fingerprint，避免每次调用重算；兼容判断仍逐事务比较签名。每个键首次正常发现需要两次同步 Broker RPC，不含握手、重连或业务事务。不同期待 Schema 不能借用其他适配器的验证结果。
 
-[ServiceDiscoveryCache](../ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/ServiceDiscoveryCache.kt)将远端 RPC 移到专用 worker，map/生命周期锁内不执行 RPC。同一 Controller、同一容器和同一键共享进行中的发现；赢得新 flight 后复查缓存，避免发现完成边界的重复查询。所有 Controller 在同一进程/classloader 内共享最多 4 个发现 worker，使用 SynchronousQueue，不保留排队任务；预算占满时新冷发现以 RejectedExecutionException 失败，已有温缓存仍可读取。这不是每 Stub 的 128 个 Async 许可。
+[ServiceDiscoveryCache](../ipc-runtime-client/src/main/kotlin/com/cn/ipc/client/ServiceDiscoveryCache.kt)将远端 RPC 移到专用 worker，map/生命周期锁内不执行 RPC。同一 Controller、同一容器和同一键共享进行中的发现；赢得新 flight 后复查缓存，避免发现完成边界的重复查询。所有 Controller 在同一进程/classloader 内共享最多 4 个发现 worker，11/03 未发布源码另有 4 个有界排队位置，最后等待者取消或缓存失效时移除排队任务；工作和队列预算均占满时新冷发现以 RejectedExecutionException 失败，已有温缓存仍可读取。这不是每 Stub 的 128 个 Async 许可。
 
 awaitServiceBinderForConnection 的等待可取消，默认以 defaultCallTimeoutMs 限制；一个 waiter 退出不会取消其他 waiter，最后一个退出后将该 flight 标记为不再需要。worker 在 RPC 返回后检查连接及等待需求，停止后续发现或发布。等待取消到 finally 释放 waiter 之间仍有调度窗口，检查到下一次 RPC 之间也有竞态，不能承诺取消信号发出瞬间远端即停止。已开始的同步 Binder 不可强制中断，最多 4 个卡住 worker 仍会占用预算。
 

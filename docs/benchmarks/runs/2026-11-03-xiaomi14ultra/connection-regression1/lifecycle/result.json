@@ -1,0 +1,101 @@
+{
+  "group": "lifecycle",
+  "tag": "IpcLifecycleProbe",
+  "expectedPasses": 22,
+  "runId": "lifecycle-nov03attempt1",
+  "status": "PASSED",
+  "valid": true,
+  "passCount": 22,
+  "doneCount": 1,
+  "foregroundEndCount": 1,
+  "complete": true,
+  "errors": [],
+  "passes": [
+    "PASS run=lifecycle-nov03attempt1 closeHeldRequest failed=true cause=IllegalStateException",
+    "PASS run=lifecycle-nov03attempt1 close cycle=1 subscriptions=0 requests=0 eventsQuiet=true",
+    "PASS run=lifecycle-nov03attempt1 reconnect cycle=1 subscriptions=1 generation=2",
+    "PASS run=lifecycle-nov03attempt1 close cycle=2 subscriptions=0 requests=0 eventsQuiet=true",
+    "PASS run=lifecycle-nov03attempt1 reconnect cycle=2 subscriptions=1 generation=3",
+    "PASS run=lifecycle-nov03attempt1 close cycle=3 subscriptions=0 requests=0 eventsQuiet=true",
+    "PASS run=lifecycle-nov03attempt1 reconnect cycle=3 subscriptions=1 generation=4",
+    "PASS run=lifecycle-nov03attempt1 close cycle=4 subscriptions=0 requests=0 eventsQuiet=true",
+    "PASS run=lifecycle-nov03attempt1 reconnect cycle=4 subscriptions=1 generation=5",
+    "PASS run=lifecycle-nov03attempt1 close cycle=5 subscriptions=0 requests=0 eventsQuiet=true",
+    "PASS run=lifecycle-nov03attempt1 reconnect cycle=5 subscriptions=1 generation=6",
+    "PASS run=lifecycle-nov03attempt1 close cycle=6 subscriptions=0 requests=0 eventsQuiet=true",
+    "PASS run=lifecycle-nov03attempt1 reconnect cycle=6 subscriptions=1 generation=7",
+    "PASS run=lifecycle-nov03attempt1 close cycle=7 subscriptions=0 requests=0 eventsQuiet=true",
+    "PASS run=lifecycle-nov03attempt1 reconnect cycle=7 subscriptions=1 generation=8",
+    "PASS run=lifecycle-nov03attempt1 close cycle=8 subscriptions=0 requests=0 eventsQuiet=true",
+    "PASS run=lifecycle-nov03attempt1 reconnect cycle=8 subscriptions=1 generation=9",
+    "PASS run=lifecycle-nov03attempt1 explicitDispose collectorEnded=true reconnectRejected=true subscriptions=0 requests=0",
+    "PASS run=lifecycle-nov03attempt1 ownerCancellation disposed=true collectorEnded=true requestFailed=true subscriptions=0 requests=0 eventsQuiet=true",
+    "PASS run=lifecycle-nov03attempt1 serviceDestroy oldStubRejected=true binderStillAlive=true recreatedStub=true subscriptions=0 requests=0",
+    "PASS run=lifecycle-nov03attempt1 nullBinding disconnected=true failureElapsedMs=5 bindingTimeoutMs=5000 lateCallbackStable=true pending=0 syntheticWaiter=true",
+    "PASS run=lifecycle-nov03attempt1 bindingTimeout disconnected=true failureElapsedMs=208 bindingTimeoutMs=200 lateCallbackStable=true pending=0 syntheticWaiter=true"
+  ],
+  "done": [
+    "DONE run=lifecycle-nov03attempt1 passed=true cycles=8 subscriptions=0 requests=0 anchorAlive=true"
+  ],
+  "foregroundEnd": [
+    "END run=lifecycle-nov03attempt1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-lifecycle-nov03attempt1.csv scope=activity_events_and_500ms_app_samples"
+  ],
+  "foregroundQualification": {
+    "valid": true,
+    "ruleVersion": "foreground-coverage-v1",
+    "targetSamplePeriodMs": 500,
+    "permittedMaxGapMs": 1000,
+    "scope": "activity_events_with_bounded_periodic_sample_coverage",
+    "observations": 13,
+    "sampleCount": 11,
+    "requiredSampleCount": 5,
+    "durationMs": 5678,
+    "maxGapMs": 505,
+    "observationMaxGapMs": 505,
+    "errors": [],
+    "sourceSha256": "8D8987D0DD7BC83FEFE1D86F3E6B452C67634C94307617CC1ADE0F636409FF01",
+    "run": "lifecycle-nov03attempt1",
+    "csv": "foreground-lifecycle-nov03attempt1.csv"
+  },
+  "observed": {
+    "runId": "lifecycle-nov03attempt1",
+    "tag": "IpcLifecycleProbe",
+    "passCount": 22,
+    "doneCount": 1,
+    "foregroundEndCount": 1,
+    "expectedPasses": 22,
+    "complete": true,
+    "valid": true,
+    "errors": [],
+    "passes": [
+      "PASS run=lifecycle-nov03attempt1 closeHeldRequest failed=true cause=IllegalStateException",
+      "PASS run=lifecycle-nov03attempt1 close cycle=1 subscriptions=0 requests=0 eventsQuiet=true",
+      "PASS run=lifecycle-nov03attempt1 reconnect cycle=1 subscriptions=1 generation=2",
+      "PASS run=lifecycle-nov03attempt1 close cycle=2 subscriptions=0 requests=0 eventsQuiet=true",
+      "PASS run=lifecycle-nov03attempt1 reconnect cycle=2 subscriptions=1 generation=3",
+      "PASS run=lifecycle-nov03attempt1 close cycle=3 subscriptions=0 requests=0 eventsQuiet=true",
+      "PASS run=lifecycle-nov03attempt1 reconnect cycle=3 subscriptions=1 generation=4",
+      "PASS run=lifecycle-nov03attempt1 close cycle=4 subscriptions=0 requests=0 eventsQuiet=true",
+      "PASS run=lifecycle-nov03attempt1 reconnect cycle=4 subscriptions=1 generation=5",
+      "PASS run=lifecycle-nov03attempt1 close cycle=5 subscriptions=0 requests=0 eventsQuiet=true",
+      "PASS run=lifecycle-nov03attempt1 reconnect cycle=5 subscriptions=1 generation=6",
+      "PASS run=lifecycle-nov03attempt1 close cycle=6 subscriptions=0 requests=0 eventsQuiet=true",
+      "PASS run=lifecycle-nov03attempt1 reconnect cycle=6 subscriptions=1 generation=7",
+      "PASS run=lifecycle-nov03attempt1 close cycle=7 subscriptions=0 requests=0 eventsQuiet=true",
+      "PASS run=lifecycle-nov03attempt1 reconnect cycle=7 subscriptions=1 generation=8",
+      "PASS run=lifecycle-nov03attempt1 close cycle=8 subscriptions=0 requests=0 eventsQuiet=true",
+      "PASS run=lifecycle-nov03attempt1 reconnect cycle=8 subscriptions=1 generation=9",
+      "PASS run=lifecycle-nov03attempt1 explicitDispose collectorEnded=true reconnectRejected=true subscriptions=0 requests=0",
+      "PASS run=lifecycle-nov03attempt1 ownerCancellation disposed=true collectorEnded=true requestFailed=true subscriptions=0 requests=0 eventsQuiet=true",
+      "PASS run=lifecycle-nov03attempt1 serviceDestroy oldStubRejected=true binderStillAlive=true recreatedStub=true subscriptions=0 requests=0",
+      "PASS run=lifecycle-nov03attempt1 nullBinding disconnected=true failureElapsedMs=5 bindingTimeoutMs=5000 lateCallbackStable=true pending=0 syntheticWaiter=true",
+      "PASS run=lifecycle-nov03attempt1 bindingTimeout disconnected=true failureElapsedMs=208 bindingTimeoutMs=200 lateCallbackStable=true pending=0 syntheticWaiter=true"
+    ],
+    "done": [
+      "DONE run=lifecycle-nov03attempt1 passed=true cycles=8 subscriptions=0 requests=0 anchorAlive=true"
+    ],
+    "foregroundEnd": [
+      "END run=lifecycle-nov03attempt1 started=true completed=true valid=true invalidObservations=0 firstInvalidEvent=null file=foreground-lifecycle-nov03attempt1.csv scope=activity_events_and_500ms_app_samples"
+    ]
+  }
+}
