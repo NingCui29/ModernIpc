@@ -2,6 +2,7 @@
 """Compile real, isolated Maven consumers using Gradle metadata and Maven POMs.
 
 Uses a fresh SDK version/repository by default; never overwrites local-maven.
+--remote-repository verifies an existing HTTPS publication anonymously instead.
 No Android device, GitHub credentials or remote publication is involved.
 """
 from __future__ import annotations
@@ -15,6 +16,8 @@ from pathlib import Path
 import re
 import subprocess
 import sys
+import urllib.parse
+import urllib.request
 import xml.etree.ElementTree as ET
 
 
@@ -38,6 +41,69 @@ JVM_ARGS = ("-Xmx2048m -XX:MaxMetaspaceSize=768m -XX:TieredStopAtLevel=1 "
 def require(condition: bool, message: str) -> None:
     if not condition:
         raise RuntimeError(message)
+
+
+def anonymous_repository_url(value: str) -> str:
+    """Require a public HTTPS repository URL without embedded credentials."""
+    parsed = urllib.parse.urlsplit(value)
+    require(parsed.scheme == "https" and bool(parsed.hostname),
+            "Remote repository must be an HTTPS URL")
+    require(parsed.username is None and parsed.password is None
+            and not parsed.query and not parsed.fragment,
+            "Remote repository must not contain credentials, query parameters or fragments")
+    return value.rstrip("/")
+
+
+class AnonymousHttpsRedirectHandler(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        anonymous_repository_url(newurl)
+        return super().redirect_request(req, fp, code, msg, headers, newurl)
+
+
+def download_remote_publications(base_url: str, repository: Path, version: str) -> list[dict]:
+    """Fetch metadata and its artifacts with no token, cookie or auth handler."""
+    base_url = anonymous_repository_url(base_url)
+    opener = urllib.request.build_opener(AnonymousHttpsRedirectHandler())
+    downloads = []
+
+    def download(relative: str) -> bytes:
+        url = base_url + "/" + urllib.parse.quote(relative, safe="/")
+        request = urllib.request.Request(url, headers={"User-Agent": "ModernIpc-Anonymous-Consumer-Check"})
+        with opener.open(request, timeout=60) as response:
+            require(response.status == 200, f"Anonymous GET failed: {url}")
+            data = response.read()
+        require(bool(data), f"Empty remote artifact: {url}")
+        path = repository / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(data)
+        downloads.append({"url": url, "size": len(data),
+                          "sha256": hashlib.sha256(data).hexdigest(), "authorization": False})
+        return data
+
+    for module in MODULES:
+        relative = f"com/modernipc/{module}/{version}/"
+        stem = f"{module}-{version}"
+        download(relative + stem + ".pom")
+        metadata = json.loads(download(relative + stem + ".module"))
+        component = metadata.get("component", {})
+        require(component.get("group") == "com.modernipc"
+                and component.get("module") == module and component.get("version") == version,
+                f"Remote module coordinates differ: {module}")
+        names = set()
+        for variant in metadata.get("variants", []):
+            for artifact in variant.get("files", []):
+                name = artifact.get("url", "")
+                require(isinstance(name, str) and bool(re.fullmatch(r"[A-Za-z0-9._-]+", name))
+                        and (name.startswith(stem + ".") or name.startswith(stem + "-"))
+                        and artifact.get("name") == name,
+                        f"Unsafe remote artifact path in {module}")
+                names.add(name)
+        require(bool(names), f"No remote artifacts in {module}")
+        for name in sorted(names):
+            download(relative + name)
+        # Check all artifact hashes before invoking Gradle against the remote URL.
+        verify_publication(repository, module, version)
+    return downloads
 
 
 def read_sdk_property(path: Path) -> str | None:
@@ -112,7 +178,9 @@ def verify_publication(repository: Path, module: str, version: str) -> dict:
             f"{PUBLIC.get(module, set()) - compile_dependencies}")
 
     metadata = json.loads(module_path.read_text(encoding="utf-8"))
-    require(metadata["component"]["version"] == version, str(module_path))
+    component = metadata["component"]
+    require(component.get("group") == "com.modernipc" and component.get("module") == module
+            and component.get("version") == version, str(module_path))
     api_variants = [item for item in metadata["variants"]
                     if item.get("attributes", {}).get("org.gradle.usage") == "java-api"]
     require(bool(api_variants), f"No API variant in {module_path}")
@@ -127,6 +195,10 @@ def verify_publication(repository: Path, module: str, version: str) -> dict:
                 require(item["version"].get("requires") == version,
                         f"Wrong internal version in {module_path}")
         for artifact in variant.get("files", []):
+            require(artifact.get("url") == artifact.get("name")
+                    and bool(re.fullmatch(r"[A-Za-z0-9._-]+", artifact.get("url", "")))
+                    and artifact["url"] not in (".", ".."),
+                    f"Unsafe artifact path in {module_path}")
             path = module_path.parent / artifact["url"]
             require(path.is_file(), f"Missing artifact: {path}")
             require(hashlib.sha256(path.read_bytes()).hexdigest() == artifact["sha256"],
@@ -149,8 +221,9 @@ def verify_graph(path: Path, direct: str, version: str) -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--version", help="Fresh, previously unpublished validation version")
+    parser.add_argument("--version", help="Fresh local validation version, or explicit existing remote version")
     parser.add_argument("--repository", type=Path, help="Isolated file Maven repository")
+    parser.add_argument("--remote-repository", help="Anonymous HTTPS Maven URL; skips SDK publishing")
     parser.add_argument("--output", type=Path, help="Build logs and machine-readable report directory")
     parser.add_argument("--java-home", type=Path, help="JDK 17 home (otherwise JAVA_HOME)")
     parser.add_argument("--android-sdk", type=Path, help="SDK containing Android platform 34")
@@ -158,20 +231,33 @@ def main() -> int:
     parser.add_argument("--offline", action="store_true", help="Use cached external Gradle dependencies")
     args = parser.parse_args()
 
+    remote = anonymous_repository_url(args.remote_repository) if args.remote_repository else None
+    if remote:
+        require(bool(args.version), "--remote-repository requires an explicit --version")
+        require(args.repository is None, "--repository cannot be combined with --remote-repository")
+        require(not args.offline, "Remote verification cannot use --offline")
+
     root_version = re.search(r"^VERSION_NAME=(.+)$", (ROOT / "gradle.properties").read_text(), re.M).group(1)
     version = args.version or (root_version.split("-")[0] + "-consumer-check-"
                                + dt.datetime.now(dt.timezone.utc).strftime("%Y%m%d%H%M%S%f"))
     require(bool(re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", version)), "Invalid validation version")
-    require(version != root_version, "Use a fresh validation version, not VERSION_NAME")
-    output = (args.output or ROOT / ".gradle" / "maven-consumer" / version).resolve()
-    repository = (args.repository or output / "repository").resolve()
+    if not remote:
+        require(version != root_version, "Use a fresh validation version, not VERSION_NAME")
+    run_name = version if not remote else version + "-remote-" + dt.datetime.now(dt.timezone.utc).strftime("%Y%m%d%H%M%S%f")
+    output = (args.output or ROOT / ".gradle" / "maven-consumer" / run_name).resolve()
+    repository = (args.repository or output / ("remote-publications" if remote else "repository")).resolve()
+    fixture_repository = output / "fixture-repository" if remote else repository
+    consumer_repository = remote or str(repository)
     old_repository = (ROOT / "local-maven").resolve()
     require(not repository.is_relative_to(old_repository), "Never use the existing local-maven repository")
-    if not args.skip_publish:
+    if not args.skip_publish and not remote:
         require(not (repository / "com" / "modernipc" / "ipc-api" / version).exists(),
                 "Validation version already exists; use a fresh version")
     output.mkdir(parents=True, exist_ok=True)
     env = os.environ.copy()
+    if remote:
+        for name in ("GITHUB_TOKEN", "GH_TOKEN", "GITHUB_ACTOR", "ORG_GRADLE_PROJECT_gpr.key", "ORG_GRADLE_PROJECT_gpr.user"):
+            env.pop(name, None)
     if args.java_home:
         env["JAVA_HOME"] = str(args.java_home.resolve())
     sdk_source = configure_android_sdk(env, args.android_sdk)
@@ -183,9 +269,12 @@ def main() -> int:
               f"-Dorg.gradle.jvmargs={JVM_ARGS}", "-Pkotlin.compiler.execution.strategy=in-process"]
     if args.offline:
         common.append("--offline")
-    report = {"version": version, "repository": str(repository), "deviceValidation": "NOT_RUN",
+    if remote:
+        common.extend(["--refresh-dependencies", "--rerun-tasks", "--no-build-cache"])
+    report = {"version": version, "repository": consumer_repository, "deviceValidation": "NOT_RUN",
               "status": "RUNNING", "steps": [], "metadata": [], "consumers": {},
-              "androidSdkSource": sdk_source}
+              "androidSdkSource": sdk_source, "mode": "remote-anonymous" if remote else "local",
+              "fixtureRepository": str(fixture_repository)}
     baseline_pom = (old_repository / "com" / "modernipc" / "ipc-api" / root_version
                     / f"ipc-api-{root_version}.pom")
     report["existingReleaseNegativeControl"] = {"version": root_version, "readOnly": True,
@@ -217,7 +306,9 @@ def main() -> int:
         print(f"{name}: passed", flush=True)
 
     try:
-        if not args.skip_publish:
+        if remote:
+            report["anonymousDownloads"] = download_remote_publications(remote, repository, version)
+        elif not args.skip_publish:
             publish = [f":{module}:publish{'Java' if module in ('ipc-annotations', 'ipc-compiler') else 'Release'}PublicationToProjectLocalRepository"
                        for module in MODULES]
             run("publish-sdk", ROOT, [f"-PVERSION_NAME={version}",
@@ -225,7 +316,8 @@ def main() -> int:
         report["metadata"] = [verify_publication(repository, module, version) for module in MODULES]
         for mode in ("metadata", "pom"):
             build_root = output / mode / "build"
-            properties = [f"-PipcVersion={version}", f"-PipcRepository={repository}",
+            properties = [f"-PipcVersion={version}", f"-PipcRepository={consumer_repository}",
+                          f"-PfixtureRepository={fixture_repository}",
                           f"-PmetadataMode={mode}", f"-PconsumerBuildRoot={build_root}",
                           "--project-cache-dir", str(output / mode / "project-cache")]
             run(f"{mode}-api-and-contract", FIXTURE, properties + [
@@ -244,13 +336,14 @@ def main() -> int:
                 "asyncAndFlowKsp": "PASSED",
             }
         run("reject-nested-facades", FIXTURE, [
-            f"-PipcVersion={version}", f"-PipcRepository={repository}", "-PmetadataMode=metadata",
+            f"-PipcVersion={version}", f"-PipcRepository={consumer_repository}",
+            f"-PfixtureRepository={fixture_repository}", "-PmetadataMode=metadata",
             f"-PconsumerBuildRoot={output / 'negative' / 'build'}", "-PinvalidFacade=nested",
             "--project-cache-dir", str(output / "negative" / "project-cache"),
             ":custom-contract:compileReleaseKotlin"],
             expected_error="@IpcFacade requires a top-level interface")
         report["status"] = "PASSED"
-    except (RuntimeError, OSError, ET.ParseError, KeyError) as error:
+    except (RuntimeError, OSError, ET.ParseError, KeyError, ValueError, TypeError) as error:
         report["status"] = "FAILED"
         report["error"] = str(error)
     finally:

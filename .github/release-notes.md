@@ -21,7 +21,9 @@
 
 Release 附带 Maven 仓库、源码、仓库证据、manifest 与 SHA256SUMS。额外完整历史证据 ZIP 含本地保留的 APK、原始日志、Perfetto 和失败尝试，附逐文件清单及独立校验和。
 
-坐标：`com.modernipc:<module>:3.0.0-rc.3`。Maven 仓库为 https://maven.pkg.github.com/NingCui29/ModernIpc ，下载需要具有 read:packages 权限的 GitHub 凭据。
+坐标：`com.modernipc:<module>:3.0.0-rc.3`。默认接入改为公开静态 Maven 仓库 `https://raw.githubusercontent.com/NingCui29/ModernIpc/maven`，消费者无需账号或 Token；请按 [SDK 指南](https://github.com/NingCui29/ModernIpc/blob/master/docs/ModernIPC_SDK_Guide.md#0-依赖与生成配置)将 `com.modernipc` 独占到该地址，避免旧 Packages 仓库返回 401。
+
+2026-11-06 分发渠道补充复用原 Release 的七模块 Maven 归档，不重建或替换 rc.3 制品，也不移动标签。匿名渠道的远端核验见 [rc.3 发布记录](https://github.com/NingCui29/ModernIpc/blob/master/docs/releases/v3.0.0-rc.3/README.md)。历史 GitHub Packages 渠道继续保留，明确选择它时仍需 `read:packages` 凭据。
 
 ## 验证范围
 

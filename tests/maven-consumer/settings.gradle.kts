@@ -24,6 +24,23 @@ dependencyResolutionManagement {
             }
             filter {
                 includeGroup("com.modernipc")
+            }
+        }
+        exclusiveContent {
+            forRepository {
+                maven {
+                    name = "IsolatedConsumerContract"
+                    url = uri(providers.gradleProperty("fixtureRepository")
+                        .orElse(providers.gradleProperty("ipcRepository")).get())
+                    if (providers.gradleProperty("metadataMode").get() == "pom") {
+                        metadataSources {
+                            mavenPom()
+                            ignoreGradleMetadataRedirection()
+                        }
+                    }
+                }
+            }
+            filter {
                 includeGroup("com.modernipc.consumer.fixture")
             }
         }

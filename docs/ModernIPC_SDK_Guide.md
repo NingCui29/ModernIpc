@@ -1,14 +1,36 @@
 # ModernIpc SDK 接入与发布指南
 
-核对日期：2026-10-30。本指南介绍共享契约、双端接入、生命周期、请求与 Flow 终态、诊断和 Maven 发布。模块关系与协议图见[架构](ModernIPC_Architecture.md)，四个多 App 案例见[业务指南](ModernIPC_Business_Interaction_Guide.md)。
+接入与发布配置核对日期：2026-11-06；下方历史设备记录保留各自日期。本指南介绍共享契约、双端接入、生命周期、请求与 Flow 终态、诊断和 Maven 发布。模块关系与协议图见[架构](ModernIPC_Architecture.md)，四个多 App 案例见[业务指南](ModernIPC_Business_Interaction_Guide.md)。
 
 **历史小米验收状态（2026-10-22）**：依赖导出修复后的未发布 demo APK SHA-256 为 `D0E76D896BDC3F0C9F01E14073F34201FFE79BFC6B07106E7885EA4181F28A9A`，2026-10-22 在小米 `925c23bb` 通过原框架 73 项、独立 Async scope 4 项、新增业务取消/超时错误终态 9 项及同 UID 鉴权微测；见[本轮 summary](benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-regression2/summary.json)。独立 Maven metadata/POM-only 消费和 27 项 host 门禁也已通过；见[修复审计](ModernIPC_Engineering_Audit.md#10-本轮修复验收)。性能对照仍绑定此前 `4F7ED...` APK，未转用于本轮新包。固定 `v3.0.0-rc.1` 标签与四个多 App 业务场景的设备验收仍保持各自边界。构建、回归与测量范围分别见[多 App 报告](benchmarks/Multi_App_Report.md)、[回归报告](benchmarks/Regression_Report.md)和[性能报告](benchmarks/Performance_Report.md)。
 
-**当前源码补充（尚未发布）**：2026-10-30 修正生成参数隔离、死亡重连预算、Flow 取消分类和辅助订阅工具；详见[修复审计第 12 节](ModernIPC_Engineering_Audit.md#12-2026-10-30生成代码重连与订阅修复未发布)。这些变化不包含在已发布的 rc.2 制品中，新设备验收为 NOT_RUN。
+**源码修复范围**：2026-10-30 修正生成参数隔离、死亡重连预算、Flow 取消分类和辅助订阅工具；详见[修复审计第 12 节](ModernIPC_Engineering_Audit.md#12-2026-10-30生成代码重连与订阅修复未发布)。这些变化已纳入 `v3.0.0-rc.3`，不包含在旧 rc.2 制品中。最终 rc.3 发布 APK 的设备验收仍为 NOT_RUN，详见[发布记录](releases/v3.0.0-rc.3/README.md)。
 
 ## 0. 依赖与生成配置
 
-仓库内示例直接使用 Gradle project 依赖。外部工程需先按[第 10 节](#10-maven-构建发布与外部消费)核实产物与版本；文档中的坐标不是远端可下载证明。
+仓库内示例直接使用 Gradle project 依赖。外部工程默认从公开 `maven` 分支下载，版本为 `3.0.0-rc.3`。在宿主 `settings.gradle.kts` 配置以下仓库，无需填写用户名或 Token：
+
+```kotlin
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        exclusiveContent {
+            forRepository {
+                maven {
+                    name = "ModernIpcPublic"
+                    url = uri("https://raw.githubusercontent.com/NingCui29/ModernIpc/maven")
+                }
+            }
+            filter { includeGroup("com.modernipc") }
+        }
+    }
+}
+```
+
+`exclusiveContent` 将整个 `com.modernipc` group 固定到此仓库，避免旧 GitHub Packages 仓库先返回 401。迁移时删除旧的 ModernIPC Packages 仓库项；如果它仍用于其他 group，保留其独立配置即可。源码托管在 GitHub 与使用 GitHub Packages 是两回事：这里读取的是公开分支中的 Maven 文件，不是 Packages 服务，也不是 Maven Central。
+
+匿名渠道的发布和远端核验状态见[rc.3 发布记录](releases/v3.0.0-rc.3/README.md)，维护流程见[第 10 节](#10-maven-构建发布与外部消费)。
 
 定义新业务接口的 Android library 必须同时配置 KSP 和接口使用到的运行时依赖；客户端与服务端共享该契约及生成代码。依赖已有 `ipc-api` 只得到仓库内契约，不会为其他模块的新接口自动生成代理。以下是自定义契约模块的依赖骨架：
 
@@ -33,7 +55,13 @@ dependencies {
 生成 Adapter/Stub 的构造签名与父接口会引用 runtime 与 `kotlinx.coroutines` 类型，所以契约模块必须用 `api` 导出这些依赖；用 `implementation` 会让只依赖该契约模块的客户端编译失败。
 `ipc-annotations` 为 `SOURCE` 保留，导出它主要是接入便利性（编写新契约时需要注解），本身不构成二进制 ABI 要求。
 
-在宿主 `gradle.properties` 设置 `ipcVersion` 为已核验且实际发布的版本。本次工作区依赖修复不会改变既有 `3.0.0-rc.1` 发布物；修复验收使用隔离仓库中的唯一临时版本，不能据此声称旧版本或远端发布已修复。
+在宿主 `gradle.properties` 设置版本：
+
+```properties
+ipcVersion=3.0.0-rc.3
+```
+
+本次分发渠道调整复用现有 rc.3 制品，不改动既有版本字节、Kotlin 包名、Android namespace 或 Binder descriptor；旧 rc.1/rc.2 发布物保持原样。
 
 插件版本与 Android 配置仍需在宿主工程中声明；上例省略这些配置。仓库当前版本来源为 [libs.versions.toml](../gradle/libs.versions.toml)：AGP 8.2.0、Kotlin 1.9.22、KSP 1.9.22-1.0.17、协程 1.7.3、minSdk 21、compile/targetSdk 34，构建使用 JDK 17。它们是当前仓库配置，不表示所有外部工程组合已验证。
 
@@ -303,17 +331,42 @@ implementation("com.modernipc:ipc-api:$ipcVersion")
 日常验证使用 JDK 17 启动 Gradle；host 的 JVM toolchain 配置不能修复用不兼容 JDK 启动 Gradle 的问题。Wrapper 已配置官方 Gradle 8.5 分发 SHA-256 校验。执行：
 
 ```powershell
-./gradlew.bat :check
+./gradlew.bat check
 python scripts/verify_maven_consumers.py --java-home $env:JAVA_HOME --android-sdk $env:ANDROID_HOME
 ```
 
 根 `:check` 执行真实 PendingCallRegistry/IpcRequestTracker 源码的 **12+15 项** host 检查，Android doubles 不证明真实 Binder。独立[消费工程](../tests/maven-consumer)由[脚本](../scripts/verify_maven_consumers.py)发布六 SDK 的唯一临时版本至隔离仓库，再分别通过 Gradle metadata 与 POM-only 编译：仅依赖 ipc-api 的消费者、自定义 Async+Flow KSP 契约，以及仅依赖该契约坐标的下游；同时检查编译依赖图，防止重复直接依赖掩盖导出缺陷。它不会改写 `local-maven` 的既有 RC1。
 
-发布前工作区在 Windows 已完成以上两类验证，见[归档](benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/archive.json)。[日常 CI](../.github/workflows/verify.yml)与发布 CI 已接入两个串行独立步骤；远端 CI 本轮未执行，不能以本机结果替代。原 `0003` 取消降噪补丁已撤回，原因和设备终态回归见[审计](ModernIPC_Engineering_Audit.md)。
+2026-10-22 的 Windows 本机验证见[历史归档](benchmarks/runs/2026-10-22-xiaomi14ultra/engineering-fixes-build/maven-consumers/archive.json)。[日常 CI](../.github/workflows/verify.yml)与发布 CI 已接入全量 `check` 和独立消费两个门禁；rc.3 的远端执行结果见[发布记录](releases/v3.0.0-rc.3/README.md)，不以本机结果代替远端结果。原 `0003` 取消降噪补丁已撤回，原因和设备终态回归见[审计](ModernIPC_Engineering_Audit.md)。
 
-### GitHub Packages 与 CI
+### 默认：公开 maven 分支与匿名下载
 
-远端 owner/repo 依次取 `GITHUB_REPOSITORY` 环境变量、`gpr.repo` 属性、`gpr.modern.ipc.repo` 属性，最后回退到源码中的 `NingCui29/ModernIpc`。应显式指定实际 owner/repo。用户名/令牌依次取 `GITHUB_ACTOR`/`GITHUB_TOKEN` 或 `gpr.user`/`gpr.key`，保存于本机 Gradle 用户属性或 CI 密钥。
+默认仓库为 `https://raw.githubusercontent.com/NingCui29/ModernIpc/maven`，依赖坐标仍是 `com.modernipc:<module>:<version>`。此方案参考 TaskQueue：`maven` 分支只存放 Maven 目录、元数据和发布回执；SDK 源码继续在主分支和版本分支维护。消费者不需要 GitHub Token，也不需要注册或验证 Maven Central 命名空间。维护者向 GitHub 推送分支仍需仓库写权限。
+
+[匿名发布工作流](../.github/workflows/publish-maven.yml)用于将已发布版本补充到默认渠道。在 Actions 中从包含该工作流的主分支运行，指定已有标签，例如 `v3.0.0-rc.3`。它复用该 Release 的 `maven-repository.zip`、`manifest.json` 和校验清单，核对来源与内容后合并到 `maven` 分支。已有版本存在不同字节时应失败，不能重新编译同版本或覆盖历史 GAV；新增源码修复必须使用新版本。
+
+[准备与核验脚本](../scripts/publish_anonymous_maven.py)负责七模块完整性、内部依赖与文件校验。对应命令形式为：
+
+```powershell
+python scripts/publish_anonymous_maven.py prepare --archive <Release的maven-repository.zip> --manifest <Release的manifest.json> --repository <maven分支检出目录> --version 3.0.0-rc.3 --source-repository NingCui29/ModernIpc
+python scripts/publish_anonymous_maven.py verify --repository <maven分支检出目录> --version 3.0.0-rc.3 --base-url https://raw.githubusercontent.com/NingCui29/ModernIpc/maven --output <核验报告.json>
+```
+
+默认渠道包含六 SDK 与 `demo-client-common` 共七模块的 AAR/JAR、POM、Gradle `.module`、sources/javadoc 及校验文件；不是只上传 `ipc-annotations` 或仅修改一个仓库地址。已有固定版本文件保持不变，发布新版本时更新模块级 `maven-metadata.xml`。
+
+远端文件下载通过后，还要通过真实独立消费工程验证 metadata、POM-only、KSP 与传递依赖：
+
+```powershell
+python scripts/verify_maven_consumers.py --remote-repository https://raw.githubusercontent.com/NingCui29/ModernIpc/maven --version 3.0.0-rc.3 --java-home $env:JAVA_HOME
+```
+
+该模式从匿名 URL 解析六 SDK，测试专用契约只写入本地隔离仓库，不向远端发布；不带该选项时继续使用前文的唯一临时版本和本地仓库。SDK 路径沿用脚本的环境变量 / 根 `local.properties` 探测规则。匿名 HTTP 下载、真实消费编译与 Android 真机验收分别记录，不能相互替代。
+
+### 可选：GitHub Packages
+
+GitHub Packages 保留为第二条分发渠道。它的公开 Maven 包下载仍需认证，不能把公开源码仓库的权限当作匿名下载能力。普通消费者使用自己的 PAT classic，并授予 `read:packages`；不要把 Token 写进工程或提交到 Git。
+
+维护者发布时，远端 owner/repo 依次取 `GITHUB_REPOSITORY` 环境变量、`gpr.repo` 属性、`gpr.modern.ipc.repo` 属性，最后回退到源码中的 `NingCui29/ModernIpc`。用户名/令牌依次取 `GITHUB_ACTOR`/`GITHUB_TOKEN` 或 `gpr.user`/`gpr.key`，保存于本机 Gradle 用户属性或 CI 密钥：
 
 ```properties
 gpr.repo=实际用户名/ModernIpc
@@ -321,16 +374,21 @@ gpr.user=实际用户名
 gpr.key=具有对应权限的令牌
 ```
 
-单个 Android 模块向远端发布的任务形式：
+单个 Android 模块向 Packages 发布的任务形式：
 
 ```powershell
 .\gradlew.bat :ipc-api:publishReleasePublicationToGitHubPackagesRepository
 ```
 
-外部使用者需在自己的仓库配置中添加对应 Maven URL `https://maven.pkg.github.com/<owner>/<repo>` 和具备读权限的凭据。远端产物存在性、可见性、版本与权限应通过实际 Gradle resolve 核实；发布是否成功以对应版本的Actions、远端POM和Release附件核验为准。公开仓库的GitHub Maven Packages下载仍需账号与具有read:packages权限的令牌；不要把凭据提交到源码。
+明确选择此渠道的消费者需将默认 `com.modernipc` 独占仓库替换为 `https://maven.pkg.github.com/ningcui29/modernipc`，并在该仓库的 `credentials` 中读取自己的账号和令牌。发布端的凭据配置不会自动应用于消费者。仅使用默认匿名渠道时无需这一步。
 
-[release.yml](../.github/workflows/release.yml)从v标签提取版本并核对VERSION_NAME，以JDK17先执行 host/Robolectric check 和隔离 Maven 消费门禁，再构建六SDK、示例共用AAR和六个同签名Debug APK。验证本地POM/module内部版本和APK版本/签名后发布七个Maven产物、核对远端35个主制品及metadata/sources/javadoc文件的大小和SHA-256，最后创建Release。附件含SDK及sources/javadoc、APK、Maven仓库、源码、仓库内证据和SHA-256清单；带rc的标签标为预发行。完整历史APK证据由本地另行打包上传，CI仓库证据归档不自动包含Git忽略的历史APK。工作流存在不表示执行成功；设备NOT_RUN与构建成功分别报告。
+### Release CI 与验证边界
 
+[release.yml](../.github/workflows/release.yml)从 v 标签提取版本并核对 VERSION_NAME，以 JDK 17 先执行全量子模块 `check` 和隔离 Maven 消费门禁，再构建六 SDK、示例共用 AAR 和六个同签名 Debug APK。验证本地 POM/module 内部版本和 APK 版本/签名后发布制品，并核对远端文件内容；匿名 Maven 渠道和可选 Packages 渠道分别验证。
+
+默认发布到 Release 和匿名 Maven。需要同时发布 GitHub Packages 时，在手动运行 Release 工作流时勾选 `publish_packages`，或设置仓库变量 `PUBLISH_GITHUB_PACKAGES=true`；该开关不改变消费者使用匿名渠道的方式。已有 Release 使用 `publish-maven.yml` 手动输入原标签补发匿名渠道，不重新运行会拒绝已发布版本的 Release 构建流程。
+
+Release 附件包含 SDK 及 sources/javadoc、APK、Maven 仓库、源码、仓库内证据和 SHA-256 清单；带 rc 的标签标为预发行。完整历史 APK 证据由本地另行打包上传，CI 仓库证据归档不自动包含 Git 忽略的历史 APK。已发布 `v3.0.0-rc.3` 的标签、原 Release 附件和历史 Packages 核验保持不变，本次只新增匿名分发渠道。工作流文件存在不表示执行成功，最终以版本发布回执为准；设备 NOT_RUN 与构建成功分别报告。
 
 ### 2026-11-03 未发布补充
 

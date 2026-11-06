@@ -18,4 +18,12 @@
 
 历史文档中“未发布”描述保留其当时的日期范围，相关源码修复已纳入本次标签。旧 rc.2 标签、制品及验证记录保持原有身份。
 
+## 匿名 Maven 分发补充（2026-11-06）
+
+默认消费地址调整为 `https://raw.githubusercontent.com/NingCui29/ModernIpc/maven`，坐标仍为 `com.modernipc:<module>:3.0.0-rc.3`。七模块复用本次 Release 的 `maven-repository.zip` 与 `manifest.json` 中记录的原始文件；不重新编译，不覆盖已发布 GAV，不改动 `v3.0.0-rc.3` 标签、49 个原 Release 附件或历史发布回执。
+
+客户端按 [SDK 指南](../../ModernIPC_SDK_Guide.md#0-依赖与生成配置)使用匿名仓库和 `com.modernipc` 独占规则。下载不需要 Token；GitHub Packages 继续作为需要认证的可选渠道。
+
+本次匿名渠道的发布与验证状态：**待执行并补充回执**。验证应分别记录七模块文件的无凭据 HTTP 下载及 SHA-256 对照、metadata/POM-only 独立消费与 KSP 编译。原 `publication-result.json` 仍只证明历史 Release/Packages 发布，不能替代新增渠道的证据；本次渠道调整不涉及 Android APK 变更或设备验收。
+
 [本机发布前全量检查](prepublish-check.txt) · [Python 回归](python-check.txt) · [11/03 Maven 与主机证据](../../benchmarks/runs/2026-11-03-xiaomi14ultra/api21-sdk-verification/summary.json) · [审计修复](../../ModernIPC_Engineering_Audit.md)。

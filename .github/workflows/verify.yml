@@ -2,7 +2,7 @@ name: Verify source, generated calls and host state machines
 
 on:
   push:
-    branches: ['**']
+    branches-ignore: ['maven']
   pull_request:
   workflow_dispatch:
 

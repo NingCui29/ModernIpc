@@ -10,6 +10,11 @@ on:
         description: 'Existing v-prefixed tag (required when dispatching from a branch)'
         required: false
         type: string
+      publish_packages:
+        description: 'Also publish the optional authenticated GitHub Packages channel'
+        required: false
+        default: false
+        type: boolean
 
 concurrency:
   group: release-${{ inputs.tag || github.ref }}
@@ -144,6 +149,7 @@ jobs:
             --output-dir ".gradle/release-assets/$RELEASE_VERSION"
 
       - name: Publish seven explicit publications to GitHub Packages
+        if: ${{ inputs.publish_packages == true || vars.PUBLISH_GITHUB_PACKAGES == 'true' }}
         shell: bash
         run: |
           bash ./gradlew --console=plain --max-workers=2 \
@@ -161,6 +167,7 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
 
       - name: Verify all seven published Maven artifacts and metadata from GitHub Packages
+        if: ${{ inputs.publish_packages == true || vars.PUBLISH_GITHUB_PACKAGES == 'true' }}
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -180,3 +187,11 @@ jobs:
           generate_release_notes: false
           fail_on_unmatched_files: true
           files: .gradle/release-assets/${{ env.RELEASE_VERSION }}/*
+
+  publish-anonymous-maven:
+    needs: build-and-release
+    permissions:
+      contents: write
+    uses: ./.github/workflows/publish-maven.yml
+    with:
+      tag: ${{ inputs.tag || github.ref_name }}

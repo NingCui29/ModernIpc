@@ -16,6 +16,40 @@ Android Binder IPC SDK 与示例工程：用 Kotlin 接口和注解描述业务�
 
 测试报告按问题合并为 [性能报告](docs/benchmarks/Performance_Report.md)、[回归报告](docs/benchmarks/Regression_Report.md)、[多 App 验证报告](docs/benchmarks/Multi_App_Report.md)。日期、APK、失败运行与原始样本在各报告中保留。
 
+## SDK 依赖接入（无需下载凭据）
+
+当前版本为 **3.0.0-rc.3**，坐标保持 `com.modernipc:<module>:3.0.0-rc.3`。默认使用公开 `maven` 分支托管的静态 Maven 仓库；消费者无需 GitHub 账号、Token 或 Maven Central 命名空间验证。在外部工程的 `settings.gradle.kts` 中配置：
+
+```kotlin
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        exclusiveContent {
+            forRepository {
+                maven {
+                    name = "ModernIpcPublic"
+                    url = uri("https://raw.githubusercontent.com/NingCui29/ModernIpc/maven")
+                }
+            }
+            filter { includeGroup("com.modernipc") }
+        }
+    }
+}
+```
+
+业务模块使用仓库已有契约时：
+
+```kotlin
+dependencies {
+    implementation("com.modernipc:ipc-api:3.0.0-rc.3")
+}
+```
+
+定义自己的接口还需配置 `ipc-annotations`、两端 runtime、`ipc-contract` 和 KSP，见 [SDK 指南](docs/ModernIPC_SDK_Guide.md#0-依赖与生成配置)。独占 `com.modernipc` 的规则确保这些依赖只从匿名渠道解析；迁移时删除旧的 ModernIPC `maven.pkg.github.com` 仓库项，其他库仍需使用该服务时保留其独立配置。
+
+匿名渠道复用已发布的七模块产物、POM、Gradle metadata、sources/javadoc 与校验文件，不重新编译或替换 `v3.0.0-rc.3`。当前发布和验证结果见 [rc.3 发布记录](docs/releases/v3.0.0-rc.3/README.md)。GitHub Packages 保留为可选认证渠道，不作为默认接入方式。
+
 ## 模块与调用链
 
 | 模块 | 职责 |
