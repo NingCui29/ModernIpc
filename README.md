@@ -83,9 +83,9 @@ flowchart LR
 
 新增 `benchmark-andlinker` 仅用于测试，固定上游核心 Java，不接入 SDK 或四个业务 App。框架回归不代替四场景业务验收；新 API 不属于固定发布标签。
 
-## 发布构建历史（2026-10-09）
+## 发布与历史构建
 
-本次版本 **3.0.0-rc.3**，版本分支 `codex/v3.0.0-rc.3`，交付七个库、六个 Debug APK（含独立 AndLinker 对照）、源码和测试证据。发布状态与远端核验见[rc.3 发布记录](docs/releases/v3.0.0-rc.3/README.md)，变更与迁移见[发布说明](.github/release-notes.md)。旧 rc.2 制品及其历史验证保留。
+已发布预发行版 **3.0.0-rc.3**，版本分支 `codex/v3.0.0-rc.3`，标签源码为 `e937433`。交付七个库、六个 Debug APK（含独立 AndLinker 对照）、源码和完整历史证据，共 49 个 Release 附件；七库的 35 个远端 Maven 文件由 CI 校验。发布结果见[rc.3 最终回执](docs/releases/v3.0.0-rc.3/publication-result.json)，范围与限制见[发布记录](docs/releases/v3.0.0-rc.3/README.md)，变更与迁移见[发布说明](.github/release-notes.md)。最终发布 APK 的设备状态为 **NOT_RUN**，不移用 11/03 历史 APK 的 86 项小米通过结果。旧 rc.2 制品及验证保留。
 
 以下保留 **3.0.0-rc.1** 的历史构建记录，版本分支 `codex/v3.0.0-rc.1`。七个库产物与五个Debug APK统一构建 **BUILD SUCCESSFUL in 12m34s，退出码0，429任务**；Maven内部版本、APK版本与同签名校验通过。demo APK SHA-256为 `23a2802fd636f03e5821ceaf335f73907193b27560959486605e5908f7b26701`，完整身份见[发布构建记录](docs/releases/v3.0.0-rc.1/build-result.json)。
 
