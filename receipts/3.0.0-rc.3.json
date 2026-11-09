@@ -3,10 +3,10 @@
   "version": "3.0.0-rc.3",
   "tag": "v3.0.0-rc.3",
   "sourceRepository": "NingCui29/ModernIpc",
-  "sourceCommit": "e93743320841b7c80ff2c32dedb976750a40a4ee",
+  "sourceCommit": "c800b30b45af53f4360f96c53a528f793cf9905d",
   "releaseCreatedUtc": "2026-11-06T03:35:17.357543+00:00",
   "archiveSha256": "7e939ff8b24367fb540ee53f0af0a0c94c88888d04a2647ea8ed341450ecb99d",
-  "manifestSha256": "9481e5b0e7e7e07ad8339b87a28c86fbd6b7942825bafb0f87e9f9d0f047c46f",
+  "manifestSha256": "99e07819a2bc195d340b7be705ec128c38ab865143a57b098e578d9ba0cfcd46",
   "files": [
     {
       "path": "com/modernipc/demo-client-common/3.0.0-rc.3/demo-client-common-3.0.0-rc.3-javadoc.jar",
