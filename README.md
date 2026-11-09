@@ -33,20 +33,25 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        exclusiveContent {
-            forRepository {
-                maven {
-                    name = "ModernIpcPublic"
-                    url = uri("https://raw.githubusercontent.com/NingCui29/ModernIpc/maven")
-                }
-            }
-            filter { includeGroup("com.modernipc") }
+        maven("https://raw.githubusercontent.com/NingCui29/ModernIpc/maven") {
+            content { includeGroup("com.modernipc") }
         }
     }
 }
 ```
 
-该地址读取公开 `maven` 分支中的 Maven 制品。`exclusiveContent` 确保 `com.modernipc` 只从这里解析，避免旧 GitHub Packages 仓库返回 `401 Unauthorized`。迁移时删除原 ModernIPC 的 `maven.pkg.github.com` 仓库项；如果它还服务于其他库，可保留其他 group 的配置。
+该地址支持匿名下载，无需配置账号或 Token。从 GitHub Packages 迁移时，用上面的 `maven(...)` 替换原 ModernIPC 的 `maven.pkg.github.com` 仓库项。
+
+**如果其他依赖仍需使用旧仓库**，保留旧仓库，并将上面新增的 `maven(...)` 块替换为下面的配置。这样 Gradle 只从匿名仓库解析 `com.modernipc`，避免查询旧仓库时遇到 `401 Unauthorized`。
+
+```kotlin
+exclusiveContent {
+    forRepository {
+        maven { url = uri("https://raw.githubusercontent.com/NingCui29/ModernIpc/maven") }
+    }
+    filter { includeGroup("com.modernipc") }
+}
+```
 
 ### 2. 选择契约接入方式
 
