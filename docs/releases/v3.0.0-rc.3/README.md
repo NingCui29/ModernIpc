@@ -1,5 +1,7 @@
 # v3.0.0-rc.3 发布记录
 
+2026-11-09 已复核历史发布。当前标签源码为 `c800b30b45af53f4360f96c53a528f793cf9905d`。本轮重建的源码包、证据包和校验文件见[当前附件回执](history-review.json)。下载后请使用同一 Release 中的 [SHA256SUMS.txt](https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.3/SHA256SUMS.txt) 和 [完整证据校验和](https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.3/FULL_EVIDENCE_SHA256SUMS.txt)。下文保留首次发布时的构建和验收记录。
+
 [ModernIpc 3.0.0-rc.3](https://github.com/NingCui29/ModernIpc/releases/tag/v3.0.0-rc.3) 为预发行版，版本分支为 `release/v3.0.0-rc.3`，Android versionCode 为 `30003`。不可变标签源码提交为 `e93743320841b7c80ff2c32dedb976750a40a4ee`；发布后的文档回执可以继续提交到 master 与版本分支，不移动该标签。具体变更见[发布说明](../../../.github/release-notes.md)。
 
 [发布工作流 42156767831](https://github.com/NingCui29/ModernIpc/actions/runs/42156767831)通过全量子模块检查、独立 Maven metadata/POM-only 消费、七库与六 APK 构建、版本/签名校验、GitHub Packages 发布及远端校验。对应提交的 [master 验证](https://github.com/NingCui29/ModernIpc/actions/runs/42156767512)和[版本分支验证](https://github.com/NingCui29/ModernIpc/actions/runs/42156767541)也均成功。
