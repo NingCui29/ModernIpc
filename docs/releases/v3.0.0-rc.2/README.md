@@ -1,5 +1,7 @@
 # 3.0.0-rc.2 发布记录
 
+2026-11-09 已复核历史发布。当前标签源码为 `d1badc48934b3b529495766fb5adfd9d3c490340`。本轮重建的源码包、证据包和校验文件见[当前附件回执](history-review.json)。下载后请使用同一 Release 中的 [SHA256SUMS.txt](https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/SHA256SUMS.txt) 和 [完整证据校验和](https://github.com/NingCui29/ModernIpc/releases/download/v3.0.0-rc.2/FULL_EVIDENCE_SHA256SUMS.txt)。下文保留首次发布时的构建和验收记录。
+
 日期：2026-10-22。分支 `release/v3.0.0-rc.2`，目标标签 `v3.0.0-rc.2`，VERSION_CODE=30002。
 
 交付六 SDK、示例共用库和六个同签名 Debug APK（含 AndLinker 对照），附源码、Maven 仓库、仓库证据与另行上传的完整历史证据。
